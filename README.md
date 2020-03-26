@@ -8,12 +8,12 @@ Pontiggia | Francesco | 921085 | 10524642
 Ricci | Arianna | 921275 | 10536266
 
 
-## Group Bombers
+## Part Leader
 
 Arianna | Ricci | 921275
 
-## Group Losers
+## KGB member
 
 Francy | Pont | 777
 
-# TI VOGLIO BENE CICCIO
+# TI VOGLIO BENE ARI
