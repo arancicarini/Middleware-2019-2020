@@ -1,8 +1,9 @@
 PRIMITIVES:
  - PUT(K,V): inserts/updates value V for key K;
  - GET(K): returns the value assigned to key K;
+//Good news: we do not have to implement the delete primivite
 REQUIREMENTS(in practice):
- - partition the key space;
+ - partition the key space; ( this should be the most difficult part!!)
  - assign different keys to different nodes;
  - R replicas to be (R-1) fault tolerant;
  - If a node failures, replicate the data it stored to be again (R-1) fault tolerant;
