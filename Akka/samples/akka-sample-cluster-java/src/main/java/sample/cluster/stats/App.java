@@ -44,6 +44,7 @@ public class App {
           context.spawn(StatsClient.create(serviceRouter), "Client");
         }
 
+
         return Behaviors.empty();
       });
     }

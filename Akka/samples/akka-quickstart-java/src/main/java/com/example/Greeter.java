@@ -73,7 +73,7 @@ public class Greeter extends AbstractBehavior<Greeter.Command> {
   }
 
   private Behavior<Command> onGreet(Greet message) {
-    getContext().getLog().info("Forza Chievo, {}!", message.whom);
+    getContext().getLog().info("Happy Liberation Day, {}!", message.whom);
     //#greeter-send-message
     message.replyTo.tell(new Greeted(message.whom, getContext().getSelf()));
     //#greeter-send-message
@@ -82,7 +82,7 @@ public class Greeter extends AbstractBehavior<Greeter.Command> {
 
   private Behavior<Command> onGreeted(Greeted message){
     greetingCounter++;
-    getContext().getLog().info("Greeting del Chievo {} for {}", greetingCounter, message.whom);
+    getContext().getLog().info("Greetings {} have been delivered to  {}", greetingCounter, message.whom);
     if (greetingCounter == max) {
       return Behaviors.stopped();
     } else {

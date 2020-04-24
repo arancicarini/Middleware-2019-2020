@@ -2077,7 +2077,7 @@
 											"top": 196,
 											"width": 87.4453125,
 											"height": 13,
-											"text": "UserActor"
+											"text": "User"
 										},
 										{
 											"_type": "LabelView",
@@ -2488,7 +2488,7 @@
 							"_parent": {
 								"$ref": "AAAAAAFxnUap+jKANRw="
 							},
-							"name": "UserActor",
+							"name": "User",
 							"stereotype": "ActorRef<?>",
 							"attributes": [
 								{
