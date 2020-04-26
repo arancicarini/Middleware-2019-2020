@@ -12,7 +12,7 @@ import akka.cluster.typed.Subscribe;
 
 public final class ClusterListener extends AbstractBehavior<ClusterListener.Event> {
 
-  interface Event {}
+  public interface Event {}
 
   // internal adapted cluster events only
   private static final class ReachabilityChange implements Event {

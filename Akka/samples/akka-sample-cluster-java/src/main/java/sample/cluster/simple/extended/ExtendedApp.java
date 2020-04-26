@@ -1,52 +1,95 @@
 package sample.cluster.simple.extended;
 
+import akka.NotUsed;
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.ActorSystem;
 import akka.actor.typed.Behavior;
+import akka.actor.typed.javadsl.Adapter;
 import akka.actor.typed.javadsl.Behaviors;
+import akka.http.javadsl.ConnectHttp;
+import akka.http.javadsl.Http;
+import akka.http.javadsl.ServerBinding;
+import akka.http.javadsl.model.HttpRequest;
+import akka.http.javadsl.model.HttpResponse;
+import akka.http.javadsl.server.Route;
+import akka.stream.ActorMaterializer;
+import akka.stream.Materializer;
+import akka.stream.javadsl.Flow;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
-import org.w3c.dom.Node;
 import sample.cluster.simple.ClusterListener;
 
 import java.io.IOException;
+import java.net.InetSocketAddress;
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.CompletionStage;
+
+import static java.util.stream.Stream.concat;
 
 public class ExtendedApp {
-    private ActorRef<NodeManager.SayHello> nodeManager;
+    private static ActorRef<NodeGreeter.Command> greeter;
+    private static ActorRef<ClusterListener.Event> listener;
+    private static ActorSystem<NotUsed> system;
+    public static String address;
+    public static int port;
+    public static String nodeId;
+    static void startHttpServer(Route route, ActorSystem<?> system) {
+        // Akka HTTP still needs a classic ActorSystem to start
+        akka.actor.ActorSystem classicSystem = Adapter.toClassic(system);
+        final Http http = Http.get(classicSystem);
+        final Materializer materializer = Materializer.matFromSystem(system);
+
+        final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = route.flow(classicSystem, materializer);
+        CompletionStage<ServerBinding> futureBinding =
+                http.bindAndHandle(routeFlow, ConnectHttp.toHost(address, port), materializer);
+
+        futureBinding.whenComplete((binding, exception) -> {
+            if (binding != null) {
+                system.log().info("Server online at http://{}:{}/",
+                        address,
+                        port);
+            } else {
+                system.log().error("Failed to bind HTTP endpoint, terminating system", exception);
+                system.terminate();
+            }
+        });
+    }
     public static void main(String[] args) {
         if (args.length == 0) {
             startup(25251);
             startup(25252);
             startup(0);
-        } else
+        } else {
             Arrays.stream(args).map(Integer::parseInt).forEach(ExtendedApp::startup);
+        }
+
+
+        //#main-send-messages
+        greeter.tell(new NodeGreeter.SayHello("Arianna"));
+        //#main-send-messages
+
+        try {
+            System.out.println(">>> Press ENTER to exit <<<");
+            System.in.read();
+        } catch (
+                IOException ignored) {
+        } finally {
+            system.terminate();
+        }
+
+
     }
 
-    ActorRef<NodeManager.SayHello> nodeManager = context.sp
-
-
-    //#main-send-messages
-    greeterMain.tell(new GreeterMain.SayHello("Arianna"));
-    //#main-send-messages
-
-    try {
-        System.out.println(">>> Press ENTER to exit <<<");
-        System.in.read();
-    } catch (
-    IOException ignored) {
-    } finally {
-        greeterMain.terminate();
-    }
-
-    private static Behavior<Void> rootBehavior() {
+    private static Behavior<NotUsed> rootBehavior() {
         return Behaviors.setup(context -> {
 
             // Create an actor that handles cluster domain events
-            context.spawn(ClusterListener.create(), "ClusterListener");
-            nodeManager = context.spawn(NodeManager.create(), "NodeManager");
+            greeter = context.spawn(NodeGreeter.create(3), "greeter");
+            listener = context.spawn(ClusterListener.create(), "listener");
+            UserRoutes userRoutes = new UserRoutes(context.getSystem(), greeter);
+            startHttpServer(userRoutes.userRoutes(), context.getSystem());
             return Behaviors.empty();
         });
     }
@@ -60,7 +103,13 @@ public class ExtendedApp {
         Config config = ConfigFactory.parseMap(overrides)
                 .withFallback(ConfigFactory.load());
 
+        address = config.getString("http.ip");
+        ExtendedApp.port = port;
+        nodeId = config.getString("clustering.ip");
         // Create an Akka system
-        ActorSystem<Void> system = ActorSystem.create(rootBehavior(), "ClusterSystem", config);
+        system = ActorSystem.create(rootBehavior(), "ClusterSystem", config);
+        system.log().info("putting the server online at http://{}:{}/",
+                address,
+                port);
     }
 }
