@@ -33,11 +33,9 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
 
     public static final class Greeted implements Command {
         public final String whom;
-        public final String nodeAddress;
         @JsonCreator
-        public Greeted(@JsonProperty("whom") String whom, @JsonProperty("nodeAddress") String nodeAddress) {
+        public Greeted(@JsonProperty("whom") String whom) {
             this.whom = whom;
-            this.nodeAddress = nodeAddress;
         }
 
         // #greeter
@@ -46,20 +44,18 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
             if (this == o) return true;
             if (o == null || getClass() != o.getClass()) return false;
             Greeted greeted = (Greeted) o;
-            return Objects.equals(whom, greeted.whom) &&
-                    Objects.equals(nodeAddress, greeted.nodeAddress);
+            return Objects.equals(whom, greeted.whom);
         }
 
         @Override
         public int hashCode() {
-            return Objects.hash(whom, nodeAddress);
+            return Objects.hash(whom);
         }
 
         @Override
         public String toString() {
             return "Greeted{" +
-                    "whom='" + whom + '\'' +
-                    ", from=" + nodeAddress +
+                    "whom='" + whom +
                     '}';
         }
 // #greeter
@@ -95,7 +91,7 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
         getContext().getLog().info("Happy Liberation Day, {}!", message.whom);
         //#greeter-send-message
 
-        message.replyTo.tell(new Greeted(message.whom,ExtendedApp.address ));
+        message.replyTo.tell(new Greeted(message.whom ));
         //#greeter-send-message
         return this;
     }
@@ -126,7 +122,7 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
                 responseFuture.whenComplete((response, exception)-> {
                     CompletionStage<Greeted> greeted = Jackson.unmarshaller(Greeted.class).unmarshal(response.entity(), materializer);
                     greeted.whenComplete((message, exception1)->{
-                        getContext().getLog().info("Greetings {} have been delivered to  {} on node {}", greetingCounter, message.whom, message.nodeAddress);
+                        getContext().getLog().info("Greetings {} have been delivered to  {}", greetingCounter, message.whom);
                     });
                 });
             }else {

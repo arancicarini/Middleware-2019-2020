@@ -27,7 +27,7 @@ public class UserRoutes {
     public UserRoutes(ActorSystem<?> system, ActorRef<NodeGreeter.Command> greeter) {
         this.greeter = greeter;
         scheduler = system.scheduler();
-        askTimeout = system.settings().config().getDuration("my-app.routes.ask-timeout");
+        askTimeout = Duration.ofSeconds(5);
     }
 
     private CompletionStage<NodeGreeter.Greeted> greet(String name) {

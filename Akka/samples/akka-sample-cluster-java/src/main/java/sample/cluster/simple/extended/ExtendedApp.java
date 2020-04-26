@@ -12,7 +12,6 @@ import akka.http.javadsl.ServerBinding;
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
 import akka.http.javadsl.server.Route;
-import akka.stream.ActorMaterializer;
 import akka.stream.Materializer;
 import akka.stream.javadsl.Flow;
 import com.typesafe.config.Config;
@@ -26,15 +25,12 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletionStage;
 
-import static java.util.stream.Stream.concat;
 
 public class ExtendedApp {
     private static ActorRef<NodeGreeter.Command> greeter;
     private static ActorRef<ClusterListener.Event> listener;
     private static ActorSystem<NotUsed> system;
-    public static String address;
     public static int port;
-    public static String nodeId;
     static void startHttpServer(Route route, ActorSystem<?> system) {
         // Akka HTTP still needs a classic ActorSystem to start
         akka.actor.ActorSystem classicSystem = Adapter.toClassic(system);
@@ -43,13 +39,14 @@ public class ExtendedApp {
 
         final Flow<HttpRequest, HttpResponse, NotUsed> routeFlow = route.flow(classicSystem, materializer);
         CompletionStage<ServerBinding> futureBinding =
-                http.bindAndHandle(routeFlow, ConnectHttp.toHost(address, port), materializer);
+                http.bindAndHandle(routeFlow, ConnectHttp.toHost("localhost", port), materializer);
 
         futureBinding.whenComplete((binding, exception) -> {
             if (binding != null) {
+                InetSocketAddress address = binding.localAddress();
                 system.log().info("Server online at http://{}:{}/",
-                        address,
-                        port);
+                        address.getHostString(),
+                        address.getPort());
             } else {
                 system.log().error("Failed to bind HTTP endpoint, terminating system", exception);
                 system.terminate();
@@ -103,13 +100,10 @@ public class ExtendedApp {
         Config config = ConfigFactory.parseMap(overrides)
                 .withFallback(ConfigFactory.load());
 
-        address = config.getString("http.ip");
         ExtendedApp.port = port;
-        nodeId = config.getString("clustering.ip");
         // Create an Akka system
         system = ActorSystem.create(rootBehavior(), "ClusterSystem", config);
-        system.log().info("putting the server online at http://{}:{}/",
-                address,
+        system.log().info("putting the server online at http://localhost:{}/",
                 port);
     }
 }
