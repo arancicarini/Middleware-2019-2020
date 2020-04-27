@@ -1,4 +1,4 @@
-package sample.cluster.simple.extended;
+package sample.cluster.simple;
 import java.time.Duration;
 import java.util.concurrent.CompletionStage;
 import akka.actor.typed.ActorRef;

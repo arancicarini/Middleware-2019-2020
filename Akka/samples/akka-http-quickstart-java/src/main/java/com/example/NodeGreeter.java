@@ -1,6 +1,5 @@
-package sample.cluster.simple.extended;
+package sample.cluster.simple;
 
-import akka.actor.ActorSystem;
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.Behavior;
 import akka.actor.typed.javadsl.*;

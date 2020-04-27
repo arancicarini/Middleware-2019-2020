@@ -1,4 +1,4 @@
-package sample.cluster.simple.extended;
+package sample.cluster.simple;
 
 import akka.NotUsed;
 import akka.actor.typed.ActorRef;
@@ -16,9 +16,7 @@ import akka.stream.Materializer;
 import akka.stream.javadsl.Flow;
 import com.typesafe.config.Config;
 import com.typesafe.config.ConfigFactory;
-import sample.cluster.simple.ClusterListener;
 
-import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.Arrays;
 import java.util.HashMap;
@@ -26,7 +24,7 @@ import java.util.Map;
 import java.util.concurrent.CompletionStage;
 
 
-public class ExtendedApp {
+public class QuickStartApp {
     private static ActorRef<NodeGreeter.Command> greeter;
     private static ActorRef<ClusterListener.Event> listener;
     private static ActorSystem<NotUsed> system;
@@ -55,26 +53,15 @@ public class ExtendedApp {
     }
     public static void main(String[] args) {
         if (args.length == 0) {
-            startup(25251);
-            startup(25252);
             startup(0);
         } else {
-            Arrays.stream(args).map(Integer::parseInt).forEach(ExtendedApp::startup);
+            Arrays.stream(args).map(Integer::parseInt).forEach(QuickStartApp::startup);
         }
 
 
         //#main-send-messages
-        greeter.tell(new NodeGreeter.SayHello("Arianna"));
         //#main-send-messages
 
-        try {
-            System.out.println(">>> Press ENTER to exit <<<");
-            System.in.read();
-        } catch (
-                IOException ignored) {
-        } finally {
-            system.terminate();
-        }
 
 
     }
@@ -87,6 +74,7 @@ public class ExtendedApp {
             listener = context.spawn(ClusterListener.create(), "listener");
             UserRoutes userRoutes = new UserRoutes(context.getSystem(), greeter);
             startHttpServer(userRoutes.userRoutes(), context.getSystem());
+            greeter.tell(new NodeGreeter.SayHello("Arianna"));
             return Behaviors.empty();
         });
     }
@@ -100,9 +88,9 @@ public class ExtendedApp {
         Config config = ConfigFactory.parseMap(overrides)
                 .withFallback(ConfigFactory.load());
 
-        ExtendedApp.port = port;
+        QuickStartApp.port = port;
         // Create an Akka system
-        system = ActorSystem.create(rootBehavior(), "ClusterSystem", config);
+        system = ActorSystem.create(rootBehavior(), "HelloAkkaHttpServer", config);
         system.log().info("putting the server online at http://localhost:{}/",
                 port);
     }
