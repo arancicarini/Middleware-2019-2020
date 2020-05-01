@@ -13,7 +13,7 @@ https://doc.akka.io/japi/akka/current/index.html?akka/cluster/ddata/typed/javads
     - edit akka.cluster.seed-nodes with your custom IP address
 - If not already done,
     - Download and install Maven from https://maven.apache.org/.
-    - Don't forget to add  <path_to_Maven>/Maven <version> /bin  to your env variables under the PATH variable.
+    - Don't forget to add  <path_to_Maven>/Maven<version_of_Maven>/bin  to your env variables under the PATH variable.
 - open a shell in the akka-sample-cluster-java-customer folder (hereunder called simply "root").
     - type **mvn compile**
     - type **mvn exec:java -Dexec.mainClass="sample.cluster.simple.App" -Dexec.args=25251**
