@@ -34,8 +34,13 @@ public class UserRoutes {
     }
 
     private CompletionStage<NodeGreeter.Greeted> greet(String name) {
-        return AskPattern.ask(greeter, ref -> new NodeGreeter.Greet(name, ref), askTimeout, scheduler);
+        return AskPattern.ask(greeter, ref -> new NodeGreeter.Greet(name), askTimeout, scheduler);
     }
+
+    private CompletionStage<NodeGreeter.SaidHello> sayHello(String name) {
+        return AskPattern.ask(greeter, ref -> new NodeGreeter.SayHello(name, ref), askTimeout, scheduler);
+    }
+
 
 
     /**
@@ -43,15 +48,13 @@ public class UserRoutes {
      */
     //#all-routes
     public Route userRoutes() {
-        return pathPrefix("greet", () ->
+        return concat(pathPrefix("greet",  () ->
                         //#greet- get
                         path(PathMatchers.segment(), (String name) ->
                                         get(() ->
                                                         //#answer with a greeted message
-                                                                onSuccess(greet(name), greeted ->{
-                                                                            System.out.println("API ENDPOINT CALLED");
-                                                                            return complete(StatusCodes.OK, greeted, Jackson.marshaller());
-
+                                                {greeter.tell(new NodeGreeter.Greet(name) );
+                                                    return complete(StatusCodes.OK);
                                                                         }
                                                                 )
 
@@ -60,8 +63,24 @@ public class UserRoutes {
 
                         )
                         //#greet -get
+                        , pathPrefix("sayHello",() ->
+                        //#greet- get
+                        path(PathMatchers.segment(), (String name) ->
+                                get(() ->
+                                                //#answer with a greeted message
+                                                onSuccess(sayHello(name), saidHello ->{
+                                                            System.out.println("API ENDPOINT CALLED");
+                                                            return complete(StatusCodes.OK, saidHello, Jackson.marshaller());
 
-        );
+                                                        }
+                                                )
+
+                                        //#answer with a greeted message
+                                )
+
+                        )
+                //#greet -get
+        ));
     }
     //#all-routes
 
