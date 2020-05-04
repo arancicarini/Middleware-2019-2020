@@ -34,7 +34,7 @@ public class UserRoutes {
     }
 
     private CompletionStage<NodeGreeter.Greeted> greet(String name) {
-        return AskPattern.ask(greeter, ref -> new NodeGreeter.Greet(name), askTimeout, scheduler);
+        return AskPattern.ask(greeter, ref -> new NodeGreeter.Greet(name, ref), askTimeout, scheduler);
     }
 
     private CompletionStage<NodeGreeter.SaidHello> sayHello(String name) {
@@ -53,15 +53,14 @@ public class UserRoutes {
                         path(PathMatchers.segment(), (String name) ->
                                         get(() ->
                                                         //#answer with a greeted message
-                                                {greeter.tell(new NodeGreeter.Greet(name) );
-                                                    return complete(StatusCodes.OK);
-                                                                        }
-                                                                )
-
+                                                        onSuccess(greet(name), greeted ->{
+                                                                    log.info("Greet API REndpoint called");
+                                                                    return complete(StatusCodes.OK, greeted, Jackson.marshaller());
+                                                                }
+                                                        )
                                                 //#answer with a greeted message
                                         )
-
-                        )
+                        ))
                         //#greet -get
                         , pathPrefix("sayHello",() ->
                         //#greet- get
@@ -69,7 +68,7 @@ public class UserRoutes {
                                 get(() ->
                                                 //#answer with a greeted message
                                                 onSuccess(sayHello(name), saidHello ->{
-                                                            System.out.println("API ENDPOINT CALLED");
+                                                            log.info("API ENDPOINT CALLED");
                                                             return complete(StatusCodes.OK, saidHello, Jackson.marshaller());
 
                                                         }
