@@ -1,6 +1,7 @@
 package sample.cluster.simple;
 
 import akka.actor.Actor;
+import akka.actor.ActorSelection;
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.Behavior;
 import akka.actor.typed.javadsl.*;
@@ -21,7 +22,6 @@ import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 import java.util.Optional;
 import java.util.concurrent.CompletionStage;
-
 import static akka.http.javadsl.ConnectHttp.toHost;
 
 // #greeter
@@ -65,34 +65,7 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
         }
     }
 
-    public static class FailedConnection implements Command{
-        public final String msg;
-        public final akka.actor.ActorRef TCPClient;
-
-        public FailedConnection(String msg, akka.actor.ActorRef tcpClient) {
-            this.msg = msg;
-            this.TCPClient = tcpClient;
-        }
-    }
-
-    public static class SuccessfulConnection implements Command{
-        public final Tcp.Connected msg;
-        public final akka.actor.ActorRef TCPClient;
-
-        public SuccessfulConnection(Tcp.Connected msg, akka.actor.ActorRef tcpClient) {
-            this.msg = msg;
-            this.TCPClient = tcpClient;
-        }
-    }
-
-    public static class Received implements  Command{
-        public final ByteString msg;
-
-        public Received(ByteString msg) {
-            this.msg = msg;
-        }
-    }
-
+    //actor attributes
     private final int max;
     private int greetingCounter;
 
@@ -115,7 +88,7 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
     }
 
     private Behavior<Command> onGreet(Greet message) {
-        getContext().getLog().info("Happy Liberation Day, {}!", message.whom);
+        getContext().getLog().info("Fijne Dutch Liberation Day, {}!", message.whom);
         //#greeter-send-message
         message.replyTo.tell(new Greeted(message.whom ));
         //#greeter-send-message
@@ -133,19 +106,6 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
     }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
     private Behavior<Command> onSayHello(SayHello sayHello) throws UnknownHostException {
         String name = sayHello.name;
         akka.actor.ActorSystem classicSystem = Adapter.toClassic(getContext().getSystem());
@@ -157,48 +117,19 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
             if (!member.equals(cluster.selfMember())){
                 Optional<String> host = member.address().getHost();
                 Optional<Integer> port = member.address().getPort();
-
                 if (host.isPresent() && port.isPresent()) {
                     getContext().getLog().info("HOST: "+ host.get()+ " PORT:"+ port.get());
-                    final akka.http.javadsl.model.RemoteAddress remoteAddress =
-                            akka.http.javadsl.model.RemoteAddress.create(InetAddress.getByName(host.get()));
-                    final Flow<HttpRequest, HttpResponse, CompletionStage<OutgoingConnection>> connectionFlow =
-                            Http.get(classicSystem).outgoingConnection(toHost(host.get(), port.get()));
-                    CompletionStage<HttpResponse> responseFuture =
-                            // This is actually a bad idea in general. Even if the `connectionFlow` was instantiated only once above,
-                            // a new connection is opened every single time, `runWith` is called. Materialization (the `runWith` call)
-                            // and opening up a new connection is slow.
-                            //
-                            // The `outgoingConnection` API is very low-level. Use it only if you already have a `Source[HttpRequest, _]`
-                            // (other than Source.single) available that you want to use to run requests on a single persistent HTTP
-                            // connection.
-                            //
-                            // Unfortunately, this case is so uncommon, that we couldn't come up with a good example.
-                            //
-                            // In almost all cases it is better to use the `Http().singleRequest()` API instead.
-                            Source.single(HttpRequest.create("/"))
-                                    .via(connectionFlow)
-                                    .runWith(Sink.<HttpResponse>head(), materializer);
-
-                    responseFuture =
-                            Http.get(classicSystem).singleRequest(HttpRequest.create().)
-                                            //(HttpRequest.create().withUri(Uri.create("http://" + host.get() + ":" + port.get() + "/greet/" + name)));
-                    responseFuture.whenComplete((response, exception) -> {
-                        CompletionStage<Greeted> greeted = Jackson.unmarshaller(Greeted.class).unmarshal(response.entity(), materializer);
-                        greeted.whenComplete((message, exception1) -> {
-                            getContext().getLog().info("Greetings {} have been delivered to  {}", greetingCounter, message.whom);
-                        });
-                    });
-
-                     */
+                    ActorSelection selection =
+                            getContext().classicActorContext().actorSelection
+                                    ("akka://clusterSystem@"+ host + ":" + String.valueOf(port) +"/user/nodeGreeter");
+                    selection.tell();
                 } else {
                     getContext().getLog().info("Not possibile to send a message");
                 }
             }
         }
         sayHello.replyTo.tell(new SaidHello(name));
-        InetSocketAddress socketAddress = new InetSocketAddress(toHost())
-        TcpMessage.c
+
         return this;
     }
 

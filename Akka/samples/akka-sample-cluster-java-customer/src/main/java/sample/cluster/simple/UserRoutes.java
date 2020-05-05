@@ -17,7 +17,7 @@ import java.util.concurrent.CompletionStage;
 import static akka.http.javadsl.server.Directives.*;
 
 /**
- * Routes can be defined in separated classes like shown in here
+ * This is a separate class used to define routes, the API endpoints
  */
 //#user-routes-class
 public class UserRoutes {
@@ -48,38 +48,34 @@ public class UserRoutes {
      */
     //#all-routes
     public Route userRoutes() {
-        return concat(pathPrefix("greet",  () ->
-                        //#greet- get
-                        path(PathMatchers.segment(), (String name) ->
-                                        get(() ->
-                                                        //#answer with a greeted message
-                                                        onSuccess(greet(name), greeted ->{
-                                                                    log.info("Greet API REndpoint called");
-                                                                    return complete(StatusCodes.OK, greeted, Jackson.marshaller());
-                                                                }
-                                                        )
-                                                //#answer with a greeted message
-                                        )
-                        ))
-                        //#greet -get
-                        , pathPrefix("sayHello",() ->
-                        //#greet- get
-                        path(PathMatchers.segment(), (String name) ->
-                                get(() ->
-                                                //#answer with a greeted message
-                                                onSuccess(sayHello(name), saidHello ->{
-                                                            log.info("API ENDPOINT CALLED");
-                                                            return complete(StatusCodes.OK, saidHello, Jackson.marshaller());
-
-                                                        }
-                                                )
-
-                                        //#answer with a greeted message
-                                )
-
+        return concat(
+            //#greet/$id - get
+            pathPrefix("greet",  () ->
+                path(PathMatchers.segment(), (String name) ->
+                    get(() ->
+                        //#answer with a greeted message marshalled with Jackson
+                        onSuccess(greet(name), greeted -> {
+                            log.info("Greet API REndpoint called");
+                            return complete(StatusCodes.OK, greeted, Jackson.marshaller());
+                            }
                         )
-                //#greet -get
-        ));
+                    )
+                )
+            ),
+            //#sayHello/$id - get
+            pathPrefix("sayHello",() ->
+                path(PathMatchers.segment(), (String name) ->
+                    get(() ->
+                        //#answer with a saidHello message marshalled with Jackson
+                        onSuccess(sayHello(name), saidHello ->{
+                            log.info("API ENDPOINT CALLED");
+                            return complete(StatusCodes.OK, saidHello, Jackson.marshaller());
+                             }
+                        )
+                    )
+                )
+            )
+        );
     }
     //#all-routes
 
