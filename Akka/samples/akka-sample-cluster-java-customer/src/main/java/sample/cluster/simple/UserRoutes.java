@@ -33,7 +33,7 @@ public class UserRoutes {
         askTimeout = system.settings().config().getDuration("akka.routes.ask-timeout");
     }
 
-    private CompletionStage<NodeGreeter.Greeted> greet(String name) {
+    private CompletionStage<NodeGreeter.Command> greet(String name) {
         return AskPattern.ask(greeter, ref -> new NodeGreeter.Greet(name, ref), askTimeout, scheduler);
     }
 
