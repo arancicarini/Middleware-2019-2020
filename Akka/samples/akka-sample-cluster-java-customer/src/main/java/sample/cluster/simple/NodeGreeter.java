@@ -1,29 +1,14 @@
 package sample.cluster.simple;
 
-import akka.actor.Actor;
-import akka.actor.ActorSelection;
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.Behavior;
 import akka.actor.typed.javadsl.*;
 import akka.actor.typed.receptionist.Receptionist;
 import akka.cluster.Member;
 import akka.cluster.typed.Cluster;
-import akka.http.javadsl.Http;
-import akka.http.javadsl.OutgoingConnection;
-import akka.http.javadsl.marshallers.jackson.Jackson;
-import akka.http.javadsl.model.HttpRequest;
-import akka.http.javadsl.model.HttpResponse;
-import akka.io.Tcp;
-import akka.io.TcpMessage;
 import akka.stream.Materializer;
-import akka.stream.javadsl.Flow;
-import akka.util.ByteString;
-import java.net.InetAddress;
-import java.net.InetSocketAddress;
 import java.net.UnknownHostException;
 import java.util.Optional;
-import java.util.concurrent.CompletionStage;
-import static akka.http.javadsl.ConnectHttp.toHost;
 
 // #greeter
 public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
