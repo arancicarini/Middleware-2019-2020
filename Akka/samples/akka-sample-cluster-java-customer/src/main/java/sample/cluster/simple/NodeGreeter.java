@@ -5,6 +5,7 @@ import akka.actor.ActorSelection;
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.Behavior;
 import akka.actor.typed.javadsl.*;
+import akka.actor.typed.receptionist.Receptionist;
 import akka.cluster.Member;
 import akka.cluster.typed.Cluster;
 import akka.http.javadsl.Http;
@@ -70,7 +71,11 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
     private int greetingCounter;
 
     public static Behavior<Command> create(int max) {
-        return Behaviors.setup(context -> new NodeGreeter(context, max));
+        return Behaviors.setup(context -> {
+            NodeGreeter nodeGreeter = new NodeGreeter(context, max);
+            context.getSystem().receptionist().tell(Receptionist.register());
+            return new NodeGreeter(context, max);
+        });
     }
 
     private NodeGreeter(ActorContext<Command> context, int max) {
@@ -119,10 +124,6 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
                 Optional<Integer> port = member.address().getPort();
                 if (host.isPresent() && port.isPresent()) {
                     getContext().getLog().info("HOST: "+ host.get()+ " PORT:"+ port.get());
-                    ActorSelection selection =
-                            getContext().classicActorContext().actorSelection
-                                    ("akka://clusterSystem@"+ host + ":" + String.valueOf(port) +"/user/nodeGreeter");
-                    selection.tell();
                 } else {
                     getContext().getLog().info("Not possibile to send a message");
                 }
