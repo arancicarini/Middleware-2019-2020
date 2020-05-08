@@ -7,6 +7,8 @@ import akka.actor.typed.javadsl.*;
 import akka.actor.typed.receptionist.Receptionist;
 import akka.actor.typed.receptionist.ServiceKey;
 import akka.cluster.typed.Cluster;
+import sample.cluster.CborSerializable;
+
 import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -15,10 +17,10 @@ import java.util.*;
 import java.util.stream.Collectors;
 
 // #greeter
-public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
+public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> implements CborSerializable {
 
     //messages
-    public interface Command{}
+    public interface Command extends CborSerializable{};
     public static final class Greet implements Command{
         public final String whom;
         public final ActorRef<Command> replyTo;
@@ -66,9 +68,9 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
     }
 
     public static class Discover implements Command{
-        public final ActorRef<Command> replyTo;
+        public final ActorRef<Discovered> replyTo;
 
-        public Discover(ActorRef<Command> replyTo){
+        public Discover(ActorRef<Discovered> replyTo){
             this.replyTo=replyTo;
         }
     }
@@ -89,26 +91,26 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
     private final int max;
     private int greetingCounter;
     public static ServiceKey<Command> KEY= ServiceKey.create(Command.class, "NODE");
-    private final HashMap<String, ActorRef<Command>> nodes;
+    private final HashMap<String, ActorRef<Command>> nodes = new HashMap<>();
 
     public static Behavior<Command> create(int max) {
         return Behaviors.setup(context -> {
             NodeGreeter nodeGreeter = new NodeGreeter(context, max);
-            context.getSystem().receptionist().tell(Receptionist.register(KEY, context.getSelf().narrow()));
-            context.getLog().info("registering...");
+            context.getSystem().receptionist().tell(Receptionist.register(KEY, context.getSelf()));
+            context.getLog().info("registering with the receptionist...");
             ActorRef<Receptionist.Listing> subscriptionAdapter = context.messageAdapter(Receptionist.Listing.class, listing ->
                             new NodesUpdate(listing.getServiceInstances(NodeGreeter.KEY)));
-            context.getLog().info("subscribing...");
+            context.getLog().info("subscribing with the receptionist...");
             context.getSystem().receptionist().tell(Receptionist.subscribe(NodeGreeter.KEY,subscriptionAdapter));
             return nodeGreeter;
         });
     }
 
+
     private NodeGreeter(ActorContext<Command> context, int max) {
         super(context);
         this.max = max;
         this.greetingCounter = 0;
-        this.nodes = new HashMap<>();
     }
 
     @Override
@@ -148,7 +150,7 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
         for (ActorRef<Command> node : nodes.values()){
             node.tell(new Greet(message.name, getContext().getSelf()));
         }
-
+        message.replyTo.tell(new SaidHello(message.name));
         return this;
     }
 
@@ -157,8 +159,10 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
         //send a discovery message to all new nodes added to the cluster
         Set<ActorRef<Command>> currentNodes= new HashSet<>(message.currentNodes);
         currentNodes.removeAll(nodes.values());
+        ActorRef<Discovered> responseAdapter =
+                getContext().messageAdapter(Discovered.class, discovered -> new Discovered(discovered.address, discovered.port, discovered.ref));
         for(ActorRef<Command> node: currentNodes){
-            node.tell(new Discover(getContext().getSelf()));
+            node.tell(new Discover(responseAdapter));
         }
 
         //removing all the nodes which are not reachable anymore
@@ -198,7 +202,6 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
             // Create the SHA-1 of the nodeidentifier
             digest = MessageDigest.getInstance("SHA-1");
             hash = digest.digest(key.getBytes(StandardCharsets.UTF_8));
-            System.out.println(hash.length);
             // Convert hash bytes into StringBuffer ( via integer representation)
             for (int i = 0; i < hash.length; i++) {
                 String hex = Integer.toHexString(0xff &  hash[i]);
