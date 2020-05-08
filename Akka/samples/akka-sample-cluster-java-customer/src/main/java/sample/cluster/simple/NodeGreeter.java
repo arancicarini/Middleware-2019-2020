@@ -95,8 +95,10 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
         return Behaviors.setup(context -> {
             NodeGreeter nodeGreeter = new NodeGreeter(context, max);
             context.getSystem().receptionist().tell(Receptionist.register(KEY, context.getSelf().narrow()));
+            context.getLog().info("registering...");
             ActorRef<Receptionist.Listing> subscriptionAdapter = context.messageAdapter(Receptionist.Listing.class, listing ->
                             new NodesUpdate(listing.getServiceInstances(NodeGreeter.KEY)));
+            context.getLog().info("subscribing...");
             context.getSystem().receptionist().tell(Receptionist.subscribe(NodeGreeter.KEY,subscriptionAdapter));
             return nodeGreeter;
         });
