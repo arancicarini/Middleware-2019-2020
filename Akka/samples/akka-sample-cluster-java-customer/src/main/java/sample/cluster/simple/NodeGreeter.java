@@ -58,10 +58,10 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
     }
 
     public static class NodesUpdate implements Command{
-        public Set<ActorRef<Command>> newNodes;
+        public Set<ActorRef<Command>> currentNodes;
 
-        public NodesUpdate (Set<ActorRef<Command>> newNodes){
-            this.newNodes=newNodes;
+        public NodesUpdate (Set<ActorRef<Command>> currentNodes){
+            this.currentNodes=currentNodes;
         }
     }
 
@@ -154,19 +154,22 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
 
 
     private Behavior<Command> onNodesUpdate(NodesUpdate message) {
-        Set<ActorRef<Command>> newNodesCopy= new HashSet<>(message.newNodes);
-        message.newNodes.removeAll(nodes.values());
-        for(ActorRef<Command> node: message.newNodes ){
+        //send a discovery message to all new nodes added to the cluster
+        Set<ActorRef<Command>> currentNodes= new HashSet<>(message.currentNodes);
+        currentNodes.removeAll(nodes.values());
+        for(ActorRef<Command> node: currentNodes){
             node.tell(new Discover(getContext().getSelf()));
         }
 
-        Collection<ActorRef<Command>> toRemove = nodes.values();
-        toRemove.removeAll(newNodesCopy);
-
-        List<String> filtered= nodes.entrySet().stream().filter(e->toRemove.contains(e.getValue())).map(Map.Entry::getKey).collect(Collectors.toList());
-        for(String key : filtered){
+        //removing all the nodes which are not reachable anymore
+        currentNodes= new HashSet<>(message.currentNodes);
+        Collection<ActorRef<Command>> oldNodes = nodes.values();
+        oldNodes.removeAll(currentNodes);
+        List<String> keysToRemove= nodes.entrySet().stream().filter(e->oldNodes.contains(e.getValue())).map(Map.Entry::getKey).collect(Collectors.toList());
+        for(String key : keysToRemove){
             nodes.remove(key);
         }
+        //logging the new status of the cluster
         getContext().getLog().info("List of services registered with the receptionist changed: {}", nodes);
         return this;
     }
@@ -186,6 +189,7 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> {
         return this;
     }
 
+    //converting ip port -> hash
     private static String hashfunction(String key){
         MessageDigest digest;
         byte[] hash;
