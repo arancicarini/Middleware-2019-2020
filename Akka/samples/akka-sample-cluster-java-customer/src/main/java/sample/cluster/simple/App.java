@@ -43,7 +43,7 @@ public class App {
 
       // Create an actor that handles cluster domain events
       context.spawn(ClusterListener.create(), "ClusterListener");
-      ActorRef<NodeGreeter.Command> greeter = context.spawn(NodeGreeter.create(3), "NodeGreeter");
+      ActorRef<NodeGreeter.Command> greeter = context.spawn(NodeGreeter.create(30), "NodeGreeter");
       UserRoutes userRoutes = new UserRoutes(context.getSystem(), greeter);
       startHttpServer(userRoutes.userRoutes(), context.getSystem());
       return Behaviors.empty();
