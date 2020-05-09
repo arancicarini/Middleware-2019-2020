@@ -59,6 +59,9 @@ public final class ClusterListener extends AbstractBehavior<ClusterListener.Even
   private Behavior<Event> onReachabilityChange(ReachabilityChange event) {
     if (event.reachabilityEvent instanceof ClusterEvent.UnreachableMember) {
       getContext().getLog().info("Member detected as unreachable: {}", event.reachabilityEvent.member());
+      getContext().getLog().info("Member detected as unreachable: {}", event.reachabilityEvent.member());
+      getContext().getLog().info("Member detected as unreachable: {}", event.reachabilityEvent.member());
+
     } else if (event.reachabilityEvent instanceof ClusterEvent.ReachableMember) {
       getContext().getLog().info("Member back to reachable: {}", event.reachabilityEvent.member());
     }

@@ -12,28 +12,34 @@
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <akka.version>2.6.4</akka.version>
+    <scala.binary.version>2.13</scala.binary.version>
   </properties>
 
   <dependencies>
     <dependency>
       <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-remote_2.13</artifactId>
+      <artifactId>akka-actor_2.12</artifactId>
       <version>${akka.version}</version>
     </dependency>
     <dependency>
       <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-actor-typed_2.13</artifactId>
+      <artifactId>akka-remote_2.12</artifactId>
       <version>${akka.version}</version>
     </dependency>
     <dependency>
       <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-cluster-typed_2.13</artifactId>
+      <artifactId>akka-actor-typed_2.12</artifactId>
       <version>${akka.version}</version>
     </dependency>
     <dependency>
       <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-serialization-jackson_2.13</artifactId>
+      <artifactId>akka-cluster-typed_2.12</artifactId>
       <version>${akka.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>com.typesafe.akka</groupId>
+      <artifactId>akka-serialization-jackson_2.12</artifactId>
+      <version>2.6.5</version>
     </dependency>
     <dependency>
       <groupId>ch.qos.logback</groupId>
@@ -42,20 +48,19 @@
     </dependency>
     <dependency>
       <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-actor-testkit-typed_2.13</artifactId>
+      <artifactId>akka-actor-testkit-typed_2.12</artifactId>
       <version>${akka.version}</version>
       <scope>test</scope>
     </dependency>
     <dependency>
       <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-http_2.13</artifactId>
+      <artifactId>akka-http_2.12</artifactId>
       <version>10.1.11</version>
     </dependency>
-
     <dependency>
       <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-stream_2.13</artifactId>
-      <version>2.6.4</version>
+      <artifactId>akka-stream_2.12</artifactId>
+      <version>${akka.version}</version>
     </dependency>
     <dependency>
       <groupId>com.fasterxml.jackson.core</groupId>
@@ -64,7 +69,7 @@
     </dependency>
     <dependency>
       <groupId>com.typesafe.akka</groupId>
-      <artifactId>akka-http-jackson_2.13</artifactId>
+      <artifactId>akka-http-jackson_2.12</artifactId>
       <version>10.1.11</version>
     </dependency>
     <dependency>
@@ -72,7 +77,6 @@
       <artifactId>scala-library</artifactId>
       <version>2.13.1</version>
     </dependency>
-
   </dependencies>
 
   <build>
@@ -80,7 +84,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
-        <version>3.5.1</version>
+        <version>3.8.1</version>
         <configuration>
           <source>1.8</source>
           <target>1.8</target>

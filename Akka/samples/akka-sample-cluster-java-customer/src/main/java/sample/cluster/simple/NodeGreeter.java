@@ -15,6 +15,9 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 import java.util.stream.Collectors;
+import akka.actor.typed.javadsl.ActorContext;
+import akka.actor.typed.javadsl.Behaviors;
+
 
 // #greeter
 public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> implements CborSerializable {
@@ -68,9 +71,9 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> implement
     }
 
     public static class Discover implements Command{
-        public final ActorRef<Discovered> replyTo;
+        public final ActorRef<Command> replyTo;
 
-        public Discover(ActorRef<Discovered> replyTo){
+        public Discover(ActorRef<Command> replyTo){
             this.replyTo=replyTo;
         }
     }
@@ -115,18 +118,20 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> implement
 
     @Override
     public Receive<Command> createReceive() {
-        return newReceiveBuilder().
-                onMessage(Greet.class, this::onGreet).
-                onMessage(Greeted.class, this::onGreeted).
-                onMessage(SayHello.class, this::onSayHello).
-                onMessage(NodesUpdate.class, this:: onNodesUpdate).
-                onMessage(Discover.class, this::onDiscover).
-                onMessage(Discovered.class, this:: onDiscovered).
-                build();
+        return newReceiveBuilder()
+                .onMessage(Greet.class, this::onGreet).
+                        onMessage(Greeted.class, this::onGreeted).
+                        onMessage(SayHello.class, this::onSayHello).
+                        onMessage(NodesUpdate.class, this:: onNodesUpdate).
+                        onMessage(Discover.class, this::onDiscover).
+                        onMessage(Discovered.class, this:: onDiscovered).
+                        build();
     }
 
 
+
     private Behavior<Command> onGreet(Greet message) {
+        getContext().getLog().info("Fijne Dutch Liberation Day, {}!", message.whom);
         getContext().getLog().info("Fijne Dutch Liberation Day, {}!", message.whom);
         //#greeter-send-message
         message.replyTo.tell(new Greeted(message.whom,getContext().getSelf() ));
@@ -159,10 +164,10 @@ public class NodeGreeter extends AbstractBehavior<NodeGreeter.Command> implement
         //send a discovery message to all new nodes added to the cluster
         Set<ActorRef<Command>> currentNodes= new HashSet<>(message.currentNodes);
         currentNodes.removeAll(nodes.values());
-        ActorRef<Discovered> responseAdapter =
-                getContext().messageAdapter(Discovered.class, discovered -> new Discovered(discovered.address, discovered.port, discovered.ref));
+        //String serializedRef = Serialization.serializedActorPath( (akka.actor.ActorRef) getContext().getSelf().narrow());
+        //getContext().getLog().info("{}", serializedRef);
         for(ActorRef<Command> node: currentNodes){
-            node.tell(new Discover(responseAdapter));
+            node.tell(new Discover(getContext().getSelf()));
         }
 
         //removing all the nodes which are not reachable anymore
