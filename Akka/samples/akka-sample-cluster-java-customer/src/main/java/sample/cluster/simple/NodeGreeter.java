@@ -2,13 +2,13 @@ package sample.cluster.simple;
 
 
 import akka.actor.typed.ActorRef;
-import akka.actor.typed.ActorRefResolver;
 import akka.actor.typed.Behavior;
 import akka.actor.typed.receptionist.Receptionist;
 import akka.actor.typed.receptionist.ServiceKey;
 import akka.cluster.typed.Cluster;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import org.w3c.dom.Node;
 import sample.cluster.CborSerializable;
 
 import java.net.UnknownHostException;
@@ -101,6 +101,8 @@ public class NodeGreeter  {
     private int greetingCounter;
     private final ActorContext<Command> context;
     public static ServiceKey<Command> KEY= ServiceKey.create(Command.class, "NODE");
+    public final String port;
+    public final String address;
     private final HashMap<String, ActorRef<Command>> nodes = new HashMap<>();
 
     public static Behavior<Command> create(int max) {
@@ -121,6 +123,9 @@ public class NodeGreeter  {
         this.context = context;
         this.max = max;
         this.greetingCounter = 0;
+        Cluster cluster = Cluster.get(context.getSystem());
+        this.address = cluster.selfMember().address().getHost().get();
+        this.port = String.valueOf(cluster.selfMember().address().getPort().get());
     }
 
     private Behavior<Command> behavior() {
@@ -140,9 +145,7 @@ public class NodeGreeter  {
 
     private Behavior<Command> onGreet(Greet message) {
         context.getLog().info("Fijne Dutch Liberation Day, {}!", message.whom);
-        //#greeter-send-message
         message.replyTo.tell(new Greeted(message.whom,context.getSelf() ));
-        //#greeter-send-message
         return Behaviors.same();
     }
 
@@ -170,27 +173,31 @@ public class NodeGreeter  {
     private Behavior<Command> onNodesUpdate(NodesUpdate message) {
         //send a discovery message to all new nodes added to the cluster
         Set<ActorRef<Command>> currentNodes= new HashSet<>(message.currentNodes);
+        List<String> currentNodesIDs = currentNodes.stream().map(Object::toString).collect(Collectors.toList());
         Collection<ActorRef<Command>> oldNodes = nodes.values();
-        currentNodes.removeAll(oldNodes);
+        List<String> oldNodesIDs = oldNodes.stream().map(Object::toString).collect(Collectors.toList());
         int i = 0;
-        for(ActorRef<Command> node: message.currentNodes){
-            context.getLog().info("Nodes Update member {}: {}",i, node);
+        currentNodes.removeIf(n -> oldNodesIDs.contains(n.toString()));
+        i = 0;
+        for(ActorRef<Command> node: currentNodes){
+            context.getLog().info("Nodes Update member {}: {}",i, node.toString());
             node.tell(new Discover(context.getSelf()));
             i++;
         }
 
         //removing all the nodes which are not reachable anymore
-        currentNodes= new HashSet<>(message.currentNodes);
-        oldNodes.removeAll(currentNodes);
+
+        oldNodes.removeIf(n -> currentNodesIDs.contains(n.toString()));
+
         List<String> keysToRemove= nodes.entrySet().stream().filter(e->oldNodes.contains(e.getValue())).map(Map.Entry::getKey).collect(Collectors.toList());
         for(String key : keysToRemove){
             nodes.remove(key);
         }
         //logging the new status of the cluster
-        context.getLog().info("List of services registered with the receptionist changed, new list:");
+        context.getLog().info("List of services registered with the receptionist changed due to potential delete, new list:");
         i=0;
-        for (ActorRef<Command> node: nodes.values()){
-            context.getLog().info("Member {}: {}",i, nodes);
+        for (Map.Entry<String, ActorRef<Command>> node: nodes.entrySet()){
+            context.getLog().info("Member  {}, member string,,value :  {},, {}",i, node.getKey(), node.getValue().toString());
             i++;
         }
 
@@ -199,11 +206,8 @@ public class NodeGreeter  {
     }
 
     private Behavior<Command> onDiscover(Discover message){
-        Cluster cluster = Cluster.get(context.getSystem());
-        String IPaddress = cluster.selfMember().address().getHost().get();
-        String port = String.valueOf(cluster.selfMember().address().getPort().get());
         context.getLog().info("{} wants to discover me!", message.replyTo);
-        message.replyTo.tell(new Discovered(IPaddress,port, context.getSelf()));
+        message.replyTo.tell(new Discovered(address,port, context.getSelf()));
         return Behaviors.same();
     }
 
@@ -212,10 +216,10 @@ public class NodeGreeter  {
         String hashKey = hashfunction(key);
         context.getLog().info("{} has been discovered!", message.replyTo);
         nodes.put(hashKey, message.replyTo);
-        context.getLog().info("List of services registered with the receptionist changed, new list:");
+        context.getLog().info("List of services registered with the receptionist changed due to discovered, new list:");
         int i=0;
-        for (ActorRef<Command> node: nodes.values()){
-            context.getLog().info("Member {}: {}",i, nodes);
+        for (Map.Entry<String, ActorRef<Command>> node: nodes.entrySet()){
+            context.getLog().info("Member  {}, member string,,value :  {},, {}",i, node.getKey(), node.getValue().toString());
             i++;
         }
         return Behaviors.same();
@@ -241,6 +245,26 @@ public class NodeGreeter  {
         }
         return hexHash.toString();
     }
+
+    @Override
+    public String toString(){
+        return address + ":" + port;
+    }
+
+    @Override
+    public boolean equals (Object o){
+        if (o instanceof NodeGreeter){
+            NodeGreeter toCompare = (NodeGreeter) o;
+            return  this.toString().equals(toCompare.toString());
+        }
+        return false;
+    }
+
+    @Override
+    public int hashCode(){
+        return Objects.hash(this.toString());
+    }
+
 
 
 
