@@ -10,7 +10,6 @@ import akka.http.javadsl.server.PathMatchers;
 import akka.http.javadsl.server.Route;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.time.Duration;
 import java.util.concurrent.CompletionStage;
 
@@ -63,21 +62,20 @@ public class UserRoutes {
                 )
             ),
             //#sayHello/$id - get
-            pathPrefix("sayHello",() ->
-                path(PathMatchers.segment(), (String name) ->
-                    get(() ->
-                        //#answer with a saidHello message marshalled with Jackson
-                        onSuccess(sayHello(name), saidHello ->{
-                            log.info("API ENDPOINT CALLED");
-                            return complete(StatusCodes.OK, saidHello, Jackson.marshaller());
-                             }
+                pathPrefix("sayHello",() ->
+                    path(PathMatchers.segment(), (String name) ->
+                        get(() ->
+                            //#answer with a saidHello message marshalled with Jackson
+                            onSuccess(sayHello(name), saidHello ->{
+                                log.info("API ENDPOINT CALLED");
+                                return complete(StatusCodes.OK, saidHello, Jackson.marshaller());
+                                 }
+                            )
                         )
                     )
                 )
-            )
         );
     }
     //#all-routes
-
 }
 
