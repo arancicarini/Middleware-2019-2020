@@ -8,9 +8,7 @@ import akka.actor.typed.receptionist.ServiceKey;
 import akka.cluster.typed.Cluster;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.w3c.dom.Node;
 import sample.cluster.CborSerializable;
-
 import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;

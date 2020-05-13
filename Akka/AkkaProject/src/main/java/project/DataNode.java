@@ -2,6 +2,7 @@ package project;
 
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.Behavior;
+import akka.actor.typed.javadsl.ActorContext;
 import akka.actor.typed.javadsl.Behaviors;
 import akka.actor.typed.receptionist.Receptionist;
 import akka.actor.typed.receptionist.ServiceKey;
@@ -9,16 +10,11 @@ import akka.cluster.typed.Cluster;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 import java.util.stream.Collectors;
-
-import akka.actor.typed.javadsl.ActorContext;
-
-import javax.xml.crypto.Data;
 
 public class DataNode {
 
@@ -27,8 +23,8 @@ public class DataNode {
     //messages
 
     public static final class GetRequest implements Command {
-        String key;
-        ActorRef<Command> replyTo;
+        final String key;
+        final ActorRef<Command> replyTo;
 
         public GetRequest(String key, ActorRef<Command> replyTo){
             this.key=key;
@@ -37,22 +33,23 @@ public class DataNode {
     }
 
     public static final class GetAnswer implements Command{
-        String key;
-        String value;
-        //Boolean present;
-        ActorRef<Command> replyTo;
+        final String key;
+        final String value;
+        final boolean isPresent;
+        final ActorRef<Command> replyTo;
 
-        public GetAnswer(String key, String value, ActorRef<Command> replyTo){
+        public GetAnswer(String key, String value,boolean isPresent, ActorRef<Command> replyTo){
             this.key = key;
             this.value = value;
+            this.isPresent = isPresent;
             this.replyTo = replyTo;
         }
     }
 
     public static final class PutRequest implements Command{
-        String key;
-        String value;
-        ActorRef<Command> replyTo;
+        final String key;
+        final String value;
+        final ActorRef<Command> replyTo;
 
         public PutRequest(List<String> parameters, ActorRef<Command> replyTo){
             this.key=parameters.get(0);
@@ -62,8 +59,7 @@ public class DataNode {
     }
 
     public static final class PutAnswer implements Command{
-        //Boolean done??
-        ActorRef<Command> replyTo;
+        final ActorRef<Command> replyTo;
 
         public PutAnswer(ActorRef<Command> replyTo){
             this.replyTo=replyTo;
@@ -71,7 +67,7 @@ public class DataNode {
     }
 
     public static class NodesUpdate implements Command{
-        public Set<ActorRef<Command>> currentNodes;
+        final public Set<ActorRef<Command>> currentNodes;
 
         public NodesUpdate (Set<ActorRef<Command>> currentNodes){
             this.currentNodes=currentNodes;
@@ -80,7 +76,7 @@ public class DataNode {
 
 
     public static class Discover implements Command{
-        public final ActorRef<Command> replyTo;
+        final ActorRef<Command> replyTo;
 
         @JsonCreator
         public Discover(@JsonProperty("replyTo")ActorRef<Command> replyTo){
@@ -89,9 +85,9 @@ public class DataNode {
     }
 
     public static class Discovered implements Command{
-        public final String address;
-        public final String port;
-        public final ActorRef<Command> replyTo;
+        final String address;
+        final String port;
+        final ActorRef<Command> replyTo;
 
         @JsonCreator
         public Discovered(@JsonProperty("address")String address,@JsonProperty("port") String port,@JsonProperty("replyTo")ActorRef<Command> replyTo){
@@ -103,8 +99,8 @@ public class DataNode {
     //-----------------------------------------------------------------------
 
     //actor attributes
-    public final String port;
-    public final String address;
+    private final String port;
+    private final String address;
     private final HashMap<String, ActorRef<Command>> nodes = new HashMap<>();
     public static ServiceKey<Command> KEY= ServiceKey.create(Command.class, "NODE");
     private final ActorContext<Command> context;
@@ -201,7 +197,7 @@ public class DataNode {
     }
 
     private Behavior<Command> onDiscover(Discover message){
-        context.getLog().info("{} wants to discover me!", message.replyTo);
+        context.getLog().info("{} wants to discover me!", message.replyTo.toString());
         message.replyTo.tell(new Discovered(address,port, context.getSelf()));
         return Behaviors.same();
     }
@@ -222,7 +218,7 @@ public class DataNode {
 
 
     //----------------------------------------------------------------------------------
-    //supporting function
+    //supporting functions
     //converting ip port -> hash
     private static String hashfunction(String key){
         MessageDigest digest;

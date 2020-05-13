@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
   <modelVersion>4.0.0</modelVersion>
-  <artifactId>akka-sample-cluster-java-customer</artifactId>
+  <artifactId>AkkaProject</artifactId>
   <groupId>com.lightbend.akka.samples</groupId>
-  <name>Akka Cluster in Java</name>
+  <name>Distribute Key Value Store in Akka Java</name>
   <version>empty</version>
 
   <properties>
