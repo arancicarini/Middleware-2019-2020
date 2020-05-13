@@ -10,10 +10,8 @@ import akka.http.javadsl.server.PathMatchers;
 import akka.http.javadsl.server.Route;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-
 import java.time.Duration;
 import java.util.concurrent.CompletionStage;
-
 import static akka.http.javadsl.server.Directives.*;
 
 /**
