@@ -1,15 +1,13 @@
-package sample.cluster.simple;
-
+package project;
 
 import akka.actor.typed.ActorRef;
 import akka.actor.typed.Behavior;
+import akka.actor.typed.javadsl.Behaviors;
 import akka.actor.typed.receptionist.Receptionist;
 import akka.actor.typed.receptionist.ServiceKey;
 import akka.cluster.typed.Cluster;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import org.w3c.dom.Node;
-import sample.cluster.CborSerializable;
 
 import java.net.UnknownHostException;
 import java.nio.charset.StandardCharsets;
@@ -17,50 +15,58 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
 import java.util.stream.Collectors;
+
 import akka.actor.typed.javadsl.ActorContext;
-import akka.actor.typed.javadsl.Behaviors;
 
+import javax.xml.crypto.Data;
 
-// #greeter
-public class NodeGreeter  {
+public class DataNode {
+
+    public interface Command extends CborSerializable{}
 
     //messages
-    public interface Command extends CborSerializable{};
-    public static final class Greet implements Command{
-        public final String whom;
-        public final ActorRef<Command> replyTo;
 
-        public Greet(String whom, ActorRef<Command> replyTo) {
-            this.whom = whom;
-            this.replyTo = replyTo;
-        }
+    public static final class GetRequest implements Command {
+        String key;
+        ActorRef<Command> replyTo;
 
-    }
-
-    public static final class Greeted implements Command {
-        public final String whom;
-        public final ActorRef<Command> replyTo;
-        public Greeted(String whom, ActorRef<Command> replyTo) {
-            this.whom = whom;
-            this.replyTo = replyTo;
+        public GetRequest(String key, ActorRef<Command> replyTo){
+            this.key=key;
+            this.replyTo=replyTo;
         }
     }
 
-    public static class SayHello implements Command {
-        public final String name;
-        public final ActorRef<SaidHello> replyTo;
+    public static final class GetAnswer implements Command{
+        String key;
+        String value;
+        //Boolean present;
+        ActorRef<Command> replyTo;
 
-        public SayHello(String name, ActorRef<SaidHello> replyTo) {
-            this.name = name;
+        public GetAnswer(String key, String value, ActorRef<Command> replyTo){
+            this.key = key;
+            this.value = value;
             this.replyTo = replyTo;
         }
     }
 
-    public static class SaidHello implements Command{
-        public final String name;
+    public static final class PutRequest implements Command{
+        String key;
+        String value;
+        ActorRef<Command> replyTo;
 
-        public SaidHello(String name) {
-            this.name = name;
+        public PutRequest(List<String> parameters, ActorRef<Command> replyTo){
+            this.key=parameters.get(0);
+            this.value=parameters.get(1);
+            this.replyTo=replyTo;
+        }
+    }
+
+    public static final class PutAnswer implements Command{
+        //Boolean done??
+        ActorRef<Command> replyTo;
+
+        public PutAnswer(ActorRef<Command> replyTo){
+            this.replyTo=replyTo;
         }
     }
 
@@ -97,81 +103,73 @@ public class NodeGreeter  {
     //-----------------------------------------------------------------------
 
     //actor attributes
-    private final int max;
-    private int greetingCounter;
-    private final ActorContext<Command> context;
-    public static ServiceKey<Command> KEY= ServiceKey.create(Command.class, "NODE");
     public final String port;
     public final String address;
     private final HashMap<String, ActorRef<Command>> nodes = new HashMap<>();
+    public static ServiceKey<Command> KEY= ServiceKey.create(Command.class, "NODE");
+    private final ActorContext<Command> context;
 
-    public static Behavior<Command> create(int max) {
+
+    public DataNode(String port, String address, ActorContext<Command> context) {
+        this.port = port;
+        this.address = address;
+        this.context = context;
+    }
+
+    public static Behavior<Command> create() {
         return Behaviors.setup(context -> {
-            NodeGreeter nodeGreeter = new NodeGreeter(context, max);
+            DataNode dataNode = new DataNode(context);
             context.getSystem().receptionist().tell(Receptionist.register(KEY, context.getSelf()));
             context.getLog().info("registering with the receptionist...");
-            ActorRef<Receptionist.Listing> subscriptionAdapter = context.messageAdapter(Receptionist.Listing.class, listing ->
-                            new NodesUpdate(listing.getServiceInstances(NodeGreeter.KEY)));
+            ActorRef<Receptionist.Listing> subscriptionAdapter =
+                    context.messageAdapter(Receptionist.Listing.class, listing ->
+                    new NodesUpdate(listing.getServiceInstances(DataNode.KEY)));
             context.getLog().info("subscribing with the receptionist...");
-            context.getSystem().receptionist().tell(Receptionist.subscribe(NodeGreeter.KEY,subscriptionAdapter));
-            return nodeGreeter.behavior();
+            context.getSystem().receptionist().tell(Receptionist.subscribe(DataNode.KEY,subscriptionAdapter));
+            return dataNode.behavior();
         });
     }
 
     @JsonCreator
-    private NodeGreeter(@JsonProperty("context")ActorContext<Command> context, @JsonProperty("max") int max) {
+    private DataNode(@JsonProperty("context")ActorContext<Command> context) {
         this.context = context;
-        this.max = max;
-        this.greetingCounter = 0;
         Cluster cluster = Cluster.get(context.getSystem());
         this.address = cluster.selfMember().address().getHost().get();
         this.port = String.valueOf(cluster.selfMember().address().getPort().get());
     }
 
+    //MessageHandler
     private Behavior<Command> behavior() {
         return Behaviors.receive(Command.class)
-            .onMessage(Greet.class, this::onGreet).
-            onMessage(Greeted.class, this::onGreeted).
-            onMessage(SayHello.class, this::onSayHello).
-            onMessage(NodesUpdate.class, this:: onNodesUpdate).
-            onMessage(Discover.class, this::onDiscover).
-            onMessage(Discovered.class, this:: onDiscovered).
-            build();
+                .onMessage(GetRequest.class, this::onGetRequest).
+                        onMessage(GetAnswer.class, this::onGetAnswer).
+                        onMessage(PutRequest.class, this::onPutRequest).
+                        onMessage(PutAnswer.class, this::onPutAnswer).
+                        onMessage(NodesUpdate.class, this:: onNodesUpdate).
+                        onMessage(Discover.class, this::onDiscover).
+                        onMessage(Discovered.class, this:: onDiscovered).
+                        build();
     }
 
 
-
-
-
-    private Behavior<Command> onGreet(Greet message) {
-        context.getLog().info("Liberation Day, {}!", message.whom);
-        message.replyTo.tell(new Greeted(message.whom,context.getSelf() ));
+    private Behavior<Command> onGetRequest(GetRequest message){
         return Behaviors.same();
     }
 
-    private Behavior<Command> onGreeted(Greeted message){
-        greetingCounter++;
-        context.getLog().info("Greetings {} have been delivered to  {} on Actor {}", greetingCounter, message.whom, message.replyTo);
-        if (greetingCounter == max) {
-            return Behaviors.stopped();
-        } else {
-            return Behaviors.same();
-        }
-    }
-
-
-
-    private Behavior<Command> onSayHello(SayHello message) throws UnknownHostException {
-        for (ActorRef<Command> node : nodes.values()){
-            node.tell(new Greet(message.name, context.getSelf()));
-        }
-        message.replyTo.tell(new SaidHello(message.name));
+    private Behavior<Command> onGetAnswer(GetAnswer message){
         return Behaviors.same();
     }
 
+    private Behavior<Command> onPutRequest(PutRequest message){
+        return Behaviors.same();
+    }
+
+    private Behavior<Command> onPutAnswer(PutAnswer message){
+        return Behaviors.same();
+    }
 
     private Behavior<Command> onNodesUpdate(NodesUpdate message) {
-        //send a discovery message to all new nodes added to the cluster
+        //send a discovery message to all new nodes added to the cluster--> maybe can be optimized
         Set<ActorRef<Command>> currentNodes= new HashSet<>(message.currentNodes);
         List<String> currentNodesIDs = currentNodes.stream().map(Object::toString).collect(Collectors.toList());
         Collection<ActorRef<Command>> oldNodes = nodes.values();
@@ -186,13 +184,12 @@ public class NodeGreeter  {
         }
 
         //removing all the nodes which are not reachable anymore
-
         oldNodes.removeIf(n -> currentNodesIDs.contains(n.toString()));
-
         List<String> keysToRemove= nodes.entrySet().stream().filter(e->oldNodes.contains(e.getValue())).map(Map.Entry::getKey).collect(Collectors.toList());
         for(String key : keysToRemove){
             nodes.remove(key);
         }
+
         //logging the new status of the cluster
         context.getLog().info("List of services registered with the receptionist changed due to potential delete, new list:");
         i=0;
@@ -223,6 +220,9 @@ public class NodeGreeter  {
         return Behaviors.same();
     }
 
+
+    //----------------------------------------------------------------------------------
+    //supporting function
     //converting ip port -> hash
     private static String hashfunction(String key){
         MessageDigest digest;
@@ -251,8 +251,8 @@ public class NodeGreeter  {
 
     @Override
     public boolean equals (Object o){
-        if (o instanceof NodeGreeter){
-            NodeGreeter toCompare = (NodeGreeter) o;
+        if (o instanceof DataNode){
+            DataNode toCompare = (DataNode) o;
             return  this.toString().equals(toCompare.toString());
         }
         return false;
@@ -262,10 +262,4 @@ public class NodeGreeter  {
     public int hashCode(){
         return Objects.hash(this.toString());
     }
-
-
-
-
-
 }
-// #greeter
