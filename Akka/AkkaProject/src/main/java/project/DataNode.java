@@ -14,9 +14,17 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class DataNode {
+    private static final String IPADDRESS = "(([0-9]{3})(\\.)([0-9]{3})(\\.)([0-9]{1,3})(\\.)([0-9]{1,3}))";
+    private static final String PORT = "([0-9]{5})";
+    private static final String DATANODENUMBER = "([0-9]+)";
+    private static final String NODEPATTERN = "Actor[akka://ClusterSystem@" + IPADDRESS + ":" + PORT + "/user/DataNode#-" + DATANODENUMBER +"]";
+    private static final String IDENTIFIER = IPADDRESS + ":" + PORT;
+
 
     public interface Command extends CborSerializable{}
 
@@ -51,9 +59,9 @@ public class DataNode {
         final String value;
         final ActorRef<Command> replyTo;
 
-        public PutRequest(List<String> parameters, ActorRef<Command> replyTo){
-            this.key=parameters.get(0);
-            this.value=parameters.get(1);
+        public PutRequest(String key, String value, ActorRef<Command> replyTo){
+            this.key=key;
+            this.value=value;
             this.replyTo=replyTo;
         }
     }
@@ -130,8 +138,18 @@ public class DataNode {
     private DataNode(@JsonProperty("context")ActorContext<Command> context) {
         this.context = context;
         Cluster cluster = Cluster.get(context.getSystem());
-        this.address = cluster.selfMember().address().getHost().get();
-        this.port = String.valueOf(cluster.selfMember().address().getPort().get());
+        Optional<String> maybeAddress = cluster.selfMember().address().getHost();
+        Optional<Integer> maybePort = cluster.selfMember().address().getPort();
+        if (maybeAddress.isPresent() && maybePort.isPresent()){
+            this.address = maybeAddress.get();
+            this.port = String.valueOf(maybePort.get());
+            String hashKey = hashfunction(address,port);
+            //nodes.put(hashKey,context.getSelf());
+        } else {
+            this.address = "127.0.0.1";
+            this.port = String.valueOf(25521);
+        }
+
     }
 
     //MessageHandler
@@ -149,6 +167,7 @@ public class DataNode {
 
 
     private Behavior<Command> onGetRequest(GetRequest message){
+        context.getLog().info("onGetRequest not implemented yet: key = {}",message.key);
         return Behaviors.same();
     }
 
@@ -157,6 +176,7 @@ public class DataNode {
     }
 
     private Behavior<Command> onPutRequest(PutRequest message){
+        context.getLog().info("onPutRequest not implemented yet: key = {}; value= {}",message.key, message.value);
         return Behaviors.same();
     }
 
@@ -165,6 +185,21 @@ public class DataNode {
     }
 
     private Behavior<Command> onNodesUpdate(NodesUpdate message) {
+        for (ActorRef<Command> node: message.currentNodes){
+            Pattern pattern = Pattern.compile(IDENTIFIER);
+            Matcher matcher = pattern.matcher(node.toString());
+            if (matcher.find()){
+                String identifier = matcher.group(0);
+                System.out.println(identifier);
+                String[] splittedIdentifier = identifier.split(":");
+                System.out.println(splittedIdentifier[0]);
+                System.out.println(splittedIdentifier[1]);
+                String hashKey = hashfunction(splittedIdentifier[0], splittedIdentifier[1]);
+                //this.nodes.put(hashKey, node);
+            }
+        }
+
+
         //send a discovery message to all new nodes added to the cluster--> maybe can be optimized
         Set<ActorRef<Command>> currentNodes= new HashSet<>(message.currentNodes);
         List<String> currentNodesIDs = currentNodes.stream().map(Object::toString).collect(Collectors.toList());
@@ -172,7 +207,6 @@ public class DataNode {
         List<String> oldNodesIDs = oldNodes.stream().map(Object::toString).collect(Collectors.toList());
         int i = 0;
         currentNodes.removeIf(n -> oldNodesIDs.contains(n.toString()));
-        i = 0;
         for(ActorRef<Command> node: currentNodes){
             context.getLog().info("Nodes Update member {}: {}",i, node.toString());
             node.tell(new Discover(context.getSelf()));
@@ -203,8 +237,7 @@ public class DataNode {
     }
 
     private Behavior<Command> onDiscovered(Discovered message){
-        String key = message.address + ":" + message.port;
-        String hashKey = hashfunction(key);
+        String hashKey = hashfunction(message.address, message.port);
         context.getLog().info("{} has been discovered!", message.replyTo);
         nodes.put(hashKey, message.replyTo);
         context.getLog().info("List of services registered with the receptionist changed due to discovered, new list:");
@@ -220,7 +253,8 @@ public class DataNode {
     //----------------------------------------------------------------------------------
     //supporting functions
     //converting ip port -> hash
-    private static String hashfunction(String key){
+    private static String hashfunction(String address, String port){
+        String key = address + ":" + port;
         MessageDigest digest;
         byte[] hash;
         StringBuffer hexHash = new StringBuffer();

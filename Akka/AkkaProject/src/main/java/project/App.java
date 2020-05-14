@@ -33,17 +33,13 @@ public class App {
             startup(0);
         } else
             Arrays.stream(args).map(Integer::parseInt).forEach(App::startup);
-
-        //#main-send-messages
-        //greeter.tell(new NodeGreeter.SayHello("Arianna"));
-        //#main-send-messages
     }
 
     private static Behavior<Void> rootBehavior() {
         return Behaviors.setup(context -> {
             // Create an actor that handles cluster domain events
             context.spawn(ClusterListener.create(), "ClusterListener");
-            ActorRef<DataNode.Command> greeter = context.spawn(DataNode.create(), "DataNode");
+            ActorRef<DataNode.Command> dataNode = context.spawn(DataNode.create(), "DataNode");
             UserRoutes userRoutes = new UserRoutes(context.getSystem(), dataNode);
             startHttpServer(userRoutes.userRoutes(), context.getSystem());
             return Behaviors.empty();
