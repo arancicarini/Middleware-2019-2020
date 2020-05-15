@@ -9,7 +9,6 @@ import akka.actor.typed.receptionist.ServiceKey;
 import akka.cluster.typed.Cluster;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import sun.tools.tree.Node;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -46,12 +45,27 @@ public class DataNode {
         final String value;
         final boolean isPresent;
         final ActorRef<Command> replyTo;
+        final int requestID;
 
-        public GetAnswer(String key, String value,boolean isPresent, ActorRef<Command> replyTo){
+
+        public GetAnswer(String key, String value,boolean isPresent, ActorRef<Command> replyTo, int requestID){
             this.key = key;
             this.value = value;
             this.isPresent = isPresent;
             this.replyTo = replyTo;
+            this.requestID = requestID;
+        }
+    }
+
+    public static final class Get implements Command{
+        final String key;
+        final ActorRef<Command> replyTo;
+        final int requestID;
+
+        public Get(String key, ActorRef<Command> replyTo, int requestID){
+            this.key=key;
+            this.replyTo=replyTo;
+            this.requestID = requestID;
         }
     }
 
@@ -97,29 +111,6 @@ public class DataNode {
         }
     }
 
-
-    public static class Discover implements Command{
-        final ActorRef<Command> replyTo;
-
-        @JsonCreator
-        public Discover(@JsonProperty("replyTo")ActorRef<Command> replyTo){
-            this.replyTo=replyTo;
-        }
-    }
-
-    public static class Discovered implements Command{
-        final String address;
-        final String port;
-        final ActorRef<Command> replyTo;
-
-        @JsonCreator
-        public Discovered(@JsonProperty("address")String address,@JsonProperty("port") String port,@JsonProperty("replyTo")ActorRef<Command> replyTo){
-            this.address=address;
-            this.port=port;
-            this.replyTo = replyTo;
-        }
-    }
-
     //-----------------------------------------------------------------------
 
     //actor attributes
@@ -133,6 +124,7 @@ public class DataNode {
     private final ActorContext<Command> context;
     private final HashMap<String,String> data = new HashMap<>();
     private final HashMap<String,String> replicas = new HashMap<>();
+    private final HashMap<Integer, ActorRef<Command>> getRequests = new HashMap<>();
 
 
     public static Behavior<Command> create(int nReplicas) {
@@ -178,21 +170,50 @@ public class DataNode {
                         onMessage(PutRequest.class, this::onPutRequest).
                         onMessage(PutAnswer.class, this::onPutAnswer).
                         onMessage(NodesUpdate.class, this:: onNodesUpdate).
-                        onMessage(Discover.class, this::onDiscover).
-                        onMessage(Discovered.class, this:: onDiscovered).
                         onMessage(Put.class, this::onPut).
                         build();
     }
 
 
     private Behavior<Command> onGetRequest(GetRequest message){
-        context.getLog().info("onGetRequest not implemented yet: key = {}",message.key);
+        String key = message.key;
+        int parsedKey = Integer.parseInt(key);
+        int nodePosition = parsedKey % nNodes;
+        nodes.sort(Comparator.comparing(NodeInfo::getHashKey));
+        if (nodePosition == this.nodeID){
+            String value = this.data.get(message.key);
+            if ( value == null){
+                message.replyTo.tell(new GetAnswer(message.key, null, false, context.getSelf(),-1));
+            }
+            else{
+                message.replyTo.tell(new GetAnswer(message.key, value, true, context.getSelf(),-1));
+            }
+        }else if(this.replicas.containsKey(message.key)) message.replyTo.tell(new GetAnswer(message.key, replicas.get(message.key), true, context.getSelf(),-1));
+        else {
+            List<ActorRef<Command>> selectedNodes = getSuccessorNodes(nodePosition,this.nReplicas, this.nodes).stream().map(NodeInfo::getNode).collect(Collectors.toList());;
+            selectedNodes.stream().forEach(n ->{
+                int requestID = getRequests.keySet().size();
+                getRequests.put(requestID, n);
+                n.tell(new Get(message.key, context.getSelf(), requestID));
+            });
+        }
+
+
+
         return Behaviors.same();
     }
 
     private Behavior<Command> onGetAnswer(GetAnswer message){
+        if (getRequests.containsKey(message.requestID)){
+            getRequests.remove(message.requestID).tell(new GetAnswer(message.key, message.value,true, context.getSelf(),-1));
+        }
         return Behaviors.same();
     }
+
+
+    /*---------------------------------------------------------------
+    PUT
+     */
 
     private Behavior<Command> onPutRequest(PutRequest message){
         String key = message.key;
@@ -219,13 +240,15 @@ public class DataNode {
         }
         else{
             this.data.put(message.key,message.value);
-            for ( int i=1; i <= this.nReplicas; i++){
-                this.nodes.get(this.nodeID+i).getNode().tell(new Put(message.key,message.value, context.getSelf(), true));
-            }
+            List<ActorRef<Command>> selectedNodes = getSuccessorNodes(this.nodeID,this.nReplicas,this.nodes).stream().map(NodeInfo::getNode).collect(Collectors.toList());
+            selectedNodes.stream().forEach(n -> n.tell(new Put(message.key,message.value, context.getSelf(), true)));
         }
+        return Behaviors.same();
     }
 
+
     private Behavior<Command> onNodesUpdate(NodesUpdate message) {
+        this.nodes.clear();
         for (ActorRef<Command> node: message.currentNodes){
             Pattern pattern = Pattern.compile(IDENTIFIER);
             Matcher matcher = pattern.matcher(node.toString());
@@ -249,57 +272,24 @@ public class DataNode {
             }
             i++;
         }
-
-
-
-        //send a discovery message to all new nodes added to the cluster--> maybe can be optimized
-        Set<ActorRef<Command>> currentNodes= new HashSet<>(message.currentNodes);
-        List<String> currentNodesIDs = currentNodes.stream().map(Object::toString).collect(Collectors.toList());
-        Collection<ActorRef<Command>> oldNodes = nodes.values();
-        List<String> oldNodesIDs = oldNodes.stream().map(Object::toString).collect(Collectors.toList());
-        int i = 0;
-        currentNodes.removeIf(n -> oldNodesIDs.contains(n.toString()));
-        for(ActorRef<Command> node: currentNodes){
-            context.getLog().info("Nodes Update member {}: {}",i, node.toString());
-            node.tell(new Discover(context.getSelf()));
-            i++;
-        }
-
-        //removing all the nodes which are not reachable anymore
-        oldNodes.removeIf(n -> currentNodesIDs.contains(n.toString()));
-        List<String> keysToRemove= nodes.entrySet().stream().filter(e->oldNodes.contains(e.getValue())).map(Map.Entry::getKey).collect(Collectors.toList());
-        for(String key : keysToRemove){
-            nodes.remove(key);
-        }
-
-        //logging the new status of the cluster
-        context.getLog().info("List of services registered with the receptionist changed due to potential delete, new list:");
-        i=0;
-        for (Map.Entry<String, ActorRef<Command>> node: nodes.entrySet()){
-            context.getLog().info("Member  {}, member string,,value :  {},, {}",i, node.getKey(), node.getValue().toString());
-            i++;
-        }
+        HashMap<String,String> data = new HashMap<>(this.data);
+        data.putAll(this.replicas);
+        this.data.clear();
+        this.replicas.clear();
+        data.entrySet().stream().forEach(n ->{
+            String key = n.getKey();
+            int parsedKey = Integer.parseInt(key);
+            int nodePosition = parsedKey % nNodes;
+            if (nodePosition == this.nodeID){
+                this.data.put(n.getKey(),n.getValue());
+            }else{
+                NodeInfo node = nodes.get(nodePosition);
+                node.getNode().tell(new Put(n.getKey(),n.getValue(), context.getSelf(), false));
+            }
+        });
         return Behaviors.same();
     }
 
-    private Behavior<Command> onDiscover(Discover message){
-        context.getLog().info("{} wants to discover me!", message.replyTo.toString());
-        message.replyTo.tell(new Discovered(address,port, context.getSelf()));
-        return Behaviors.same();
-    }
-
-    private Behavior<Command> onDiscovered(Discovered message){
-        String hashKey = hashfunction(message.address, message.port);
-        context.getLog().info("{} has been discovered!", message.replyTo);
-        nodes.put(hashKey, message.replyTo);
-        context.getLog().info("List of services registered with the receptionist changed due to discovered, new list:");
-        int i=0;
-        for (Map.Entry<String, ActorRef<Command>> node: nodes.entrySet()){
-            context.getLog().info("Member  {}, member string,,value :  {},, {}",i, node.getKey(), node.getValue().toString());
-            i++;
-        }
-        return Behaviors.same();
-    }
 
 
     //----------------------------------------------------------------------------------
@@ -325,6 +315,26 @@ public class DataNode {
         }
         return hexHash.toString();
     }
+
+    private List<NodeInfo> getSuccessorNodes(int nodeId, int nReplicas, List<NodeInfo> nodes){
+        int nNodes = nodes.size();
+        List<NodeInfo> selectedNodes = new LinkedList<>();
+        int i=1;
+        while(i <= nReplicas && i < nNodes){
+            NodeInfo node = nodes.get(nodeId+i);
+            selectedNodes.add(node);
+            i++;
+        }
+        int j=0;
+        while (i <= nReplicas && j < nodeId){
+            NodeInfo node = nodes.get(j);
+            selectedNodes.add(node);
+            i++;
+            j++;
+        }
+        return selectedNodes;
+    }
+
 
     @Override
     public String toString(){
