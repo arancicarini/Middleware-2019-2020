@@ -83,9 +83,12 @@ public class DataNode {
 
     public static final class PutAnswer implements Command{
         final ActorRef<Command> replyTo;
+        final String Success;
 
-        public PutAnswer(ActorRef<Command> replyTo){
+        @JsonCreator
+        public PutAnswer(@JsonProperty ("replyTo") ActorRef<Command> replyTo){
             this.replyTo=replyTo;
+            this.Success = "hurray!!!";
         }
     }
 
@@ -95,6 +98,7 @@ public class DataNode {
         final ActorRef<Command> replyTo;
         final boolean isReplica;
 
+        @JsonCreator
         public Put(String key, String value, ActorRef<Command> replyTo, boolean isReplica) {
             this.key = key;
             this.value = value;
@@ -177,7 +181,7 @@ public class DataNode {
 
     private Behavior<Command> onGetRequest(GetRequest message){
         String key = message.key;
-        int parsedKey = Integer.parseInt(key);
+        int parsedKey = key.hashCode();
         int nodePosition = parsedKey % nNodes;
         nodes.sort(Comparator.comparing(NodeInfo::getHashKey));
         if (nodePosition == this.nodeID){
@@ -217,7 +221,7 @@ public class DataNode {
 
     private Behavior<Command> onPutRequest(PutRequest message){
         String key = message.key;
-        int parsedKey = Integer.parseInt(key);
+        int parsedKey = key.hashCode();
         int nodePosition = parsedKey % nNodes;
         nodes.sort(Comparator.comparing(NodeInfo::getHashKey));
         if (nodePosition == this.nodeID){
@@ -278,7 +282,7 @@ public class DataNode {
         this.replicas.clear();
         data.entrySet().stream().forEach(n ->{
             String key = n.getKey();
-            int parsedKey = Integer.parseInt(key);
+            int parsedKey = key.hashCode();
             int nodePosition = parsedKey % nNodes;
             if (nodePosition == this.nodeID){
                 this.data.put(n.getKey(),n.getValue());
