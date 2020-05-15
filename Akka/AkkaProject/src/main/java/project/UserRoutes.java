@@ -42,12 +42,12 @@ public class UserRoutes {
 
 
     /**
-     * This method creates one route (of possibly many more that will be part of your Web App)
+     * This method creates all the routes of our web app
      */
     //#all-routes
     public Route userRoutes() {
         return concat(
-             //#greet/$id - get
+             //#get/?key=$id
             pathPrefix("get",  () ->
                 parameter("key", (String key) ->
                     get(() ->
@@ -59,7 +59,7 @@ public class UserRoutes {
                     )
                 )
             ),
-            //#sayHello/$id - get
+            //#put/?key=$keyId&value=$valueId
             pathPrefix("put",() ->
                 parameter("key", (String key) ->
                     parameter("value", (String value)->

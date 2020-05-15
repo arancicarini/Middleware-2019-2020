@@ -9,6 +9,7 @@ import akka.actor.typed.receptionist.ServiceKey;
 import akka.cluster.typed.Cluster;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import sun.tools.tree.Node;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
@@ -74,6 +75,20 @@ public class DataNode {
         }
     }
 
+    public static final class Put implements Command{
+        final String key;
+        final String value;
+        final ActorRef<Command> replyTo;
+        final boolean isReplica;
+
+        public Put(String key, String value, ActorRef<Command> replyTo, boolean isReplica) {
+            this.key = key;
+            this.value = value;
+            this.replyTo = replyTo;
+            this.isReplica = isReplica;
+        }
+    }
+
     public static class NodesUpdate implements Command{
         final public Set<ActorRef<Command>> currentNodes;
 
@@ -104,25 +119,25 @@ public class DataNode {
             this.replyTo = replyTo;
         }
     }
+
     //-----------------------------------------------------------------------
 
     //actor attributes
     private final String port;
     private final String address;
-    private final HashMap<String, ActorRef<Command>> nodes = new HashMap<>();
+    private final int nReplicas;
+    private int nNodes;
+    private int nodeID;
+    private final List<NodeInfo> nodes = new ArrayList<>();
     public static ServiceKey<Command> KEY= ServiceKey.create(Command.class, "NODE");
     private final ActorContext<Command> context;
+    private final HashMap<String,String> data = new HashMap<>();
+    private final HashMap<String,String> replicas = new HashMap<>();
 
 
-    public DataNode(String port, String address, ActorContext<Command> context) {
-        this.port = port;
-        this.address = address;
-        this.context = context;
-    }
-
-    public static Behavior<Command> create() {
+    public static Behavior<Command> create(int nReplicas) {
         return Behaviors.setup(context -> {
-            DataNode dataNode = new DataNode(context);
+            DataNode dataNode = new DataNode(context,nReplicas);
             context.getSystem().receptionist().tell(Receptionist.register(KEY, context.getSelf()));
             context.getLog().info("registering with the receptionist...");
             ActorRef<Receptionist.Listing> subscriptionAdapter =
@@ -135,20 +150,23 @@ public class DataNode {
     }
 
     @JsonCreator
-    private DataNode(@JsonProperty("context")ActorContext<Command> context) {
+    private DataNode(@JsonProperty("context")ActorContext<Command> context, @JsonProperty("nReplicas") int nReplicas) {
         this.context = context;
+        this.nReplicas = nReplicas;
         Cluster cluster = Cluster.get(context.getSystem());
         Optional<String> maybeAddress = cluster.selfMember().address().getHost();
         Optional<Integer> maybePort = cluster.selfMember().address().getPort();
         if (maybeAddress.isPresent() && maybePort.isPresent()){
             this.address = maybeAddress.get();
             this.port = String.valueOf(maybePort.get());
-            String hashKey = hashfunction(address,port);
-            //nodes.put(hashKey,context.getSelf());
         } else {
             this.address = "127.0.0.1";
             this.port = String.valueOf(25521);
         }
+        String hashKey = hashfunction(address,port);
+        nodes.add(new NodeInfo(hashKey, context.getSelf()));
+        this.nodeID = 0;
+        this.nNodes = 1;
 
     }
 
@@ -162,6 +180,7 @@ public class DataNode {
                         onMessage(NodesUpdate.class, this:: onNodesUpdate).
                         onMessage(Discover.class, this::onDiscover).
                         onMessage(Discovered.class, this:: onDiscovered).
+                        onMessage(Put.class, this::onPut).
                         build();
     }
 
@@ -176,12 +195,34 @@ public class DataNode {
     }
 
     private Behavior<Command> onPutRequest(PutRequest message){
-        context.getLog().info("onPutRequest not implemented yet: key = {}; value= {}",message.key, message.value);
+        String key = message.key;
+        int parsedKey = Integer.parseInt(key);
+        int nodePosition = parsedKey % nNodes;
+        nodes.sort(Comparator.comparing(NodeInfo::getHashKey));
+        if (nodePosition == this.nodeID){
+            this.data.put(message.key,message.value);
+        }else{
+            NodeInfo node = nodes.get(nodePosition);
+            node.getNode().tell(new Put(message.key,message.value, context.getSelf(), false));
+        }
+        message.replyTo.tell(new PutAnswer(context.getSelf()));
         return Behaviors.same();
     }
 
     private Behavior<Command> onPutAnswer(PutAnswer message){
         return Behaviors.same();
+    }
+
+    private Behavior<Command> onPut(Put message){
+        if ( message.isReplica){
+            this.replicas.put(message.key, message.value);
+        }
+        else{
+            this.data.put(message.key,message.value);
+            for ( int i=1; i <= this.nReplicas; i++){
+                this.nodes.get(this.nodeID+i).getNode().tell(new Put(message.key,message.value, context.getSelf(), true));
+            }
+        }
     }
 
     private Behavior<Command> onNodesUpdate(NodesUpdate message) {
@@ -195,9 +236,20 @@ public class DataNode {
                 System.out.println(splittedIdentifier[0]);
                 System.out.println(splittedIdentifier[1]);
                 String hashKey = hashfunction(splittedIdentifier[0], splittedIdentifier[1]);
-                //this.nodes.put(hashKey, node);
+                this.nodes.add(new NodeInfo(hashKey, node));
             }
         }
+
+        this.nNodes = message.currentNodes.size();
+        nodes.sort(Comparator.comparing(NodeInfo::getHashKey));
+        int i =0;
+        for (NodeInfo node: nodes){
+            if (node.getNode().toString() == context.getSelf().toString()){
+                nodeID = i;
+            }
+            i++;
+        }
+
 
 
         //send a discovery message to all new nodes added to the cluster--> maybe can be optimized
