@@ -3,8 +3,8 @@ package project;
 import akka.actor.typed.ActorRef;
 
 public class NodeInfo {
-    private final String hashKey;
-    private final ActorRef<DataNode.Command> node;
+    public final String hashKey;
+    public final ActorRef<DataNode.Command> node;
 
     public NodeInfo(String hashKey, ActorRef<DataNode.Command> node) {
         this.hashKey = hashKey;

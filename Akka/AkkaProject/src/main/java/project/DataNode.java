@@ -19,33 +19,27 @@ import java.util.regex.Pattern;
 import java.util.stream.Collectors;
 
 public class DataNode {
-    private static final String IPADDRESS = "(([0-9]{3})(\\.)([0-9]{3})(\\.)([0-9]{1,3})(\\.)([0-9]{1,3}))";
-    private static final String PORT = "([0-9]{5})";
-    private static final String DATANODENUMBER = "([0-9]+)";
-    private static final String NODEPATTERN = "Actor[akka://ClusterSystem@" + IPADDRESS + ":" + PORT + "/user/DataNode#-" + DATANODENUMBER +"]";
-    private static final String IDENTIFIER = IPADDRESS + ":" + PORT;
-
 
     public interface Command extends CborSerializable{}
 
     //messages
-
     public static final class GetRequest implements Command {
-        final String key;
-        final ActorRef<Command> replyTo;
+        public final String key;
+        public final ActorRef<Command> replyTo;
 
-        public GetRequest(String key, ActorRef<Command> replyTo){
+        @JsonCreator
+        public GetRequest(@JsonProperty("key") String key, @JsonProperty("replyTo") ActorRef<Command> replyTo){
             this.key=key;
             this.replyTo=replyTo;
         }
     }
 
     public static final class GetAnswer implements Command{
-        final String key;
-        final String value;
-        final boolean isPresent;
-        final ActorRef<Command> replyTo;
-        final int requestID;
+        public final String key;
+        public final String value;
+        public final boolean isPresent;
+        public final ActorRef<Command> replyTo;
+        public final int requestID;
 
 
         public GetAnswer(String key, String value,boolean isPresent, ActorRef<Command> replyTo, int requestID){
@@ -58,9 +52,9 @@ public class DataNode {
     }
 
     public static final class Get implements Command{
-        final String key;
-        final ActorRef<Command> replyTo;
-        final int requestID;
+        public final String key;
+        public final ActorRef<Command> replyTo;
+        public final int requestID;
 
         public Get(String key, ActorRef<Command> replyTo, int requestID){
             this.key=key;
@@ -68,13 +62,15 @@ public class DataNode {
             this.requestID = requestID;
         }
     }
+    //---------------------------------------------------------------------------------------------------
 
     public static final class PutRequest implements Command{
-        final String key;
-        final String value;
-        final ActorRef<Command> replyTo;
+        public final String key;
+        public final String value;
+        public final ActorRef<Command> replyTo;
 
-        public PutRequest(String key, String value, ActorRef<Command> replyTo){
+        @JsonCreator
+        public PutRequest(@JsonProperty("key") String key,@JsonProperty("value") String value,@JsonProperty("replyTo") ActorRef<Command> replyTo){
             this.key=key;
             this.value=value;
             this.replyTo=replyTo;
@@ -82,21 +78,19 @@ public class DataNode {
     }
 
     public static final class PutAnswer implements Command{
-        final ActorRef<Command> replyTo;
-        final String Success;
+        public final String Success;
 
         @JsonCreator
-        public PutAnswer(@JsonProperty ("replyTo") ActorRef<Command> replyTo){
-            this.replyTo=replyTo;
-            this.Success = "hurray!!!";
+        public PutAnswer(@JsonProperty("message") String message){
+            this.Success = message;
         }
     }
 
     public static final class Put implements Command{
-        final String key;
-        final String value;
-        final ActorRef<Command> replyTo;
-        final boolean isReplica;
+        public final String key;
+        public final String value;
+        public final ActorRef<Command> replyTo;
+        public final boolean isReplica;
 
         @JsonCreator
         public Put(String key, String value, ActorRef<Command> replyTo, boolean isReplica) {
@@ -108,27 +102,59 @@ public class DataNode {
     }
 
     public static class NodesUpdate implements Command{
-        final public Set<ActorRef<Command>> currentNodes;
+        public final  Set<ActorRef<Command>> currentNodes;
 
         public NodesUpdate (Set<ActorRef<Command>> currentNodes){
             this.currentNodes=currentNodes;
         }
     }
 
-    //-----------------------------------------------------------------------
+    /*
+    ----------------------------------------------------------------------
+                                TEST MESSAGES
+    ---------------------------------------------------------------------
+     */
 
-    //actor attributes
+    public interface TestCommand extends Command{}
+
+    public static class GetAllLocalRequest implements TestCommand {
+        public final ActorRef<DataNode.Command> replyTo;
+
+        public GetAllLocalRequest(ActorRef<DataNode.Command> replyTo){
+            this.replyTo = replyTo;
+        }
+    }
+
+    public static class GetAllLocalAnswer implements TestCommand {
+        public final Collection<String> values;
+
+        public GetAllLocalAnswer(Collection<String> values){
+            this.values = values;
+        }
+    }
+
+
+    //-----------------------------------------------------------------------
+    //static attributes
+    private static ServiceKey<Command> KEY= ServiceKey.create(Command.class, "node");
+    private static final String IPADDRESS = "(([0-9]{3})(\\.)([0-9]{3})(\\.)([0-9]{1,3})(\\.)([0-9]{1,3}))";
+    private static final String PORT = "([0-9]{5})";
+    private static final String NODEPATTERN = "Actor[akka://ClusterSystem@" + IPADDRESS + ":" + PORT + "/user/DataNode#-" + "([0-9]+)]";
+    private static final String IDENTIFIER = IPADDRESS + ":" + PORT;
+
+    //final actor attributes
     private final String port;
     private final String address;
     private final int nReplicas;
-    private int nNodes;
-    private int nodeID;
     private final List<NodeInfo> nodes = new ArrayList<>();
-    public static ServiceKey<Command> KEY= ServiceKey.create(Command.class, "NODE");
     private final ActorContext<Command> context;
     private final HashMap<String,String> data = new HashMap<>();
     private final HashMap<String,String> replicas = new HashMap<>();
     private final HashMap<Integer, ActorRef<Command>> getRequests = new HashMap<>();
+
+    //non final actor attributes
+    private int nNodes;
+    private int nodeID;
 
 
     public static Behavior<Command> create(int nReplicas) {
@@ -137,7 +163,7 @@ public class DataNode {
             context.getSystem().receptionist().tell(Receptionist.register(KEY, context.getSelf()));
             context.getLog().info("registering with the receptionist...");
             ActorRef<Receptionist.Listing> subscriptionAdapter =
-                    context.messageAdapter(Receptionist.Listing.class, listing ->
+                context.messageAdapter(Receptionist.Listing.class, listing ->
                     new NodesUpdate(listing.getServiceInstances(DataNode.KEY)));
             context.getLog().info("subscribing with the receptionist...");
             context.getSystem().receptionist().tell(Receptionist.subscribe(DataNode.KEY,subscriptionAdapter));
@@ -145,8 +171,8 @@ public class DataNode {
         });
     }
 
-    @JsonCreator
-    private DataNode(@JsonProperty("context")ActorContext<Command> context, @JsonProperty("nReplicas") int nReplicas) {
+    //constructor
+    private DataNode(ActorContext<Command> context,int nReplicas) {
         this.context = context;
         this.nReplicas = nReplicas;
         Cluster cluster = Cluster.get(context.getSystem());
@@ -166,7 +192,7 @@ public class DataNode {
 
     }
 
-    //MessageHandler
+    //behaviour constructor
     private Behavior<Command> behavior() {
         return Behaviors.receive(Command.class)
                 .onMessage(GetRequest.class, this::onGetRequest).
@@ -175,35 +201,36 @@ public class DataNode {
                         onMessage(PutAnswer.class, this::onPutAnswer).
                         onMessage(NodesUpdate.class, this:: onNodesUpdate).
                         onMessage(Put.class, this::onPut).
+                        onMessage(GetAllLocalRequest.class, this::onGetAllLocalRequest).
                         build();
     }
 
+    /*--------------------------------------
+    GET BEHAVIOUR
+     */
+
 
     private Behavior<Command> onGetRequest(GetRequest message){
-        String key = message.key;
-        int parsedKey = key.hashCode();
+        int parsedKey = message.key.hashCode();
         int nodePosition = parsedKey % nNodes;
         nodes.sort(Comparator.comparing(NodeInfo::getHashKey));
         if (nodePosition == this.nodeID){
+            //I'm the leader, I return the value I've stored, even if null
             String value = this.data.get(message.key);
-            if ( value == null){
-                message.replyTo.tell(new GetAnswer(message.key, null, false, context.getSelf(),-1));
-            }
-            else{
-                message.replyTo.tell(new GetAnswer(message.key, value, true, context.getSelf(),-1));
-            }
-        }else if(this.replicas.containsKey(message.key)) message.replyTo.tell(new GetAnswer(message.key, replicas.get(message.key), true, context.getSelf(),-1));
+            message.replyTo.tell(new GetAnswer(message.key, null, false, context.getSelf(),-1));
+        }else if(this.replicas.containsKey(message.key)){
+            //I'm not the leader but I do have a replica of the value, so that's good
+            message.replyTo.tell(new GetAnswer(message.key, replicas.get(message.key), true, context.getSelf(),-1));
+        }
         else {
-            List<ActorRef<Command>> selectedNodes = getSuccessorNodes(nodePosition,this.nReplicas, this.nodes).stream().map(NodeInfo::getNode).collect(Collectors.toList());;
-            selectedNodes.stream().forEach(n ->{
+            //I contact the leader and all the nodes which are supposed to keep a replica
+            List<ActorRef<Command>> selectedNodes = getSuccessorNodes(nodePosition,this.nReplicas, this.nodes).stream().map(NodeInfo::getNode).collect(Collectors.toList());
+            for (ActorRef<Command> n : selectedNodes) {
                 int requestID = getRequests.keySet().size();
                 getRequests.put(requestID, n);
                 n.tell(new Get(message.key, context.getSelf(), requestID));
-            });
+            }
         }
-
-
-
         return Behaviors.same();
     }
 
@@ -220,6 +247,7 @@ public class DataNode {
      */
 
     private Behavior<Command> onPutRequest(PutRequest message){
+        message.replyTo.tell(new PutAnswer("hurray"));
         String key = message.key;
         int parsedKey = key.hashCode();
         int nodePosition = parsedKey % nNodes;
@@ -230,7 +258,6 @@ public class DataNode {
             NodeInfo node = nodes.get(nodePosition);
             node.getNode().tell(new Put(message.key,message.value, context.getSelf(), false));
         }
-        message.replyTo.tell(new PutAnswer(context.getSelf()));
         return Behaviors.same();
     }
 
@@ -258,10 +285,7 @@ public class DataNode {
             Matcher matcher = pattern.matcher(node.toString());
             if (matcher.find()){
                 String identifier = matcher.group(0);
-                System.out.println(identifier);
                 String[] splittedIdentifier = identifier.split(":");
-                System.out.println(splittedIdentifier[0]);
-                System.out.println(splittedIdentifier[1]);
                 String hashKey = hashfunction(splittedIdentifier[0], splittedIdentifier[1]);
                 this.nodes.add(new NodeInfo(hashKey, node));
             }
@@ -271,24 +295,27 @@ public class DataNode {
         nodes.sort(Comparator.comparing(NodeInfo::getHashKey));
         int i =0;
         for (NodeInfo node: nodes){
-            if (node.getNode().toString() == context.getSelf().toString()){
+            if (node.getNode().toString().equals(context.getSelf().toString())){
                 nodeID = i;
             }
             i++;
         }
-        HashMap<String,String> data = new HashMap<>(this.data);
-        data.putAll(this.replicas);
+
+        //reassigning all the values
+        HashMap<String,String> allData = new HashMap<>(this.data);
+        allData.putAll(this.replicas);
         this.data.clear();
         this.replicas.clear();
-        data.entrySet().stream().forEach(n ->{
-            String key = n.getKey();
-            int parsedKey = key.hashCode();
+        allData.entrySet().stream().forEach(entry ->{
+            int parsedKey = entry.getKey().hashCode();
             int nodePosition = parsedKey % nNodes;
             if (nodePosition == this.nodeID){
-                this.data.put(n.getKey(),n.getValue());
+                //I'm the leader of the this data
+                this.data.put(entry.getKey(),entry.getValue());
             }else{
+                //I send the data to its leader
                 NodeInfo node = nodes.get(nodePosition);
-                node.getNode().tell(new Put(n.getKey(),n.getValue(), context.getSelf(), false));
+                node.getNode().tell(new Put(entry.getKey(),entry.getValue(), context.getSelf(), false));
             }
         });
         return Behaviors.same();
@@ -309,8 +336,8 @@ public class DataNode {
             digest = MessageDigest.getInstance("SHA-1");
             hash = digest.digest(key.getBytes(StandardCharsets.UTF_8));
             // Convert hash bytes into StringBuffer ( via integer representation)
-            for (int i = 0; i < hash.length; i++) {
-                String hex = Integer.toHexString(0xff &  hash[i]);
+            for (byte b : hash) {
+                String hex = Integer.toHexString(0xff & b);
                 if (hex.length() == 1) hexHash.append('0');
                 hexHash.append(hex);
             }
@@ -357,5 +384,18 @@ public class DataNode {
     @Override
     public int hashCode(){
         return Objects.hash(this.toString());
+    }
+    /*
+    ------------------------------------------------------------------------------------------------
+    TEST MESSAGES
+    ---------------------------------------------------------------------------------------------
+
+     */
+
+    private Behavior<Command> onGetAllLocalRequest(GetAllLocalRequest message){
+        Collection<String> data = this.data.values();
+        data.addAll(this.replicas.values());
+        message.replyTo.tell(new GetAllLocalAnswer(data));
+        return Behaviors.same();
     }
 }
