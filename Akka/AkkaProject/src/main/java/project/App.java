@@ -22,6 +22,8 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.CompletionStage;
 
+import static akka.http.javadsl.server.Directives.concat;
+
 public class App {
     private static ActorRef<DataNode.Command> dataNode;
     public static int port;
@@ -41,7 +43,8 @@ public class App {
             context.spawn(ClusterListener.create(), "ClusterListener");
             ActorRef<DataNode.Command> dataNode = context.spawn(DataNode.create(nReplicas), "DataNode");
             UserRoutes userRoutes = new UserRoutes(context.getSystem(), dataNode);
-            startHttpServer(userRoutes.userRoutes(), context.getSystem());
+            TestRoutes testRoutes = new TestRoutes(context.getSystem(), dataNode);
+            startHttpServer(concat(userRoutes.userRoutes(),testRoutes.testRoutes()), context.getSystem());
             return Behaviors.empty();
         });
     }
