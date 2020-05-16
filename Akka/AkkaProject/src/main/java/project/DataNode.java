@@ -407,7 +407,7 @@ public class DataNode {
         int nNodes = nodes.size();
         List<NodeInfo> selectedNodes = new LinkedList<>();
         int i=1;
-        while(i <= nReplicas && i < nNodes){
+        while(i <= nReplicas && nodeId + i < nNodes){
             NodeInfo node = nodes.get(nodeId+i);
             selectedNodes.add(node);
             i++;
