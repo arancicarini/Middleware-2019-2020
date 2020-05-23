@@ -22,9 +22,9 @@
 API | Parameters |  Meaning
 ------------ | ------------- | ------------- 
 /get/?key=$id| a String Key| Get the value associated with the specified Key.
-/put/?key=$keyId&value=$valueId | a String Key and a String Value | Insert into the cluster the specified Value associated with the specified Key.
+/put/?key=$keyId&value=$valueId | a String KeyId and a String ValueId | Insert into the cluster the specified Value associated with the specified Key.
 /getAllLocal | none | get all the value stored in the contacted node.
-/getAllLocal | none | get a representation of all nodes currently up in the cluster.
+/getNodes | none | get a representation of all nodes currently up in the cluster.
 
 
 ## Common issues.
