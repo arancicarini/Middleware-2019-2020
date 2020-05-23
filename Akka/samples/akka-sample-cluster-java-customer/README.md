@@ -21,8 +21,9 @@
     - type **curl http://localhost:25251/greet/Arianna**
     - (of course you can contact any other running node changing the value of the port)
     - look at the result in the corresponding shell which is running the contacted node.
-    
-- Still to be done: nodes which contact each other (the "Say Hello" message)
+    - greet other people at your pleasure....
+    - type **curl http://localhost:25251/sayHello/Arianna**
+    - look at the result in all the shells you've opened
     
 
 

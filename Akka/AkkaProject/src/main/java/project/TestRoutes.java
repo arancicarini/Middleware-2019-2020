@@ -56,7 +56,7 @@ public class TestRoutes {
                         })
                     )
                 ),
-            //#getAllLocal
+            //#getNodes
             pathPrefix("getNodes",  () ->
                 get(() ->
                     //#answer with a getAnswer message marshalled with Jackson

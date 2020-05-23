@@ -1,4 +1,4 @@
-## How to build and test the AkkaProject
+## How to build the AkkaProject
 - Digit http://192.168.1.1/login.lp on your web browser ( or equivalent Ip address to enter your Router configuration interface).
 - Detect the IP address of your device in your LAN (default: 192.168.1.3).
 - If different from the default address, 
@@ -17,12 +17,14 @@
     - wait until logged "Member is up!"
 - open other shells in the root folder and start new nodes at your pleasure, changing the port of the node
     - e.g. **mvn exec:java -Dexec.mainClass="project.App" -Dexec.args=25253**
-- open a shell which supports CURL commands (I personally use Git bash)
-    - TO BE IMPLEMENTED
-    - (of course you can contact any other running node changing the value of the port)
-    - look at the result in the corresponding shell which is running the contacted node.
-    
-    
+
+## APIS 
+API | Parameters |  Meaning
+------------ | ------------- | ------------- 
+/get/?key=$id| a String Key| Get the value associated with the specified Key.
+/put/?key=$keyId&value=$valueId | a String Key and a String Value | Insert into the cluster the specified Value associated with the specified Key.
+/getAllLocal | none | get all the value stored in the contacted node.
+/getAllLocal | none | get a representation of all nodes currently up in the cluster.
 
 
 ## Common issues.
