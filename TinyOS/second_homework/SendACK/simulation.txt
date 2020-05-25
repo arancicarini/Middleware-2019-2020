@@ -1,0 +1,44 @@
+DEBUG (1): Application booted at time 0:0:0.000000000 
+DEBUG (1): I'm node : 1, Radio started at time: 0:0:0.000000010 
+
+DEBUG (1): timer fired at 0:0:0.976562510.
+DEBUG (1): Packet <>REQUEST<> SENT counter: 1 
+DEBUG (1): packet sent at time 0:0:0.979171747 
+DEBUG (1): message NOT acked! 
+
+DEBUG (1): timer fired at 0:0:1.953125010.
+DEBUG (1): Packet <>REQUEST<> SENT counter: 2 
+DEBUG (1): packet sent at time 0:0:1.962905836 
+DEBUG (1): message NOT acked! 
+
+DEBUG (1): timer fired at 0:0:2.929687510.
+DEBUG (1): Packet <>REQUEST<> SENT counter: 3 
+DEBUG (1): packet sent at time 0:0:2.933608995 
+DEBUG (1): message NOT acked! 
+
+DEBUG (1): timer fired at 0:0:3.906250010.
+DEBUG (1): Packet <>REQUEST<> SENT counter: 4 
+DEBUG (1): packet sent at time 0:0:3.916915841 
+DEBUG (1): message NOT acked! 
+
+DEBUG (1): timer fired at 0:0:4.882812510.
+DEBUG (1): Packet <>REQUEST<> SENT counter: 5 
+DEBUG (1): packet sent at time 0:0:4.891174277 
+DEBUG (1): message NOT acked! 
+DEBUG (2): Application booted at time 0:0:5.000000000 
+DEBUG (2): I'm node : 2, Radio started at time: 0:0:5.000000010 
+
+DEBUG (1): timer fired at 0:0:5.859375010.
+DEBUG (1): Packet <>REQUEST<> SENT counter: 6 
+DEBUG (2): Packet <>REQUEST<> RECV counter: 6 
+DEBUG (2): Packet received at time 0:0:5.869964547
+DEBUG (1): packet sent at time 0:0:5.870132393 
+DEBUG (1): message acked! 
+DEBUG (2): value read done 76.937514
+DEBUG (2): Packet passed to lower layer successfully!
+DEBUG (2): Packet <>RESPONSE<> SENT counter: 6, value: 76
+DEBUG (1): Packet <>RESPONSE<> RECV counter: 6, value: 76 
+DEBUG (1): Packet received at time 0:0:5.889160106
+DEBUG (2): packet sent at time 0:0:5.889327952 
+DEBUG (2): message acked! 
+Routine finished!
