@@ -15,8 +15,9 @@
 - open another shell in the root folder
     - type **mvn exec:java -Dexec.mainClass="project.App" -Dexec.args=25252**
     - wait until logged "Member is up!"
-- open other shells in the root folder and start new nodes at your pleasure, changing the port of the node
-    - e.g. **mvn exec:java -Dexec.mainClass="project.App" -Dexec.args=25253**
+- these are the seed nodes of the cluster: if both are down, all the cluster is down
+- open other shells (possibly on other devices in the same LAN) and create new nodes with the same command
+    - note: the couple <IP_Address, Port> is unique for each node, so you can't create two nodes with the same port on the same device  
 
 ## APIS 
 API | Parameters |  Meaning
