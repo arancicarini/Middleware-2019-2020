@@ -18,7 +18,7 @@ module projectMoteC
     	interface Receive;
     
 		//interface for timer
-		//interface Timer<TMilli> as MilliTimer;
+		interface Timer<TMilli> as MilliTimer;
 	
 		//other interfaces, if needed
     	//interface PacketAcknowledgements as Ack;
@@ -34,7 +34,7 @@ implementation
 
   	message_t packet;
   	bool locked = FALSE;
-  	uint16_t teshold;
+  	uint16_t treshold;
   	uint16_t replyTo;
 
   	void sendData();
@@ -95,7 +95,7 @@ implementation
 	//manca tutta la parte dell'intoltro dei messaggi
   	event message_t* Receive.receive(message_t* buf,void* payload, uint8_t len) 
   	{
-  		if(len!= sizeof(setup_msg_t) return buf;
+  		if(len!= sizeof(setup_msg_t)) return buf;
   		else
   		{
       		setup_msg_t* mess = (setup_msg_t*)payload;
@@ -105,9 +105,9 @@ implementation
 			else
 				return buf;
 	  		
-	  		treashold = mess-> treashold;
+	  		treshold = mess-> treshold;
 	  		replyTo = mess -> sender;
-	  		dbg("radio_pack", "Packet with new treshold: %hu \n", mess->treashold);
+	  		dbg("radio_pack", "Packet with new treshold: %hu \n", mess->treshold);
       		dbg("radio_rec", "Packet received at time %s\n", sim_time_string());
       		return buf;
     	}
@@ -133,18 +133,18 @@ implementation
 			dbg("data","data read done %f\n",data);  	
 	
 			if (mess == NULL) return;
-			//mess->type = DATA;
-			mess -> identifier = TOS_NODE_ID;
-			mess->data = data;
+			mess->identifier = TOS_NODE_ID;
+			mess->value = data;
 		
-			if(call AMSend.send(replyTo, &packet,sizeof(my_msg_t)) == SUCCESS)
+			if(call AMSend.send(replyTo, &packet,sizeof(data_msg_t)) == SUCCESS)
 			{
 			   	dbg("radio_send", "Packet passed to lower layer successfully!\n");
-			   	dbg("radio_pack","Packet from identifier: %hu, data: %hu\n", mess->identifier, mess->data);
+			   	dbg("radio_pack","Packet from identifier: %hu, data: %hu\n", mess->identifier, mess->value);
 			}
 			else
 				locked = FALSE;
 	  	}
+	 }
 
 }
 

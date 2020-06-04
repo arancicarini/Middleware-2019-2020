@@ -7,7 +7,7 @@ print "********************************************";
 import sys;
 import time;
 
-from TOSSIM import *;
+from TOSSIM import*;
 
 t = Tossim([]);
 
@@ -36,23 +36,23 @@ out = sys.stdout;
 print "Activate debug message on channel init"
 t.addChannel("init",out);
 print "Activate debug message on channel boot"
-t.addChannel("boot",simulation_outfile);
+t.addChannel("boot",out);
 print "Activate debug message on channel radio"
-t.addChannel("radio",simulation_outfile);
+t.addChannel("radio",out);
 print "Activate debug message on channel radio_send"
-t.addChannel("radio_send",simulation_outfile);
+t.addChannel("radio_send",out);
 print "Activate debug message on channel radio_ack"
-t.addChannel("radio_ack",simulation_outfile);
+t.addChannel("radio_ack",out);
 print "Activate debug message on channel radio_rec"
-t.addChannel("radio_rec",simulation_outfile);
+t.addChannel("radio_rec",out);
 print "Activate debug message on channel radio_pack"
-t.addChannel("radio_pack",simulation_outfile);
+t.addChannel("radio_pack",out);
 print "Activate debug message on channel role"
-t.addChannel("role",simulation_outfile);
+t.addChannel("role",out);
 print "Activate debug message on channel timer"
-t.addChannel("timer",simulation_outfile);
+t.addChannel("timer",out);
 print "Activate debug message on channel value"
-t.addChannel("value",simulation_outfile);
+t.addChannel("value",out);
 print "Activate debug message on channel error"
 t.addChannel("error",out);
 
@@ -99,11 +99,11 @@ for line in lines:
             mid_compl = 0;
             sys.stdout.write ("#")
             sys.stdout.flush()
-        for i in range(1, 3):
+        for i in range(1, 2):
             t.getNode(i).addNoiseTraceReading(val)
 print "Done!";
 
-for i in range(1, 3):
+for i in range(1, 2):
     print ">>>Creating noise model for node:",i;
     t.getNode(i).createNoiseModel()
 

@@ -6,7 +6,7 @@ implementation {
 
 
 	/****** COMPONENTS *****/
-	components MainC, sendAckC as App;
+	components MainC, projectSinkC as App;
 	components new TimerMilliC() as Timer;
 	components new FakeSensorC();
 	components ActiveMessageC;
@@ -26,7 +26,6 @@ implementation {
 
 	//Radio Control
 	App.SplitControl -> ActiveMessageC;
-	App.Ack -> ActiveMessageC;
 
 	//Interfaces to access package fields
 	App.AMPacket -> AMSenderC;

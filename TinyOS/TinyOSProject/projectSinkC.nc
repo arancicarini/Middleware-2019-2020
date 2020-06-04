@@ -1,7 +1,7 @@
 #include "project.h"
 #include "Timer.h"
 
-module projectMoteC
+module projectSinkC
 
 {
 	uses 
@@ -34,9 +34,12 @@ implementation
 
   	message_t packet;
   	bool locked = FALSE;
+  	uint16_t data;
+  	uint16_t from;
+  	uint16_t treshold;
   	
 
-  	void sendTrashold();
+  	void sendTreshold();
   	void getTreshold();
   
 
@@ -86,7 +89,7 @@ implementation
 		else
 		{
 			dbgerror("error", "error in sending packet, send the request again\n");
-			sendTreashold();
+			sendTreshold();
 
 		}  		
   	}
@@ -106,7 +109,7 @@ implementation
 			else
 				return buf;
 			
-			data = mess-> data;
+			data = mess-> value;
 	  		from = mess-> identifier;
       		dbg("radio_pack", "Packet from: %hu \n", mess->identifier);
   			dbg("radio_rec", "Packet received at time %s\n", sim_time_string());	
@@ -127,16 +130,16 @@ implementation
 
   		setup_msg_t* mess = (setup_msg_t*)(call Packet.getPayload(&packet, sizeof(setup_msg_t)));  
 
-		treashold= data;
+		treshold= data;
 		dbg("treshold","treshold read done %f\n",treashold);  	
 	
 		if (mess == NULL) return;
 
-		mess -> replyTo = TOS_NODE_ID;
+		mess-> sender = TOS_NODE_ID;
 		mess->treshold = treshold;
 
 		
-		if(call AMSend.send(BROADCAST, &packet,sizeof(setup_msg_t)) == SUCCESS)
+		if(call AMSend.send(2, &packet,sizeof(setup_msg_t)) == SUCCESS)
 		{
 		   	dbg("radio_send", "Packet passed to lower layer successfully!\n");
 		   	dbg("radio_pack","Packet from : %hu, treshold: %hu\n", mess->replyTo, mess->treashold);
