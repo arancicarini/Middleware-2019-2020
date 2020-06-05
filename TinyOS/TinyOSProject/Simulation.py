@@ -55,6 +55,8 @@ print "Activate debug message on channel value"
 t.addChannel("value",out);
 print "Activate debug message on channel error"
 t.addChannel("error",out);
+print "Activate debug message on channel treshold"
+t.addChannel("treshold",out);
 
 
 print "Creating node 1...";
@@ -68,6 +70,13 @@ node2 = t.getNode(2);
 time2 = 5*t.ticksPerSecond();
 node2.bootAtTime(time2);
 print ">>>Will boot at time", time2/t.ticksPerSecond(), "[sec]";
+
+print "Creating node 3...";
+node3 = t.getNode(3);
+time3 = 5*t.ticksPerSecond();
+node3.bootAtTime(time3);
+print ">>>Will boot at time", time3/t.ticksPerSecond(), "[sec]";
+
 
 
 print "Creating radio channels..."
@@ -99,11 +108,11 @@ for line in lines:
             mid_compl = 0;
             sys.stdout.write ("#")
             sys.stdout.flush()
-        for i in range(1, 2):
+        for i in range(1, 4):
             t.getNode(i).addNoiseTraceReading(val)
 print "Done!";
 
-for i in range(1, 2):
+for i in range(1, 4):
     print ">>>Creating noise model for node:",i;
     t.getNode(i).createNoiseModel()
 
