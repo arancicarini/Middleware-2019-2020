@@ -11,19 +11,13 @@ module projectSinkC
 		interface Boot; 
 	
 		//interfaces for communication
-    	interface SplitControl;
-    	//interface AMSend;
-    	//interface Packet;
-    	//interface AMPacket;
+    	interface SplitControl as AMControl;
+    	interface AMSend;
+    	interface Packet;
+    	interface AMPacket;
     	interface Receive;
-    	interface StdControl as DisseminationControl;
-  		interface DisseminationValue<uint16_t> as Value;
-  		interface DisseminationUpdate<uint16_t> as Update;
-  		interface StdControl as RoutingControl;
-    	interface RootControl;
-    	interface Send;
     	
-		//interface for timer
+		//timer interfaces
 		interface Timer<TMilli> as TresholdTimer;
 		interface Timer<TMilli> as DataTimer;
 	
@@ -42,7 +36,6 @@ implementation
   	message_t packet;
   	bool locked = FALSE;
   	uint16_t data;
-  	uint16_t from;
   	uint16_t sink_treshold;
   	uint16_t mote_treshold;
   	uint16_t replyTo;
@@ -52,25 +45,22 @@ implementation
   	void getTreshold();
   
 
-	//***************** Boot interface ********************//
+	//***************** Boot event ********************//
   	event void Boot.booted()
   	{
 		dbg("boot","Application booted at time %s \n", sim_time_string());
-		call SplitControl.start();	
+		call AMControl.start();	
   	}
 
-	//***************** SplitControl interface ********************//
-  	event void SplitControl.startDone(error_t err)
+	//***************** SplitControl event********************//
+  	event void AMControl.startDone(error_t err)
   	{
   		if(err == SUCCESS)
   		{
   			dbg ("boot", "I'm node : %d, Radio started at time: %s \n", TOS_NODE_ID, sim_time_string());
-  			call RoutingControl.start();
-  			call DisseminationControl.start();
   			if(TOS_NODE_ID ==1){
   				sink_treshold = 0;
 				call TresholdTimer.startPeriodicAt(0, 1000);
-				call RootControl.setRoot();
 			}
 			else{
 				mote_treshold = 0;
@@ -80,16 +70,16 @@ implementation
   		else
   		{
   			dbgerror("error", "radio didn't start\n");
-  			call SplitControl.start();
+  			call AMControl.start();
   		}
   
   	}
   
-  	event void SplitControl.stopDone(error_t err){}
+  	event void AMControl.stopDone(error_t err){}
 
 
   
-  //***************** MilliTimer interface ********************//
+  //***************** MilliTimer events ( read a new treshold or a new Data ********************//
   	event void TresholdTimer.fired() 
   	{
 	 	dbg_clear("timer", "\n");
@@ -106,19 +96,21 @@ implementation
 	
 
   //*********************Send interface ****************//
-  	event void Send.sendDone(message_t* buf,error_t err)
+  	event void AMSend.sendDone(message_t* buf,error_t err)
   	{
-  		if( &packet == buf && err== SUCCESS)
-  		{
-			dbg("radio_send", "packet sent at time %s \n", sim_time_string());
+  		if( &packet == buf)
+  		{   
   			locked = FALSE;
-  			
-		}
-		else
-		{
-			dbgerror("error", "error in sending packet, send the request again\n");
+  			if ( err == SUCCESS)
+  			{
+				dbg("radio_send", "packet sent at time %s \n", sim_time_string());
+  			}
+			else
+			{
+				dbgerror("error", "error in sending packet, send the request again\n");
 
-		}  		
+			} 
+		} 		
   	}
   	
 
@@ -126,101 +118,67 @@ implementation
 	//***************************** Receive interface *****************//
   	event message_t* Receive.receive(message_t* buf,void* payload, uint8_t len) 
   	{
-    	dbg("error", "Stiamo ricevendo\n");
+    	dbg("error", "A new message is being read somewhere in the network\n");
   		if(TOS_NODE_ID ==1){
-  		    dbg("error", "il Sink riceveo\n");
-  			//if(len!= sizeof(data_msg_t)) return buf;
-  			//else
-  			//{
-      		data_msg_t* mess = (data_msg_t*)payload;
-  				/*if(!locked)
-  					locked = TRUE;
-				else
-					return buf;*/
+      		Data_msg* mess = (Data_msg*)payload;
 			data = mess-> value;
-		  	//from = buf-> identifier;
-    	  	dbg("radio_pack", "Packet with data %hu\n", data);
-  				//dbg("radio_rec", "Packet received at time %s\n", sim_time_string());	
-    	  		return buf;
-    		//}
-    		
+    	  	dbg("radio_pack", "Packet with data %hu\n", data); 
+    	  	dbg("error", "sink node is reading a message\n");   		
     	}
     	else{
-    		//if(len!= sizeof(setup_msg_t)) return buf;
-  			//else
-  			{
-      			setup_msg_t* mess = (setup_msg_t*)payload;
-	  			
-  				if(!locked)
-  					locked = TRUE;
-				else
-					return buf;
-	  			
-	  			mote_treshold = mess-> treshold;
-	  			replyTo = mess -> sender;
-	  			dbg("radio_pack", "Packet with new treshold: %hu \n", mess->treshold);
-      			//dbg("radio_rec", "Packet received at time %s\n", sim_time_string());
-      			return buf;
-    		} 
-    	}
+      		Setup_msg* mess = (Setup_msg*)payload;
+	  		mote_treshold = mess-> treshold;
+	  		replyTo = mess -> sender;
+	  		mote_treshold = mess -> treshold;
+	  		dbg("radio_pack", "Packet with new treshold: %hu \n", mess->treshold);
+      		dbg("radio_rec", "Packet received at time %s\n", sim_time_string());
+    	} 
+    	return buf;
  
    	}
 
-	//****************** Dissemination*****************//
+	
 	
 	  	
-  	event void Value.changed() {
-    	const uint16_t* newVal = call Value.get();
-    	mote_treshold = *newVal;
-    	dbg("error", "Mote %d, received new treshold %hu\n",TOS_NODE_ID ,mote_treshold);
-  	}
   
 	//************************* Read interface **********************//
-  	event void Read.readDone(error_t result, uint16_t data) 
+  	event void Read.readDone(error_t result, uint16_t dataRead) 
   	{
 		if(TOS_NODE_ID ==1){
-			
-			sink_treshold=data;
-			call Update.change(&sink_treshold);
-			dbg("error", "Mote %d, read new treshold %hu\n",TOS_NODE_ID ,sink_treshold);
-
-  			/*setup_msg_t* mess = (setup_msg_t*)(call Packet.getPayload(&packet, sizeof(setup_msg_t)));  
-	
-			sink_treshold=data;
-			dbg("treshold","treshold read done %f\n",sink_treshold);  	
+  			Setup_msg* mess = (Setup_msg*)(call Packet.getPayload(&packet, sizeof(Setup_msg)));  
+			sink_treshold=dataRead;
+			dbg("treshold","Sink has just red a new treshold %f\n",sink_treshold);  	
 	
 			if (mess == NULL) return;
 
 			mess->sender = TOS_NODE_ID;
 			mess->treshold = sink_treshold;
 
-		
-			if(call AMSend.send(AM_BROADCAST_ADDR, &packet,sizeof(setup_msg_t)) == SUCCESS)
+			dbg("error", "Sink node: read new treshold %hu\n",sink_treshold);
+			if(call AMSend.send(AM_BROADCAST_ADDR, &packet,sizeof(Setup_msg)) == SUCCESS)
 			{
 			   	dbg("radio_send", "Packet passed to lower layer successfully!\n");
 			   	dbg("radio_pack","Packet from : %hu, treshold: %hu\n", mess->sender, mess->treshold);
+			   	locked = TRUE;
 			}
-			else
-				locked = FALSE;*/
 		}
-		else{
-			  		
-			//if(data > mote_treshold){
-  				data_msg_t* mess = (data_msg_t*)(call Send.getPayload(&packet, sizeof(data_msg_t)));  
-				dbg("data","data read done %f\n",data);  	
+		else{		
+			if(dataRead > mote_treshold){
+  				Data_msg* mess = (Data_msg*)(call Packet.getPayload(&packet, sizeof(Data_msg)));  
+				dbg("data","A mote has just read a value from the sensor %f\n",dataRead);  	
 	
 				if (mess == NULL) return;
-				mess->identifier = TOS_NODE_ID;
-				mess->value = data;
+				mess->sender = TOS_NODE_ID;
+				mess->value = dataRead;
 		
-				if(call Send.send(&packet,sizeof(data_msg_t)) == SUCCESS)
+				if(call AMSend.send(AM_BROADCAST_ADDR, &packet,sizeof(Data_msg)) == SUCCESS)
 				{
 			   		dbg("radio_send", "Packet passed to lower layer successfully!\n");
-			   		dbg("radio_pack","Packet sent from identifier: %hu, data: %hu\n", mess->identifier, mess->value);
+			   		dbg("radio_pack","Packet sent from identifier: %hu, data: %hu\n", mess->sender, mess->value);
+			   		locked = TRUE;
 				}
-				else
-					locked = FALSE;
-	  		//}
+				
+	  		}
 		}
   	}
   	

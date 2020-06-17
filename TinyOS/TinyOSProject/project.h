@@ -4,15 +4,15 @@
 #define SETUP 1
 #define DATA 2 
 
-typedef nx_struct setup_msg{
+typedef nx_struct Setup_msg{
 	nx_uint16_t sender;
 	nx_uint16_t treshold;
-} setup_msg_t;
+} Setup_msg;
 
-typedef nx_struct data_msg{
-	nx_uint16_t identifier;
+typedef nx_struct Data_msg{
+	nx_uint16_t sender;
 	nx_uint16_t value;
-} data_msg_t;
+} Data_msg;
 
 enum{
 AM_MY_MSG = 6
