@@ -36,9 +36,7 @@ implementation
   	message_t packet;
   	bool locked = FALSE;
   	uint16_t data;
-  	uint16_t sink_treshold;
   	uint16_t mote_treshold;
-  	uint16_t replyTo;
 
   	void sendData();
   	void readData();
@@ -48,18 +46,17 @@ implementation
 	//***************** Boot event ********************//
   	event void Boot.booted()
   	{
-		dbg("boot","Application booted at time %s \n", sim_time_string());
 		call AMControl.start();	
   	}
 
 	//***************** SplitControl event********************//
   	event void AMControl.startDone(error_t err)
   	{
+  		mote_treshold = 33;
   		if(err == SUCCESS)
   		{
-  			dbg ("boot", "I'm node : %d, Radio started at time: %s \n", TOS_NODE_ID, sim_time_string());
+  			dbg ("boot", "Booting ... I'm node : %d, Radio started at time: %s \n", TOS_NODE_ID, sim_time_string());
   			if(TOS_NODE_ID ==1){
-  				sink_treshold = 0;
 				call TresholdTimer.startPeriodicAt(0, 1000);
 			}
 			else{
@@ -83,14 +80,14 @@ implementation
   	event void TresholdTimer.fired() 
   	{
 	 	dbg_clear("timer", "\n");
-		dbg("timer","timer fired at %s.\n", sim_time_string());
+		dbg("timer","Treshold timer fired at %s.\n", sim_time_string());
 		call Read.read();
 	}
   
   	event void DataTimer.fired() 
   	{
 	 	dbg_clear("timer", "\n");
-		dbg("timer","timer fired at %s.\n", sim_time_string());
+		dbg("timer","Data timer fired at %s.\n", sim_time_string());
 		call Read.read();
 	}
 	
@@ -118,20 +115,17 @@ implementation
 	//***************************** Receive interface *****************//
   	event message_t* Receive.receive(message_t* buf,void* payload, uint8_t len) 
   	{
-    	dbg("error", "A new message is being read somewhere in the network\n");
   		if(TOS_NODE_ID ==1){
       		Data_msg* mess = (Data_msg*)payload;
 			data = mess-> value;
-    	  	dbg("radio_pack", "Packet with data %hu\n", data); 
-    	  	dbg("error", "sink node is reading a message\n");   		
+    	  	dbg("error", "sink node received data message with data %hu\n", data);   		
     	}
     	else{
       		Setup_msg* mess = (Setup_msg*)payload;
 	  		mote_treshold = mess-> treshold;
-	  		replyTo = mess -> sender;
 	  		mote_treshold = mess -> treshold;
 	  		dbg("radio_pack", "Packet with new treshold: %hu \n", mess->treshold);
-      		dbg("radio_rec", "Packet received at time %s\n", sim_time_string());
+      		dbg("radio_rec", "A mote node has received a treshold message with treshold %hu\n", mote_treshold);
     	} 
     	return buf;
  
@@ -146,26 +140,22 @@ implementation
   	{
 		if(TOS_NODE_ID ==1){
   			Setup_msg* mess = (Setup_msg*)(call Packet.getPayload(&packet, sizeof(Setup_msg)));  
-			sink_treshold=dataRead;
-			dbg("treshold","Sink has just red a new treshold %f\n",sink_treshold);  	
-	
+			dbg("treshold","Sink just read new treshold %hu\n",dataRead);  	
 			if (mess == NULL) return;
-
 			mess->sender = TOS_NODE_ID;
-			mess->treshold = sink_treshold;
+			mess->treshold = dataRead;
 
-			dbg("error", "Sink node: read new treshold %hu\n",sink_treshold);
 			if(call AMSend.send(AM_BROADCAST_ADDR, &packet,sizeof(Setup_msg)) == SUCCESS)
 			{
 			   	dbg("radio_send", "Packet passed to lower layer successfully!\n");
-			   	dbg("radio_pack","Packet from : %hu, treshold: %hu\n", mess->sender, mess->treshold);
+			   	dbg("radio_pack","Treshold Packet sent from : %hu, treshold: %hu\n", mess->sender, mess->treshold);
 			   	locked = TRUE;
 			}
 		}
 		else{		
 			if(dataRead > mote_treshold){
   				Data_msg* mess = (Data_msg*)(call Packet.getPayload(&packet, sizeof(Data_msg)));  
-				dbg("data","A mote has just read a value from the sensor %f\n",dataRead);  	
+				dbg("data","read value from the sensor %f\n",dataRead);  	
 	
 				if (mess == NULL) return;
 				mess->sender = TOS_NODE_ID;
@@ -173,8 +163,8 @@ implementation
 		
 				if(call AMSend.send(AM_BROADCAST_ADDR, &packet,sizeof(Data_msg)) == SUCCESS)
 				{
-			   		dbg("radio_send", "Packet passed to lower layer successfully!\n");
-			   		dbg("radio_pack","Packet sent from identifier: %hu, data: %hu\n", mess->sender, mess->value);
+					dbg("radio_send", "Packet passed to lower layer successfully!\n");
+			   		dbg("radio_pack","Packet sent from mote: %hu, data: %hu\n", mess->sender, mess->value);
 			   		locked = TRUE;
 				}
 				
