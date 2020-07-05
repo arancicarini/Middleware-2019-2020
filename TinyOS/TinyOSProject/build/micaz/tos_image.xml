@@ -1,13 +1,13 @@
 <tos_image>
   <ident>
     <hostname>user-iot</hostname>
+    <timestamp>5F01E438L</timestamp>
+    <uidhash>78A6156EL</uidhash>
     <appname>projectSinkAppC</appname>
+    <deluge_support>no</deluge_support>
+    <userhash>2C00343AL</userhash>
     <username>user</username>
     <platform>micaz</platform>
-    <userhash>2C00343AL</userhash>
-    <deluge_support>no</deluge_support>
-    <timestamp>5F01E15AL</timestamp>
-    <uidhash>526CA708L</uidhash>
   </ident>
   <image format="ihex">
 :100000000C9449000C94CF040C94D9040C94E30490

@@ -20,6 +20,7 @@ module projectSinkC
 		//timer interfaces
 		interface Timer<TMilli> as TresholdTimer;
 		interface Timer<TMilli> as DataTimer;
+		interface Timer<TMilli> as ForwardingTimer;
 	
 		//other interfaces, if needed
     	//interface PacketAcknowledgements as Ack;
@@ -35,6 +36,7 @@ implementation
 
   	message_t packet;
   	bool locked = FALSE;
+  	bool isNewTreshold = FALSE;
   	uint16_t data;
   	uint16_t mote_treshold;
 
@@ -62,7 +64,9 @@ implementation
 			else{
 				mote_treshold = 0;
 				call DataTimer.startPeriodicAt(0, 1000);
+				call ForwardingTimer.startPeriodicAt(0,100);
 			}
+			
   		}
   		else
   		{
@@ -91,6 +95,20 @@ implementation
 		call Read.read();
 	}
 	
+	event void ForwardingTimer.fired(){
+		dbg_clear("timer", "\n");
+		if (isNewTreshold){
+			Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));   	
+			if (mess == NULL) return;
+			mess->sender = TOS_NODE_ID;
+			mess->value = mote_treshold;
+			mess->isData = 0;
+			send_message(mess);
+			isNewTreshold = FALSE;
+			dbg("timer","Treshold has been found changed on mote %hu\n", TOS_NODE_ID );
+		}	
+	}
+	
 
   
   	
@@ -103,17 +121,17 @@ implementation
       	//if it's some data sent by the children nodes, we forward it or we print if we are root
 		if (mess->sender > TOS_NODE_ID && mess->isData == 1){
 			if( TOS_NODE_ID == 1){
-				dbg("error", "sink node received data message with data %hu\n", data); 
+				dbg("error", "sink node received data message with data %hu\n", mess->value); 
 			}
 			else{
-				send_message(mess);
+				//send_message(mess);
 			}
 		}
 		// if it's the new treshold sent by the parent node, we forward it and we set the new treshold on the current node
 		if(mess->sender < TOS_NODE_ID && mess->isData == 0){
 			mote_treshold = mess-> value;
       		dbg("radio_rec", "A mote node has received a treshold message with treshold %hu\n", mote_treshold);
-      		send_message(mess);
+      	 	isNewTreshold = TRUE;
       	}
       	
       	  		
@@ -129,7 +147,6 @@ implementation
 	//************************* Read interface **********************//
   	event void Read.readDone(error_t result, uint16_t dataRead) 
   	{
-  		dbg("error","ciao"); 
 		if(TOS_NODE_ID ==1){
   			Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));  
 			dbg("treshold","Sink just read new treshold %hu\n",dataRead);  	
@@ -142,7 +159,7 @@ implementation
 		else{		
 			if(dataRead > mote_treshold){
   				Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));  
-				dbg("treshold","A mote has just read a new value above treshold: %f\n",dataRead);  	
+				dbg("error","A mote has just read a new value above treshold: %hu\n",dataRead);  	
 	
 				if (mess == NULL) return;
 				mess->sender = TOS_NODE_ID;
@@ -163,7 +180,7 @@ implementation
   			locked = FALSE;
   			if ( err == SUCCESS)
   			{
-				dbg("radio_send", "packet sent at time %s \n", sim_time_string());
+				dbg("radio_send", "packet sent at time %s from %hu \n", sim_time_string(), TOS_NODE_ID);
   			}
 			else
 			{
@@ -176,7 +193,6 @@ implementation
   	//*********************Support functions to avoid repetition of code****************//
   	void send_message ( Msg_t* mess){
   		if(call AMSend.send(AM_BROADCAST_ADDR, &packet,sizeof(Msg_t)) == SUCCESS){
-			dbg("radio_send", "Packet passed to lower layer successfully!\n");
 	   		dbg("treshold","Packet sent from mote: %hu, data: %hu, type: %hu\n ", TOS_NODE_ID, mess->value, mess->isData);
 	   		locked = TRUE;
 		}
