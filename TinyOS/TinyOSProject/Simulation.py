@@ -58,25 +58,19 @@ t.addChannel("error",out);
 print "Activate debug message on channel treshold"
 t.addChannel("treshold",out);
 
-
 print "Creating node 1...";
-node1 =t.getNode(1);
-time1 = 0*t.ticksPerSecond(); #instant at which each node should be turned on
+node1 = t.getNode(1);
+time1 = 0*t.ticksPerSecond();
 node1.bootAtTime(time1);
-print ">>>Will boot at time",  time1/t.ticksPerSecond(), "[sec]";
+print ">>>Will boot at time", time1/t.ticksPerSecond(), "[sec]";
 
-print "Creating node 2...";
-node2 = t.getNode(2);
-time2 = 5*t.ticksPerSecond();
-node2.bootAtTime(time2);
-print ">>>Will boot at time", time2/t.ticksPerSecond(), "[sec]";
 
-print "Creating node 3...";
-node3 = t.getNode(3);
-time3 = 5*t.ticksPerSecond();
-node3.bootAtTime(time3);
-print ">>>Will boot at time", time3/t.ticksPerSecond(), "[sec]";
-
+for i in range(2,5):
+	print "Creating node ", i, "...";
+	node =t.getNode(i);
+	time = 5*t.ticksPerSecond(); #instant at which each node should be turned on
+	node.bootAtTime(time);
+	print ">>>Will boot at time",  time/t.ticksPerSecond(), "[sec]";
 
 
 print "Creating radio channels..."
@@ -112,7 +106,7 @@ for line in lines:
             t.getNode(i).addNoiseTraceReading(val)
 print "Done!";
 
-for i in range(1, 4):
+for i in range(1, 5):
     print ">>>Creating noise model for node:",i;
     t.getNode(i).createNoiseModel()
 

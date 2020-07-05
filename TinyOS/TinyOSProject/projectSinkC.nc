@@ -41,6 +41,7 @@ implementation
   	void sendData();
   	void readData();
   	void getTreshold();
+  	void send_message ( Msg_t* mess);
   
 
 	//***************** Boot event ********************//
@@ -52,7 +53,6 @@ implementation
 	//***************** SplitControl event********************//
   	event void AMControl.startDone(error_t err)
   	{
-  		mote_treshold = 33;
   		if(err == SUCCESS)
   		{
   			dbg ("boot", "Booting ... I'm node : %d, Radio started at time: %s \n", TOS_NODE_ID, sim_time_string());
@@ -92,7 +92,70 @@ implementation
 	}
 	
 
-  //*********************Send interface ****************//
+  
+  	
+
+
+	//***************************** Receive interface *****************//
+  	event message_t* Receive.receive(message_t* buf,void* payload, uint8_t len) 
+  	{
+      	Msg_t* mess = (Msg_t*)payload;
+      	//if it's some data sent by the children nodes, we forward it or we print if we are root
+		if (mess->sender > TOS_NODE_ID && mess->isData == 1){
+			if( TOS_NODE_ID == 1){
+				dbg("error", "sink node received data message with data %hu\n", data); 
+			}
+			else{
+				send_message(mess);
+			}
+		}
+		// if it's the new treshold sent by the parent node, we forward it and we set the new treshold on the current node
+		if(mess->sender < TOS_NODE_ID && mess->isData == 0){
+			mote_treshold = mess-> value;
+      		dbg("radio_rec", "A mote node has received a treshold message with treshold %hu\n", mote_treshold);
+      		send_message(mess);
+      	}
+      	
+      	  		
+    	// in all the other cases the message is simply discarded
+    	return buf;
+ 
+   	}
+
+	
+	
+	  	
+  
+	//************************* Read interface **********************//
+  	event void Read.readDone(error_t result, uint16_t dataRead) 
+  	{
+  		dbg("error","ciao"); 
+		if(TOS_NODE_ID ==1){
+  			Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));  
+			dbg("treshold","Sink just read new treshold %hu\n",dataRead);  	
+			if (mess == NULL) return;
+			mess->sender = TOS_NODE_ID;
+			mess->value = dataRead;
+			mess->isData = 0;
+			send_message(mess);
+		}
+		else{		
+			if(dataRead > mote_treshold){
+  				Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));  
+				dbg("treshold","A mote has just read a new value above treshold: %f\n",dataRead);  	
+	
+				if (mess == NULL) return;
+				mess->sender = TOS_NODE_ID;
+				mess->value = dataRead;
+				mess->isData = 1;
+				send_message(mess);
+		
+				
+	  		}
+		}
+  	}
+  	
+  	//*********************Send interface ****************//
   	event void AMSend.sendDone(message_t* buf,error_t err)
   	{
   		if( &packet == buf)
@@ -110,67 +173,15 @@ implementation
 		} 		
   	}
   	
-
-
-	//***************************** Receive interface *****************//
-  	event message_t* Receive.receive(message_t* buf,void* payload, uint8_t len) 
-  	{
-  		if(TOS_NODE_ID ==1){
-      		Data_msg* mess = (Data_msg*)payload;
-			data = mess-> value;
-    	  	dbg("error", "sink node received data message with data %hu\n", data);   		
-    	}
-    	else{
-      		Setup_msg* mess = (Setup_msg*)payload;
-	  		mote_treshold = mess-> treshold;
-	  		mote_treshold = mess -> treshold;
-	  		dbg("radio_pack", "Packet with new treshold: %hu \n", mess->treshold);
-      		dbg("radio_rec", "A mote node has received a treshold message with treshold %hu\n", mote_treshold);
-    	} 
-    	return buf;
- 
-   	}
-
-	
-	
-	  	
-  
-	//************************* Read interface **********************//
-  	event void Read.readDone(error_t result, uint16_t dataRead) 
-  	{
-		if(TOS_NODE_ID ==1){
-  			Setup_msg* mess = (Setup_msg*)(call Packet.getPayload(&packet, sizeof(Setup_msg)));  
-			dbg("treshold","Sink just read new treshold %hu\n",dataRead);  	
-			if (mess == NULL) return;
-			mess->sender = TOS_NODE_ID;
-			mess->treshold = dataRead;
-
-			if(call AMSend.send(AM_BROADCAST_ADDR, &packet,sizeof(Setup_msg)) == SUCCESS)
-			{
-			   	dbg("radio_send", "Packet passed to lower layer successfully!\n");
-			   	dbg("radio_pack","Treshold Packet sent from : %hu, treshold: %hu\n", mess->sender, mess->treshold);
-			   	locked = TRUE;
-			}
-		}
-		else{		
-			if(dataRead > mote_treshold){
-  				Data_msg* mess = (Data_msg*)(call Packet.getPayload(&packet, sizeof(Data_msg)));  
-				dbg("data","read value from the sensor %f\n",dataRead);  	
-	
-				if (mess == NULL) return;
-				mess->sender = TOS_NODE_ID;
-				mess->value = dataRead;
-		
-				if(call AMSend.send(AM_BROADCAST_ADDR, &packet,sizeof(Data_msg)) == SUCCESS)
-				{
-					dbg("radio_send", "Packet passed to lower layer successfully!\n");
-			   		dbg("radio_pack","Packet sent from mote: %hu, data: %hu\n", mess->sender, mess->value);
-			   		locked = TRUE;
-				}
-				
-	  		}
+  	//*********************Support functions to avoid repetition of code****************//
+  	void send_message ( Msg_t* mess){
+  		if(call AMSend.send(AM_BROADCAST_ADDR, &packet,sizeof(Msg_t)) == SUCCESS){
+			dbg("radio_send", "Packet passed to lower layer successfully!\n");
+	   		dbg("treshold","Packet sent from mote: %hu, data: %hu, type: %hu\n ", TOS_NODE_ID, mess->value, mess->isData);
+	   		locked = TRUE;
 		}
   	}
+  	
   	
   	
   	
