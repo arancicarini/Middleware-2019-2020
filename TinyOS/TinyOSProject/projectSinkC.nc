@@ -100,9 +100,10 @@ implementation
 		if (isNewTreshold){
 			Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));   	
 			if (mess == NULL) return;
+			
 			mess->sender = TOS_NODE_ID;
 			mess->value = mote_treshold;
-			mess->isData = 0;
+			mess->type = 2;
 			send_message(mess);
 			isNewTreshold = FALSE;
 			dbg("timer","Treshold has been found changed on mote %hu\n", TOS_NODE_ID );
@@ -119,7 +120,7 @@ implementation
   	{
       	Msg_t* mess = (Msg_t*)payload;
       	//if it's some data sent by the children nodes, we forward it or we print if we are root
-		if (mess->sender > TOS_NODE_ID && mess->isData == 1){
+		if (mess->sender > TOS_NODE_ID && mess->type == 2){
 			if( TOS_NODE_ID == 1){
 				dbg("error", "sink node received data message with data %hu\n", mess->value); 
 			}
@@ -128,7 +129,7 @@ implementation
 			}
 		}
 		// if it's the new treshold sent by the parent node, we forward it and we set the new treshold on the current node
-		if(mess->sender < TOS_NODE_ID && mess->isData == 0){
+		if(mess->sender < TOS_NODE_ID && mess->type == 2){
 			mote_treshold = mess-> value;
       		dbg("radio_rec", "A mote node has received a treshold message with treshold %hu\n", mote_treshold);
       	 	isNewTreshold = TRUE;
@@ -153,7 +154,7 @@ implementation
 			if (mess == NULL) return;
 			mess->sender = TOS_NODE_ID;
 			mess->value = dataRead;
-			mess->isData = 0;
+			mess->type = 1;
 			send_message(mess);
 		}
 		else{		
@@ -164,7 +165,7 @@ implementation
 				if (mess == NULL) return;
 				mess->sender = TOS_NODE_ID;
 				mess->value = dataRead;
-				mess->isData = 1;
+				mess->type = 2;
 				send_message(mess);
 		
 				
@@ -197,7 +198,6 @@ implementation
 	   		locked = TRUE;
 		}
   	}
-  	
   	
   	
   	
