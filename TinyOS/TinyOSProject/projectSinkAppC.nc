@@ -9,7 +9,6 @@ implementation {
 	components MainC, projectSinkC as App;
 	components new TimerMilliC() as Timer1;
 	components new TimerMilliC() as Timer2;
-	components new TimerMilliC() as Timer3;
 	components new FakeSensorC();
 	components ActiveMessageC;
 	components new AMSenderC( AM_MY_MSG);
@@ -38,7 +37,6 @@ implementation {
 	//Timer interface
 	App.TresholdTimer -> Timer1;  
 	App.DataTimer -> Timer2;  
-	App.ForwardingTimer -> Timer3;
 	
 	//Fake Sensor read
 	App.Read -> FakeSensorC;

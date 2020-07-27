@@ -65,7 +65,7 @@ node1.bootAtTime(time1);
 print ">>>Will boot at time", time1/t.ticksPerSecond(), "[sec]";
 
 
-for i in range(2,4):
+for i in range(2,8):
 	print "Creating node ", i, "...";
 	node =t.getNode(i);
 	time = 5*t.ticksPerSecond(); #instant at which each node should be turned on
@@ -106,7 +106,7 @@ for line in lines:
             t.getNode(i).addNoiseTraceReading(val)
 print "Done!";
 
-for i in range(1, 4):
+for i in range(1, 8):
     print ">>>Creating noise model for node:",i;
     t.getNode(i).createNoiseModel()
 
