@@ -12,7 +12,7 @@ from TOSSIM import*;
 t = Tossim([]);
 
 
-topofile="topology.txt";
+topofile="topology8.txt";
 modelfile="meyer-heavy.txt";
 
 
@@ -20,8 +20,8 @@ print "Initializing mac....";
 mac = t.mac();
 print "Initializing radio channels....";
 radio=t.radio();
-print "    using topology file:",topofile;
-print "    using noise file:",modelfile;
+print "using topology file:",topofile;
+print "using noise file:",modelfile;
 print "Initializing simulator....";
 t.init();
 
@@ -30,81 +30,82 @@ simulation_outfile = "simulation.txt";
 print "Saving sensors simulation output to:", simulation_outfile;
 simulation_out = open(simulation_outfile, "w");
 
-out = sys.stdout;
+debug_outfile = "debug.txt";
+print "Saving sensors simulation output to:", debug_outfile;
+debug_out = open(debug_outfile, "w");
 
-#Add debug channel
-print "Activate debug message on channel init"
-t.addChannel("init",out);
-print "Activate debug message on channel boot"
-t.addChannel("boot",out);
-print "Activate debug message on channel radio"
-t.addChannel("radio",out);
-t.addChannel("role",out);
-print "Activate debug message on channel timer"
-t.addChannel("timer",out);
-print "Activate debug message on channel value"
-t.addChannel("data",out);
-print "Activate debug message on channel error"
-t.addChannel("error",out);
-print "Activate debug message on channel treshold"
-t.addChannel("treshold",out);
-
-print "Creating node 1...";
-node1 = t.getNode(1);
-time1 = 0*t.ticksPerSecond();
-node1.bootAtTime(time1);
-print ">>>Will boot at time", time1/t.ticksPerSecond(), "[sec]";
+##Add debug channel
+debug_out.write("DEBUG FILE\n\nAdding debug channels:\n\n");
+debug_out.write("Activate debug message on channel init\n");
+t.addChannel("init",debug_out);
+debug_out.write("Activate debug message on channel boot\n");
+t.addChannel("boot",debug_out);
+debug_out.write("Activate debug message on channel sink\n");
+t.addChannel("sink",simulation_out);
+t.addChannel("sink",debug_out);
+debug_out.write("Activate debug message on channel radio\n");
+t.addChannel("radio",debug_out);
+debug_out.write("Activate debug message on channel timer\n");
+t.addChannel("timer",debug_out);
+debug_out.write("Activate debug message on channel data\n");
+t.addChannel("data",debug_out);
+debug_out.write("Activate debug message on channel error\n");
+t.addChannel("error",debug_out);
+debug_out.write("Activate debug message on channel treshold\n\n");
+t.addChannel("treshold",debug_out);
 
 
-for i in range(2,6):
-	print "Creating node ", i, "...";
-	node =t.getNode(i);
-	time =t.ticksPerSecond(); #instant at which each node should be turned on
+##Creating nodes
+debug_out.write("\nCreating nodes:\n\n");
+for i in range(1,8):
+	debug_out.write("Creating node: "+str(i)+"\n");
+	node=t.getNode(i);
+	time=t.ticksPerSecond(); #instant at which each node should be turned on
 	node.bootAtTime(time);
-	print ">>>Will boot at time",  time/t.ticksPerSecond(), "[sec]";
 
 
-print "Creating radio channels..."
+##Setting radio channel
+debug_out.write("\nCreating radio channels:\n\n");
 f = open(topofile, "r");
 lines = f.readlines()
 for line in lines:
   s = line.split()
   if (len(s) > 0):
-    print ">>>Setting radio channel from node ", s[0], " to node ", s[1], " with gain ", s[2], " dBm"
+    debug_out.write("Setting radio channel from node: "+ str(s[0])+" to node:"+ str(s[1])+",with gain:"+(s[2])+ "dBm\n");
     radio.add(int(s[0]), int(s[1]), float(s[2]))
 
 
-#creation of channel model
-print "Initializing Closest Pattern Matching (CPM)...";
+##Creating channel model
+debug_out.write("\nInitializing Closest Pattern Matching (CPM):\n\n");
 noise = open(modelfile, "r")
 lines = noise.readlines()
 compl = 0;
 mid_compl = 0;
 
-print "Reading noise model data file:", modelfile;
-print "Loading:",
 for line in lines:
-    str = line.strip()
-    if (str != "") and ( compl < 10000 ):
-        val = int(str)
+    string = line.strip()
+    if (string != "") and ( compl < 10000 ):
+        val = int(string)
         mid_compl = mid_compl + 1;
         if ( mid_compl > 5000 ):
             compl = compl + mid_compl;
             mid_compl = 0;
             sys.stdout.write ("#")
             sys.stdout.flush()
-        for i in range(1, 6):
+        for i in range(1, 8):
             t.getNode(i).addNoiseTraceReading(val)
-print "Done!";
 
-for i in range(1, 6):
-    print ">>>Creating noise model for node:",i;
+##Creating noise model
+for i in range(1, 8):
+    debug_out.write("Creating noise model for node:"+str(i)+"\n");
     t.getNode(i).createNoiseModel()
 
-print "Start simulation with TOSSIM! \n\n\n";
+debug_out.write("\nStart simulation with TOSSIM!\n\n");
 
-for i in range(0,1200):
+for i in range(0,1600):
 	t.runNextEvent()
 	
-print "\n\n\nSimulation finished!";
+debug_out.write("\n\nSimulation finished!");
+
+debug_out.close();
 

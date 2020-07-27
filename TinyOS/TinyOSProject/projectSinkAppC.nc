@@ -21,14 +21,13 @@ implementation {
 	//Boot interface
 	App.Boot -> MainC.Boot;
 
-	/****** Wire the other interfaces down here *****/
-
 	//Send and Receive interfaces
 	App.AMSend-> AMSenderC;
 	App.Receive-> AMReceiverC;
 
 	//Radio Control
 	App.AMControl -> ActiveMessageC;
+	App.Ack -> ActiveMessageC;
 
 	//Interfaces to access package fields
 	App.AMPacket -> AMSenderC;
@@ -39,11 +38,7 @@ implementation {
 	App.DataTimer -> Timer2;  
 	
 	//Fake Sensor read
-	App.Read -> FakeSensorC;
-	
-
-  
-  	
+	App.Read -> FakeSensorC;	
 
 }
 

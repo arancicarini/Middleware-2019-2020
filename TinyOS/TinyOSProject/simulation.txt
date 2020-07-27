@@ -1,0 +1,30 @@
+
+DEBUG (1): Sink just read new treshold 33614
+
+DEBUG (1): Sink node received data message from 3 with data 45927 at time 0:0:3.945114112
+
+DEBUG (1): Sink node received data message from 6 with data 47604 at time 0:0:3.959838758
+
+DEBUG (1): Sink just read new treshold 30178
+
+DEBUG (1): Sink node received data message from 3 with data 56842 at time 0:0:5.896331775
+
+DEBUG (1): Sink node received data message from 4 with data 38284 at time 0:0:5.905990532
+
+DEBUG (1): Sink node received data message from 7 with data 48148 at time 0:0:5.909088048
+
+DEBUG (1): Sink just read new treshold 22963
+
+DEBUG (1): Sink node received data message from 2 with data 36952 at time 0:0:6.874374369
+
+DEBUG (1): Sink node received data message from 7 with data 54849 at time 0:0:6.882522514
+
+DEBUG (1): Sink node received data message from 2 with data 44168 at time 0:0:7.853103604
+
+DEBUG (1): Sink just read new treshold 6228
+
+DEBUG (1): Sink node received data message from 2 with data 36299 at time 0:0:9.801406855
+
+DEBUG (1): Sink node received data message from 3 with data 48398 at time 0:0:9.803390486
+
+DEBUG (1): Sink node received data message from 7 with data 31261 at time 0:0:9.809005687
