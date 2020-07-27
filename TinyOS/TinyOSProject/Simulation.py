@@ -39,20 +39,11 @@ print "Activate debug message on channel boot"
 t.addChannel("boot",out);
 print "Activate debug message on channel radio"
 t.addChannel("radio",out);
-print "Activate debug message on channel radio_send"
-t.addChannel("radio_send",out);
-print "Activate debug message on channel radio_ack"
-t.addChannel("radio_ack",out);
-print "Activate debug message on channel radio_rec"
-t.addChannel("radio_rec",out);
-print "Activate debug message on channel radio_pack"
-t.addChannel("radio_pack",out);
-print "Activate debug message on channel role"
 t.addChannel("role",out);
 print "Activate debug message on channel timer"
 t.addChannel("timer",out);
 print "Activate debug message on channel value"
-t.addChannel("value",out);
+t.addChannel("data",out);
 print "Activate debug message on channel error"
 t.addChannel("error",out);
 print "Activate debug message on channel treshold"
@@ -65,10 +56,10 @@ node1.bootAtTime(time1);
 print ">>>Will boot at time", time1/t.ticksPerSecond(), "[sec]";
 
 
-for i in range(2,8):
+for i in range(2,6):
 	print "Creating node ", i, "...";
 	node =t.getNode(i);
-	time = 5*t.ticksPerSecond(); #instant at which each node should be turned on
+	time =t.ticksPerSecond(); #instant at which each node should be turned on
 	node.bootAtTime(time);
 	print ">>>Will boot at time",  time/t.ticksPerSecond(), "[sec]";
 
@@ -102,11 +93,11 @@ for line in lines:
             mid_compl = 0;
             sys.stdout.write ("#")
             sys.stdout.flush()
-        for i in range(1, 4):
+        for i in range(1, 6):
             t.getNode(i).addNoiseTraceReading(val)
 print "Done!";
 
-for i in range(1, 8):
+for i in range(1, 6):
     print ">>>Creating noise model for node:",i;
     t.getNode(i).createNoiseModel()
 
