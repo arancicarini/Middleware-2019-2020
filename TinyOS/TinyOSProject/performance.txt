@@ -1,0 +1,104 @@
+Activate debug message on channel analysis
+
+
+DEBUG (3): Time for message from sink to 3 is : 26156 ms
+
+DEBUG (2): Time for message from sink to 2 is : 26156 ms
+
+DEBUG (7): Time for message from sink to 7 is : 17941 ms
+
+DEBUG (6): Time for message from sink to 6 is : 17941 ms
+
+DEBUG (5): Time for message from sink to 5 is : 13690 ms
+
+DEBUG (4): Time for message from sink to 4 is : 13690 ms
+
+
+DEBUG (1): Message counter: 1
+
+DEBUG (1): Time for message from 1 to sink is : 48662
+
+
+DEBUG (1): Message counter: 2
+
+DEBUG (1): Time for message from 1 to sink is : 16950
+
+DEBUG (3): Time for message from sink to 3 is : 49366 ms
+
+DEBUG (2): Time for message from sink to 2 is : 49366 ms
+
+DEBUG (7): Time for message from sink to 7 is : 24905 ms
+
+DEBUG (6): Time for message from sink to 6 is : 24905 ms
+
+DEBUG (5): Time for message from sink to 5 is : 60267 ms
+
+DEBUG (4): Time for message from sink to 4 is : 60267 ms
+
+
+DEBUG (1): Message counter: 3
+
+DEBUG (1): Time for message from 1 to sink is : 21775
+
+
+DEBUG (1): Message counter: 4
+
+DEBUG (1): Time for message from 1 to sink is : 21488
+
+
+DEBUG (1): Message counter: 5
+
+DEBUG (1): Time for message from 1 to sink is : 41178
+
+
+DEBUG (1): Message counter: 6
+
+DEBUG (1): Time for message from 1 to sink is : 25035
+
+DEBUG (2): Time for message from sink to 2 is : 4354 ms
+
+DEBUG (5): Time for message from sink to 5 is : 1251 ms
+
+DEBUG (4): Time for message from sink to 4 is : 1251 ms
+
+
+DEBUG (1): Message counter: 7
+
+DEBUG (1): Time for message from 1 to sink is : 45272
+
+
+DEBUG (1): Message counter: 8
+
+DEBUG (1): Time for message from 1 to sink is : 16116
+
+
+DEBUG (1): Message counter: 9
+
+DEBUG (1): Time for message from 1 to sink is : 48819
+
+DEBUG (3): Time for message from sink to 3 is : 45272 ms
+
+DEBUG (2): Time for message from sink to 2 is : 45272 ms
+
+DEBUG (5): Time for message from sink to 5 is : 16690 ms
+
+DEBUG (4): Time for message from sink to 4 is : 16690 ms
+
+DEBUG (7): Time for message from sink to 7 is : 9726 ms
+
+DEBUG (6): Time for message from sink to 6 is : 9726 ms
+
+
+DEBUG (1): Message counter: 10
+
+DEBUG (1): Time for message from 1 to sink is : 11291
+
+
+DEBUG (1): Message counter: 11
+
+DEBUG (1): Time for message from 1 to sink is : 22609
+
+
+DEBUG (1): Message counter: 12
+
+DEBUG (1): Time for message from 1 to sink is : 14968

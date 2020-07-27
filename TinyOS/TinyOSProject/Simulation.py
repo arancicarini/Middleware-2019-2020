@@ -31,8 +31,12 @@ print "Saving sensors simulation output to:", simulation_outfile;
 simulation_out = open(simulation_outfile, "w");
 
 debug_outfile = "debug.txt";
-print "Saving sensors simulation output to:", debug_outfile;
+print "Saving sensors debug output to:", debug_outfile;
 debug_out = open(debug_outfile, "w");
+
+performance_outfile = "performance.txt";
+print "Saving sensors performarce to:", performance_outfile;
+perf_out = open(performance_outfile, "w");
 
 ##Add debug channel
 debug_out.write("DEBUG FILE\n\nAdding debug channels:\n\n");
@@ -51,8 +55,10 @@ debug_out.write("Activate debug message on channel data\n");
 t.addChannel("data",debug_out);
 debug_out.write("Activate debug message on channel error\n");
 t.addChannel("error",debug_out);
-debug_out.write("Activate debug message on channel treshold\n\n");
+debug_out.write("Activate debug message on channel treshold\n");
 t.addChannel("treshold",debug_out);
+perf_out.write("Activate debug message on channel analysis\n\n");
+t.addChannel("analysis",perf_out);
 
 
 ##Creating nodes
@@ -105,6 +111,7 @@ debug_out.write("\nStart simulation with TOSSIM!\n\n");
 for i in range(0,1600):
 	t.runNextEvent()
 	
+
 debug_out.write("\n\nSimulation finished!");
 
 debug_out.close();

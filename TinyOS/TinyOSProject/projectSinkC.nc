@@ -37,6 +37,7 @@ implementation
   	bool locked = FALSE;
   	uint16_t treshold;
   	uint8_t nextHop;
+  	uint16_t counter;
 
   	void sendData(uint16_t data, uint16_t source);
   	void sendTreshold();
@@ -105,6 +106,8 @@ implementation
       		nextHop = mess->sender;
       		dbg_clear("radio", "\n");
       		dbg("radio", "Mote %hu has received a treshold message with treshold %hu from mote %hu\n",TOS_NODE_ID, treshold, mess->sender);
+			dbg_clear("analysis", "\n");      		
+      		dbg("analysis", "Time for message from sink to %hu is : %hu ms\n", TOS_NODE_ID, (sim_time()-mess->time)); 
       		sendTreshold();
       	
       	}
@@ -113,6 +116,12 @@ implementation
 			if( TOS_NODE_ID == 1){
 				dbg_clear("sink", "\n");
 				dbg("sink", "Sink node received data message from %hu with data %hu at time %s\n",mess->source, mess->value, sim_time_string()); 
+				dbg_clear("analysis", "\n");
+				counter +=1;
+				dbg_clear("analysis", "\n");
+				dbg("analysis","Message counter: %hu\n",counter);
+				dbg_clear("analysis", "\n");
+      			dbg("analysis", "Time for message from %hu to sink is : %hu\n", TOS_NODE_ID, (sim_time()-mess->time)); 
 			}
 			else{
 		      	dbg_clear("data", "\n");		
@@ -182,6 +191,7 @@ implementation
 			mess->value = treshold;
 			mess->type = 1;
 			mess->source =1;
+			mess-> time = sim_time();
 			
 			call Ack.requestAck(&packet);
 			if(call AMSend.send(AM_BROADCAST_ADDR, &packet,sizeof(Msg_t)) == SUCCESS){
@@ -206,6 +216,7 @@ implementation
 			mess->value = data;
 			mess->type = 2;
 			mess->source = source;
+			mess-> time = sim_time();			
 			if(nextHop == 0)return;
 			else{
 				call Ack.requestAck(&packet);

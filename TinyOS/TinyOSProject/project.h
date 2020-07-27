@@ -9,6 +9,7 @@ typedef nx_struct Msg {
 	nx_uint16_t sender; 
 	nx_uint16_t source; 
 	nx_uint16_t value; //if SETUP (1) contains treshold, if DATA (2) contains data
+	nx_uint16_t time; //to evaluate performance
 } Msg_t;
 
 enum{

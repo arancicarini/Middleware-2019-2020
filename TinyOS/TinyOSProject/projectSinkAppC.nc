@@ -13,6 +13,7 @@ implementation {
 	components ActiveMessageC;
 	components new AMSenderC( AM_MY_MSG);
 	components new AMReceiverC (AM_MY_MSG);
+
  
   
 
