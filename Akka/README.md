@@ -6,10 +6,10 @@ https://doc.akka.io/japi/akka/current/index.html?akka/cluster/ddata/typed/javads
 
 ## Description
 This folder contains:
-- our project (whose rough specifications can be found in Distributed Key Value store in Akka.txt )
+- our project (whose rough specifications can be found in "Distributed Key Value store in Akka.txt")
 - some reference pdfs about the Akka framework.
 - some samples to get acquainted with Akka.
     - some downloaded from the Lightbend tutorials
-    - a "customer" project when we tried to get working together Akka cluster and Akka HTTP.
+    - a "customer" sample when we tried to glue together Akka cluster and Akka HTTP.
 - a (possibly outdated) UML of our project.
 
