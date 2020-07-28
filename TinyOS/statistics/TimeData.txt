@@ -1,0 +1,37 @@
+20340 ms
+55599 ms
+55599 ms
+41465 ms
+41465 ms
+34528 ms
+34528 ms
+57738 ms
+57738 ms
+54191
+51218
+18385
+8892 ms
+8892 ms
+10744 ms
+10744 ms
+29833
+
+DEBUG (1): Message counter: 5
+
+DEBUG (1): Time for data message from 2 to sink is : 677
+
+DEBUG (3): Time for treshold message from sink to 3 is : 48375 ms
+
+DEBUG (2): Time for treshold message from sink to 2 is : 48375 ms
+
+DEBUG (7): Time for treshold message from sink to 7 is : 9179 ms
+
+DEBUG (6): Time for treshold message from sink to 6 is : 9179 ms
+
+DEBUG (5): Time for treshold message from sink to 5 is : 1668 ms
+
+DEBUG (4): Time for treshold message from sink to 4 is : 1668 ms
+
+DEBUG (1): Message counter: 6
+
+DEBUG (1): Time for data message from 6 to sink is : 33510
