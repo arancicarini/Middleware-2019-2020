@@ -1,32 +1,28 @@
 
 DEBUG (1): Sink just read new treshold 33614
 
-DEBUG (1): Sink node received data message from 3 with data 45927 at time 0:0:3.948669389
-
-DEBUG (1): Sink node received data message from 6 with data 47604 at time 0:0:3.960418588
+DEBUG (1): Sink node received data message from 3 with data 45927 at time 0:0:3.943160999
 
 DEBUG (1): Sink just read new treshold 30178
 
-DEBUG (1): Sink node received data message from 3 with data 56842 at time 0:0:5.900863609
+DEBUG (1): Sink node received data message from 3 with data 56842 at time 0:0:5.897994973
 
-DEBUG (1): Sink node received data message from 4 with data 38284 at time 0:0:5.905914238
-
-DEBUG (1): Sink node received data message from 7 with data 48148 at time 0:0:5.912994275
+DEBUG (1): Sink node received data message from 4 with data 38284 at time 0:0:5.905532771
 
 DEBUG (1): Sink just read new treshold 22963
 
-DEBUG (1): Sink node received data message from 2 with data 36952 at time 0:0:6.880310003
+DEBUG (1): Sink node received data message from 6 with data 64377 at time 0:0:6.887679955
 
-DEBUG (1): Sink node received data message from 6 with data 64377 at time 0:0:6.882446221
+DEBUG (1): Sink node received data message from 6 with data 59368 at time 0:0:7.852157565
 
-DEBUG (1): Sink node received data message from 2 with data 44168 at time 0:0:7.849563586
+DEBUG (1): Sink node received data message from 2 with data 44168 at time 0:0:7.854644733
 
-DEBUG (1): Sink node received data message from 6 with data 59368 at time 0:0:7.853073087
-
-DEBUG (1): Sink node received data message from 4 with data 51768 at time 0:0:7.860656661
-
-DEBUG (1): Sink node received data message from 7 with data 30400 at time 0:0:7.867050056
+DEBUG (1): Sink node received data message from 7 with data 30400 at time 0:0:7.864654440
 
 DEBUG (1): Sink just read new treshold 6228
 
-DEBUG (1): Sink node received data message from 7 with data 31261 at time 0:0:9.810440005
+DEBUG (1): Sink node received data message from 3 with data 48398 at time 0:0:9.802612292
+
+DEBUG (1): Sink node received data message from 2 with data 36299 at time 0:0:9.809463448
+
+DEBUG (1): Sink node received data message from 6 with data 19161 at time 0:0:9.812164238
