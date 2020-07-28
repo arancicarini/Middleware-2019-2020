@@ -1,105 +1,123 @@
 Activate debug message on channel analysis
 
 
-DEBUG (3): Time for treshold message from sink to 3 is : 79040066 ms
-DEBUG (3): sim time: 3938142640
+DEBUG (3): Time for treshold message from sink to 3 is : 105742791 ms
+DEBUG (3): sim time: 3964845365
 
-DEBUG (2): Time for treshold message from sink to 2 is : 79040066 ms
-DEBUG (2): sim time: 3938142640
+DEBUG (2): Time for treshold message from sink to 2 is : 105742791 ms
+DEBUG (2): sim time: 3964845365
 
-DEBUG (5): Time for treshold message from sink to 5 is : 131224820 ms
-DEBUG (5): sim time: 3990327394
+DEBUG (5): Time for treshold message from sink to 5 is : 144042128 ms
+DEBUG (5): sim time: 4003144702
 
-DEBUG (4): Time for treshold message from sink to 4 is : 131224820 ms
-DEBUG (4): sim time: 3990327394
+DEBUG (4): Time for treshold message from sink to 4 is : 144042128 ms
+DEBUG (4): sim time: 4003144702
 
-DEBUG (7): Time for treshold message from sink to 7 is : 188597532 ms
-DEBUG (7): sim time: 4047700106
+DEBUG (7): Time for treshold message from sink to 7 is : 179137138 ms
+DEBUG (7): sim time: 4038239712
 
-DEBUG (6): Time for treshold message from sink to 6 is : 188597532 ms
-DEBUG (6): sim time: 4047700106
+DEBUG (6): Time for treshold message from sink to 6 is : 179137138 ms
+DEBUG (6): sim time: 4038239712
 
 DEBUG (1): Message counter: 1
 
-DEBUG (1): Time for data message from 3 to sink is : 19836310 ms
-DEBUG (1): sim time: 759661996
+DEBUG (1): Time for data message from 3 to sink is : 126036862 ms
+DEBUG (1): sim time: 865862548
+
+DEBUG (3): Time for treshold message from sink to 3 is : 75072804 ms
+DEBUG (3): sim time: 1990588898
+
+DEBUG (2): Time for treshold message from sink to 2 is : 75072804 ms
+DEBUG (2): sim time: 1990588898
+
+DEBUG (7): Time for treshold message from sink to 7 is : 168608635 ms
+DEBUG (7): sim time: 2084124729
+
+DEBUG (6): Time for treshold message from sink to 6 is : 168608635 ms
+DEBUG (6): sim time: 2084124729
+
+DEBUG (5): Time for treshold message from sink to 5 is : 181731117 ms
+DEBUG (5): sim time: 2097247211
+
+DEBUG (4): Time for treshold message from sink to 4 is : 181731117 ms
+DEBUG (4): sim time: 2097247211
 
 DEBUG (1): Message counter: 2
 
-DEBUG (1): Time for data message from 6 to sink is : 129241189 ms
-DEBUG (1): sim time: 869066875
-
-DEBUG (3): Time for treshold message from sink to 3 is : 32195857 ms
-DEBUG (3): sim time: 1947711951
-
-DEBUG (2): Time for treshold message from sink to 2 is : 32195857 ms
-DEBUG (2): sim time: 1947711951
-
-DEBUG (7): Time for treshold message from sink to 7 is : 76751261 ms
-DEBUG (7): sim time: 1992267355
-
-DEBUG (6): Time for treshold message from sink to 6 is : 76751261 ms
-DEBUG (6): sim time: 1992267355
-
-DEBUG (5): Time for treshold message from sink to 5 is : 135192082 ms
-DEBUG (5): sim time: 2050708176
-
-DEBUG (4): Time for treshold message from sink to 4 is : 135192082 ms
-DEBUG (4): sim time: 2050708176
+DEBUG (1): Time for data message from 3 to sink is : 25176855 ms
+DEBUG (1): sim time: 3116383357
 
 DEBUG (1): Message counter: 3
 
-DEBUG (1): Time for data message from 3 to sink is : 90941852 ms
-DEBUG (1): sim time: 3182148354
+DEBUG (1): Time for data message from 4 to sink is : 120696317 ms
+DEBUG (1): sim time: 3211902819
 
 DEBUG (1): Message counter: 4
 
-DEBUG (1): Time for data message from 4 to sink is : 161437046 ms
-DEBUG (1): sim time: 3252643548
+DEBUG (1): Time for data message from 7 to sink is : 139311931 ms
+DEBUG (1): sim time: 3230518433
 
 DEBUG (1): Message counter: 5
 
-DEBUG (1): Time for data message from 2 to sink is : 68206389 ms
-DEBUG (1): sim time: 40136003
+DEBUG (1): Time for data message from 2 to sink is : 92620309 ms
+DEBUG (1): sim time: 64549923
+
+DEBUG (3): Time for treshold message from sink to 3 is : 119323034 ms
+DEBUG (3): sim time: 91252648
+
+DEBUG (2): Time for treshold message from sink to 2 is : 119323034 ms
+DEBUG (2): sim time: 91252648
 
 DEBUG (1): Message counter: 6
 
-DEBUG (1): Time for data message from 7 to sink is : 83312502 ms
-DEBUG (1): sim time: 55242116
+DEBUG (1): Time for data message from 7 to sink is : 170897440 ms
+DEBUG (1): sim time: 142827054
 
-DEBUG (2): Time for treshold message from sink to 2 is : 109710053 ms
-DEBUG (2): sim time: 81639667
+DEBUG (5): Time for treshold message from sink to 5 is : 192564794 ms
+DEBUG (5): sim time: 164494408
 
-DEBUG (5): Time for treshold message from sink to 5 is : 213011452 ms
-DEBUG (5): sim time: 184941066
-
-DEBUG (4): Time for treshold message from sink to 4 is : 213011452 ms
-DEBUG (4): sim time: 184941066
+DEBUG (4): Time for treshold message from sink to 4 is : 192564794 ms
+DEBUG (4): sim time: 164494408
 
 DEBUG (1): Message counter: 7
 
-DEBUG (1): Time for data message from 2 to sink is : 18157853 ms
-DEBUG (1): sim time: 1165777875
+DEBUG (1): Time for data message from 2 to sink is : 89263395 ms
+DEBUG (1): sim time: 1236883417
 
 DEBUG (1): Message counter: 8
 
-DEBUG (1): Time for data message from 4 to sink is : 76598674 ms
-DEBUG (1): sim time: 1224218696
+DEBUG (1): Time for data message from 6 to sink is : 145720585 ms
+DEBUG (1): sim time: 1293340607
 
-DEBUG (3): Time for treshold message from sink to 3 is : 34484662 ms
-DEBUG (3): sim time: 2357795092
+DEBUG (1): Message counter: 9
 
-DEBUG (2): Time for treshold message from sink to 2 is : 34484662 ms
-DEBUG (2): sim time: 2357795092
+DEBUG (1): Time for data message from 4 to sink is : 194701012 ms
+DEBUG (1): sim time: 1342321034
 
-DEBUG (5): Time for treshold message from sink to 5 is : 102233290 ms
-DEBUG (5): sim time: 2425543720
+DEBUG (3): Time for treshold message from sink to 3 is : 51726993 ms
+DEBUG (3): sim time: 2375037423
 
-DEBUG (4): Time for treshold message from sink to 4 is : 102233290 ms
-DEBUG (4): sim time: 2425543720
+DEBUG (2): Time for treshold message from sink to 2 is : 51726993 ms
+DEBUG (2): sim time: 2375037423
 
-DEBUG (7): Time for treshold message from sink to 7 is : 128936015 ms
-DEBUG (7): sim time: 2452246445
+DEBUG (5): Time for treshold message from sink to 5 is : 115050598 ms
+DEBUG (5): sim time: 2438361028
 
-DEBUG (6): Time for treshold message from sink to 6 is : 128936015 ms
-DEBUG (6): sim time: 2452246445
+DEBUG (4): Time for treshold message from sink to 4 is : 115050598 ms
+DEBUG (4): sim time: 2438361028
+
+DEBUG (7): Time for treshold message from sink to 7 is : 115203185 ms
+DEBUG (7): sim time: 2438513615
+
+DEBUG (6): Time for treshold message from sink to 6 is : 115203185 ms
+DEBUG (6): sim time: 2438513615
+
+DEBUG (1): Message counter: 10
+
+DEBUG (1): Time for data message from 2 to sink is : 55846842 ms
+DEBUG (1): sim time: 3554847680
+
+DEBUG (1): Message counter: 11
+
+DEBUG (1): Time for data message from 3 to sink is : 87890112 ms
+DEBUG (1): sim time: 3586890950
