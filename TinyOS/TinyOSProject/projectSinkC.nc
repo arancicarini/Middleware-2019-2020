@@ -107,8 +107,8 @@ implementation
       		dbg_clear("radio", "\n");
       		dbg("radio", "Mote %hu has received a treshold message with treshold %hu from mote %hu\n",TOS_NODE_ID, treshold, mess->sender);
 			dbg_clear("analysis", "\n");      		
-      		dbg("analysis", "Time for treshold message from sink to %hu is : %lu ms\n", TOS_NODE_ID, (sim_time()-mess->time)); 
-      		dbg("analysis", "sim time: %lu\n", sim_time());
+      		dbg("analysis", "Time for treshold %hu message from sink to %hu is : %lu ms\n", treshold, TOS_NODE_ID, (sim_time()-mess->time)); 
+      		dbg("analysis", "current simulation time: %s\n", sim_time_string());
       		sendTreshold(mess->time);
       	
       	}
@@ -122,7 +122,7 @@ implementation
 				dbg("analysis","Message counter: %hu\n",counter);
 				dbg_clear("analysis", "\n");
       			dbg("analysis", "Time for data message from %hu to sink is : %lu ms\n", mess-> source, (sim_time()-mess->time)); 
-      			dbg("analysis", "sim time: %lu\n", sim_time());
+      			dbg("analysis", "current simulation time: %s\n", sim_time_string());
 			}
 			else{
 		      	dbg_clear("data", "\n");		

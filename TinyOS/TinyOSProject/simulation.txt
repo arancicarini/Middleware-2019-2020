@@ -1,30 +1,26 @@
 
 DEBUG (1): Sink just read new treshold 33614
 
-DEBUG (1): Sink node received data message from 3 with data 45927 at time 0:0:3.952056821
+DEBUG (1): Sink node received data message from 3 with data 45927 at time 0:0:3.942855825
 
 DEBUG (1): Sink just read new treshold 30178
 
-DEBUG (1): Sink node received data message from 3 with data 56842 at time 0:0:5.895095820
+DEBUG (1): Sink node received data message from 3 with data 56842 at time 0:0:5.899322480
 
-DEBUG (1): Sink node received data message from 4 with data 38284 at time 0:0:5.904647766
+DEBUG (1): Sink node received data message from 4 with data 38284 at time 0:0:5.905685358
 
-DEBUG (1): Sink node received data message from 7 with data 48148 at time 0:0:5.906509328
+DEBUG (1): Sink node received data message from 7 with data 48148 at time 0:0:5.909789948
 
 DEBUG (1): Sink just read new treshold 22963
 
-DEBUG (1): Sink node received data message from 2 with data 36952 at time 0:0:6.878402665
+DEBUG (1): Sink node received data message from 2 with data 36952 at time 0:0:6.877181969
 
-DEBUG (1): Sink node received data message from 7 with data 54849 at time 0:0:6.886230379
+DEBUG (1): Sink node received data message from 7 with data 54849 at time 0:0:6.883071828
 
-DEBUG (1): Sink node received data message from 2 with data 44168 at time 0:0:7.854629474
-
-DEBUG (1): Sink node received data message from 6 with data 59368 at time 0:0:7.860275193
-
-DEBUG (1): Sink node received data message from 4 with data 51768 at time 0:0:7.865173236
+DEBUG (1): Sink node received data message from 2 with data 44168 at time 0:0:7.855377150
 
 DEBUG (1): Sink just read new treshold 6228
 
-DEBUG (1): Sink node received data message from 2 with data 36299 at time 0:0:9.804412819
+DEBUG (1): Sink node received data message from 2 with data 36299 at time 0:0:9.804000834
 
-DEBUG (1): Sink node received data message from 3 with data 48398 at time 0:0:9.807617146
+DEBUG (1): Sink node received data message from 3 with data 48398 at time 0:0:9.809081981
