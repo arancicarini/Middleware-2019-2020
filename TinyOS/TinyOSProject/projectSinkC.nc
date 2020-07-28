@@ -39,8 +39,8 @@ implementation
   	uint8_t nextHop;
   	uint16_t counter;
 
-  	void sendData(uint16_t data, uint16_t source, uint64_t time);
-  	void sendTreshold(uint64_t time);
+  	void sendData(uint16_t data, uint16_t source, uint32_t time);
+  	void sendTreshold(uint32_t time);
   	void readData();
 
 
@@ -107,7 +107,8 @@ implementation
       		dbg_clear("radio", "\n");
       		dbg("radio", "Mote %hu has received a treshold message with treshold %hu from mote %hu\n",TOS_NODE_ID, treshold, mess->sender);
 			dbg_clear("analysis", "\n");      		
-      		dbg("analysis", "Time for treshold message from sink to %hu is : %hu ms\n", TOS_NODE_ID, (sim_time()-mess->time)); 
+      		dbg("analysis", "Time for treshold message from sink to %hu is : %lu ms\n", TOS_NODE_ID, (sim_time()-mess->time)); 
+      		dbg("analysis", "sim time: %lu\n", sim_time());
       		sendTreshold(mess->time);
       	
       	}
@@ -120,7 +121,8 @@ implementation
 				dbg_clear("analysis", "\n");
 				dbg("analysis","Message counter: %hu\n",counter);
 				dbg_clear("analysis", "\n");
-      			dbg("analysis", "Time for data message from %hu to sink is : %hu\n", mess-> source, (sim_time()-mess->time)); 
+      			dbg("analysis", "Time for data message from %hu to sink is : %lu ms\n", mess-> source, (sim_time()-mess->time)); 
+      			dbg("analysis", "sim time: %lu\n", sim_time());
 			}
 			else{
 		      	dbg_clear("data", "\n");		
@@ -182,7 +184,7 @@ implementation
 		}  		
   	}
   	
-  	void sendTreshold(uint64_t elapsed_time){
+  	void sendTreshold(uint32_t elapsed_time){
   		if (!locked){
 		  	Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));  
 			if (mess == NULL) return;
@@ -207,7 +209,7 @@ implementation
   	}
   	
   	
-  	void sendData(uint16_t data, uint16_t source, uint64_t elapsed_time){
+  	void sendData(uint16_t data, uint16_t source, uint32_t elapsed_time){
   		if (!locked){
 	  		Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));  
 			if (mess == NULL) return;
