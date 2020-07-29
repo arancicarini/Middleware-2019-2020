@@ -1,0 +1,482 @@
+DEBUG FILE
+
+Adding debug channels:
+
+Activate debug message on channel init
+Activate debug message on channel boot
+Activate debug message on channel sink
+Activate debug message on channel radio
+Activate debug message on channel timer
+Activate debug message on channel data
+Activate debug message on channel error
+Activate debug message on channel treshold
+
+Creating nodes:
+
+Creating node: 1
+Creating node: 2
+Creating node: 3
+Creating node: 4
+Creating node: 5
+Creating node: 6
+Creating node: 7
+Creating node: 8
+Creating node: 9
+Creating node: 10
+Creating node: 11
+Creating node: 12
+Creating node: 13
+Creating node: 14
+Creating node: 15
+Creating node: 16
+Creating node: 17
+Creating node: 18
+Creating node: 19
+Creating node: 20
+Creating node: 21
+Creating node: 22
+Creating node: 23
+Creating node: 24
+Creating node: 25
+Creating node: 26
+Creating node: 27
+Creating node: 28
+Creating node: 29
+Creating node: 30
+Creating node: 31
+
+Creating radio channels:
+
+Setting radio channel from node: 1 to node:2,with gain:-60.0dBm
+Setting radio channel from node: 2 to node:1,with gain:-60.0dBm
+Setting radio channel from node: 1 to node:3,with gain:-60.0dBm
+Setting radio channel from node: 3 to node:1,with gain:-60.0dBm
+Setting radio channel from node: 2 to node:4,with gain:-60.0dBm
+Setting radio channel from node: 4 to node:2,with gain:-60.0dBm
+Setting radio channel from node: 2 to node:5,with gain:-60.0dBm
+Setting radio channel from node: 5 to node:2,with gain:-60.0dBm
+Setting radio channel from node: 3 to node:6,with gain:-60.0dBm
+Setting radio channel from node: 6 to node:3,with gain:-60.0dBm
+Setting radio channel from node: 3 to node:7,with gain:-60.0dBm
+Setting radio channel from node: 7 to node:3,with gain:-60.0dBm
+Setting radio channel from node: 4 to node:8,with gain:-60.0dBm
+Setting radio channel from node: 8 to node:4,with gain:-60.0dBm
+Setting radio channel from node: 4 to node:9,with gain:-60.0dBm
+Setting radio channel from node: 9 to node:4,with gain:-60.0dBm
+Setting radio channel from node: 5 to node:10,with gain:-60.0dBm
+Setting radio channel from node: 10 to node:5,with gain:-60.0dBm
+Setting radio channel from node: 5 to node:11,with gain:-60.0dBm
+Setting radio channel from node: 11 to node:5,with gain:-60.0dBm
+Setting radio channel from node: 6 to node:12,with gain:-60.0dBm
+Setting radio channel from node: 12 to node:6,with gain:-60.0dBm
+Setting radio channel from node: 6 to node:13,with gain:-60.0dBm
+Setting radio channel from node: 13 to node:6,with gain:-60.0dBm
+Setting radio channel from node: 7 to node:14,with gain:-60.0dBm
+Setting radio channel from node: 14 to node:7,with gain:-60.0dBm
+Setting radio channel from node: 7 to node:15,with gain:-60.0dBm
+Setting radio channel from node: 15 to node:7,with gain:-60.0dBm
+Setting radio channel from node: 8 to node:16,with gain:-60.0dBm
+Setting radio channel from node: 16 to node:8,with gain:-60.0dBm
+Setting radio channel from node: 8 to node:17,with gain:-60.0dBm
+Setting radio channel from node: 17 to node:8,with gain:-60.0dBm
+Setting radio channel from node: 9 to node:18,with gain:-60.0dBm
+Setting radio channel from node: 18 to node:9,with gain:-60.0dBm
+Setting radio channel from node: 9 to node:19,with gain:-60.0dBm
+Setting radio channel from node: 19 to node:9,with gain:-60.0dBm
+Setting radio channel from node: 10 to node:20,with gain:-60.0dBm
+Setting radio channel from node: 20 to node:10,with gain:-60.0dBm
+Setting radio channel from node: 10 to node:21,with gain:-60.0dBm
+Setting radio channel from node: 21 to node:10,with gain:-60.0dBm
+Setting radio channel from node: 11 to node:22,with gain:-60.0dBm
+Setting radio channel from node: 22 to node:11,with gain:-60.0dBm
+Setting radio channel from node: 11 to node:23,with gain:-60.0dBm
+Setting radio channel from node: 23 to node:11,with gain:-60.0dBm
+Setting radio channel from node: 12 to node:24,with gain:-60.0dBm
+Setting radio channel from node: 24 to node:12,with gain:-60.0dBm
+Setting radio channel from node: 12 to node:25,with gain:-60.0dBm
+Setting radio channel from node: 25 to node:12,with gain:-60.0dBm
+Setting radio channel from node: 13 to node:26,with gain:-60.0dBm
+Setting radio channel from node: 26 to node:13,with gain:-60.0dBm
+Setting radio channel from node: 13 to node:27,with gain:-60.0dBm
+Setting radio channel from node: 27 to node:13,with gain:-60.0dBm
+Setting radio channel from node: 14 to node:28,with gain:-60.0dBm
+Setting radio channel from node: 28 to node:14,with gain:-60.0dBm
+Setting radio channel from node: 14 to node:29,with gain:-60.0dBm
+Setting radio channel from node: 29 to node:14,with gain:-60.0dBm
+Setting radio channel from node: 15 to node:30,with gain:-60.0dBm
+Setting radio channel from node: 30 to node:15,with gain:-60.0dBm
+Setting radio channel from node: 15 to node:31,with gain:-60.0dBm
+Setting radio channel from node: 31 to node:15,with gain:-60.0dBm
+
+Initializing Closest Pattern Matching (CPM):
+
+Creating noise model for node:1
+Creating noise model for node:2
+Creating noise model for node:3
+Creating noise model for node:4
+Creating noise model for node:5
+Creating noise model for node:6
+Creating noise model for node:7
+Creating noise model for node:8
+Creating noise model for node:9
+Creating noise model for node:10
+Creating noise model for node:11
+Creating noise model for node:12
+Creating noise model for node:13
+Creating noise model for node:14
+Creating noise model for node:15
+Creating noise model for node:16
+Creating noise model for node:17
+Creating noise model for node:18
+Creating noise model for node:19
+Creating noise model for node:20
+Creating noise model for node:21
+Creating noise model for node:22
+Creating noise model for node:23
+Creating noise model for node:24
+Creating noise model for node:25
+Creating noise model for node:26
+Creating noise model for node:27
+Creating noise model for node:28
+Creating noise model for node:29
+Creating noise model for node:30
+Creating noise model for node:31
+
+Start simulation with TOSSIM!
+
+DEBUG (12): Booting ... I'm node : 12, Radio started at time: 0:0:1.000000010 
+DEBUG (30): Booting ... I'm node : 30, Radio started at time: 0:0:1.000000010 
+DEBUG (31): Booting ... I'm node : 31, Radio started at time: 0:0:1.000000010 
+DEBUG (24): Booting ... I'm node : 24, Radio started at time: 0:0:1.000000010 
+DEBUG (1): Booting ... I'm node : 1, Radio started at time: 0:0:1.000000010 
+DEBUG (15): Booting ... I'm node : 15, Radio started at time: 0:0:1.000000010 
+DEBUG (3): Booting ... I'm node : 3, Radio started at time: 0:0:1.000000010 
+DEBUG (7): Booting ... I'm node : 7, Radio started at time: 0:0:1.000000010 
+DEBUG (26): Booting ... I'm node : 26, Radio started at time: 0:0:1.000000010 
+DEBUG (28): Booting ... I'm node : 28, Radio started at time: 0:0:1.000000010 
+DEBUG (14): Booting ... I'm node : 14, Radio started at time: 0:0:1.000000010 
+DEBUG (29): Booting ... I'm node : 29, Radio started at time: 0:0:1.000000010 
+DEBUG (27): Booting ... I'm node : 27, Radio started at time: 0:0:1.000000010 
+DEBUG (6): Booting ... I'm node : 6, Radio started at time: 0:0:1.000000010 
+DEBUG (13): Booting ... I'm node : 13, Radio started at time: 0:0:1.000000010 
+DEBUG (25): Booting ... I'm node : 25, Radio started at time: 0:0:1.000000010 
+DEBUG (8): Booting ... I'm node : 8, Radio started at time: 0:0:1.000000010 
+DEBUG (17): Booting ... I'm node : 17, Radio started at time: 0:0:1.000000010 
+DEBUG (16): Booting ... I'm node : 16, Radio started at time: 0:0:1.000000010 
+DEBUG (4): Booting ... I'm node : 4, Radio started at time: 0:0:1.000000010 
+DEBUG (19): Booting ... I'm node : 19, Radio started at time: 0:0:1.000000010 
+DEBUG (18): Booting ... I'm node : 18, Radio started at time: 0:0:1.000000010 
+DEBUG (9): Booting ... I'm node : 9, Radio started at time: 0:0:1.000000010 
+DEBUG (21): Booting ... I'm node : 21, Radio started at time: 0:0:1.000000010 
+DEBUG (20): Booting ... I'm node : 20, Radio started at time: 0:0:1.000000010 
+DEBUG (10): Booting ... I'm node : 10, Radio started at time: 0:0:1.000000010 
+DEBUG (22): Booting ... I'm node : 22, Radio started at time: 0:0:1.000000010 
+DEBUG (23): Booting ... I'm node : 23, Radio started at time: 0:0:1.000000010 
+DEBUG (11): Booting ... I'm node : 11, Radio started at time: 0:0:1.000000010 
+DEBUG (5): Booting ... I'm node : 5, Radio started at time: 0:0:1.000000010 
+DEBUG (2): Booting ... I'm node : 2, Radio started at time: 0:0:1.000000010 
+
+DEBUG (18): Data timer fired at 0:0:1.976562510.
+
+DEBUG (9): Data timer fired at 0:0:1.976562510.
+
+DEBUG (26): Data timer fired at 0:0:1.976562510.
+
+DEBUG (27): Data timer fired at 0:0:1.976562510.
+
+DEBUG (25): Data timer fired at 0:0:1.976562510.
+
+DEBUG (13): Data timer fired at 0:0:1.976562510.
+
+DEBUG (7): Data timer fired at 0:0:1.976562510.
+
+DEBUG (14): Data timer fired at 0:0:1.976562510.
+
+DEBUG (16): Data timer fired at 0:0:1.976562510.
+
+DEBUG (15): Data timer fired at 0:0:1.976562510.
+
+DEBUG (31): Data timer fired at 0:0:1.976562510.
+
+DEBUG (28): Data timer fired at 0:0:1.976562510.
+
+DEBUG (21): Data timer fired at 0:0:1.976562510.
+
+DEBUG (20): Data timer fired at 0:0:1.976562510.
+
+DEBUG (24): Data timer fired at 0:0:1.976562510.
+
+DEBUG (4): Data timer fired at 0:0:1.976562510.
+
+DEBUG (19): Data timer fired at 0:0:1.976562510.
+
+DEBUG (8): Data timer fired at 0:0:1.976562510.
+
+DEBUG (5): Data timer fired at 0:0:1.976562510.
+
+DEBUG (12): Data timer fired at 0:0:1.976562510.
+
+DEBUG (2): Data timer fired at 0:0:1.976562510.
+
+DEBUG (17): Data timer fired at 0:0:1.976562510.
+
+DEBUG (22): Data timer fired at 0:0:1.976562510.
+
+DEBUG (29): Data timer fired at 0:0:1.976562510.
+
+DEBUG (30): Data timer fired at 0:0:1.976562510.
+
+DEBUG (11): Data timer fired at 0:0:1.976562510.
+
+DEBUG (23): Data timer fired at 0:0:1.976562510.
+
+DEBUG (3): Data timer fired at 0:0:1.976562510.
+
+DEBUG (10): Data timer fired at 0:0:1.976562510.
+
+DEBUG (6): Data timer fired at 0:0:1.976562510.
+
+DEBUG (17): Data timer fired at 0:0:2.953125010.
+
+DEBUG (18): Data timer fired at 0:0:2.953125010.
+
+DEBUG (26): Data timer fired at 0:0:2.953125010.
+
+DEBUG (15): Data timer fired at 0:0:2.953125010.
+
+DEBUG (31): Data timer fired at 0:0:2.953125010.
+
+DEBUG (6): Data timer fired at 0:0:2.953125010.
+
+DEBUG (30): Data timer fired at 0:0:2.953125010.
+
+DEBUG (22): Data timer fired at 0:0:2.953125010.
+
+DEBUG (1): Treshold timer fired at 0:0:2.953125010.
+
+DEBUG (21): Data timer fired at 0:0:2.953125010.
+
+DEBUG (11): Data timer fired at 0:0:2.953125010.
+
+DEBUG (9): Data timer fired at 0:0:2.953125010.
+
+DEBUG (20): Data timer fired at 0:0:2.953125010.
+
+DEBUG (2): Data timer fired at 0:0:2.953125010.
+
+DEBUG (23): Data timer fired at 0:0:2.953125010.
+
+DEBUG (28): Data timer fired at 0:0:2.953125010.
+
+DEBUG (12): Data timer fired at 0:0:2.953125010.
+
+DEBUG (3): Data timer fired at 0:0:2.953125010.
+
+DEBUG (27): Data timer fired at 0:0:2.953125010.
+
+DEBUG (29): Data timer fired at 0:0:2.953125010.
+
+DEBUG (10): Data timer fired at 0:0:2.953125010.
+
+DEBUG (8): Data timer fired at 0:0:2.953125010.
+
+DEBUG (14): Data timer fired at 0:0:2.953125010.
+
+DEBUG (25): Data timer fired at 0:0:2.953125010.
+
+DEBUG (5): Data timer fired at 0:0:2.953125010.
+
+DEBUG (16): Data timer fired at 0:0:2.953125010.
+
+DEBUG (4): Data timer fired at 0:0:2.953125010.
+
+DEBUG (19): Data timer fired at 0:0:2.953125010.
+
+DEBUG (13): Data timer fired at 0:0:2.953125010.
+
+DEBUG (24): Data timer fired at 0:0:2.953125010.
+
+DEBUG (7): Data timer fired at 0:0:2.953125010.
+
+DEBUG (1): Sink just read new treshold 33614
+
+DEBUG (1): Packet sent from: 1, data: 33614, type: 1
+ elapsed time: 
+DEBUG (3): Mote 3 has received a treshold message with treshold 33614 from mote 1
+
+DEBUG (3): Packet sent from: 3, data: 33614, type: 1
+ elapsed time: 
+DEBUG (2): Mote 2 has received a treshold message with treshold 33614 from mote 1
+
+DEBUG (2): Packet sent from: 2, data: 33614, type: 1
+ elapsed time: 
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (7): Mote 7 has received a treshold message with treshold 33614 from mote 3
+
+DEBUG (7): Packet sent from: 7, data: 33614, type: 1
+ elapsed time: 
+DEBUG (6): Mote 6 has received a treshold message with treshold 33614 from mote 3
+
+DEBUG (6): Packet sent from: 6, data: 33614, type: 1
+ elapsed time: 
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (5): Mote 5 has received a treshold message with treshold 33614 from mote 2
+
+DEBUG (5): Packet sent from: 5, data: 33614, type: 1
+ elapsed time: 
+DEBUG (4): Mote 4 has received a treshold message with treshold 33614 from mote 2
+
+DEBUG (4): Packet sent from: 4, data: 33614, type: 1
+ elapsed time: 
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (14): Mote 14 has received a treshold message with treshold 33614 from mote 7
+
+DEBUG (14): Packet sent from: 14, data: 33614, type: 1
+ elapsed time: 
+DEBUG (15): Mote 15 has received a treshold message with treshold 33614 from mote 7
+
+DEBUG (15): Packet sent from: 15, data: 33614, type: 1
+ elapsed time: 
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (13): Mote 13 has received a treshold message with treshold 33614 from mote 6
+
+DEBUG (13): Packet sent from: 13, data: 33614, type: 1
+ elapsed time: 
+DEBUG (12): Mote 12 has received a treshold message with treshold 33614 from mote 6
+
+DEBUG (12): Packet sent from: 12, data: 33614, type: 1
+ elapsed time: 
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (11): Mote 11 has received a treshold message with treshold 33614 from mote 5
+
+DEBUG (11): Packet sent from: 11, data: 33614, type: 1
+ elapsed time: 
+DEBUG (10): Mote 10 has received a treshold message with treshold 33614 from mote 5
+
+DEBUG (10): Packet sent from: 10, data: 33614, type: 1
+ elapsed time: 
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (27): Mote 27 has received a treshold message with treshold 33614 from mote 13
+
+DEBUG (27): Packet sent from: 27, data: 33614, type: 1
+ elapsed time: 
+DEBUG (26): Mote 26 has received a treshold message with treshold 33614 from mote 13
+
+DEBUG (26): Packet sent from: 26, data: 33614, type: 1
+ elapsed time: 
+DEBUG (13): Error in sending packet, send the request again
+
+DEBUG (31): Mote 31 has received a treshold message with treshold 33614 from mote 15
+
+DEBUG (31): Packet sent from: 31, data: 33614, type: 1
+ elapsed time: 
+DEBUG (30): Mote 30 has received a treshold message with treshold 33614 from mote 15
+
+DEBUG (30): Packet sent from: 30, data: 33614, type: 1
+ elapsed time: 
+DEBUG (15): Error in sending packet, send the request again
+
+DEBUG (29): Mote 29 has received a treshold message with treshold 33614 from mote 14
+
+DEBUG (29): Packet sent from: 29, data: 33614, type: 1
+ elapsed time: 
+DEBUG (28): Mote 28 has received a treshold message with treshold 33614 from mote 14
+
+DEBUG (28): Packet sent from: 28, data: 33614, type: 1
+ elapsed time: 
+DEBUG (9): Mote 9 has received a treshold message with treshold 33614 from mote 4
+
+DEBUG (9): Packet sent from: 9, data: 33614, type: 1
+ elapsed time: 
+DEBUG (8): Mote 8 has received a treshold message with treshold 33614 from mote 4
+
+DEBUG (8): Packet sent from: 8, data: 33614, type: 1
+ elapsed time: 
+DEBUG (14): Error in sending packet, send the request again
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (25): Mote 25 has received a treshold message with treshold 33614 from mote 12
+
+DEBUG (25): Packet sent from: 25, data: 33614, type: 1
+ elapsed time: 
+DEBUG (24): Mote 24 has received a treshold message with treshold 33614 from mote 12
+
+DEBUG (24): Packet sent from: 24, data: 33614, type: 1
+ elapsed time: 
+DEBUG (12): Error in sending packet, send the request again
+
+DEBUG (20): Mote 20 has received a treshold message with treshold 33614 from mote 10
+
+DEBUG (20): Packet sent from: 20, data: 33614, type: 1
+ elapsed time: 
+DEBUG (21): Mote 21 has received a treshold message with treshold 33614 from mote 10
+
+DEBUG (21): Packet sent from: 21, data: 33614, type: 1
+ elapsed time: 
+DEBUG (10): Error in sending packet, send the request again
+
+DEBUG (16): Mote 16 has received a treshold message with treshold 33614 from mote 8
+
+DEBUG (16): Packet sent from: 16, data: 33614, type: 1
+ elapsed time: 
+DEBUG (17): Mote 17 has received a treshold message with treshold 33614 from mote 8
+
+DEBUG (17): Packet sent from: 17, data: 33614, type: 1
+ elapsed time: 
+DEBUG (31): Error in sending packet, send the request again
+
+DEBUG (8): Error in sending packet, send the request again
+
+DEBUG (22): Mote 22 has received a treshold message with treshold 33614 from mote 11
+
+DEBUG (22): Packet sent from: 22, data: 33614, type: 1
+ elapsed time: 
+DEBUG (11): Error in sending packet, send the request again
+
+DEBUG (29): Error in sending packet, send the request again
+
+DEBUG (21): Error in sending packet, send the request again
+
+DEBUG (30): Error in sending packet, send the request again
+
+DEBUG (25): Error in sending packet, send the request again
+
+DEBUG (26): Error in sending packet, send the request again
+
+DEBUG (28): Error in sending packet, send the request again
+
+DEBUG (19): Mote 19 has received a treshold message with treshold 33614 from mote 9
+
+DEBUG (19): Packet sent from: 19, data: 33614, type: 1
+ elapsed time: 
+DEBUG (18): Mote 18 has received a treshold message with treshold 33614 from mote 9
+
+DEBUG (18): Packet sent from: 18, data: 33614, type: 1
+ elapsed time: 
+DEBUG (9): Error in sending packet, send the request again
+
+DEBUG (24): Error in sending packet, send the request again
+
+DEBUG (27): Error in sending packet, send the request again
+
+DEBUG (22): Error in sending packet, send the request again
+
+DEBUG (20): Error in sending packet, send the request again
+
+DEBUG (17): Error in sending packet, send the request again
+
+DEBUG (16): Error in sending packet, send the request again
+
+DEBUG (18): Error in sending packet, send the request again
+
+DEBUG (19): Error in sending packet, send the request again
+
+
+Simulation finished!

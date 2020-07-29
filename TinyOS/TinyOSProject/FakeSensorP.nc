@@ -7,7 +7,7 @@
  
 generic module FakeSensorP() {
 
-	provides interface Read<uint16_t>;
+	provides interface Read<uint32_t>;
 	
 	uses interface Random;
 	uses interface Timer<TMilli> as Timer0;
@@ -22,6 +22,6 @@ generic module FakeSensorP() {
 
 	//***************** Timer0 interface ********************//
 	event void Timer0.fired() {
-		signal Read.readDone( SUCCESS, call Random.rand16() );
+		signal Read.readDone( SUCCESS, call Random.rand32() );
 	}
 }

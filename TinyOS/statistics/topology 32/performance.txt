@@ -1,0 +1,89 @@
+Activate debug message on channel analysis
+
+
+DEBUG (3): Time for treshold 33614 message from sink to 3 is : 68664150 ms
+DEBUG (3): current simulation time: 0:0:2.969757050
+
+DEBUG (2): Time for treshold 33614 message from sink to 2 is : 68664150 ms
+DEBUG (2): current simulation time: 0:0:2.969757050
+
+DEBUG (7): Time for treshold 33614 message from sink to 7 is : 96129810 ms
+DEBUG (7): current simulation time: 0:0:2.972503616
+
+DEBUG (6): Time for treshold 33614 message from sink to 6 is : 96129810 ms
+DEBUG (6): current simulation time: 0:0:2.972503616
+
+DEBUG (5): Time for treshold 33614 message from sink to 5 is : 122832535 ms
+DEBUG (5): current simulation time: 0:0:2.975173888
+
+DEBUG (4): Time for treshold 33614 message from sink to 4 is : 122832535 ms
+DEBUG (4): current simulation time: 0:0:2.975173888
+
+DEBUG (14): Time for treshold 33614 message from sink to 14 is : 128325667 ms
+DEBUG (14): current simulation time: 0:0:2.975723201
+
+DEBUG (15): Time for treshold 33614 message from sink to 15 is : 128325667 ms
+DEBUG (15): current simulation time: 0:0:2.975723201
+
+DEBUG (13): Time for treshold 33614 message from sink to 13 is : 146330933 ms
+DEBUG (13): current simulation time: 0:0:2.977523728
+
+DEBUG (12): Time for treshold 33614 message from sink to 12 is : 146330933 ms
+DEBUG (12): current simulation time: 0:0:2.977523728
+
+DEBUG (11): Time for treshold 33614 message from sink to 11 is : 158537893 ms
+DEBUG (11): current simulation time: 0:0:2.978744424
+
+DEBUG (10): Time for treshold 33614 message from sink to 10 is : 158537893 ms
+DEBUG (10): current simulation time: 0:0:2.978744424
+
+DEBUG (27): Time for treshold 33614 message from sink to 27 is : 167540526 ms
+DEBUG (27): current simulation time: 0:0:2.979644687
+
+DEBUG (26): Time for treshold 33614 message from sink to 26 is : 167540526 ms
+DEBUG (26): current simulation time: 0:0:2.979644687
+
+DEBUG (31): Time for treshold 33614 message from sink to 31 is : 172881071 ms
+DEBUG (31): current simulation time: 0:0:2.980178742
+
+DEBUG (30): Time for treshold 33614 message from sink to 30 is : 172881071 ms
+DEBUG (30): current simulation time: 0:0:2.980178742
+
+DEBUG (29): Time for treshold 33614 message from sink to 29 is : 189055293 ms
+DEBUG (29): current simulation time: 0:0:2.981796164
+
+DEBUG (28): Time for treshold 33614 message from sink to 28 is : 189055293 ms
+DEBUG (28): current simulation time: 0:0:2.981796164
+
+DEBUG (9): Time for treshold 33614 message from sink to 9 is : 190275989 ms
+DEBUG (9): current simulation time: 0:0:2.981918233
+
+DEBUG (8): Time for treshold 33614 message from sink to 8 is : 190275989 ms
+DEBUG (8): current simulation time: 0:0:2.981918233
+
+DEBUG (25): Time for treshold 33614 message from sink to 25 is : 209654538 ms
+DEBUG (25): current simulation time: 0:0:2.983856088
+
+DEBUG (24): Time for treshold 33614 message from sink to 24 is : 209654538 ms
+DEBUG (24): current simulation time: 0:0:2.983856088
+
+DEBUG (20): Time for treshold 33614 message from sink to 20 is : 215147670 ms
+DEBUG (20): current simulation time: 0:0:2.984405402
+
+DEBUG (21): Time for treshold 33614 message from sink to 21 is : 215147670 ms
+DEBUG (21): current simulation time: 0:0:2.984405402
+
+DEBUG (16): Time for treshold 33614 message from sink to 16 is : 218962345 ms
+DEBUG (16): current simulation time: 0:0:2.984786869
+
+DEBUG (17): Time for treshold 33614 message from sink to 17 is : 218962345 ms
+DEBUG (17): current simulation time: 0:0:2.984786869
+
+DEBUG (22): Time for treshold 33614 message from sink to 22 is : 226896869 ms
+DEBUG (22): current simulation time: 0:0:2.985580321
+
+DEBUG (19): Time for treshold 33614 message from sink to 19 is : 286405799 ms
+DEBUG (19): current simulation time: 0:0:2.991531214
+
+DEBUG (18): Time for treshold 33614 message from sink to 18 is : 286405799 ms
+DEBUG (18): current simulation time: 0:0:2.991531214
