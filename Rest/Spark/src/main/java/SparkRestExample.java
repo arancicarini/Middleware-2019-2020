@@ -7,30 +7,55 @@ import static spark.Spark.put;
 import com.google.gson.Gson;
 import com.google.gson.JsonParser;
 
+import java.io.FileReader;
+import java.io.IOException;
+import java.util.Hashtable;
+import java.util.Scanner;
+
 public class SparkRestExample {
-    static int counter=1;
 
     public static void main(String[] args) {
         final UserService userService = new ServiceImplementation();
         final ImageService imageService = new ServiceImplementation();
+/****************************  authentication methods **********************************************/
 
-        post("/users", (request, response) -> {
+        post("/register", (request, response) -> {
             response.type("application/json");
 
             User user = new Gson().fromJson(request.body(), User.class);
-            synchronized(SparkRestExample.class){
-                user.setId(counter);
-                counter++;
+            try {
+                Integer userId = userService.registerUser(user);
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS,new JsonParser().parse("{\"ID\": \""+String.valueOf(userId)+"\"}")));
+            }catch (UserException e){
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing required parameters")));
             }
-            userService.addUser(user);
 
-            return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS,new JsonParser().parse("{\"ID\": \""+String.valueOf(user.getId()+"\"}"))));
         });
+
+        post("/login", (request, response) -> {
+            User user = new Gson().fromJson(request.body(), User.class);
+            try {
+                String token  = userService.login(user);
+                response.cookie("ImageServerToken", token);
+                response.cookie("ImageServerUsername", user.getUsername());
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS));
+            }catch (UserException e){
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing required parameters")));
+            }
+        });
+
+/**************************************************************************/
 
         get("/users", (request, response) -> {
             response.type("application/json");
-
-            return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(userService.getUsers())));
+            try{
+                String token = request.cookie("ImageServerToken");
+                String username = request.cookie("ImageServerUsername");
+                userService.authenticate(token, username);
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(userService.getUsers())));
+            }catch (UserException e){
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Invalid token")));
+            }
         });
 
         get("/users/:id", (request, response) -> {
@@ -91,5 +116,6 @@ public class SparkRestExample {
 
 
     }
+
 
 }

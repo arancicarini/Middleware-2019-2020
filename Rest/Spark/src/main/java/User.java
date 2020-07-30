@@ -50,4 +50,14 @@ class User {
     public Collection<Image> getAllImages(){
         return this.images.values();
     }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (! (obj instanceof User)) return false;
+        User user = (User) obj;
+        if (user.getUsername().equals(this.username) && user.getPassword().equals(this.password)){
+            return true;
+        }
+        return false;
+    }
 }

@@ -1,12 +1,15 @@
+
+
+
 import java.util.Collection;
 
 public interface UserService {
 
-    public void addUser (User user);
+    public Integer registerUser(User user) throws UserException;
 
-    public void registerUser(User user);
+    public String login(User user) throws UserException;
 
-    public void login(User user);
+    public void authenticate (String token, String username) throws UserException;
 
     public Collection<User> getUsers ();
     public User getUser (int id);
