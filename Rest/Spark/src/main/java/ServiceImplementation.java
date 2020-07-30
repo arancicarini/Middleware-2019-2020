@@ -40,6 +40,7 @@ public class ServiceImplementation implements UserService, ImageService {
         if ( user.getPassword() == null || user.getUsername() == null ){
             throw new UserException();
         }
+
         String hash = produceSHA1(user.getPassword());
         user.setPassword(hash);
         List<User> list = new LinkedList<>(userMap.values());
@@ -54,8 +55,10 @@ public class ServiceImplementation implements UserService, ImageService {
     @Override
     public void authenticate (String token, String username) throws UserException{
         String secret = readSecret();
+
+        String required = secret.concat(username);
         try {
-            JWTVerifier verifier = JWT.require(Algorithm.HMAC256(secret + username))
+            JWTVerifier verifier = JWT.require(Algorithm.HMAC256(required))
                     .withIssuer("auth0")
                     .build(); //Reusable verifier instance
             DecodedJWT jwt = verifier.verify(token);
@@ -190,8 +193,9 @@ public class ServiceImplementation implements UserService, ImageService {
     private static String createToken(String username){
         String secret = readSecret();
         String token = "default_token" + username;
+        String required = secret.concat(username);
         try {
-            Algorithm algorithm = Algorithm.HMAC256(secret + username);
+            Algorithm algorithm = Algorithm.HMAC256(required);
             token = JWT.create()
                     .withIssuer("auth0")
                     .withExpiresAt(new Date(System.currentTimeMillis() + (600 * 1000)))

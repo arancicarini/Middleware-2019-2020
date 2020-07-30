@@ -63,7 +63,7 @@ public class SparkRestExample {
                 String token  = userService.login(user);
                 response.cookie("ImageServerToken", token);
                 response.cookie("ImageServerUsername", user.getUsername());
-                System.out.println(token);
+
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing required parameters")));
