@@ -1,12 +1,11 @@
 
-
 import java.util.Collection;
 
 public interface ImageService {
 
-    public void addImage(Image image, Integer userID);
+    public String addImage(Image image, int userID);
 
-    public void deleteImage(Image image, Integer userID);
+    public void deleteImage(String key, Integer userID);
 
     public Collection<Image> getUserImages(Integer userID);
 

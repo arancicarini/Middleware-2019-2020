@@ -15,6 +15,7 @@ import java.util.*;
 public class ServiceImplementation implements UserService, ImageService {
     private HashMap<Integer, User> userMap;
     private int counter=1;
+    private final HashMap<Integer, User> userMap;
 
     public ServiceImplementation() {
         userMap = new HashMap<>();
@@ -67,8 +68,6 @@ public class ServiceImplementation implements UserService, ImageService {
         }
     }
 
-
-
     @Override
     public Collection<User> getUsers() {
         List<User> users = new LinkedList<>(userMap.values());
@@ -116,17 +115,20 @@ public class ServiceImplementation implements UserService, ImageService {
     }
 
     @Override
-    public void addImage(Image image, Integer userID) {
+    public String addImage(Image image, int userID) {
+        image.setKey("AAA");
         userMap.get(userID).addImage(image);
+        return image.getKey();
     }
 
     @Override
-    public void deleteImage(Image image, Integer userID) {
-        userMap.get(userID).deleteImage(image.getKey());
+    public void deleteImage(String key, Integer userID) {
+        userMap.get(userID).deleteImage(key);
     }
 
     @Override
     public Collection<Image> getUserImages(Integer userID) {
+        System.out.println(userMap.get(userID).getAllImages());
         return userMap.get(userID).getAllImages();
     }
 
