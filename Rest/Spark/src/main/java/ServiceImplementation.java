@@ -2,7 +2,7 @@ import java.util.Collection;
 import java.util.HashMap;
 
 public class ServiceImplementation implements UserService, ImageService {
-    private HashMap<Integer, User> userMap;
+    private final HashMap<Integer, User> userMap;
 
     public ServiceImplementation() {
         userMap = new HashMap<>();
@@ -44,9 +44,9 @@ public class ServiceImplementation implements UserService, ImageService {
             if (toEdit == null)
                 throw new UserException("User not found");
 
-            if (forEdit.getUsername() != null) {
+            /**if (forEdit.getUsername() != null) {
                 toEdit.setUsername(forEdit.getUsername());
-            }
+            }**/
 
             if (forEdit.getId() != null) {
                 toEdit.setId(forEdit.getId());
@@ -69,17 +69,20 @@ public class ServiceImplementation implements UserService, ImageService {
     }
 
     @Override
-    public void addImage(Image image, Integer userID) {
+    public String addImage(Image image, int userID) {
+        image.setKey("AAA");
         userMap.get(userID).addImage(image);
+        return image.getKey();
     }
 
     @Override
-    public void deleteImage(Image image, Integer userID) {
-        userMap.get(userID).deleteImage(image.getKey());
+    public void deleteImage(String key, Integer userID) {
+        userMap.get(userID).deleteImage(key);
     }
 
     @Override
     public Collection<Image> getUserImages(Integer userID) {
+        System.out.println(userMap.get(userID).getAllImages());
         return userMap.get(userID).getAllImages();
     }
 

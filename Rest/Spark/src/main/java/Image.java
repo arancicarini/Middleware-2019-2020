@@ -1,12 +1,20 @@
+import com.google.gson.Gson;
+
+import java.nio.file.Path;
+
 public class Image {
     private String key;
     private String title;
-    private String path;
+    private Path path;
 
-    public Image(String key, String title, String path){
-        this.key=key;
-        this.title=title;
+
+    public Image(String imageName, Path path) {
+        this.title=imageName;
         this.path= path;
+    }
+
+    public Image(String name) {
+        this.title=name;
     }
 
     public String getKey() {
@@ -17,7 +25,7 @@ public class Image {
         return title;
     }
 
-    public String getPath() {
+    public Path getPath() {
         return path;
     }
 
@@ -29,8 +37,17 @@ public class Image {
         this.title = title;
     }
 
-    public void setPath(String path) {
+    public void setPath(Path path) {
         this.path = path;
+    }
+
+    @Override
+    public String toString() {
+        return "Image{" +
+                "key='" + key + '\'' +
+                ", title='" + title + '\'' +
+                ", http://127.0.0.1:4567/images/" + key +
+                '}';
     }
 }
 
