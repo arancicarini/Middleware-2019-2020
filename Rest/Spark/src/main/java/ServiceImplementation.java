@@ -13,9 +13,8 @@ import java.security.NoSuchAlgorithmException;
 import java.util.*;
 
 public class ServiceImplementation implements UserService, ImageService {
-    private HashMap<Integer, User> userMap;
-    private int counter=1;
     private final HashMap<Integer, User> userMap;
+    private int counter=1;
 
     public ServiceImplementation() {
         userMap = new HashMap<>();
@@ -195,7 +194,7 @@ public class ServiceImplementation implements UserService, ImageService {
             Algorithm algorithm = Algorithm.HMAC256(secret + username);
             token = JWT.create()
                     .withIssuer("auth0")
-                    .withExpiresAt(new Date(System.currentTimeMillis() + (60 * 1000)))
+                    .withExpiresAt(new Date(System.currentTimeMillis() + (600 * 1000)))
                     .sign(algorithm);
         } catch (JWTCreationException exception){
             //Invalid Signing configuration / Couldn't convert Claims.

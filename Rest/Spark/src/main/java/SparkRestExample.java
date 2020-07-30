@@ -1,3 +1,5 @@
+import static java.lang.Integer.parseInt;
+import static javax.imageio.ImageIO.read;
 import static spark.Spark.delete;
 import static spark.Spark.get;
 import static spark.Spark.options;
@@ -33,7 +35,6 @@ import java.util.Hashtable;
 import java.util.Scanner;
 
 public class SparkRestExample {
-    static int counter=1;
     private static String STORAGE = "storage";
     static final ServiceImplementation service= new ServiceImplementation();
     static final UserService userService = service;
@@ -62,6 +63,7 @@ public class SparkRestExample {
                 String token  = userService.login(user);
                 response.cookie("ImageServerToken", token);
                 response.cookie("ImageServerUsername", user.getUsername());
+                System.out.println(token);
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing required parameters")));
@@ -84,67 +86,123 @@ public class SparkRestExample {
 
         get("/users/:id", (request, response) -> {
             response.type("application/json");
-
-            return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(userService.getUser(parseInt(request.params(":id"))))));
+            try{
+                String token = request.cookie("ImageServerToken");
+                String username = request.cookie("ImageServerUsername");
+                userService.authenticate(token, username);
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(userService.getUser(parseInt(request.params(":id"))))));
+            }catch (UserException e){
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Invalid token")));
+            }
         });
 
         put("/users/:id", (request, response) -> {
             response.type("application/json");
-
-            User toEdit = new Gson().fromJson(request.body(), User.class);
-            User editedUser = userService.editUser(toEdit);
-
-            if (editedUser != null) {
-                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(editedUser)));
-            } else {
-                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("User not found or error in edit")));
+            try{
+                String token = request.cookie("ImageServerToken");
+                String username = request.cookie("ImageServerUsername");
+                userService.authenticate(token, username);
+                User toEdit = new Gson().fromJson(request.body(), User.class);
+                User editedUser = userService.editUser(toEdit);
+                if (editedUser != null) {
+                    return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(editedUser)));
+                } else {
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("User not found or error in edit")));
+                }
+            }catch (UserException e){
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Invalid token")));
             }
         });
 
         delete("/users/:id", (request, response) -> {
             response.type("application/json");
-
-            userService.deleteUser(parseInt(request.params(":id")));
-            return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, "user deleted"));
+            try{
+                String token = request.cookie("ImageServerToken");
+                String username = request.cookie("ImageServerUsername");
+                userService.authenticate(token, username);
+                userService.deleteUser(parseInt(request.params(":id")));
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, "user deleted"));
+            }catch (UserException e){
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Invalid token")));
+            }
         });
 
         options("/users/:id", (request, response) -> {
             response.type("application/json");
-
-            return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, (userService.userExist(parseInt(request.params(":id"))) ? "User exists" : "User does not exists")));
+            try{
+                String token = request.cookie("ImageServerToken");
+                String username = request.cookie("ImageServerUsername");
+                userService.authenticate(token, username);
+                userService.deleteUser(parseInt(request.params(":id")));
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, (userService.userExist(parseInt(request.params(":id"))) ? "User exists" : "User does not exists")));
+            }catch (UserException e){
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Invalid token")));
+            }
         });
 
-/**************************************************************************/
+/**************************IMAGE METHODS************************************************/
 
         post("/images/:id", (request, response) -> {
             response.type("application/json");
-            try {
+            try{
+                String token = request.cookie("ImageServerToken");
+                String username = request.cookie("ImageServerUsername");
+                userService.authenticate(token, username);
                 String key = uploadImage(request, parseInt(request.params(":id")));
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS,new JsonParser().parse("{\"KEY\": \""+key+"\"}")));
-            }
-            catch (ImageException e){
-                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR,e.getMessage()));
+            }catch (UserException | ImageException e){
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
             }
         });
 
-        get("/images/:key", SparkRestExample::returnImage);
+        get("/images/:key", (request,response)->{
+            try{
+                String token = request.cookie("ImageServerToken");
+                String username = request.cookie("ImageServerUsername");
+                userService.authenticate(token, username);
+            }catch ( UserException e){
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
+            }
+            return returnImage(request,response);
+        });
 
-        get("/images/download/:key", SparkRestExample::downloadImage);
+        get("/images/download/:key", (request,response)->{
+            try{
+                String token = request.cookie("ImageServerToken");
+                String username = request.cookie("ImageServerUsername");
+                userService.authenticate(token, username);
+            }catch ( UserException e){
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
+            }
+            return downloadImage(request,response);
+        });
 
         get("/images/user/:id", (request, response) -> {
             response.type("application/json");
-            JsonElement list= new Gson().toJsonTree(imageService.getUserImages(parseInt(request.params(":id"))));
-            System.out.println(list);
-            return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, list));
+            try{
+                String token = request.cookie("ImageServerToken");
+                String username = request.cookie("ImageServerUsername");
+                userService.authenticate(token, username);
+                JsonElement list= new Gson().toJsonTree(imageService.getUserImages(parseInt(request.params(":id"))));
+                System.out.println(list);
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, list));
+            }catch (UserException e){
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
+            }
         });
 
         delete("/images/:key/:id", (request, response) -> {
             response.type("application/json");
-            imageService.deleteImage(request.params(":key"), parseInt(request.params(":id")));
-            return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, "image deleted"));
+            try{
+                String token = request.cookie("ImageServerToken");
+                String username = request.cookie("ImageServerUsername");
+                userService.authenticate(token, username);
+                imageService.deleteImage(request.params(":key"), parseInt(request.params(":id")));
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, "image deleted"));
+            }catch (UserException e){
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
+            }
         });
-
-
 
     }
 
