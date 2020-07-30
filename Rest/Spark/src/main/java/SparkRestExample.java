@@ -62,7 +62,7 @@ public class SparkRestExample {
             try {
                 String token  = userService.login(user);
                 response.cookie("ImageServerToken", token);
-                response.cookie("ImageServerUsername", user.getUsername());
+                response.cookie("ImageServerId", String.valueOf(user.getId()));
 
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS));
             }catch (UserException e){
@@ -76,8 +76,12 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String username = request.cookie("ImageServerUsername");
-                userService.authenticate(token, username);
+                String id = request.cookie("ImageServerId");
+                if (token == null || id == null){
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+
+                }
+                userService.authenticate(token, id);
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(userService.getUsers())));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Invalid token")));
@@ -88,11 +92,19 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String username = request.cookie("ImageServerUsername");
-                userService.authenticate(token, username);
-                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(userService.getUser(parseInt(request.params(":id"))))));
+                String id = request.cookie("ImageServerid");
+                if (token == null || id == null){
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+
+                }
+                userService.authenticate(token, id);
+                String id1 = request.params(":id");
+                if (!id.equals(id1)){
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("You cannot spy other people")));
+                }
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(userService.getUser(parseInt(id)))));
             }catch (UserException e){
-                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Invalid token")));
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
             }
         });
 
@@ -100,8 +112,12 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String username = request.cookie("ImageServerUsername");
-                userService.authenticate(token, username);
+                String id = request.cookie("ImageServerid");
+                if (token == null || id == null){
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+
+                }
+                userService.authenticate(token, id);
                 User toEdit = new Gson().fromJson(request.body(), User.class);
                 User editedUser = userService.editUser(toEdit);
                 if (editedUser != null) {
@@ -118,9 +134,17 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String username = request.cookie("ImageServerUsername");
-                userService.authenticate(token, username);
-                userService.deleteUser(parseInt(request.params(":id")));
+                String id = request.cookie("ImageServerid");
+                if (token == null || id == null){
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+
+                }
+                userService.authenticate(token, id);
+                String id1 = request.params(":id");
+                if (!id.equals(id1)){
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("You cannot delete other people accounts!")));
+                }
+                userService.deleteUser(parseInt(id));
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, "user deleted"));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Invalid token")));
@@ -131,8 +155,12 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String username = request.cookie("ImageServerUsername");
-                userService.authenticate(token, username);
+                String id = request.cookie("ImageServerid");
+                if (token == null || id == null){
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+
+                }
+                userService.authenticate(token, id);
                 userService.deleteUser(parseInt(request.params(":id")));
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, (userService.userExist(parseInt(request.params(":id"))) ? "User exists" : "User does not exists")));
             }catch (UserException e){
@@ -146,8 +174,12 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String username = request.cookie("ImageServerUsername");
-                userService.authenticate(token, username);
+                String id = request.cookie("ImageServerid");
+                if (token == null || id == null){
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+
+                }
+                userService.authenticate(token, id);
                 String key = uploadImage(request, parseInt(request.params(":id")));
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS,new JsonParser().parse("{\"KEY\": \""+key+"\"}")));
             }catch (UserException | ImageException e){
@@ -158,8 +190,12 @@ public class SparkRestExample {
         get("/images/:key", (request,response)->{
             try{
                 String token = request.cookie("ImageServerToken");
-                String username = request.cookie("ImageServerUsername");
-                userService.authenticate(token, username);
+                String id = request.cookie("ImageServerid");
+                if (token == null || id == null){
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+
+                }
+                userService.authenticate(token, id);
             }catch ( UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
             }
@@ -169,8 +205,12 @@ public class SparkRestExample {
         get("/images/download/:key", (request,response)->{
             try{
                 String token = request.cookie("ImageServerToken");
-                String username = request.cookie("ImageServerUsername");
-                userService.authenticate(token, username);
+                String id = request.cookie("ImageServerid");
+                if (token == null || id == null){
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+
+                }
+                userService.authenticate(token, id);
             }catch ( UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
             }
@@ -181,8 +221,12 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String username = request.cookie("ImageServerUsername");
-                userService.authenticate(token, username);
+                String id = request.cookie("ImageServerid");
+                if (token == null || id == null){
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+
+                }
+                userService.authenticate(token, id);
                 JsonElement list= new Gson().toJsonTree(imageService.getUserImages(parseInt(request.params(":id"))));
                 System.out.println(list);
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, list));
@@ -195,8 +239,12 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String username = request.cookie("ImageServerUsername");
-                userService.authenticate(token, username);
+                String id = request.cookie("ImageServerid");
+                if (token == null || id == null){
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+
+                }
+                userService.authenticate(token, id);
                 imageService.deleteImage(request.params(":key"), parseInt(request.params(":id")));
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, "image deleted"));
             }catch (UserException e){

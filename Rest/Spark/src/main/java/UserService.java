@@ -11,7 +11,7 @@ public interface UserService {
 
     public void authenticate (String token, String username) throws UserException;
 
-    public Collection<User> getUsers ();
+    public Collection<String> getUsers ();
     public User getUser (int id);
 
     public User editUser (User user)

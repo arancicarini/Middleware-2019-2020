@@ -11,6 +11,8 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
+import java.util.function.Function;
+import java.util.stream.Collectors;
 
 public class ServiceImplementation implements UserService, ImageService {
     private final HashMap<Integer, User> userMap;
@@ -24,6 +26,9 @@ public class ServiceImplementation implements UserService, ImageService {
     public Integer registerUser(User user) throws UserException {
         if ( user.getUsername() == null || user.getPassword() == null){
             throw new UserException();
+        }
+        for (User registeredUser: userMap.values()){
+            if (registeredUser.getUsername().equals(user.getUsername())) throw new UserException("username not available");
         }
         synchronized(ServiceImplementation.class){
             user.setId(counter);
@@ -46,38 +51,41 @@ public class ServiceImplementation implements UserService, ImageService {
         List<User> list = new LinkedList<>(userMap.values());
         boolean userExists = false;
         for ( User registeredUser : list){
-            if (registeredUser.equals(user)) userExists = true ;
+            if (registeredUser.equals(user)) {
+                userExists = true ;
+                user.setId(registeredUser.getId());
+            }
         }
         if (!userExists) throw new UserException();
-        return createToken(user.getUsername());
+        return createToken(String.valueOf(user.getId()));
     }
 
     @Override
-    public void authenticate (String token, String username) throws UserException{
+    public void authenticate (String token, String id) throws UserException{
         String secret = readSecret();
 
-        String required = secret.concat(username);
+        String required = secret.concat(id);
         try {
             JWTVerifier verifier = JWT.require(Algorithm.HMAC256(required))
                     .withIssuer("auth0")
                     .build(); //Reusable verifier instance
             DecodedJWT jwt = verifier.verify(token);
         }catch (TokenExpiredException e){
-            throw new UserException();
+            throw new UserException("token has expired, please login again!");
         } catch (JWTVerificationException exception){
-            throw new UserException();
+            throw new UserException("Token is not valid, please log in!");
             //Invalid signature/claims
         }
     }
 
     @Override
-    public Collection<User> getUsers() {
-        List<User> users = new LinkedList<>(userMap.values());
-        return users;
+    public Collection<String> getUsers() {
+        return userMap.values().stream().map(User::getUsername).collect(Collectors.toList());
     }
 
     @Override
     public User getUser(int id) {
+        //no need to check here the existance, if we have already logged in
         return userMap.get(id);
     }
 
@@ -190,10 +198,10 @@ public class ServiceImplementation implements UserService, ImageService {
         return key;
     }
 
-    private static String createToken(String username){
+    private static String createToken(String id){
         String secret = readSecret();
-        String token = "default_token" + username;
-        String required = secret.concat(username);
+        String token = "default_token" + id;
+        String required = secret.concat(id);
         try {
             Algorithm algorithm = Algorithm.HMAC256(required);
             token = JWT.create()
