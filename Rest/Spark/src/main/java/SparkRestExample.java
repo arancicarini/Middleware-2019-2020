@@ -92,7 +92,7 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String id = request.cookie("ImageServerid");
+                String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
 
@@ -112,7 +112,7 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String id = request.cookie("ImageServerid");
+                String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
 
@@ -134,7 +134,7 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String id = request.cookie("ImageServerid");
+                String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
 
@@ -155,7 +155,7 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String id = request.cookie("ImageServerid");
+                String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
 
@@ -174,7 +174,7 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String id = request.cookie("ImageServerid");
+                String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
 
@@ -190,7 +190,7 @@ public class SparkRestExample {
         get("/images/:key", (request,response)->{
             try{
                 String token = request.cookie("ImageServerToken");
-                String id = request.cookie("ImageServerid");
+                String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
 
@@ -205,7 +205,7 @@ public class SparkRestExample {
         get("/images/download/:key", (request,response)->{
             try{
                 String token = request.cookie("ImageServerToken");
-                String id = request.cookie("ImageServerid");
+                String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
 
@@ -221,7 +221,7 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String id = request.cookie("ImageServerid");
+                String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
 
@@ -239,7 +239,7 @@ public class SparkRestExample {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
-                String id = request.cookie("ImageServerid");
+                String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
 
