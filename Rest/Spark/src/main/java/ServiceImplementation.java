@@ -11,7 +11,6 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 import java.util.*;
-import java.util.function.Function;
 import java.util.stream.Collectors;
 
 public class ServiceImplementation implements UserService, ImageService {
@@ -125,20 +124,17 @@ public class ServiceImplementation implements UserService, ImageService {
     }
 
     @Override
-    public String addImage(Image image, int userID) {
-        image.setKey("AAA");
-        userMap.get(userID).addImage(image);
-        return image.getKey();
+    public Integer addImage(Image image, int userID) {
+        return userMap.get(userID).addImage(image);
     }
 
     @Override
-    public void deleteImage(String key, Integer userID) {
+    public void deleteImage(Integer key, Integer userID) {
         userMap.get(userID).deleteImage(key);
     }
 
     @Override
     public Collection<Image> getUserImages(Integer userID) {
-        System.out.println(userMap.get(userID).getAllImages());
         return userMap.get(userID).getAllImages();
     }
 

@@ -3,9 +3,9 @@ import java.util.Collection;
 
 public interface ImageService {
 
-    public String addImage(Image image, int userID);
+    public Integer addImage(Image image, int userID);
 
-    public void deleteImage(String key, Integer userID);
+    public void deleteImage(Integer key, Integer userID);
 
     public Collection<Image> getUserImages(Integer userID);
 

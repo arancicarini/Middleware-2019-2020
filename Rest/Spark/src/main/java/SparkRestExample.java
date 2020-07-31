@@ -7,8 +7,10 @@ import static spark.Spark.post;
 import static spark.Spark.put;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
+import com.google.gson.reflect.TypeToken;
 import spark.Request;
 import spark.Response;
 
@@ -22,17 +24,13 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
+import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-import java.util.Collection;
-import java.util.ResourceBundle;
-
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Hashtable;
-import java.util.Scanner;
+import java.util.Comparator;
+import java.util.HashMap;
 
 public class SparkRestExample {
     private static String STORAGE = "storage";
@@ -43,13 +41,16 @@ public class SparkRestExample {
 
     public static void main(String[] args) {
 
-
         post("/register", (request, response) -> {
             response.type("application/json");
 
             User user = new Gson().fromJson(request.body(), User.class);
+            user.setImages();
+            user.setCounter(0);
             try {
                 Integer userId = userService.registerUser(user);
+                Path path = Paths.get(STORAGE+"/"+String.valueOf(user.getId()));
+                Files.createDirectories(path);
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS,new JsonParser().parse("{\"ID\": \""+String.valueOf(userId)+"\"}")));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing required parameters")));
@@ -63,7 +64,6 @@ public class SparkRestExample {
                 String token  = userService.login(user);
                 response.cookie("ImageServerToken", token);
                 response.cookie("ImageServerId", String.valueOf(user.getId()));
-
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing required parameters")));
@@ -108,7 +108,8 @@ public class SparkRestExample {
             }
         });
 
-        put("/users/:id", (request, response) -> {
+
+        delete("/users", (request, response) -> {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
@@ -118,51 +119,10 @@ public class SparkRestExample {
 
                 }
                 userService.authenticate(token, id);
-                User toEdit = new Gson().fromJson(request.body(), User.class);
-                User editedUser = userService.editUser(toEdit);
-                if (editedUser != null) {
-                    return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(editedUser)));
-                } else {
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("User not found or error in edit")));
-                }
-            }catch (UserException e){
-                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Invalid token")));
-            }
-        });
-
-        delete("/users/:id", (request, response) -> {
-            response.type("application/json");
-            try{
-                String token = request.cookie("ImageServerToken");
-                String id = request.cookie("ImageServerId");
-                if (token == null || id == null){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
-
-                }
-                userService.authenticate(token, id);
-                String id1 = request.params(":id");
-                if (!id.equals(id1)){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("You cannot delete other people accounts!")));
-                }
                 userService.deleteUser(parseInt(id));
+                Path path= Paths.get(STORAGE+"/"+id);
+                deleteDirectory(path);
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, "user deleted"));
-            }catch (UserException e){
-                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Invalid token")));
-            }
-        });
-
-        options("/users/:id", (request, response) -> {
-            response.type("application/json");
-            try{
-                String token = request.cookie("ImageServerToken");
-                String id = request.cookie("ImageServerId");
-                if (token == null || id == null){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
-
-                }
-                userService.authenticate(token, id);
-                userService.deleteUser(parseInt(request.params(":id")));
-                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, (userService.userExist(parseInt(request.params(":id"))) ? "User exists" : "User does not exists")));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Invalid token")));
             }
@@ -170,18 +130,17 @@ public class SparkRestExample {
 
 /**************************IMAGE METHODS************************************************/
 
-        post("/images/:id", (request, response) -> {
+        post("/images", (request, response) -> {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
-
                 }
                 userService.authenticate(token, id);
-                String key = uploadImage(request, parseInt(request.params(":id")));
-                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS,new JsonParser().parse("{\"KEY\": \""+key+"\"}")));
+                Integer key = uploadImage(request, parseInt(id));
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS,new JsonParser().parse("{\"KEY\": \""+String.valueOf(key)+"\"}")));
             }catch (UserException | ImageException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
             }
@@ -193,7 +152,6 @@ public class SparkRestExample {
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
-
                 }
                 userService.authenticate(token, id);
             }catch ( UserException e){
@@ -208,7 +166,6 @@ public class SparkRestExample {
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
-
                 }
                 userService.authenticate(token, id);
             }catch ( UserException e){
@@ -217,44 +174,43 @@ public class SparkRestExample {
             return downloadImage(request,response);
         });
 
-        get("/images/user/:id", (request, response) -> {
+        get("/images", (request, response) -> {
             response.type("application/json");
+
             try{
                 String token = request.cookie("ImageServerToken");
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
-
                 }
                 userService.authenticate(token, id);
-                JsonElement list= new Gson().toJsonTree(imageService.getUserImages(parseInt(request.params(":id"))));
-                System.out.println(list);
-                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, list));
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(imageService.getUserImages(parseInt(id)))));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
             }
         });
 
-        delete("/images/:key/:id", (request, response) -> {
+        delete("/images/:key", (request, response) -> {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
-
                 }
                 userService.authenticate(token, id);
-                imageService.deleteImage(request.params(":key"), parseInt(request.params(":id")));
+                Path path = Paths.get(STORAGE+"/"+id+"/"+request.params(":key"));
+                Files.deleteIfExists(path);
+                imageService.deleteImage(parseInt(request.params(":key")), parseInt(id));
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, "image deleted"));
             }catch (UserException e){
-                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
+               return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
             }
         });
 
     }
 
-    public static String uploadImage(Request request, Integer id) throws ImageException {
+    public static Integer uploadImage(Request request, Integer id) throws ImageException {
         // TO allow for multipart file uploads
         request.attribute("org.eclipse.jetty.multipartConfig", new MultipartConfigElement(""));
 
@@ -268,13 +224,11 @@ public class SparkRestExample {
 
             //save image in the user
             Image image= new Image(name);
-            String key=imageService.addImage(image,id);
+            Integer key=imageService.addImage(image,id);
 
             // Write stream to file under storage folder
-            Path path= Paths.get(STORAGE).resolve(key);
+            Path path= Paths.get(STORAGE+"/"+id).resolve(String.valueOf(key));
             Files.copy(stream,path, StandardCopyOption.REPLACE_EXISTING);
-
-            image.setPath(path);
             return key;
         } catch (IOException | ServletException e) {
             throw new ImageException("Exception occurred while uploading image");
@@ -284,11 +238,13 @@ public class SparkRestExample {
 
     public static Response returnImage(Request request,Response response) throws ImageException {
         response.raw().setContentType("image/png");
-
-        Path imagePath = Paths.get(STORAGE).resolve(request.params(":key"));
+        String id = request.cookie("ImageServerId");
+        Path imagePath = Paths.get(STORAGE+"/"+id).resolve(request.params(":key"));
         File image= new File(String.valueOf(imagePath));
         try (OutputStream out = response.raw().getOutputStream()) {
             ImageIO.write(read(image), "png", out);
+            out.flush();
+            out.close();
         } catch (IOException e) {
             throw new ImageException("Can't download the image");
         }
@@ -296,7 +252,8 @@ public class SparkRestExample {
     }
 
     public static Response downloadImage(Request request, Response response) throws IOException {
-        Path imagePath = Paths.get(STORAGE).resolve(request.params(":key"));
+        String id = request.cookie("ImageServerId");
+        Path imagePath = Paths.get(STORAGE+"/"+id).resolve(request.params(":key"));
         BufferedImage image = read(new File(String.valueOf(imagePath)));
         HttpServletResponse raw = null;
         try {
@@ -310,5 +267,17 @@ public class SparkRestExample {
             e.printStackTrace();
         }
         return response;
+    }
+
+    ///utilsss
+    private static void deleteDirectory(Path path){
+        try {
+            Files.walk(path)
+                    .sorted(Comparator.reverseOrder())
+                    .map(Path::toFile)
+                    .forEach(File::delete);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }

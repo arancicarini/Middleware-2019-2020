@@ -1,12 +1,15 @@
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedList;
+import java.util.List;
 
 class User {
 
     private Integer id;
     private String username;
     private String password;
-    private HashMap<String, Image> images = new HashMap<>();
+    private HashMap<Integer, Image> images = new HashMap<>();
+    private Integer counter=0;
 
     public User(int id, String username, String password) {
         super();
@@ -39,16 +42,31 @@ class User {
         this.password = password;
     }
 
-    public void addImage(Image image){
+    public Integer addImage(Image image){
+        synchronized (this) {
+            image.setKey(counter);
+            image.setPath(counter);
+            counter++;
+        }
         this.images.put(image.getKey(),image);
+        return image.getKey();
     }
 
-    public void deleteImage(String key){
+    public void deleteImage(Integer key){
         this.images.remove(key);
     }
 
     public Collection<Image> getAllImages(){
-        return this.images.values();
+        List<Image> images= new LinkedList<>(this.images.values());
+        return images;
+    }
+
+    public void setImages() {
+        this.images = new HashMap<>();
+    }
+
+    public void setCounter(Integer counter) {
+        this.counter = counter;
     }
 
     @Override
@@ -60,4 +78,5 @@ class User {
         }
         return false;
     }
+
 }
