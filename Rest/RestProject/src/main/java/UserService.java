@@ -12,12 +12,9 @@ public interface UserService {
     public void authenticate (String token, String username) throws UserException;
 
     public Collection<String> getUsers ();
-    public User getUser (int id);
 
-    public User editUser (User user)
-            throws UserException;
+    public User getUser (int id);
 
     public void deleteUser (int id);
 
-    public boolean userExist (int id);
 }

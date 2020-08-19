@@ -1,7 +1,4 @@
-import java.util.Collection;
-import java.util.HashMap;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 class User {
 
@@ -61,8 +58,8 @@ class User {
         return images;
     }
 
-    public void setImages() {
-        this.images = new HashMap<>();
+    public void setImages(HashMap<Integer, Image> map) {
+        this.images = map;
     }
 
     public void setCounter(Integer counter) {

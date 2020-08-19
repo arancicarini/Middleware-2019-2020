@@ -1,16 +1,5 @@
-import static java.lang.Integer.parseInt;
-import static javax.imageio.ImageIO.read;
-import static spark.Spark.delete;
-import static spark.Spark.get;
-import static spark.Spark.options;
-import static spark.Spark.post;
-import static spark.Spark.put;
-
 import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-import com.google.gson.reflect.TypeToken;
 import spark.Request;
 import spark.Response;
 
@@ -24,7 +13,6 @@ import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.lang.reflect.Type;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
@@ -32,7 +20,11 @@ import java.nio.file.StandardCopyOption;
 import java.util.Comparator;
 import java.util.HashMap;
 
-public class SparkRestExample {
+import static java.lang.Integer.parseInt;
+import static javax.imageio.ImageIO.read;
+import static spark.Spark.*;
+
+public class App {
     private static String STORAGE = "storage";
     static final ServiceImplementation service= new ServiceImplementation();
     static final UserService userService = service;
@@ -43,13 +35,12 @@ public class SparkRestExample {
 
         post("/register", (request, response) -> {
             response.type("application/json");
-
             User user = new Gson().fromJson(request.body(), User.class);
-            user.setImages();
+            user.setImages(new HashMap<>());
             user.setCounter(0);
             try {
                 Integer userId = userService.registerUser(user);
-                Path path = Paths.get(STORAGE+"/"+String.valueOf(user.getId()));
+                Path path = Paths.get(STORAGE+"/"+ user.getId());
                 Files.createDirectories(path);
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS,new JsonParser().parse("{\"ID\": \""+String.valueOf(userId)+"\"}")));
             }catch (UserException e){
@@ -100,7 +91,7 @@ public class SparkRestExample {
                 userService.authenticate(token, id);
                 String id1 = request.params(":id");
                 if (!id.equals(id1)){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("You cannot spy other people")));
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("You cannot spy other people!")));
                 }
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(userService.getUser(parseInt(id)))));
             }catch (UserException e){
@@ -109,16 +100,20 @@ public class SparkRestExample {
         });
 
 
-        delete("/users", (request, response) -> {
+        delete("/users/:id", (request, response) -> {
             response.type("application/json");
             try{
                 String token = request.cookie("ImageServerToken");
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies!")));
 
                 }
                 userService.authenticate(token, id);
+                String id1 = request.params(":id");
+                if (!id.equals(id1)){
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("You cannot spy other people!")));
+                }
                 userService.deleteUser(parseInt(id));
                 Path path= Paths.get(STORAGE+"/"+id);
                 deleteDirectory(path);
@@ -269,7 +264,7 @@ public class SparkRestExample {
         return response;
     }
 
-    ///utilsss
+    ///utilities
     private static void deleteDirectory(Path path){
         try {
             Files.walk(path)

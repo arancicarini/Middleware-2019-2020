@@ -24,7 +24,7 @@ public class ServiceImplementation implements UserService, ImageService {
     @Override
     public Integer registerUser(User user) throws UserException {
         if ( user.getUsername() == null || user.getPassword() == null){
-            throw new UserException();
+            throw new UserException("missing required parameters!");
         }
         for (User registeredUser: userMap.values()){
             if (registeredUser.getUsername().equals(user.getUsername())) throw new UserException("username not available");
@@ -42,7 +42,7 @@ public class ServiceImplementation implements UserService, ImageService {
     @Override
     public String login(User user) throws UserException {
         if ( user.getPassword() == null || user.getUsername() == null ){
-            throw new UserException();
+            throw new UserException("missing required parameters!!");
         }
 
         String hash = produceSHA1(user.getPassword());
@@ -52,20 +52,19 @@ public class ServiceImplementation implements UserService, ImageService {
         for ( User registeredUser : list){
             if (registeredUser.equals(user)) {
                 userExists = true ;
-                user.setId(registeredUser.getId());
+                user = registeredUser;
             }
         }
-        if (!userExists) throw new UserException();
+        if (!userExists) throw new UserException("login failed, please try again");
         return createToken(String.valueOf(user.getId()));
     }
 
     @Override
     public void authenticate (String token, String id) throws UserException{
         String secret = readSecret();
-
-        String required = secret.concat(id);
+        String plainText = secret.concat(id);
         try {
-            JWTVerifier verifier = JWT.require(Algorithm.HMAC256(required))
+            JWTVerifier verifier = JWT.require(Algorithm.HMAC256(plainText))
                     .withIssuer("auth0")
                     .build(); //Reusable verifier instance
             DecodedJWT jwt = verifier.verify(token);
@@ -89,38 +88,8 @@ public class ServiceImplementation implements UserService, ImageService {
     }
 
     @Override
-    public User editUser(User forEdit) throws UserException {
-        try {
-            if (forEdit.getId() == null)
-                throw new UserException("ID cannot be blank");
-
-            User toEdit = userMap.get(forEdit.getId());
-
-            if (toEdit == null)
-                throw new UserException("User not found");
-
-            if (forEdit.getUsername() != null) {
-                toEdit.setUsername(forEdit.getUsername());
-            }
-
-            if (forEdit.getId() != null) {
-                toEdit.setId(forEdit.getId());
-            }
-
-            return toEdit;
-        } catch (Exception ex) {
-            throw new UserException(ex.getMessage());
-        }
-    }
-
-    @Override
     public void deleteUser(int id) {
         userMap.remove(id);
-    }
-
-    @Override
-    public boolean userExist(int id) {
-        return userMap.containsKey(id);
     }
 
     @Override
@@ -197,9 +166,9 @@ public class ServiceImplementation implements UserService, ImageService {
     private static String createToken(String id){
         String secret = readSecret();
         String token = "default_token" + id;
-        String required = secret.concat(id);
+        String plainText = secret.concat(id);
         try {
-            Algorithm algorithm = Algorithm.HMAC256(required);
+            Algorithm algorithm = Algorithm.HMAC256(plainText);
             token = JWT.create()
                     .withIssuer("auth0")
                     .withExpiresAt(new Date(System.currentTimeMillis() + (600 * 1000)))
