@@ -21,8 +21,15 @@ All APIs responses are of type application/json and return a status of the reque
 | `/images/download/:key` | GET | -                                                        | PRIVATE |Download in the user device the  image associated with `key` in the user account   | - |
 | `/images` | GET | -                                                        | PRIVATE |Return the descriptions of all the images associated with the user account, including a link per each image   | [ { "key": 0, "title": "imageTitle", "path": "http://localhost:4567/images/0"}, { "key": 1, "title": "imageTitle1", "path": "http://localhost:4567/images/2"}, ...] |
 | `/images/:key` | DELETE | -                                                        | PRIVATE |Delete the image associated with `key` in the user account   | - |
-                                                                                        
-| `/images/:imageId`    | GET  | -                                                        | PRIVATE | Returns image with id `imageId` |-                                                                                       |
+
+# How to test the server
+Open a shell and navigate to the cloned repository (of course you need to have a jdk and maven installed in your shell). Type:
+    - `mvn compile`
+    - `mvn exec:java -Dexec.mainClass="App"`
+    
+The server is now working at http://localhost:4567.
+Test it easily using http://restclient.net/ for Firefox or https://www.postman.com/ for Chrome.
+                                                                                                                                                                              |
 
 
 
