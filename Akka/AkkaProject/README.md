@@ -1,7 +1,7 @@
 [![](https://img.shields.io/maven-central/v/com.typesafe.akka/akka.svg)](https://mvnrepository.com/artifact/com.typesafe.akka/akka-actor)
 ![Akka](https://github.com/arancicarini/Middleware-2019-2020/workflows/Akka/badge.svg)
 # Akka dictionary server
-A simple distributed dictionary server implemented with the Akka toolkit(https://akka.io/), which enforces replication to improve rubustness. Keys and values are of String type.
+A simple distributed dictionary server implemented with the Akka toolkit (https://akka.io/), which enforces replication to improve rubustness. Keys and values are of String type.
 
 The number of replicas can be chosen modifying the variable akka.replicas in AkkaProject/src/main/resources/application.conf ( default is 1)
 
