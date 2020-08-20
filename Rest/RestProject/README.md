@@ -4,7 +4,7 @@
 A simple REST image server implemented with the SparkJava framework (http://sparkjava.com/). Images must be in .png format.
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Spark_Java_Logo.png" width="40%" height="100">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Spark_Java_Logo.png" width="%" height="120">
 </p>
 
 
