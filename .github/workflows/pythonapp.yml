@@ -13,5 +13,7 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Maven
-        run:    cd Rest
-                mvn -B package --file pom.xml
+        run: | 
+            cd Rest/RestProject
+            mvn compile
+            mvn exec:java -Dexec.mainClass="App"
