@@ -1,5 +1,4 @@
 # REST Image Server
-[![Maven Central](https://maven-badges.herokuapp.com/maven-central/cz.jirutka.rsql/rsql-parser/badge.svg)](https://maven-badges.herokuapp.com/maven-central/cz.jirutka.rsql/rsql-parser)
 A simple REST image server implemented with the SparkJava framework (http://sparkjava.com/). Images must be in .png format.
 
 # Security policy
