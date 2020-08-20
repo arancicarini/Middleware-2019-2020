@@ -13,4 +13,5 @@ jobs:
         with:
           java-version: 1.8
       - name: Build with Maven
-        run: mvn -B Rest/RestProject/src --file Rest/RestProject/pom.xml
+        run:    cd Rest
+                mvn -B package --file pom.xml
