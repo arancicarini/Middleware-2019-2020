@@ -1,7 +1,9 @@
+[![](https://img.shields.io/maven-central/v/com.typesafe.akka/akka-actor.svg)](https://mvnrepository.com/artifact/com.typesafe.akka/akka-actor)
+![Akka](https://github.com/arancicarini/Middleware-2019-2020/workflows/Akka/badge.svg)
 # Akka dictionary server
 A simple distributed dictionary server implemented with the Akka toolkit(https://akka.io/), which enforces replication to improve rubustness. Keys and values are of String type.
 
-The number of replicas can be chosen modifying the variable akka.replicas in AkkaProject/src/main/resources/application.conf ( default = 1)
+The number of replicas can be chosen modifying the variable akka.replicas in AkkaProject/src/main/resources/application.conf ( default is 1)
 
 A reference to all the Akka APIs can be found at:
 https://doc.akka.io/japi/akka/current/index.html?akka/cluster/ddata/typed/javadsl/package-summary.html&_ga=2.137087859.212732556.1586383315-309149511.1585228667
@@ -31,11 +33,11 @@ https://doc.akka.io/japi/akka/current/index.html?akka/cluster/ddata/typed/javads
 All APIs responses are of type application/json. The body of the requests must be of type Json.
 
 | API                   | HTTP method | Body                                              | Description  | Response ( if successful) |
-|:----------------------:|:----------:|:-------------------------------------------------:|---------------------------------------------------------:|:------------------------------|
-|`/dictionary` | POST | `{ "key" : "MyKey", "value" : "MyValue" }`                            | Insert an entry key - value into the dictionary   | - |
-| `/dictionary/:key` | GET | -                                                         |Return the value associated with `key` in the user account   | - |
-| `/test/localData` | GET | -                                                         | Return all the values stored locally in the contacted node   | - |
-| `/test/nodes` | GET | -                                                         |  Return a representation of all nodes currently up in the cluster |-|
+|:----------------------:|:----------:|:-------------------------------------------------:|----------------------------------------------------:|:------------------------------|
+|`/dictionary` | POST | `{ "key" : "MyKey", "value" : "MyValue" }`                            | Insert an entry key - value into the dictionary | - |
+| `/dictionary/:key` | GET | -                                                         | Return the value associated with `key` in the user account | - |
+| `/test/localData` | GET | -                                                         | Return all the values stored locally in the contacted node | - |
+| `/test/nodes` | GET | -                                                         | Return a representation of all nodes currently up in the cluster |-|
 
 
 ## Common issues.

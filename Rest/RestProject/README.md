@@ -4,7 +4,7 @@
 A simple REST image server implemented with the SparkJava framework (http://sparkjava.com/). Images must be in .png format.
 
 <p align="center">
-  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Spark_Java_Logo.png" width="40%" height="50">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Spark_Java_Logo.png" width="40%" height="70">
 </p>
 
 
@@ -30,9 +30,9 @@ All APIs responses are of type application/json and return a status of the reque
 ## How to test the server
 Open a shell and navigate to the cloned repository (of course you need to have a jdk and maven installed in your shell). Type:
 
-    - `mvn compile`
+    - mvn compile
     
-    - `mvn exec:java -Dexec.mainClass="App"`
+    - mvn exec:java -Dexec.mainClass="App"
     
 The server is now working at http://localhost:4567.
 Test it easily using http://restclient.net/ for Firefox or https://www.postman.com/ for Chrome.
