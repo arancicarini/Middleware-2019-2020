@@ -42,7 +42,7 @@ public class App {
                 Integer userId = userService.registerUser(user);
                 Path path = Paths.get(STORAGE+"/"+ user.getId());
                 Files.createDirectories(path);
-                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS,new JsonParser().parse("{\"ID\": \""+String.valueOf(userId)+"\"}")));
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS,new JsonParser().parse("{\"Id\": \""+String.valueOf(userId)+"\"}")));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing required parameters")));
             }
