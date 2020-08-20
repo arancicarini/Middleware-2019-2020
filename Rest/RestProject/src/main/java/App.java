@@ -25,7 +25,7 @@ import static javax.imageio.ImageIO.read;
 import static spark.Spark.*;
 
 public class App {
-    private static String STORAGE = "storage";
+    private final static String STORAGE = "storage";
     static final ServiceImplementation service= new ServiceImplementation();
     static final UserService userService = service;
     static final ImageService imageService = service;
@@ -70,7 +70,6 @@ public class App {
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
-
                 }
                 userService.authenticate(token, id);
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(userService.getUsers())));
@@ -86,14 +85,13 @@ public class App {
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
-
                 }
                 userService.authenticate(token, id);
                 String id1 = request.params(":id");
                 if (!id.equals(id1)){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("You cannot spy other people!")));
                 }
-                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(userService.getUser(parseInt(id)))));
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new JsonParser().parse(userService.getUser(parseInt(id)).toString())));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
             }
@@ -112,12 +110,12 @@ public class App {
                 userService.authenticate(token, id);
                 String id1 = request.params(":id");
                 if (!id.equals(id1)){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("You cannot spy other people!")));
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("You cannot delete other people's account!")));
                 }
                 userService.deleteUser(parseInt(id));
                 Path path= Paths.get(STORAGE+"/"+id);
                 deleteDirectory(path);
-                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, "user deleted"));
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Invalid token")));
             }
@@ -135,7 +133,7 @@ public class App {
                 }
                 userService.authenticate(token, id);
                 Integer key = uploadImage(request, parseInt(id));
-                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS,new JsonParser().parse("{\"KEY\": \""+String.valueOf(key)+"\"}")));
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS,new JsonParser().parse("{\"KEY\": \""+key+"\"}")));
             }catch (UserException | ImageException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
             }
@@ -197,7 +195,7 @@ public class App {
                 Path path = Paths.get(STORAGE+"/"+id+"/"+request.params(":key"));
                 Files.deleteIfExists(path);
                 imageService.deleteImage(parseInt(request.params(":key")), parseInt(id));
-                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, "image deleted"));
+                return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS));
             }catch (UserException e){
                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
             }
@@ -250,7 +248,7 @@ public class App {
         String id = request.cookie("ImageServerId");
         Path imagePath = Paths.get(STORAGE+"/"+id).resolve(request.params(":key"));
         BufferedImage image = read(new File(String.valueOf(imagePath)));
-        HttpServletResponse raw = null;
+        HttpServletResponse raw;
         try {
             raw = response.raw();
             OutputStream out = raw.getOutputStream();

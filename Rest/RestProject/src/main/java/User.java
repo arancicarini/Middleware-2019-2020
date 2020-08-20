@@ -1,3 +1,5 @@
+import com.google.gson.Gson;
+
 import java.util.*;
 
 class User {
@@ -76,4 +78,8 @@ class User {
         return false;
     }
 
+    @Override
+    public String toString() {
+        return new Gson().toJson( this);
+    }
 }

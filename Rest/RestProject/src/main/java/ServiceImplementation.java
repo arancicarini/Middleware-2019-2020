@@ -44,7 +44,6 @@ public class ServiceImplementation implements UserService, ImageService {
         if ( user.getPassword() == null || user.getUsername() == null ){
             throw new UserException("missing required parameters!!");
         }
-
         String hash = produceSHA1(user.getPassword());
         user.setPassword(hash);
         List<User> list = new LinkedList<>(userMap.values());
@@ -52,9 +51,10 @@ public class ServiceImplementation implements UserService, ImageService {
         for ( User registeredUser : list){
             if (registeredUser.equals(user)) {
                 userExists = true ;
-                user = registeredUser;
+                user.setId(registeredUser.getId());
             }
         }
+
         if (!userExists) throw new UserException("login failed, please try again");
         return createToken(String.valueOf(user.getId()));
     }
