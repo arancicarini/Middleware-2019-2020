@@ -1,4 +1,12 @@
-## How to build the AkkaProject
+# Akka dictionary server
+A simple distributed dictionary server implemented with the Akka toolkit(https://akka.io/), which enforces replication to improve rubustness. Keys and values are of String type.
+
+The number of replicas can be chosen modifying the variable akka.replicas in AkkaProject/src/main/resources/application.conf ( default = 1)
+
+A reference to all the Akka APIs can be found at:
+https://doc.akka.io/japi/akka/current/index.html?akka/cluster/ddata/typed/javadsl/package-summary.html&_ga=2.137087859.212732556.1586383315-309149511.1585228667
+
+## How to build and test the AkkaProject
 - Digit http://192.168.1.1/login.lp on your web browser ( or equivalent Ip address to enter your Router configuration interface).
 - Detect the IP address of your device in your LAN (default: 192.168.1.3).
 - If different from the default address, 
@@ -20,16 +28,17 @@
     - note: the couple <IP_Address, Port> is unique for each node, so you can't create two nodes with the same port on the same device  
 
 ## APIS 
-API | Parameters |  Meaning
------------- | ------------- | ------------- 
-/get/?key=$id| a String Key| Get the value associated with the specified Key.
-/put/?key=$keyId&value=$valueId | a String KeyId and a String ValueId | Insert into the cluster the specified Value associated with the specified Key.
-/getAllLocal | none | get all the values locally stored in the contacted node.
-/getNodes | none | get a representation of all nodes currently up in the cluster.
+All APIs responses are of type application/json. The body of the requests must be of type Json.
+
+| API                   | HTTP method | Body                                              | Description  | Response ( if successful)                                                                                                         |
+|:-----------------------:|:------------------------:|:---------------------------------------------------------:|---------------------------------------------------------|
+| `/dictionary` | POST | `{ "key" : "MyKey", "value" : "MyValue" }`                            | Insert an entry key - value into the dictionary   |  -|
+| `/dictionary/:key` | GET | -                                                         |Return the value associated with `key` in the user account   | - |
+| `/test/localData` | GET | -                                                         | Return all the values stored locally in the contacted node   | - |
+| `/test/nodes` | GET | -                                                         |  Return a representation of all nodes currently up in the cluster |-|
 
 
 ## Common issues.
 - if the project does not build, try
     - mvn clean package install
     - mvn clean install
-

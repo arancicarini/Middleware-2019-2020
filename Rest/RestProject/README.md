@@ -1,12 +1,18 @@
-# REST Image Server
+[![](https://img.shields.io/maven-central/v/com.sparkjava/spark-core.svg)](http://mvnrepository.com/artifact/com.sparkjava/spark-core)
+## REST Image Server
 A simple REST image server implemented with the SparkJava framework (http://sparkjava.com/). Images must be in .png format.
 
-# Security policy
-The login API generates a HMAC256 token from a secret and the user id. This token is set in the cookie "ImageServerToken", and together with the cookie "ImageServerId", which contains the user id, enforces user authentication for the private APIs. The liveness period of a token is 10 minutes. The server currently does not support third party authentication.
+<p align="center">
+  <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Spark_Java_Logo.png" width="50%">
+</p>
 
 
-# APIS
-All APIs responses are of type application/json and return a status of the request ( ERROR or SUCCESS), a message explaining the error in case of error and possibly some data in case of success, apart from `/images/:key`, which returns a response of type image/png and `/images/download/:key`.
+## Security policy
+The login API generates a HMAC256 token from a secret and the user id, using a Java implementation of JWT available at https://github.com/auth0/java-jwt. This token is set in the cookie "ImageServerToken", and together with the cookie "ImageServerId", which contains the user id, enforces user authentication for the private APIs. The liveness period of a token is 10 minutes. The server currently does not support third party authentication.
+
+
+## APIS
+All APIs responses are of type application/json and return a status of the request ( ERROR or SUCCESS), a message explaining the error in case of error and possibly some data in case of success, apart from `/images/:key`, which returns a response of type image/png and `/images/download/:key`. THe body of the request must be of type Json, apart from `/images` (POST).
 | API                   | HTTP method | Body                                                         | Access  | Description  | Response data ( if STATUS == SUCCESS and response.type = application/json )                                                                                                         |
 |:-----------------------:|:------:|:----------------------------------------------------------:|:---------:|:---------------------------------------------------------:|---------------------------------------------------------|
 | `/register`           | POST | `{ "username": "My_username", "password": "My_password" }` | PUBLIC | Register a user in the server | '{ "Id":"userId"} |
@@ -20,7 +26,7 @@ All APIs responses are of type application/json and return a status of the reque
 | `/images` | GET | -                                                        | PRIVATE |Return the descriptions of all the images associated with the user account, including a link per each image   | [ { "key": 0, "title": "imageTitle", "path": "http://localhost:4567/images/0"}, { "key": 1, "title": "imageTitle1", "path": "http://localhost:4567/images/2"}, ...] |
 | `/images/:key` | DELETE | -                                                        | PRIVATE |Delete the image associated with `key` in the user account   | - |
 
-# How to test the server
+## How to test the server
 Open a shell and navigate to the cloned repository (of course you need to have a jdk and maven installed in your shell). Type:
     - `mvn compile`
     - `mvn exec:java -Dexec.mainClass="App"`
