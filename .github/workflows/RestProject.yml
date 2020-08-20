@@ -16,4 +16,3 @@ jobs:
         run: | 
             cd Rest/RestProject
             mvn compile
-            mvn exec:java -Dexec.mainClass="App"

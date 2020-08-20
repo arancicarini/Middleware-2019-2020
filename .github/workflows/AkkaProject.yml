@@ -16,4 +16,3 @@ jobs:
         run: | 
             cd Akka/AkkaProject
             mvn compile
-            mvn exec:java -Dexec.mainClass="project.App" -Dexec.args=25251
