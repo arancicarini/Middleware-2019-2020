@@ -20,9 +20,7 @@ public class Image {
         this.key = key;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
-    }
+    public void setTitle(String title) { this.title = title; }
 
     public void setPath(Integer key) {
         this.path = "http://localhost:4567/images/" + key;
