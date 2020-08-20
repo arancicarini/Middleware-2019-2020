@@ -1,10 +1,9 @@
 # REST Image Server
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/cz.jirutka.rsql/rsql-parser/badge.svg)](https://maven-badges.herokuapp.com/maven-central/cz.jirutka.rsql/rsql-parser)
 A simple REST image server implemented with the SparkJava framework (http://sparkjava.com/). Images must be in .png format.
 
 # Security policy
 The login API generates a HMAC256 token from a secret and the user id. This token is set in the cookie "ImageServerToken", and together with the cookie "ImageServerId", which contains the user id, enforces user authentication for the private APIs. The liveness period of a token is 10 minutes. The server currently does not support third party authentication.
-
-# How to test it
 
 
 # APIS
