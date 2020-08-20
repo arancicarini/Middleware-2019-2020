@@ -6,7 +6,10 @@ import akka.actor.typed.Scheduler;
 import akka.actor.typed.javadsl.AskPattern;
 import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.http.javadsl.model.StatusCodes;
+import akka.http.javadsl.server.PathMatchers;
 import akka.http.javadsl.server.Route;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -42,39 +45,47 @@ public class UserRoutes {
 
 
     /**
-     * This method creates all the routes of our web app
+     * This method creates all the user routes of our web app
      */
     //#all-routes
     public Route userRoutes() {
-        return concat(
-             //#get/?key=$id
-            pathPrefix("get",  () ->
-                parameter("key", (String key) ->
+        return pathPrefix("dictionary",  () ->
+            concat(
+                pathEnd( () ->
+                    post(() -> entity( Jackson.unmarshaller(DictionaryEntry.class), request ->
+                        //#answer with a putAnswer message marshalled with Jackson
+                        onSuccess(putRequest(request.key, request.value), putAnswer -> {
+                            return complete(StatusCodes.OK, putAnswer, Jackson.marshaller());
+                        }))
+                    )
+                ),
+                path(PathMatchers.segment(), (String key) ->
                     get(() ->
                         //#answer with a getAnswer message marshalled with Jackson
                         onSuccess(getRequest(key), getAnswer -> {
-                            log.info("Get API Endpoint called");
-                            return complete(StatusCodes.OK, getAnswer, Jackson.marshaller());
-                        })
-                    )
-                )
-            ),
-            //#put/?key=$keyId&value=$valueId
-            pathPrefix("put",() ->
-                parameter("key", (String key) ->
-                    parameter("value", (String value)->
-                        get(() ->
-                            //#answer with a putAnswer message marshalled with Jackson
-                            onSuccess(putRequest(key,value), putAnswer->{
-                                log.info("Put API Endpoint called");
-                                return complete(StatusCodes.OK, putAnswer, Jackson.marshaller());
-                            })
-                        )
-                    )
+                        return complete(StatusCodes.OK, getAnswer, Jackson.marshaller());
+                        }))
                 )
             )
         );
     }
     //#all-routes
+
+    public final static class DictionaryEntry{
+        public final String key;
+        public final String value;
+
+        @JsonCreator
+        public DictionaryEntry(@JsonProperty("key")String key,@JsonProperty("value") String value){
+            this.key = key;
+            this.value = value;
+        }
+    }
+
+
+
+
+
+
 }
 

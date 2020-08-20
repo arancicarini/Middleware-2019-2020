@@ -44,28 +44,30 @@ public class TestRoutes {
     /**
      * This method creates test routes for our web app
      */
-    //#test-routes
     public Route testRoutes() {
-        return concat(
-            //#getAllLocal
-            pathPrefix("getAllLocal",  () ->
-                get(() ->
-                    //#answer with a getAnswer message marshalled with Jackson
-                    onSuccess(getAllLocalRequest(), getAnswer -> {
-                        return complete(StatusCodes.OK, getAnswer, Jackson.marshaller());
-                        })
+        return
+            pathPrefix("test",  () ->
+                concat(
+                    pathPrefix("localData", () ->
+                        pathEnd( () ->
+                            get(() ->
+                                onSuccess(this::getAllLocalRequest, getAnswer -> {
+                                    return complete(StatusCodes.OK, getAnswer, Jackson.marshaller());
+                                })
+                            )
+                        )
+                    ),
+                    pathPrefix("nodes", () ->
+                        pathEnd( () ->
+                            get(() ->
+                                onSuccess(this::getnodesRequest, getAnswer -> {
+                                    return complete(StatusCodes.OK, getAnswer, Jackson.marshaller());
+                                })
+                            )
+                        )
                     )
-                ),
-            //#getNodes
-            pathPrefix("getNodes",  () ->
-                get(() ->
-                    //#answer with a getAnswer message marshalled with Jackson
-                    onSuccess(this::getnodesRequest, getAnswer -> {
-                         return complete(StatusCodes.OK, getAnswer, Jackson.marshaller());
-                    })
                 )
-            )
         );
     }
-    //#all-routes
+    //#test-routes
 }
