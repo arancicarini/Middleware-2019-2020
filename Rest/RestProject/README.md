@@ -16,7 +16,7 @@ The login API generates a HMAC256 token from a secret and the user id, using a J
 All APIs responses are of type application/json and return a status of the request ( ERROR or SUCCESS), a message explaining the error in case of error and possibly some data in case of success, apart from `/images/:key`, which returns a response of type image/png and `/images/download/:key`. THe body of the request must be of type Json, apart from `/images` (POST).
 | API                   | HTTP method | Body                                                         | Access  | Description  | Response data ( if STATUS == SUCCESS and response.type = application/json )                                                                                                         |
 |:-----------------------:|:------:|:----------------------------------------------------------:|:---------:|:---------------------------------------------------------:|---------------------------------------------------------|
-| `/register`           | POST | `{ "username": "My_username", "password": "My_password" }` | PUBLIC | Register a user in the server | '{ "Id":"userId"} |
+| `/register`           | POST | `{ "username": "My_username", "password": "My_password" }` | PUBLIC | Register a user in the server | `{ "Id":"userId"}` |
 | `/login`           | POST | `{ "username": "My_username", "password": "My_password" }` | PUBLIC  | Login in the user in the server setting the cookies "ImageServerId" and "ImageServerToken" | - 
 | `/users`              | GET  | -                                                        | PRIVATE | Get a list of all registered users |  `[ "My_Username1", "My_Username2", ...]`  |                                                                                      |
 | `/users/:id`      | GET  | -                                                        | PRIVATE | Return all data of the user with id `id`, if the same is authenticated |  `{ "id":id , "username": "My_Username", "password": "Password_hash", "images": { [ image1, image2, ...]}, "counter": #images }` |
@@ -28,7 +28,7 @@ All APIs responses are of type application/json and return a status of the reque
 | `/images/:key` | DELETE | -                                                        | PRIVATE |Delete the image associated with `key` in the user account   | - |
 
 ## How to test the server
-Open a shell and navigate to the cloned repository (of course you need to have a jdk and maven installed in your shell). Type:
+Open a shell and navigate to RestProject in the cloned repository (of course you need to have a jdk and maven installed in your shell). Type:
 
     - mvn compile
     

@@ -30,14 +30,43 @@ https://doc.akka.io/japi/akka/current/index.html?akka/cluster/ddata/typed/javads
     - note: the couple <IP_Address, Port> is unique for each node, so you can't create two nodes with the same port on the same device  
 
 ## APIS 
-All APIs responses are of type application/json. The body of the requests must be of type Json.
+All APIs responses are of type application/json. The body of the requests must be of type Json. Both the POST and the GET methods return a JSON with field (among the others) requestId. This is just an internal identifier of the request. 
 
 | API                   | HTTP method | Body                                              | Description  | Response ( if successful) |
 |:----------------------:|:----------:|:-------------------------------------------------:|----------------------------------------------------:|:------------------------------|
-|`/dictionary` | POST | `{ "key" : "MyKey", "value" : "MyValue" }`                            | Insert an entry key - value into the dictionary | - |
-| `/dictionary/:key` | GET | -                                                         | Return the value associated with `key` in the user account | - |
-| `/test/localData` | GET | -                                                         | Return all the values stored locally in the contacted node | - |
-| `/test/nodes` | GET | -                                                         | Return a representation of all nodes currently up in the cluster |-|
+|`/dictionary` | POST | `{ "key" : "MyKey", "value" : "MyValue" }`                            | Insert an entry key - value into the dictionary | `{
+    "requestId": "a-number",
+    "success": true
+}` |
+| `/dictionary/:key` | GET | -                                                         | Return the value associated with `key` in the user account | `{
+    "isPresent": true,
+    "key": "MyKey",
+    "requestId": a_number,
+    "value": "myValue"
+}`|
+| `/test/localData` | GET | -                                                         | Return all the values stored locally in the contacted node | `"values": [ "MyValue1", "MyValue2", ... ]` |
+| `/test/nodes` | GET | -                                                         | Return a representation of all nodes currently up in the cluster | `"nodes": [{ 
+        "hashKey": "hash1",
+            "node": {
+                "local": false,
+                "terminated": false
+            }
+        },
+        {
+            "hashKey": "hash2",
+            "node": {
+                "local": false,
+                "terminated": false
+            }
+        },
+        {
+            "hashKey": "hash3",
+            "node": {
+                "local": true,
+                "terminated": false
+            }
+        }
+    ]`|
 
 
 ## Common issues.

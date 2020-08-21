@@ -7,7 +7,7 @@
   <artifactId>AkkaProject</artifactId>
   <groupId>com.lightbend.akka.samples</groupId>
   <name>Distribute Key Value Store in Akka Java</name>
-  <version>empty</version>
+  <version>1.0</version>
 
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
