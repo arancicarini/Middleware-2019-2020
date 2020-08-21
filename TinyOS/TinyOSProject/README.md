@@ -5,6 +5,7 @@
 - Boot the VM: user = user and password = password
 - Don’t update the VM, ignore messages
 - Clone this repo inside the VM
+
 Open a shell, navigate to TinyOSProject and type:
 
     - make micaz sim
