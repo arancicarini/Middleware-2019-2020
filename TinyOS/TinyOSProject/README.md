@@ -7,9 +7,9 @@
 - Clone this repo inside the VM
 - Open a shell, navigate to TinyOSProject and type:
 
-    - `make micaz sim
+    `make micaz sim
     
-    - python Simulation.py`
+    python Simulation.py`
     
 - Check the output of the debugger in the files simulation.txt and performance.txt
 
