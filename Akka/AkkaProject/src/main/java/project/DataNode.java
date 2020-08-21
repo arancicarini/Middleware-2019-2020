@@ -224,10 +224,6 @@ public class DataNode {
     private Behavior<Command> onGetRequest(GetRequest message){
         int nodePosition = message.key.hashCode() % nodes.size();
         if(nodePosition < 0 ) nodePosition += nodes.size();
-        System.out.println(nodes.size() + " this is the size of the cluster");
-        System.out.println(nodePosition + "   NODE POSITION for key " + message.key);
-
-
         nodes.sort(Comparator.comparing(NodeInfo::getHashKey));
         if (nodePosition == this.nodeId){
             //I'm the leader, I return the value I've stored, even if null, and I specify if it's present in the answer message
@@ -287,8 +283,6 @@ public class DataNode {
     private Behavior<Command> onPutRequest(PutRequest message){
         int nodePosition = message.key.hashCode() % nodes.size();
         if(nodePosition < 0 ) nodePosition += nodes.size();
-        System.out.println(nodes.size() + " this is the size of the cluster");
-        System.out.println(nodePosition + "   NODE POSITION for key " + message.key);
         nodes.sort(Comparator.comparing(NodeInfo::getHashKey));
         if (nodePosition == this.nodeId){
             //I'm the leader, so I add the value to my data
