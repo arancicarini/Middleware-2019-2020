@@ -1,8 +1,6 @@
 /**
- *  Source file for implementation of module Middleware
- *  which provides the main logic for middleware message management
+ *  Source file of the module of the fake sensor component used to test the middleware application logic in TOSSIM.
  *
- *  @author Luca Pietro Borsani
  */
  
 generic module FakeSensorP() {

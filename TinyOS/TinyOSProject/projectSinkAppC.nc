@@ -1,3 +1,8 @@
+/**
+ *  Configuration file for wiring projectSinkAppP module to other
+ *  components to simulate the behavior of a real network of sensors
+ *
+ */
 #include "project.h"
 
 configuration projectSinkAppC {}

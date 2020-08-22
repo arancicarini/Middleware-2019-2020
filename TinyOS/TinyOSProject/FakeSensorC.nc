@@ -1,8 +1,7 @@
 /**
- *  Configuration file for wiring of FakeSensorP module to other common 
+ *  Configuration file for wiring FakeSensorP module to other
  *  components to simulate the behavior of a real sensor
  *
- *  @author Luca Pietro Borsani
  */
  
 generic configuration FakeSensorC() {

@@ -56,11 +56,12 @@ implementation
   		if(err == SUCCESS){
   			dbg ("boot", "Booting ... I'm node : %d, Radio started at time: %s \n", TOS_NODE_ID, sim_time_string());
   			if(TOS_NODE_ID ==1){
+  				//I'm the sink
 				call TresholdTimer.startPeriodicAt(0, 2000);
 			}
 			else{
 				//Inizializing node values
-				treshold = 4294967295;
+				treshold = 4294967295; // maximum value for a 32 bit integer
 				nextHop = 0;
 				call DataTimer.startPeriodicAt(0, 1000);
 			}
@@ -119,7 +120,7 @@ implementation
 				dbg("sink", "Sink node received data message from %hu with data %lu at time %s\n",mess->source, mess->value, sim_time_string()); 
 				counter +=1;
 				dbg_clear("analysis", "\n");
-				dbg("analysis","Message counter: %hu\n",counter);
+				dbg("analysis","Data Message counter: %hu\n",counter);
 				dbg_clear("analysis", "\n");
       			dbg("analysis", "Time for data message from %hu to sink is : %lu ms\n", mess-> source, (sim_time()-mess->time)); 
       			dbg("analysis", "current simulation time: %s\n", sim_time_string());
@@ -197,7 +198,7 @@ implementation
 			call Ack.requestAck(&packet);
 			if(call AMSend.send(AM_BROADCAST_ADDR, &packet,sizeof(Msg_t)) == SUCCESS){
 				dbg_clear("radio", "\n");
-		   		dbg("radio","Packet sent from: %hu, data: %lu, type: %hu\n elapsed time: ", TOS_NODE_ID, mess->value, mess->type);
+		   		dbg("radio","Packet sent from: %hu, data: %lu, type: %hu\n", TOS_NODE_ID, mess->value, mess->type);
 		   		locked = TRUE;
 			}
 			else{
