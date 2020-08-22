@@ -1,0 +1,268 @@
+
+DEBUG (1): Sink just read new treshold 33614
+
+DEBUG (1): Sink node received data message from 2 with data 572982925 at time 0:0:3.946594207
+
+DEBUG (1): Sink node received data message from 9 with data 1194115201 at time 0:0:3.951110786
+
+DEBUG (1): Sink node received data message from 13 with data 1242264552 at time 0:0:3.954116752
+
+DEBUG (1): Sink node received data message from 19 with data 240746755 at time 0:0:3.956954873
+
+DEBUG (1): Sink node received data message from 28 with data 1959695530 at time 0:0:3.966277943
+
+DEBUG (1): Sink just read new treshold 564950498
+
+DEBUG (1): Sink node received data message from 3 with data 1792290985 at time 0:0:4.922546360
+
+DEBUG (1): Sink node received data message from 12 with data 2066849319 at time 0:0:4.936736955
+
+DEBUG (1): Sink node received data message from 4 with data 1425577356 at time 0:0:5.899124119
+
+DEBUG (1): Sink node received data message from 7 with data 562936852 at time 0:0:5.905914242
+
+DEBUG (1): Sink node received data message from 28 with data 966904265 at time 0:0:5.909545823
+
+DEBUG (1): Sink node received data message from 16 with data 122498987 at time 0:0:5.914581188
+
+DEBUG (1): Sink node received data message from 39 with data 667200613 at time 0:0:5.916702159
+
+DEBUG (1): Sink just read new treshold 1097816499
+
+DEBUG (1): Sink node received data message from 3 with data 1880845088 at time 0:0:6.876220673
+
+DEBUG (1): Sink node received data message from 2 with data 1410633816 at time 0:0:6.878173786
+
+DEBUG (1): Sink node received data message from 12 with data 1817779242 at time 0:0:6.879730178
+
+DEBUG (1): Sink node received data message from 3 with data 404110176 at time 0:0:7.851364114
+
+DEBUG (1): Sink node received data message from 15 with data 1616440704 at time 0:0:7.862487712
+
+DEBUG (1): Sink node received data message from 35 with data 1489507937 at time 0:0:7.864547647
+
+DEBUG (1): Sink node received data message from 25 with data 479232497 at time 0:0:7.871322504
+
+DEBUG (1): Sink just read new treshold 1969887316
+
+DEBUG (1): Sink node received data message from 32 with data 864438740 at time 0:0:8.845703014
+
+DEBUG (1): Sink node received data message from 3 with data 1540144398 at time 0:0:9.802871692
+
+DEBUG (1): Sink node received data message from 22 with data 1339637524 at time 0:0:9.805770854
+
+DEBUG (1): Sink node received data message from 13 with data 1095538099 at time 0:0:9.814163135
+
+DEBUG (1): Sink node received data message from 10 with data 1014171624 at time 0:0:9.816467197
+
+DEBUG (1): Sink just read new treshold 140734213
+
+DEBUG (1): Sink node received data message from 3 with data 1586499895 at time 0:0:10.785888622
+
+DEBUG (1): Sink node received data message from 38 with data 972859359 at time 0:0:10.801345702
+
+DEBUG (1): Sink node received data message from 2 with data 323209673 at time 0:0:11.754333493
+
+DEBUG (1): Sink node received data message from 3 with data 1146774113 at time 0:0:11.757308940
+
+DEBUG (1): Sink node received data message from 4 with data 1970338553 at time 0:0:11.762313794
+
+DEBUG (1): Sink node received data message from 7 with data 146064579 at time 0:0:11.768096843
+
+DEBUG (1): Sink node received data message from 10 with data 469274252 at time 0:0:11.769943147
+
+DEBUG (1): Sink node received data message from 19 with data 1438903271 at time 0:0:11.773895155
+
+DEBUG (1): Sink node received data message from 11 with data 1292838692 at time 0:0:11.776244990
+
+DEBUG (1): Sink just read new treshold 940422544
+
+DEBUG (1): Sink node received data message from 2 with data 1198830848 at time 0:0:12.732574450
+
+DEBUG (1): Sink node received data message from 4 with data 1282223531 at time 0:0:12.734695410
+
+DEBUG (1): Sink node received data message from 3 with data 166785366 at time 0:0:12.736190762
+
+DEBUG (1): Sink node received data message from 12 with data 1615794263 at time 0:0:12.744781415
+
+DEBUG (1): Sink node received data message from 6 with data 1365616214 at time 0:0:12.747970480
+
+DEBUG (1): Sink node received data message from 3 with data 695487027 at time 0:0:13.709655746
+
+DEBUG (1): Sink node received data message from 5 with data 2116972364 at time 0:0:13.726150402
+
+DEBUG (1): Sink node received data message from 31 with data 1268928922 at time 0:0:13.732910019
+
+DEBUG (1): Sink just read new treshold 202055088
+
+DEBUG (1): Sink node received data message from 3 with data 296972168 at time 0:0:14.694168029
+
+DEBUG (1): Sink node received data message from 31 with data 228293697 at time 0:0:14.703063865
+
+DEBUG (1): Sink node received data message from 3 with data 459231948 at time 0:0:15.660369871
+
+DEBUG (1): Sink node received data message from 4 with data 574039935 at time 0:0:15.668884227
+
+DEBUG (1): Sink just read new treshold 768218109
+
+DEBUG (1): Sink node received data message from 3 with data 255122718 at time 0:0:16.638687122
+
+DEBUG (1): Sink node received data message from 4 with data 1392645221 at time 0:0:16.640197734
+
+DEBUG (1): Sink node received data message from 10 with data 1775329298 at time 0:0:16.650939862
+
+DEBUG (1): Sink just read new treshold 770072199
+
+DEBUG (1): Sink node received data message from 9 with data 165317290 at time 0:0:18.609466441
+
+DEBUG (1): Sink node received data message from 3 with data 1146031713 at time 0:0:19.567596428
+
+DEBUG (1): Sink node received data message from 4 with data 1969410553 at time 0:0:19.573806720
+
+DEBUG (1): Sink node received data message from 6 with data 1468684586 at time 0:0:19.579666061
+
+DEBUG (1): Sink node received data message from 8 with data 967958619 at time 0:0:19.582641509
+
+DEBUG (1): Sink node received data message from 40 with data 1546277735 at time 0:0:19.586135767
+
+DEBUG (1): Sink node received data message from 25 with data 2080497017 at time 0:0:19.594070284
+
+DEBUG (1): Sink just read new treshold 1866991771
+
+DEBUG (1): Sink node received data message from 35 with data 872566738 at time 0:0:20.559982216
+
+DEBUG (1): Sink node received data message from 5 with data 1084298524 at time 0:0:21.525512661
+
+DEBUG (1): Sink node received data message from 3 with data 1438693565 at time 0:0:21.528335520
+
+DEBUG (1): Sink node received data message from 12 with data 917657704 at time 0:0:21.530410707
+
+DEBUG (1): Sink node received data message from 8 with data 1626447786 at time 0:0:21.536086942
+
+DEBUG (1): Sink node received data message from 27 with data 1480920367 at time 0:0:21.544387684
+
+DEBUG (1): Sink just read new treshold 1647128880
+
+DEBUG (1): Sink node received data message from 3 with data 1604365382 at time 0:0:22.503524737
+
+DEBUG (1): Sink node received data message from 4 with data 931714904 at time 0:0:22.509429854
+
+DEBUG (1): Sink node received data message from 24 with data 363607226 at time 0:0:22.514907737
+
+DEBUG (1): Sink node received data message from 14 with data 1792396459 at time 0:0:23.488693149
+
+DEBUG (1): Sink node received data message from 31 with data 1819461042 at time 0:0:23.493652235
+
+DEBUG (1): Sink just read new treshold 83392683
+
+DEBUG (1): Sink node received data message from 2 with data 1699324177 at time 0:0:24.450973500
+
+DEBUG (1): Sink node received data message from 32 with data 1512696771 at time 0:0:24.467712309
+
+DEBUG (1): Sink node received data message from 2 with data 1156421386 at time 0:0:25.430023168
+
+DEBUG (1): Sink node received data message from 3 with data 826067299 at time 0:0:25.432067834
+
+DEBUG (1): Sink node received data message from 13 with data 1817493723 at time 0:0:25.436447086
+
+DEBUG (1): Sink node received data message from 6 with data 1982488685 at time 0:0:25.440505897
+
+DEBUG (1): Sink node received data message from 9 with data 991426424 at time 0:0:25.443740743
+
+DEBUG (1): Sink node received data message from 35 with data 992154750 at time 0:0:25.445403954
+
+DEBUG (1): Sink just read new treshold 1421485337
+
+DEBUG (1): Sink node received data message from 4 with data 1362887371 at time 0:0:26.403381342
+
+DEBUG (1): Sink node received data message from 2 with data 1247229152 at time 0:0:26.410171462
+
+DEBUG (1): Sink node received data message from 13 with data 809607533 at time 0:0:26.412033029
+
+DEBUG (1): Sink node received data message from 7 with data 462632876 at time 0:0:26.419647117
+
+DEBUG (1): Sink node received data message from 33 with data 1966189723 at time 0:0:26.424316293
+
+DEBUG (1): Sink node received data message from 8 with data 1777437891 at time 0:0:27.382385236
+
+DEBUG (1): Sink node received data message from 7 with data 1579944792 at time 0:0:27.388793889
+
+DEBUG (1): Sink node received data message from 37 with data 1062286821 at time 0:0:27.395309369
+
+DEBUG (1): Sink node received data message from 19 with data 1802378333 at time 0:0:27.403762680
+
+DEBUG (1): Sink just read new treshold 148486084
+
+DEBUG (1): Sink node received data message from 2 with data 2065357187 at time 0:0:28.360183687
+
+DEBUG (1): Sink node received data message from 23 with data 1490471967 at time 0:0:28.384658653
+
+DEBUG (1): Sink node received data message from 11 with data 2130287204 at time 0:0:29.341644235
+
+DEBUG (1): Sink node received data message from 30 with data 1924102532 at time 0:0:29.349227818
+
+DEBUG (1): Sink node received data message from 12 with data 876155373 at time 0:0:29.352935673
+
+DEBUG (1): Sink just read new treshold 229615974
+
+DEBUG (1): Sink node received data message from 2 with data 222418711 at time 0:0:30.312728857
+
+DEBUG (1): Sink node received data message from 2 with data 1569729997 at time 0:0:31.286926258
+
+DEBUG (1): Sink node received data message from 5 with data 991976347 at time 0:0:31.293823192
+
+DEBUG (1): Sink node received data message from 11 with data 1983952694 at time 0:0:31.298049855
+
+DEBUG (1): Sink node received data message from 24 with data 1627837191 at time 0:0:31.304305929
+
+DEBUG (1): Sink just read new treshold 127561359
+
+DEBUG (1): Sink node received data message from 4 with data 1741588189 at time 0:0:32.265441873
+
+DEBUG (1): Sink node received data message from 2 with data 615456184 at time 0:0:32.267837488
+
+DEBUG (1): Sink node received data message from 13 with data 1440473094 at time 0:0:32.278900051
+
+DEBUG (1): Sink node received data message from 2 with data 1690840536 at time 0:0:33.241653422
+
+DEBUG (1): Sink node received data message from 4 with data 670583913 at time 0:0:33.247024485
+
+DEBUG (1): Sink node received data message from 8 with data 777554314 at time 0:0:33.252136152
+
+DEBUG (1): Sink node received data message from 5 with data 1234197425 at time 0:0:33.254287627
+
+DEBUG (1): Sink node received data message from 13 with data 1448138227 at time 0:0:33.256118675
+
+DEBUG (1): Sink just read new treshold 735081007
+
+DEBUG (1): Sink node received data message from 4 with data 509646335 at time 0:0:34.216476431
+
+DEBUG (1): Sink node received data message from 8 with data 917363403 at time 0:0:34.230560213
+
+DEBUG (1): Sink node received data message from 15 with data 1630868272 at time 0:0:34.235320931
+
+DEBUG (1): Sink node received data message from 39 with data 1929687033 at time 0:0:34.237151987
+
+DEBUG (1): Sink node received data message from 30 with data 1012323630 at time 0:0:34.243072358
+
+DEBUG (1): Sink node received data message from 2 with data 447204136 at time 0:0:35.196136446
+
+DEBUG (1): Sink node received data message from 6 with data 327648435 at time 0:0:35.205093305
+
+DEBUG (1): Sink node received data message from 10 with data 208092734 at time 0:0:35.211288339
+
+DEBUG (1): Sink just read new treshold 33063458
+
+DEBUG (1): Sink node received data message from 35 with data 1753274671 at time 0:0:36.188323871
+
+DEBUG (1): Sink node received data message from 29 with data 1818976167 at time 0:0:36.191863887
+
+DEBUG (1): Sink node received data message from 2 with data 1928259290 at time 0:0:37.144577025
+
+DEBUG (1): Sink node received data message from 4 with data 350453954 at time 0:0:37.147811871
+
+DEBUG (1): Sink node received data message from 10 with data 2059488887 at time 0:0:37.160491853
+
+DEBUG (1): Sink node received data message from 30 with data 1313821056 at time 0:0:37.168182248
+
+DEBUG (1): Sink node received data message from 21 with data 1971494127 at time 0:0:37.171874849

@@ -12,7 +12,7 @@ from TOSSIM import*;
 t = Tossim([]);
 
 
-topofile="topology32.txt";
+topofile="topology5.31.txt";
 modelfile="meyer-heavy.txt";
 
 
@@ -66,8 +66,9 @@ debug_out.write("\nCreating nodes:\n\n");
 for i in range(1,32):
 	debug_out.write("Creating node: "+str(i)+"\n");
 	node=t.getNode(i);
-	time=t.ticksPerSecond(); #instant at which each node should be turned on
+	time=t.ticksPerSecond() + 5*i; #instant at which each node should be turned on
 	node.bootAtTime(time);
+	debug_out.write(">>>Will boot at time" + str(time/t.ticksPerSecond()) + " [sec]");
 
 
 ##Setting radio channel
@@ -108,7 +109,7 @@ for i in range(1, 32):
 
 debug_out.write("\nStart simulation with TOSSIM!\n\n");
 
-for i in range(0,16000):
+for i in range(0,32000):
 	t.runNextEvent()
 	
 

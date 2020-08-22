@@ -122,7 +122,7 @@ implementation
 				dbg_clear("analysis", "\n");
 				dbg("analysis","Data Message counter: %hu\n",counter);
 				dbg_clear("analysis", "\n");
-      			dbg("analysis", "Time for data message from %hu to sink is : %lu ms\n", mess-> source, (sim_time()-mess->time)); 
+      			dbg("analysis", "Time for data message %lu from %hu to sink is : %lu ms\n", mess->value, mess-> source, (sim_time()-mess->time)); 
       			dbg("analysis", "current simulation time: %s\n", sim_time_string());
 			}
 			else{

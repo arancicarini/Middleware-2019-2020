@@ -1,0 +1,2644 @@
+DEBUG FILE
+
+Adding debug channels:
+
+Activate debug message on channel init
+Activate debug message on channel boot
+Activate debug message on channel sink
+Activate debug message on channel radio
+Activate debug message on channel timer
+Activate debug message on channel data
+Activate debug message on channel error
+Activate debug message on channel treshold
+
+Creating nodes:
+
+Creating node: 1
+>>>Will boot at time1 [sec]Creating node: 2
+>>>Will boot at time1 [sec]Creating node: 3
+>>>Will boot at time1 [sec]Creating node: 4
+>>>Will boot at time1 [sec]Creating node: 5
+>>>Will boot at time1 [sec]Creating node: 6
+>>>Will boot at time1 [sec]Creating node: 7
+>>>Will boot at time1 [sec]
+Creating radio channels:
+
+Setting radio channel from node: 1 to node:2,with gain:-60.0dBm
+Setting radio channel from node: 2 to node:1,with gain:-60.0dBm
+Setting radio channel from node: 3 to node:1,with gain:-60.0dBm
+Setting radio channel from node: 1 to node:3,with gain:-60.0dBm
+Setting radio channel from node: 2 to node:4,with gain:-60.0dBm
+Setting radio channel from node: 4 to node:2,with gain:-60.0dBm
+Setting radio channel from node: 2 to node:5,with gain:-60.0dBm
+Setting radio channel from node: 5 to node:2,with gain:-60.0dBm
+Setting radio channel from node: 3 to node:6,with gain:-60.0dBm
+Setting radio channel from node: 6 to node:3,with gain:-60.0dBm
+Setting radio channel from node: 3 to node:7,with gain:-60.0dBm
+Setting radio channel from node: 7 to node:3,with gain:-60.0dBm
+
+Initializing Closest Pattern Matching (CPM):
+
+Creating noise model for node:1
+Creating noise model for node:2
+Creating noise model for node:3
+Creating noise model for node:4
+Creating noise model for node:5
+Creating noise model for node:6
+Creating noise model for node:7
+
+Start simulation with TOSSIM!
+
+DEBUG (1): Booting ... I'm node : 1, Radio started at time: 0:0:1.000000010 
+DEBUG (2): Booting ... I'm node : 2, Radio started at time: 0:0:1.000000011 
+DEBUG (3): Booting ... I'm node : 3, Radio started at time: 0:0:1.000000011 
+DEBUG (4): Booting ... I'm node : 4, Radio started at time: 0:0:1.000000012 
+DEBUG (5): Booting ... I'm node : 5, Radio started at time: 0:0:1.000000012 
+DEBUG (6): Booting ... I'm node : 6, Radio started at time: 0:0:1.000000013 
+DEBUG (7): Booting ... I'm node : 7, Radio started at time: 0:0:1.000000013 
+
+DEBUG (2): Data timer fired at 0:0:1.976562511.
+
+DEBUG (3): Data timer fired at 0:0:1.976562511.
+
+DEBUG (4): Data timer fired at 0:0:1.976562512.
+
+DEBUG (5): Data timer fired at 0:0:1.976562512.
+
+DEBUG (6): Data timer fired at 0:0:1.976562513.
+
+DEBUG (7): Data timer fired at 0:0:1.976562513.
+
+DEBUG (1): Treshold timer fired at 0:0:2.953125010.
+
+DEBUG (2): Data timer fired at 0:0:2.953125011.
+
+DEBUG (3): Data timer fired at 0:0:2.953125011.
+
+DEBUG (4): Data timer fired at 0:0:2.953125012.
+
+DEBUG (5): Data timer fired at 0:0:2.953125012.
+
+DEBUG (6): Data timer fired at 0:0:2.953125013.
+
+DEBUG (7): Data timer fired at 0:0:2.953125013.
+
+DEBUG (1): Sink just read new treshold 33614
+
+DEBUG (1): Packet sent from: 1, data: 33614, type: 1
+
+DEBUG (3): Mote 3 has received a treshold message with treshold 33614 from mote 1
+
+DEBUG (3): Packet sent from: 3, data: 33614, type: 1
+
+DEBUG (2): Mote 2 has received a treshold message with treshold 33614 from mote 1
+
+DEBUG (2): Packet sent from: 2, data: 33614, type: 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (5): Mote 5 has received a treshold message with treshold 33614 from mote 2
+
+DEBUG (5): Packet sent from: 5, data: 33614, type: 1
+
+DEBUG (4): Mote 4 has received a treshold message with treshold 33614 from mote 2
+
+DEBUG (4): Packet sent from: 4, data: 33614, type: 1
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (7): Mote 7 has received a treshold message with treshold 33614 from mote 3
+
+DEBUG (7): Packet sent from: 7, data: 33614, type: 1
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:3.929687511.
+
+DEBUG (3): Data timer fired at 0:0:3.929687511.
+
+DEBUG (4): Data timer fired at 0:0:3.929687512.
+
+DEBUG (5): Data timer fired at 0:0:3.929687512.
+
+DEBUG (6): Data timer fired at 0:0:3.929687513.
+
+DEBUG (7): Data timer fired at 0:0:3.929687513.
+
+DEBUG (2): Mote 2 just read new data 572982925 above the treshold 33614 at time 0:0:3.939453136
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 572982925, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 48149351 above the treshold 33614 at time 0:0:3.939453136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 48149351, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 1670799424 above the treshold 33614 at time 0:0:3.939453137
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 1670799424, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 1145965850 above the treshold 33614 at time 0:0:3.939453137
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 1145965850, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 96298702 above the treshold 33614 at time 0:0:3.939453138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 96298702, type: 2
+ 
+DEBUG (2): Mote 2 has received a data message with data 1145965850
+
+DEBUG (5): Packet sent at time 0:0:3.943222036 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 1670799424
+
+DEBUG (4): Packet sent at time 0:0:3.946289034 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 96298702
+
+DEBUG (7): Packet sent at time 0:0:3.946792573 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 3 with data 48149351 at time 0:0:3.948455769
+
+DEBUG (3): Packet sent at time 0:0:3.948623615 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 2 with data 572982925 at time 0:0:3.950103708
+
+DEBUG (2): Packet sent at time 0:0:3.950271554 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:4.906250010.
+
+DEBUG (2): Data timer fired at 0:0:4.906250011.
+
+DEBUG (3): Data timer fired at 0:0:4.906250011.
+
+DEBUG (4): Data timer fired at 0:0:4.906250012.
+
+DEBUG (5): Data timer fired at 0:0:4.906250012.
+
+DEBUG (6): Data timer fired at 0:0:4.906250013.
+
+DEBUG (7): Data timer fired at 0:0:4.906250013.
+
+DEBUG (1): Sink just read new treshold 564950498
+
+DEBUG (1): Packet sent from: 1, data: 564950498, type: 1
+
+DEBUG (2): Mote 2 just read new data 807347327 above the treshold 33614 at time 0:0:4.916015636
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 807347327, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 1792290985 above the treshold 33614 at time 0:0:4.916015636
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1792290985, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 629750996 above the treshold 33614 at time 0:0:4.916015637
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 629750996, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 1614694654 above the treshold 33614 at time 0:0:4.916015637
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 1614694654, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 1437098323 above the treshold 33614 at time 0:0:4.916015638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 1437098323, type: 2
+ 
+DEBUG (3): Mote 3 has received a data message with data 1437098323
+
+DEBUG (7): Packet sent at time 0:0:4.918304443 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (3): Mote 3 has received a treshold message with treshold 564950498 from mote 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 3 with data 1792290985 at time 0:0:4.925735428
+
+DEBUG (3): Packet sent at time 0:0:4.925903274 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 2 with data 807347327 at time 0:0:4.927200263
+
+DEBUG (2): Packet sent at time 0:0:4.927368108 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (2): Data timer fired at 0:0:5.882812511.
+
+DEBUG (3): Data timer fired at 0:0:5.882812511.
+
+DEBUG (4): Data timer fired at 0:0:5.882812512.
+
+DEBUG (5): Data timer fired at 0:0:5.882812512.
+
+DEBUG (6): Data timer fired at 0:0:5.882812513.
+
+DEBUG (7): Data timer fired at 0:0:5.882812513.
+
+DEBUG (2): Mote 2 just read new data 1284843143 above the treshold 33614 at time 0:0:5.892578136
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1284843143, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 1425577356 above the treshold 33614 at time 0:0:5.892578137
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 1425577356, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 422202639 above the treshold 33614 at time 0:0:5.892578137
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 422202639, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 562936852 above the treshold 33614 at time 0:0:5.892578138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 562936852, type: 2
+ 
+DEBUG (3): Mote 3 has received a data message with data 562936852
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 562936852, type: 2
+ 
+DEBUG (7): Packet sent at time 0:0:5.897827131 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 2 with data 1284843143 at time 0:0:5.898422218
+
+DEBUG (2): Packet sent at time 0:0:5.898590063 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 7 with data 562936852 at time 0:0:5.906890799
+
+DEBUG (3): Packet sent at time 0:0:5.907058644 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:6.859375010.
+
+DEBUG (2): Data timer fired at 0:0:6.859375011.
+
+DEBUG (3): Data timer fired at 0:0:6.859375011.
+
+DEBUG (4): Data timer fired at 0:0:6.859375012.
+
+DEBUG (5): Data timer fired at 0:0:6.859375012.
+
+DEBUG (6): Data timer fired at 0:0:6.859375013.
+
+DEBUG (7): Data timer fired at 0:0:6.859375013.
+
+DEBUG (1): Sink just read new treshold 1097816499
+
+DEBUG (1): Packet sent from: 1, data: 1097816499, type: 1
+
+DEBUG (2): Mote 2 just read new data 1410633816 above the treshold 33614 at time 0:0:6.869140636
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1410633816, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 1880845088 above the treshold 564950498 at time 0:0:6.869140636
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1880845088, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 203572713 above the treshold 33614 at time 0:0:6.869140637
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 203572713, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 673783985 above the treshold 33614 at time 0:0:6.869140637
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 673783985, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 1614206529 above the treshold 33614 at time 0:0:6.869140638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 1614206529, type: 2
+ 
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 3 with data 1880845088 at time 0:0:6.874999977
+
+DEBUG (3): Packet sent at time 0:0:6.875167823 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (3): Mote 3 has received a data message with data 1614206529
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1614206529, type: 2
+ 
+DEBUG (7): Packet sent at time 0:0:6.877639734 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 2 with data 1410633816 at time 0:0:6.878829910
+
+DEBUG (2): Packet sent at time 0:0:6.878997756 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a treshold message with treshold 1097816499 from mote 1
+
+DEBUG (2): Mote 2 has received a treshold message with treshold 1097816499 from mote 1
+
+DEBUG (2): Packet sent from: 2, data: 1097816499, type: 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (5): Mote 5 has received a treshold message with treshold 1097816499 from mote 2
+
+DEBUG (5): Packet sent from: 5, data: 1097816499, type: 1
+
+DEBUG (4): Mote 4 has received a treshold message with treshold 1097816499 from mote 2
+
+DEBUG (4): Packet sent from: 4, data: 1097816499, type: 1
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:7.835937511.
+
+DEBUG (3): Data timer fired at 0:0:7.835937511.
+
+DEBUG (4): Data timer fired at 0:0:7.835937512.
+
+DEBUG (5): Data timer fired at 0:0:7.835937512.
+
+DEBUG (6): Data timer fired at 0:0:7.835937513.
+
+DEBUG (7): Data timer fired at 0:0:7.835937513.
+
+DEBUG (7): Mote 7 just read new data 808220352 above the treshold 33614 at time 0:0:7.845703138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 808220352, type: 2
+ 
+DEBUG (3): Mote 3 has received a data message with data 808220352
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 808220352, type: 2
+ 
+DEBUG (7): Packet sent at time 0:0:7.855834915 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 7 with data 808220352 at time 0:0:7.866729627
+
+DEBUG (3): Packet sent at time 0:0:7.866897472 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:8.812500010.
+
+DEBUG (2): Data timer fired at 0:0:8.812500011.
+
+DEBUG (3): Data timer fired at 0:0:8.812500011.
+
+DEBUG (4): Data timer fired at 0:0:8.812500012.
+
+DEBUG (5): Data timer fired at 0:0:8.812500012.
+
+DEBUG (6): Data timer fired at 0:0:8.812500013.
+
+DEBUG (7): Data timer fired at 0:0:8.812500013.
+
+DEBUG (1): Sink just read new treshold 1969887316
+
+DEBUG (1): Packet sent from: 1, data: 1969887316, type: 1
+
+DEBUG (3): Mote 3 just read new data 1536436218 above the treshold 1097816499 at time 0:0:8.822265636
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1536436218, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 925388789 above the treshold 33614 at time 0:0:8.822265638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 925388789, type: 2
+ 
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (2): Mote 2 has received a treshold message with treshold 1969887316 from mote 1
+
+DEBUG (2): Packet sent from: 2, data: 1969887316, type: 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 3 with data 1536436218 at time 0:0:8.829147310
+
+DEBUG (3): Packet sent at time 0:0:8.829315155 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (5): Mote 5 has received a treshold message with treshold 1969887316 from mote 2
+
+DEBUG (5): Packet sent from: 5, data: 1969887316, type: 1
+
+DEBUG (4): Mote 4 has received a treshold message with treshold 1969887316 from mote 2
+
+DEBUG (4): Packet sent from: 4, data: 1969887316, type: 1
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:9.789062511.
+
+DEBUG (3): Data timer fired at 0:0:9.789062511.
+
+DEBUG (4): Data timer fired at 0:0:9.789062512.
+
+DEBUG (5): Data timer fired at 0:0:9.789062512.
+
+DEBUG (6): Data timer fired at 0:0:9.789062513.
+
+DEBUG (7): Data timer fired at 0:0:9.789062513.
+
+DEBUG (3): Mote 3 just read new data 1540144398 above the treshold 1097816499 at time 0:0:9.798828136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1540144398, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 932805149 above the treshold 33614 at time 0:0:9.798828138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 932805149, type: 2
+ 
+DEBUG (1): Sink node received data message from 3 with data 1540144398 at time 0:0:9.803863507
+
+DEBUG (3): Packet sent at time 0:0:9.804031353 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 932805149
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 932805149, type: 2
+ 
+DEBUG (7): Packet sent at time 0:0:9.806320160 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 7 with data 932805149 at time 0:0:9.814605634
+
+DEBUG (3): Packet sent at time 0:0:9.814773480 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:10.765625010.
+
+DEBUG (2): Data timer fired at 0:0:10.765625011.
+
+DEBUG (3): Data timer fired at 0:0:10.765625011.
+
+DEBUG (4): Data timer fired at 0:0:10.765625012.
+
+DEBUG (5): Data timer fired at 0:0:10.765625012.
+
+DEBUG (6): Data timer fired at 0:0:10.765625013.
+
+DEBUG (7): Data timer fired at 0:0:10.765625013.
+
+DEBUG (1): Sink just read new treshold 140734213
+
+DEBUG (1): Packet sent from: 1, data: 140734213, type: 1
+
+DEBUG (3): Mote 3 just read new data 1586499895 above the treshold 1097816499 at time 0:0:10.775390636
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1586499895, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 1025516143 above the treshold 33614 at time 0:0:10.775390638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 1025516143, type: 2
+ 
+DEBUG (3): Mote 3 has received a data message with data 1025516143
+
+DEBUG (7): Packet sent at time 0:0:10.778594965 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a treshold message with treshold 140734213 from mote 1
+
+DEBUG (2): Mote 2 has received a treshold message with treshold 140734213 from mote 1
+
+DEBUG (2): Packet sent from: 2, data: 140734213, type: 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 3 with data 1586499895 at time 0:0:10.785430861
+
+DEBUG (3): Packet sent at time 0:0:10.785598706 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (5): Mote 5 has received a treshold message with treshold 140734213 from mote 2
+
+DEBUG (5): Packet sent from: 5, data: 140734213, type: 1
+
+DEBUG (4): Mote 4 has received a treshold message with treshold 140734213 from mote 2
+
+DEBUG (4): Packet sent from: 4, data: 140734213, type: 1
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:11.742187511.
+
+DEBUG (3): Data timer fired at 0:0:11.742187511.
+
+DEBUG (4): Data timer fired at 0:0:11.742187512.
+
+DEBUG (5): Data timer fired at 0:0:11.742187512.
+
+DEBUG (6): Data timer fired at 0:0:11.742187513.
+
+DEBUG (7): Data timer fired at 0:0:11.742187513.
+
+DEBUG (2): Mote 2 just read new data 323209673 above the treshold 140734213 at time 0:0:11.751953136
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 323209673, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 1146774113 above the treshold 140734213 at time 0:0:11.751953136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1146774113, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 1970338553 above the treshold 140734213 at time 0:0:11.751953137
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 1970338553, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 646419346 above the treshold 140734213 at time 0:0:11.751953137
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 646419346, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 146064579 above the treshold 33614 at time 0:0:11.751953138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 146064579, type: 2
+ 
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 3 with data 1146774113 at time 0:0:11.761260943
+
+DEBUG (3): Packet sent at time 0:0:11.761428789 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 2 with data 323209673 at time 0:0:11.763839663
+
+DEBUG (2): Packet sent at time 0:0:11.764007509 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:12.718750010.
+
+DEBUG (2): Data timer fired at 0:0:12.718750011.
+
+DEBUG (3): Data timer fired at 0:0:12.718750011.
+
+DEBUG (4): Data timer fired at 0:0:12.718750012.
+
+DEBUG (5): Data timer fired at 0:0:12.718750012.
+
+DEBUG (6): Data timer fired at 0:0:12.718750013.
+
+DEBUG (7): Data timer fired at 0:0:12.718750013.
+
+DEBUG (1): Sink just read new treshold 940422544
+
+DEBUG (1): Packet sent from: 1, data: 940422544, type: 1
+
+DEBUG (2): Mote 2 just read new data 1198830848 above the treshold 140734213 at time 0:0:12.728515636
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1198830848, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 166785366 above the treshold 140734213 at time 0:0:12.728515636
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 166785366, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 1282223531 above the treshold 140734213 at time 0:0:12.728515637
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 1282223531, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 250178049 above the treshold 140734213 at time 0:0:12.728515637
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 250178049, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 333570732 above the treshold 33614 at time 0:0:12.728515638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 333570732, type: 2
+ 
+DEBUG (3): Mote 3 has received a data message with data 333570732
+
+DEBUG (7): Packet sent at time 0:0:12.732650746 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (2): Mote 2 has received a data message with data 1282223531
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1282223531, type: 2
+ 
+DEBUG (4): Packet sent at time 0:0:12.736175504 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (3): Mote 3 has received a treshold message with treshold 940422544 from mote 1
+
+DEBUG (3): Packet sent from: 3, data: 940422544, type: 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 4 with data 1282223531 at time 0:0:12.742614675
+
+DEBUG (2): Packet sent at time 0:0:12.742782521 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (7): Mote 7 has received a treshold message with treshold 940422544 from mote 3
+
+DEBUG (7): Packet sent from: 7, data: 940422544, type: 1
+
+DEBUG (6): Mote 6 has received a treshold message with treshold 940422544 from mote 3
+
+DEBUG (6): Packet sent from: 6, data: 940422544, type: 1
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:13.695312511.
+
+DEBUG (3): Data timer fired at 0:0:13.695312511.
+
+DEBUG (4): Data timer fired at 0:0:13.695312512.
+
+DEBUG (5): Data timer fired at 0:0:13.695312512.
+
+DEBUG (6): Data timer fired at 0:0:13.695312513.
+
+DEBUG (7): Data timer fired at 0:0:13.695312513.
+
+DEBUG (2): Mote 2 just read new data 1058486182 above the treshold 140734213 at time 0:0:13.705078136
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1058486182, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 332487872 above the treshold 140734213 at time 0:0:13.705078137
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 332487872, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 2116972364 above the treshold 140734213 at time 0:0:13.705078137
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 2116972364, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1753973209 above the treshold 940422544 at time 0:0:13.705078138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1753973209, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 1390974054 above the treshold 940422544 at time 0:0:13.705078138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 1390974054, type: 2
+ 
+DEBUG (3): Mote 3 has received a data message with data 1753973209
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1753973209, type: 2
+ 
+DEBUG (1): Sink node received data message from 2 with data 1058486182 at time 0:0:13.707916254
+
+DEBUG (6): Packet sent at time 0:0:13.708068843 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (2): Packet sent at time 0:0:13.708084099 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 6 with data 1753973209 at time 0:0:13.711959811
+
+DEBUG (3): Packet sent at time 0:0:13.712127657 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 332487872
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 332487872, type: 2
+ 
+DEBUG (4): Packet sent at time 0:0:13.714874222 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 1390974054
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1390974054, type: 2
+ 
+DEBUG (7): Packet sent at time 0:0:13.715255691 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 2116972364
+
+DEBUG (5): Packet sent at time 0:0:13.716491645 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 4 with data 332487872 at time 0:0:13.719375538
+
+DEBUG (2): Packet sent at time 0:0:13.719543384 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 7 with data 1390974054 at time 0:0:13.725982557
+
+DEBUG (3): Packet sent at time 0:0:13.726150403 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:14.671875010.
+
+DEBUG (2): Data timer fired at 0:0:14.671875011.
+
+DEBUG (3): Data timer fired at 0:0:14.671875011.
+
+DEBUG (4): Data timer fired at 0:0:14.671875012.
+
+DEBUG (5): Data timer fired at 0:0:14.671875012.
+
+DEBUG (6): Data timer fired at 0:0:14.671875013.
+
+DEBUG (7): Data timer fired at 0:0:14.671875013.
+
+DEBUG (1): Sink just read new treshold 202055088
+
+DEBUG (1): Packet sent from: 1, data: 202055088, type: 1
+
+DEBUG (2): Mote 2 just read new data 222729126 above the treshold 140734213 at time 0:0:14.681640636
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 222729126, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 371215210 above the treshold 140734213 at time 0:0:14.681640637
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 371215210, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 445458252 above the treshold 140734213 at time 0:0:14.681640637
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 445458252, type: 2
+ 
+DEBUG (2): Mote 2 has received a data message with data 371215210
+
+DEBUG (4): Packet sent at time 0:0:14.684020994 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 2 with data 222729126 at time 0:0:14.689224209
+
+DEBUG (2): Packet sent at time 0:0:14.689392055 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a treshold message with treshold 202055088 from mote 1
+
+DEBUG (3): Packet sent from: 3, data: 202055088, type: 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (7): Mote 7 has received a treshold message with treshold 202055088 from mote 3
+
+DEBUG (7): Packet sent from: 7, data: 202055088, type: 1
+
+DEBUG (6): Mote 6 has received a treshold message with treshold 202055088 from mote 3
+
+DEBUG (6): Packet sent from: 6, data: 202055088, type: 1
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:15.648437511.
+
+DEBUG (3): Data timer fired at 0:0:15.648437511.
+
+DEBUG (4): Data timer fired at 0:0:15.648437512.
+
+DEBUG (5): Data timer fired at 0:0:15.648437512.
+
+DEBUG (6): Data timer fired at 0:0:15.648437513.
+
+DEBUG (7): Data timer fired at 0:0:15.648437513.
+
+DEBUG (2): Mote 2 just read new data 344423961 above the treshold 140734213 at time 0:0:15.658203136
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 344423961, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 459231948 above the treshold 202055088 at time 0:0:15.658203136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 459231948, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 574039935 above the treshold 140734213 at time 0:0:15.658203137
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 574039935, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 688847922 above the treshold 140734213 at time 0:0:15.658203137
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 688847922, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 803655909 above the treshold 202055088 at time 0:0:15.658203138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 803655909, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 918463896 above the treshold 202055088 at time 0:0:15.658203138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 918463896, type: 2
+ 
+DEBUG (1): Sink node received data message from 2 with data 344423961 at time 0:0:15.660598751
+
+DEBUG (2): Packet sent at time 0:0:15.660766597 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 918463896
+
+DEBUG (7): Packet sent at time 0:0:15.663757305 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 688847922
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 688847922, type: 2
+ 
+DEBUG (5): Packet sent at time 0:0:15.665466278 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 803655909
+
+DEBUG (6): Packet sent at time 0:0:15.666381801 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 574039935
+
+DEBUG (4): Packet sent at time 0:0:15.667159993 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 3 with data 459231948 at time 0:0:15.668365430
+
+DEBUG (3): Packet sent at time 0:0:15.668533276 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 5 with data 688847922 at time 0:0:15.675918488
+
+DEBUG (2): Packet sent at time 0:0:15.676086333 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:16.625000010.
+
+DEBUG (2): Data timer fired at 0:0:16.625000011.
+
+DEBUG (3): Data timer fired at 0:0:16.625000011.
+
+DEBUG (4): Data timer fired at 0:0:16.625000012.
+
+DEBUG (5): Data timer fired at 0:0:16.625000012.
+
+DEBUG (6): Data timer fired at 0:0:16.625000013.
+
+DEBUG (7): Data timer fired at 0:0:16.625000013.
+
+DEBUG (1): Sink just read new treshold 768218109
+
+DEBUG (1): Packet sent from: 1, data: 768218109, type: 1
+
+DEBUG (2): Mote 2 just read new data 1265083862 above the treshold 140734213 at time 0:0:16.634765636
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1265083862, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 255122718 above the treshold 202055088 at time 0:0:16.634765636
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 255122718, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 1392645221 above the treshold 140734213 at time 0:0:16.634765637
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 1392645221, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 382684077 above the treshold 140734213 at time 0:0:16.634765637
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 382684077, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1520206580 above the treshold 202055088 at time 0:0:16.634765638
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1520206580, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 510245436 above the treshold 202055088 at time 0:0:16.634765638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 510245436, type: 2
+ 
+DEBUG (2): Mote 2 has received a data message with data 382684077
+
+DEBUG (5): Packet sent at time 0:0:16.637451168 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 3 with data 255122718 at time 0:0:16.637969963
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (3): Mote 3 has received a treshold message with treshold 768218109 from mote 1
+
+DEBUG (3): Packet sent from: 3, data: 768218109, type: 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 2 with data 1265083862 at time 0:0:16.644302323
+
+DEBUG (2): Packet sent at time 0:0:16.644470169 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 510245436
+
+DEBUG (7): Packet sent at time 0:0:16.645660350 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (7): Mote 7 has received a treshold message with treshold 768218109 from mote 3
+
+DEBUG (7): Packet sent from: 7, data: 768218109, type: 1
+
+DEBUG (6): Mote 6 has received a treshold message with treshold 768218109 from mote 3
+
+DEBUG (6): Packet sent from: 6, data: 768218109, type: 1
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:17.601562511.
+
+DEBUG (3): Data timer fired at 0:0:17.601562511.
+
+DEBUG (4): Data timer fired at 0:0:17.601562512.
+
+DEBUG (5): Data timer fired at 0:0:17.601562512.
+
+DEBUG (6): Data timer fired at 0:0:17.601562513.
+
+DEBUG (7): Data timer fired at 0:0:17.601562513.
+
+DEBUG (3): Mote 3 just read new data 1470162014 above the treshold 768218109 at time 0:0:17.611328136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1470162014, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 763960694 above the treshold 140734213 at time 0:0:17.611328137
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 763960694, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1499041701 above the treshold 768218109 at time 0:0:17.611328138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1499041701, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 792840381 above the treshold 768218109 at time 0:0:17.611328138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 792840381, type: 2
+ 
+DEBUG (3): Mote 3 has received a data message with data 1499041701
+
+DEBUG (6): Packet sent at time 0:0:17.615646350 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 3 with data 1470162014 at time 0:0:17.619186367
+
+DEBUG (3): Packet sent at time 0:0:17.619354212 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 792840381
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 792840381, type: 2
+ 
+DEBUG (7): Packet sent at time 0:0:17.621246293 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 763960694
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 763960694, type: 2
+ 
+DEBUG (4): Packet sent at time 0:0:17.622680609 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (1): Treshold timer fired at 0:0:18.578125010.
+
+DEBUG (2): Data timer fired at 0:0:18.578125011.
+
+DEBUG (3): Data timer fired at 0:0:18.578125011.
+
+DEBUG (4): Data timer fired at 0:0:18.578125012.
+
+DEBUG (5): Data timer fired at 0:0:18.578125012.
+
+DEBUG (6): Data timer fired at 0:0:18.578125013.
+
+DEBUG (7): Data timer fired at 0:0:18.578125013.
+
+DEBUG (1): Sink just read new treshold 770072199
+
+DEBUG (1): Packet sent from: 1, data: 770072199, type: 1
+
+DEBUG (3): Mote 3 has received a treshold message with treshold 770072199 from mote 1
+
+DEBUG (3): Packet sent from: 3, data: 770072199, type: 1
+
+DEBUG (2): Mote 2 has received a treshold message with treshold 770072199 from mote 1
+
+DEBUG (2): Packet sent from: 2, data: 770072199, type: 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (5): Mote 5 has received a treshold message with treshold 770072199 from mote 2
+
+DEBUG (5): Packet sent from: 5, data: 770072199, type: 1
+
+DEBUG (4): Mote 4 has received a treshold message with treshold 770072199 from mote 2
+
+DEBUG (4): Packet sent from: 4, data: 770072199, type: 1
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (7): Mote 7 has received a treshold message with treshold 770072199 from mote 3
+
+DEBUG (7): Packet sent from: 7, data: 770072199, type: 1
+
+DEBUG (6): Mote 6 has received a treshold message with treshold 770072199 from mote 3
+
+DEBUG (6): Packet sent from: 6, data: 770072199, type: 1
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:19.554687511.
+
+DEBUG (3): Data timer fired at 0:0:19.554687511.
+
+DEBUG (4): Data timer fired at 0:0:19.554687512.
+
+DEBUG (5): Data timer fired at 0:0:19.554687512.
+
+DEBUG (6): Data timer fired at 0:0:19.554687513.
+
+DEBUG (7): Data timer fired at 0:0:19.554687513.
+
+DEBUG (3): Mote 3 just read new data 1146031713 above the treshold 770072199 at time 0:0:19.564453136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1146031713, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 1969410553 above the treshold 770072199 at time 0:0:19.564453137
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 1969410553, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1468684586 above the treshold 770072199 at time 0:0:19.564453138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1468684586, type: 2
+ 
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (2): Mote 2 has received a data message with data 1969410553
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1969410553, type: 2
+ 
+DEBUG (4): Packet sent at time 0:0:19.573303183 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 1468684586
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1468684586, type: 2
+ 
+DEBUG (6): Packet sent at time 0:0:19.575195262 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 6 with data 1468684586 at time 0:0:19.580535807
+
+DEBUG (3): Packet sent at time 0:0:19.580703653 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 4 with data 1969410553 at time 0:0:19.582305816
+
+DEBUG (2): Packet sent at time 0:0:19.582473661 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:20.531250010.
+
+DEBUG (2): Data timer fired at 0:0:20.531250011.
+
+DEBUG (3): Data timer fired at 0:0:20.531250011.
+
+DEBUG (4): Data timer fired at 0:0:20.531250012.
+
+DEBUG (5): Data timer fired at 0:0:20.531250012.
+
+DEBUG (6): Data timer fired at 0:0:20.531250013.
+
+DEBUG (7): Data timer fired at 0:0:20.531250013.
+
+DEBUG (1): Sink just read new treshold 1866991771
+
+DEBUG (1): Packet sent from: 1, data: 1866991771, type: 1
+
+DEBUG (5): Mote 5 just read new data 861255672 above the treshold 770072199 at time 0:0:20.541015637
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 861255672, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1004798284 above the treshold 770072199 at time 0:0:20.541015638
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1004798284, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 1148340896 above the treshold 770072199 at time 0:0:20.541015638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 1148340896, type: 2
+ 
+DEBUG (2): Mote 2 has received a data message with data 861255672
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 861255672, type: 2
+ 
+DEBUG (5): Packet sent at time 0:0:20.544372551 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (3): Mote 3 has received a treshold message with treshold 1866991771 from mote 1
+
+DEBUG (3): Packet sent from: 3, data: 1866991771, type: 1
+
+DEBUG (2): Mote 2 has received a treshold message with treshold 1866991771 from mote 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (3): Mote 3 has received a data message with data 1148340896
+
+DEBUG (7): Packet sent at time 0:0:20.549407923 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (7): Mote 7 has received a treshold message with treshold 1866991771 from mote 3
+
+DEBUG (7): Packet sent from: 7, data: 1866991771, type: 1
+
+DEBUG (6): Mote 6 has received a treshold message with treshold 1866991771 from mote 3
+
+DEBUG (6): Packet sent from: 6, data: 1866991771, type: 1
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:21.507812511.
+
+DEBUG (3): Data timer fired at 0:0:21.507812511.
+
+DEBUG (4): Data timer fired at 0:0:21.507812512.
+
+DEBUG (5): Data timer fired at 0:0:21.507812512.
+
+DEBUG (6): Data timer fired at 0:0:21.507812513.
+
+DEBUG (7): Data timer fired at 0:0:21.507812513.
+
+DEBUG (5): Mote 5 just read new data 1084298524 above the treshold 770072199 at time 0:0:21.517578137
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 1084298524, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1980842827 above the treshold 1866991771 at time 0:0:21.517578138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1980842827, type: 2
+ 
+DEBUG (3): Mote 3 has received a data message with data 1980842827
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1980842827, type: 2
+ 
+DEBUG (6): Packet sent at time 0:0:21.519744873 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 1084298524
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1084298524, type: 2
+ 
+DEBUG (5): Packet sent at time 0:0:21.526092492 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 6 with data 1980842827 at time 0:0:21.527542069
+
+DEBUG (3): Packet sent at time 0:0:21.527709914 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 5 with data 1084298524 at time 0:0:21.530303893
+
+DEBUG (2): Packet sent at time 0:0:21.530471739 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:22.484375010.
+
+DEBUG (2): Data timer fired at 0:0:22.484375011.
+
+DEBUG (3): Data timer fired at 0:0:22.484375011.
+
+DEBUG (4): Data timer fired at 0:0:22.484375012.
+
+DEBUG (5): Data timer fired at 0:0:22.484375012.
+
+DEBUG (6): Data timer fired at 0:0:22.484375013.
+
+DEBUG (7): Data timer fired at 0:0:22.484375013.
+
+DEBUG (1): Sink just read new treshold 1647128880
+
+DEBUG (1): Packet sent from: 1, data: 1647128880, type: 1
+
+DEBUG (4): Mote 4 just read new data 931714904 above the treshold 770072199 at time 0:0:22.494140637
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 931714904, type: 2
+ 
+DEBUG (3): Mote 3 has received a treshold message with treshold 1647128880 from mote 1
+
+DEBUG (3): Packet sent from: 3, data: 1647128880, type: 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (2): Mote 2 has received a data message with data 931714904
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 931714904, type: 2
+ 
+DEBUG (4): Packet sent at time 0:0:22.503250080 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (7): Mote 7 has received a treshold message with treshold 1647128880 from mote 3
+
+DEBUG (7): Packet sent from: 7, data: 1647128880, type: 1
+
+DEBUG (6): Mote 6 has received a treshold message with treshold 1647128880 from mote 3
+
+DEBUG (6): Packet sent from: 6, data: 1647128880, type: 1
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 4 with data 931714904 at time 0:0:22.513290305
+
+DEBUG (2): Packet sent at time 0:0:22.513458151 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:23.460937511.
+
+DEBUG (3): Data timer fired at 0:0:23.460937511.
+
+DEBUG (4): Data timer fired at 0:0:23.460937512.
+
+DEBUG (5): Data timer fired at 0:0:23.460937512.
+
+DEBUG (6): Data timer fired at 0:0:23.460937513.
+
+DEBUG (7): Data timer fired at 0:0:23.460937513.
+
+DEBUG (4): Mote 4 just read new data 2029121251 above the treshold 770072199 at time 0:0:23.470703137
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 2029121251, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 1146455313 above the treshold 770072199 at time 0:0:23.470703137
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 1146455313, type: 2
+ 
+DEBUG (2): Mote 2 has received a data message with data 2029121251
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 2029121251, type: 2
+ 
+DEBUG (4): Packet sent at time 0:0:23.475784284 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 1146455313
+
+DEBUG (5): Packet sent at time 0:0:23.477539035 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 4 with data 2029121251 at time 0:0:23.480255083
+
+DEBUG (2): Packet sent at time 0:0:23.480422928 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:24.437500010.
+
+DEBUG (2): Data timer fired at 0:0:24.437500011.
+
+DEBUG (3): Data timer fired at 0:0:24.437500011.
+
+DEBUG (4): Data timer fired at 0:0:24.437500012.
+
+DEBUG (5): Data timer fired at 0:0:24.437500012.
+
+DEBUG (6): Data timer fired at 0:0:24.437500013.
+
+DEBUG (7): Data timer fired at 0:0:24.437500013.
+
+DEBUG (1): Sink just read new treshold 83392683
+
+DEBUG (1): Packet sent from: 1, data: 83392683, type: 1
+
+DEBUG (4): Mote 4 just read new data 1400551197 above the treshold 770072199 at time 0:0:24.447265637
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 1400551197, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 1251164707 above the treshold 770072199 at time 0:0:24.447265637
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 1251164707, type: 2
+ 
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (3): Mote 3 has received a treshold message with treshold 83392683 from mote 1
+
+DEBUG (3): Packet sent from: 3, data: 83392683, type: 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (2): Mote 2 has received a data message with data 1400551197
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1400551197, type: 2
+ 
+DEBUG (4): Packet sent at time 0:0:24.454864469 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (7): Mote 7 has received a treshold message with treshold 83392683 from mote 3
+
+DEBUG (7): Packet sent from: 7, data: 83392683, type: 1
+
+DEBUG (6): Mote 6 has received a treshold message with treshold 83392683 from mote 3
+
+DEBUG (6): Packet sent from: 6, data: 83392683, type: 1
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 4 with data 1400551197 at time 0:0:24.459472597
+
+DEBUG (2): Packet sent at time 0:0:24.459640442 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:25.414062511.
+
+DEBUG (3): Data timer fired at 0:0:25.414062511.
+
+DEBUG (4): Data timer fired at 0:0:25.414062512.
+
+DEBUG (5): Data timer fired at 0:0:25.414062512.
+
+DEBUG (6): Data timer fired at 0:0:25.414062513.
+
+DEBUG (7): Data timer fired at 0:0:25.414062513.
+
+DEBUG (3): Mote 3 just read new data 826067299 above the treshold 83392683 at time 0:0:25.423828136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 826067299, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1982488685 above the treshold 83392683 at time 0:0:25.423828138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1982488685, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 1652134598 above the treshold 83392683 at time 0:0:25.423828138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 1652134598, type: 2
+ 
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (3): Mote 3 has received a data message with data 1982488685
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1982488685, type: 2
+ 
+DEBUG (6): Packet sent at time 0:0:25.433319049 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 6 with data 1982488685 at time 0:0:25.435729924
+
+DEBUG (3): Packet sent at time 0:0:25.435897769 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:26.390625010.
+
+DEBUG (2): Data timer fired at 0:0:26.390625011.
+
+DEBUG (3): Data timer fired at 0:0:26.390625011.
+
+DEBUG (4): Data timer fired at 0:0:26.390625012.
+
+DEBUG (5): Data timer fired at 0:0:26.390625012.
+
+DEBUG (6): Data timer fired at 0:0:26.390625013.
+
+DEBUG (7): Data timer fired at 0:0:26.390625013.
+
+DEBUG (1): Sink just read new treshold 1421485337
+
+DEBUG (1): Packet sent from: 1, data: 1421485337, type: 1
+
+DEBUG (3): Mote 3 just read new data 231316438 above the treshold 83392683 at time 0:0:26.400390636
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 231316438, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 1362887371 above the treshold 770072199 at time 0:0:26.400390637
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 1362887371, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1478545590 above the treshold 83392683 at time 0:0:26.400390638
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1478545590, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 462632876 above the treshold 83392683 at time 0:0:26.400390638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 462632876, type: 2
+ 
+DEBUG (3): Mote 3 has received a treshold message with treshold 1421485337 from mote 1
+
+DEBUG (2): Mote 2 has received a treshold message with treshold 1421485337 from mote 1
+
+DEBUG (2): Packet sent from: 2, data: 1421485337, type: 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (2): Mote 2 has received a data message with data 1362887371
+
+DEBUG (4): Packet sent at time 0:0:26.406173684 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 462632876
+
+DEBUG (7): Packet sent at time 0:0:26.407089207 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (4): Mote 4 has received a treshold message with treshold 1421485337 from mote 2
+
+DEBUG (4): Packet sent from: 4, data: 1421485337, type: 1
+
+DEBUG (5): Mote 5 has received a treshold message with treshold 1421485337 from mote 2
+
+DEBUG (5): Packet sent from: 5, data: 1421485337, type: 1
+
+DEBUG (3): Mote 3 has received a data message with data 1478545590
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (6): Packet sent at time 0:0:26.410812330 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 3 with data 231316438 at time 0:0:26.412856994
+
+DEBUG (3): Packet sent at time 0:0:26.413024840 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:27.367187511.
+
+DEBUG (3): Data timer fired at 0:0:27.367187511.
+
+DEBUG (4): Data timer fired at 0:0:27.367187512.
+
+DEBUG (5): Data timer fired at 0:0:27.367187512.
+
+DEBUG (6): Data timer fired at 0:0:27.367187513.
+
+DEBUG (7): Data timer fired at 0:0:27.367187513.
+
+DEBUG (6): Mote 6 just read new data 1382451693 above the treshold 83392683 at time 0:0:27.376953138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1382451693, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 1579944792 above the treshold 83392683 at time 0:0:27.376953138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 1579944792, type: 2
+ 
+DEBUG (3): Mote 3 has received a data message with data 1382451693
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1382451693, type: 2
+ 
+DEBUG (6): Packet sent at time 0:0:27.379333495 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 1579944792
+
+DEBUG (7): Packet sent at time 0:0:27.386901810 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 6 with data 1382451693 at time 0:0:27.389114321
+
+DEBUG (3): Packet sent at time 0:0:27.389282167 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:28.343750010.
+
+DEBUG (2): Data timer fired at 0:0:28.343750011.
+
+DEBUG (3): Data timer fired at 0:0:28.343750011.
+
+DEBUG (4): Data timer fired at 0:0:28.343750012.
+
+DEBUG (5): Data timer fired at 0:0:28.343750012.
+
+DEBUG (6): Data timer fired at 0:0:28.343750013.
+
+DEBUG (7): Data timer fired at 0:0:28.343750013.
+
+DEBUG (1): Sink just read new treshold 148486084
+
+DEBUG (1): Packet sent from: 1, data: 148486084, type: 1
+
+DEBUG (2): Mote 2 just read new data 2065357187 above the treshold 1421485337 at time 0:0:28.353515636
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 2065357187, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 1983230727 above the treshold 1421485337 at time 0:0:28.353515637
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 1983230727, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1240027358 above the treshold 83392683 at time 0:0:28.353515638
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1240027358, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 496823989 above the treshold 83392683 at time 0:0:28.353515638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 496823989, type: 2
+ 
+DEBUG (3): Mote 3 has received a treshold message with treshold 148486084 from mote 1
+
+DEBUG (3): Packet sent from: 3, data: 148486084, type: 1
+
+DEBUG (2): Mote 2 has received a treshold message with treshold 148486084 from mote 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (3): Mote 3 has received a data message with data 496823989
+
+DEBUG (7): Packet sent at time 0:0:28.359146098 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 1983230727
+
+DEBUG (5): Packet sent at time 0:0:28.360382052 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 1240027358
+
+DEBUG (6): Packet sent at time 0:0:28.361923181 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (7): Mote 7 has received a treshold message with treshold 148486084 from mote 3
+
+DEBUG (7): Packet sent from: 7, data: 148486084, type: 1
+
+DEBUG (6): Mote 6 has received a treshold message with treshold 148486084 from mote 3
+
+DEBUG (6): Packet sent from: 6, data: 148486084, type: 1
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:29.320312511.
+
+DEBUG (3): Data timer fired at 0:0:29.320312511.
+
+DEBUG (4): Data timer fired at 0:0:29.320312512.
+
+DEBUG (5): Data timer fired at 0:0:29.320312512.
+
+DEBUG (6): Data timer fired at 0:0:29.320312513.
+
+DEBUG (7): Data timer fired at 0:0:29.320312513.
+
+DEBUG (2): Mote 2 just read new data 532571801 above the treshold 148486084 at time 0:0:29.330078136
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 532571801, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 1425923617 above the treshold 148486084 at time 0:0:29.330078136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1425923617, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1958495418 above the treshold 148486084 at time 0:0:29.330078138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1958495418, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 704363587 above the treshold 148486084 at time 0:0:29.330078138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 704363587, type: 2
+ 
+DEBUG (1): Sink node received data message from 3 with data 1425923617 at time 0:0:29.333648672
+
+DEBUG (3): Packet sent at time 0:0:29.333816518 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 704363587
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 704363587, type: 2
+ 
+DEBUG (7): Packet sent at time 0:0:29.337264986 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 2 with data 532571801 at time 0:0:29.338409386
+
+DEBUG (2): Packet sent at time 0:0:29.338577231 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 1958495418
+
+DEBUG (6): Packet sent at time 0:0:29.339523273 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 7 with data 704363587 at time 0:0:29.343551570
+
+DEBUG (3): Packet sent at time 0:0:29.343719416 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:30.296875010.
+
+DEBUG (2): Data timer fired at 0:0:30.296875011.
+
+DEBUG (3): Data timer fired at 0:0:30.296875011.
+
+DEBUG (4): Data timer fired at 0:0:30.296875012.
+
+DEBUG (5): Data timer fired at 0:0:30.296875012.
+
+DEBUG (6): Data timer fired at 0:0:30.296875013.
+
+DEBUG (7): Data timer fired at 0:0:30.296875013.
+
+DEBUG (1): Sink just read new treshold 229615974
+
+DEBUG (1): Packet sent from: 1, data: 229615974, type: 1
+
+DEBUG (2): Mote 2 just read new data 222418711 above the treshold 148486084 at time 0:0:30.306640636
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 222418711, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 1728214046 above the treshold 148486084 at time 0:0:30.306640636
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1728214046, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1950632757 above the treshold 148486084 at time 0:0:30.306640638
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1950632757, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 1308944445 above the treshold 148486084 at time 0:0:30.306640638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 1308944445, type: 2
+ 
+DEBUG (3): Mote 3 has received a treshold message with treshold 229615974 from mote 1
+
+DEBUG (2): Mote 2 has received a treshold message with treshold 229615974 from mote 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (3): Mote 3 has received a data message with data 1950632757
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1950632757, type: 2
+ 
+DEBUG (6): Packet sent at time 0:0:30.313995331 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 6 with data 1950632757 at time 0:0:30.321609422
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:31.273437511.
+
+DEBUG (3): Data timer fired at 0:0:31.273437511.
+
+DEBUG (4): Data timer fired at 0:0:31.273437512.
+
+DEBUG (5): Data timer fired at 0:0:31.273437512.
+
+DEBUG (6): Data timer fired at 0:0:31.273437513.
+
+DEBUG (7): Data timer fired at 0:0:31.273437513.
+
+DEBUG (2): Mote 2 just read new data 1569729997 above the treshold 229615974 at time 0:0:31.283203136
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1569729997, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 1377145447 above the treshold 229615974 at time 0:0:31.283203136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1377145447, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 799391797 above the treshold 148486084 at time 0:0:31.283203138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 799391797, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 606807247 above the treshold 148486084 at time 0:0:31.283203138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 606807247, type: 2
+ 
+DEBUG (3): Mote 3 has received a data message with data 606807247
+
+DEBUG (7): Packet sent at time 0:0:31.285385132 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 2 with data 1569729997 at time 0:0:31.289154029
+
+DEBUG (2): Packet sent at time 0:0:31.289321874 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 3 with data 1377145447 at time 0:0:31.291976889
+
+DEBUG (3): Packet sent at time 0:0:31.292144734 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 799391797
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 799391797, type: 2
+ 
+DEBUG (6): Packet sent at time 0:0:31.294677680 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 6 with data 799391797 at time 0:0:31.301681423
+
+DEBUG (3): Packet sent at time 0:0:31.301849269 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:32.250000010.
+
+DEBUG (2): Data timer fired at 0:0:32.250000011.
+
+DEBUG (3): Data timer fired at 0:0:32.250000011.
+
+DEBUG (4): Data timer fired at 0:0:32.250000012.
+
+DEBUG (5): Data timer fired at 0:0:32.250000012.
+
+DEBUG (6): Data timer fired at 0:0:32.250000013.
+
+DEBUG (7): Data timer fired at 0:0:32.250000013.
+
+DEBUG (1): Sink just read new treshold 127561359
+
+DEBUG (1): Packet sent from: 1, data: 127561359, type: 1
+
+DEBUG (2): Mote 2 just read new data 615456184 above the treshold 229615974 at time 0:0:32.259765636
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 615456184, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 1741588189 above the treshold 1421485337 at time 0:0:32.259765637
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 1741588189, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 720236547 above the treshold 148486084 at time 0:0:32.259765638
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 720236547, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 209560726 above the treshold 148486084 at time 0:0:32.259765638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 209560726, type: 2
+ 
+DEBUG (1): Sink node received data message from 2 with data 615456184 at time 0:0:32.266235324
+
+DEBUG (2): Packet sent at time 0:0:32.266403170 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:33.226562511.
+
+DEBUG (3): Data timer fired at 0:0:33.226562511.
+
+DEBUG (4): Data timer fired at 0:0:33.226562512.
+
+DEBUG (5): Data timer fired at 0:0:33.226562512.
+
+DEBUG (6): Data timer fired at 0:0:33.226562513.
+
+DEBUG (7): Data timer fired at 0:0:33.226562513.
+
+DEBUG (2): Mote 2 just read new data 1690840536 above the treshold 229615974 at time 0:0:33.236328136
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1690840536, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1797810937 above the treshold 148486084 at time 0:0:33.236328138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1797810937, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 213940802 above the treshold 148486084 at time 0:0:33.236328138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 213940802, type: 2
+ 
+DEBUG (1): Sink node received data message from 2 with data 1690840536 at time 0:0:33.240463243
+
+DEBUG (2): Packet sent at time 0:0:33.240631089 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (1): Treshold timer fired at 0:0:34.203125010.
+
+DEBUG (2): Data timer fired at 0:0:34.203125011.
+
+DEBUG (3): Data timer fired at 0:0:34.203125011.
+
+DEBUG (4): Data timer fired at 0:0:34.203125012.
+
+DEBUG (5): Data timer fired at 0:0:34.203125012.
+
+DEBUG (6): Data timer fired at 0:0:34.203125013.
+
+DEBUG (7): Data timer fired at 0:0:34.203125013.
+
+DEBUG (1): Sink just read new treshold 735081007
+
+DEBUG (1): Packet sent from: 1, data: 735081007, type: 1
+
+DEBUG (2): Mote 2 just read new data 305787801 above the treshold 229615974 at time 0:0:34.212890636
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 305787801, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 407717068 above the treshold 229615974 at time 0:0:34.212890636
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 407717068, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 713504869 above the treshold 148486084 at time 0:0:34.212890638
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 713504869, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 815434136 above the treshold 148486084 at time 0:0:34.212890638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 815434136, type: 2
+ 
+DEBUG (3): Mote 3 has received a data message with data 713504869
+
+DEBUG (6): Packet sent at time 0:0:34.215164184 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (2): Mote 2 has received a treshold message with treshold 735081007 from mote 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:35.179687511.
+
+DEBUG (3): Data timer fired at 0:0:35.179687511.
+
+DEBUG (4): Data timer fired at 0:0:35.179687512.
+
+DEBUG (5): Data timer fired at 0:0:35.179687512.
+
+DEBUG (6): Data timer fired at 0:0:35.179687513.
+
+DEBUG (7): Data timer fired at 0:0:35.179687513.
+
+DEBUG (3): Mote 3 just read new data 2027927946 above the treshold 229615974 at time 0:0:35.189453136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 2027927946, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 1461168109 above the treshold 1421485337 at time 0:0:35.189453137
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 1461168109, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 327648435 above the treshold 148486084 at time 0:0:35.189453138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 327648435, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 1908372245 above the treshold 148486084 at time 0:0:35.189453138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 1908372245, type: 2
+ 
+DEBUG (2): Mote 2 has received a data message with data 1461168109
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1461168109, type: 2
+ 
+DEBUG (4): Packet sent at time 0:0:35.191711424 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 3 with data 2027927946 at time 0:0:35.195587133
+
+DEBUG (3): Packet sent at time 0:0:35.195754979 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 4 with data 1461168109 at time 0:0:35.200698798
+
+DEBUG (2): Packet sent at time 0:0:35.200866644 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:36.156250010.
+
+DEBUG (2): Data timer fired at 0:0:36.156250011.
+
+DEBUG (3): Data timer fired at 0:0:36.156250011.
+
+DEBUG (4): Data timer fired at 0:0:36.156250012.
+
+DEBUG (5): Data timer fired at 0:0:36.156250012.
+
+DEBUG (6): Data timer fired at 0:0:36.156250013.
+
+DEBUG (7): Data timer fired at 0:0:36.156250013.
+
+DEBUG (1): Sink just read new treshold 33063458
+
+DEBUG (1): Packet sent from: 1, data: 33063458, type: 1
+
+DEBUG (2): Mote 2 just read new data 2114632899 above the treshold 735081007 at time 0:0:36.166015636
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 2114632899, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 672026885 above the treshold 229615974 at time 0:0:36.166015636
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 672026885, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 2081782151 above the treshold 1421485337 at time 0:0:36.166015637
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 2081782151, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 639176137 above the treshold 148486084 at time 0:0:36.166015638
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 639176137, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 1344053770 above the treshold 148486084 at time 0:0:36.166015638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 1344053770, type: 2
+ 
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:37.132812511.
+
+DEBUG (3): Data timer fired at 0:0:37.132812511.
+
+DEBUG (4): Data timer fired at 0:0:37.132812512.
+
+DEBUG (5): Data timer fired at 0:0:37.132812512.
+
+DEBUG (6): Data timer fired at 0:0:37.132812513.
+
+DEBUG (7): Data timer fired at 0:0:37.132812513.
+
+DEBUG (2): Mote 2 just read new data 1928259290 above the treshold 735081007 at time 0:0:37.142578136
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1928259290, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 1139356622 above the treshold 229615974 at time 0:0:37.142578136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1139356622, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 1709034933 above the treshold 1421485337 at time 0:0:37.142578137
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 1709034933, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 920132265 above the treshold 148486084 at time 0:0:37.142578138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 920132265, type: 2
+ 
+DEBUG (1): Sink node received data message from 3 with data 1139356622 at time 0:0:37.146133413
+
+DEBUG (3): Packet sent at time 0:0:37.146301259 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 920132265
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 920132265, type: 2
+ 
+DEBUG (6): Packet sent at time 0:0:37.147949200 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 1709034933
+
+DEBUG (5): Packet sent at time 0:0:37.148803687 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 2 with data 1928259290 at time 0:0:37.151473958
+
+DEBUG (2): Packet sent at time 0:0:37.151641803 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 6 with data 920132265 at time 0:0:37.160217195
+
+DEBUG (3): Packet sent at time 0:0:37.160385040 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:38.109375010.
+
+DEBUG (2): Data timer fired at 0:0:38.109375011.
+
+DEBUG (3): Data timer fired at 0:0:38.109375011.
+
+DEBUG (4): Data timer fired at 0:0:38.109375012.
+
+DEBUG (5): Data timer fired at 0:0:38.109375012.
+
+DEBUG (6): Data timer fired at 0:0:38.109375013.
+
+DEBUG (7): Data timer fired at 0:0:38.109375013.
+
+DEBUG (1): Sink just read new treshold 1646757680
+
+DEBUG (1): Packet sent from: 1, data: 1646757680, type: 1
+
+DEBUG (4): Mote 4 just read new data 1679444804 above the treshold 1421485337 at time 0:0:38.119140637
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 1679444804, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 633235808 above the treshold 148486084 at time 0:0:38.119140638
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 633235808, type: 2
+ 
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (2): Data timer fired at 0:0:39.085937511.
+
+DEBUG (3): Data timer fired at 0:0:39.085937511.
+
+DEBUG (4): Data timer fired at 0:0:39.085937512.
+
+DEBUG (5): Data timer fired at 0:0:39.085937512.
+
+DEBUG (6): Data timer fired at 0:0:39.085937513.
+
+DEBUG (7): Data timer fired at 0:0:39.085937513.
+
+DEBUG (2): Mote 2 just read new data 2089742443 above the treshold 735081007 at time 0:0:39.095703136
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 2089742443, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 2070495375 above the treshold 229615974 at time 0:0:39.095703136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 2070495375, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 2051248307 above the treshold 1421485337 at time 0:0:39.095703137
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 2051248307, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 2032001239 above the treshold 1421485337 at time 0:0:39.095703137
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 2032001239, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 2012754171 above the treshold 148486084 at time 0:0:39.095703138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 2012754171, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 1993507103 above the treshold 148486084 at time 0:0:39.095703138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 1993507103, type: 2
+ 
+DEBUG (2): Mote 2 has received a data message with data 2032001239
+
+DEBUG (3): Mote 3 has received a data message with data 1993507103
+
+DEBUG (5): Packet sent at time 0:0:39.098525997 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (7): Packet sent at time 0:0:39.098541256 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 2012754171
+
+DEBUG (1): Sink node received data message from 2 with data 2089742443 at time 0:0:39.100036606
+
+DEBUG (6): Packet sent at time 0:0:39.100173937 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (2): Packet sent at time 0:0:39.100204452 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 2051248307
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 2051248307, type: 2
+ 
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (1): Treshold timer fired at 0:0:40.062500010.
+
+DEBUG (2): Data timer fired at 0:0:40.062500011.
+
+DEBUG (3): Data timer fired at 0:0:40.062500011.
+
+DEBUG (4): Data timer fired at 0:0:40.062500012.
+
+DEBUG (5): Data timer fired at 0:0:40.062500012.
+
+DEBUG (6): Data timer fired at 0:0:40.062500013.
+
+DEBUG (7): Data timer fired at 0:0:40.062500013.
+
+DEBUG (1): Sink just read new treshold 287085224
+
+DEBUG (1): Packet sent from: 1, data: 287085224, type: 1
+
+DEBUG (3): Mote 3 just read new data 990751637 above the treshold 229615974 at time 0:0:40.072265636
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 990751637, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 1775310458 above the treshold 1421485337 at time 0:0:40.072265637
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 1775310458, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1196944453 above the treshold 148486084 at time 0:0:40.072265638
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1196944453, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 1981503274 above the treshold 148486084 at time 0:0:40.072265638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 1981503274, type: 2
+ 
+DEBUG (3): Mote 3 has received a data message with data 1981503274
+
+DEBUG (7): Packet sent at time 0:0:40.074417115 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 1775310458
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1775310458, type: 2
+ 
+DEBUG (4): Packet sent at time 0:0:40.078124977 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 3 with data 990751637 at time 0:0:40.078384375
+
+DEBUG (3): Packet sent at time 0:0:40.078552220 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 1196944453
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1196944453, type: 2
+ 
+DEBUG (6): Packet sent at time 0:0:40.081146201 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a treshold message with treshold 287085224 from mote 1
+
+DEBUG (3): Mote 3 has received a treshold message with treshold 287085224 from mote 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 6 with data 1196944453 at time 0:0:40.086090020
+
+DEBUG (3): Packet sent at time 0:0:40.086257865 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 4 with data 1775310458 at time 0:0:40.088439859
+
+DEBUG (2): Packet sent at time 0:0:40.088607704 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (2): Data timer fired at 0:0:41.039062511.
+
+DEBUG (3): Data timer fired at 0:0:41.039062511.
+
+DEBUG (4): Data timer fired at 0:0:41.039062512.
+
+DEBUG (5): Data timer fired at 0:0:41.039062512.
+
+DEBUG (6): Data timer fired at 0:0:41.039062513.
+
+DEBUG (7): Data timer fired at 0:0:41.039062513.
+
+DEBUG (2): Mote 2 just read new data 1591535901 above the treshold 287085224 at time 0:0:41.048828136
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1591535901, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 2122047868 above the treshold 287085224 at time 0:0:41.048828136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 2122047868, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1566100122 above the treshold 148486084 at time 0:0:41.048828138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1566100122, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 2096612089 above the treshold 148486084 at time 0:0:41.048828138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 2096612089, type: 2
+ 
+DEBUG (1): Sink node received data message from 2 with data 1591535901 at time 0:0:41.052673328
+
+DEBUG (2): Packet sent at time 0:0:41.052841174 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 1566100122
+
+DEBUG (6): Packet sent at time 0:0:41.055725070 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 3 with data 2122047868 at time 0:0:41.057449302
+
+DEBUG (3): Packet sent at time 0:0:41.057617147 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 2096612089
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 2096612089, type: 2
+ 
+DEBUG (7): Packet sent at time 0:0:41.059478711 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 7 with data 2096612089 at time 0:0:41.063796923
+
+DEBUG (3): Packet sent at time 0:0:41.063964768 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:42.015625010.
+
+DEBUG (2): Data timer fired at 0:0:42.015625011.
+
+DEBUG (3): Data timer fired at 0:0:42.015625011.
+
+DEBUG (4): Data timer fired at 0:0:42.015625012.
+
+DEBUG (5): Data timer fired at 0:0:42.015625012.
+
+DEBUG (6): Data timer fired at 0:0:42.015625013.
+
+DEBUG (7): Data timer fired at 0:0:42.015625013.
+
+DEBUG (1): Sink just read new treshold 1793088606
+
+DEBUG (1): Packet sent from: 1, data: 1793088606, type: 1
+
+DEBUG (2): Mote 2 just read new data 2035064722 above the treshold 287085224 at time 0:0:42.025390636
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 2035064722, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 1997591747 above the treshold 287085224 at time 0:0:42.025390636
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1997591747, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 1960118772 above the treshold 1421485337 at time 0:0:42.025390637
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 1960118772, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 1922645797 above the treshold 1421485337 at time 0:0:42.025390637
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 1922645797, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1885172822 above the treshold 148486084 at time 0:0:42.025390638
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1885172822, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 1847699847 above the treshold 148486084 at time 0:0:42.025390638
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 1847699847, type: 2
+ 
+DEBUG (1): Sink node received data message from 3 with data 1997591747 at time 0:0:42.029190052
+
+DEBUG (3): Packet sent at time 0:0:42.029357898 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 2 with data 2035064722 at time 0:0:42.033294642
+
+DEBUG (2): Packet sent at time 0:0:42.033462488 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 1847699847
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1847699847, type: 2
+ 
+DEBUG (2): Mote 2 has received a data message with data 1922645797
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1922645797, type: 2
+ 
+DEBUG (7): Packet sent at time 0:0:42.036666817 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (5): Packet sent at time 0:0:42.036804145 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 5 with data 1922645797 at time 0:0:42.039916919
+
+DEBUG (2): Packet sent at time 0:0:42.040084765 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 7 with data 1847699847 at time 0:0:42.043304352
+
+DEBUG (3): Packet sent at time 0:0:42.043472198 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (2): Data timer fired at 0:0:42.992187511.
+
+DEBUG (3): Data timer fired at 0:0:42.992187511.
+
+DEBUG (4): Data timer fired at 0:0:42.992187512.
+
+DEBUG (5): Data timer fired at 0:0:42.992187512.
+
+DEBUG (6): Data timer fired at 0:0:42.992187513.
+
+DEBUG (7): Data timer fired at 0:0:42.992187513.
+
+DEBUG (2): Mote 2 just read new data 360736885 above the treshold 287085224 at time 0:0:43.001953136
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 360736885, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 1912638278 above the treshold 287085224 at time 0:0:43.001953136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1912638278, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 1677792909 above the treshold 148486084 at time 0:0:43.001953138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 1677792909, type: 2
+ 
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (3): Mote 3 has received a data message with data 1677792909
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1677792909, type: 2
+ 
+DEBUG (7): Packet sent at time 0:0:43.008239722 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 2 with data 360736885 at time 0:0:43.010848958
+
+DEBUG (2): Packet sent at time 0:0:43.011016803 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 7 with data 1677792909 at time 0:0:43.014999327
+
+DEBUG (3): Packet sent at time 0:0:43.015167172 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:0:43.968750010.
+
+DEBUG (2): Data timer fired at 0:0:43.968750011.
+
+DEBUG (3): Data timer fired at 0:0:43.968750011.
+
+DEBUG (4): Data timer fired at 0:0:43.968750012.
+
+DEBUG (5): Data timer fired at 0:0:43.968750012.
+
+DEBUG (6): Data timer fired at 0:0:43.968750013.
+
+DEBUG (7): Data timer fired at 0:0:43.968750013.
+
+DEBUG (1): Sink just read new treshold 802182691
+
+DEBUG (1): Packet sent from: 1, data: 802182691, type: 1
+
+DEBUG (2): Mote 2 just read new data 558490714 above the treshold 287085224 at time 0:0:43.978515636
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 558490714, type: 2
+ 
+DEBUG (4): Mote 4 just read new data 1646645739 above the treshold 1421485337 at time 0:0:43.978515637
+
+DEBUG (4): Packet sent from: 4, to: 2 , data: 1646645739, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 587317117 above the treshold 148486084 at time 0:0:43.978515638
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 587317117, type: 2
+ 
+DEBUG (2): Mote 2 has received a treshold message with treshold 802182691 from mote 1
+
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 2 with data 558490714 at time 0:0:43.989440865
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (2): Packet sent at time 0:0:43.989608710 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (2): Data timer fired at 0:0:44.945312511.
+
+DEBUG (3): Data timer fired at 0:0:44.945312511.
+
+DEBUG (4): Data timer fired at 0:0:44.945312512.
+
+DEBUG (5): Data timer fired at 0:0:44.945312512.
+
+DEBUG (6): Data timer fired at 0:0:44.945312513.
+
+DEBUG (7): Data timer fired at 0:0:44.945312513.
+
+DEBUG (2): Mote 2 just read new data 2049892808 above the treshold 802182691 at time 0:0:44.955078136
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 2049892808, type: 2
+ 
+DEBUG (3): Mote 3 just read new data 1301534646 above the treshold 287085224 at time 0:0:44.955078136
+
+DEBUG (3): Packet sent from: 3, to: 1 , data: 1301534646, type: 2
+ 
+DEBUG (5): Mote 5 just read new data 1952301969 above the treshold 1421485337 at time 0:0:44.955078137
+
+DEBUG (5): Packet sent from: 5, to: 2 , data: 1952301969, type: 2
+ 
+DEBUG (6): Mote 6 just read new data 1203943807 above the treshold 148486084 at time 0:0:44.955078138
+
+DEBUG (6): Packet sent from: 6, to: 3 , data: 1203943807, type: 2
+ 
+DEBUG (7): Mote 7 just read new data 455585645 above the treshold 148486084 at time 0:0:44.955078138
+
+DEBUG (7): Packet sent from: 7, to: 3 , data: 455585645, type: 2
+ 
+DEBUG (3): Mote 3 has received a data message with data 1203943807
+
+DEBUG (6): Packet sent at time 0:0:44.958068843 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 1952301969
+
+DEBUG (5): Packet sent at time 0:0:44.959411608 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (3): Mote 3 has received a data message with data 455585645
+
+
+Simulation finished!
