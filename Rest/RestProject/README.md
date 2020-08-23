@@ -24,7 +24,7 @@ All APIs responses are of type application/json and return a status of the reque
 | `/images` | POST | (as form data, the file itself is the data)`{ "file" : file }`                                                        | PRIVATE | Upload an image to the server, return the key of the image   | `{"key":"imageKey"}` |
 | `/images/:key` | GET | -                                                        | PRIVATE |Return the image associated with `key` in the user account   | the image |
 | `/images/download/:key` | GET | -                                                        | PRIVATE |Download in the user device the  image associated with `key` in the user account   | - |
-| `/images` | GET | -                                                        | PRIVATE |Return the descriptions of all the images associated with the user account, including a link per each image   | `[ { "key": 0, "title": "imageTitle", "path": "http://localhost:4567/images/0"}, { "key": 1, "title": "imageTitle1", "path": "http://localhost:4567/images/2"}, ...]` |
+| `/images` | GET | -                                                        | PRIVATE |Return the descriptions of all the images associated with the user account, including a link per each image   | `[ { "key": 0, "title": "imageTitle", "path": "http://localhost:4567/images/0"}, { "key": 1, "title": "imageTitle1", "path": "http://localhost:4567/images/1"}, ...]` |
 | `/images/:key` | DELETE | -                                                        | PRIVATE |Delete the image associated with `key` in the user account   | - |
 
 ## How to test the server
