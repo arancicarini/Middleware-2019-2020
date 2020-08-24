@@ -1,0 +1,78 @@
+***** TOPOLOGY 7 *****
+Last recorded simulation time: 0:0:43.989440865
+
+Amount of data messages delivered: 65
+Maximum time needed to deliver a data message: 210264886
+Minimum time needed to deliver a data message: 23956159
+Average time needed to deliver a data message: 1.0527329253846154E8
+
+Amount of treshold messages delivered: 56
+Maximum time needed to deliver a treshold message: 199888970
+Minimum time needed to deliver a treshold message: 21819941
+Average time needed to deliver a treshold message: 9.578376448214285E7
+****************************************
+***** TOPOLOGY 15 *****
+Last recorded simulation time: 0:0:38.148849328
+
+Amount of data messages delivered: 96
+Maximum time needed to deliver a data message: 305936935
+Minimum time needed to deliver a data message: 19225962
+Average time needed to deliver a data message: 1.4384503645833334E8
+
+Amount of treshold messages delivered: 60
+Maximum time needed to deliver a treshold message: 241850395
+Minimum time needed to deliver a treshold message: 20751832
+Average time needed to deliver a treshold message: 1.3624238918333334E8
+****************************************
+***** TOPOLOGY 31 *****
+Last recorded simulation time: 0:0:36.191497664
+
+Amount of data messages delivered: 116
+Maximum time needed to deliver a data message: 377347651
+Minimum time needed to deliver a data message: 19225962
+Average time needed to deliver a data message: 1.6896116358620688E8
+
+Amount of treshold messages delivered: 93
+Maximum time needed to deliver a treshold message: 357663928
+Minimum time needed to deliver a treshold message: 26550138
+Average time needed to deliver a treshold message: 1.8672546998924732E8
+****************************************
+***** TOPOLOGY 63 *****
+Last recorded simulation time: 0:0:35.227340517
+
+Amount of data messages delivered: 117
+Maximum time needed to deliver a data message: 514218190
+Minimum time needed to deliver a data message: 21362180
+Average time needed to deliver a data message: 2.1906146134188035E8
+
+Amount of treshold messages delivered: 166
+Maximum time needed to deliver a treshold message: 464017067
+Minimum time needed to deliver a treshold message: 22125115
+Average time needed to deliver a treshold message: 2.861447465421687E8
+****************************************
+***** TOPOLOGY 3.40 *****
+Last recorded simulation time: 0:0:37.171874849
+
+Amount of data messages delivered: 116
+Maximum time needed to deliver a data message: 311430067
+Minimum time needed to deliver a data message: 19988897
+Average time needed to deliver a data message: 1.4866183096551725E8
+
+Amount of treshold messages delivered: 140
+Maximum time needed to deliver a treshold message: 334165530
+Minimum time needed to deliver a treshold message: 23498398
+Average time needed to deliver a treshold message: 1.8059434385E8
+****************************************
+***** TOPOLOGY 5.31 *****
+Last recorded simulation time: 0:0:38.133331226
+
+Amount of data messages delivered: 85
+Maximum time needed to deliver a data message: 244291787
+Minimum time needed to deliver a data message: 18768201
+Average time needed to deliver a data message: 1.1283898407058823E8
+
+Amount of treshold messages delivered: 117
+Maximum time needed to deliver a treshold message: 236052089
+Minimum time needed to deliver a treshold message: 50353710
+Average time needed to deliver a treshold message: 1.4633223716239315E8
+****************************************

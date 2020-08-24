@@ -15,15 +15,15 @@ public class App {
 
     public static String NUMBER = "([0-9]+)";
     public static String DATAMESSAGE = "Time for data message " + NUMBER + " from " + NUMBER + " to sink is : " + NUMBER + " ms";
-    public static String TRESHOLDMESSAGE = "Time for treshold " + NUMBER + "message from sink to " + NUMBER + " is : " + NUMBER + " ms";
+    public static String TRESHOLDMESSAGE = "Time for treshold " + NUMBER + " message from sink to " + NUMBER + " is : " + NUMBER + " ms";
     public static String SIMULTIME = "current simulation time: "+ NUMBER + ":"+ NUMBER + ":" + NUMBER +"." + NUMBER;
 
     public static void main(String[] args) {
         BufferedReader reader;
         try {
-            File report = new File("C:/Users/ponti/Documents/Github/Middleware-2019-2020/TinyOS/statistics/report.txt");
+            File report = new File("C:/Users/ponti/Github/Middleware-2019-2020/TinyOS/statistics/report.txt");
             report.createNewFile();
-            FileWriter writer = new FileWriter("C:/Users/ponti/Documents/Github/Middleware-2019-2020/TinyOS/statistics/report.txt");
+            FileWriter writer = new FileWriter("C:/Users/ponti/Github/Middleware-2019-2020/TinyOS/statistics/report.txt");
             List<Integer> dataTimes = new ArrayList<>();
             List<Integer> tresholdTimes = new ArrayList<>();
             String simulationTime = null;
@@ -31,9 +31,9 @@ public class App {
             for (String topology: topologies){
                 dataTimes.clear();
                 tresholdTimes.clear();
-                writer.write("*** TOPOLOGY " + topology + " ***\n");
+                writer.write("***** TOPOLOGY " + topology + " *****\n");
                 reader = new BufferedReader(new FileReader(
-                        "C:/Users/ponti/Documents/Github/Middleware-2019-2020/TinyOS/statistics/topology "+ topology +"/performance.txt"));
+                        "C:/Users/ponti/Github/Middleware-2019-2020/TinyOS/statistics/topology "+ topology +"/performance.txt"));
                 String line = reader.readLine();
                 while (line != null) {
                     Pattern pattern = Pattern.compile(DATAMESSAGE);
@@ -80,7 +80,7 @@ public class App {
                 avg = tresholdTimes.stream().mapToInt( i -> i).average().getAsDouble();
                 writer.write("Average time needed to deliver a treshold message: " + avg + "\n");
 
-                writer.write("****************************************");
+                writer.write("****************************************\n");
                 reader.close();
             }
 
