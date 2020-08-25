@@ -44,7 +44,7 @@ public class App {
                 Files.createDirectories(path);
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS,new JsonParser().parse("{\"Id\": \""+String.valueOf(userId)+"\"}")));
             }catch (UserException e){
-                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing required parameters")));
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Missing required parameters"));
             }
 
         });
@@ -57,7 +57,7 @@ public class App {
                 response.cookie("ImageServerId", String.valueOf(user.getId()));
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS));
             }catch (UserException e){
-                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing required parameters")));
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Missing required parameters"));
             }
         });
 
@@ -69,12 +69,12 @@ public class App {
                 String token = request.cookie("ImageServerToken");
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Missing cookies"));
                 }
                 userService.authenticate(token, id);
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(userService.getUsers())));
             }catch (UserException e){
-                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Invalid token")));
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Invalid token"));
             }
         });
 
@@ -84,12 +84,12 @@ public class App {
                 String token = request.cookie("ImageServerToken");
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Missing cookies"));
                 }
                 userService.authenticate(token, id);
                 String id1 = request.params(":id");
                 if (!id.equals(id1)){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("You cannot spy other people!")));
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "You cannot spy other people!"));
                 }
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new JsonParser().parse(userService.getUser(parseInt(id)).toString())));
             }catch (UserException e){
@@ -104,20 +104,20 @@ public class App {
                 String token = request.cookie("ImageServerToken");
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies!")));
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Missing cookies!"));
 
                 }
                 userService.authenticate(token, id);
                 String id1 = request.params(":id");
                 if (!id.equals(id1)){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("You cannot delete other people's account!")));
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "You cannot delete other people's account!"));
                 }
                 userService.deleteUser(parseInt(id));
                 Path path= Paths.get(STORAGE+"/"+id);
                 deleteDirectory(path);
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS));
             }catch (UserException e){
-                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Invalid token")));
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Invalid token"));
             }
         });
 
@@ -129,7 +129,7 @@ public class App {
                 String token = request.cookie("ImageServerToken");
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Missing cookies"));
                 }
                 userService.authenticate(token, id);
                 Integer key = uploadImage(request, parseInt(id));
@@ -144,7 +144,7 @@ public class App {
                 String token = request.cookie("ImageServerToken");
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Missing cookies"));
                 }
                 userService.authenticate(token, id);
             }catch ( UserException e){
@@ -158,7 +158,7 @@ public class App {
                 String token = request.cookie("ImageServerToken");
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Missing cookies"));
                 }
                 userService.authenticate(token, id);
             }catch ( UserException e){
@@ -174,7 +174,7 @@ public class App {
                 String token = request.cookie("ImageServerToken");
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Missing cookies"));
                 }
                 userService.authenticate(token, id);
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS, new Gson().toJsonTree(imageService.getUserImages(parseInt(id)))));
@@ -189,7 +189,7 @@ public class App {
                 String token = request.cookie("ImageServerToken");
                 String id = request.cookie("ImageServerId");
                 if (token == null || id == null){
-                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, new Gson().toJson("Missing cookies")));
+                    return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Missing cookies"));
                 }
                 userService.authenticate(token, id);
                 Path path = Paths.get(STORAGE+"/"+id+"/"+request.params(":key"));
