@@ -372,10 +372,6 @@ public class DataNode {
                     ActorRef<Command> node = nodes.get(nodePosition).getNode();
                     node.tell(new Put(entry.getKey(), entry.getValue(), context.getSelf(), false, ticket));
                 }
-                //add the replicas
-                getSuccessorNodes(nodePosition,this.nReplicas,this.nodes).stream()
-                        .map(NodeInfo::getNode)
-                        .forEach(n -> n.tell(new Put(entry.getKey(), entry.getValue(), context.getSelf(), true, ticket)));
                 ticket++;
             });
         return Behaviors.same();
