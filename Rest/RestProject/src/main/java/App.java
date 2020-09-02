@@ -116,8 +116,8 @@ public class App {
                 userService.deleteUser(parseInt(id));
                 Path path= Paths.get(STORAGE+"/"+id);
                 deleteDirectory(path);
-                response.cookie("ImageServerToken", "INVALID");
-                response.cookie("ImageServerId", "INVALID");
+                response.removeCookie("/","ImageServerToken");
+                response.removeCookie("/", "ImageServerId");
                 System.out.println("removed cookies");
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS));
             }catch (UserException e){
