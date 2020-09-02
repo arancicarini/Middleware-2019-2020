@@ -118,7 +118,6 @@ public class App {
                 deleteDirectory(path);
                 response.removeCookie("/","ImageServerToken");
                 response.removeCookie("/", "ImageServerId");
-                System.out.println("removed cookies");
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Invalid token"));
@@ -159,7 +158,8 @@ public class App {
                 return response;
             }
             catch (ImageException e){
-                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Image does not exist"));
+                response.type("application/json");
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
             }
         });
 
