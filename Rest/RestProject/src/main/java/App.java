@@ -115,8 +115,8 @@ public class App {
                 userService.deleteUser(parseInt(id));
                 Path path= Paths.get(STORAGE+"/"+id);
                 deleteDirectory(path);
-                response.cookie("ImageServerToken", "INVALID TOKEN");
-                response.cookie("ImageServerId", "INVALID ID");
+                response.removeCookie("ImageServerToken");
+                response.removeCookie("ImageServerId");
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Invalid token"));
@@ -180,7 +180,7 @@ public class App {
             catch (ImageException e){
                 response.type("application/json");
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Image does not exist"));
-            }        });
+            }});
 
         get("/images", (request, response) -> {
             response.type("application/json");
