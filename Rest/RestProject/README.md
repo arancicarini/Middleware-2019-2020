@@ -13,7 +13,7 @@ The login API generates a HMAC256 token from a secret and the user id, using a J
 
 
 ## APIS
-All APIs responses are of type application/json and return a status of the request ( ERROR or SUCCESS), a message explaining the error in case of error and possibly some data in case of success, apart from `/images/:key`, which returns a response of type image/png and `/images/download/:key`. THe body of the request must be of type Json, apart from `/images` (POST).
+All APIs responses are of type application/json and return a status of the request ( ERROR or SUCCESS), a message explaining the error in case of error and possibly some data in case of success, apart from `/images/:key`, which returns a response of type image/png and `/images/download/:key`, which returns a raw response. The body of the request must be of type Json, apart from `/images` (POST).
 | API                   | HTTP method | Body                                                         | Access  | Description  | Response data ( if STATUS == SUCCESS and response.type = application/json )                                                                                                         |
 |:-----------------------:|:------:|:----------------------------------------------------------:|:---------:|:---------------------------------------------------------:|---------------------------------------------------------|
 | `/register`           | POST | `{ "username": "My_username", "password": "My_password" }` | PUBLIC | Register a user in the server | `{ "Id":"userId"}` |
