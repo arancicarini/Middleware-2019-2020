@@ -68,6 +68,7 @@ public class App {
             try{
                 String token = request.cookie("ImageServerToken");
                 String id = request.cookie("ImageServerId");
+
                 if (token == null || id == null){
                     return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Missing cookies"));
                 }
@@ -115,8 +116,9 @@ public class App {
                 userService.deleteUser(parseInt(id));
                 Path path= Paths.get(STORAGE+"/"+id);
                 deleteDirectory(path);
-                response.removeCookie("ImageServerToken");
-                response.removeCookie("ImageServerId");
+                response.cookie("ImageServerToken", "INVALID");
+                response.cookie("ImageServerId", "INVALID");
+                System.out.println("removed cookies");
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Invalid token"));
@@ -157,7 +159,6 @@ public class App {
                 return response;
             }
             catch (ImageException e){
-                response.type("application/json");
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Image does not exist"));
             }
         });
