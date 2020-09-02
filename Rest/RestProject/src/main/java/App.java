@@ -115,6 +115,8 @@ public class App {
                 userService.deleteUser(parseInt(id));
                 Path path= Paths.get(STORAGE+"/"+id);
                 deleteDirectory(path);
+                response.cookie("ImageServerToken", "INVALID TOKEN");
+                response.cookie("ImageServerId", "INVALID ID");
                 return new Gson().toJson(new StandardResponse(StatusResponse.SUCCESS));
             }catch (UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Invalid token"));
@@ -155,6 +157,7 @@ public class App {
                 return response;
             }
             catch (ImageException e){
+                response.type("application/json");
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Image does not exist"));
             }
         });
@@ -175,6 +178,7 @@ public class App {
                 return response;
             }
             catch (ImageException e){
+                response.type("application/json");
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Image does not exist"));
             }        });
 
@@ -211,7 +215,6 @@ public class App {
                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
             }
         });
-
     }
 
     public static Integer uploadImage(Request request, Integer id) throws ImageException {
@@ -253,7 +256,7 @@ public class App {
             out.flush();
             out.close();
         } catch (IOException e) {
-            throw new ImageException("Can't download the image");
+            throw new ImageException("Can't fetch the image");
         }
         return response;
     }
