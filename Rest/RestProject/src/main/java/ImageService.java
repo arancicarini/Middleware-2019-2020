@@ -3,7 +3,7 @@ import java.util.Collection;
 
 public interface ImageService {
 
-    public Integer addImage(Image image, int userID);
+    public Integer addImage(Image image, int userID) throws ImageException;
 
     public void deleteImage(Integer key, Integer userID);
 

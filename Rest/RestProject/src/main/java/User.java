@@ -41,7 +41,12 @@ class User {
         this.password = password;
     }
 
-    public Integer addImage(Image image){
+    public Integer addImage(Image image) throws ImageException {
+        for (Image image1: images.values()){
+            if(image1.getTitle().equals(image.getTitle())){
+                throw new ImageException("image already exist for this user");
+            }
+        }
         synchronized (this) {
             image.setKey(counter);
             image.setPath(counter);

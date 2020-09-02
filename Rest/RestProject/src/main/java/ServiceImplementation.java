@@ -93,7 +93,7 @@ public class ServiceImplementation implements UserService, ImageService {
     }
 
     @Override
-    public Integer addImage(Image image, int userID) {
+    public Integer addImage(Image image, int userID) throws ImageException {
         return userMap.get(userID).addImage(image);
     }
 

@@ -150,7 +150,13 @@ public class App {
             }catch ( UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
             }
-            return returnImage(request,response);
+            try {
+                response= returnImage(request, response);
+                return response;
+            }
+            catch (ImageException e){
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Image does not exist"));
+            }
         });
 
         get("/images/download/:key", (request,response)->{
@@ -164,8 +170,13 @@ public class App {
             }catch ( UserException e){
                 return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, e.getMessage()));
             }
-            return downloadImage(request,response);
-        });
+            try {
+                response= downloadImage(request, response);
+                return response;
+            }
+            catch (ImageException e){
+                return new Gson().toJson(new StandardResponse(StatusResponse.ERROR, "Image does not exist"));
+            }        });
 
         get("/images", (request, response) -> {
             response.type("application/json");
@@ -223,8 +234,8 @@ public class App {
             Path path= Paths.get(STORAGE+"/"+id).resolve(String.valueOf(key));
             Files.copy(stream,path, StandardCopyOption.REPLACE_EXISTING);
             return key;
-        } catch (IOException | ServletException e) {
-            throw new ImageException("Exception occurred while uploading image");
+        } catch (IOException | ServletException | ImageException e) {
+            throw new ImageException(e.getMessage());
         }
     }
 
@@ -233,6 +244,9 @@ public class App {
         response.raw().setContentType("image/png");
         String id = request.cookie("ImageServerId");
         Path imagePath = Paths.get(STORAGE+"/"+id).resolve(request.params(":key"));
+        if(!Files.exists(imagePath)){
+            throw new ImageException("Image does not exist");
+        }
         File image= new File(String.valueOf(imagePath));
         try (OutputStream out = response.raw().getOutputStream()) {
             ImageIO.write(read(image), "png", out);
@@ -244,9 +258,12 @@ public class App {
         return response;
     }
 
-    public static Response downloadImage(Request request, Response response) throws IOException {
+    public static Response downloadImage(Request request, Response response) throws IOException, ImageException {
         String id = request.cookie("ImageServerId");
         Path imagePath = Paths.get(STORAGE+"/"+id).resolve(request.params(":key"));
+        if(!Files.exists(imagePath)){
+            throw new ImageException("Image does not exist");
+        }
         BufferedImage image = read(new File(String.valueOf(imagePath)));
         HttpServletResponse raw;
         try {
@@ -257,7 +274,7 @@ public class App {
             out.flush();
             out.close();
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new ImageException("Can't download the image");
         }
         return response;
     }
