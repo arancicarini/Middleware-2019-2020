@@ -294,10 +294,6 @@ public class DataNode {
             node.getNode().tell(new Put(message.key,message.value, context.getSelf(), false, ticket));
             requests.put(ticket, message.replyTo);
         }
-        //add the replicas
-        getSuccessorNodes(nodePosition,this.nReplicas,this.nodes).stream()
-                .map(NodeInfo::getNode)
-                .forEach(n -> n.tell(new Put(message.key,message.value, context.getSelf(), true, ticket)));
         ticket++;
         return Behaviors.same();
     }
@@ -316,6 +312,13 @@ public class DataNode {
         }
         else{
             this.data.put(message.key,message.value);
+            //add the replicas
+            int nodePosition = message.key.hashCode() % nodes.size();
+            if(nodePosition < 0 ) nodePosition += nodes.size();
+            nodes.sort(Comparator.comparing(NodeInfo::getHashKey));
+            getSuccessorNodes(nodePosition,this.nReplicas,this.nodes).stream()
+                    .map(NodeInfo::getNode)
+                    .forEach(n -> n.tell(new Put(message.key,message.value, context.getSelf(), true, ticket)));
             message.replyTo.tell(new PutAnswer(true, message.requestId));
         }
         return Behaviors.same();
