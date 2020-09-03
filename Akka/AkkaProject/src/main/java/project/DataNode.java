@@ -288,6 +288,9 @@ public class DataNode {
             //I'm the leader, so I add the value to my data
             this.data.put(message.key,message.value);
             message.replyTo.tell(new PutAnswer(true, ticket));
+            getSuccessorNodes(nodePosition,this.nReplicas,this.nodes).stream()
+                    .map(NodeInfo::getNode)
+                    .forEach(n -> n.tell(new Put(message.key,message.value, context.getSelf(), true, ticket)));
         }else{
             //I send the data to the leader of that data
             NodeInfo node = nodes.get(nodePosition);
@@ -367,6 +370,9 @@ public class DataNode {
                 if (nodePosition == this.nodeId){
                     //I'm the leader, so I add the value to my data
                     this.data.put(entry.getKey(),entry.getValue());
+                    getSuccessorNodes(nodePosition,this.nReplicas,this.nodes).stream()
+                            .map(NodeInfo::getNode)
+                            .forEach(n -> n.tell(new Put(message.key,message.value, context.getSelf(), true, ticket)));
                 }else{
                     //I send the data to the leader of that data
                     ActorRef<Command> node = nodes.get(nodePosition).getNode();
