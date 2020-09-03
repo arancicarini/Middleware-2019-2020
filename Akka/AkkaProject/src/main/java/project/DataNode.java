@@ -36,7 +36,6 @@ public class DataNode {
         public final boolean isPresent;
         public final int requestId;
 
-
         public GetAnswer(String key, String value, boolean isPresent, Integer requestId){
             this.key = key;
             this.value = value;
@@ -157,11 +156,11 @@ public class DataNode {
     private final ActorContext<Command> context;
     private final HashMap<String,String> data = new HashMap<>();
     private final HashMap<String,String> replicas = new HashMap<>();
-    private final HashMap<Integer, ActorRef<Command>> requests = new HashMap<>();
+    private final HashMap<Integer, Request> requests = new HashMap<>();
 
     //non final actor attributes
     private int nodeId;
-    private int ticket;
+    private Integer ticket;
 
     //--------------------------------------------------------------------------------
 
@@ -244,7 +243,7 @@ public class DataNode {
                     .stream()
                     .map(NodeInfo::getNode)
                     .forEach(n -> n.tell(new Get(message.key, context.getSelf(), ticket)));
-            requests.put(ticket, message.replyTo);
+            requests.put(ticket, new Request(1, message.replyTo));
 
         }
         ticket++;
@@ -268,8 +267,13 @@ public class DataNode {
 
     private Behavior<Command> onGetAnswer(GetAnswer message){
         if (requests.containsKey(message.requestId)){
-            requests.remove(message.requestId)
+            Request request = requests.remove(message.requestId);
+            request.setCounter(request.getCounter()-1);
+            if (request.getCounter() == 0) request.requester
                     .tell(new GetAnswer(message.key, message.value,message.isPresent, message.requestId));
+            else{
+                requests.put(message.requestId, request);
+            }
         }
         //otherwise just drop the message
         return Behaviors.same();
@@ -295,7 +299,8 @@ public class DataNode {
             //I send the data to the leader of that data
             NodeInfo node = nodes.get(nodePosition);
             node.getNode().tell(new Put(message.key,message.value, context.getSelf(), false, ticket));
-            requests.put(ticket, message.replyTo);
+            Request request = new Request(1, message.replyTo);
+            requests.put(ticket, request);
         }
         ticket++;
         return Behaviors.same();
@@ -303,8 +308,12 @@ public class DataNode {
 
     private Behavior<Command> onPutAnswer(PutAnswer message){
         if (requests.containsKey(message.requestId)){
-            requests.remove(message.requestId)
-                    .tell(new PutAnswer(message.success, message.requestId));
+            Request request = requests.remove(message.requestId);
+            request.setCounter(request.getCounter()-1);
+            if (request.getCounter() == 0) request.requester.tell(new PutAnswer(true, message.requestId));
+            else{
+                requests.put(message.requestId, request);
+            }
         }
         return Behaviors.same();
     }
@@ -312,17 +321,19 @@ public class DataNode {
     private Behavior<Command> onPut(Put message){
         if ( message.isReplica){
             this.replicas.put(message.key, message.value);
+            message.replyTo.tell(new PutAnswer(true, message.requestId));
         }
         else{
             this.data.put(message.key,message.value);
             //add the replicas
             int nodePosition = message.key.hashCode() % nodes.size();
-            if(nodePosition < 0 ) nodePosition += nodes.size();
+            if(nodePosition < 0) nodePosition += nodes.size();
             nodes.sort(Comparator.comparing(NodeInfo::getHashKey));
             getSuccessorNodes(nodePosition,this.nReplicas,this.nodes).stream()
                     .map(NodeInfo::getNode)
                     .forEach(n -> n.tell(new Put(message.key,message.value, context.getSelf(), true, ticket)));
-            message.replyTo.tell(new PutAnswer(true, message.requestId));
+            Request request = new Request(nReplicas, message.replyTo);
+            requests.put(ticket, request);
         }
         return Behaviors.same();
     }
