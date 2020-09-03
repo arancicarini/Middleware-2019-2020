@@ -40,7 +40,7 @@ public class UserRoutes {
     }
 
     private CompletionStage<DataNode.Command> putRequest(String key, String value) {
-        return AskPattern.ask(node, ref -> new DataNode.PutRequest(key, value, ref), askTimeout, scheduler);
+        return AskPattern.ask(node, ref -> new DataNode.PutRequest(key, new Value(value, -1), ref), askTimeout, scheduler);
     }
 
 
