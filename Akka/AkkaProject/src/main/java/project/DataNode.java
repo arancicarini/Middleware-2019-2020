@@ -372,7 +372,7 @@ public class DataNode {
                     this.data.put(entry.getKey(),entry.getValue());
                     getSuccessorNodes(nodePosition,this.nReplicas,this.nodes).stream()
                             .map(NodeInfo::getNode)
-                            .forEach(n -> n.tell(new Put(message.key,message.value, context.getSelf(), true, ticket)));
+                            .forEach(n -> n.tell(new Put(entry.getKey(),entry.getValue(), context.getSelf(), true, ticket)));
                 }else{
                     //I send the data to the leader of that data
                     ActorRef<Command> node = nodes.get(nodePosition).getNode();
