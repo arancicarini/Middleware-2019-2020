@@ -1,0 +1,4841 @@
+Activate debug message on channel analysis
+
+
+DEBUG (3): Time for treshold 33614 message from sink to 3 is : 48522666 ms
+DEBUG (3): current simulation time: 0:0:10.780242902
+
+DEBUG (2): Time for treshold 33614 message from sink to 2 is : 48522666 ms
+DEBUG (2): current simulation time: 0:0:10.780242902
+
+DEBUG (1): Time for treshold 33614 message from sink to 1 is : 99486724 ms
+DEBUG (1): current simulation time: 0:0:10.785339307
+
+DEBUG (7): Time for treshold 33614 message from sink to 7 is : 99486724 ms
+DEBUG (7): current simulation time: 0:0:10.785339307
+
+DEBUG (6): Time for treshold 33614 message from sink to 6 is : 99486724 ms
+DEBUG (6): current simulation time: 0:0:10.785339307
+
+DEBUG (3): Number of discarded messages: 1
+
+DEBUG (1): Number of discarded messages: 1
+
+DEBUG (5): Time for treshold 33614 message from sink to 5 is : 131377407 ms
+DEBUG (5): current simulation time: 0:0:10.788528376
+
+DEBUG (4): Time for treshold 33614 message from sink to 4 is : 131377407 ms
+DEBUG (4): current simulation time: 0:0:10.788528376
+
+DEBUG (3): Number of discarded messages: 2
+
+DEBUG (3): Number of discarded messages: 3
+
+DEBUG (2): Number of discarded messages: 1
+
+DEBUG (1): Number of discarded messages: 2
+
+DEBUG (1): Data Message counter: 1
+
+DEBUG (1): Time for data message 1146774113 from 3 to sink is : 48980427 ms
+DEBUG (1): current simulation time: 0:0:11.756851179
+
+DEBUG (3): Messages NOT ackes 1 
+
+DEBUG (1): Number of discarded messages: 3
+
+DEBUG (1): Data Message counter: 2
+
+DEBUG (1): Time for data message 323209673 from 2 to sink is : 70800368 ms
+DEBUG (1): current simulation time: 0:0:11.759033172
+
+DEBUG (2): Messages NOT ackes 1 
+
+DEBUG (3): Number of discarded messages: 4
+
+DEBUG (7): Messages NOT ackes 1 
+
+DEBUG (1): Number of discarded messages: 4
+
+DEBUG (1): Data Message counter: 3
+
+DEBUG (1): Time for data message 146064579 from 7 to sink is : 119170447 ms
+DEBUG (1): current simulation time: 0:0:11.763870183
+
+DEBUG (3): Messages NOT ackes 2 
+
+DEBUG (2): Number of discarded messages: 2
+
+DEBUG (4): Messages NOT ackes 2 
+
+DEBUG (1): Number of discarded messages: 5
+
+DEBUG (1): Data Message counter: 4
+
+DEBUG (1): Time for data message 166785366 from 3 to sink is : 34026901 ms
+DEBUG (1): current simulation time: 0:0:12.731918326
+
+DEBUG (3): Messages NOT ackes 3 
+
+DEBUG (2): Number of discarded messages: 3
+
+DEBUG (5): Messages NOT ackes 2 
+
+DEBUG (3): Number of discarded messages: 5
+
+DEBUG (6): Messages NOT ackes 2 
+
+DEBUG (3): Number of discarded messages: 6
+
+DEBUG (7): Messages NOT ackes 2 
+
+DEBUG (1): Number of discarded messages: 6
+
+DEBUG (1): Data Message counter: 5
+
+DEBUG (1): Time for data message 1198830848 from 2 to sink is : 94603940 ms
+DEBUG (1): current simulation time: 0:0:12.737976030
+
+DEBUG (2): Messages NOT ackes 2 
+
+DEBUG (1): Number of discarded messages: 7
+
+DEBUG (1): Data Message counter: 6
+
+DEBUG (1): Time for data message 1365616214 from 6 to sink is : 135802430 ms
+DEBUG (1): current simulation time: 0:0:12.742095881
+
+DEBUG (3): Messages NOT ackes 4 
+
+DEBUG (1): Number of discarded messages: 8
+
+DEBUG (1): Data Message counter: 7
+
+DEBUG (1): Time for data message 1058486182 from 2 to sink is : 37994163 ms
+DEBUG (1): current simulation time: 0:0:13.708877552
+
+DEBUG (2): Messages NOT ackes 3 
+
+DEBUG (1): Number of discarded messages: 9
+
+DEBUG (1): Data Message counter: 8
+
+DEBUG (1): Time for data message 695487027 from 3 to sink is : 65459823 ms
+DEBUG (1): current simulation time: 0:0:13.711624118
+
+DEBUG (3): Messages NOT ackes 5 
+
+DEBUG (2): Number of discarded messages: 4
+
+DEBUG (4): Messages NOT ackes 3 
+
+DEBUG (3): Number of discarded messages: 7
+
+DEBUG (7): Messages NOT ackes 3 
+
+DEBUG (2): Number of discarded messages: 5
+
+DEBUG (5): Messages NOT ackes 3 
+
+DEBUG (3): Number of discarded messages: 8
+
+DEBUG (6): Messages NOT ackes 3 
+
+DEBUG (2): Number of discarded messages: 6
+
+DEBUG (5): Messages NOT ackes 4 
+
+DEBUG (1): Number of discarded messages: 10
+
+DEBUG (1): Data Message counter: 9
+
+DEBUG (1): Time for data message 296972168 from 3 to sink is : 31738096 ms
+DEBUG (1): current simulation time: 0:0:14.684814446
+
+DEBUG (3): Messages NOT ackes 7 
+
+DEBUG (3): Number of discarded messages: 9
+
+DEBUG (7): Messages NOT ackes 4 
+
+DEBUG (2): Number of discarded messages: 7
+
+DEBUG (4): Messages NOT ackes 4 
+
+DEBUG (3): Number of discarded messages: 10
+
+DEBUG (6): Messages NOT ackes 4 
+
+DEBUG (1): Number of discarded messages: 11
+
+DEBUG (1): Data Message counter: 10
+
+DEBUG (1): Time for data message 222729126 from 2 to sink is : 94756527 ms
+DEBUG (1): current simulation time: 0:0:14.691116288
+
+DEBUG (2): Messages NOT ackes 5 
+
+DEBUG (1): Number of discarded messages: 12
+
+DEBUG (1): Data Message counter: 11
+
+DEBUG (1): Time for data message 593944336 from 7 to sink is : 115050598 ms
+DEBUG (1): current simulation time: 0:0:14.693145698
+
+DEBUG (3): Messages NOT ackes 8 
+
+DEBUG (2): Number of discarded messages: 8
+
+DEBUG (4): Messages NOT ackes 5 
+
+DEBUG (1): Number of discarded messages: 13
+
+DEBUG (1): Data Message counter: 12
+
+DEBUG (1): Time for data message 344423961 from 2 to sink is : 65612410 ms
+DEBUG (1): current simulation time: 0:0:15.664764377
+
+DEBUG (2): Messages NOT ackes 6 
+
+DEBUG (2): Number of discarded messages: 9
+
+DEBUG (5): Messages NOT ackes 5 
+
+DEBUG (1): Number of discarded messages: 14
+
+DEBUG (1): Data Message counter: 13
+
+DEBUG (1): Time for data message 459231948 from 3 to sink is : 89263395 ms
+DEBUG (1): current simulation time: 0:0:15.667129476
+
+DEBUG (3): Messages NOT ackes 9 
+
+DEBUG (1): Number of discarded messages: 15
+
+DEBUG (1): Data Message counter: 14
+
+DEBUG (1): Time for data message 688847922 from 5 to sink is : 150603369 ms
+DEBUG (1): current simulation time: 0:0:15.673263474
+
+DEBUG (2): Messages NOT ackes 7 
+
+DEBUG (3): Number of discarded messages: 11
+
+DEBUG (6): Messages NOT ackes 6 
+
+DEBUG (3): Number of discarded messages: 12
+
+DEBUG (7): Messages NOT ackes 6 
+
+DEBUG (3): Number of discarded messages: 13
+
+DEBUG (6): Messages NOT ackes 7 
+
+DEBUG (3): Number of discarded messages: 14
+
+DEBUG (7): Messages NOT ackes 7 
+
+DEBUG (1): Number of discarded messages: 16
+
+DEBUG (1): Data Message counter: 15
+
+DEBUG (1): Time for data message 66126916 from 3 to sink is : 42266599 ms
+DEBUG (1): current simulation time: 0:0:18.592117296
+
+DEBUG (3): Messages NOT ackes 12 
+
+DEBUG (1): Number of discarded messages: 17
+
+DEBUG (1): Data Message counter: 16
+
+DEBUG (1): Time for data message 49595187 from 2 to sink is : 85601307 ms
+DEBUG (1): current simulation time: 0:0:18.596450766
+
+DEBUG (2): Messages NOT ackes 10 
+
+DEBUG (2): Number of discarded messages: 10
+
+DEBUG (4): Messages NOT ackes 9 
+
+DEBUG (3): Number of discarded messages: 15
+
+DEBUG (6): Messages NOT ackes 9 
+
+DEBUG (2): Number of discarded messages: 11
+
+DEBUG (5): Messages NOT ackes 9 
+
+DEBUG (3): Number of discarded messages: 16
+
+DEBUG (7): Messages NOT ackes 10 
+
+DEBUG (2): Time for treshold 564950498 message from sink to 2 is : 71105542 ms
+DEBUG (2): current simulation time: 0:0:20.548126189
+
+DEBUG (3): Number of discarded messages: 17
+
+DEBUG (7): Messages NOT ackes 11 
+
+DEBUG (1): Number of discarded messages: 18
+
+DEBUG (1): Data Message counter: 17
+
+DEBUG (1): Time for data message 1438693565 from 3 to sink is : 68358976 ms
+DEBUG (1): current simulation time: 0:0:21.524414034
+
+DEBUG (3): Messages NOT ackes 15 
+
+DEBUG (1): Number of discarded messages: 19
+
+DEBUG (1): Data Message counter: 18
+
+DEBUG (1): Time for data message 1604365382 from 3 to sink is : 19378549 ms
+DEBUG (1): current simulation time: 0:0:22.496078491
+
+DEBUG (3): Messages NOT ackes 16 
+
+DEBUG (2): Number of discarded messages: 12
+
+DEBUG (4): Messages NOT ackes 12 
+
+DEBUG (2): Number of discarded messages: 13
+
+DEBUG (5): Messages NOT ackes 12 
+
+DEBUG (1): Number of discarded messages: 20
+
+DEBUG (1): Data Message counter: 19
+
+DEBUG (1): Time for data message 931714904 from 4 to sink is : 150298195 ms
+DEBUG (1): current simulation time: 0:0:22.509170456
+
+DEBUG (2): Messages NOT ackes 13 
+
+DEBUG (1): Number of discarded messages: 21
+
+DEBUG (1): Data Message counter: 20
+
+DEBUG (1): Time for data message 1646969480 from 2 to sink is : 50201123 ms
+DEBUG (1): current simulation time: 0:0:23.475723248
+
+DEBUG (2): Messages NOT ackes 14 
+
+DEBUG (3): Number of discarded messages: 18
+
+DEBUG (7): Messages NOT ackes 13 
+
+DEBUG (3): Number of discarded messages: 19
+
+DEBUG (6): Messages NOT ackes 13 
+
+DEBUG (1): Number of discarded messages: 22
+
+DEBUG (1): Data Message counter: 21
+
+DEBUG (1): Time for data message 764303542 from 3 to sink is : 107268661 ms
+DEBUG (1): current simulation time: 0:0:23.481430002
+
+DEBUG (3): Messages NOT ackes 17 
+
+DEBUG (3): Number of discarded messages: 20
+
+DEBUG (7): Messages NOT ackes 15 
+
+DEBUG (1): Number of discarded messages: 23
+
+DEBUG (1): Data Message counter: 22
+
+DEBUG (1): Time for data message 1156421386 from 2 to sink is : 54931320 ms
+DEBUG (1): current simulation time: 0:0:25.429321268
+
+DEBUG (2): Messages NOT ackes 16 
+
+DEBUG (2): Number of discarded messages: 14
+
+DEBUG (5): Messages NOT ackes 15 
+
+DEBUG (3): Number of discarded messages: 21
+
+DEBUG (6): Messages NOT ackes 15 
+
+DEBUG (2): Number of discarded messages: 15
+
+DEBUG (4): Messages NOT ackes 15 
+
+DEBUG (1): Number of discarded messages: 24
+
+DEBUG (1): Data Message counter: 23
+
+DEBUG (1): Time for data message 826067299 from 3 to sink is : 106810900 ms
+DEBUG (1): current simulation time: 0:0:25.434509226
+
+DEBUG (3): Messages NOT ackes 19 
+
+DEBUG (1): Number of discarded messages: 25
+
+DEBUG (1): Data Message counter: 24
+
+DEBUG (1): Time for data message 165359125 from 5 to sink is : 171202614 ms
+DEBUG (1): current simulation time: 0:0:25.440948398
+
+DEBUG (2): Messages NOT ackes 17 
+
+DEBUG (1): Number of discarded messages: 26
+
+DEBUG (1): Data Message counter: 25
+
+DEBUG (1): Time for data message 231316438 from 3 to sink is : 41808838 ms
+DEBUG (1): current simulation time: 0:0:26.404571520
+
+DEBUG (3): Messages NOT ackes 20 
+
+DEBUG (2): Number of discarded messages: 16
+
+DEBUG (5): Messages NOT ackes 16 
+
+DEBUG (1): Number of discarded messages: 27
+
+DEBUG (1): Data Message counter: 26
+
+DEBUG (1): Time for data message 1247229152 from 2 to sink is : 85753894 ms
+DEBUG (1): current simulation time: 0:0:26.408966025
+
+DEBUG (2): Messages NOT ackes 18 
+
+DEBUG (3): Number of discarded messages: 22
+
+DEBUG (7): Messages NOT ackes 16 
+
+DEBUG (2): Number of discarded messages: 17
+
+DEBUG (4): Messages NOT ackes 16 
+
+DEBUG (1): Number of discarded messages: 28
+
+DEBUG (1): Data Message counter: 27
+
+DEBUG (1): Time for data message 462632876 from 7 to sink is : 151213717 ms
+DEBUG (1): current simulation time: 0:0:26.415512010
+
+DEBUG (3): Messages NOT ackes 21 
+
+DEBUG (1): Number of discarded messages: 29
+
+DEBUG (1): Data Message counter: 28
+
+DEBUG (1): Time for data message 1362887371 from 4 to sink is : 187987184 ms
+DEBUG (1): current simulation time: 0:0:26.419189355
+
+DEBUG (2): Messages NOT ackes 19 
+
+DEBUG (2): Number of discarded messages: 18
+
+DEBUG (4): Messages NOT ackes 17 
+
+DEBUG (1): Number of discarded messages: 30
+
+DEBUG (1): Data Message counter: 29
+
+DEBUG (1): Time for data message 789972396 from 3 to sink is : 35095010 ms
+DEBUG (1): current simulation time: 0:0:27.380462637
+
+DEBUG (3): Messages NOT ackes 22 
+
+DEBUG (1): Number of discarded messages: 31
+
+DEBUG (1): Data Message counter: 30
+
+DEBUG (1): Time for data message 592479297 from 2 to sink is : 57220125 ms
+DEBUG (1): current simulation time: 0:0:27.382675148
+
+DEBUG (2): Messages NOT ackes 20 
+
+DEBUG (3): Number of discarded messages: 23
+
+DEBUG (6): Messages NOT ackes 17 
+
+DEBUG (3): Number of discarded messages: 24
+
+DEBUG (7): Messages NOT ackes 17 
+
+DEBUG (2): Number of discarded messages: 19
+
+DEBUG (5): Messages NOT ackes 17 
+
+DEBUG (1): Number of discarded messages: 32
+
+DEBUG (1): Data Message counter: 31
+
+DEBUG (1): Time for data message 1382451693 from 6 to sink is : 152587000 ms
+DEBUG (1): current simulation time: 0:0:27.392211838
+
+DEBUG (3): Messages NOT ackes 23 
+
+DEBUG (1): Number of discarded messages: 33
+
+DEBUG (1): Data Message counter: 32
+
+DEBUG (1): Time for data message 1184958594 from 5 to sink is : 183867335 ms
+DEBUG (1): current simulation time: 0:0:27.395339871
+
+DEBUG (2): Messages NOT ackes 21 
+
+DEBUG (2): Number of discarded messages: 20
+
+DEBUG (5): Messages NOT ackes 18 
+
+DEBUG (2): Number of discarded messages: 21
+
+DEBUG (4): Messages NOT ackes 18 
+
+DEBUG (1): Number of discarded messages: 34
+
+DEBUG (1): Data Message counter: 33
+
+DEBUG (1): Time for data message 1983230727 from 5 to sink is : 177000920 ms
+DEBUG (1): current simulation time: 0:0:28.371215729
+
+DEBUG (2): Messages NOT ackes 23 
+
+DEBUG (1): Number of discarded messages: 35
+
+DEBUG (1): Data Message counter: 34
+
+DEBUG (1): Time for data message 1425923617 from 3 to sink is : 44402817 ms
+DEBUG (1): current simulation time: 0:0:29.334518418
+
+DEBUG (3): Messages NOT ackes 25 
+
+DEBUG (2): Number of discarded messages: 22
+
+DEBUG (4): Messages NOT ackes 19 
+
+DEBUG (3): Number of discarded messages: 25
+
+DEBUG (7): Messages NOT ackes 19 
+
+DEBUG (2): Number of discarded messages: 23
+
+DEBUG (5): Messages NOT ackes 19 
+
+DEBUG (3): Number of discarded messages: 26
+
+DEBUG (6): Messages NOT ackes 19 
+
+DEBUG (3): Time for treshold 1097816499 message from sink to 3 is : 19683723 ms
+DEBUG (3): current simulation time: 0:0:30.308609007
+
+DEBUG (2): Time for treshold 1097816499 message from sink to 2 is : 19683723 ms
+DEBUG (2): current simulation time: 0:0:30.308609007
+
+DEBUG (2): Number of discarded messages: 24
+
+DEBUG (5): Messages NOT ackes 20 
+
+DEBUG (3): Number of discarded messages: 27
+
+DEBUG (7): Messages NOT ackes 20 
+
+DEBUG (5): Time for treshold 1097816499 message from sink to 5 is : 86669416 ms
+DEBUG (5): current simulation time: 0:0:30.315307577
+
+DEBUG (3): Number of discarded messages: 28
+
+DEBUG (6): Messages NOT ackes 20 
+
+DEBUG (1): Number of discarded messages: 36
+
+DEBUG (1): Data Message counter: 35
+
+DEBUG (1): Time for data message 1950632757 from 6 to sink is : 162810329 ms
+DEBUG (1): current simulation time: 0:0:30.322921670
+
+DEBUG (3): Messages NOT ackes 28 
+
+DEBUG (2): Number of discarded messages: 25
+
+DEBUG (2): Number of discarded messages: 26
+
+DEBUG (4): Messages NOT ackes 21 
+
+DEBUG (3): Number of discarded messages: 29
+
+DEBUG (6): Messages NOT ackes 21 
+
+DEBUG (1): Number of discarded messages: 37
+
+DEBUG (1): Data Message counter: 36
+
+DEBUG (1): Time for data message 1377145447 from 3 to sink is : 68206389 ms
+DEBUG (1): current simulation time: 0:0:31.290023775
+
+DEBUG (3): Messages NOT ackes 29 
+
+DEBUG (3): Number of discarded messages: 30
+
+DEBUG (7): Messages NOT ackes 21 
+
+DEBUG (1): Number of discarded messages: 38
+
+DEBUG (1): Data Message counter: 37
+
+DEBUG (1): Time for data message 1569729997 from 2 to sink is : 113372141 ms
+DEBUG (1): current simulation time: 0:0:31.294540350
+
+DEBUG (2): Messages NOT ackes 25 
+
+DEBUG (1): Number of discarded messages: 39
+
+DEBUG (1): Data Message counter: 38
+
+DEBUG (1): Time for data message 606807247 from 7 to sink is : 183104400 ms
+DEBUG (1): current simulation time: 0:0:31.301513578
+
+DEBUG (3): Messages NOT ackes 30 
+
+DEBUG (3): Number of discarded messages: 31
+
+DEBUG (7): Messages NOT ackes 22 
+
+DEBUG (2): Number of discarded messages: 27
+
+DEBUG (4): Messages NOT ackes 22 
+
+DEBUG (1): Number of discarded messages: 40
+
+DEBUG (1): Data Message counter: 39
+
+DEBUG (1): Time for data message 209560726 from 7 to sink is : 57372712 ms
+DEBUG (1): current simulation time: 0:0:32.265502909
+
+DEBUG (3): Messages NOT ackes 31 
+
+DEBUG (1): Number of discarded messages: 41
+
+DEBUG (1): Data Message counter: 40
+
+DEBUG (1): Time for data message 1741588189 from 4 to sink is : 103911747 ms
+DEBUG (1): current simulation time: 0:0:32.270156811
+
+DEBUG (3): Number of discarded messages: 32
+
+DEBUG (6): Messages NOT ackes 22 
+
+DEBUG (1): Number of discarded messages: 42
+
+DEBUG (1): Data Message counter: 41
+
+DEBUG (1): Time for data message 720236547 from 6 to sink is : 197142404 ms
+DEBUG (1): current simulation time: 0:0:32.279479878
+
+DEBUG (3): Messages NOT ackes 32 
+
+DEBUG (1): Number of discarded messages: 43
+
+DEBUG (1): Data Message counter: 42
+
+DEBUG (1): Time for data message 1690840536 from 2 to sink is : 49895949 ms
+DEBUG (1): current simulation time: 0:0:33.241317730
+
+DEBUG (2): Messages NOT ackes 27 
+
+DEBUG (2): Number of discarded messages: 28
+
+DEBUG (4): Messages NOT ackes 23 
+
+DEBUG (2): Number of discarded messages: 29
+
+DEBUG (5): Messages NOT ackes 22 
+
+DEBUG (1): Number of discarded messages: 44
+
+DEBUG (1): Data Message counter: 43
+
+DEBUG (1): Time for data message 670583913 from 4 to sink is : 125273927 ms
+DEBUG (1): current simulation time: 0:0:33.248855529
+
+DEBUG (2): Messages NOT ackes 28 
+
+DEBUG (2): Number of discarded messages: 30
+
+DEBUG (4): Messages NOT ackes 24 
+
+DEBUG (1): Number of discarded messages: 45
+
+DEBUG (1): Data Message counter: 44
+
+DEBUG (1): Time for data message 509646335 from 4 to sink is : 112151445 ms
+DEBUG (1): current simulation time: 0:0:34.224105781
+
+DEBUG (2): Messages NOT ackes 29 
+
+DEBUG (1): Number of discarded messages: 46
+
+DEBUG (1): Data Message counter: 45
+
+DEBUG (1): Time for data message 2027927946 from 3 to sink is : 51116645 ms
+DEBUG (1): current simulation time: 0:0:35.194564801
+
+DEBUG (3): Messages NOT ackes 33 
+
+DEBUG (2): Number of discarded messages: 31
+
+DEBUG (4): Messages NOT ackes 25 
+
+DEBUG (3): Number of discarded messages: 33
+
+DEBUG (6): Messages NOT ackes 25 
+
+DEBUG (1): Number of discarded messages: 47
+
+DEBUG (1): Data Message counter: 46
+
+DEBUG (1): Time for data message 1461168109 from 4 to sink is : 94298766 ms
+DEBUG (1): current simulation time: 0:0:35.198883013
+
+DEBUG (2): Messages NOT ackes 30 
+
+DEBUG (3): Number of discarded messages: 34
+
+DEBUG (7): Messages NOT ackes 25 
+
+DEBUG (1): Number of discarded messages: 48
+
+DEBUG (1): Data Message counter: 47
+
+DEBUG (1): Time for data message 327648435 from 6 to sink is : 154418044 ms
+DEBUG (1): current simulation time: 0:0:35.204894942
+
+DEBUG (3): Messages NOT ackes 34 
+
+DEBUG (2): Number of discarded messages: 32
+
+DEBUG (4): Messages NOT ackes 26 
+
+DEBUG (1): Number of discarded messages: 49
+
+DEBUG (1): Data Message counter: 48
+
+DEBUG (1): Time for data message 2114632899 from 2 to sink is : 58288234 ms
+DEBUG (1): current simulation time: 0:0:36.171844459
+
+DEBUG (3): Number of discarded messages: 35
+
+DEBUG (2): Messages NOT ackes 31 
+
+DEBUG (7): Messages NOT ackes 26 
+
+DEBUG (2): Number of discarded messages: 33
+
+DEBUG (5): Messages NOT ackes 23 
+
+DEBUG (1): Number of discarded messages: 50
+
+DEBUG (1): Data Message counter: 49
+
+DEBUG (1): Time for data message 1344053770 from 7 to sink is : 90026330 ms
+DEBUG (1): current simulation time: 0:0:36.175018271
+
+DEBUG (3): Messages NOT ackes 35 
+
+DEBUG (3): Number of discarded messages: 36
+
+DEBUG (6): Messages NOT ackes 26 
+
+DEBUG (1): Number of discarded messages: 51
+
+DEBUG (1): Data Message counter: 50
+
+DEBUG (1): Time for data message 2081782151 from 5 to sink is : 154570631 ms
+DEBUG (1): current simulation time: 0:0:36.181472700
+
+DEBUG (2): Messages NOT ackes 32 
+
+DEBUG (1): Number of discarded messages: 52
+
+DEBUG (1): Data Message counter: 51
+
+DEBUG (1): Time for data message 639176137 from 6 to sink is : 214689909 ms
+DEBUG (1): current simulation time: 0:0:36.187484628
+
+DEBUG (3): Messages NOT ackes 36 
+
+DEBUG (2): Number of discarded messages: 34
+
+DEBUG (5): Messages NOT ackes 24 
+
+DEBUG (1): Number of discarded messages: 53
+
+DEBUG (1): Data Message counter: 52
+
+DEBUG (1): Time for data message 1139356622 from 3 to sink is : 51726993 ms
+DEBUG (1): current simulation time: 0:0:37.147750835
+
+DEBUG (3): Messages NOT ackes 37 
+
+DEBUG (1): Number of discarded messages: 54
+
+DEBUG (1): Data Message counter: 53
+
+DEBUG (1): Time for data message 1928259290 from 2 to sink is : 69884846 ms
+DEBUG (1): current simulation time: 0:0:37.149566620
+
+DEBUG (2): Messages NOT ackes 33 
+
+DEBUG (3): Number of discarded messages: 37
+
+DEBUG (6): Messages NOT ackes 27 
+
+DEBUG (2): Number of discarded messages: 35
+
+DEBUG (3): Number of discarded messages: 38
+
+DEBUG (4): Messages NOT ackes 27 
+
+DEBUG (7): Messages NOT ackes 27 
+
+DEBUG (3): Number of discarded messages: 39
+
+DEBUG (7): Messages NOT ackes 28 
+
+DEBUG (2): Number of discarded messages: 36
+
+DEBUG (5): Messages NOT ackes 25 
+
+DEBUG (3): Number of discarded messages: 40
+
+DEBUG (6): Messages NOT ackes 28 
+
+DEBUG (2): Number of discarded messages: 37
+
+DEBUG (4): Messages NOT ackes 28 
+
+DEBUG (1): Number of discarded messages: 55
+
+DEBUG (1): Data Message counter: 54
+
+DEBUG (1): Time for data message 110131310 from 7 to sink is : 124053231 ms
+DEBUG (1): current simulation time: 0:0:38.131545961
+
+DEBUG (3): Messages NOT ackes 39 
+
+DEBUG (1): Number of discarded messages: 56
+
+DEBUG (1): Data Message counter: 55
+
+DEBUG (1): Time for data message 1156340306 from 5 to sink is : 157469784 ms
+DEBUG (1): current simulation time: 0:0:38.134887615
+
+DEBUG (2): Messages NOT ackes 35 
+
+DEBUG (1): Number of discarded messages: 57
+
+DEBUG (1): Data Message counter: 56
+
+DEBUG (1): Time for data message 2089742443 from 2 to sink is : 22125115 ms
+DEBUG (1): current simulation time: 0:0:39.097915647
+
+DEBUG (2): Messages NOT ackes 36 
+
+DEBUG (1): Number of discarded messages: 58
+
+DEBUG (1): Data Message counter: 57
+
+DEBUG (1): Time for data message 2070495375 from 3 to sink is : 52795102 ms
+DEBUG (1): current simulation time: 0:0:39.100982646
+
+DEBUG (3): Messages NOT ackes 40 
+
+DEBUG (2): Number of discarded messages: 38
+
+DEBUG (4): Messages NOT ackes 29 
+
+DEBUG (2): Number of discarded messages: 39
+
+DEBUG (5): Messages NOT ackes 26 
+
+DEBUG (1): Number of discarded messages: 59
+
+DEBUG (1): Data Message counter: 58
+
+DEBUG (1): Time for data message 2051248307 from 4 to sink is : 181425943 ms
+DEBUG (1): current simulation time: 0:0:39.113845731
+
+DEBUG (2): Messages NOT ackes 37 
+
+DEBUG (3): Number of discarded messages: 41
+
+DEBUG (3): Time for treshold 1969887316 message from sink to 3 is : 75225391 ms
+DEBUG (3): current simulation time: 0:0:40.079788174
+
+DEBUG (3): Number of discarded messages: 42
+
+DEBUG (7): Messages NOT ackes 30 
+
+DEBUG (1): Number of discarded messages: 60
+
+DEBUG (1): Data Message counter: 59
+
+DEBUG (1): Time for data message 1196944453 from 6 to sink is : 134581734 ms
+DEBUG (1): current simulation time: 0:0:40.085723811
+
+DEBUG (3): Messages NOT ackes 41 
+
+DEBUG (2): Number of discarded messages: 40
+
+DEBUG (4): Messages NOT ackes 31 
+
+DEBUG (3): Number of discarded messages: 43
+
+DEBUG (6): Messages NOT ackes 31 
+
+DEBUG (1): Number of discarded messages: 61
+
+DEBUG (1): Data Message counter: 60
+
+DEBUG (1): Time for data message 1591535901 from 2 to sink is : 79192653 ms
+DEBUG (1): current simulation time: 0:0:41.056747401
+
+DEBUG (2): Messages NOT ackes 38 
+
+DEBUG (3): Number of discarded messages: 44
+
+DEBUG (7): Messages NOT ackes 31 
+
+DEBUG (1): Number of discarded messages: 62
+
+DEBUG (1): Data Message counter: 61
+
+DEBUG (1): Time for data message 2122047868 from 3 to sink is : 105285030 ms
+DEBUG (1): current simulation time: 0:0:41.059356639
+
+DEBUG (3): Messages NOT ackes 42 
+
+DEBUG (2): Number of discarded messages: 41
+
+DEBUG (4): Messages NOT ackes 33 
+
+DEBUG (3): Number of discarded messages: 45
+
+DEBUG (6): Messages NOT ackes 33 
+
+DEBUG (3): Number of discarded messages: 46
+
+DEBUG (7): Messages NOT ackes 33 
+
+DEBUG (1): Number of discarded messages: 63
+
+DEBUG (1): Data Message counter: 62
+
+DEBUG (1): Time for data message 1317056024 from 4 to sink is : 104674682 ms
+DEBUG (1): current simulation time: 0:0:43.012420605
+
+DEBUG (2): Messages NOT ackes 40 
+
+DEBUG (1): Number of discarded messages: 64
+
+DEBUG (1): Data Message counter: 63
+
+DEBUG (1): Time for data message 125891516 from 6 to sink is : 159606002 ms
+DEBUG (1): current simulation time: 0:0:43.017913738
+
+DEBUG (3): Messages NOT ackes 44 
+
+DEBUG (2): Number of discarded messages: 42
+
+DEBUG (4): Messages NOT ackes 34 
+
+DEBUG (1): Number of discarded messages: 65
+
+DEBUG (1): Data Message counter: 64
+
+DEBUG (1): Time for data message 1646645739 from 4 to sink is : 78887479 ms
+DEBUG (1): current simulation time: 0:0:43.986404384
+
+DEBUG (2): Messages NOT ackes 41 
+
+DEBUG (2): Number of discarded messages: 43
+
+DEBUG (5): Messages NOT ackes 28 
+
+DEBUG (1): Number of discarded messages: 66
+
+DEBUG (1): Data Message counter: 65
+
+DEBUG (1): Time for data message 1116981428 from 5 to sink is : 151671478 ms
+DEBUG (1): current simulation time: 0:0:43.993682785
+
+DEBUG (2): Messages NOT ackes 42 
+
+DEBUG (3): Number of discarded messages: 47
+
+DEBUG (6): Messages NOT ackes 35 
+
+DEBUG (1): Number of discarded messages: 67
+
+DEBUG (1): Data Message counter: 66
+
+DEBUG (1): Time for data message 2049892808 from 2 to sink is : 93688418 ms
+DEBUG (1): current simulation time: 0:0:44.964446977
+
+DEBUG (2): Messages NOT ackes 43 
+
+DEBUG (3): Number of discarded messages: 48
+
+DEBUG (7): Messages NOT ackes 35 
+
+DEBUG (1): Number of discarded messages: 68
+
+DEBUG (1): Data Message counter: 67
+
+DEBUG (1): Time for data message 1203943807 from 6 to sink is : 132445516 ms
+DEBUG (1): current simulation time: 0:0:44.968322689
+
+DEBUG (3): Messages NOT ackes 45 
+
+DEBUG (3): Number of discarded messages: 49
+
+DEBUG (6): Messages NOT ackes 36 
+
+DEBUG (3): Number of discarded messages: 50
+
+DEBUG (7): Messages NOT ackes 36 
+
+DEBUG (2): Number of discarded messages: 44
+
+DEBUG (4): Messages NOT ackes 36 
+
+DEBUG (1): Number of discarded messages: 69
+
+DEBUG (1): Data Message counter: 68
+
+DEBUG (1): Time for data message 780458725 from 4 to sink is : 78124544 ms
+DEBUG (1): current simulation time: 0:0:45.939453091
+
+DEBUG (2): Messages NOT ackes 44 
+
+DEBUG (1): Number of discarded messages: 70
+
+DEBUG (1): Data Message counter: 69
+
+DEBUG (1): Time for data message 1092642215 from 6 to sink is : 107573835 ms
+DEBUG (1): current simulation time: 0:0:45.942398021
+
+DEBUG (3): Messages NOT ackes 46 
+
+DEBUG (2): Number of discarded messages: 45
+
+DEBUG (4): Messages NOT ackes 37 
+
+DEBUG (2): Number of discarded messages: 46
+
+DEBUG (5): Messages NOT ackes 30 
+
+DEBUG (3): Number of discarded messages: 51
+
+DEBUG (7): Messages NOT ackes 37 
+
+DEBUG (3): Number of discarded messages: 52
+
+DEBUG (6): Messages NOT ackes 37 
+
+DEBUG (1): Number of discarded messages: 71
+
+DEBUG (1): Data Message counter: 70
+
+DEBUG (1): Time for data message 1921792037 from 2 to sink is : 79192653 ms
+DEBUG (1): current simulation time: 0:0:46.916122401
+
+DEBUG (2): Messages NOT ackes 45 
+
+DEBUG (1): Number of discarded messages: 72
+
+DEBUG (1): Data Message counter: 71
+
+DEBUG (1): Time for data message 113983589 from 7 to sink is : 164793960 ms
+DEBUG (1): current simulation time: 0:0:46.924682534
+
+DEBUG (3): Messages NOT ackes 47 
+
+DEBUG (1): Number of discarded messages: 73
+
+DEBUG (1): Data Message counter: 72
+
+DEBUG (1): Time for data message 1404714979 from 2 to sink is : 32806205 ms
+DEBUG (1): current simulation time: 0:0:47.888046256
+
+DEBUG (2): Messages NOT ackes 46 
+
+DEBUG (2): Number of discarded messages: 47
+
+DEBUG (4): Messages NOT ackes 38 
+
+DEBUG (3): Number of discarded messages: 53
+
+DEBUG (6): Messages NOT ackes 38 
+
+DEBUG (3): Number of discarded messages: 54
+
+DEBUG (7): Messages NOT ackes 38 
+
+DEBUG (1): Number of discarded messages: 74
+
+DEBUG (1): Data Message counter: 73
+
+DEBUG (1): Time for data message 909535867 from 4 to sink is : 121764426 ms
+DEBUG (1): current simulation time: 0:0:47.896942079
+
+DEBUG (2): Messages NOT ackes 47 
+
+DEBUG (1): Number of discarded messages: 75
+
+DEBUG (1): Data Message counter: 74
+
+DEBUG (1): Time for data message 414356755 from 6 to sink is : 167082765 ms
+DEBUG (1): current simulation time: 0:0:47.901473914
+
+DEBUG (3): Messages NOT ackes 48 
+
+DEBUG (2): Number of discarded messages: 48
+
+DEBUG (5): Messages NOT ackes 31 
+
+DEBUG (3): Number of discarded messages: 55
+
+DEBUG (6): Messages NOT ackes 39 
+
+DEBUG (2): Number of discarded messages: 49
+
+DEBUG (4): Messages NOT ackes 39 
+
+DEBUG (3): Number of discarded messages: 56
+
+DEBUG (7): Messages NOT ackes 39 
+
+DEBUG (3): Time for treshold 140734213 message from sink to 3 is : 91399613 ms
+DEBUG (3): current simulation time: 0:0:49.847030596
+
+DEBUG (2): Time for treshold 140734213 message from sink to 2 is : 91399613 ms
+DEBUG (2): current simulation time: 0:0:49.847030596
+
+DEBUG (5): Time for treshold 140734213 message from sink to 5 is : 150450782 ms
+DEBUG (5): current simulation time: 0:0:49.852935713
+
+DEBUG (4): Time for treshold 140734213 message from sink to 4 is : 150450782 ms
+DEBUG (4): current simulation time: 0:0:49.852935713
+
+DEBUG (1): Time for treshold 140734213 message from sink to 1 is : 150450782 ms
+DEBUG (1): current simulation time: 0:0:49.852935713
+
+DEBUG (7): Time for treshold 140734213 message from sink to 7 is : 174101767 ms
+DEBUG (7): current simulation time: 0:0:49.855300812
+
+DEBUG (6): Time for treshold 140734213 message from sink to 6 is : 174101767 ms
+DEBUG (6): current simulation time: 0:0:49.855300812
+
+DEBUG (1): Number of discarded messages: 76
+
+DEBUG (3): Number of discarded messages: 57
+
+DEBUG (3): Number of discarded messages: 58
+
+DEBUG (3): Number of discarded messages: 59
+
+DEBUG (1): Number of discarded messages: 77
+
+DEBUG (1): Data Message counter: 75
+
+DEBUG (1): Time for data message 141689063 from 3 to sink is : 20141484 ms
+DEBUG (1): current simulation time: 0:0:50.816467284
+
+DEBUG (3): Messages NOT ackes 51 
+
+DEBUG (3): Number of discarded messages: 60
+
+DEBUG (6): Messages NOT ackes 41 
+
+DEBUG (2): Number of discarded messages: 50
+
+DEBUG (1): Number of discarded messages: 78
+
+DEBUG (1): Data Message counter: 76
+
+DEBUG (1): Time for data message 643137709 from 2 to sink is : 103759160 ms
+DEBUG (1): current simulation time: 0:0:50.824829052
+
+DEBUG (2): Messages NOT ackes 50 
+
+DEBUG (1): Number of discarded messages: 79
+
+DEBUG (1): Data Message counter: 77
+
+DEBUG (1): Time for data message 784826772 from 6 to sink is : 128173080 ms
+DEBUG (1): current simulation time: 0:0:50.827270446
+
+DEBUG (3): Messages NOT ackes 52 
+
+DEBUG (2): Number of discarded messages: 51
+
+DEBUG (4): Messages NOT ackes 41 
+
+DEBUG (1): Number of discarded messages: 80
+
+DEBUG (1): Data Message counter: 78
+
+DEBUG (1): Time for data message 1787724064 from 4 to sink is : 221251150 ms
+DEBUG (1): current simulation time: 0:0:50.836578252
+
+DEBUG (2): Messages NOT ackes 51 
+
+DEBUG (2): Number of discarded messages: 52
+
+DEBUG (1): Number of discarded messages: 81
+
+DEBUG (1): Data Message counter: 79
+
+DEBUG (1): Time for data message 1956200965 from 3 to sink is : 67290867 ms
+DEBUG (1): current simulation time: 0:0:51.797744723
+
+DEBUG (4): Messages NOT ackes 42 
+
+DEBUG (3): Messages NOT ackes 53 
+
+DEBUG (3): Number of discarded messages: 61
+
+DEBUG (7): Messages NOT ackes 42 
+
+DEBUG (2): Number of discarded messages: 53
+
+DEBUG (5): Messages NOT ackes 34 
+
+DEBUG (3): Number of discarded messages: 62
+
+DEBUG (6): Messages NOT ackes 42 
+
+DEBUG (1): Number of discarded messages: 82
+
+DEBUG (1): Data Message counter: 80
+
+DEBUG (1): Time for data message 930279812 from 2 to sink is : 117797164 ms
+DEBUG (1): current simulation time: 0:0:51.802795352
+
+DEBUG (2): Messages NOT ackes 52 
+
+DEBUG (1): Number of discarded messages: 83
+
+DEBUG (1): Data Message counter: 81
+
+DEBUG (1): Time for data message 1764918283 from 7 to sink is : 179289725 ms
+DEBUG (1): current simulation time: 0:0:51.808944611
+
+DEBUG (3): Messages NOT ackes 54 
+
+DEBUG (3): Number of discarded messages: 63
+
+DEBUG (6): Messages NOT ackes 43 
+
+DEBUG (1): Number of discarded messages: 84
+
+DEBUG (1): Data Message counter: 82
+
+DEBUG (1): Time for data message 2042466832 from 3 to sink is : 76751261 ms
+DEBUG (1): current simulation time: 0:0:52.775253262
+
+DEBUG (3): Messages NOT ackes 55 
+
+DEBUG (3): Number of discarded messages: 64
+
+DEBUG (7): Messages NOT ackes 43 
+
+DEBUG (2): Number of discarded messages: 54
+
+DEBUG (4): Messages NOT ackes 44 
+
+DEBUG (2): Number of discarded messages: 55
+
+DEBUG (5): Messages NOT ackes 36 
+
+DEBUG (1): Number of discarded messages: 85
+
+DEBUG (1): Data Message counter: 83
+
+DEBUG (1): Time for data message 1771073832 from 2 to sink is : 110320401 ms
+DEBUG (1): current simulation time: 0:0:53.755172676
+
+DEBUG (2): Messages NOT ackes 54 
+
+DEBUG (1): Number of discarded messages: 86
+
+DEBUG (1): Data Message counter: 84
+
+DEBUG (1): Time for data message 213948129 from 3 to sink is : 130919646 ms
+DEBUG (1): current simulation time: 0:0:53.757232601
+
+DEBUG (3): Messages NOT ackes 57 
+
+DEBUG (3): Number of discarded messages: 65
+
+DEBUG (7): Messages NOT ackes 46 
+
+DEBUG (1): Number of discarded messages: 87
+
+DEBUG (1): Data Message counter: 85
+
+DEBUG (1): Time for data message 1072714470 from 2 to sink is : 36773467 ms
+DEBUG (1): current simulation time: 0:0:55.700942982
+
+DEBUG (2): Messages NOT ackes 56 
+
+DEBUG (3): Number of discarded messages: 66
+
+DEBUG (6): Messages NOT ackes 46 
+
+DEBUG (1): Number of discarded messages: 88
+
+DEBUG (1): Data Message counter: 86
+
+DEBUG (1): Time for data message 1430285960 from 3 to sink is : 67596041 ms
+DEBUG (1): current simulation time: 0:0:55.704025240
+
+DEBUG (3): Messages NOT ackes 59 
+
+DEBUG (1): Number of discarded messages: 89
+
+DEBUG (1): Data Message counter: 87
+
+DEBUG (1): Time for data message 986880725 from 2 to sink is : 39214859 ms
+DEBUG (1): current simulation time: 0:0:56.677749621
+
+DEBUG (2): Messages NOT ackes 57 
+
+DEBUG (3): Number of discarded messages: 67
+
+DEBUG (6): Messages NOT ackes 47 
+
+DEBUG (3): Number of discarded messages: 68
+
+DEBUG (7): Messages NOT ackes 47 
+
+DEBUG (1): Number of discarded messages: 90
+
+DEBUG (1): Data Message counter: 88
+
+DEBUG (1): Time for data message 2031668849 from 3 to sink is : 106353139 ms
+DEBUG (1): current simulation time: 0:0:56.684463450
+
+DEBUG (3): Messages NOT ackes 60 
+
+DEBUG (3): Number of discarded messages: 69
+
+DEBUG (7): Messages NOT ackes 48 
+
+DEBUG (2): Number of discarded messages: 56
+
+DEBUG (5): Messages NOT ackes 40 
+
+DEBUG (1): Number of discarded messages: 91
+
+DEBUG (1): Data Message counter: 89
+
+DEBUG (1): Time for data message 1488139294 from 2 to sink is : 75988326 ms
+DEBUG (1): current simulation time: 0:0:57.657989468
+
+DEBUG (2): Messages NOT ackes 58 
+
+DEBUG (1): Number of discarded messages: 92
+
+DEBUG (1): Data Message counter: 90
+
+DEBUG (1): Time for data message 1268357843 from 3 to sink is : 105590204 ms
+DEBUG (1): current simulation time: 0:0:57.660949656
+
+DEBUG (3): Messages NOT ackes 61 
+
+DEBUG (3): Number of discarded messages: 70
+
+DEBUG (6): Messages NOT ackes 48 
+
+DEBUG (1): Number of discarded messages: 93
+
+DEBUG (1): Data Message counter: 91
+
+DEBUG (1): Time for data message 609013490 from 6 to sink is : 203856232 ms
+DEBUG (1): current simulation time: 0:0:57.670776261
+
+DEBUG (3): Messages NOT ackes 62 
+
+DEBUG (1): Number of discarded messages: 94
+
+DEBUG (1): Data Message counter: 92
+
+DEBUG (1): Time for data message 1562561296 from 2 to sink is : 23803572 ms
+DEBUG (1): current simulation time: 0:0:58.629333493
+
+DEBUG (2): Messages NOT ackes 59 
+
+DEBUG (2): Number of discarded messages: 57
+
+DEBUG (5): Messages NOT ackes 41 
+
+DEBUG (1): Number of discarded messages: 95
+
+DEBUG (1): Data Message counter: 93
+
+DEBUG (1): Time for data message 1367587179 from 3 to sink is : 98571202 ms
+DEBUG (1): current simulation time: 0:0:58.636810256
+
+DEBUG (3): Messages NOT ackes 63 
+
+DEBUG (2): Number of discarded messages: 58
+
+DEBUG (4): Messages NOT ackes 49 
+
+DEBUG (1): Number of discarded messages: 96
+
+DEBUG (1): Data Message counter: 94
+
+DEBUG (1): Time for data message 977638945 from 5 to sink is : 186308727 ms
+DEBUG (1): current simulation time: 0:0:58.645584010
+
+DEBUG (2): Messages NOT ackes 60 
+
+DEBUG (3): Number of discarded messages: 71
+
+DEBUG (6): Messages NOT ackes 50 
+
+DEBUG (3): Number of discarded messages: 72
+
+DEBUG (1): Number of discarded messages: 97
+
+DEBUG (1): Data Message counter: 95
+
+DEBUG (1): Time for data message 390182709 from 2 to sink is : 94756527 ms
+DEBUG (1): current simulation time: 0:0:59.612991288
+
+DEBUG (7): Messages NOT ackes 50 
+
+DEBUG (2): Messages NOT ackes 61 
+
+DEBUG (2): Number of discarded messages: 59
+
+DEBUG (5): Messages NOT ackes 42 
+
+DEBUG (1): Number of discarded messages: 98
+
+DEBUG (1): Data Message counter: 96
+
+DEBUG (1): Time for data message 1040487224 from 7 to sink is : 155486153 ms
+DEBUG (1): current simulation time: 0:0:59.619064253
+
+DEBUG (3): Messages NOT ackes 65 
+
+DEBUG (1): Number of discarded messages: 99
+
+DEBUG (1): Data Message counter: 97
+
+DEBUG (1): Time for data message 780365418 from 5 to sink is : 203093297 ms
+DEBUG (1): current simulation time: 0:0:59.623824967
+
+DEBUG (2): Messages NOT ackes 62 
+
+DEBUG (2): Number of discarded messages: 60
+
+DEBUG (4): Messages NOT ackes 51 
+
+DEBUG (3): Number of discarded messages: 73
+
+DEBUG (6): Messages NOT ackes 51 
+
+DEBUG (1): Number of discarded messages: 100
+
+DEBUG (1): Data Message counter: 98
+
+DEBUG (1): Time for data message 1328459947 from 3 to sink is : 58745995 ms
+DEBUG (1): current simulation time: 0:1:0.585952736
+
+DEBUG (3): Messages NOT ackes 66 
+
+DEBUG (3): Number of discarded messages: 74
+
+DEBUG (7): Messages NOT ackes 51 
+
+DEBUG (1): Number of discarded messages: 101
+
+DEBUG (1): Data Message counter: 99
+
+DEBUG (1): Time for data message 1533215872 from 2 to sink is : 85601307 ms
+DEBUG (1): current simulation time: 0:1:0.588638266
+
+DEBUG (2): Messages NOT ackes 63 
+
+DEBUG (2): Number of discarded messages: 61
+
+DEBUG (5): Messages NOT ackes 43 
+
+DEBUG (1): Number of discarded messages: 102
+
+DEBUG (1): Data Message counter: 100
+
+DEBUG (1): Time for data message 509436247 from 7 to sink is : 189055293 ms
+DEBUG (1): current simulation time: 0:1:0.598983667
+
+DEBUG (3): Messages NOT ackes 67 
+
+DEBUG (1): Number of discarded messages: 103
+
+DEBUG (1): Data Message counter: 101
+
+DEBUG (1): Time for data message 918948097 from 5 to sink is : 221708911 ms
+DEBUG (1): current simulation time: 0:1:0.602249028
+
+DEBUG (2): Messages NOT ackes 64 
+
+DEBUG (1): Number of discarded messages: 104
+
+DEBUG (1): Data Message counter: 102
+
+DEBUG (1): Time for data message 1102880351 from 2 to sink is : 36163119 ms
+DEBUG (1): current simulation time: 0:1:1.560256947
+
+DEBUG (2): Messages NOT ackes 65 
+
+DEBUG (3): Number of discarded messages: 75
+
+DEBUG (6): Messages NOT ackes 52 
+
+DEBUG (2): Number of discarded messages: 62
+
+DEBUG (4): Messages NOT ackes 52 
+
+DEBUG (3): Number of discarded messages: 76
+
+DEBUG (7): Messages NOT ackes 52 
+
+DEBUG (3): Number of discarded messages: 77
+
+DEBUG (6): Messages NOT ackes 53 
+
+DEBUG (2): Number of discarded messages: 63
+
+DEBUG (5): Messages NOT ackes 44 
+
+DEBUG (1): Number of discarded messages: 105
+
+DEBUG (1): Data Message counter: 103
+
+DEBUG (1): Time for data message 279893804 from 7 to sink is : 74004695 ms
+DEBUG (1): current simulation time: 0:1:2.540603608
+
+DEBUG (3): Messages NOT ackes 69 
+
+DEBUG (2): Number of discarded messages: 64
+
+DEBUG (4): Messages NOT ackes 53 
+
+DEBUG (1): Number of discarded messages: 106
+
+DEBUG (1): Data Message counter: 104
+
+DEBUG (1): Time for data message 1178702000 from 2 to sink is : 111083336 ms
+DEBUG (1): current simulation time: 0:1:2.544311469
+
+DEBUG (2): Messages NOT ackes 67 
+
+DEBUG (2): Number of discarded messages: 65
+
+DEBUG (5): Messages NOT ackes 45 
+
+DEBUG (3): Number of discarded messages: 78
+
+DEBUG (7): Messages NOT ackes 53 
+
+DEBUG (1): Number of discarded messages: 107
+
+DEBUG (1): Data Message counter: 105
+
+DEBUG (1): Time for data message 2055354072 from 2 to sink is : 39977794 ms
+DEBUG (1): current simulation time: 0:1:3.513763415
+
+DEBUG (2): Messages NOT ackes 68 
+
+DEBUG (3): Number of discarded messages: 79
+
+DEBUG (6): Messages NOT ackes 54 
+
+DEBUG (2): Number of discarded messages: 66
+
+DEBUG (4): Messages NOT ackes 54 
+
+DEBUG (1): Number of discarded messages: 108
+
+DEBUG (1): Data Message counter: 106
+
+DEBUG (1): Time for data message 592988449 from 3 to sink is : 66070171 ms
+DEBUG (1): current simulation time: 0:1:3.516372653
+
+DEBUG (3): Messages NOT ackes 70 
+
+DEBUG (1): Number of discarded messages: 109
+
+DEBUG (1): Data Message counter: 107
+
+DEBUG (1): Time for data message 1278106473 from 4 to sink is : 165404308 ms
+DEBUG (1): current simulation time: 0:1:3.526306067
+
+DEBUG (2): Messages NOT ackes 69 
+
+DEBUG (1): Number of discarded messages: 110
+
+DEBUG (1): Data Message counter: 108
+
+DEBUG (1): Time for data message 2032740263 from 3 to sink is : 20141484 ms
+DEBUG (1): current simulation time: 0:1:4.488342284
+
+DEBUG (2): Number of discarded messages: 67
+
+DEBUG (5): Messages NOT ackes 46 
+
+DEBUG (3): Number of discarded messages: 80
+
+DEBUG (6): Messages NOT ackes 55 
+
+DEBUG (2): Number of discarded messages: 68
+
+DEBUG (4): Messages NOT ackes 55 
+
+DEBUG (1): Number of discarded messages: 111
+
+DEBUG (1): Data Message counter: 109
+
+DEBUG (1): Time for data message 2061426109 from 2 to sink is : 106353139 ms
+DEBUG (1): current simulation time: 0:1:4.496963449
+
+DEBUG (2): Messages NOT ackes 70 
+
+DEBUG (1): Number of discarded messages: 112
+
+DEBUG (1): Data Message counter: 110
+
+DEBUG (1): Time for data message 1946682725 from 6 to sink is : 152587000 ms
+DEBUG (1): current simulation time: 0:1:4.501586838
+
+DEBUG (3): Messages NOT ackes 72 
+
+DEBUG (1): Number of discarded messages: 113
+
+DEBUG (1): Data Message counter: 111
+
+DEBUG (1): Time for data message 1714622931 from 2 to sink is : 44097643 ms
+DEBUG (1): current simulation time: 0:1:6.443862900
+
+DEBUG (2): Messages NOT ackes 72 
+
+DEBUG (1): Number of discarded messages: 114
+
+DEBUG (1): Data Message counter: 112
+
+DEBUG (1): Time for data message 584542224 from 2 to sink is : 42876947 ms
+DEBUG (1): current simulation time: 0:1:7.420303330
+
+DEBUG (2): Messages NOT ackes 73 
+
+DEBUG (2): Number of discarded messages: 69
+
+DEBUG (4): Messages NOT ackes 58 
+
+DEBUG (1): Number of discarded messages: 115
+
+DEBUG (1): Data Message counter: 113
+
+DEBUG (1): Time for data message 779389632 from 3 to sink is : 66375345 ms
+DEBUG (1): current simulation time: 0:1:7.422653171
+
+DEBUG (3): Messages NOT ackes 74 
+
+DEBUG (1): Number of discarded messages: 116
+
+DEBUG (1): Data Message counter: 114
+
+DEBUG (1): Time for data message 974237040 from 4 to sink is : 86059068 ms
+DEBUG (1): current simulation time: 0:1:7.424621543
+
+DEBUG (2): Messages NOT ackes 74 
+
+DEBUG (2): Number of discarded messages: 70
+
+DEBUG (5): Messages NOT ackes 49 
+
+DEBUG (1): Number of discarded messages: 117
+
+DEBUG (1): Data Message counter: 115
+
+DEBUG (1): Time for data message 1169084448 from 5 to sink is : 193632903 ms
+DEBUG (1): current simulation time: 0:1:7.435378927
+
+DEBUG (2): Messages NOT ackes 75 
+
+DEBUG (1): Number of discarded messages: 118
+
+DEBUG (1): Data Message counter: 116
+
+DEBUG (1): Time for data message 1698781971 from 3 to sink is : 94756527 ms
+DEBUG (1): current simulation time: 0:1:8.402053789
+
+DEBUG (3): Messages NOT ackes 75 
+
+DEBUG (2): Number of discarded messages: 71
+
+DEBUG (4): Messages NOT ackes 59 
+
+DEBUG (1): Number of discarded messages: 119
+
+DEBUG (1): Data Message counter: 117
+
+DEBUG (1): Time for data message 1586606552 from 4 to sink is : 159911176 ms
+DEBUG (1): current simulation time: 0:1:8.408569254
+
+DEBUG (2): Messages NOT ackes 77 
+
+DEBUG (1): Number of discarded messages: 120
+
+DEBUG (1): Data Message counter: 118
+
+DEBUG (1): Time for data message 475124799 from 2 to sink is : 22430289 ms
+DEBUG (1): current simulation time: 0:1:9.371383664
+
+DEBUG (2): Messages NOT ackes 78 
+
+DEBUG (2): Time for treshold 202055088 message from sink to 2 is : 41351077 ms
+DEBUG (2): current simulation time: 0:1:9.373275743
+
+DEBUG (1): Number of discarded messages: 121
+
+DEBUG (1): Data Message counter: 119
+
+DEBUG (1): Time for data message 633499732 from 3 to sink is : 63018431 ms
+DEBUG (1): current simulation time: 0:1:9.375442479
+
+DEBUG (3): Messages NOT ackes 76 
+
+DEBUG (2): Number of discarded messages: 72
+
+DEBUG (4): Messages NOT ackes 60 
+
+DEBUG (5): Time for treshold 202055088 message from sink to 5 is : 137023126 ms
+DEBUG (5): current simulation time: 0:1:9.382842948
+
+DEBUG (4): Time for treshold 202055088 message from sink to 4 is : 137023126 ms
+DEBUG (4): current simulation time: 0:1:9.382842948
+
+DEBUG (1): Time for treshold 202055088 message from sink to 1 is : 137023126 ms
+DEBUG (1): current simulation time: 0:1:9.382842948
+
+DEBUG (3): Time for treshold 202055088 message from sink to 3 is : 183867335 ms
+DEBUG (3): current simulation time: 0:1:9.387527369
+
+DEBUG (2): Number of discarded messages: 73
+
+DEBUG (7): Time for treshold 202055088 message from sink to 7 is : 244291787 ms
+DEBUG (7): current simulation time: 0:1:9.393569814
+
+DEBUG (6): Time for treshold 202055088 message from sink to 6 is : 244291787 ms
+DEBUG (6): current simulation time: 0:1:9.393569814
+
+DEBUG (1): Number of discarded messages: 122
+
+DEBUG (3): Number of discarded messages: 81
+
+DEBUG (1): Number of discarded messages: 123
+
+DEBUG (1): Data Message counter: 120
+
+DEBUG (1): Time for data message 1078297247 from 2 to sink is : 64696888 ms
+DEBUG (1): current simulation time: 0:1:10.352172824
+
+DEBUG (2): Messages NOT ackes 79 
+
+DEBUG (2): Number of discarded messages: 74
+
+DEBUG (4): Messages NOT ackes 61 
+
+DEBUG (1): Number of discarded messages: 124
+
+DEBUG (1): Data Message counter: 121
+
+DEBUG (1): Time for data message 327333296 from 2 to sink is : 37078641 ms
+DEBUG (1): current simulation time: 0:1:11.325973500
+
+DEBUG (2): Messages NOT ackes 81 
+
+DEBUG (2): Number of discarded messages: 75
+
+DEBUG (5): Messages NOT ackes 52 
+
+DEBUG (1): Number of discarded messages: 125
+
+DEBUG (1): Data Message counter: 122
+
+DEBUG (1): Time for data message 1152272277 from 3 to sink is : 91857374 ms
+DEBUG (1): current simulation time: 0:1:11.331451373
+
+DEBUG (2): Number of discarded messages: 76
+
+DEBUG (3): Messages NOT ackes 78 
+
+DEBUG (4): Messages NOT ackes 62 
+
+DEBUG (3): Number of discarded messages: 82
+
+DEBUG (6): Messages NOT ackes 62 
+
+DEBUG (1): Number of discarded messages: 126
+
+DEBUG (1): Data Message counter: 123
+
+DEBUG (1): Time for data message 654666592 from 5 to sink is : 147551629 ms
+DEBUG (1): current simulation time: 0:1:11.337020800
+
+DEBUG (2): Messages NOT ackes 82 
+
+DEBUG (1): Number of discarded messages: 127
+
+DEBUG (1): Data Message counter: 124
+
+DEBUG (1): Time for data message 1479605573 from 6 to sink is : 170744853 ms
+DEBUG (1): current simulation time: 0:1:11.339340123
+
+DEBUG (3): Messages NOT ackes 79 
+
+DEBUG (2): Number of discarded messages: 77
+
+DEBUG (5): Messages NOT ackes 53 
+
+DEBUG (2): Number of discarded messages: 78
+
+DEBUG (4): Messages NOT ackes 63 
+
+DEBUG (1): Number of discarded messages: 128
+
+DEBUG (1): Data Message counter: 125
+
+DEBUG (1): Time for data message 827659528 from 4 to sink is : 185393205 ms
+DEBUG (1): current simulation time: 0:1:12.317367457
+
+DEBUG (2): Messages NOT ackes 84 
+
+DEBUG (1): Number of discarded messages: 129
+
+DEBUG (1): Data Message counter: 126
+
+DEBUG (1): Time for data message 1407181111 from 3 to sink is : 27465660 ms
+DEBUG (1): current simulation time: 0:1:13.278137202
+
+DEBUG (3): Messages NOT ackes 81 
+
+DEBUG (2): Number of discarded messages: 79
+
+DEBUG (5): Messages NOT ackes 54 
+
+DEBUG (3): Number of discarded messages: 83
+
+DEBUG (6): Messages NOT ackes 64 
+
+DEBUG (1): Number of discarded messages: 130
+
+DEBUG (1): Data Message counter: 127
+
+DEBUG (1): Time for data message 1592256745 from 2 to sink is : 57067538 ms
+DEBUG (1): current simulation time: 0:1:13.281097389
+
+DEBUG (2): Messages NOT ackes 85 
+
+DEBUG (3): Number of discarded messages: 84
+
+DEBUG (7): Messages NOT ackes 61 
+
+DEBUG (2): Number of discarded messages: 80
+
+DEBUG (4): Messages NOT ackes 64 
+
+DEBUG (1): Number of discarded messages: 131
+
+DEBUG (1): Data Message counter: 128
+
+DEBUG (1): Time for data message 851954209 from 6 to sink is : 130919646 ms
+DEBUG (1): current simulation time: 0:1:13.288482602
+
+DEBUG (3): Messages NOT ackes 82 
+
+DEBUG (1): Number of discarded messages: 132
+
+DEBUG (1): Data Message counter: 129
+
+DEBUG (1): Time for data message 1222105477 from 4 to sink is : 148924912 ms
+DEBUG (1): current simulation time: 0:1:13.290283128
+
+DEBUG (2): Messages NOT ackes 86 
+
+DEBUG (3): Number of discarded messages: 85
+
+DEBUG (6): Messages NOT ackes 65 
+
+DEBUG (2): Number of discarded messages: 81
+
+DEBUG (5): Messages NOT ackes 55 
+
+DEBUG (3): Number of discarded messages: 86
+
+DEBUG (7): Messages NOT ackes 62 
+
+DEBUG (1): Number of discarded messages: 133
+
+DEBUG (1): Data Message counter: 130
+
+DEBUG (1): Time for data message 511056332 from 7 to sink is : 182494052 ms
+DEBUG (1): current simulation time: 0:1:14.270202543
+
+DEBUG (3): Messages NOT ackes 84 
+
+DEBUG (1): Number of discarded messages: 134
+
+DEBUG (1): Data Message counter: 131
+
+DEBUG (1): Time for data message 844685795 from 2 to sink is : 71868477 ms
+DEBUG (1): current simulation time: 0:1:15.235702483
+
+DEBUG (2): Messages NOT ackes 88 
+
+DEBUG (1): Number of discarded messages: 135
+
+DEBUG (1): Data Message counter: 132
+
+DEBUG (1): Time for data message 1842075609 from 3 to sink is : 101928116 ms
+DEBUG (1): current simulation time: 0:1:15.238708448
+
+DEBUG (3): Messages NOT ackes 85 
+
+DEBUG (1): Number of discarded messages: 136
+
+DEBUG (1): Data Message counter: 133
+
+DEBUG (1): Time for data message 1640505311 from 3 to sink is : 29754465 ms
+DEBUG (1): current simulation time: 0:1:16.208053583
+
+DEBUG (3): Messages NOT ackes 86 
+
+DEBUG (2): Number of discarded messages: 82
+
+DEBUG (5): Messages NOT ackes 57 
+
+DEBUG (1): Number of discarded messages: 137
+
+DEBUG (1): Data Message counter: 134
+
+DEBUG (1): Time for data message 1767249895 from 2 to sink is : 103301399 ms
+DEBUG (1): current simulation time: 0:1:16.215408275
+
+DEBUG (2): Messages NOT ackes 89 
+
+DEBUG (2): Number of discarded messages: 83
+
+DEBUG (4): Messages NOT ackes 67 
+
+DEBUG (1): Number of discarded messages: 138
+
+DEBUG (1): Data Message counter: 135
+
+DEBUG (1): Time for data message 1513760727 from 4 to sink is : 160826698 ms
+DEBUG (1): current simulation time: 0:1:16.221160806
+
+DEBUG (2): Messages NOT ackes 90 
+
+DEBUG (2): Number of discarded messages: 84
+
+DEBUG (5): Messages NOT ackes 58 
+
+DEBUG (3): Number of discarded messages: 87
+
+DEBUG (6): Messages NOT ackes 68 
+
+DEBUG (2): Number of discarded messages: 85
+
+DEBUG (4): Messages NOT ackes 68 
+
+DEBUG (3): Number of discarded messages: 88
+
+DEBUG (7): Messages NOT ackes 65 
+
+DEBUG (1): Number of discarded messages: 139
+
+DEBUG (1): Data Message counter: 136
+
+DEBUG (1): Time for data message 860436288 from 7 to sink is : 131835168 ms
+DEBUG (1): current simulation time: 0:1:17.194824155
+
+DEBUG (3): Messages NOT ackes 88 
+
+DEBUG (1): Number of discarded messages: 140
+
+DEBUG (1): Data Message counter: 137
+
+DEBUG (1): Time for data message 537772680 from 4 to sink is : 187376836 ms
+DEBUG (1): current simulation time: 0:1:17.200378320
+
+DEBUG (2): Messages NOT ackes 92 
+
+DEBUG (2): Number of discarded messages: 86
+
+DEBUG (4): Messages NOT ackes 69 
+
+DEBUG (3): Number of discarded messages: 89
+
+DEBUG (6): Messages NOT ackes 69 
+
+DEBUG (1): Number of discarded messages: 141
+
+DEBUG (1): Data Message counter: 138
+
+DEBUG (1): Time for data message 611050981 from 2 to sink is : 63781366 ms
+DEBUG (1): current simulation time: 0:1:18.164581272
+
+DEBUG (2): Messages NOT ackes 93 
+
+DEBUG (1): Number of discarded messages: 142
+
+DEBUG (1): Data Message counter: 139
+
+DEBUG (1): Time for data message 709957740 from 6 to sink is : 84228024 ms
+DEBUG (1): current simulation time: 0:1:18.166625940
+
+DEBUG (3): Messages NOT ackes 89 
+
+DEBUG (2): Number of discarded messages: 87
+
+DEBUG (5): Messages NOT ackes 59 
+
+DEBUG (1): Number of discarded messages: 143
+
+DEBUG (1): Data Message counter: 140
+
+DEBUG (1): Time for data message 1222101962 from 5 to sink is : 160216350 ms
+DEBUG (1): current simulation time: 0:1:18.174224772
+
+DEBUG (2): Messages NOT ackes 94 
+
+DEBUG (3): Number of discarded messages: 90
+
+DEBUG (7): Messages NOT ackes 66 
+
+DEBUG (1): Number of discarded messages: 144
+
+DEBUG (1): Data Message counter: 141
+
+DEBUG (1): Time for data message 667037713 from 2 to sink is : 34789836 ms
+DEBUG (1): current simulation time: 0:1:19.138244619
+
+DEBUG (2): Messages NOT ackes 95 
+
+DEBUG (2): Number of discarded messages: 88
+
+DEBUG (5): Messages NOT ackes 60 
+
+DEBUG (3): Number of discarded messages: 91
+
+DEBUG (6): Messages NOT ackes 70 
+
+DEBUG (2): Number of discarded messages: 89
+
+DEBUG (4): Messages NOT ackes 70 
+
+DEBUG (1): Number of discarded messages: 145
+
+DEBUG (1): Data Message counter: 142
+
+DEBUG (1): Time for data message 347111470 from 7 to sink is : 92009961 ms
+DEBUG (1): current simulation time: 0:1:19.143966634
+
+DEBUG (3): Messages NOT ackes 90 
+
+DEBUG (3): Time for treshold 768218109 message from sink to 3 is : 111693684 ms
+DEBUG (3): current simulation time: 0:1:19.145935003
+
+DEBUG (2): Time for treshold 768218109 message from sink to 2 is : 111693684 ms
+DEBUG (2): current simulation time: 0:1:19.145935003
+
+DEBUG (7): Time for treshold 768218109 message from sink to 7 is : 141295562 ms
+DEBUG (7): current simulation time: 0:1:19.148895191
+
+DEBUG (6): Time for treshold 768218109 message from sink to 6 is : 141295562 ms
+DEBUG (6): current simulation time: 0:1:19.148895191
+
+DEBUG (3): Number of discarded messages: 92
+
+DEBUG (3): Number of discarded messages: 93
+
+DEBUG (3): Number of discarded messages: 94
+
+DEBUG (7): Messages NOT ackes 67 
+
+DEBUG (3): Number of discarded messages: 95
+
+DEBUG (6): Messages NOT ackes 71 
+
+DEBUG (1): Number of discarded messages: 146
+
+DEBUG (1): Data Message counter: 143
+
+DEBUG (1): Time for data message 1038205051 from 2 to sink is : 117491990 ms
+DEBUG (1): current simulation time: 0:1:20.123077335
+
+DEBUG (2): Messages NOT ackes 97 
+
+DEBUG (1): Number of discarded messages: 147
+
+DEBUG (1): Data Message counter: 144
+
+DEBUG (1): Time for data message 1336891038 from 7 to sink is : 153807696 ms
+DEBUG (1): current simulation time: 0:1:20.126708908
+
+DEBUG (3): Messages NOT ackes 91 
+
+DEBUG (1): Number of discarded messages: 148
+
+DEBUG (1): Data Message counter: 145
+
+DEBUG (1): Time for data message 1076880376 from 3 to sink is : 26550138 ms
+DEBUG (1): current simulation time: 0:1:21.090545650
+
+DEBUG (3): Messages NOT ackes 92 
+
+DEBUG (2): Number of discarded messages: 90
+
+DEBUG (5): Messages NOT ackes 62 
+
+DEBUG (3): Number of discarded messages: 96
+
+DEBUG (6): Messages NOT ackes 72 
+
+DEBUG (1): Number of discarded messages: 149
+
+DEBUG (1): Data Message counter: 146
+
+DEBUG (1): Time for data message 807660282 from 2 to sink is : 67443454 ms
+DEBUG (1): current simulation time: 0:1:21.094634981
+
+DEBUG (1): Number of discarded messages: 150
+
+DEBUG (1): Data Message counter: 147
+
+DEBUG (1): Time for data message 1884540658 from 6 to sink is : 106658313 ms
+DEBUG (1): current simulation time: 0:1:21.098556469
+
+DEBUG (3): Messages NOT ackes 93 
+
+DEBUG (2): Number of discarded messages: 91
+
+DEBUG (5): Messages NOT ackes 63 
+
+DEBUG (1): Number of discarded messages: 151
+
+DEBUG (1): Data Message counter: 148
+
+DEBUG (1): Time for data message 204453774 from 5 to sink is : 173186245 ms
+DEBUG (1): current simulation time: 0:1:22.081771762
+
+DEBUG (2): Messages NOT ackes 99 
+
+DEBUG (2): Number of discarded messages: 92
+
+DEBUG (5): Messages NOT ackes 64 
+
+DEBUG (1): Number of discarded messages: 152
+
+DEBUG (1): Data Message counter: 149
+
+DEBUG (1): Time for data message 1618818710 from 3 to sink is : 81939219 ms
+DEBUG (1): current simulation time: 0:1:23.049209558
+
+DEBUG (3): Messages NOT ackes 94 
+
+DEBUG (2): Number of discarded messages: 93
+
+DEBUG (4): Messages NOT ackes 73 
+
+DEBUG (1): Number of discarded messages: 153
+
+DEBUG (1): Data Message counter: 150
+
+DEBUG (1): Time for data message 1015735127 from 3 to sink is : 48827840 ms
+DEBUG (1): current simulation time: 0:1:24.022460920
+
+DEBUG (3): Messages NOT ackes 95 
+
+DEBUG (2): Number of discarded messages: 94
+
+DEBUG (5): Messages NOT ackes 65 
+
+DEBUG (3): Number of discarded messages: 97
+
+DEBUG (7): Messages NOT ackes 69 
+
+DEBUG (1): Number of discarded messages: 154
+
+DEBUG (1): Data Message counter: 151
+
+DEBUG (1): Time for data message 1298672257 from 2 to sink is : 106810900 ms
+DEBUG (1): current simulation time: 0:1:24.028259226
+
+DEBUG (2): Messages NOT ackes 101 
+
+DEBUG (1): Number of discarded messages: 155
+
+DEBUG (1): Data Message counter: 152
+
+DEBUG (1): Time for data message 2031470254 from 7 to sink is : 189970815 ms
+DEBUG (1): current simulation time: 0:1:24.036575220
+
+DEBUG (3): Messages NOT ackes 96 
+
+DEBUG (1): Number of discarded messages: 156
+
+DEBUG (1): Data Message counter: 153
+
+DEBUG (1): Time for data message 1908318938 from 2 to sink is : 20904419 ms
+DEBUG (1): current simulation time: 0:1:24.996231077
+
+DEBUG (2): Messages NOT ackes 102 
+
+DEBUG (2): Number of discarded messages: 95
+
+DEBUG (4): Messages NOT ackes 75 
+
+DEBUG (1): Number of discarded messages: 157
+
+DEBUG (1): Data Message counter: 154
+
+DEBUG (1): Time for data message 1112769486 from 3 to sink is : 74309869 ms
+DEBUG (1): current simulation time: 0:1:25.001571623
+
+DEBUG (2): Number of discarded messages: 96
+
+DEBUG (3): Messages NOT ackes 97 
+
+DEBUG (5): Messages NOT ackes 66 
+
+DEBUG (3): Number of discarded messages: 98
+
+DEBUG (6): Messages NOT ackes 74 
+
+DEBUG (1): Number of discarded messages: 158
+
+DEBUG (1): Data Message counter: 155
+
+DEBUG (1): Time for data message 317220034 from 4 to sink is : 107726422 ms
+DEBUG (1): current simulation time: 0:1:25.004913279
+
+DEBUG (2): Messages NOT ackes 103 
+
+DEBUG (1): Number of discarded messages: 159
+
+DEBUG (1): Data Message counter: 156
+
+DEBUG (1): Time for data message 873604777 from 6 to sink is : 208281255 ms
+DEBUG (1): current simulation time: 0:1:25.014968763
+
+DEBUG (3): Messages NOT ackes 98 
+
+DEBUG (2): Number of discarded messages: 97
+
+DEBUG (4): Messages NOT ackes 76 
+
+DEBUG (3): Number of discarded messages: 99
+
+DEBUG (7): Messages NOT ackes 70 
+
+DEBUG (2): Number of discarded messages: 98
+
+DEBUG (5): Messages NOT ackes 67 
+
+DEBUG (1): Number of discarded messages: 160
+
+DEBUG (1): Data Message counter: 157
+
+DEBUG (1): Time for data message 2029153126 from 3 to sink is : 86364242 ms
+DEBUG (1): current simulation time: 0:1:25.979339560
+
+DEBUG (3): Messages NOT ackes 99 
+
+DEBUG (1): Number of discarded messages: 161
+
+DEBUG (1): Data Message counter: 158
+
+DEBUG (1): Time for data message 1462699584 from 4 to sink is : 101775529 ms
+DEBUG (1): current simulation time: 0:1:25.980880689
+
+DEBUG (2): Messages NOT ackes 104 
+
+DEBUG (3): Number of discarded messages: 100
+
+DEBUG (7): Messages NOT ackes 71 
+
+DEBUG (2): Number of discarded messages: 99
+
+DEBUG (4): Messages NOT ackes 77 
+
+DEBUG (2): Number of discarded messages: 100
+
+DEBUG (5): Messages NOT ackes 68 
+
+DEBUG (1): Number of discarded messages: 162
+
+DEBUG (1): Data Message counter: 159
+
+DEBUG (1): Time for data message 1936274322 from 3 to sink is : 103759160 ms
+DEBUG (1): current simulation time: 0:1:26.957641552
+
+DEBUG (3): Messages NOT ackes 100 
+
+DEBUG (1): Number of discarded messages: 163
+
+DEBUG (1): Data Message counter: 160
+
+DEBUG (1): Time for data message 1346601079 from 4 to sink is : 129698950 ms
+DEBUG (1): current simulation time: 0:1:26.960235532
+
+DEBUG (2): Messages NOT ackes 105 
+
+DEBUG (3): Number of discarded messages: 101
+
+DEBUG (6): Messages NOT ackes 75 
+
+DEBUG (3): Number of discarded messages: 102
+
+DEBUG (7): Messages NOT ackes 72 
+
+DEBUG (1): Number of discarded messages: 164
+
+DEBUG (1): Data Message counter: 161
+
+DEBUG (1): Time for data message 2139334275 from 6 to sink is : 126342036 ms
+DEBUG (1): current simulation time: 0:1:27.936462341
+
+DEBUG (3): Messages NOT ackes 102 
+
+DEBUG (1): Number of discarded messages: 165
+
+DEBUG (1): Data Message counter: 162
+
+DEBUG (1): Time for data message 1429615600 from 2 to sink is : 37841576 ms
+DEBUG (1): current simulation time: 0:1:28.904174793
+
+DEBUG (2): Messages NOT ackes 107 
+
+DEBUG (3): Time for treshold 770072199 message from sink to 3 is : 56457190 ms
+DEBUG (3): current simulation time: 0:1:28.906036354
+
+DEBUG (2): Time for treshold 770072199 message from sink to 2 is : 56457190 ms
+DEBUG (2): current simulation time: 0:1:28.906036354
+
+DEBUG (2): Number of discarded messages: 101
+
+DEBUG (5): Messages NOT ackes 70 
+
+DEBUG (1): Number of discarded messages: 166
+
+DEBUG (1): Data Message counter: 163
+
+DEBUG (1): Time for data message 1190326251 from 3 to sink is : 79192653 ms
+DEBUG (1): current simulation time: 0:1:28.908309901
+
+DEBUG (3): Messages NOT ackes 103 
+
+DEBUG (2): Number of discarded messages: 102
+
+DEBUG (4): Messages NOT ackes 79 
+
+DEBUG (5): Time for treshold 770072199 message from sink to 5 is : 168608635 ms
+DEBUG (5): current simulation time: 0:1:28.917251499
+
+DEBUG (4): Time for treshold 770072199 message from sink to 4 is : 168608635 ms
+DEBUG (4): current simulation time: 0:1:28.917251499
+
+DEBUG (1): Time for treshold 770072199 message from sink to 1 is : 168608635 ms
+DEBUG (1): current simulation time: 0:1:28.917251499
+
+DEBUG (3): Number of discarded messages: 103
+
+DEBUG (1): Number of discarded messages: 167
+
+DEBUG (1): Data Message counter: 164
+
+DEBUG (1): Time for data message 2003128752 from 3 to sink is : 40588142 ms
+DEBUG (1): current simulation time: 0:1:29.881011950
+
+DEBUG (3): Messages NOT ackes 104 
+
+DEBUG (1): Number of discarded messages: 168
+
+DEBUG (1): Data Message counter: 165
+
+DEBUG (1): Time for data message 1502346564 from 2 to sink is : 66375345 ms
+DEBUG (1): current simulation time: 0:1:29.883590670
+
+DEBUG (2): Messages NOT ackes 108 
+
+DEBUG (3): Number of discarded messages: 104
+
+DEBUG (6): Messages NOT ackes 76 
+
+DEBUG (3): Number of discarded messages: 105
+
+DEBUG (7): Messages NOT ackes 73 
+
+DEBUG (2): Number of discarded messages: 103
+
+DEBUG (5): Messages NOT ackes 71 
+
+DEBUG (1): Number of discarded messages: 169
+
+DEBUG (1): Data Message counter: 166
+
+DEBUG (1): Time for data message 1973463369 from 2 to sink is : 31585509 ms
+DEBUG (1): current simulation time: 0:1:30.856674186
+
+DEBUG (2): Messages NOT ackes 110 
+
+DEBUG (2): Number of discarded messages: 104
+
+DEBUG (4): Messages NOT ackes 80 
+
+DEBUG (3): Number of discarded messages: 106
+
+DEBUG (7): Messages NOT ackes 74 
+
+DEBUG (2): Number of discarded messages: 105
+
+DEBUG (5): Messages NOT ackes 72 
+
+DEBUG (1): Number of discarded messages: 170
+
+DEBUG (1): Data Message counter: 167
+
+DEBUG (1): Time for data message 1141621968 from 4 to sink is : 139006757 ms
+DEBUG (1): current simulation time: 0:1:30.867416312
+
+DEBUG (2): Messages NOT ackes 111 
+
+DEBUG (1): Number of discarded messages: 171
+
+DEBUG (1): Data Message counter: 168
+
+DEBUG (1): Time for data message 967601690 from 7 to sink is : 186613901 ms
+DEBUG (1): current simulation time: 0:1:30.872177028
+
+DEBUG (3): Messages NOT ackes 106 
+
+DEBUG (1): Number of discarded messages: 172
+
+DEBUG (1): Data Message counter: 169
+
+DEBUG (1): Time for data message 867714373 from 3 to sink is : 46233861 ms
+DEBUG (1): current simulation time: 0:1:31.834701522
+
+DEBUG (3): Messages NOT ackes 107 
+
+DEBUG (2): Number of discarded messages: 106
+
+DEBUG (4): Messages NOT ackes 81 
+
+DEBUG (1): Number of discarded messages: 173
+
+DEBUG (1): Data Message counter: 170
+
+DEBUG (1): Time for data message 1621513878 from 4 to sink is : 205229515 ms
+DEBUG (1): current simulation time: 0:1:31.850601088
+
+DEBUG (2): Messages NOT ackes 112 
+
+DEBUG (1): Number of discarded messages: 174
+
+DEBUG (1): Data Message counter: 171
+
+DEBUG (1): Time for data message 1159256999 from 2 to sink is : 53100276 ms
+DEBUG (1): current simulation time: 0:1:32.811950663
+
+DEBUG (2): Messages NOT ackes 113 
+
+DEBUG (3): Number of discarded messages: 107
+
+DEBUG (6): Messages NOT ackes 78 
+
+DEBUG (2): Number of discarded messages: 107
+
+DEBUG (4): Messages NOT ackes 82 
+
+DEBUG (1): Number of discarded messages: 175
+
+DEBUG (1): Data Message counter: 172
+
+DEBUG (1): Time for data message 1273277233 from 6 to sink is : 99639311 ms
+DEBUG (1): current simulation time: 0:1:32.816604569
+
+DEBUG (3): Messages NOT ackes 108 
+
+DEBUG (1): Number of discarded messages: 176
+
+DEBUG (1): Data Message counter: 173
+
+DEBUG (1): Time for data message 1216267116 from 4 to sink is : 179900073 ms
+DEBUG (1): current simulation time: 0:1:32.824630644
+
+DEBUG (2): Messages NOT ackes 114 
+
+DEBUG (3): Number of discarded messages: 108
+
+DEBUG (7): Messages NOT ackes 76 
+
+DEBUG (1): Number of discarded messages: 177
+
+DEBUG (1): Data Message counter: 174
+
+DEBUG (1): Time for data message 782659714 from 3 to sink is : 58288234 ms
+DEBUG (1): current simulation time: 0:1:33.789031959
+
+DEBUG (3): Messages NOT ackes 109 
+
+DEBUG (1): Number of discarded messages: 178
+
+DEBUG (1): Data Message counter: 175
+
+DEBUG (1): Time for data message 1660736609 from 2 to sink is : 97197919 ms
+DEBUG (1): current simulation time: 0:1:33.792922927
+
+DEBUG (2): Messages NOT ackes 115 
+
+DEBUG (2): Number of discarded messages: 108
+
+DEBUG (5): Messages NOT ackes 73 
+
+DEBUG (1): Number of discarded messages: 179
+
+DEBUG (1): Data Message counter: 176
+
+DEBUG (1): Time for data message 1173989571 from 5 to sink is : 209654538 ms
+DEBUG (1): current simulation time: 0:1:33.804168591
+
+DEBUG (2): Messages NOT ackes 116 
+
+DEBUG (1): Number of discarded messages: 180
+
+DEBUG (1): Data Message counter: 177
+
+DEBUG (1): Time for data message 824475323 from 3 to sink is : 34026901 ms
+DEBUG (1): current simulation time: 0:1:34.763168326
+
+DEBUG (3): Messages NOT ackes 110 
+
+DEBUG (1): Number of discarded messages: 181
+
+DEBUG (1): Data Message counter: 178
+
+DEBUG (1): Time for data message 1155227404 from 2 to sink is : 64544301 ms
+DEBUG (1): current simulation time: 0:1:34.766220066
+
+DEBUG (2): Messages NOT ackes 117 
+
+DEBUG (3): Number of discarded messages: 109
+
+DEBUG (7): Messages NOT ackes 77 
+
+DEBUG (3): Number of discarded messages: 110
+
+DEBUG (6): Messages NOT ackes 79 
+
+DEBUG (1): Number of discarded messages: 182
+
+DEBUG (1): Data Message counter: 179
+
+DEBUG (1): Time for data message 1648950646 from 7 to sink is : 137938648 ms
+DEBUG (1): current simulation time: 0:1:34.773559503
+
+DEBUG (3): Messages NOT ackes 111 
+
+DEBUG (2): Number of discarded messages: 109
+
+DEBUG (5): Messages NOT ackes 74 
+
+DEBUG (1): Number of discarded messages: 183
+
+DEBUG (1): Data Message counter: 180
+
+DEBUG (1): Time for data message 1392263217 from 3 to sink is : 66680519 ms
+DEBUG (1): current simulation time: 0:1:35.742996188
+
+DEBUG (3): Messages NOT ackes 112 
+
+DEBUG (1): Number of discarded messages: 184
+
+DEBUG (1): Data Message counter: 181
+
+DEBUG (1): Time for data message 1014653002 from 5 to sink is : 103606573 ms
+DEBUG (1): current simulation time: 0:1:35.746688794
+
+DEBUG (2): Messages NOT ackes 118 
+
+DEBUG (3): Number of discarded messages: 111
+
+DEBUG (6): Messages NOT ackes 80 
+
+DEBUG (1): Number of discarded messages: 185
+
+DEBUG (1): Data Message counter: 182
+
+DEBUG (1): Time for data message 1899589718 from 6 to sink is : 163725851 ms
+DEBUG (1): current simulation time: 0:1:35.752700723
+
+DEBUG (3): Messages NOT ackes 113 
+
+DEBUG (3): Number of discarded messages: 112
+
+DEBUG (6): Messages NOT ackes 81 
+
+DEBUG (1): Number of discarded messages: 186
+
+DEBUG (1): Data Message counter: 183
+
+DEBUG (1): Time for data message 1735063314 from 2 to sink is : 70037433 ms
+DEBUG (1): current simulation time: 0:1:37.696456879
+
+DEBUG (2): Messages NOT ackes 120 
+
+DEBUG (3): Number of discarded messages: 113
+
+DEBUG (6): Messages NOT ackes 82 
+
+DEBUG (2): Number of discarded messages: 110
+
+DEBUG (5): Messages NOT ackes 75 
+
+DEBUG (1): Number of discarded messages: 187
+
+DEBUG (1): Data Message counter: 184
+
+DEBUG (1): Time for data message 1322642981 from 5 to sink is : 132292929 ms
+DEBUG (1): current simulation time: 0:1:37.702682430
+
+DEBUG (2): Messages NOT ackes 121 
+
+DEBUG (1): Number of discarded messages: 188
+
+DEBUG (1): Data Message counter: 185
+
+DEBUG (1): Time for data message 1900997419 from 6 to sink is : 168608635 ms
+DEBUG (1): current simulation time: 0:1:37.706314001
+
+DEBUG (3): Messages NOT ackes 116 
+
+DEBUG (2): Number of discarded messages: 111
+
+DEBUG (5): Messages NOT ackes 76 
+
+DEBUG (1): Number of discarded messages: 189
+
+DEBUG (1): Data Message counter: 186
+
+DEBUG (1): Time for data message 1420728929 from 3 to sink is : 66527932 ms
+DEBUG (1): current simulation time: 0:1:38.672668429
+
+DEBUG (3): Messages NOT ackes 117 
+
+DEBUG (2): Time for treshold 1866991771 message from sink to 2 is : 100554833 ms
+DEBUG (2): current simulation time: 0:1:38.676071118
+
+DEBUG (1): Number of discarded messages: 190
+
+DEBUG (1): Data Message counter: 187
+
+DEBUG (1): Time for data message 1057351570 from 5 to sink is : 127867906 ms
+DEBUG (1): current simulation time: 0:1:38.678802428
+
+DEBUG (2): Messages NOT ackes 122 
+
+DEBUG (2): Number of discarded messages: 112
+
+DEBUG (4): Messages NOT ackes 84 
+
+DEBUG (3): Number of discarded messages: 114
+
+DEBUG (6): Messages NOT ackes 84 
+
+DEBUG (1): Number of discarded messages: 191
+
+DEBUG (1): Data Message counter: 188
+
+DEBUG (1): Time for data message 1634509566 from 6 to sink is : 154112870 ms
+DEBUG (1): current simulation time: 0:1:39.657989425
+
+DEBUG (3): Messages NOT ackes 118 
+
+DEBUG (1): Number of discarded messages: 192
+
+DEBUG (1): Data Message counter: 189
+
+DEBUG (1): Time for data message 1474290211 from 4 to sink is : 172575897 ms
+DEBUG (1): current simulation time: 0:1:39.659835726
+
+DEBUG (2): Messages NOT ackes 123 
+
+DEBUG (2): Number of discarded messages: 113
+
+DEBUG (5): Messages NOT ackes 77 
+
+DEBUG (3): Number of discarded messages: 115
+
+DEBUG (7): Messages NOT ackes 79 
+
+DEBUG (1): Number of discarded messages: 193
+
+DEBUG (1): Data Message counter: 190
+
+DEBUG (1): Time for data message 1734102088 from 5 to sink is : 81634045 ms
+DEBUG (1): current simulation time: 0:1:40.627304042
+
+DEBUG (2): Messages NOT ackes 124 
+
+DEBUG (1): Number of discarded messages: 194
+
+DEBUG (1): Data Message counter: 191
+
+DEBUG (1): Time for data message 1871895941 from 3 to sink is : 100097072 ms
+DEBUG (1): current simulation time: 0:1:40.629150343
+
+DEBUG (3): Messages NOT ackes 119 
+
+DEBUG (2): Number of discarded messages: 114
+
+DEBUG (4): Messages NOT ackes 86 
+
+DEBUG (1): Number of discarded messages: 195
+
+DEBUG (1): Data Message counter: 192
+
+DEBUG (1): Time for data message 1531823312 from 3 to sink is : 65612410 ms
+DEBUG (1): current simulation time: 0:1:42.578826877
+
+DEBUG (3): Messages NOT ackes 120 
+
+DEBUG (1): Number of discarded messages: 196
+
+DEBUG (1): Data Message counter: 193
+
+DEBUG (1): Time for data message 1914779140 from 4 to sink is : 109557466 ms
+DEBUG (1): current simulation time: 0:1:42.583221383
+
+DEBUG (2): Messages NOT ackes 125 
+
+DEBUG (1): Number of discarded messages: 197
+
+DEBUG (1): Data Message counter: 194
+
+DEBUG (1): Time for data message 1320444548 from 3 to sink is : 99944485 ms
+DEBUG (1): current simulation time: 0:1:43.558822585
+
+DEBUG (3): Messages NOT ackes 121 
+
+DEBUG (3): Number of discarded messages: 116
+
+DEBUG (7): Messages NOT ackes 81 
+
+DEBUG (1): Number of discarded messages: 198
+
+DEBUG (1): Data Message counter: 195
+
+DEBUG (1): Time for data message 1231020276 from 7 to sink is : 78429718 ms
+DEBUG (1): current simulation time: 0:1:44.533233610
+
+DEBUG (3): Messages NOT ackes 122 
+
+DEBUG (3): Number of discarded messages: 117
+
+DEBUG (7): Messages NOT ackes 82 
+
+DEBUG (2): Number of discarded messages: 115
+
+DEBUG (5): Messages NOT ackes 81 
+
+DEBUG (3): Number of discarded messages: 118
+
+DEBUG (6): Messages NOT ackes 85 
+
+DEBUG (3): Number of discarded messages: 119
+
+DEBUG (6): Messages NOT ackes 86 
+
+DEBUG (1): Number of discarded messages: 199
+
+DEBUG (1): Data Message counter: 196
+
+DEBUG (1): Time for data message 1591605117 from 6 to sink is : 75530565 ms
+DEBUG (1): current simulation time: 0:1:47.462631194
+
+DEBUG (3): Messages NOT ackes 125 
+
+DEBUG (2): Number of discarded messages: 116
+
+DEBUG (4): Messages NOT ackes 89 
+
+DEBUG (1): Number of discarded messages: 200
+
+DEBUG (1): Data Message counter: 197
+
+DEBUG (1): Time for data message 1443644176 from 4 to sink is : 187376836 ms
+DEBUG (1): current simulation time: 0:1:47.473815820
+
+DEBUG (2): Messages NOT ackes 127 
+
+DEBUG (3): Number of discarded messages: 120
+
+DEBUG (6): Messages NOT ackes 87 
+
+DEBUG (1): Number of discarded messages: 201
+
+DEBUG (1): Data Message counter: 198
+
+DEBUG (1): Time for data message 2134427969 from 3 to sink is : 43487295 ms
+DEBUG (1): current simulation time: 0:1:48.435989366
+
+DEBUG (3): Messages NOT ackes 126 
+
+DEBUG (3): Number of discarded messages: 121
+
+DEBUG (7): Messages NOT ackes 83 
+
+DEBUG (1): Number of discarded messages: 202
+
+DEBUG (1): Data Message counter: 199
+
+DEBUG (1): Time for data message 2121372291 from 7 to sink is : 111083336 ms
+DEBUG (1): current simulation time: 0:1:48.442748972
+
+DEBUG (3): Messages NOT ackes 127 
+
+DEBUG (3): Time for treshold 1647128880 message from sink to 3 is : 148161977 ms
+DEBUG (3): current simulation time: 0:1:48.446456833
+
+DEBUG (2): Time for treshold 1647128880 message from sink to 2 is : 148161977 ms
+DEBUG (2): current simulation time: 0:1:48.446456833
+
+DEBUG (7): Time for treshold 1647128880 message from sink to 7 is : 214384735 ms
+DEBUG (7): current simulation time: 0:1:48.453079109
+
+DEBUG (6): Time for treshold 1647128880 message from sink to 6 is : 214384735 ms
+DEBUG (6): current simulation time: 0:1:48.453079109
+
+DEBUG (1): Time for treshold 1647128880 message from sink to 1 is : 214384735 ms
+DEBUG (1): current simulation time: 0:1:48.453079109
+
+DEBUG (3): Number of discarded messages: 122
+
+DEBUG (5): Time for treshold 1647128880 message from sink to 5 is : 256803921 ms
+DEBUG (5): current simulation time: 0:1:48.457321027
+
+DEBUG (1): Number of discarded messages: 203
+
+DEBUG (4): Time for treshold 1647128880 message from sink to 4 is : 256803921 ms
+DEBUG (4): current simulation time: 0:1:48.457321027
+
+DEBUG (2): Number of discarded messages: 117
+
+DEBUG (1): Number of discarded messages: 204
+
+DEBUG (1): Data Message counter: 200
+
+DEBUG (1): Time for data message 1859897533 from 2 to sink is : 19836310 ms
+DEBUG (1): current simulation time: 0:1:49.410186767
+
+DEBUG (2): Messages NOT ackes 128 
+
+DEBUG (2): Number of discarded messages: 118
+
+DEBUG (4): Messages NOT ackes 91 
+
+DEBUG (1): Number of discarded messages: 205
+
+DEBUG (1): Data Message counter: 201
+
+DEBUG (1): Time for data message 1764035495 from 3 to sink is : 97655680 ms
+DEBUG (1): current simulation time: 0:1:49.417968704
+
+DEBUG (3): Messages NOT ackes 128 
+
+DEBUG (1): Number of discarded messages: 206
+
+DEBUG (1): Data Message counter: 202
+
+DEBUG (1): Time for data message 1668173457 from 4 to sink is : 120391143 ms
+DEBUG (1): current simulation time: 0:1:49.420242251
+
+DEBUG (2): Messages NOT ackes 129 
+
+DEBUG (1): Number of discarded messages: 207
+
+DEBUG (1): Data Message counter: 203
+
+DEBUG (1): Time for data message 2132817630 from 3 to sink is : 72936586 ms
+DEBUG (1): current simulation time: 0:1:50.392059295
+
+DEBUG (3): Messages NOT ackes 129 
+
+DEBUG (3): Number of discarded messages: 123
+
+DEBUG (7): Messages NOT ackes 84 
+
+DEBUG (1): Number of discarded messages: 208
+
+DEBUG (1): Data Message counter: 204
+
+DEBUG (1): Time for data message 2118151613 from 7 to sink is : 153502522 ms
+DEBUG (1): current simulation time: 0:1:50.400115890
+
+DEBUG (3): Messages NOT ackes 130 
+
+DEBUG (3): Number of discarded messages: 124
+
+DEBUG (6): Messages NOT ackes 88 
+
+DEBUG (2): Number of discarded messages: 119
+
+DEBUG (4): Messages NOT ackes 92 
+
+DEBUG (1): Number of discarded messages: 209
+
+DEBUG (1): Data Message counter: 205
+
+DEBUG (1): Time for data message 1894267274 from 6 to sink is : 102385877 ms
+DEBUG (1): current simulation time: 0:1:51.371566725
+
+DEBUG (3): Messages NOT ackes 131 
+
+DEBUG (1): Number of discarded messages: 210
+
+DEBUG (1): Data Message counter: 206
+
+DEBUG (1): Time for data message 1659831431 from 4 to sink is : 195463947 ms
+DEBUG (1): current simulation time: 0:1:51.380874531
+
+DEBUG (2): Messages NOT ackes 130 
+
+DEBUG (3): Number of discarded messages: 125
+
+DEBUG (7): Messages NOT ackes 85 
+
+DEBUG (1): Number of discarded messages: 211
+
+DEBUG (1): Data Message counter: 207
+
+DEBUG (1): Time for data message 2144894492 from 7 to sink is : 175169876 ms
+DEBUG (1): current simulation time: 0:1:53.331970126
+
+DEBUG (3): Messages NOT ackes 132 
+
+DEBUG (3): Number of discarded messages: 126
+
+DEBUG (6): Messages NOT ackes 89 
+
+DEBUG (1): Number of discarded messages: 212
+
+DEBUG (1): Data Message counter: 208
+
+DEBUG (1): Time for data message 1920445851 from 6 to sink is : 205076928 ms
+DEBUG (1): current simulation time: 0:1:54.311523330
+
+DEBUG (3): Messages NOT ackes 133 
+
+DEBUG (1): Number of discarded messages: 213
+
+DEBUG (1): Data Message counter: 209
+
+DEBUG (1): Time for data message 1827521596 from 3 to sink is : 55389081 ms
+DEBUG (1): current simulation time: 0:1:56.249679544
+
+DEBUG (3): Messages NOT ackes 134 
+
+DEBUG (1): Number of discarded messages: 214
+
+DEBUG (1): Data Message counter: 210
+
+DEBUG (1): Time for data message 1844344578 from 3 to sink is : 52795102 ms
+DEBUG (1): current simulation time: 0:1:57.225982646
+
+DEBUG (3): Messages NOT ackes 135 
+
+DEBUG (3): Number of discarded messages: 127
+
+DEBUG (6): Messages NOT ackes 90 
+
+DEBUG (2): Number of discarded messages: 120
+
+DEBUG (5): Messages NOT ackes 84 
+
+DEBUG (3): Time for treshold 83392683 message from sink to 3 is : 85448720 ms
+DEBUG (3): current simulation time: 0:1:58.205810507
+
+DEBUG (2): Time for treshold 83392683 message from sink to 2 is : 85448720 ms
+DEBUG (2): current simulation time: 0:1:58.205810507
+
+DEBUG (1): Number of discarded messages: 215
+
+DEBUG (1): Data Message counter: 211
+
+DEBUG (1): Time for data message 1680542472 from 5 to sink is : 128478254 ms
+DEBUG (1): current simulation time: 0:1:58.210113462
+
+DEBUG (2): Messages NOT ackes 132 
+
+DEBUG (1): Number of discarded messages: 216
+
+DEBUG (1): Data Message counter: 212
+
+DEBUG (1): Time for data message 1960632884 from 6 to sink is : 147093868 ms
+DEBUG (1): current simulation time: 0:1:58.211975024
+
+DEBUG (3): Messages NOT ackes 136 
+
+DEBUG (3): Number of discarded messages: 128
+
+DEBUG (6): Messages NOT ackes 91 
+
+DEBUG (1): Number of discarded messages: 217
+
+DEBUG (1): Data Message counter: 213
+
+DEBUG (1): Time for data message 1411268385 from 3 to sink is : 33263966 ms
+DEBUG (1): current simulation time: 0:2:2.106842033
+
+DEBUG (3): Messages NOT ackes 139 
+
+DEBUG (1): Number of discarded messages: 218
+
+DEBUG (1): Data Message counter: 214
+
+DEBUG (1): Time for data message 521580377 from 2 to sink is : 78582305 ms
+DEBUG (1): current simulation time: 0:2:2.111373866
+
+DEBUG (2): Messages NOT ackes 135 
+
+DEBUG (3): Number of discarded messages: 129
+
+DEBUG (6): Messages NOT ackes 92 
+
+DEBUG (1): Number of discarded messages: 219
+
+DEBUG (1): Data Message counter: 215
+
+DEBUG (1): Time for data message 1932848762 from 6 to sink is : 139922279 ms
+DEBUG (1): current simulation time: 0:2:2.117507865
+
+DEBUG (3): Messages NOT ackes 140 
+
+DEBUG (1): Number of discarded messages: 220
+
+DEBUG (1): Data Message counter: 216
+
+DEBUG (1): Time for data message 173149185 from 2 to sink is : 42114012 ms
+DEBUG (1): current simulation time: 0:2:3.084289537
+
+DEBUG (2): Messages NOT ackes 136 
+
+DEBUG (1): Number of discarded messages: 221
+
+DEBUG (1): Data Message counter: 217
+
+DEBUG (1): Time for data message 230865580 from 3 to sink is : 73852108 ms
+DEBUG (1): current simulation time: 0:2:3.087463347
+
+DEBUG (3): Messages NOT ackes 141 
+
+DEBUG (3): Number of discarded messages: 130
+
+DEBUG (6): Messages NOT ackes 93 
+
+DEBUG (1): Number of discarded messages: 222
+
+DEBUG (1): Data Message counter: 218
+
+DEBUG (1): Time for data message 278010610 from 2 to sink is : 52489928 ms
+DEBUG (1): current simulation time: 0:2:4.061889628
+
+DEBUG (2): Messages NOT ackes 137 
+
+DEBUG (1): Number of discarded messages: 223
+
+DEBUG (1): Data Message counter: 219
+
+DEBUG (1): Time for data message 1802336578 from 3 to sink is : 93688418 ms
+DEBUG (1): current simulation time: 0:2:4.066009478
+
+DEBUG (3): Messages NOT ackes 142 
+
+DEBUG (1): Number of discarded messages: 224
+
+DEBUG (1): Data Message counter: 220
+
+DEBUG (1): Time for data message 1614025511 from 3 to sink is : 60729626 ms
+DEBUG (1): current simulation time: 0:2:5.039276099
+
+DEBUG (3): Messages NOT ackes 143 
+
+DEBUG (1): Number of discarded messages: 225
+
+DEBUG (1): Data Message counter: 221
+
+DEBUG (1): Time for data message 1747390045 from 2 to sink is : 75530565 ms
+DEBUG (1): current simulation time: 0:2:5.040756192
+
+DEBUG (2): Messages NOT ackes 138 
+
+DEBUG (3): Number of discarded messages: 131
+
+DEBUG (7): Messages NOT ackes 86 
+
+DEBUG (2): Number of discarded messages: 121
+
+DEBUG (4): Messages NOT ackes 94 
+
+DEBUG (3): Time for treshold 1421485337 message from sink to 3 is : 44555404 ms
+DEBUG (3): current simulation time: 0:2:7.967346175
+
+DEBUG (1): Number of discarded messages: 226
+
+DEBUG (1): Data Message counter: 222
+
+DEBUG (1): Time for data message 1419426532 from 2 to sink is : 42419186 ms
+DEBUG (1): current simulation time: 0:2:8.943695054
+
+DEBUG (2): Messages NOT ackes 142 
+
+DEBUG (1): Number of discarded messages: 227
+
+DEBUG (1): Data Message counter: 223
+
+DEBUG (1): Time for data message 2053372448 from 2 to sink is : 95061701 ms
+DEBUG (1): current simulation time: 0:2:9.925521806
+
+DEBUG (1): Number of discarded messages: 228
+
+DEBUG (1): Data Message counter: 224
+
+DEBUG (1): Time for data message 968526246 from 2 to sink is : 49438188 ms
+DEBUG (1): current simulation time: 0:2:10.897521954
+
+DEBUG (2): Messages NOT ackes 144 
+
+DEBUG (2): Number of discarded messages: 122
+
+DEBUG (5): Messages NOT ackes 87 
+
+DEBUG (1): Number of discarded messages: 229
+
+DEBUG (1): Data Message counter: 225
+
+DEBUG (1): Time for data message 1937052492 from 5 to sink is : 185698379 ms
+DEBUG (1): current simulation time: 0:2:10.911147975
+
+DEBUG (2): Messages NOT ackes 145 
+
+DEBUG (1): Number of discarded messages: 230
+
+DEBUG (1): Data Message counter: 226
+
+DEBUG (1): Time for data message 1557752114 from 3 to sink is : 33721727 ms
+DEBUG (1): current simulation time: 0:2:11.872512809
+
+DEBUG (3): Messages NOT ackes 147 
+
+DEBUG (1): Number of discarded messages: 231
+
+DEBUG (1): Data Message counter: 227
+
+DEBUG (1): Time for data message 94572262 from 2 to sink is : 49438188 ms
+DEBUG (1): current simulation time: 0:2:11.874084454
+
+DEBUG (3): Number of discarded messages: 132
+
+DEBUG (2): Messages NOT ackes 146 
+
+DEBUG (6): Messages NOT ackes 94 
+
+DEBUG (1): Number of discarded messages: 232
+
+DEBUG (1): Data Message counter: 228
+
+DEBUG (1): Time for data message 1652324376 from 6 to sink is : 120848904 ms
+DEBUG (1): current simulation time: 0:2:11.881225528
+
+DEBUG (3): Messages NOT ackes 148 
+
+DEBUG (2): Number of discarded messages: 123
+
+DEBUG (4): Messages NOT ackes 95 
+
+DEBUG (1): Number of discarded messages: 233
+
+DEBUG (1): Data Message counter: 229
+
+DEBUG (1): Time for data message 338108654 from 2 to sink is : 71715890 ms
+DEBUG (1): current simulation time: 0:2:12.852874725
+
+DEBUG (2): Messages NOT ackes 147 
+
+DEBUG (2): Number of discarded messages: 124
+
+DEBUG (4): Messages NOT ackes 96 
+
+DEBUG (1): Number of discarded messages: 234
+
+DEBUG (1): Data Message counter: 230
+
+DEBUG (1): Time for data message 350417816 from 2 to sink is : 74004695 ms
+DEBUG (1): current simulation time: 0:2:13.829666105
+
+DEBUG (2): Messages NOT ackes 148 
+
+DEBUG (3): Number of discarded messages: 133
+
+DEBUG (7): Messages NOT ackes 87 
+
+DEBUG (1): Number of discarded messages: 235
+
+DEBUG (1): Data Message counter: 231
+
+DEBUG (1): Time for data message 1072073438 from 2 to sink is : 67138280 ms
+DEBUG (1): current simulation time: 0:2:14.805541964
+
+DEBUG (2): Messages NOT ackes 149 
+
+DEBUG (2): Number of discarded messages: 125
+
+DEBUG (5): Messages NOT ackes 88 
+
+DEBUG (1): Number of discarded messages: 236
+
+DEBUG (1): Data Message counter: 232
+
+DEBUG (1): Time for data message 2145259133 from 3 to sink is : 102843638 ms
+DEBUG (1): current simulation time: 0:2:14.809112500
+
+DEBUG (3): Messages NOT ackes 149 
+
+DEBUG (1): Number of discarded messages: 237
+
+DEBUG (1): Data Message counter: 233
+
+DEBUG (1): Time for data message 950474136 from 2 to sink is : 44097643 ms
+DEBUG (1): current simulation time: 0:2:15.779800400
+
+DEBUG (2): Number of discarded messages: 126
+
+DEBUG (5): Messages NOT ackes 89 
+
+DEBUG (1): Number of discarded messages: 238
+
+DEBUG (1): Data Message counter: 234
+
+DEBUG (1): Time for data message 1900948272 from 5 to sink is : 160979285 ms
+DEBUG (1): current simulation time: 0:2:15.791488566
+
+DEBUG (2): Messages NOT ackes 152 
+
+DEBUG (1): Number of discarded messages: 239
+
+DEBUG (1): Data Message counter: 235
+
+DEBUG (1): Time for data message 1635437366 from 2 to sink is : 43182121 ms
+DEBUG (1): current simulation time: 0:2:16.756271348
+
+DEBUG (2): Messages NOT ackes 153 
+
+DEBUG (2): Number of discarded messages: 127
+
+DEBUG (4): Messages NOT ackes 97 
+
+DEBUG (1): Number of discarded messages: 240
+
+DEBUG (1): Data Message counter: 236
+
+DEBUG (1): Time for data message 2009901061 from 4 to sink is : 178526790 ms
+DEBUG (1): current simulation time: 0:2:16.769805816
+
+DEBUG (2): Messages NOT ackes 154 
+
+DEBUG (1): Number of discarded messages: 241
+
+DEBUG (1): Data Message counter: 237
+
+DEBUG (1): Time for data message 1152612409 from 2 to sink is : 25634616 ms
+DEBUG (1): current simulation time: 0:2:17.731079097
+
+DEBUG (2): Messages NOT ackes 155 
+
+DEBUG (3): Time for treshold 148486084 message from sink to 3 is : 95214288 ms
+DEBUG (3): current simulation time: 0:2:17.738037064
+
+DEBUG (2): Time for treshold 148486084 message from sink to 2 is : 95214288 ms
+DEBUG (2): current simulation time: 0:2:17.738037064
+
+DEBUG (5): Time for treshold 148486084 message from sink to 5 is : 137633474 ms
+DEBUG (5): current simulation time: 0:2:17.742278982
+
+DEBUG (4): Time for treshold 148486084 message from sink to 4 is : 137633474 ms
+DEBUG (4): current simulation time: 0:2:17.742278982
+
+DEBUG (1): Time for treshold 148486084 message from sink to 1 is : 137633474 ms
+DEBUG (1): current simulation time: 0:2:17.742278982
+
+DEBUG (7): Time for treshold 148486084 message from sink to 7 is : 160979285 ms
+DEBUG (7): current simulation time: 0:2:17.744613564
+
+DEBUG (6): Time for treshold 148486084 message from sink to 6 is : 160979285 ms
+DEBUG (6): current simulation time: 0:2:17.744613564
+
+DEBUG (1): Number of discarded messages: 242
+
+DEBUG (2): Number of discarded messages: 128
+
+DEBUG (3): Number of discarded messages: 134
+
+DEBUG (3): Number of discarded messages: 135
+
+DEBUG (7): Messages NOT ackes 88 
+
+DEBUG (2): Number of discarded messages: 129
+
+DEBUG (4): Messages NOT ackes 98 
+
+DEBUG (1): Number of discarded messages: 243
+
+DEBUG (1): Data Message counter: 238
+
+DEBUG (1): Time for data message 774027066 from 3 to sink is : 80565936 ms
+DEBUG (1): current simulation time: 0:2:18.713134730
+
+DEBUG (3): Messages NOT ackes 150 
+
+DEBUG (1): Number of discarded messages: 244
+
+DEBUG (1): Data Message counter: 239
+
+DEBUG (1): Time for data message 1654262123 from 2 to sink is : 102080703 ms
+DEBUG (1): current simulation time: 0:2:18.715286206
+
+DEBUG (2): Messages NOT ackes 156 
+
+DEBUG (1): Number of discarded messages: 245
+
+DEBUG (1): Data Message counter: 240
+
+DEBUG (1): Time for data message 1860207199 from 2 to sink is : 61645148 ms
+DEBUG (1): current simulation time: 0:2:19.687805150
+
+DEBUG (2): Messages NOT ackes 157 
+
+DEBUG (1): Number of discarded messages: 246
+
+DEBUG (1): Data Message counter: 241
+
+DEBUG (1): Time for data message 1764448383 from 3 to sink is : 78124544 ms
+DEBUG (1): current simulation time: 0:2:19.689453090
+
+DEBUG (3): Messages NOT ackes 151 
+
+DEBUG (2): Number of discarded messages: 130
+
+DEBUG (4): Messages NOT ackes 99 
+
+DEBUG (3): Number of discarded messages: 136
+
+DEBUG (7): Messages NOT ackes 89 
+
+DEBUG (1): Number of discarded messages: 247
+
+DEBUG (1): Data Message counter: 242
+
+DEBUG (1): Time for data message 1668689567 from 4 to sink is : 182341465 ms
+DEBUG (1): current simulation time: 0:2:19.699874783
+
+DEBUG (2): Messages NOT ackes 158 
+
+DEBUG (1): Number of discarded messages: 248
+
+DEBUG (1): Data Message counter: 243
+
+DEBUG (1): Time for data message 1381413119 from 7 to sink is : 217894236 ms
+DEBUG (1): current simulation time: 0:2:19.703430062
+
+DEBUG (3): Messages NOT ackes 152 
+
+DEBUG (3): Number of discarded messages: 137
+
+DEBUG (6): Messages NOT ackes 98 
+
+DEBUG (2): Number of discarded messages: 131
+
+DEBUG (5): Messages NOT ackes 92 
+
+DEBUG (3): Number of discarded messages: 138
+
+DEBUG (7): Messages NOT ackes 90 
+
+DEBUG (1): Number of discarded messages: 249
+
+DEBUG (1): Data Message counter: 244
+
+DEBUG (1): Time for data message 723437487 from 5 to sink is : 126952384 ms
+DEBUG (1): current simulation time: 0:2:20.670898375
+
+DEBUG (2): Messages NOT ackes 160 
+
+DEBUG (1): Number of discarded messages: 250
+
+DEBUG (1): Data Message counter: 245
+
+DEBUG (1): Time for data message 964583316 from 7 to sink is : 145567998 ms
+DEBUG (1): current simulation time: 0:2:20.672759938
+
+DEBUG (3): Messages NOT ackes 154 
+
+DEBUG (1): Number of discarded messages: 251
+
+DEBUG (1): Data Message counter: 246
+
+DEBUG (1): Time for data message 954459171 from 2 to sink is : 55999429 ms
+DEBUG (1): current simulation time: 0:2:21.640365578
+
+DEBUG (2): Messages NOT ackes 161 
+
+DEBUG (1): Number of discarded messages: 252
+
+DEBUG (1): Data Message counter: 247
+
+DEBUG (1): Time for data message 1272612228 from 3 to sink is : 97350506 ms
+DEBUG (1): current simulation time: 0:2:21.644500687
+
+DEBUG (3): Messages NOT ackes 155 
+
+DEBUG (3): Number of discarded messages: 139
+
+DEBUG (7): Messages NOT ackes 92 
+
+DEBUG (2): Number of discarded messages: 132
+
+DEBUG (1): Number of discarded messages: 253
+
+DEBUG (1): Data Message counter: 248
+
+DEBUG (1): Time for data message 2004075523 from 3 to sink is : 64086540 ms
+DEBUG (1): current simulation time: 0:2:22.617736790
+
+DEBUG (4): Messages NOT ackes 102 
+
+DEBUG (3): Messages NOT ackes 156 
+
+DEBUG (2): Number of discarded messages: 133
+
+DEBUG (5): Messages NOT ackes 94 
+
+DEBUG (3): Number of discarded messages: 140
+
+DEBUG (1): Number of discarded messages: 254
+
+DEBUG (1): Data Message counter: 249
+
+DEBUG (1): Time for data message 2039927554 from 2 to sink is : 103606573 ms
+DEBUG (1): current simulation time: 0:2:22.621688793
+
+DEBUG (6): Messages NOT ackes 99 
+
+DEBUG (2): Messages NOT ackes 162 
+
+DEBUG (1): Number of discarded messages: 255
+
+DEBUG (1): Data Message counter: 250
+
+DEBUG (1): Time for data message 1896519430 from 6 to sink is : 146788694 ms
+DEBUG (1): current simulation time: 0:2:22.626007007
+
+DEBUG (3): Messages NOT ackes 157 
+
+DEBUG (1): Number of discarded messages: 256
+
+DEBUG (1): Data Message counter: 251
+
+DEBUG (1): Time for data message 485975723 from 2 to sink is : 23040637 ms
+DEBUG (1): current simulation time: 0:2:23.590194699
+
+DEBUG (2): Messages NOT ackes 163 
+
+DEBUG (3): Number of discarded messages: 141
+
+DEBUG (6): Messages NOT ackes 100 
+
+DEBUG (1): Number of discarded messages: 257
+
+DEBUG (1): Data Message counter: 252
+
+DEBUG (1): Time for data message 1363795513 from 3 to sink is : 65612410 ms
+DEBUG (1): current simulation time: 0:2:23.594451877
+
+DEBUG (3): Messages NOT ackes 158 
+
+DEBUG (2): Number of discarded messages: 134
+
+DEBUG (5): Messages NOT ackes 95 
+
+DEBUG (3): Number of discarded messages: 142
+
+DEBUG (7): Messages NOT ackes 93 
+
+DEBUG (2): Number of discarded messages: 135
+
+DEBUG (3): Number of discarded messages: 143
+
+DEBUG (4): Messages NOT ackes 103 
+
+DEBUG (7): Messages NOT ackes 94 
+
+DEBUG (1): Number of discarded messages: 258
+
+DEBUG (1): Data Message counter: 253
+
+DEBUG (1): Time for data message 1218222560 from 3 to sink is : 55236494 ms
+DEBUG (1): current simulation time: 0:2:24.569976785
+
+DEBUG (3): Messages NOT ackes 160 
+
+DEBUG (2): Number of discarded messages: 136
+
+DEBUG (5): Messages NOT ackes 96 
+
+DEBUG (3): Number of discarded messages: 144
+
+DEBUG (6): Messages NOT ackes 101 
+
+DEBUG (1): Number of discarded messages: 259
+
+DEBUG (1): Data Message counter: 254
+
+DEBUG (1): Time for data message 913666920 from 2 to sink is : 87279764 ms
+DEBUG (1): current simulation time: 0:2:24.573181112
+
+DEBUG (2): Messages NOT ackes 165 
+
+DEBUG (1): Number of discarded messages: 260
+
+DEBUG (1): Data Message counter: 255
+
+DEBUG (1): Time for data message 2131889480 from 6 to sink is : 103148812 ms
+DEBUG (1): current simulation time: 0:2:24.574768019
+
+DEBUG (3): Messages NOT ackes 161 
+
+DEBUG (3): Number of discarded messages: 145
+
+DEBUG (7): Messages NOT ackes 95 
+
+DEBUG (1): Number of discarded messages: 261
+
+DEBUG (1): Data Message counter: 256
+
+DEBUG (1): Time for data message 557475422 from 3 to sink is : 59661517 ms
+DEBUG (1): current simulation time: 0:2:25.546981788
+
+DEBUG (3): Messages NOT ackes 162 
+
+DEBUG (2): Number of discarded messages: 137
+
+DEBUG (5): Messages NOT ackes 97 
+
+DEBUG (1): Number of discarded messages: 262
+
+DEBUG (1): Data Message counter: 257
+
+DEBUG (1): Time for data message 1491848390 from 2 to sink is : 95366875 ms
+DEBUG (1): current simulation time: 0:2:25.550552323
+
+DEBUG (2): Messages NOT ackes 166 
+
+DEBUG (3): Number of discarded messages: 146
+
+DEBUG (6): Messages NOT ackes 102 
+
+DEBUG (2): Number of discarded messages: 138
+
+DEBUG (4): Messages NOT ackes 104 
+
+DEBUG (1): Number of discarded messages: 263
+
+DEBUG (1): Data Message counter: 258
+
+DEBUG (1): Time for data message 2049323812 from 6 to sink is : 168913809 ms
+DEBUG (1): current simulation time: 0:2:25.557907018
+
+DEBUG (3): Messages NOT ackes 163 
+
+DEBUG (1): Number of discarded messages: 264
+
+DEBUG (1): Data Message counter: 259
+
+DEBUG (1): Time for data message 1770586101 from 4 to sink is : 191649272 ms
+DEBUG (1): current simulation time: 0:2:25.560180564
+
+DEBUG (2): Messages NOT ackes 167 
+
+DEBUG (3): Number of discarded messages: 147
+
+DEBUG (6): Messages NOT ackes 103 
+
+DEBUG (2): Number of discarded messages: 139
+
+DEBUG (5): Messages NOT ackes 98 
+
+DEBUG (1): Number of discarded messages: 265
+
+DEBUG (1): Data Message counter: 260
+
+DEBUG (1): Time for data message 1642577698 from 6 to sink is : 50048536 ms
+DEBUG (1): current simulation time: 0:2:26.522582991
+
+DEBUG (3): Messages NOT ackes 164 
+
+DEBUG (1): Number of discarded messages: 266
+
+DEBUG (1): Data Message counter: 261
+
+DEBUG (1): Time for data message 1624312005 from 2 to sink is : 72936586 ms
+DEBUG (1): current simulation time: 0:2:26.524871794
+
+DEBUG (2): Messages NOT ackes 168 
+
+DEBUG (2): Number of discarded messages: 140
+
+DEBUG (4): Messages NOT ackes 105 
+
+DEBUG (1): Number of discarded messages: 267
+
+DEBUG (1): Data Message counter: 262
+
+DEBUG (1): Time for data message 559703028 from 4 to sink is : 132750690 ms
+DEBUG (1): current simulation time: 0:2:26.530853206
+
+DEBUG (2): Messages NOT ackes 169 
+
+DEBUG (1): Number of discarded messages: 268
+
+DEBUG (1): Data Message counter: 263
+
+DEBUG (1): Time for data message 999747371 from 2 to sink is : 26550138 ms
+DEBUG (1): current simulation time: 0:2:27.496795649
+
+DEBUG (2): Messages NOT ackes 170 
+
+DEBUG (2): Number of discarded messages: 141
+
+DEBUG (3): Number of discarded messages: 148
+
+DEBUG (5): Messages NOT ackes 99 
+
+DEBUG (1): Number of discarded messages: 269
+
+DEBUG (1): Data Message counter: 264
+
+DEBUG (1): Time for data message 2048824377 from 3 to sink is : 99181550 ms
+DEBUG (1): current simulation time: 0:2:27.504058791
+
+DEBUG (3): Messages NOT ackes 165 
+
+DEBUG (1): Number of discarded messages: 270
+
+DEBUG (1): Data Message counter: 265
+
+DEBUG (1): Time for data message 1999494742 from 5 to sink is : 181883704 ms
+DEBUG (1): current simulation time: 0:2:27.512329007
+
+DEBUG (2): Messages NOT ackes 171 
+
+DEBUG (1): Number of discarded messages: 271
+
+DEBUG (1): Data Message counter: 266
+
+DEBUG (1): Time for data message 842010269 from 2 to sink is : 19531136 ms
+DEBUG (1): current simulation time: 0:2:28.472656249
+
+DEBUG (2): Messages NOT ackes 172 
+
+DEBUG (3): Number of discarded messages: 149
+
+DEBUG (6): Messages NOT ackes 105 
+
+DEBUG (1): Number of discarded messages: 272
+
+DEBUG (1): Data Message counter: 267
+
+DEBUG (1): Time for data message 1838508241 from 3 to sink is : 102233290 ms
+DEBUG (1): current simulation time: 0:2:28.480926465
+
+DEBUG (3): Messages NOT ackes 166 
+
+DEBUG (3): Number of discarded messages: 150
+
+DEBUG (7): Messages NOT ackes 97 
+
+DEBUG (1): Number of discarded messages: 273
+
+DEBUG (1): Data Message counter: 268
+
+DEBUG (1): Time for data message 1529532835 from 7 to sink is : 173186245 ms
+DEBUG (1): current simulation time: 0:2:28.488021763
+
+DEBUG (3): Messages NOT ackes 167 
+
+DEBUG (3): Number of discarded messages: 151
+
+DEBUG (7): Messages NOT ackes 98 
+
+DEBUG (2): Number of discarded messages: 142
+
+DEBUG (5): Messages NOT ackes 101 
+
+DEBUG (3): Number of discarded messages: 152
+
+DEBUG (6): Messages NOT ackes 106 
+
+DEBUG (2): Number of discarded messages: 143
+
+DEBUG (4): Messages NOT ackes 108 
+
+DEBUG (1): Number of discarded messages: 274
+
+DEBUG (1): Data Message counter: 269
+
+DEBUG (1): Time for data message 1082596380 from 3 to sink is : 51269232 ms
+DEBUG (1): current simulation time: 0:2:30.428955059
+
+DEBUG (3): Messages NOT ackes 170 
+
+DEBUG (2): Number of discarded messages: 144
+
+DEBUG (5): Messages NOT ackes 102 
+
+DEBUG (3): Number of discarded messages: 153
+
+DEBUG (6): Messages NOT ackes 107 
+
+DEBUG (2): Number of discarded messages: 145
+
+DEBUG (4): Messages NOT ackes 109 
+
+DEBUG (1): Number of discarded messages: 275
+
+DEBUG (1): Data Message counter: 270
+
+DEBUG (1): Time for data message 811947285 from 2 to sink is : 115355772 ms
+DEBUG (1): current simulation time: 0:2:30.435363713
+
+DEBUG (2): Messages NOT ackes 175 
+
+DEBUG (1): Number of discarded messages: 276
+
+DEBUG (1): Data Message counter: 271
+
+DEBUG (1): Time for data message 1894543665 from 6 to sink is : 138701583 ms
+DEBUG (1): current simulation time: 0:2:30.437698296
+
+DEBUG (3): Messages NOT ackes 171 
+
+DEBUG (3): Number of discarded messages: 154
+
+DEBUG (7): Messages NOT ackes 99 
+
+DEBUG (2): Number of discarded messages: 146
+
+DEBUG (4): Messages NOT ackes 110 
+
+DEBUG (2): Number of discarded messages: 147
+
+DEBUG (5): Messages NOT ackes 103 
+
+DEBUG (1): Number of discarded messages: 277
+
+DEBUG (1): Data Message counter: 272
+
+DEBUG (1): Time for data message 1284318905 from 7 to sink is : 121154078 ms
+DEBUG (1): current simulation time: 0:2:31.412506046
+
+DEBUG (3): Messages NOT ackes 173 
+
+DEBUG (1): Number of discarded messages: 278
+
+DEBUG (1): Data Message counter: 273
+
+DEBUG (1): Time for data message 2144876595 from 4 to sink is : 161742220 ms
+DEBUG (1): current simulation time: 0:2:31.416564859
+
+DEBUG (2): Messages NOT ackes 177 
+
+DEBUG (2): Number of discarded messages: 148
+
+DEBUG (5): Messages NOT ackes 104 
+
+DEBUG (3): Number of discarded messages: 155
+
+DEBUG (7): Messages NOT ackes 100 
+
+DEBUG (1): Number of discarded messages: 279
+
+DEBUG (1): Data Message counter: 274
+
+DEBUG (1): Time for data message 594850169 from 3 to sink is : 59356343 ms
+DEBUG (1): current simulation time: 0:2:32.382888770
+
+DEBUG (3): Messages NOT ackes 174 
+
+DEBUG (3): Number of discarded messages: 156
+
+DEBUG (6): Messages NOT ackes 109 
+
+DEBUG (1): Number of discarded messages: 280
+
+DEBUG (1): Data Message counter: 275
+
+DEBUG (1): Time for data message 2056750362 from 2 to sink is : 90941852 ms
+DEBUG (1): current simulation time: 0:2:32.386047321
+
+DEBUG (2): Messages NOT ackes 178 
+
+DEBUG (1): Number of discarded messages: 281
+
+DEBUG (1): Data Message counter: 276
+
+DEBUG (1): Time for data message 504116884 from 6 to sink is : 110472988 ms
+DEBUG (1): current simulation time: 0:2:32.388000436
+
+DEBUG (3): Messages NOT ackes 175 
+
+DEBUG (1): Number of discarded messages: 282
+
+DEBUG (1): Data Message counter: 277
+
+DEBUG (1): Time for data message 1110413598 from 3 to sink is : 39672620 ms
+DEBUG (1): current simulation time: 0:2:33.357482898
+
+DEBUG (3): Messages NOT ackes 176 
+
+DEBUG (3): Number of discarded messages: 157
+
+DEBUG (6): Messages NOT ackes 110 
+
+DEBUG (1): Number of discarded messages: 283
+
+DEBUG (1): Data Message counter: 278
+
+DEBUG (1): Time for data message 1906552022 from 2 to sink is : 59966691 ms
+DEBUG (1): current simulation time: 0:2:33.359512305
+
+DEBUG (2): Messages NOT ackes 179 
+
+DEBUG (1): Number of discarded messages: 284
+
+DEBUG (1): Data Message counter: 279
+
+DEBUG (1): Time for data message 869481973 from 6 to sink is : 131682581 ms
+DEBUG (1): current simulation time: 0:2:33.366683896
+
+DEBUG (3): Messages NOT ackes 177 
+
+DEBUG (3): Number of discarded messages: 158
+
+DEBUG (2): Number of discarded messages: 149
+
+DEBUG (5): Messages NOT ackes 106 
+
+DEBUG (1): Number of discarded messages: 285
+
+DEBUG (1): Data Message counter: 280
+
+DEBUG (1): Time for data message 1088449156 from 3 to sink is : 103148812 ms
+DEBUG (1): current simulation time: 0:2:34.340393017
+
+DEBUG (3): Messages NOT ackes 178 
+
+DEBUG (1): Number of discarded messages: 286
+
+DEBUG (1): Data Message counter: 281
+
+DEBUG (1): Time for data message 816336867 from 2 to sink is : 118865273 ms
+DEBUG (1): current simulation time: 0:2:34.341964663
+
+DEBUG (2): Messages NOT ackes 180 
+
+DEBUG (2): Number of discarded messages: 150
+
+DEBUG (5): Messages NOT ackes 107 
+
+DEBUG (1): Number of discarded messages: 287
+
+DEBUG (1): Data Message counter: 282
+
+DEBUG (1): Time for data message 1299259746 from 3 to sink is : 27160486 ms
+DEBUG (1): current simulation time: 0:2:35.309356685
+
+DEBUG (3): Messages NOT ackes 179 
+
+DEBUG (2): Number of discarded messages: 151
+
+DEBUG (4): Messages NOT ackes 114 
+
+DEBUG (3): Number of discarded messages: 159
+
+DEBUG (6): Messages NOT ackes 112 
+
+DEBUG (3): Number of discarded messages: 160
+
+DEBUG (7): Messages NOT ackes 101 
+
+DEBUG (1): Number of discarded messages: 288
+
+DEBUG (1): Data Message counter: 283
+
+DEBUG (1): Time for data message 2048186633 from 2 to sink is : 87279764 ms
+DEBUG (1): current simulation time: 0:2:35.315368612
+
+DEBUG (2): Messages NOT ackes 181 
+
+DEBUG (1): Number of discarded messages: 289
+
+DEBUG (1): Data Message counter: 284
+
+DEBUG (1): Time for data message 1199962732 from 6 to sink is : 144347302 ms
+DEBUG (1): current simulation time: 0:2:35.321075368
+
+DEBUG (3): Messages NOT ackes 180 
+
+DEBUG (3): Number of discarded messages: 161
+
+DEBUG (7): Messages NOT ackes 102 
+
+DEBUG (1): Number of discarded messages: 290
+
+DEBUG (1): Data Message counter: 285
+
+DEBUG (1): Time for data message 1044828326 from 3 to sink is : 64086540 ms
+DEBUG (1): current simulation time: 0:2:36.289611790
+
+DEBUG (3): Messages NOT ackes 181 
+
+DEBUG (2): Number of discarded messages: 152
+
+DEBUG (4): Messages NOT ackes 115 
+
+DEBUG (1): Number of discarded messages: 291
+
+DEBUG (1): Data Message counter: 286
+
+DEBUG (1): Time for data message 1857363068 from 2 to sink is : 95061701 ms
+DEBUG (1): current simulation time: 0:2:36.292709306
+
+DEBUG (2): Messages NOT ackes 182 
+
+DEBUG (3): Number of discarded messages: 162
+
+DEBUG (6): Messages NOT ackes 113 
+
+DEBUG (2): Number of discarded messages: 153
+
+DEBUG (5): Messages NOT ackes 108 
+
+DEBUG (1): Number of discarded messages: 292
+
+DEBUG (1): Data Message counter: 287
+
+DEBUG (1): Time for data message 1567242489 from 5 to sink is : 168913809 ms
+DEBUG (1): current simulation time: 0:2:36.300094518
+
+DEBUG (2): Messages NOT ackes 183 
+
+DEBUG (1): Number of discarded messages: 293
+
+DEBUG (1): Data Message counter: 288
+
+DEBUG (1): Time for data message 754707747 from 6 to sink is : 208891603 ms
+DEBUG (1): current simulation time: 0:2:36.304092298
+
+DEBUG (3): Messages NOT ackes 182 
+
+DEBUG (3): Number of discarded messages: 163
+
+DEBUG (3): Time for treshold 127561359 message from sink to 3 is : 56609777 ms
+DEBUG (3): current simulation time: 0:2:37.265426613
+
+DEBUG (1): Number of discarded messages: 294
+
+DEBUG (1): Data Message counter: 289
+
+DEBUG (1): Time for data message 455893563 from 3 to sink is : 90178917 ms
+DEBUG (1): current simulation time: 0:2:37.268783528
+
+DEBUG (3): Messages NOT ackes 183 
+
+DEBUG (1): Number of discarded messages: 295
+
+DEBUG (1): Data Message counter: 290
+
+DEBUG (1): Time for data message 878791084 from 2 to sink is : 111693684 ms
+DEBUG (1): current simulation time: 0:2:37.270935004
+
+DEBUG (2): Messages NOT ackes 184 
+
+DEBUG (3): Number of discarded messages: 164
+
+DEBUG (7): Messages NOT ackes 103 
+
+DEBUG (1): Number of discarded messages: 296
+
+DEBUG (1): Data Message counter: 291
+
+DEBUG (1): Time for data message 911787126 from 7 to sink is : 209807125 ms
+DEBUG (1): current simulation time: 0:2:37.280746351
+
+DEBUG (3): Messages NOT ackes 184 
+
+DEBUG (3): Number of discarded messages: 165
+
+DEBUG (7): Messages NOT ackes 104 
+
+DEBUG (3): Number of discarded messages: 166
+
+DEBUG (6): Messages NOT ackes 115 
+
+DEBUG (1): Number of discarded messages: 297
+
+DEBUG (1): Data Message counter: 292
+
+DEBUG (1): Time for data message 1596708369 from 2 to sink is : 83312502 ms
+DEBUG (1): current simulation time: 0:2:38.244659386
+
+DEBUG (2): Messages NOT ackes 185 
+
+DEBUG (1): Number of discarded messages: 298
+
+DEBUG (1): Data Message counter: 293
+
+DEBUG (1): Time for data message 2128944492 from 3 to sink is : 106658313 ms
+DEBUG (1): current simulation time: 0:2:38.246993967
+
+DEBUG (3): Messages NOT ackes 185 
+
+DEBUG (2): Number of discarded messages: 154
+
+DEBUG (4): Messages NOT ackes 117 
+
+DEBUG (1): Number of discarded messages: 299
+
+DEBUG (1): Data Message counter: 294
+
+DEBUG (1): Time for data message 921904871 from 2 to sink is : 56609777 ms
+DEBUG (1): current simulation time: 0:2:39.218551613
+
+DEBUG (2): Messages NOT ackes 186 
+
+DEBUG (1): Number of discarded messages: 300
+
+DEBUG (1): Data Message counter: 295
+
+DEBUG (1): Time for data message 1945034377 from 3 to sink is : 71868477 ms
+DEBUG (1): current simulation time: 0:2:39.220077484
+
+DEBUG (3): Messages NOT ackes 186 
+
+DEBUG (2): Number of discarded messages: 155
+
+DEBUG (5): Messages NOT ackes 111 
+
+DEBUG (3): Number of discarded messages: 167
+
+DEBUG (6): Messages NOT ackes 116 
+
+DEBUG (3): Number of discarded messages: 168
+
+DEBUG (7): Messages NOT ackes 105 
+
+DEBUG (1): Number of discarded messages: 301
+
+DEBUG (1): Data Message counter: 296
+
+DEBUG (1): Time for data message 719455601 from 6 to sink is : 151213717 ms
+DEBUG (1): current simulation time: 0:2:39.228012009
+
+DEBUG (3): Messages NOT ackes 187 
+
+DEBUG (1): Number of discarded messages: 302
+
+DEBUG (1): Data Message counter: 297
+
+DEBUG (1): Time for data message 1843809742 from 5 to sink is : 169371570 ms
+DEBUG (1): current simulation time: 0:2:39.229827794
+
+DEBUG (2): Messages NOT ackes 187 
+
+DEBUG (2): Number of discarded messages: 156
+
+DEBUG (5): Messages NOT ackes 112 
+
+DEBUG (1): Number of discarded messages: 303
+
+DEBUG (1): Data Message counter: 298
+
+DEBUG (1): Time for data message 360653792 from 2 to sink is : 43334708 ms
+DEBUG (1): current simulation time: 0:2:40.193786606
+
+DEBUG (2): Messages NOT ackes 188 
+
+DEBUG (2): Number of discarded messages: 157
+
+DEBUG (1): Number of discarded messages: 304
+
+DEBUG (1): Data Message counter: 299
+
+DEBUG (1): Time for data message 1196699605 from 3 to sink is : 67290867 ms
+DEBUG (1): current simulation time: 0:2:40.196182223
+
+DEBUG (4): Messages NOT ackes 118 
+
+DEBUG (3): Messages NOT ackes 188 
+
+DEBUG (1): Number of discarded messages: 305
+
+DEBUG (1): Data Message counter: 300
+
+DEBUG (1): Time for data message 2032745418 from 4 to sink is : 137938648 ms
+DEBUG (1): current simulation time: 0:2:40.203247001
+
+DEBUG (2): Messages NOT ackes 189 
+
+DEBUG (1): Number of discarded messages: 306
+
+DEBUG (1): Data Message counter: 301
+
+DEBUG (1): Time for data message 1309430310 from 2 to sink is : 35095010 ms
+DEBUG (1): current simulation time: 0:2:41.169525137
+
+DEBUG (2): Messages NOT ackes 190 
+
+DEBUG (3): Number of discarded messages: 169
+
+DEBUG (6): Messages NOT ackes 118 
+
+DEBUG (2): Number of discarded messages: 158
+
+DEBUG (5): Messages NOT ackes 113 
+
+DEBUG (1): Number of discarded messages: 307
+
+DEBUG (1): Data Message counter: 302
+
+DEBUG (1): Time for data message 1745907080 from 3 to sink is : 74615043 ms
+DEBUG (1): current simulation time: 0:2:41.173477140
+
+DEBUG (3): Messages NOT ackes 189 
+
+DEBUG (3): Number of discarded messages: 170
+
+DEBUG (7): Messages NOT ackes 107 
+
+DEBUG (1): Number of discarded messages: 308
+
+DEBUG (1): Data Message counter: 303
+
+DEBUG (1): Time for data message 1344330513 from 7 to sink is : 127867906 ms
+DEBUG (1): current simulation time: 0:2:41.178802429
+
+DEBUG (3): Messages NOT ackes 190 
+
+DEBUG (1): Number of discarded messages: 309
+
+DEBUG (1): Data Message counter: 304
+
+DEBUG (1): Time for data message 471376973 from 5 to sink is : 181120769 ms
+DEBUG (1): current simulation time: 0:2:41.184127714
+
+DEBUG (2): Messages NOT ackes 191 
+
+DEBUG (1): Number of discarded messages: 310
+
+DEBUG (1): Data Message counter: 305
+
+DEBUG (1): Time for data message 243740952 from 3 to sink is : 41961425 ms
+DEBUG (1): current simulation time: 0:2:42.146774279
+
+DEBUG (3): Messages NOT ackes 191 
+
+DEBUG (3): Number of discarded messages: 171
+
+DEBUG (6): Messages NOT ackes 119 
+
+DEBUG (3): Number of discarded messages: 172
+
+DEBUG (7): Messages NOT ackes 108 
+
+DEBUG (1): Number of discarded messages: 311
+
+DEBUG (1): Data Message counter: 306
+
+DEBUG (1): Time for data message 182805714 from 2 to sink is : 103606573 ms
+DEBUG (1): current simulation time: 0:2:42.152938793
+
+DEBUG (2): Messages NOT ackes 192 
+
+DEBUG (1): Number of discarded messages: 312
+
+DEBUG (1): Data Message counter: 307
+
+DEBUG (1): Time for data message 426546666 from 6 to sink is : 151671478 ms
+DEBUG (1): current simulation time: 0:2:42.157745285
+
+DEBUG (3): Messages NOT ackes 192 
+
+DEBUG (2): Number of discarded messages: 159
+
+DEBUG (4): Messages NOT ackes 120 
+
+DEBUG (3): Number of discarded messages: 173
+
+DEBUG (7): Messages NOT ackes 109 
+
+DEBUG (1): Number of discarded messages: 313
+
+DEBUG (1): Data Message counter: 308
+
+DEBUG (1): Time for data message 1514019988 from 2 to sink is : 44097643 ms
+DEBUG (1): current simulation time: 0:2:43.123550400
+
+DEBUG (2): Messages NOT ackes 193 
+
+DEBUG (2): Number of discarded messages: 160
+
+DEBUG (1): Number of discarded messages: 314
+
+DEBUG (1): Data Message counter: 309
+
+DEBUG (1): Time for data message 1302865435 from 3 to sink is : 68816737 ms
+DEBUG (1): current simulation time: 0:2:43.126022310
+
+DEBUG (5): Messages NOT ackes 115 
+
+DEBUG (3): Messages NOT ackes 193 
+
+DEBUG (3): Number of discarded messages: 174
+
+DEBUG (6): Messages NOT ackes 120 
+
+DEBUG (1): Number of discarded messages: 315
+
+DEBUG (1): Data Message counter: 310
+
+DEBUG (1): Time for data message 880556329 from 5 to sink is : 133361038 ms
+DEBUG (1): current simulation time: 0:2:43.132476741
+
+DEBUG (2): Messages NOT ackes 194 
+
+DEBUG (1): Number of discarded messages: 316
+
+DEBUG (1): Data Message counter: 311
+
+DEBUG (1): Time for data message 669401776 from 6 to sink is : 185698379 ms
+DEBUG (1): current simulation time: 0:2:43.137710475
+
+DEBUG (3): Messages NOT ackes 194 
+
+DEBUG (3): Number of discarded messages: 175
+
+DEBUG (6): Messages NOT ackes 121 
+
+DEBUG (1): Number of discarded messages: 317
+
+DEBUG (1): Data Message counter: 312
+
+DEBUG (1): Time for data message 1516101233 from 3 to sink is : 57677886 ms
+DEBUG (1): current simulation time: 0:2:44.101470925
+
+DEBUG (3): Messages NOT ackes 195 
+
+DEBUG (2): Number of discarded messages: 161
+
+DEBUG (5): Messages NOT ackes 116 
+
+DEBUG (1): Number of discarded messages: 318
+
+DEBUG (1): Data Message counter: 313
+
+DEBUG (1): Time for data message 600205013 from 2 to sink is : 80413349 ms
+DEBUG (1): current simulation time: 0:2:44.103744470
+
+DEBUG (2): Messages NOT ackes 195 
+
+DEBUG (3): Number of discarded messages: 176
+
+DEBUG (7): Messages NOT ackes 110 
+
+DEBUG (2): Number of discarded messages: 162
+
+DEBUG (4): Messages NOT ackes 121 
+
+DEBUG (1): Number of discarded messages: 319
+
+DEBUG (1): Data Message counter: 314
+
+DEBUG (1): Time for data message 284513806 from 4 to sink is : 120696317 ms
+DEBUG (1): current simulation time: 0:2:44.107772768
+
+DEBUG (2): Messages NOT ackes 196 
+
+DEBUG (1): Number of discarded messages: 320
+
+DEBUG (1): Data Message counter: 315
+
+DEBUG (1): Time for data message 884718819 from 7 to sink is : 142821432 ms
+DEBUG (1): current simulation time: 0:2:44.109985281
+
+DEBUG (3): Messages NOT ackes 196 
+
+DEBUG (1): Number of discarded messages: 321
+
+DEBUG (1): Data Message counter: 316
+
+DEBUG (1): Time for data message 914963532 from 2 to sink is : 22888050 ms
+DEBUG (1): current simulation time: 0:2:45.074554441
+
+DEBUG (3): Number of discarded messages: 177
+
+DEBUG (2): Messages NOT ackes 197 
+
+DEBUG (6): Messages NOT ackes 122 
+
+DEBUG (1): Number of discarded messages: 322
+
+DEBUG (1): Data Message counter: 317
+
+DEBUG (1): Time for data message 1219951376 from 3 to sink is : 46233861 ms
+DEBUG (1): current simulation time: 0:2:45.076889022
+
+DEBUG (3): Messages NOT ackes 197 
+
+DEBUG (1): Number of discarded messages: 323
+
+DEBUG (1): Data Message counter: 318
+
+DEBUG (1): Time for data message 1809169804 from 2 to sink is : 31890683 ms
+DEBUG (1): current simulation time: 0:2:46.052017204
+
+DEBUG (2): Messages NOT ackes 198 
+
+DEBUG (3): Number of discarded messages: 178
+
+DEBUG (6): Messages NOT ackes 123 
+
+DEBUG (1): Number of discarded messages: 324
+
+DEBUG (1): Data Message counter: 319
+
+DEBUG (1): Time for data message 1696398523 from 3 to sink is : 59661517 ms
+DEBUG (1): current simulation time: 0:2:46.054794288
+
+DEBUG (3): Messages NOT ackes 198 
+
+DEBUG (3): Number of discarded messages: 179
+
+DEBUG (7): Messages NOT ackes 112 
+
+DEBUG (1): Number of discarded messages: 325
+
+DEBUG (1): Data Message counter: 320
+
+DEBUG (1): Time for data message 1245313399 from 7 to sink is : 119628208 ms
+DEBUG (1): current simulation time: 0:2:46.060790959
+
+DEBUG (3): Messages NOT ackes 199 
+
+DEBUG (3): Number of discarded messages: 180
+
+DEBUG (6): Messages NOT ackes 124 
+
+DEBUG (2): Number of discarded messages: 163
+
+DEBUG (3): Number of discarded messages: 181
+
+DEBUG (5): Messages NOT ackes 119 
+
+DEBUG (7): Messages NOT ackes 113 
+
+DEBUG (3): Time for treshold 735081007 message from sink to 3 is : 95977223 ms
+DEBUG (3): current simulation time: 0:2:47.034988357
+
+DEBUG (2): Time for treshold 735081007 message from sink to 2 is : 95977223 ms
+DEBUG (2): current simulation time: 0:2:47.034988357
+
+DEBUG (1): Number of discarded messages: 326
+
+DEBUG (1): Data Message counter: 321
+
+DEBUG (1): Time for data message 606673331 from 7 to sink is : 165862069 ms
+DEBUG (1): current simulation time: 0:2:47.041976845
+
+DEBUG (3): Messages NOT ackes 201 
+
+DEBUG (1): Number of discarded messages: 327
+
+DEBUG (1): Data Message counter: 322
+
+DEBUG (1): Time for data message 991875910 from 5 to sink is : 188597532 ms
+DEBUG (1): current simulation time: 0:2:47.044250390
+
+DEBUG (2): Messages NOT ackes 200 
+
+DEBUG (2): Number of discarded messages: 164
+
+DEBUG (5): Messages NOT ackes 120 
+
+DEBUG (2): Number of discarded messages: 165
+
+DEBUG (4): Messages NOT ackes 124 
+
+DEBUG (3): Number of discarded messages: 182
+
+DEBUG (1): Number of discarded messages: 328
+
+DEBUG (1): Data Message counter: 323
+
+DEBUG (1): Time for data message 845175678 from 2 to sink is : 93535831 ms
+DEBUG (1): current simulation time: 0:2:48.011306719
+
+DEBUG (6): Messages NOT ackes 125 
+
+DEBUG (2): Messages NOT ackes 201 
+
+DEBUG (1): Number of discarded messages: 329
+
+DEBUG (1): Data Message counter: 324
+
+DEBUG (1): Time for data message 1126900904 from 3 to sink is : 112914380 ms
+DEBUG (1): current simulation time: 0:2:48.013244574
+
+DEBUG (3): Messages NOT ackes 202 
+
+DEBUG (2): Number of discarded messages: 166
+
+DEBUG (5): Messages NOT ackes 121 
+
+DEBUG (3): Number of discarded messages: 183
+
+DEBUG (7): Messages NOT ackes 114 
+
+DEBUG (2): Number of discarded messages: 167
+
+DEBUG (4): Messages NOT ackes 125 
+
+DEBUG (3): Number of discarded messages: 184
+
+DEBUG (6): Messages NOT ackes 126 
+
+DEBUG (1): Number of discarded messages: 330
+
+DEBUG (1): Data Message counter: 325
+
+DEBUG (1): Time for data message 428505876 from 6 to sink is : 221403737 ms
+DEBUG (1): current simulation time: 0:2:49.000656011
+
+DEBUG (3): Messages NOT ackes 204 
+
+DEBUG (2): Number of discarded messages: 168
+
+DEBUG (5): Messages NOT ackes 122 
+
+DEBUG (2): Number of discarded messages: 169
+
+DEBUG (4): Messages NOT ackes 126 
+
+DEBUG (1): Number of discarded messages: 331
+
+DEBUG (1): Data Message counter: 326
+
+DEBUG (1): Time for data message 791765452 from 3 to sink is : 103148812 ms
+DEBUG (1): current simulation time: 0:2:49.965393017
+
+DEBUG (3): Messages NOT ackes 205 
+
+DEBUG (1): Number of discarded messages: 332
+
+DEBUG (1): Data Message counter: 327
+
+DEBUG (1): Time for data message 1187648178 from 5 to sink is : 143889541 ms
+DEBUG (1): current simulation time: 0:2:49.969467091
+
+DEBUG (2): Messages NOT ackes 203 
+
+DEBUG (2): Number of discarded messages: 170
+
+DEBUG (4): Messages NOT ackes 127 
+
+DEBUG (1): Number of discarded messages: 333
+
+DEBUG (1): Data Message counter: 328
+
+DEBUG (1): Time for data message 1044956214 from 2 to sink is : 46386448 ms
+DEBUG (1): current simulation time: 0:2:50.936279280
+
+DEBUG (2): Messages NOT ackes 204 
+
+DEBUG (3): Number of discarded messages: 185
+
+DEBUG (7): Messages NOT ackes 116 
+
+DEBUG (3): Number of discarded messages: 186
+
+DEBUG (6): Messages NOT ackes 128 
+
+DEBUG (2): Number of discarded messages: 171
+
+DEBUG (5): Messages NOT ackes 123 
+
+DEBUG (1): Number of discarded messages: 334
+
+DEBUG (1): Data Message counter: 329
+
+DEBUG (1): Time for data message 1393274952 from 3 to sink is : 111235923 ms
+DEBUG (1): current simulation time: 0:2:50.942764228
+
+DEBUG (3): Messages NOT ackes 206 
+
+DEBUG (1): Number of discarded messages: 335
+
+DEBUG (1): Data Message counter: 330
+
+DEBUG (1): Time for data message 2089912428 from 5 to sink is : 196837230 ms
+DEBUG (1): current simulation time: 0:2:50.951324360
+
+DEBUG (2): Messages NOT ackes 205 
+
+DEBUG (3): Number of discarded messages: 187
+
+DEBUG (7): Messages NOT ackes 117 
+
+DEBUG (3): Number of discarded messages: 188
+
+DEBUG (6): Messages NOT ackes 129 
+
+DEBUG (1): Number of discarded messages: 336
+
+DEBUG (1): Data Message counter: 331
+
+DEBUG (1): Time for data message 1220862752 from 7 to sink is : 114745424 ms
+DEBUG (1): current simulation time: 0:2:51.919677680
+
+DEBUG (3): Messages NOT ackes 207 
+
+DEBUG (1): Number of discarded messages: 337
+
+DEBUG (1): Data Message counter: 332
+
+DEBUG (1): Time for data message 990754713 from 3 to sink is : 27618247 ms
+DEBUG (1): current simulation time: 0:2:52.887527461
+
+DEBUG (3): Messages NOT ackes 208 
+
+DEBUG (2): Number of discarded messages: 172
+
+DEBUG (5): Messages NOT ackes 125 
+
+DEBUG (2): Number of discarded messages: 173
+
+DEBUG (4): Messages NOT ackes 129 
+
+DEBUG (3): Number of discarded messages: 189
+
+DEBUG (7): Messages NOT ackes 118 
+
+DEBUG (3): Number of discarded messages: 190
+
+DEBUG (6): Messages NOT ackes 130 
+
+DEBUG (1): Number of discarded messages: 338
+
+DEBUG (1): Data Message counter: 333
+
+DEBUG (1): Time for data message 412390246 from 5 to sink is : 119780795 ms
+DEBUG (1): current simulation time: 0:2:52.896743717
+
+DEBUG (2): Messages NOT ackes 206 
+
+DEBUG (1): Number of discarded messages: 339
+
+DEBUG (1): Data Message counter: 334
+
+DEBUG (1): Time for data message 1981509426 from 7 to sink is : 135344669 ms
+DEBUG (1): current simulation time: 0:2:52.898300105
+
+DEBUG (3): Messages NOT ackes 209 
+
+DEBUG (3): Number of discarded messages: 191
+
+DEBUG (6): Messages NOT ackes 131 
+
+DEBUG (3): Number of discarded messages: 192
+
+DEBUG (1): Number of discarded messages: 340
+
+DEBUG (1): Data Message counter: 335
+
+DEBUG (1): Time for data message 870435477 from 2 to sink is : 24261333 ms
+DEBUG (1): current simulation time: 0:2:54.840316769
+
+DEBUG (7): Messages NOT ackes 119 
+
+DEBUG (2): Messages NOT ackes 208 
+
+DEBUG (3): Number of discarded messages: 193
+
+DEBUG (6): Messages NOT ackes 132 
+
+DEBUG (1): Number of discarded messages: 341
+
+DEBUG (1): Data Message counter: 336
+
+DEBUG (1): Time for data message 1160580636 from 3 to sink is : 89110808 ms
+DEBUG (1): current simulation time: 0:2:54.846801717
+
+DEBUG (3): Messages NOT ackes 211 
+
+DEBUG (1): Number of discarded messages: 342
+
+DEBUG (1): Data Message counter: 337
+
+DEBUG (1): Time for data message 750458575 from 2 to sink is : 22277702 ms
+DEBUG (1): current simulation time: 0:2:55.816680906
+
+DEBUG (3): Number of discarded messages: 194
+
+DEBUG (2): Messages NOT ackes 209 
+
+DEBUG (7): Messages NOT ackes 120 
+
+DEBUG (1): Number of discarded messages: 343
+
+DEBUG (1): Data Message counter: 338
+
+DEBUG (1): Time for data message 569567102 from 7 to sink is : 46386448 ms
+DEBUG (1): current simulation time: 0:2:55.819091783
+
+DEBUG (3): Messages NOT ackes 212 
+
+DEBUG (3): Number of discarded messages: 195
+
+DEBUG (6): Messages NOT ackes 133 
+
+DEBUG (2): Number of discarded messages: 174
+
+DEBUG (4): Messages NOT ackes 132 
+
+DEBUG (1): Number of discarded messages: 344
+
+DEBUG (1): Data Message counter: 339
+
+DEBUG (1): Time for data message 1035242126 from 6 to sink is : 137328300 ms
+DEBUG (1): current simulation time: 0:2:55.828185968
+
+DEBUG (3): Messages NOT ackes 213 
+
+DEBUG (1): Number of discarded messages: 345
+
+DEBUG (1): Data Message counter: 340
+
+DEBUG (1): Time for data message 1966592174 from 4 to sink is : 224455477 ms
+DEBUG (1): current simulation time: 0:2:55.836898684
+
+DEBUG (2): Messages NOT ackes 210 
+
+DEBUG (3): Number of discarded messages: 196
+
+DEBUG (6): Messages NOT ackes 134 
+
+DEBUG (1): Number of discarded messages: 346
+
+DEBUG (1): Data Message counter: 341
+
+DEBUG (1): Time for data message 1763576141 from 3 to sink is : 61187387 ms
+DEBUG (1): current simulation time: 0:2:56.797134375
+
+DEBUG (3): Messages NOT ackes 214 
+
+DEBUG (2): Number of discarded messages: 175
+
+DEBUG (4): Messages NOT ackes 133 
+
+DEBUG (3): Number of discarded messages: 197
+
+DEBUG (7): Messages NOT ackes 121 
+
+DEBUG (1): Number of discarded messages: 347
+
+DEBUG (1): Data Message counter: 342
+
+DEBUG (1): Time for data message 785811194 from 2 to sink is : 98723789 ms
+DEBUG (1): current simulation time: 0:2:56.800888014
+
+DEBUG (2): Messages NOT ackes 211 
+
+DEBUG (3): Time for treshold 33063458 message from sink to 3 is : 125121340 ms
+DEBUG (3): current simulation time: 0:2:56.803527769
+
+DEBUG (1): Number of discarded messages: 348
+
+DEBUG (1): Data Message counter: 343
+
+DEBUG (1): Time for data message 1379668635 from 7 to sink is : 180815595 ms
+DEBUG (1): current simulation time: 0:2:56.809097198
+
+DEBUG (3): Messages NOT ackes 215 
+
+DEBUG (3): Number of discarded messages: 198
+
+DEBUG (6): Messages NOT ackes 135 
+
+DEBUG (2): Number of discarded messages: 176
+
+DEBUG (5): Messages NOT ackes 130 
+
+DEBUG (2): Number of discarded messages: 177
+
+DEBUG (4): Messages NOT ackes 134 
+
+DEBUG (1): Number of discarded messages: 349
+
+DEBUG (1): Data Message counter: 344
+
+DEBUG (1): Time for data message 854905893 from 3 to sink is : 97045332 ms
+DEBUG (1): current simulation time: 0:2:57.777282669
+
+DEBUG (3): Messages NOT ackes 216 
+
+DEBUG (3): Number of discarded messages: 199
+
+DEBUG (1): Number of discarded messages: 350
+
+DEBUG (1): Data Message counter: 345
+
+DEBUG (1): Time for data message 208617016 from 5 to sink is : 116576468 ms
+DEBUG (1): current simulation time: 0:2:57.779235784
+
+DEBUG (7): Messages NOT ackes 122 
+
+DEBUG (2): Messages NOT ackes 212 
+
+DEBUG (1): Number of discarded messages: 351
+
+DEBUG (1): Data Message counter: 346
+
+DEBUG (1): Time for data message 1709811786 from 7 to sink is : 217589062 ms
+DEBUG (1): current simulation time: 0:2:57.789337044
+
+DEBUG (3): Messages NOT ackes 217 
+
+DEBUG (1): Number of discarded messages: 352
+
+DEBUG (1): Data Message counter: 347
+
+DEBUG (1): Time for data message 766438004 from 2 to sink is : 48522666 ms
+DEBUG (1): current simulation time: 0:2:58.748992902
+
+DEBUG (2): Messages NOT ackes 213 
+
+DEBUG (3): Number of discarded messages: 200
+
+DEBUG (2): Number of discarded messages: 178
+
+DEBUG (7): Messages NOT ackes 123 
+
+DEBUG (5): Messages NOT ackes 131 
+
+DEBUG (2): Number of discarded messages: 179
+
+DEBUG (4): Messages NOT ackes 135 
+
+DEBUG (1): Number of discarded messages: 353
+
+DEBUG (1): Data Message counter: 348
+
+DEBUG (1): Time for data message 1737745221 from 3 to sink is : 87127177 ms
+DEBUG (1): current simulation time: 0:2:58.752853354
+
+DEBUG (3): Messages NOT ackes 218 
+
+DEBUG (1): Number of discarded messages: 354
+
+DEBUG (1): Data Message counter: 349
+
+DEBUG (1): Time for data message 1532876008 from 5 to sink is : 105590204 ms
+DEBUG (1): current simulation time: 0:2:58.754699657
+
+DEBUG (2): Messages NOT ackes 214 
+
+DEBUG (3): Number of discarded messages: 201
+
+DEBUG (6): Messages NOT ackes 136 
+
+DEBUG (1): Number of discarded messages: 355
+
+DEBUG (1): Data Message counter: 350
+
+DEBUG (1): Time for data message 356699578 from 6 to sink is : 147246455 ms
+DEBUG (1): current simulation time: 0:2:58.758865283
+
+DEBUG (3): Messages NOT ackes 219 
+
+DEBUG (1): Number of discarded messages: 356
+
+DEBUG (1): Data Message counter: 351
+
+DEBUG (1): Time for data message 916618522 from 2 to sink is : 61339974 ms
+DEBUG (1): current simulation time: 0:2:59.726837133
+
+DEBUG (2): Messages NOT ackes 215 
+
+DEBUG (1): Number of discarded messages: 357
+
+DEBUG (1): Data Message counter: 352
+
+DEBUG (1): Time for data message 506330147 from 3 to sink is : 95519462 ms
+DEBUG (1): current simulation time: 0:2:59.730255082
+
+DEBUG (3): Messages NOT ackes 220 
+
+DEBUG (2): Number of discarded messages: 180
+
+DEBUG (3): Number of discarded messages: 202
+
+DEBUG (6): Messages NOT ackes 137 
+
+DEBUG (1): Number of discarded messages: 358
+
+DEBUG (1): Data Message counter: 353
+
+DEBUG (1): Time for data message 1422948669 from 6 to sink is : 150298195 ms
+DEBUG (1): current simulation time: 0:2:59.735732957
+
+DEBUG (3): Messages NOT ackes 221 
+
+DEBUG (1): Number of discarded messages: 359
+
+DEBUG (1): Data Message counter: 354
+
+DEBUG (1): Time for data message 1833237044 from 5 to sink is : 177458681 ms
+DEBUG (1): current simulation time: 0:2:59.738449005
+
+DEBUG (2): Messages NOT ackes 216 
