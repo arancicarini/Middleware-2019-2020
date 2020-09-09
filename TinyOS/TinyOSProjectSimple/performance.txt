@@ -1,0 +1,8 @@
+Activate debug message on channel analysis
+
+
+DEBUG (3): Time for treshold 33614 message from sink to 3 is : 57067538 ms
+DEBUG (3): current simulation time: 0:1:19.140472389
+
+DEBUG (2): Time for treshold 33614 message from sink to 2 is : 57067538 ms
+DEBUG (2): current simulation time: 0:1:19.140472389

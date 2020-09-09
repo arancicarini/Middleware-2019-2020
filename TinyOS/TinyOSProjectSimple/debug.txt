@@ -1,0 +1,88 @@
+DEBUG FILE
+
+Adding debug channels:
+
+Activate debug message on channel init
+Activate debug message on channel boot
+Activate debug message on channel sink
+Activate debug message on channel radio
+Activate debug message on channel timer
+Activate debug message on channel data
+Activate debug message on channel error
+Activate debug message on channel treshold
+
+Creating nodes:
+
+Creating node: 1
+>>>Will boot at time1 [sec]Creating node: 2
+>>>Will boot at time1 [sec]Creating node: 3
+>>>Will boot at time1 [sec]Creating node: 4
+>>>Will boot at time1 [sec]Creating node: 5
+>>>Will boot at time1 [sec]Creating node: 6
+>>>Will boot at time1 [sec]Creating node: 7
+>>>Will boot at time1 [sec]
+Creating radio channels:
+
+Setting radio channel from node: 1 to node:2,with gain:-60.0dBm
+Setting radio channel from node: 2 to node:1,with gain:-60.0dBm
+Setting radio channel from node: 3 to node:1,with gain:-60.0dBm
+Setting radio channel from node: 1 to node:3,with gain:-60.0dBm
+Setting radio channel from node: 2 to node:4,with gain:-60.0dBm
+Setting radio channel from node: 4 to node:2,with gain:-60.0dBm
+Setting radio channel from node: 2 to node:5,with gain:-60.0dBm
+Setting radio channel from node: 5 to node:2,with gain:-60.0dBm
+Setting radio channel from node: 3 to node:6,with gain:-60.0dBm
+Setting radio channel from node: 6 to node:3,with gain:-60.0dBm
+Setting radio channel from node: 3 to node:7,with gain:-60.0dBm
+Setting radio channel from node: 7 to node:3,with gain:-60.0dBm
+
+Initializing Closest Pattern Matching (CPM):
+
+Creating noise model for node:1
+Creating noise model for node:2
+Creating noise model for node:3
+Creating noise model for node:4
+Creating noise model for node:5
+Creating noise model for node:6
+Creating noise model for node:7
+
+Start simulation with TOSSIM!
+
+DEBUG (1): Booting ... I'm node : 1, Radio started at time: 0:0:1.000000010 
+DEBUG (1): node 1: booted, child1 : 0 , child2 : 0
+DEBUG (2): Booting ... I'm node : 2, Radio started at time: 0:0:1.000000011 
+DEBUG (2): node 2: booted, child1 : 0 , child2 : 0 , parent: 0 , emergency_parent: 0
+DEBUG (3): Booting ... I'm node : 3, Radio started at time: 0:0:1.000000011 
+DEBUG (3): node 3: booted, child1 : 0 , child2 : 0 , parent: 0 , emergency_parent: 0
+DEBUG (4): Booting ... I'm node : 4, Radio started at time: 0:0:1.000000012 
+DEBUG (4): node 4: booted, child1 : 0 , child2 : 0 , parent: 0 , emergency_parent: 0
+DEBUG (5): Booting ... I'm node : 5, Radio started at time: 0:0:1.000000012 
+DEBUG (5): node 5: booted, child1 : 0 , child2 : 0 , parent: 0 , emergency_parent: 0
+DEBUG (6): Booting ... I'm node : 6, Radio started at time: 0:0:1.000000013 
+DEBUG (6): node 6: booted, child1 : 0 , child2 : 0 , parent: 0 , emergency_parent: 0
+DEBUG (7): Booting ... I'm node : 7, Radio started at time: 0:0:1.000000013 
+DEBUG (7): node 7: booted, child1 : 0 , child2 : 0 , parent: 0 , emergency_parent: 0
+
+DEBUG (1): Treshold timer fired at 0:1:19.125000010.
+
+DEBUG (1): Sink just read new treshold 33614, with id 1
+
+DEBUG (1): Packet sent from: 1, data: 33614, type: 3, treshold_id: 1
+DEBUG (1): Message of discovery sent
+DEBUG (1): Sink is sending first discovery
+DEBUG (3): Mote 3 has received a treshold message with treshold 33614 from mote 1
+
+DEBUG (3): Packet sent from: 3, data: 33614, type: 1, treshold_id: 1
+DEBUG (3): Message to the first child 0
+DEBUG (2): Mote 2 has received a treshold message with treshold 33614 from mote 1
+
+DEBUG (2): Packet sent from: 2, data: 33614, type: 1, treshold_id: 1
+DEBUG (2): Message to the first child 0
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (3): Error in sending packet, send the request again
+
+
+Simulation finished!
