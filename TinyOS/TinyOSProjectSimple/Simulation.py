@@ -109,7 +109,7 @@ for i in range(1, 8):
 
 debug_out.write("\nStart simulation with TOSSIM!\n\n");
 
-for i in range(0,6000):
+for i in range(0,60000):
 	t.runNextEvent()
 	
 

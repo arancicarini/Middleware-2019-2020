@@ -51,38 +51,275 @@ Start simulation with TOSSIM!
 DEBUG (1): Booting ... I'm node : 1, Radio started at time: 0:0:1.000000010 
 DEBUG (1): node 1: booted, child1 : 0 , child2 : 0
 DEBUG (2): Booting ... I'm node : 2, Radio started at time: 0:0:1.000000011 
-DEBUG (2): node 2: booted, child1 : 0 , child2 : 0 , parent: 0 , emergency_parent: 0
+DEBUG (2): node 2: booted, child1 : 0 , child2 : 0 , parent: 0 
 DEBUG (3): Booting ... I'm node : 3, Radio started at time: 0:0:1.000000011 
-DEBUG (3): node 3: booted, child1 : 0 , child2 : 0 , parent: 0 , emergency_parent: 0
+DEBUG (3): node 3: booted, child1 : 0 , child2 : 0 , parent: 0 
 DEBUG (4): Booting ... I'm node : 4, Radio started at time: 0:0:1.000000012 
-DEBUG (4): node 4: booted, child1 : 0 , child2 : 0 , parent: 0 , emergency_parent: 0
+DEBUG (4): node 4: booted, child1 : 0 , child2 : 0 , parent: 0 
 DEBUG (5): Booting ... I'm node : 5, Radio started at time: 0:0:1.000000012 
-DEBUG (5): node 5: booted, child1 : 0 , child2 : 0 , parent: 0 , emergency_parent: 0
+DEBUG (5): node 5: booted, child1 : 0 , child2 : 0 , parent: 0 
 DEBUG (6): Booting ... I'm node : 6, Radio started at time: 0:0:1.000000013 
-DEBUG (6): node 6: booted, child1 : 0 , child2 : 0 , parent: 0 , emergency_parent: 0
+DEBUG (6): node 6: booted, child1 : 0 , child2 : 0 , parent: 0 
 DEBUG (7): Booting ... I'm node : 7, Radio started at time: 0:0:1.000000013 
-DEBUG (7): node 7: booted, child1 : 0 , child2 : 0 , parent: 0 , emergency_parent: 0
+DEBUG (7): node 7: booted, child1 : 0 , child2 : 0 , parent: 0 
 
 DEBUG (1): Treshold timer fired at 0:1:19.125000010.
 
 DEBUG (1): Sink just read new treshold 33614, with id 1
 
-DEBUG (1): Packet sent from: 1, data: 33614, type: 3, treshold_id: 1
+DEBUG (1): Packet sent from: 1, data: 0, type: 3
 DEBUG (1): Message of discovery sent
-DEBUG (1): Sink is sending first discovery
-DEBUG (3): Mote 3 has received a treshold message with treshold 33614 from mote 1
+DEBUG (1): Sink is sending discovery
+DEBUG (3): first discovery riceived from 1
 
-DEBUG (3): Packet sent from: 3, data: 33614, type: 1, treshold_id: 1
-DEBUG (3): Message to the first child 0
-DEBUG (2): Mote 2 has received a treshold message with treshold 33614 from mote 1
+DEBUG (3): Packet sent from: 3, data: 0, type: 4
+DEBUG (3): Message of discovery ack sent
+DEBUG (2): first discovery riceived from 1
 
-DEBUG (2): Packet sent from: 2, data: 33614, type: 1, treshold_id: 1
-DEBUG (2): Message to the first child 0
+DEBUG (2): Packet sent from: 2, data: 0, type: 4
+DEBUG (2): Message of discovery ack sent
 DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (1): discovery ack riceived from 3, setting child 0 to 3
+
+DEBUG (1): Packet sent from: 1, data: 33614, type: 5
+DEBUG (1): Message of discovery ack sent
+DEBUG (3): Packet sent at time 0:1:19.145034740 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (1): discovery ack riceived from 2, setting child 1 to 2
+
+DEBUG (2): Packet sent at time 0:1:19.154174701 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (3): setup message riceived from 1, setting parent to 1
+
+DEBUG (3): Packet sent from: 3, data: 0, type: 3
+DEBUG (3): Message of discovery sent
+DEBUG (1): Packet sent at time 0:1:19.156005745 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (1): Treshold timer fired at 0:2:37.250000010.
+
+DEBUG (1): Sink just read new treshold 564950498, with id 2
+
+DEBUG (1): Packet sent from: 1, data: 564950498, type: 1, treshold_id: 0
+DEBUG (1): Message to the first child 3
+DEBUG (3): Mote 3 has received a treshold message with treshold 564950498 from mote 1
+
+DEBUG (1): Packet sent at time 0:2:37.265869115 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Packet sent from: 1, data: 564950498, type: 1, treshold_id: 0
+DEBUG (1): Message to the second child 3
+DEBUG (2): Mote 2 has received a treshold message with treshold 564950498 from mote 1
+
+DEBUG (1): Packet sent at time 0:2:37.277114777 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:3:55.375000010.
+
+DEBUG (1): Sink just read new treshold 1097816499, with id 3
+
+DEBUG (1): Packet sent from: 1, data: 1097816499, type: 1, treshold_id: 0
+DEBUG (1): Message to the first child 3
+DEBUG (3): Mote 3 has received a treshold message with treshold 1097816499 from mote 1
+
+DEBUG (1): Packet sent at time 0:3:55.390838598 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Packet sent from: 1, data: 1097816499, type: 1, treshold_id: 0
+DEBUG (1): Message to the second child 3
+DEBUG (2): Mote 2 has received a treshold message with treshold 1097816499 from mote 1
+
+DEBUG (1): Packet sent at time 0:3:55.401168738 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:5:13.500000010.
+
+DEBUG (1): Sink just read new treshold 1969887316, with id 4
+
+DEBUG (1): Packet sent from: 1, data: 1969887316, type: 1, treshold_id: 0
+DEBUG (1): Message to the first child 3
+DEBUG (3): Mote 3 has received a treshold message with treshold 1969887316 from mote 1
+
+DEBUG (1): Packet sent at time 0:5:13.513595569 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Packet sent from: 1, data: 1969887316, type: 1, treshold_id: 0
+DEBUG (1): Message to the second child 3
+DEBUG (2): Mote 2 has received a treshold message with treshold 1969887316 from mote 1
+
+DEBUG (1): Packet sent at time 0:5:13.522445615 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:6:31.625000010.
+
+DEBUG (1): Sink just read new treshold 140734213, with id 5
+
+DEBUG (1): Packet sent from: 1, data: 140734213, type: 1, treshold_id: 0
+DEBUG (1): Message to the first child 3
+DEBUG (3): Mote 3 has received a treshold message with treshold 140734213 from mote 1
+
+DEBUG (1): Packet sent at time 0:6:31.643051109 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Packet sent from: 1, data: 140734213, type: 1, treshold_id: 0
+DEBUG (1): Message to the second child 3
+DEBUG (2): Mote 2 has received a treshold message with treshold 140734213 from mote 1
+
+DEBUG (1): Packet sent at time 0:6:31.651428135 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:7:49.750000010.
+
+DEBUG (1): Sink just read new treshold 940422544, with id 6
+
+DEBUG (1): Packet sent from: 1, data: 940422544, type: 1, treshold_id: 0
+DEBUG (1): Message to the first child 3
+DEBUG (3): Mote 3 has received a treshold message with treshold 940422544 from mote 1
+
+DEBUG (1): Packet sent at time 0:7:49.763717638 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Packet sent from: 1, data: 940422544, type: 1, treshold_id: 0
+DEBUG (1): Message to the second child 3
+DEBUG (2): Mote 2 has received a treshold message with treshold 940422544 from mote 1
+
+DEBUG (1): Packet sent at time 0:7:49.768005333 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:9:7.875000010.
+
+DEBUG (1): Sink just read new treshold 202055088, with id 7
+
+DEBUG (1): Packet sent from: 1, data: 202055088, type: 1, treshold_id: 0
+DEBUG (1): Message to the first child 3
+DEBUG (3): Mote 3 has received a treshold message with treshold 202055088 from mote 1
+
+DEBUG (1): Packet sent at time 0:9:7.887329097 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Packet sent from: 1, data: 202055088, type: 1, treshold_id: 0
+DEBUG (1): Message to the second child 3
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (1): Treshold timer fired at 0:10:26.000000010.
+
+DEBUG (1): Sink just read new treshold 768218109, with id 8
+
+DEBUG (1): Packet sent from: 1, data: 768218109, type: 1, treshold_id: 0
+DEBUG (1): Message to the first child 3
+DEBUG (3): Mote 3 has received a treshold message with treshold 768218109 from mote 1
+
+DEBUG (1): Packet sent at time 0:10:26.018615681 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Packet sent from: 1, data: 768218109, type: 1, treshold_id: 0
+DEBUG (1): Message to the second child 3
+DEBUG (2): Mote 2 has received a treshold message with treshold 768218109 from mote 1
+
+DEBUG (1): Packet sent at time 0:10:26.021865784 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:11:44.125000010.
+
+DEBUG (1): Sink just read new treshold 770072199, with id 9
+
+DEBUG (1): Packet sent from: 1, data: 770072199, type: 1, treshold_id: 0
+DEBUG (1): Message to the first child 3
+DEBUG (3): Mote 3 has received a treshold message with treshold 770072199 from mote 1
+
+DEBUG (1): Packet sent at time 0:11:44.138381947 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Packet sent from: 1, data: 770072199, type: 1, treshold_id: 0
+DEBUG (1): Message to the second child 3
+DEBUG (2): Mote 2 has received a treshold message with treshold 770072199 from mote 1
+
+DEBUG (1): Packet sent at time 0:11:44.142806970 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:13:2.250000010.
+
+DEBUG (1): Sink just read new treshold 1866991771, with id 10
+
+DEBUG (1): Packet sent from: 1, data: 0, type: 3
+DEBUG (1): Message of discovery sent
+DEBUG (1): Sink is sending discovery
+DEBUG (3): first discovery riceived from 1
+
+DEBUG (3): Packet sent from: 3, data: 0, type: 4
+DEBUG (3): Message of discovery ack sent
+DEBUG (2): first discovery riceived from 1
+
+DEBUG (2): Packet sent from: 2, data: 0, type: 4
+DEBUG (2): Message of discovery ack sent
+DEBUG (1): Error in sending packet, send the request again
+
+DEBUG (3): Error in sending packet, send the request again
 
 DEBUG (2): Error in sending packet, send the request again
 
-DEBUG (3): Error in sending packet, send the request again
+DEBUG (1): Treshold timer fired at 0:14:20.375000010.
+
+DEBUG (1): Sink just read new treshold 1647128880, with id 11
+
+DEBUG (1): Packet sent from: 1, data: 1647128880, type: 1, treshold_id: 10
+DEBUG (1): Message to the first child 3
+DEBUG (3): Mote 3 has received a treshold message with treshold 1647128880 from mote 1
+
+DEBUG (1): Packet sent at time 0:14:20.388092032 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Packet sent from: 1, data: 1647128880, type: 1, treshold_id: 10
+DEBUG (1): Message to the second child 3
+DEBUG (2): Mote 2 has received a treshold message with treshold 1647128880 from mote 1
+
+DEBUG (1): Packet sent at time 0:14:20.393615681 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Treshold timer fired at 0:15:38.500000010.
+
+DEBUG (1): Sink just read new treshold 83392683, with id 12
+
+DEBUG (1): Packet sent from: 1, data: 83392683, type: 1, treshold_id: 10
+DEBUG (1): Message to the first child 3
+DEBUG (3): Mote 3 has received a treshold message with treshold 83392683 from mote 1
+
+DEBUG (1): Packet sent at time 0:15:38.519409133 from 1 
+
+DEBUG (1): Message correctly delivered
+
+DEBUG (1): Packet sent from: 1, data: 83392683, type: 1, treshold_id: 10
+DEBUG (1): Message to the second child 3
+DEBUG (2): Mote 2 has received a treshold message with treshold 83392683 from mote 1
+
+DEBUG (1): Packet sent at time 0:15:38.530914193 from 1 
+
+DEBUG (1): Message correctly delivered
 
 
 Simulation finished!
