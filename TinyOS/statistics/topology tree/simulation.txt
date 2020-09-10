@@ -1,0 +1,46 @@
+
+DEBUG (1): Sink just read new treshold 1000033614 with id 1
+
+DEBUG (1): Sink node received data message from 13 with data 1242264552 at time 0:24:25.873886006
+
+DEBUG (1): Sink node received data message from 9 with data 1194115201 at time 0:24:25.879623275
+
+DEBUG (1): Sink just read new treshold 1564950498 with id 2
+
+DEBUG (1): Sink node received data message from 3 with data 1792290985 at time 0:32:34.144699050
+
+DEBUG (1): Sink node received data message from 5 with data 1614694654 at time 0:32:34.153900047
+
+DEBUG (1): Sink node received data message from 11 with data 1081905661 at time 0:32:34.162277076
+
+DEBUG (1): Sink node received data message from 6 with data 1566311569 at time 0:40:42.430160452
+
+DEBUG (1): Sink node received data message from 10 with data 1847779995 at time 0:40:42.436355487
+
+DEBUG (1): Sink just read new treshold 2097816499 with id 3
+
+DEBUG (1): Sink node received data message from 3 with data 1880845088 at time 0:48:50.701431261
+
+DEBUG (1): Sink node received data message from 7 with data 1614206529 at time 0:48:50.713119427
+
+DEBUG (1): Sink node received data message from 13 with data 1414385616 at time 0:56:59.000686532
+
+DEBUG (1): Sink just read new treshold 2969887316 with id 4
+
+DEBUG (1): Sink node received data message from 6 with data 1615021558 at time 1:5:7.274444507
+
+DEBUG (1): Sink node received data message from 6 with data 1621510873 at time 1:13:15.551834056
+
+DEBUG (1): Sink just read new treshold 1140734213 with id 5
+
+DEBUG (1): Sink node received data message from 3 with data 1586499895 at time 1:21:23.829315155
+
+DEBUG (1): Sink node received data message from 6 with data 1165762081 at time 1:21:23.841628928
+
+DEBUG (1): Sink node received data message from 3 with data 1146774113 at time 1:29:32.105880735
+
+DEBUG (1): Sink node received data message from 4 with data 1970338553 at time 1:29:32.123199360
+
+DEBUG (1): Sink just read new treshold 1940422544 with id 6
+
+DEBUG (1): Sink node received data message from 2 with data 1198830848 at time 1:37:40.394973706

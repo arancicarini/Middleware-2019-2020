@@ -12,7 +12,7 @@ from TOSSIM import*;
 t = Tossim([]);
 
 
-topofile="topologymix.txt";
+topofile="topology20denso.txt";
 modelfile="meyer-heavy.txt";
 
 
@@ -68,7 +68,7 @@ t.addChannel("short",perf_out_short);
 
 ##Creating nodes
 debug_out.write("\nCreating nodes:\n\n");
-for i in range(1,15):
+for i in range(1,20):
 	debug_out.write("Creating node: "+str(i)+"\n");
 	node=t.getNode(i);
 	time=t.ticksPerSecond() + 5*i; #instant at which each node should be turned on
@@ -104,17 +104,17 @@ for line in lines:
             mid_compl = 0;
             sys.stdout.write ("#")
             sys.stdout.flush()
-        for i in range(1, 15):
+        for i in range(1, 20):
             t.getNode(i).addNoiseTraceReading(val)
 
 ##Creating noise model
-for i in range(1, 15):
+for i in range(1, 20):
     debug_out.write("Creating noise model for node:"+str(i)+"\n");
     t.getNode(i).createNoiseModel()
 
 debug_out.write("\nStart simulation with TOSSIM!\n\n");
 
-for i in range(0,700000):
+for i in range(0,1000000):
 	t.runNextEvent()
 	
 
