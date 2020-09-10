@@ -3,6 +3,7 @@ package org.example;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -15,22 +16,34 @@ public class App {
 
     public static String NUMBER = "([0-9]+)";
     public static String DATAMESSAGE = "Time for data message " + NUMBER + " from " + NUMBER + " to sink is : " + NUMBER + " ms";
-    public static String TRESHOLDMESSAGE = "Time for treshold " + NUMBER + " message from sink to " + NUMBER + " is : " + NUMBER + " ms";
+    public static String TRESHOLDMESSAGE = "Time for treshold " + NUMBER + " message with id " + NUMBER + " from sink to " + NUMBER + " is : " + NUMBER + " ms\\[not discarded\\]";
+    public static String DISTRESHOLDMESSAGE =  " from sink to " + NUMBER + " is : " + NUMBER + " ms\\[DISCARDED\\]";
+    public static String RADIOBUSY = "radio busy";
     public static String SIMULTIME = "current simulation time: "+ NUMBER + ":"+ NUMBER + ":" + NUMBER +"." + NUMBER;
+
 
     public static void main(String[] args) {
         BufferedReader reader;
         try {
-            File report = new File("C:/Users/ponti/Github/Middleware-2019-2020/TinyOS/statistics/report.txt");
+            File report = new File("C:/Users/ponti/Github/Middleware-2019-2020/TinyOS/statistics/reportSimple.txt");
             report.createNewFile();
-            FileWriter writer = new FileWriter("C:/Users/ponti/Github/Middleware-2019-2020/TinyOS/statistics/report.txt");
-            List<Integer> dataTimes = new ArrayList<>();
-            List<Integer> tresholdTimes = new ArrayList<>();
-            String simulationTime = null;
-            List<String> topologies = Arrays.asList("7", "15", "31", "63", "3.40", "5.31");
+            FileWriter writer = new FileWriter("C:/Users/ponti/Github/Middleware-2019-2020/TinyOS/statistics/reportSimple.txt");
+
+
+            List<String> topologies = Arrays.asList("5 denso", "5 sparsi", "random", "mix","tree", "20 denso");
             for (String topology: topologies){
-                dataTimes.clear();
-                tresholdTimes.clear();
+                Integer[] discardedCounter = new Integer[7];
+                Integer[] discardedTime = new Integer[7];
+                String simulationTime = null;
+                for (int i = 0; i< 7; i++){
+                    discardedCounter[i] = 0;
+                    discardedTime[i] = 0;
+                }
+
+
+                int radiobusy = 0;
+                List<Integer> dataTimes = new ArrayList<>();
+                List<Integer> tresholdTimes = new ArrayList<>();
                 writer.write("***** TOPOLOGY " + topology + " *****\n");
                 reader = new BufferedReader(new FileReader(
                         "C:/Users/ponti/Github/Middleware-2019-2020/TinyOS/statistics/topology "+ topology +"/performance.txt"));
@@ -41,15 +54,14 @@ public class App {
                     if (m.find()) {
                         String number = m.group(3);
                         dataTimes.add(Integer.parseInt(number));
-                        System.out.println(number);
+                        System.out.println(number + " rrrrrrrrrrrrr");
                     }
 
                     Pattern pattern1 = Pattern.compile(TRESHOLDMESSAGE);
                     Matcher m1 = pattern1.matcher(line);
                     if (m1.find()) {
-                        String number = m1.group(3);
+                        String number = m1.group(4);
                         tresholdTimes.add(Integer.parseInt(number));
-                        System.out.println(number);
                     }
 
                     Pattern pattern2 = Pattern.compile(SIMULTIME);
@@ -58,6 +70,29 @@ public class App {
                         simulationTime = m2.group(1) + ":" + m2.group(2) + ":" + m2.group(3) + "." + m2.group(4);
                         System.out.println(simulationTime);
                     }
+
+                    for (int i = 0; i< 7; i++ ){
+                        Integer thresholdId = i +1;
+                        Pattern pattern3 = Pattern.compile(String.valueOf(thresholdId) + DISTRESHOLDMESSAGE);
+                        Matcher m3 = pattern3.matcher(line);
+                        if (m3.find()) {
+                            discardedCounter[i]  ++;
+                            System.out.println(m3.group(2) + " gig");
+                            Integer time  = Integer.parseInt(m3.group(2));
+                            if (time > discardedTime[i]){
+                                discardedTime[i] = time;
+                            }
+                            System.out.println(time);
+                        }
+                    }
+
+                    Pattern pattern4 = Pattern.compile(RADIOBUSY);
+                    Matcher m4 = pattern4.matcher(line);
+                    if (m4.find()) {
+                        radiobusy += 1;
+                    }
+
+
                     // read next line
                     line = reader.readLine();
                 }
@@ -80,6 +115,17 @@ public class App {
                 avg = tresholdTimes.stream().mapToInt( i -> i).average().getAsDouble();
                 writer.write("Average time needed to deliver a treshold message: " + avg + "\n");
 
+                writer.write("DISCARD STATISTICS\n");
+                for (int i = 0; i< 7; i++ ){
+                    Integer thresholdId = i +1;
+                    writer.write("number of discarded messages for Th id " + thresholdId + ": " + discardedCounter[i] + " -- ");
+                    writer.write("Last recorded th message liveness time for id " + thresholdId + ": " + discardedTime[i] + "\n");
+                }
+                avg = Arrays.stream(discardedCounter).filter( (n -> n > 0)).mapToInt( i -> i ).average().getAsDouble();
+                writer.write("---Average number of discarded messages: "+ avg + " ---\n");
+                avg = Arrays.stream(discardedTime).filter( (n -> n > 0)).mapToInt( i -> i ).average().getAsDouble();
+                writer.write("---Average convergence time: "+ avg + " ---\n");
+                writer.write("---Number of messages not sent due to a busy radio: "+ radiobusy + " ---\n\n");
                 writer.write("****************************************\n");
                 reader.close();
             }

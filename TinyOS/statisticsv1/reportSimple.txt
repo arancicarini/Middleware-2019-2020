@@ -1,0 +1,150 @@
+***** TOPOLOGY 5 denso *****
+Last recorded simulation time: 1:37:40.412292330
+
+Amount of data messages delivered: 13
+Maximum time needed to deliver a data message: 245054722
+Minimum time needed to deliver a data message: 28076008
+Average time needed to deliver a data message: 1.18102338E8
+
+Amount of treshold messages delivered: 66
+Maximum time needed to deliver a treshold message: 301359325
+Minimum time needed to deliver a treshold message: 39214859
+Average time needed to deliver a treshold message: 1.5038604812121212E8
+DISCARD STATISTICS
+number of discarded messages for Th id 1: 21 -- Last recorded th message liveness time for id 1: 343168163
+number of discarded messages for Th id 2: 12 -- Last recorded th message liveness time for id 2: 365140691
+number of discarded messages for Th id 3: 11 -- Last recorded th message liveness time for id 3: 189665641
+number of discarded messages for Th id 4: 13 -- Last recorded th message liveness time for id 4: 237577959
+number of discarded messages for Th id 5: 18 -- Last recorded th message liveness time for id 5: 301359325
+number of discarded messages for Th id 6: 12 -- Last recorded th message liveness time for id 6: 275266948
+number of discarded messages for Th id 7: 0 -- Last recorded th message liveness time for id 7: 0
+---Average number of discarded messages: 14.5 ---
+---Average convergence time: 2.853631211666667E8 ---
+---Number of messages not sent due to a busy radio: 9 ---
+
+****************************************
+***** TOPOLOGY 5 sparsi *****
+Last recorded simulation time: 1:37:40.403274438
+
+Amount of data messages delivered: 9
+Maximum time needed to deliver a data message: 247343527
+Minimum time needed to deliver a data message: 36163119
+Average time needed to deliver a data message: 1.399561872222222E8
+
+Amount of treshold messages delivered: 46
+Maximum time needed to deliver a treshold message: 248411636
+Minimum time needed to deliver a treshold message: 30517400
+Average time needed to deliver a treshold message: 1.347907118478261E8
+DISCARD STATISTICS
+number of discarded messages for Th id 1: 11 -- Last recorded th message liveness time for id 1: 328062050
+number of discarded messages for Th id 2: 3 -- Last recorded th message liveness time for id 2: 209349364
+number of discarded messages for Th id 3: 3 -- Last recorded th message liveness time for id 3: 328062050
+number of discarded messages for Th id 4: 6 -- Last recorded th message liveness time for id 4: 208739016
+number of discarded messages for Th id 5: 9 -- Last recorded th message liveness time for id 5: 359800146
+number of discarded messages for Th id 6: 5 -- Last recorded th message liveness time for id 6: 274504013
+number of discarded messages for Th id 7: 0 -- Last recorded th message liveness time for id 7: 0
+---Average number of discarded messages: 6.166666666666667 ---
+---Average convergence time: 2.847527731666667E8 ---
+---Number of messages not sent due to a busy radio: 14 ---
+
+****************************************
+***** TOPOLOGY random *****
+Last recorded simulation time: 1:37:40.429809317
+
+Amount of data messages delivered: 16
+Maximum time needed to deliver a data message: 264891032
+Minimum time needed to deliver a data message: 27160486
+Average time needed to deliver a data message: 1.19265813875E8
+
+Amount of treshold messages delivered: 73
+Maximum time needed to deliver a treshold message: 450436824
+Minimum time needed to deliver a treshold message: 27923421
+Average time needed to deliver a treshold message: 1.405138149041096E8
+DISCARD STATISTICS
+number of discarded messages for Th id 1: 30 -- Last recorded th message liveness time for id 1: 199888970
+number of discarded messages for Th id 2: 22 -- Last recorded th message liveness time for id 2: 338743140
+number of discarded messages for Th id 3: 14 -- Last recorded th message liveness time for id 3: 410001269
+number of discarded messages for Th id 4: 25 -- Last recorded th message liveness time for id 4: 186308727
+number of discarded messages for Th id 5: 22 -- Last recorded th message liveness time for id 5: 318906830
+number of discarded messages for Th id 6: 23 -- Last recorded th message liveness time for id 6: 539852806
+number of discarded messages for Th id 7: 0 -- Last recorded th message liveness time for id 7: 0
+---Average number of discarded messages: 22.666666666666668 ---
+---Average convergence time: 3.322836236666667E8 ---
+---Number of messages not sent due to a busy radio: 10 ---
+
+****************************************
+***** TOPOLOGY mix *****
+Last recorded simulation time: 1:37:40.414428548
+
+Amount of data messages delivered: 12
+Maximum time needed to deliver a data message: 423123751
+Minimum time needed to deliver a data message: 29296704
+Average time needed to deliver a data message: 1.3196232383333333E8
+
+Amount of treshold messages delivered: 78
+Maximum time needed to deliver a treshold message: 421445294
+Minimum time needed to deliver a treshold message: 38909685
+Average time needed to deliver a treshold message: 1.8785220319230768E8
+DISCARD STATISTICS
+number of discarded messages for Th id 1: 40 -- Last recorded th message liveness time for id 1: 394742569
+number of discarded messages for Th id 2: 33 -- Last recorded th message liveness time for id 2: 488125813
+number of discarded messages for Th id 3: 21 -- Last recorded th message liveness time for id 3: 364377756
+number of discarded messages for Th id 4: 38 -- Last recorded th message liveness time for id 4: 346830251
+number of discarded messages for Th id 5: 40 -- Last recorded th message liveness time for id 5: 335843987
+number of discarded messages for Th id 6: 34 -- Last recorded th message liveness time for id 6: 428769470
+number of discarded messages for Th id 7: 0 -- Last recorded th message liveness time for id 7: 0
+---Average number of discarded messages: 34.333333333333336 ---
+---Average convergence time: 3.931149743333333E8 ---
+---Number of messages not sent due to a busy radio: 12 ---
+
+****************************************
+***** TOPOLOGY tree *****
+Last recorded simulation time: 1:37:40.403243921
+
+Amount of data messages delivered: 17
+Maximum time needed to deliver a data message: 275114361
+Minimum time needed to deliver a data message: 23650985
+Average time needed to deliver a data message: 1.552348332352941E8
+
+Amount of treshold messages delivered: 46
+Maximum time needed to deliver a treshold message: 255888399
+Minimum time needed to deliver a treshold message: 36010532
+Average time needed to deliver a treshold message: 1.525670973478261E8
+DISCARD STATISTICS
+number of discarded messages for Th id 1: 14 -- Last recorded th message liveness time for id 1: 310972306
+number of discarded messages for Th id 2: 3 -- Last recorded th message liveness time for id 2: 162352568
+number of discarded messages for Th id 3: 5 -- Last recorded th message liveness time for id 3: 284116994
+number of discarded messages for Th id 4: 4 -- Last recorded th message liveness time for id 4: 300748977
+number of discarded messages for Th id 5: 2 -- Last recorded th message liveness time for id 5: 294645497
+number of discarded messages for Th id 6: 4 -- Last recorded th message liveness time for id 6: 287779082
+number of discarded messages for Th id 7: 0 -- Last recorded th message liveness time for id 7: 0
+---Average number of discarded messages: 5.333333333333333 ---
+---Average convergence time: 2.73435904E8 ---
+---Number of messages not sent due to a busy radio: 18 ---
+
+****************************************
+***** TOPOLOGY 20 denso *****
+Last recorded simulation time: 1:37:40.410796977
+
+Amount of data messages delivered: 20
+Maximum time needed to deliver a data message: 285337690
+Minimum time needed to deliver a data message: 22582876
+Average time needed to deliver a data message: 9.91205152E7
+
+Amount of treshold messages delivered: 105
+Maximum time needed to deliver a treshold message: 308073153
+Minimum time needed to deliver a treshold message: 26550138
+Average time needed to deliver a treshold message: 1.3840367504761904E8
+DISCARD STATISTICS
+number of discarded messages for Th id 1: 46 -- Last recorded th message liveness time for id 1: 362851886
+number of discarded messages for Th id 2: 26 -- Last recorded th message liveness time for id 2: 388639089
+number of discarded messages for Th id 3: 23 -- Last recorded th message liveness time for id 3: 375516607
+number of discarded messages for Th id 4: 26 -- Last recorded th message liveness time for id 4: 405423659
+number of discarded messages for Th id 5: 27 -- Last recorded th message liveness time for id 5: 234983980
+number of discarded messages for Th id 6: 20 -- Last recorded th message liveness time for id 6: 357206167
+number of discarded messages for Th id 7: 0 -- Last recorded th message liveness time for id 7: 0
+---Average number of discarded messages: 28.0 ---
+---Average convergence time: 3.541035646666667E8 ---
+---Number of messages not sent due to a busy radio: 12 ---
+
+****************************************
