@@ -61,14 +61,14 @@ implementation
   			if(TOS_NODE_ID ==1){
   				//I'm the sink
   				treshold_id=0;		
-				call TresholdTimer.startPeriodicAt(0, 300000);
+				call TresholdTimer.startPeriodicAt(0, 900000);
 			}
 			else{
 				//Inizializing node values
 				treshold = 4294967295; // maximum value for a 32 bit integer
 				treshold_id= 0;
   				parent=0;		 						
-				call DataTimer.startPeriodicAt(0, 100000);
+				call DataTimer.startPeriodicAt(0, 200000);
 			}
 			
   		}

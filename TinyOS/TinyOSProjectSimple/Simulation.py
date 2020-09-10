@@ -12,7 +12,7 @@ from TOSSIM import*;
 t = Tossim([]);
 
 
-topofile="topologyRandom.txt";
+topofile="topology5sparsi.txt";
 modelfile="meyer-heavy.txt";
 
 
@@ -114,7 +114,7 @@ for i in range(1, 15):
 
 debug_out.write("\nStart simulation with TOSSIM!\n\n");
 
-for i in range(0,320000):
+for i in range(0,700000):
 	t.runNextEvent()
 	
 

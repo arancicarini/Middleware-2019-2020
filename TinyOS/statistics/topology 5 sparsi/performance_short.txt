@@ -10,7 +10,3 @@ DEBUG (1): Sink just read new treshold 6228 with id 4
 DEBUG (1): Sink just read new treshold 28421 with id 5
 
 DEBUG (1): Sink just read new treshold 46480 with id 6
-
-DEBUG (1): Sink just read new treshold 7600 with id 7
-
-DEBUG (1): Sink just read new treshold 5117 with id 8
