@@ -12,7 +12,7 @@ from TOSSIM import*;
 t = Tossim([]);
 
 
-topofile="topology5sparsi.txt";
+topofile="topologymix.txt";
 modelfile="meyer-heavy.txt";
 
 

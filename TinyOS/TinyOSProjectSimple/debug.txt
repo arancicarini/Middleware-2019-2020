@@ -39,25 +39,55 @@ Setting radio channel from node: 3 to node:1,with gain:-60.0dBm
 Setting radio channel from node: 4 to node:1,with gain:-60.0dBm
 Setting radio channel from node: 5 to node:1,with gain:-60.0dBm
 Setting radio channel from node: 2 to node:3,with gain:-60.0dBm
+Setting radio channel from node: 2 to node:4,with gain:-60.0dBm
+Setting radio channel from node: 2 to node:5,with gain:-60.0dBm
 Setting radio channel from node: 3 to node:2,with gain:-60.0dBm
-Setting radio channel from node: 5 to node:6,with gain:-60.0dBm
-Setting radio channel from node: 5 to node:7,with gain:-60.0dBm
+Setting radio channel from node: 4 to node:2,with gain:-60.0dBm
+Setting radio channel from node: 5 to node:2,with gain:-60.0dBm
+Setting radio channel from node: 3 to node:4,with gain:-60.0dBm
+Setting radio channel from node: 3 to node:5,with gain:-60.0dBm
+Setting radio channel from node: 4 to node:3,with gain:-60.0dBm
+Setting radio channel from node: 5 to node:3,with gain:-60.0dBm
+Setting radio channel from node: 4 to node:5,with gain:-60.0dBm
+Setting radio channel from node: 5 to node:4,with gain:-60.0dBm
 Setting radio channel from node: 6 to node:5,with gain:-60.0dBm
-Setting radio channel from node: 7 to node:5,with gain:-60.0dBm
-Setting radio channel from node: 6 to node:8,with gain:-60.0dBm
-Setting radio channel from node: 6 to node:9,with gain:-60.0dBm
-Setting radio channel from node: 8 to node:6,with gain:-60.0dBm
-Setting radio channel from node: 9 to node:6,with gain:-60.0dBm
-Setting radio channel from node: 7 to node:10,with gain:-60.0dBm
+Setting radio channel from node: 5 to node:6,with gain:-60.0dBm
+Setting radio channel from node: 11 to node:12,with gain:-60.0dBm
+Setting radio channel from node: 11 to node:13,with gain:-60.0dBm
+Setting radio channel from node: 11 to node:14,with gain:-60.0dBm
+Setting radio channel from node: 11 to node:10,with gain:-60.0dBm
+Setting radio channel from node: 12 to node:11,with gain:-60.0dBm
+Setting radio channel from node: 13 to node:11,with gain:-60.0dBm
+Setting radio channel from node: 14 to node:11,with gain:-60.0dBm
+Setting radio channel from node: 10 to node:11,with gain:-60.0dBm
+Setting radio channel from node: 12 to node:13,with gain:-60.0dBm
+Setting radio channel from node: 12 to node:14,with gain:-60.0dBm
+Setting radio channel from node: 12 to node:10,with gain:-60.0dBm
+Setting radio channel from node: 10 to node:12,with gain:-60.0dBm
+Setting radio channel from node: 13 to node:12,with gain:-60.0dBm
+Setting radio channel from node: 14 to node:12,with gain:-60.0dBm
+Setting radio channel from node: 13 to node:14,with gain:-60.0dBm
+Setting radio channel from node: 13 to node:10,with gain:-60.0dBm
+Setting radio channel from node: 10 to node:13,with gain:-60.0dBm
+Setting radio channel from node: 14 to node:13,with gain:-60.0dBm
+Setting radio channel from node: 10 to node:14,with gain:-60.0dBm
+Setting radio channel from node: 14 to node:10,with gain:-60.0dBm
+Setting radio channel from node: 6 to node:13,with gain:-60.0dBm
+Setting radio channel from node: 13 to node:6,with gain:-60.0dBm
+Setting radio channel from node: 2 to node:7,with gain:-60.0dBm
+Setting radio channel from node: 7 to node:2,with gain:-60.0dBm
 Setting radio channel from node: 7 to node:11,with gain:-60.0dBm
-Setting radio channel from node: 10 to node:7,with gain:-60.0dBm
 Setting radio channel from node: 11 to node:7,with gain:-60.0dBm
-Setting radio channel from node: 4 to node:12,with gain:-60.0dBm
-Setting radio channel from node: 4 to node:13,with gain:-60.0dBm
-Setting radio channel from node: 12 to node:4,with gain:-60.0dBm
-Setting radio channel from node: 13 to node:4,with gain:-60.0dBm
-Setting radio channel from node: 2 to node:14,with gain:-60.0dBm
-Setting radio channel from node: 14 to node:2,with gain:-60.0dBm
+Setting radio channel from node: 6 to node:8,with gain:-60.0dBm
+Setting radio channel from node: 8 to node:6,with gain:-60.0dBm
+Setting radio channel from node: 7 to node:9,with gain:-60.0dBm
+Setting radio channel from node: 9 to node:7,with gain:-60.0dBm
+Setting radio channel from node: 8 to node:9,with gain:-60.0dBm
+Setting radio channel from node: 9 to node:8,with gain:-60.0dBm
+Setting radio channel from node: 6 to node:9,with gain:-60.0dBm
+Setting radio channel from node: 9 to node:6,with gain:-60.0dBm
+Setting radio channel from node: 7 to node:8,with gain:-60.0dBm
+Setting radio channel from node: 8 to node:7,with gain:-60.0dBm
 
 Initializing Closest Pattern Matching (CPM):
 
@@ -221,67 +251,67 @@ DEBUG (2): Packet sent from: 2, treshold: 33614, type: 1, treshold_id: 1
 
 DEBUG (1): Error in sending packet, send the request again
 
-DEBUG (14): Mote 14 has received a treshold message with treshold 33614 and id 1 from mote 2
-
-DEBUG (14): Packet sent from: 14, treshold: 33614, type: 1, treshold_id: 1
-
-DEBUG (2): Error in sending packet, send the request again
-
-DEBUG (7): Mote 7 has received a treshold message with treshold 33614 and id 1 from mote 5
-
-DEBUG (7): Packet sent from: 7, treshold: 33614, type: 1, treshold_id: 1
-
 DEBUG (6): Mote 6 has received a treshold message with treshold 33614 and id 1 from mote 5
 
 DEBUG (6): Packet sent from: 6, treshold: 33614, type: 1, treshold_id: 1
 
 DEBUG (5): Error in sending packet, send the request again
 
+DEBUG (7): Mote 7 has received a treshold message with treshold 33614 and id 1 from mote 2
+
+DEBUG (7): Packet sent from: 7, treshold: 33614, type: 1, treshold_id: 1
+
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (13): Mote 13 has received a treshold message with treshold 33614 and id 1 from mote 6
+
+DEBUG (13): Packet sent from: 13, treshold: 33614, type: 1, treshold_id: 1
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (8): Mote 8 has received a treshold message with treshold 33614 and id 1 from mote 7
+
+DEBUG (8): Packet sent from: 8, treshold: 33614, type: 1, treshold_id: 1
+
+DEBUG (9): Mote 9 has received a treshold message with treshold 33614 and id 1 from mote 7
+
+DEBUG (9): Packet sent from: 9, treshold: 33614, type: 1, treshold_id: 1
+
 DEBUG (11): Mote 11 has received a treshold message with treshold 33614 and id 1 from mote 7
 
 DEBUG (11): Packet sent from: 11, treshold: 33614, type: 1, treshold_id: 1
 
-DEBUG (10): Mote 10 has received a treshold message with treshold 33614 and id 1 from mote 7
-
-DEBUG (10): Packet sent from: 10, treshold: 33614, type: 1, treshold_id: 1
-
 DEBUG (7): Error in sending packet, send the request again
-
-DEBUG (3): Error in sending packet, send the request again
-
-DEBUG (11): Error in sending packet, send the request again
-
-DEBUG (12): Mote 12 has received a treshold message with treshold 33614 and id 1 from mote 4
-
-DEBUG (12): Packet sent from: 12, treshold: 33614, type: 1, treshold_id: 1
-
-DEBUG (13): Mote 13 has received a treshold message with treshold 33614 and id 1 from mote 4
-
-DEBUG (13): Packet sent from: 13, treshold: 33614, type: 1, treshold_id: 1
 
 DEBUG (4): Error in sending packet, send the request again
 
-DEBUG (14): Error in sending packet, send the request again
+DEBUG (14): Mote 14 has received a treshold message with treshold 33614 and id 1 from mote 13
 
-DEBUG (9): Mote 9 has received a treshold message with treshold 33614 and id 1 from mote 6
+DEBUG (14): Packet sent from: 14, treshold: 33614, type: 1, treshold_id: 1
 
-DEBUG (9): Packet sent from: 9, treshold: 33614, type: 1, treshold_id: 1
+DEBUG (12): Mote 12 has received a treshold message with treshold 33614 and id 1 from mote 13
 
-DEBUG (8): Mote 8 has received a treshold message with treshold 33614 and id 1 from mote 6
+DEBUG (12): Packet sent from: 12, treshold: 33614, type: 1, treshold_id: 1
 
-DEBUG (8): Packet sent from: 8, treshold: 33614, type: 1, treshold_id: 1
+DEBUG (10): Mote 10 has received a treshold message with treshold 33614 and id 1 from mote 13
 
-DEBUG (6): Error in sending packet, send the request again
+DEBUG (10): Packet sent from: 10, treshold: 33614, type: 1, treshold_id: 1
+
+DEBUG (13): Error in sending packet, send the request again
 
 DEBUG (10): Error in sending packet, send the request again
 
-DEBUG (8): Error in sending packet, send the request again
+DEBUG (11): Error in sending packet, send the request again
 
-DEBUG (13): Error in sending packet, send the request again
+DEBUG (8): Error in sending packet, send the request again
 
 DEBUG (12): Error in sending packet, send the request again
 
 DEBUG (9): Error in sending packet, send the request again
+
+DEBUG (14): Error in sending packet, send the request again
 
 DEBUG (2): Data timer fired at 0:16:17.562500011.
 
@@ -331,19 +361,19 @@ DEBUG (6): Packet sent from: 6, to: 5 , data: 1566311569, type: 2
  
 DEBUG (7): Mote 7 just read new data 48148 above the treshold 33614 at time 0:16:17.572265638
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 562936852, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 562936852, type: 2
  
 DEBUG (8): Mote 8 just read new data 29590 above the treshold 33614 at time 0:16:17.572265639
 
-DEBUG (8): Packet sent from: 8, to: 6 , data: 1707045782, type: 2
+DEBUG (8): Packet sent from: 8, to: 7 , data: 1707045782, type: 2
  
 DEBUG (9): Mote 9 just read new data 11033 above the treshold 33614 at time 0:16:17.572265639
 
-DEBUG (9): Packet sent from: 9, to: 6 , data: 703671065, type: 2
+DEBUG (9): Packet sent from: 9, to: 7 , data: 703671065, type: 2
  
 DEBUG (10): Mote 10 just read new data 58011 above the treshold 33614 at time 0:16:17.572265640
 
-DEBUG (10): Packet sent from: 10, to: 7 , data: 1847779995, type: 2
+DEBUG (10): Packet sent from: 10, to: 13 , data: 1847779995, type: 2
  
 DEBUG (11): Mote 11 just read new data 39454 above the treshold 33614 at time 0:16:17.572265640
 
@@ -351,73 +381,61 @@ DEBUG (11): Packet sent from: 11, to: 7 , data: 844405278, type: 2
  
 DEBUG (12): Mote 12 just read new data 20896 above the treshold 33614 at time 0:16:17.572265641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 1988514208, type: 2
+DEBUG (12): Packet sent from: 12, to: 13 , data: 1988514208, type: 2
  
 DEBUG (13): Mote 13 just read new data 2339 above the treshold 33614 at time 0:16:17.572265641
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 985139491, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 985139491, type: 2
  
 DEBUG (14): Mote 14 just read new data 49317 above the treshold 33614 at time 0:16:17.572265642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 2129248421, type: 2
+DEBUG (14): Packet sent from: 14, to: 13 , data: 2129248421, type: 2
  
-DEBUG (4): Mote 4 has received a data message with data 1988514208
-
-DEBUG (12): Packet sent at time 0:16:17.575332639 from 12 
-
-DEBUG (12): Message correctly delivered
-
 DEBUG (4): Error in sending packet, send the request again
 
 DEBUG (3): Error in sending packet, send the request again
 
-DEBUG (5): Error in sending packet, send the request again
-
-DEBUG (6): Error in sending packet, send the request again
-
-DEBUG (2): Error in sending packet, send the request again
-
-DEBUG (10): Error in sending packet, send the request again
-
-DEBUG (9): Error in sending packet, send the request again
+DEBUG (12): Error in sending packet, send the request again
 
 DEBUG (8): Error in sending packet, send the request again
 
-DEBUG (2): Mote 2 has received a data message with data 2129248421
-
-DEBUG (2): Packet sent from: 2, to: 1 , data: 2129248421, type: 2
- 
-DEBUG (14): Packet sent at time 0:16:17.582702592 from 14 
-
-DEBUG (14): Message correctly delivered
+DEBUG (13): Error in sending packet, send the request again
 
 DEBUG (11): Error in sending packet, send the request again
 
-DEBUG (4): Mote 4 has received a data message with data 985139491
+DEBUG (1): Sink node received data message from 5 with data 422202639 at time 0:16:17.576248158
 
-DEBUG (4): Packet sent from: 4, to: 1 , data: 985139491, type: 2
+DEBUG (5): Packet sent at time 0:16:17.576416003 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (10): Error in sending packet, send the request again
+
+DEBUG (5): Mote 5 has received a data message with data 1566311569
+
+DEBUG (5): Packet sent from: 5, to: 1 , data: 1566311569, type: 2
  
-DEBUG (13): Packet sent at time 0:16:17.583602855 from 13 
+DEBUG (6): Packet sent at time 0:16:17.578475928 from 6 
 
-DEBUG (13): Message correctly delivered
+DEBUG (6): Message correctly delivered
 
-DEBUG (5): Mote 5 has received a data message with data 562936852
+DEBUG (14): Error in sending packet, send the request again
 
-DEBUG (5): Packet sent from: 5, to: 1 , data: 562936852, type: 2
- 
-DEBUG (7): Packet sent at time 0:16:17.585098205 from 7 
+DEBUG (1): Sink node received data message from 2 with data 1284843143 at time 0:16:17.581741288
 
-DEBUG (7): Message correctly delivered
+DEBUG (2): Packet sent at time 0:16:17.581909134 from 2 
 
-DEBUG (1): Sink node received data message from 13 with data 985139491 at time 0:16:17.590209872
+DEBUG (2): Message correctly delivered
 
-DEBUG (4): Packet sent at time 0:16:17.590377718 from 4 
+DEBUG (9): Error in sending packet, send the request again
 
-DEBUG (4): Message correctly delivered
+DEBUG (7): Error in sending packet, send the request again
 
-DEBUG (2): Error in sending packet, send the request again
+DEBUG (1): Sink node received data message from 6 with data 1566311569 at time 0:16:17.586364676
 
-DEBUG (5): Error in sending packet, send the request again
+DEBUG (5): Packet sent at time 0:16:17.586532522 from 5 
+
+DEBUG (5): Message correctly delivered
 
 DEBUG (2): Data timer fired at 0:19:32.875000011.
 
@@ -467,19 +485,19 @@ DEBUG (6): Packet sent from: 6, to: 5 , data: 1143995257, type: 2
  
 DEBUG (7): Mote 7 just read new data 54849 above the treshold 33614 at time 0:19:32.884765638
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 1614206529, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 1614206529, type: 2
  
 DEBUG (8): Mote 8 just read new data 45321 above the treshold 33614 at time 0:19:32.884765639
 
-DEBUG (8): Packet sent from: 8, to: 6 , data: 2084417801, type: 2
+DEBUG (8): Packet sent from: 8, to: 7 , data: 2084417801, type: 2
  
 DEBUG (9): Mote 9 just read new data 35794 above the treshold 33614 at time 0:19:32.884765639
 
-DEBUG (9): Packet sent from: 9, to: 6 , data: 407145426, type: 2
+DEBUG (9): Packet sent from: 9, to: 7 , data: 407145426, type: 2
  
 DEBUG (10): Mote 10 just read new data 26266 above the treshold 33614 at time 0:19:32.884765640
 
-DEBUG (10): Packet sent from: 10, to: 7 , data: 877356698, type: 2
+DEBUG (10): Packet sent from: 10, to: 13 , data: 877356698, type: 2
  
 DEBUG (11): Mote 11 just read new data 16738 above the treshold 33614 at time 0:19:32.884765640
 
@@ -487,111 +505,87 @@ DEBUG (11): Packet sent from: 11, to: 7 , data: 1347567970, type: 2
  
 DEBUG (12): Mote 12 just read new data 7210 above the treshold 33614 at time 0:19:32.884765641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 1817779242, type: 2
+DEBUG (12): Packet sent from: 12, to: 13 , data: 1817779242, type: 2
  
 DEBUG (13): Mote 13 just read new data 63219 above the treshold 33614 at time 0:19:32.884765641
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 140506867, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 140506867, type: 2
  
 DEBUG (14): Mote 14 just read new data 53691 above the treshold 33614 at time 0:19:32.884765642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 610718139, type: 2
+DEBUG (14): Packet sent from: 14, to: 13 , data: 610718139, type: 2
  
-DEBUG (5): Mote 5 has received a data message with data 1143995257
+DEBUG (2): Error in sending packet, send the request again
 
-DEBUG (6): Packet sent at time 0:19:32.887008666 from 6 
+DEBUG (6): Error in sending packet, send the request again
 
-DEBUG (6): Message correctly delivered
+DEBUG (7): Mote 7 has received a data message with data 407145426
 
-DEBUG (4): Mote 4 has received a data message with data 140506867
+DEBUG (1): Sink node received data message from 4 with data 203572713 at time 0:19:32.889053331
 
-DEBUG (13): Packet sent at time 0:19:32.887985227 from 13 
-
-DEBUG (13): Message correctly delivered
-
-DEBUG (6): Mote 6 has received a data message with data 407145426
-
-DEBUG (6): Packet sent from: 6, to: 5 , data: 407145426, type: 2
- 
-DEBUG (7): Mote 7 has received a data message with data 877356698
-
-DEBUG (9): Packet sent at time 0:19:32.888641349 from 9 
+DEBUG (9): Packet sent at time 0:19:32.889190662 from 9 
 
 DEBUG (9): Message correctly delivered
 
-DEBUG (10): Packet sent at time 0:19:32.888671867 from 10 
-
-DEBUG (10): Message correctly delivered
-
-DEBUG (6): Mote 6 has received a data message with data 2084417801
-
-DEBUG (8): Packet sent at time 0:19:32.890426616 from 8 
-
-DEBUG (8): Message correctly delivered
-
-DEBUG (14): Error in sending packet, send the request again
-
-DEBUG (5): Error in sending packet, send the request again
-
-DEBUG (3): Error in sending packet, send the request again
-
-DEBUG (5): Mote 5 has received a data message with data 1614206529
-
-DEBUG (5): Packet sent from: 5, to: 1 , data: 1614206529, type: 2
- 
-DEBUG (7): Packet sent at time 0:19:32.894088704 from 7 
-
-DEBUG (7): Message correctly delivered
-
-DEBUG (2): Error in sending packet, send the request again
-
-DEBUG (4): Error in sending packet, send the request again
-
-DEBUG (7): Mote 7 has received a data message with data 1347567970
-
-DEBUG (7): Packet sent from: 7, to: 5 , data: 1347567970, type: 2
- 
-DEBUG (11): Packet sent at time 0:19:32.896438546 from 11 
-
-DEBUG (11): Message correctly delivered
-
-DEBUG (4): Mote 4 has received a data message with data 1817779242
-
-DEBUG (4): Packet sent from: 4, to: 1 , data: 1817779242, type: 2
- 
-DEBUG (12): Packet sent at time 0:19:32.897552431 from 12 
-
-DEBUG (12): Message correctly delivered
-
-DEBUG (5): Mote 5 has received a data message with data 407145426
-
-DEBUG (6): Packet sent at time 0:19:32.898391658 from 6 
-
-DEBUG (6): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 7 with data 1614206529 at time 0:19:32.904418844
-
-DEBUG (5): Packet sent at time 0:19:32.904586689 from 5 
-
-DEBUG (5): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 12 with data 1817779242 at time 0:19:32.906555064
-
-DEBUG (4): Packet sent at time 0:19:32.906722910 from 4 
+DEBUG (4): Packet sent at time 0:19:32.889221177 from 4 
 
 DEBUG (4): Message correctly delivered
 
-DEBUG (5): Mote 5 has received a data message with data 1347567970
+DEBUG (13): Error in sending packet, send the request again
 
-DEBUG (5): Packet sent from: 5, to: 1 , data: 1347567970, type: 2
+DEBUG (13): Mote 13 has received a data message with data 1817779242
+
+DEBUG (13): Packet sent from: 13, to: 6 , data: 1817779242, type: 2
  
-DEBUG (7): Packet sent at time 0:19:32.907623173 from 7 
+DEBUG (1): Sink node received data message from 3 with data 1880845088 at time 0:19:32.892074553
 
-DEBUG (7): Message correctly delivered
+DEBUG (12): Packet sent at time 0:19:32.892227145 from 12 
 
-DEBUG (1): Sink node received data message from 11 with data 1347567970 at time 0:19:32.912216041
+DEBUG (12): Message correctly delivered
 
-DEBUG (5): Packet sent at time 0:19:32.912383887 from 5 
+DEBUG (3): Packet sent at time 0:19:32.892242399 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (8): Error in sending packet, send the request again
+
+DEBUG (10): Error in sending packet, send the request again
+
+DEBUG (11): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 5 with data 673783985 at time 0:19:32.895828195
+
+DEBUG (5): Packet sent at time 0:19:32.895996040 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (13): Mote 13 has received a data message with data 610718139
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (14): Packet sent at time 0:19:32.896346995 from 14 
+
+DEBUG (14): Message correctly delivered
+
+DEBUG (6): Mote 6 has received a data message with data 1817779242
+
+DEBUG (6): Packet sent from: 6, to: 5 , data: 1817779242, type: 2
+ 
+DEBUG (13): Packet sent at time 0:19:32.902252111 from 13 
+
+DEBUG (13): Message correctly delivered
+
+DEBUG (5): Mote 5 has received a data message with data 1817779242
+
+DEBUG (5): Packet sent from: 5, to: 1 , data: 1817779242, type: 2
+ 
+DEBUG (6): Packet sent at time 0:19:32.913619842 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 12 with data 1817779242 at time 0:19:32.923431186
+
+DEBUG (5): Packet sent at time 0:19:32.923599032 from 5 
 
 DEBUG (5): Message correctly delivered
 
@@ -643,19 +637,19 @@ DEBUG (6): Packet sent from: 6, to: 5 , data: 707192808, type: 2
  
 DEBUG (7): Mote 7 just read new data 30400 above the treshold 33614 at time 0:22:48.197265638
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 808220352, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 808220352, type: 2
  
 DEBUG (8): Mote 8 just read new data 1432 above the treshold 33614 at time 0:22:48.197265639
 
-DEBUG (8): Packet sent from: 8, to: 6 , data: 909247896, type: 2
+DEBUG (8): Packet sent from: 8, to: 7 , data: 909247896, type: 2
  
 DEBUG (9): Mote 9 just read new data 38000 above the treshold 33614 at time 0:22:48.197265639
 
-DEBUG (9): Packet sent from: 9, to: 6 , data: 1010275440, type: 2
+DEBUG (9): Packet sent from: 9, to: 7 , data: 1010275440, type: 2
  
 DEBUG (10): Mote 10 just read new data 9032 above the treshold 33614 at time 0:22:48.197265640
 
-DEBUG (10): Packet sent from: 10, to: 7 , data: 1111302984, type: 2
+DEBUG (10): Packet sent from: 10, to: 13 , data: 1111302984, type: 2
  
 DEBUG (11): Mote 11 just read new data 45600 above the treshold 33614 at time 0:22:48.197265640
 
@@ -663,77 +657,85 @@ DEBUG (11): Packet sent from: 11, to: 7 , data: 1212330528, type: 2
  
 DEBUG (12): Mote 12 just read new data 16632 above the treshold 33614 at time 0:22:48.197265641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 1313358072, type: 2
+DEBUG (12): Packet sent from: 12, to: 13 , data: 1313358072, type: 2
  
 DEBUG (13): Mote 13 just read new data 53200 above the treshold 33614 at time 0:22:48.197265641
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 1414385616, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 1414385616, type: 2
  
 DEBUG (14): Mote 14 just read new data 24232 above the treshold 33614 at time 0:22:48.197265642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 1515413160, type: 2
+DEBUG (14): Packet sent from: 14, to: 13 , data: 1515413160, type: 2
  
-DEBUG (4): Mote 4 has received a data message with data 1414385616
+DEBUG (13): Mote 13 has received a data message with data 1111302984
 
-DEBUG (13): Packet sent at time 0:22:48.199996948 from 13 
-
-DEBUG (13): Message correctly delivered
-
-DEBUG (6): Error in sending packet, send the request again
-
-DEBUG (7): Error in sending packet, send the request again
-
-DEBUG (4): Mote 4 has received a data message with data 1313358072
-
-DEBUG (12): Packet sent at time 0:22:48.202255235 from 12 
-
-DEBUG (12): Message correctly delivered
-
-DEBUG (8): Error in sending packet, send the request again
-
-DEBUG (5): Error in sending packet, send the request again
-
-DEBUG (11): Error in sending packet, send the request again
-
-DEBUG (9): Error in sending packet, send the request again
-
-DEBUG (4): Error in sending packet, send the request again
-
-DEBUG (1): Sink node received data message from 3 with data 404110176 at time 0:22:48.205764732
-
-DEBUG (3): Packet sent at time 0:22:48.205932578 from 3 
-
-DEBUG (3): Message correctly delivered
-
-DEBUG (14): Error in sending packet, send the request again
-
-DEBUG (7): Mote 7 has received a data message with data 1111302984
-
-DEBUG (7): Packet sent from: 7, to: 5 , data: 1111302984, type: 2
- 
-DEBUG (10): Packet sent at time 0:22:48.207702590 from 10 
+DEBUG (10): Packet sent at time 0:22:48.199630738 from 10 
 
 DEBUG (10): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 2 with data 303082632 at time 0:22:48.209457337
+DEBUG (5): Error in sending packet, send the request again
 
-DEBUG (2): Packet sent at time 0:22:48.209625183 from 2 
+DEBUG (2): Error in sending packet, send the request again
 
-DEBUG (2): Message correctly delivered
+DEBUG (9): Error in sending packet, send the request again
 
-DEBUG (5): Mote 5 has received a data message with data 1111302984
+DEBUG (11): Error in sending packet, send the request again
 
-DEBUG (5): Packet sent from: 5, to: 1 , data: 1111302984, type: 2
+DEBUG (1): Sink node received data message from 3 with data 404110176 at time 0:22:48.202758768
+
+DEBUG (3): Packet sent at time 0:22:48.202926614 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (13): Mote 13 has received a data message with data 1313358072
+
+DEBUG (12): Packet sent at time 0:22:48.204956025 from 12 
+
+DEBUG (12): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 4 with data 505137720 at time 0:22:48.206069906
+
+DEBUG (4): Packet sent at time 0:22:48.206237752 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (7): Mote 7 has received a data message with data 909247896
+
+DEBUG (7): Packet sent from: 7, to: 2 , data: 909247896, type: 2
  
-DEBUG (7): Packet sent at time 0:22:48.217910661 from 7 
+DEBUG (8): Packet sent at time 0:22:48.207092241 from 8 
+
+DEBUG (8): Message correctly delivered
+
+DEBUG (14): Error in sending packet, send the request again
+
+DEBUG (13): Error in sending packet, send the request again
+
+DEBUG (2): Mote 2 has received a data message with data 909247896
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 909247896, type: 2
+ 
+DEBUG (7): Packet sent at time 0:22:48.209442081 from 7 
 
 DEBUG (7): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 10 with data 1111302984 at time 0:22:48.227752522
+DEBUG (5): Mote 5 has received a data message with data 707192808
 
-DEBUG (5): Packet sent at time 0:22:48.227920368 from 5 
+DEBUG (5): Packet sent from: 5, to: 1 , data: 707192808, type: 2
+ 
+DEBUG (6): Packet sent at time 0:22:48.209686219 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 6 with data 707192808 at time 0:22:48.214095984
+
+DEBUG (5): Packet sent at time 0:22:48.214263829 from 5 
 
 DEBUG (5): Message correctly delivered
+
+DEBUG (2): Error in sending packet, send the request again
 
 DEBUG (2): Data timer fired at 0:26:3.500000011.
 
@@ -783,19 +785,19 @@ DEBUG (6): Packet sent from: 6, to: 5 , data: 1615021558, type: 2
  
 DEBUG (7): Mote 7 just read new data 20469 above the treshold 33614 at time 0:26:3.509765638
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 925388789, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 925388789, type: 2
  
 DEBUG (8): Mote 8 just read new data 23028 above the treshold 33614 at time 0:26:3.509765639
 
-DEBUG (8): Packet sent from: 8, to: 6 , data: 235756020, type: 2
+DEBUG (8): Packet sent from: 8, to: 7 , data: 235756020, type: 2
  
 DEBUG (9): Mote 9 just read new data 25586 above the treshold 33614 at time 0:26:3.509765639
 
-DEBUG (9): Packet sent from: 9, to: 6 , data: 1693606898, type: 2
+DEBUG (9): Packet sent from: 9, to: 7 , data: 1693606898, type: 2
  
 DEBUG (10): Mote 10 just read new data 28145 above the treshold 33614 at time 0:26:3.509765640
 
-DEBUG (10): Packet sent from: 10, to: 7 , data: 1003974129, type: 2
+DEBUG (10): Packet sent from: 10, to: 13 , data: 1003974129, type: 2
  
 DEBUG (11): Mote 11 just read new data 30704 above the treshold 33614 at time 0:26:3.509765640
 
@@ -803,91 +805,79 @@ DEBUG (11): Packet sent from: 11, to: 7 , data: 314341360, type: 2
  
 DEBUG (12): Mote 12 just read new data 33262 above the treshold 33614 at time 0:26:3.509765641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 1772192238, type: 2
+DEBUG (12): Packet sent from: 12, to: 13 , data: 1772192238, type: 2
  
 DEBUG (13): Mote 13 just read new data 35821 above the treshold 33614 at time 0:26:3.509765641
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 1082559469, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 1082559469, type: 2
  
 DEBUG (14): Mote 14 just read new data 38380 above the treshold 33614 at time 0:26:3.509765642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 392926700, type: 2
+DEBUG (14): Packet sent from: 14, to: 13 , data: 392926700, type: 2
  
-DEBUG (7): Mote 7 has received a data message with data 1003974129
+DEBUG (13): Mote 13 has received a data message with data 1772192238
 
-DEBUG (2): Mote 2 has received a data message with data 392926700
-
-DEBUG (10): Packet sent at time 0:26:3.513656608 from 10 
-
-DEBUG (10): Message correctly delivered
-
-DEBUG (14): Packet sent at time 0:26:3.513656610 from 14 
-
-DEBUG (14): Message correctly delivered
-
-DEBUG (4): Mote 4 has received a data message with data 1082559469
-
-DEBUG (13): Packet sent at time 0:26:3.515106186 from 13 
-
-DEBUG (13): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 5 with data 157170680 at time 0:26:3.515335063
-
-DEBUG (5): Packet sent at time 0:26:3.515502908 from 5 
-
-DEBUG (5): Message correctly delivered
-
-DEBUG (9): Error in sending packet, send the request again
-
-DEBUG (4): Error in sending packet, send the request again
-
-DEBUG (6): Error in sending packet, send the request again
-
-DEBUG (2): Error in sending packet, send the request again
-
-DEBUG (11): Error in sending packet, send the request again
-
-DEBUG (7): Error in sending packet, send the request again
-
-DEBUG (1): Sink node received data message from 3 with data 1536436218 at time 0:26:3.520309398
-
-DEBUG (4): Mote 4 has received a data message with data 1772192238
-
-DEBUG (4): Packet sent from: 4, to: 1 , data: 1772192238, type: 2
- 
-DEBUG (3): Packet sent at time 0:26:3.520477243 from 3 
-
-DEBUG (3): Message correctly delivered
-
-DEBUG (12): Packet sent at time 0:26:3.520553541 from 12 
+DEBUG (12): Packet sent at time 0:26:3.511947635 from 12 
 
 DEBUG (12): Message correctly delivered
 
-DEBUG (6): Mote 6 has received a data message with data 235756020
+DEBUG (8): Error in sending packet, send the request again
 
-DEBUG (6): Packet sent from: 6, to: 5 , data: 235756020, type: 2
- 
-DEBUG (8): Packet sent at time 0:26:3.520889231 from 8 
+DEBUG (11): Error in sending packet, send the request again
 
-DEBUG (8): Message correctly delivered
+DEBUG (1): Sink node received data message from 4 with data 846803449 at time 0:26:3.515518166
 
-DEBUG (5): Mote 5 has received a data message with data 235756020
-
-DEBUG (5): Packet sent from: 5, to: 1 , data: 235756020, type: 2
- 
-DEBUG (6): Packet sent at time 0:26:3.525100632 from 6 
-
-DEBUG (6): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 12 with data 1772192238 at time 0:26:3.527053748
-
-DEBUG (4): Packet sent at time 0:26:3.527221593 from 4 
+DEBUG (4): Packet sent at time 0:26:3.515686012 from 4 
 
 DEBUG (4): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 8 with data 235756020 at time 0:26:3.532211186
+DEBUG (10): Error in sending packet, send the request again
 
-DEBUG (5): Packet sent at time 0:26:3.532379032 from 5 
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 2 with data 78585340 at time 0:26:3.517990075
+
+DEBUG (2): Packet sent at time 0:26:3.518157921 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (9): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 3 with data 1536436218 at time 0:26:3.520080517
+
+DEBUG (3): Packet sent at time 0:26:3.520248363 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (6): Mote 6 has received a data message with data 1082559469
+
+DEBUG (6): Packet sent from: 6, to: 5 , data: 1082559469, type: 2
+ 
+DEBUG (14): Error in sending packet, send the request again
+
+DEBUG (13): Packet sent at time 0:26:3.520553542 from 13 
+
+DEBUG (13): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 5 with data 157170680 at time 0:26:3.522018373
+
+DEBUG (5): Packet sent at time 0:26:3.522186219 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (5): Mote 5 has received a data message with data 1082559469
+
+DEBUG (5): Packet sent from: 5, to: 1 , data: 1082559469, type: 2
+ 
+DEBUG (6): Packet sent at time 0:26:3.524551321 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 13 with data 1082559469 at time 0:26:3.533904904
+
+DEBUG (5): Packet sent at time 0:26:3.534072750 from 5 
 
 DEBUG (5): Message correctly delivered
 
@@ -945,19 +935,19 @@ DEBUG (6): Packet sent from: 6, to: 5 , data: 1621510873, type: 2
  
 DEBUG (7): Mote 7 just read new data 31261 above the treshold 33614 at time 0:29:18.822265638
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 932805149, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 932805149, type: 2
  
 DEBUG (8): Mote 8 just read new data 43361 above the treshold 33614 at time 0:29:18.822265639
 
-DEBUG (8): Packet sent from: 8, to: 6 , data: 244099425, type: 2
+DEBUG (8): Packet sent from: 8, to: 7 , data: 244099425, type: 2
  
 DEBUG (9): Mote 9 just read new data 55460 above the treshold 33614 at time 0:29:18.822265639
 
-DEBUG (9): Packet sent from: 9, to: 6 , data: 1702877348, type: 2
+DEBUG (9): Packet sent from: 9, to: 7 , data: 1702877348, type: 2
  
 DEBUG (10): Mote 10 just read new data 2024 above the treshold 33614 at time 0:29:18.822265640
 
-DEBUG (10): Packet sent from: 10, to: 7 , data: 1014171624, type: 2
+DEBUG (10): Packet sent from: 10, to: 13 , data: 1014171624, type: 2
  
 DEBUG (11): Mote 11 just read new data 14124 above the treshold 33614 at time 0:29:18.822265640
 
@@ -965,85 +955,139 @@ DEBUG (11): Packet sent from: 11, to: 7 , data: 325465900, type: 2
  
 DEBUG (12): Mote 12 just read new data 26223 above the treshold 33614 at time 0:29:18.822265641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 1784243823, type: 2
+DEBUG (12): Packet sent from: 12, to: 13 , data: 1784243823, type: 2
  
 DEBUG (13): Mote 13 just read new data 38323 above the treshold 33614 at time 0:29:18.822265641
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 1095538099, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 1095538099, type: 2
  
 DEBUG (14): Mote 14 just read new data 50423 above the treshold 33614 at time 0:29:18.822265642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 406832375, type: 2
+DEBUG (14): Packet sent from: 14, to: 13 , data: 406832375, type: 2
  
-DEBUG (7): Mote 7 has received a data message with data 1014171624
+DEBUG (1): Sink node received data message from 5 with data 162732950 at time 0:29:18.825302118
 
-DEBUG (10): Packet sent at time 0:29:18.824630738 from 10 
+DEBUG (5): Packet sent at time 0:29:18.825469964 from 5 
 
-DEBUG (10): Message correctly delivered
+DEBUG (5): Message correctly delivered
 
-DEBUG (2): Mote 2 has received a data message with data 406832375
-
-DEBUG (14): Packet sent at time 0:29:18.824890138 from 14 
-
-DEBUG (14): Message correctly delivered
-
-DEBUG (5): Error in sending packet, send the request again
-
-DEBUG (8): Error in sending packet, send the request again
-
-DEBUG (2): Error in sending packet, send the request again
-
-DEBUG (11): Error in sending packet, send the request again
+DEBUG (7): Error in sending packet, send the request again
 
 DEBUG (6): Error in sending packet, send the request again
 
-DEBUG (13): Error in sending packet, send the request again
+DEBUG (1): Sink node received data message from 3 with data 1540144398 at time 0:29:18.828567479
 
-DEBUG (3): Mote 3 has received a treshold message with treshold 30178 and id 2 from mote 1
+DEBUG (3): Packet sent at time 0:29:18.828735325 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (11): Error in sending packet, send the request again
+
+DEBUG (8): Error in sending packet, send the request again
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (10): Error in sending packet, send the request again
+
+DEBUG (14): Error in sending packet, send the request again
+
+DEBUG (9): Error in sending packet, send the request again
+
+DEBUG (5): Mote 5 has received a treshold message with treshold 30178 and id 2 from mote 1
+
+DEBUG (5): Packet sent from: 5, treshold: 564950498, type: 1, treshold_id: 2
 
 DEBUG (2): Mote 2 has received a treshold message with treshold 30178 and id 2 from mote 1
 
 DEBUG (2): Packet sent from: 2, treshold: 564950498, type: 1, treshold_id: 2
 
+DEBUG (3): Mote 3 has received a treshold message with treshold 30178 and id 2 from mote 1
+
+DEBUG (3): Packet sent from: 3, treshold: 564950498, type: 1, treshold_id: 2
+
+DEBUG (4): Mote 4 has received a treshold message with treshold 30178 and id 2 from mote 1
+
+DEBUG (4): Packet sent from: 4, treshold: 564950498, type: 1, treshold_id: 2
+
 DEBUG (1): Error in sending packet, send the request again
 
-DEBUG (7): Error in sending packet, send the request again
+DEBUG (13): Error in sending packet, send the request again
 
-DEBUG (12): Error in sending packet, send the request again
+DEBUG (13): Mote 13 has received a data message with data 1784243823
 
-DEBUG (6): Mote 6 has received a data message with data 1702877348
-
-DEBUG (6): Packet sent from: 6, to: 5 , data: 1702877348, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 1784243823, type: 2
  
-DEBUG (9): Packet sent at time 0:29:18.832153277 from 9 
+DEBUG (12): Packet sent at time 0:29:18.835876401 from 12 
 
-DEBUG (9): Message correctly delivered
-
-DEBUG (3): Error in sending packet, send the request again
+DEBUG (12): Message correctly delivered
 
 DEBUG (4): Error in sending packet, send the request again
 
-DEBUG (14): Mote 14 has received a treshold message with treshold 30178 and id 2 from mote 2
+DEBUG (6): Mote 6 has received a treshold message with treshold 30178 and id 2 from mote 5
 
-DEBUG (14): Packet sent from: 14, treshold: 564950498, type: 1, treshold_id: 2
+DEBUG (6): Packet sent from: 6, treshold: 564950498, type: 1, treshold_id: 2
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (7): Mote 7 has received a treshold message with treshold 30178 and id 2 from mote 2
+
+DEBUG (7): Packet sent from: 7, treshold: 564950498, type: 1, treshold_id: 2
 
 DEBUG (2): Error in sending packet, send the request again
 
-DEBUG (5): Mote 5 has received a data message with data 1702877348
+DEBUG (6): Mote 6 has received a data message with data 1784243823
 
-DEBUG (5): Packet sent from: 5, to: 1 , data: 1702877348, type: 2
- 
-DEBUG (6): Packet sent at time 0:29:18.841491601 from 6 
+DEBUG (13): Error in sending packet, send the request again
 
-DEBUG (6): Message correctly delivered
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (9): Mote 9 has received a treshold message with treshold 30178 and id 2 from mote 6
+
+DEBUG (9): Packet sent from: 9, treshold: 564950498, type: 1, treshold_id: 2
+
+DEBUG (8): Mote 8 has received a treshold message with treshold 30178 and id 2 from mote 6
+
+DEBUG (8): Packet sent from: 8, treshold: 564950498, type: 1, treshold_id: 2
+
+DEBUG (13): Mote 13 has received a treshold message with treshold 30178 and id 2 from mote 6
+
+DEBUG (13): Packet sent from: 13, treshold: 564950498, type: 1, treshold_id: 2
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (11): Mote 11 has received a treshold message with treshold 30178 and id 2 from mote 7
+
+DEBUG (11): Packet sent from: 11, treshold: 564950498, type: 1, treshold_id: 2
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (10): Mote 10 has received a treshold message with treshold 30178 and id 2 from mote 13
+
+DEBUG (10): Packet sent from: 10, treshold: 564950498, type: 1, treshold_id: 2
+
+DEBUG (14): Mote 14 has received a treshold message with treshold 30178 and id 2 from mote 13
+
+DEBUG (14): Packet sent from: 14, treshold: 564950498, type: 1, treshold_id: 2
+
+DEBUG (12): Mote 12 has received a treshold message with treshold 30178 and id 2 from mote 13
+
+DEBUG (12): Packet sent from: 12, treshold: 564950498, type: 1, treshold_id: 2
+
+DEBUG (13): Error in sending packet, send the request again
+
+DEBUG (8): Error in sending packet, send the request again
+
+DEBUG (9): Error in sending packet, send the request again
 
 DEBUG (14): Error in sending packet, send the request again
 
-DEBUG (1): Sink node received data message from 9 with data 1702877348 at time 0:29:18.850646821
+DEBUG (11): Error in sending packet, send the request again
 
-DEBUG (5): Packet sent at time 0:29:18.850814667 from 5 
+DEBUG (10): Error in sending packet, send the request again
 
-DEBUG (5): Message correctly delivered
+DEBUG (12): Error in sending packet, send the request again
 
 DEBUG (2): Data timer fired at 0:32:34.125000011.
 
@@ -1079,119 +1123,111 @@ DEBUG (3): Mote 3 just read new data 4407 above the treshold 564950498 at time 0
 
 DEBUG (3): Packet sent from: 3, to: 1 , data: 1586499895, type: 2
  
-DEBUG (4): Mote 4 just read new data 5509 above the treshold 33614 at time 0:32:34.134765637
+DEBUG (4): Mote 4 just read new data 5509 above the treshold 564950498 at time 0:32:34.134765637
 
 DEBUG (4): Packet sent from: 4, to: 1 , data: 1446253957, type: 2
  
-DEBUG (5): Mote 5 just read new data 6611 above the treshold 33614 at time 0:32:34.134765637
+DEBUG (5): Mote 5 just read new data 6611 above the treshold 564950498 at time 0:32:34.134765637
 
 DEBUG (5): Packet sent from: 5, to: 1 , data: 1306008019, type: 2
  
-DEBUG (6): Mote 6 just read new data 7713 above the treshold 33614 at time 0:32:34.134765638
+DEBUG (6): Mote 6 just read new data 7713 above the treshold 564950498 at time 0:32:34.134765638
 
 DEBUG (6): Packet sent from: 6, to: 5 , data: 1165762081, type: 2
  
-DEBUG (7): Mote 7 just read new data 8815 above the treshold 33614 at time 0:32:34.134765638
+DEBUG (7): Mote 7 just read new data 8815 above the treshold 564950498 at time 0:32:34.134765638
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 1025516143, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 1025516143, type: 2
  
-DEBUG (8): Mote 8 just read new data 9917 above the treshold 33614 at time 0:32:34.134765639
+DEBUG (8): Mote 8 just read new data 9917 above the treshold 564950498 at time 0:32:34.134765639
 
 DEBUG (8): Packet sent from: 8, to: 6 , data: 885270205, type: 2
  
-DEBUG (9): Mote 9 just read new data 11019 above the treshold 33614 at time 0:32:34.134765639
+DEBUG (9): Mote 9 just read new data 11019 above the treshold 564950498 at time 0:32:34.134765639
 
 DEBUG (9): Packet sent from: 9, to: 6 , data: 745024267, type: 2
  
-DEBUG (10): Mote 10 just read new data 12121 above the treshold 33614 at time 0:32:34.134765640
+DEBUG (10): Mote 10 just read new data 12121 above the treshold 564950498 at time 0:32:34.134765640
 
-DEBUG (10): Packet sent from: 10, to: 7 , data: 604778329, type: 2
+DEBUG (10): Packet sent from: 10, to: 13 , data: 604778329, type: 2
  
-DEBUG (11): Mote 11 just read new data 13223 above the treshold 33614 at time 0:32:34.134765640
+DEBUG (1): Sink node received data message from 2 with data 1726745833 at time 0:32:34.136932371
 
-DEBUG (11): Packet sent from: 11, to: 7 , data: 464532391, type: 2
- 
-DEBUG (12): Mote 12 just read new data 14325 above the treshold 33614 at time 0:32:34.134765641
+DEBUG (2): Error in sending packet, send the request again
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 324286453, type: 2
- 
-DEBUG (13): Mote 13 just read new data 15427 above the treshold 33614 at time 0:32:34.134765641
+DEBUG (1): Sink node received data message from 3 with data 1586499895 at time 0:32:34.138992296
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 184040515, type: 2
- 
-DEBUG (6): Error in sending packet, send the request again
-
-DEBUG (4): Mote 4 has received a data message with data 184040515
-
-DEBUG (1): Sink node received data message from 3 with data 1586499895 at time 0:32:34.138168326
-
-DEBUG (13): Packet sent at time 0:32:34.138214107 from 13 
-
-DEBUG (13): Message correctly delivered
-
-DEBUG (3): Packet sent at time 0:32:34.138336172 from 3 
+DEBUG (3): Packet sent at time 0:32:34.139160142 from 3 
 
 DEBUG (3): Message correctly delivered
 
-DEBUG (10): Error in sending packet, send the request again
-
 DEBUG (6): Mote 6 has received a data message with data 745024267
 
-DEBUG (6): Packet sent from: 6, to: 5 , data: 745024267, type: 2
- 
-DEBUG (9): Packet sent at time 0:32:34.140365582 from 9 
+DEBUG (9): Packet sent at time 0:32:34.139923080 from 9 
 
 DEBUG (9): Message correctly delivered
 
-DEBUG (11): Error in sending packet, send the request again
+DEBUG (13): Mote 13 has received a data message with data 604778329
 
-DEBUG (4): Mote 4 has received a data message with data 324286453
+DEBUG (13): Packet sent from: 13, to: 6 , data: 604778329, type: 2
+ 
+DEBUG (10): Packet sent at time 0:32:34.141159035 from 10 
 
-DEBUG (12): Packet sent at time 0:32:34.140914897 from 12 
+DEBUG (10): Message correctly delivered
 
-DEBUG (12): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 2 with data 1726745833 at time 0:32:34.141036961
-
-DEBUG (2): Packet sent at time 0:32:34.141204807 from 2 
-
-DEBUG (2): Message correctly delivered
-
-DEBUG (5): Mote 5 has received a data message with data 1025516143
+DEBUG (1): Sink node received data message from 4 with data 1446253957 at time 0:32:34.142105071
 
 DEBUG (6): Mote 6 has received a data message with data 885270205
 
-DEBUG (7): Packet sent at time 0:32:34.142517058 from 7 
-
-DEBUG (7): Message correctly delivered
-
-DEBUG (8): Packet sent at time 0:32:34.142669645 from 8 
-
-DEBUG (8): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 4 with data 1446253957 at time 0:32:34.142715419
-
-DEBUG (4): Packet sent at time 0:32:34.142883265 from 4 
+DEBUG (4): Packet sent at time 0:32:34.142272917 from 4 
 
 DEBUG (4): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 5 with data 1306008019 at time 0:32:34.145416210
+DEBUG (7): Error in sending packet, send the request again
 
-DEBUG (5): Packet sent at time 0:32:34.145584055 from 5 
+DEBUG (8): Packet sent at time 0:32:34.142364471 from 8 
+
+DEBUG (8): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 5 with data 1306008019 at time 0:32:34.144332842
+
+DEBUG (5): Packet sent at time 0:32:34.144500688 from 5 
 
 DEBUG (5): Message correctly delivered
 
-DEBUG (5): Mote 5 has received a data message with data 745024267
+DEBUG (5): Mote 5 has received a data message with data 1165762081
 
-DEBUG (5): Packet sent from: 5, to: 1 , data: 745024267, type: 2
+DEBUG (5): Packet sent from: 5, to: 1 , data: 1165762081, type: 2
  
-DEBUG (6): Packet sent at time 0:32:34.147659241 from 6 
+DEBUG (6): Packet sent at time 0:32:34.146148628 from 6 
 
 DEBUG (6): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 9 with data 745024267 at time 0:32:34.150421065
+DEBUG (6): Mote 6 has received a data message with data 604778329
 
-DEBUG (5): Packet sent at time 0:32:34.150588911 from 5 
+DEBUG (6): Packet sent from: 6, to: 5 , data: 604778329, type: 2
+ 
+DEBUG (13): Packet sent at time 0:32:34.148696833 from 13 
+
+DEBUG (13): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 6 with data 1165762081 at time 0:32:34.153015043
+
+DEBUG (5): Packet sent at time 0:32:34.153182888 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (5): Mote 5 has received a data message with data 604778329
+
+DEBUG (5): Packet sent from: 5, to: 1 , data: 604778329, type: 2
+ 
+DEBUG (6): Packet sent at time 0:32:34.155837904 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 10 with data 604778329 at time 0:32:34.164794761
+
+DEBUG (5): Packet sent at time 0:32:34.164962607 from 5 
 
 DEBUG (5): Message correctly delivered
 
@@ -1225,101 +1261,83 @@ DEBUG (3): Mote 3 just read new data 25185 above the treshold 564950498 at time 
 
 DEBUG (3): Packet sent from: 3, to: 1 , data: 1146774113, type: 2
  
-DEBUG (4): Mote 4 just read new data 64249 above the treshold 33614 at time 0:35:49.447265637
+DEBUG (4): Mote 4 just read new data 64249 above the treshold 564950498 at time 0:35:49.447265637
 
 DEBUG (4): Packet sent from: 4, to: 1 , data: 1970338553, type: 2
  
-DEBUG (5): Mote 5 just read new data 37778 above the treshold 33614 at time 0:35:49.447265637
+DEBUG (5): Mote 5 just read new data 37778 above the treshold 564950498 at time 0:35:49.447265637
 
 DEBUG (5): Packet sent from: 5, to: 1 , data: 646419346, type: 2
  
-DEBUG (6): Mote 6 just read new data 11306 above the treshold 33614 at time 0:35:49.447265638
+DEBUG (6): Mote 6 just read new data 11306 above the treshold 564950498 at time 0:35:49.447265638
 
 DEBUG (6): Packet sent from: 6, to: 5 , data: 1469983786, type: 2
  
-DEBUG (7): Mote 7 just read new data 50371 above the treshold 33614 at time 0:35:49.447265638
-
-DEBUG (7): Packet sent from: 7, to: 5 , data: 146064579, type: 2
- 
-DEBUG (8): Mote 8 just read new data 23899 above the treshold 33614 at time 0:35:49.447265639
+DEBUG (8): Mote 8 just read new data 23899 above the treshold 564950498 at time 0:35:49.447265639
 
 DEBUG (8): Packet sent from: 8, to: 6 , data: 969629019, type: 2
  
-DEBUG (9): Mote 9 just read new data 62963 above the treshold 33614 at time 0:35:49.447265639
+DEBUG (9): Mote 9 just read new data 62963 above the treshold 564950498 at time 0:35:49.447265639
 
 DEBUG (9): Packet sent from: 9, to: 6 , data: 1793193459, type: 2
  
-DEBUG (10): Mote 10 just read new data 36492 above the treshold 33614 at time 0:35:49.447265640
-
-DEBUG (10): Packet sent from: 10, to: 7 , data: 469274252, type: 2
- 
-DEBUG (11): Mote 11 just read new data 10020 above the treshold 33614 at time 0:35:49.447265640
+DEBUG (11): Mote 11 just read new data 10020 above the treshold 564950498 at time 0:35:49.447265640
 
 DEBUG (11): Packet sent from: 11, to: 7 , data: 1292838692, type: 2
  
-DEBUG (12): Mote 12 just read new data 49084 above the treshold 33614 at time 0:35:49.447265641
+DEBUG (12): Mote 12 just read new data 49084 above the treshold 564950498 at time 0:35:49.447265641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 2116403132, type: 2
+DEBUG (12): Packet sent from: 12, to: 13 , data: 2116403132, type: 2
  
-DEBUG (13): Mote 13 just read new data 22613 above the treshold 33614 at time 0:35:49.447265641
+DEBUG (13): Mote 13 just read new data 22613 above the treshold 564950498 at time 0:35:49.447265641
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 792483925, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 792483925, type: 2
  
 DEBUG (14): Mote 14 just read new data 61677 above the treshold 564950498 at time 0:35:49.447265642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 1616048365, type: 2
+DEBUG (14): Packet sent from: 14, to: 13 , data: 1616048365, type: 2
  
-DEBUG (2): Mote 2 has received a data message with data 1616048365
+DEBUG (13): Mote 13 has received a data message with data 2116403132
 
-DEBUG (2): Packet sent from: 2, to: 1 , data: 1616048365, type: 2
- 
-DEBUG (14): Packet sent at time 0:35:49.449615481 from 14 
+DEBUG (12): Packet sent at time 0:35:49.449630739 from 12 
 
-DEBUG (14): Message correctly delivered
+DEBUG (12): Message correctly delivered
 
-DEBUG (7): Mote 7 has received a data message with data 469274252
-
-DEBUG (10): Packet sent at time 0:35:49.450546260 from 10 
-
-DEBUG (10): Message correctly delivered
-
-DEBUG (6): Mote 6 has received a data message with data 1793193459
-
-DEBUG (9): Packet sent at time 0:35:49.451095573 from 9 
-
-DEBUG (9): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 3 with data 1146774113 at time 0:35:49.451995833
-
-DEBUG (3): Packet sent at time 0:35:49.452163679 from 3 
-
-DEBUG (3): Message correctly delivered
-
-DEBUG (7): Mote 7 has received a data message with data 1292838692
-
-DEBUG (11): Packet sent at time 0:35:49.453094463 from 11 
-
-DEBUG (11): Message correctly delivered
-
-DEBUG (13): Error in sending packet, send the request again
-
-DEBUG (12): Error in sending packet, send the request again
-
-DEBUG (2): Error in sending packet, send the request again
-
-DEBUG (6): Error in sending packet, send the request again
+DEBUG (5): Error in sending packet, send the request again
 
 DEBUG (4): Error in sending packet, send the request again
 
-DEBUG (7): Error in sending packet, send the request again
+DEBUG (3): Error in sending packet, send the request again
 
-DEBUG (8): Packet sent at time 0:35:49.458160350 from 8 
+DEBUG (13): Mote 13 has received a data message with data 1616048365
 
-DEBUG (8): Message correctly delivered
+DEBUG (14): Packet sent at time 0:35:49.452362047 from 14 
 
-DEBUG (1): Sink node received data message from 5 with data 646419346 at time 0:35:49.459014836
+DEBUG (14): Message correctly delivered
 
-DEBUG (5): Packet sent at time 0:35:49.459182682 from 5 
+DEBUG (6): Mote 6 has received a data message with data 1793193459
+
+DEBUG (9): Packet sent at time 0:35:49.453338602 from 9 
+
+DEBUG (9): Message correctly delivered
+
+DEBUG (11): Error in sending packet, send the request again
+
+DEBUG (13): Error in sending packet, send the request again
+
+DEBUG (8): Error in sending packet, send the request again
+
+DEBUG (5): Mote 5 has received a data message with data 1469983786
+
+DEBUG (5): Packet sent from: 5, to: 1 , data: 1469983786, type: 2
+ 
+DEBUG (6): Packet sent at time 0:35:49.458877508 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 6 with data 1469983786 at time 0:35:49.461059502
+
+DEBUG (5): Packet sent at time 0:35:49.461227348 from 5 
 
 DEBUG (5): Message correctly delivered
 
@@ -1353,119 +1371,83 @@ DEBUG (2): Mote 2 just read new data 46336 above the treshold 564950498 at time 
 
 DEBUG (2): Packet sent from: 2, to: 1 , data: 1198830848, type: 2
  
-DEBUG (4): Mote 4 just read new data 11691 above the treshold 33614 at time 0:39:4.759765637
+DEBUG (4): Mote 4 just read new data 11691 above the treshold 564950498 at time 0:39:4.759765637
 
 DEBUG (4): Packet sent from: 4, to: 1 , data: 1282223531, type: 2
  
-DEBUG (5): Mote 5 just read new data 27137 above the treshold 33614 at time 0:39:4.759765637
-
-DEBUG (5): Packet sent from: 5, to: 1 , data: 250178049, type: 2
- 
-DEBUG (6): Mote 6 just read new data 42582 above the treshold 33614 at time 0:39:4.759765638
+DEBUG (6): Mote 6 just read new data 42582 above the treshold 564950498 at time 0:39:4.759765638
 
 DEBUG (6): Packet sent from: 6, to: 5 , data: 1365616214, type: 2
  
-DEBUG (7): Mote 7 just read new data 58028 above the treshold 33614 at time 0:39:4.759765638
-
-DEBUG (7): Packet sent from: 7, to: 5 , data: 333570732, type: 2
- 
-DEBUG (8): Mote 8 just read new data 7937 above the treshold 33614 at time 0:39:4.759765639
+DEBUG (8): Mote 8 just read new data 7937 above the treshold 564950498 at time 0:39:4.759765639
 
 DEBUG (8): Packet sent from: 8, to: 6 , data: 1449008897, type: 2
  
-DEBUG (9): Mote 9 just read new data 23383 above the treshold 33614 at time 0:39:4.759765639
+DEBUG (10): Mote 10 just read new data 38828 above the treshold 564950498 at time 0:39:4.759765640
 
-DEBUG (9): Packet sent from: 9, to: 6 , data: 416963415, type: 2
+DEBUG (10): Packet sent from: 10, to: 13 , data: 1532401580, type: 2
  
-DEBUG (10): Mote 10 just read new data 38828 above the treshold 33614 at time 0:39:4.759765640
+DEBUG (12): Mote 12 just read new data 4183 above the treshold 564950498 at time 0:39:4.759765641
 
-DEBUG (10): Packet sent from: 10, to: 7 , data: 1532401580, type: 2
+DEBUG (12): Packet sent from: 12, to: 13 , data: 1615794263, type: 2
  
-DEBUG (11): Mote 11 just read new data 54274 above the treshold 33614 at time 0:39:4.759765640
+DEBUG (13): Mote 13 just read new data 19629 above the treshold 564950498 at time 0:39:4.759765641
 
-DEBUG (11): Packet sent from: 11, to: 7 , data: 500356098, type: 2
- 
-DEBUG (12): Mote 12 just read new data 4183 above the treshold 33614 at time 0:39:4.759765641
-
-DEBUG (12): Packet sent from: 12, to: 4 , data: 1615794263, type: 2
- 
-DEBUG (13): Mote 13 just read new data 19629 above the treshold 33614 at time 0:39:4.759765641
-
-DEBUG (13): Packet sent from: 13, to: 4 , data: 583748781, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 583748781, type: 2
  
 DEBUG (14): Mote 14 just read new data 35074 above the treshold 564950498 at time 0:39:4.759765642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 1699186946, type: 2
+DEBUG (14): Packet sent from: 14, to: 13 , data: 1699186946, type: 2
  
-DEBUG (2): Mote 2 has received a data message with data 1699186946
+DEBUG (1): Sink node received data message from 2 with data 1198830848 at time 0:39:4.763595569
 
-DEBUG (14): Packet sent at time 0:39:4.763946525 from 14 
-
-DEBUG (14): Message correctly delivered
-
-DEBUG (4): Mote 4 has received a data message with data 583748781
-
-DEBUG (1): Sink node received data message from 5 with data 250178049 at time 0:39:4.764266954
-
-DEBUG (13): Packet sent at time 0:39:4.764327992 from 13 
-
-DEBUG (13): Message correctly delivered
-
-DEBUG (5): Packet sent at time 0:39:4.764434799 from 5 
-
-DEBUG (5): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 2 with data 1198830848 at time 0:39:4.765914892
-
-DEBUG (2): Packet sent at time 0:39:4.766082737 from 2 
+DEBUG (2): Packet sent at time 0:39:4.763763415 from 2 
 
 DEBUG (2): Message correctly delivered
 
-DEBUG (6): Error in sending packet, send the request again
+DEBUG (13): Mote 13 has received a data message with data 1532401580
 
-DEBUG (7): Error in sending packet, send the request again
-
-DEBUG (4): Mote 4 has received a data message with data 1615794263
-
-DEBUG (12): Packet sent at time 0:39:4.767562836 from 12 
-
-DEBUG (12): Message correctly delivered
-
-DEBUG (8): Error in sending packet, send the request again
-
-DEBUG (7): Mote 7 has received a data message with data 500356098
-
-DEBUG (7): Packet sent from: 7, to: 5 , data: 500356098, type: 2
- 
-DEBUG (9): Error in sending packet, send the request again
-
-DEBUG (11): Packet sent at time 0:39:4.768890343 from 11 
-
-DEBUG (11): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 4 with data 1282223531 at time 0:39:4.770584055
-
-DEBUG (4): Packet sent at time 0:39:4.770751901 from 4 
-
-DEBUG (4): Message correctly delivered
-
-DEBUG (7): Mote 7 has received a data message with data 1532401580
-
-DEBUG (10): Packet sent at time 0:39:4.770919749 from 10 
+DEBUG (10): Packet sent at time 0:39:4.764495837 from 10 
 
 DEBUG (10): Message correctly delivered
 
-DEBUG (5): Mote 5 has received a data message with data 500356098
+DEBUG (6): Error in sending packet, send the request again
 
-DEBUG (5): Packet sent from: 5, to: 1 , data: 500356098, type: 2
+DEBUG (1): Sink node received data message from 4 with data 1282223531 at time 0:39:4.767181365
+
+DEBUG (4): Packet sent at time 0:39:4.767349210 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (6): Mote 6 has received a data message with data 583748781
+
+DEBUG (6): Packet sent from: 6, to: 5 , data: 583748781, type: 2
  
-DEBUG (7): Packet sent at time 0:39:4.772674500 from 7 
+DEBUG (13): Packet sent at time 0:39:4.769790607 from 13 
 
-DEBUG (7): Message correctly delivered
+DEBUG (13): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 11 with data 500356098 at time 0:39:4.779052637
+DEBUG (6): Mote 6 has received a data message with data 1449008897
 
-DEBUG (5): Packet sent at time 0:39:4.779220483 from 5 
+DEBUG (8): Packet sent at time 0:39:4.771285957 from 8 
+
+DEBUG (8): Message correctly delivered
+
+DEBUG (14): Error in sending packet, send the request again
+
+DEBUG (5): Mote 5 has received a data message with data 583748781
+
+DEBUG (5): Packet sent from: 5, to: 1 , data: 583748781, type: 2
+ 
+DEBUG (6): Packet sent at time 0:39:4.773086486 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (12): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 13 with data 583748781 at time 0:39:4.780364886
+
+DEBUG (5): Packet sent at time 0:39:4.780532732 from 5 
 
 DEBUG (5): Message correctly delivered
 
@@ -1503,121 +1485,107 @@ DEBUG (3): Mote 3 just read new data 18995 above the treshold 564950498 at time 
 
 DEBUG (3): Packet sent from: 3, to: 1 , data: 695487027, type: 2
  
-DEBUG (4): Mote 4 just read new data 23744 above the treshold 33614 at time 0:42:20.072265637
-
-DEBUG (4): Packet sent from: 4, to: 1 , data: 332487872, type: 2
- 
-DEBUG (5): Mote 5 just read new data 28492 above the treshold 33614 at time 0:42:20.072265637
+DEBUG (5): Mote 5 just read new data 28492 above the treshold 564950498 at time 0:42:20.072265637
 
 DEBUG (5): Packet sent from: 5, to: 1 , data: 2116972364, type: 2
  
-DEBUG (6): Mote 6 just read new data 33241 above the treshold 33614 at time 0:42:20.072265638
+DEBUG (6): Mote 6 just read new data 33241 above the treshold 564950498 at time 0:42:20.072265638
 
 DEBUG (6): Packet sent from: 6, to: 5 , data: 1753973209, type: 2
  
-DEBUG (7): Mote 7 just read new data 37990 above the treshold 33614 at time 0:42:20.072265638
+DEBUG (7): Mote 7 just read new data 37990 above the treshold 564950498 at time 0:42:20.072265638
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 1390974054, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 1390974054, type: 2
  
-DEBUG (8): Mote 8 just read new data 42739 above the treshold 33614 at time 0:42:20.072265639
+DEBUG (8): Mote 8 just read new data 42739 above the treshold 564950498 at time 0:42:20.072265639
 
 DEBUG (8): Packet sent from: 8, to: 6 , data: 1027974899, type: 2
  
-DEBUG (9): Mote 9 just read new data 47488 above the treshold 33614 at time 0:42:20.072265639
+DEBUG (9): Mote 9 just read new data 47488 above the treshold 564950498 at time 0:42:20.072265639
 
 DEBUG (9): Packet sent from: 9, to: 6 , data: 664975744, type: 2
  
-DEBUG (10): Mote 10 just read new data 52237 above the treshold 33614 at time 0:42:20.072265640
-
-DEBUG (10): Packet sent from: 10, to: 7 , data: 301976589, type: 2
- 
-DEBUG (11): Mote 11 just read new data 56985 above the treshold 33614 at time 0:42:20.072265640
+DEBUG (11): Mote 11 just read new data 56985 above the treshold 564950498 at time 0:42:20.072265640
 
 DEBUG (11): Packet sent from: 11, to: 7 , data: 2086461081, type: 2
  
-DEBUG (12): Mote 12 just read new data 61734 above the treshold 33614 at time 0:42:20.072265641
+DEBUG (12): Mote 12 just read new data 61734 above the treshold 564950498 at time 0:42:20.072265641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 1723461926, type: 2
+DEBUG (12): Packet sent from: 12, to: 13 , data: 1723461926, type: 2
  
-DEBUG (13): Mote 13 just read new data 947 above the treshold 33614 at time 0:42:20.072265641
+DEBUG (13): Mote 13 just read new data 947 above the treshold 564950498 at time 0:42:20.072265641
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 1360462771, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 1360462771, type: 2
  
 DEBUG (14): Mote 14 just read new data 5696 above the treshold 564950498 at time 0:42:20.072265642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 997463616, type: 2
+DEBUG (14): Packet sent from: 14, to: 13 , data: 997463616, type: 2
  
-DEBUG (7): Error in sending packet, send the request again
+DEBUG (11): Error in sending packet, send the request again
 
-DEBUG (6): Error in sending packet, send the request again
+DEBUG (6): Mote 6 has received a data message with data 1027974899
 
-DEBUG (1): Sink node received data message from 2 with data 1058486182 at time 0:42:20.075332634
+DEBUG (8): Packet sent at time 0:42:20.075973503 from 8 
 
-DEBUG (2): Packet sent at time 0:42:20.075500480 from 2 
+DEBUG (8): Message correctly delivered
+
+DEBUG (13): Mote 13 has received a data message with data 997463616
+
+DEBUG (14): Packet sent at time 0:42:20.077468858 from 14 
+
+DEBUG (14): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 2 with data 1058486182 at time 0:42:20.079208344
+
+DEBUG (2): Packet sent at time 0:42:20.079376190 from 2 
 
 DEBUG (2): Message correctly delivered
 
-DEBUG (10): Error in sending packet, send the request again
+DEBUG (13): Mote 13 has received a data message with data 1723461926
 
-DEBUG (5): Error in sending packet, send the request again
-
-DEBUG (8): Error in sending packet, send the request again
-
-DEBUG (3): Error in sending packet, send the request again
-
-DEBUG (14): Error in sending packet, send the request again
-
-DEBUG (6): Mote 6 has received a data message with data 664975744
-
-DEBUG (6): Packet sent from: 6, to: 5 , data: 664975744, type: 2
- 
-DEBUG (9): Packet sent at time 0:42:20.080017059 from 9 
-
-DEBUG (9): Message correctly delivered
-
-DEBUG (4): Mote 4 has received a data message with data 1723461926
-
-DEBUG (7): Mote 7 has received a data message with data 2086461081
-
-DEBUG (7): Packet sent from: 7, to: 5 , data: 2086461081, type: 2
- 
-DEBUG (12): Packet sent at time 0:42:20.080688443 from 12 
+DEBUG (12): Packet sent at time 0:42:20.079864473 from 12 
 
 DEBUG (12): Message correctly delivered
 
-DEBUG (11): Packet sent at time 0:42:20.080703701 from 11 
+DEBUG (5): Mote 5 has received a data message with data 1753973209
 
-DEBUG (11): Message correctly delivered
+DEBUG (6): Error in sending packet, send the request again
 
-DEBUG (4): Mote 4 has received a data message with data 1360462771
+DEBUG (9): Error in sending packet, send the request again
 
-DEBUG (13): Packet sent at time 0:42:20.083496044 from 13 
+DEBUG (1): Sink node received data message from 3 with data 695487027 at time 0:42:20.083267159
+
+DEBUG (3): Packet sent at time 0:42:20.083435004 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (6): Mote 6 has received a data message with data 1360462771
+
+DEBUG (6): Packet sent from: 6, to: 5 , data: 1360462771, type: 2
+ 
+DEBUG (13): Packet sent at time 0:42:20.083709666 from 13 
 
 DEBUG (13): Message correctly delivered
 
-DEBUG (5): Mote 5 has received a data message with data 664975744
+DEBUG (7): Error in sending packet, send the request again
 
-DEBUG (5): Packet sent from: 5, to: 1 , data: 664975744, type: 2
+DEBUG (1): Sink node received data message from 5 with data 2116972364 at time 0:42:20.086120537
+
+DEBUG (5): Packet sent at time 0:42:20.086288382 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (5): Mote 5 has received a data message with data 1360462771
+
+DEBUG (5): Packet sent from: 5, to: 1 , data: 1360462771, type: 2
  
-DEBUG (6): Packet sent at time 0:42:20.085250793 from 6 
+DEBUG (6): Packet sent at time 0:42:20.090438753 from 6 
 
 DEBUG (6): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 4 with data 332487872 at time 0:42:20.086318899
+DEBUG (1): Sink node received data message from 13 with data 1360462771 at time 0:42:20.095748780
 
-DEBUG (4): Packet sent at time 0:42:20.086486745 from 4 
-
-DEBUG (4): Message correctly delivered
-
-DEBUG (5): Mote 5 has received a data message with data 2086461081
-
-DEBUG (7): Packet sent at time 0:42:20.090255647 from 7 
-
-DEBUG (7): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 9 with data 664975744 at time 0:42:20.093841441
-
-DEBUG (5): Packet sent at time 0:42:20.094009287 from 5 
+DEBUG (5): Packet sent at time 0:42:20.095916626 from 5 
 
 DEBUG (5): Message correctly delivered
 
@@ -1647,19 +1615,7 @@ DEBUG (1): Error in sending packet, send the request again
 
 DEBUG (3): Error in sending packet, send the request again
 
-DEBUG (13): Mote 13 has received a treshold message with treshold 22963 and id 3 from mote 4
-
-DEBUG (13): Packet sent from: 13, treshold: 1097816499, type: 1, treshold_id: 3
-
-DEBUG (12): Mote 12 has received a treshold message with treshold 22963 and id 3 from mote 4
-
-DEBUG (12): Packet sent from: 12, treshold: 1097816499, type: 1, treshold_id: 3
-
 DEBUG (4): Error in sending packet, send the request again
-
-DEBUG (7): Mote 7 has received a treshold message with treshold 22963 and id 3 from mote 5
-
-DEBUG (7): Packet sent from: 7, treshold: 1097816499, type: 1, treshold_id: 3
 
 DEBUG (6): Mote 6 has received a treshold message with treshold 22963 and id 3 from mote 5
 
@@ -1667,45 +1623,39 @@ DEBUG (6): Packet sent from: 6, treshold: 1097816499, type: 1, treshold_id: 3
 
 DEBUG (5): Error in sending packet, send the request again
 
-DEBUG (14): Mote 14 has received a treshold message with treshold 22963 and id 3 from mote 2
+DEBUG (7): Mote 7 has received a treshold message with treshold 22963 and id 3 from mote 2
 
-DEBUG (14): Packet sent from: 14, treshold: 1097816499, type: 1, treshold_id: 3
+DEBUG (7): Packet sent from: 7, treshold: 1097816499, type: 1, treshold_id: 3
 
 DEBUG (2): Error in sending packet, send the request again
 
-DEBUG (9): Mote 9 has received a treshold message with treshold 22963 and id 3 from mote 6
-
-DEBUG (9): Packet sent from: 9, treshold: 1097816499, type: 1, treshold_id: 3
-
-DEBUG (8): Mote 8 has received a treshold message with treshold 22963 and id 3 from mote 6
+DEBUG (8): Mote 8 has received a treshold message with treshold 22963 and id 3 from mote 7
 
 DEBUG (8): Packet sent from: 8, treshold: 1097816499, type: 1, treshold_id: 3
 
-DEBUG (6): Error in sending packet, send the request again
+DEBUG (9): Mote 9 has received a treshold message with treshold 22963 and id 3 from mote 7
 
-DEBUG (12): Error in sending packet, send the request again
+DEBUG (9): Packet sent from: 9, treshold: 1097816499, type: 1, treshold_id: 3
 
 DEBUG (11): Mote 11 has received a treshold message with treshold 22963 and id 3 from mote 7
 
 DEBUG (11): Packet sent from: 11, treshold: 1097816499, type: 1, treshold_id: 3
 
-DEBUG (10): Mote 10 has received a treshold message with treshold 22963 and id 3 from mote 7
-
-DEBUG (10): Packet sent from: 10, treshold: 1097816499, type: 1, treshold_id: 3
-
 DEBUG (7): Error in sending packet, send the request again
 
-DEBUG (9): Error in sending packet, send the request again
+DEBUG (13): Mote 13 has received a treshold message with treshold 22963 and id 3 from mote 6
 
-DEBUG (14): Error in sending packet, send the request again
+DEBUG (13): Packet sent from: 13, treshold: 1097816499, type: 1, treshold_id: 3
 
-DEBUG (13): Error in sending packet, send the request again
-
-DEBUG (10): Error in sending packet, send the request again
+DEBUG (6): Error in sending packet, send the request again
 
 DEBUG (8): Error in sending packet, send the request again
 
+DEBUG (9): Error in sending packet, send the request again
+
 DEBUG (11): Error in sending packet, send the request again
+
+DEBUG (13): Error in sending packet, send the request again
 
 DEBUG (2): Data timer fired at 0:45:35.375000011.
 
@@ -1733,23 +1683,79 @@ DEBUG (13): Data timer fired at 0:45:35.375000016.
 
 DEBUG (14): Data timer fired at 0:45:35.375000017.
 
-DEBUG (14): Mote 14 just read new data 57918 above the treshold 1097816499 at time 0:45:35.384765642
+DEBUG (10): Mote 10 just read new data 29366 above the treshold 564950498 at time 0:45:35.384765640
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 1113645630, type: 2
+DEBUG (10): Packet sent from: 10, to: 13 , data: 816673462, type: 2
  
-DEBUG (2): Mote 2 has received a data message with data 1113645630
+DEBUG (12): Mote 12 just read new data 10874 above the treshold 564950498 at time 0:45:35.384765641
 
-DEBUG (2): Packet sent from: 2, to: 1 , data: 1113645630, type: 2
+DEBUG (12): Packet sent from: 12, to: 13 , data: 965159546, type: 2
  
-DEBUG (14): Packet sent at time 0:45:35.393066374 from 14 
+DEBUG (14): Mote 14 just read new data 57918 above the treshold 564950498 at time 0:45:35.384765642
+
+DEBUG (14): Packet sent from: 14, to: 13 , data: 1113645630, type: 2
+ 
+DEBUG (13): Mote 13 has received a data message with data 965159546
+
+DEBUG (13): Packet sent from: 13, to: 6 , data: 965159546, type: 2
+ 
+DEBUG (12): Packet sent at time 0:45:35.390045151 from 12 
+
+DEBUG (12): Message correctly delivered
+
+DEBUG (6): Mote 6 has received a data message with data 965159546
+
+DEBUG (6): Packet sent from: 6, to: 5 , data: 965159546, type: 2
+ 
+DEBUG (10): Error in sending packet, send the request again
+
+DEBUG (13): Packet sent at time 0:45:35.392654388 from 13 
+
+DEBUG (13): Message correctly delivered
+
+DEBUG (13): Mote 13 has received a data message with data 1113645630
+
+DEBUG (13): Packet sent from: 13, to: 6 , data: 1113645630, type: 2
+ 
+DEBUG (14): Packet sent at time 0:45:35.394332846 from 14 
 
 DEBUG (14): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 14 with data 1113645630 at time 0:45:35.397537173
+DEBUG (5): Mote 5 has received a data message with data 965159546
 
-DEBUG (2): Packet sent at time 0:45:35.397705019 from 2 
+DEBUG (5): Packet sent from: 5, to: 1 , data: 965159546, type: 2
+ 
+DEBUG (6): Packet sent at time 0:45:35.398483212 from 6 
 
-DEBUG (2): Message correctly delivered
+DEBUG (6): Message correctly delivered
+
+DEBUG (6): Mote 6 has received a data message with data 1113645630
+
+DEBUG (6): Packet sent from: 6, to: 5 , data: 1113645630, type: 2
+ 
+DEBUG (13): Packet sent at time 0:45:35.400146411 from 13 
+
+DEBUG (13): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 12 with data 965159546 at time 0:45:35.408401367
+
+DEBUG (5): Packet sent at time 0:45:35.408569213 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (5): Mote 5 has received a data message with data 1113645630
+
+DEBUG (5): Packet sent from: 5, to: 1 , data: 1113645630, type: 2
+ 
+DEBUG (6): Packet sent at time 0:45:35.410827501 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 14 with data 1113645630 at time 0:45:35.416824170
+
+DEBUG (5): Packet sent at time 0:45:35.416992016 from 5 
+
+DEBUG (5): Message correctly delivered
 
 DEBUG (2): Data timer fired at 0:48:50.687500011.
 
@@ -1779,95 +1785,97 @@ DEBUG (14): Data timer fired at 0:48:50.687500017.
 
 DEBUG (9): Mote 9 just read new data 20222 above the treshold 1097816499 at time 0:48:50.697265639
 
-DEBUG (9): Packet sent from: 9, to: 6 , data: 1148079870, type: 2
+DEBUG (9): Packet sent from: 9, to: 7 , data: 1148079870, type: 2
  
-DEBUG (10): Mote 10 just read new data 9137 above the treshold 1097816499 at time 0:48:50.697265640
+DEBUG (10): Mote 10 just read new data 9137 above the treshold 564950498 at time 0:48:50.697265640
 
-DEBUG (10): Packet sent from: 10, to: 7 , data: 1262887857, type: 2
+DEBUG (10): Packet sent from: 10, to: 13 , data: 1262887857, type: 2
  
 DEBUG (11): Mote 11 just read new data 63588 above the treshold 1097816499 at time 0:48:50.697265640
 
 DEBUG (11): Packet sent from: 11, to: 7 , data: 1377695844, type: 2
  
-DEBUG (12): Mote 12 just read new data 52503 above the treshold 1097816499 at time 0:48:50.697265641
+DEBUG (12): Mote 12 just read new data 52503 above the treshold 564950498 at time 0:48:50.697265641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 1492503831, type: 2
+DEBUG (12): Packet sent from: 12, to: 13 , data: 1492503831, type: 2
  
 DEBUG (13): Mote 13 just read new data 41418 above the treshold 1097816499 at time 0:48:50.697265641
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 1607311818, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 1607311818, type: 2
  
-DEBUG (14): Mote 14 just read new data 30333 above the treshold 1097816499 at time 0:48:50.697265642
+DEBUG (14): Mote 14 just read new data 30333 above the treshold 564950498 at time 0:48:50.697265642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 1722119805, type: 2
+DEBUG (14): Packet sent from: 14, to: 13 , data: 1722119805, type: 2
  
-DEBUG (7): Mote 7 has received a data message with data 1262887857
+DEBUG (7): Mote 7 has received a data message with data 1377695844
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 1262887857, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 1377695844, type: 2
  
-DEBUG (10): Packet sent at time 0:48:50.700500484 from 10 
+DEBUG (6): Mote 6 has received a data message with data 1607311818
 
-DEBUG (10): Message correctly delivered
-
-DEBUG (6): Mote 6 has received a data message with data 1148079870
-
-DEBUG (6): Packet sent from: 6, to: 5 , data: 1148079870, type: 2
+DEBUG (6): Packet sent from: 6, to: 5 , data: 1607311818, type: 2
  
-DEBUG (9): Packet sent at time 0:48:50.700851434 from 9 
+DEBUG (11): Error in sending packet, send the request again
+
+DEBUG (13): Packet sent at time 0:48:50.703079206 from 13 
+
+DEBUG (13): Message correctly delivered
+
+DEBUG (14): Error in sending packet, send the request again
+
+DEBUG (12): Error in sending packet, send the request again
+
+DEBUG (7): Mote 7 has received a data message with data 1148079870
+
+DEBUG (9): Packet sent at time 0:48:50.706710774 from 9 
 
 DEBUG (9): Message correctly delivered
 
-DEBUG (7): Mote 7 has received a data message with data 1377695844
+DEBUG (5): Mote 5 has received a data message with data 1607311818
 
-DEBUG (11): Packet sent at time 0:48:50.702072131 from 11 
+DEBUG (5): Packet sent from: 5, to: 1 , data: 1607311818, type: 2
+ 
+DEBUG (6): Packet sent at time 0:48:50.710540710 from 6 
 
-DEBUG (11): Message correctly delivered
+DEBUG (6): Message correctly delivered
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 13 with data 1607311818 at time 0:48:50.713134689
+
+DEBUG (5): Packet sent at time 0:48:50.713302535 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (13): Mote 13 has received a data message with data 1262887857
+
+DEBUG (13): Packet sent from: 13, to: 6 , data: 1262887857, type: 2
+ 
+DEBUG (10): Packet sent at time 0:48:50.713973916 from 10 
+
+DEBUG (10): Message correctly delivered
+
+DEBUG (6): Mote 6 has received a data message with data 1262887857
+
+DEBUG (6): Packet sent from: 6, to: 5 , data: 1262887857, type: 2
+ 
+DEBUG (13): Packet sent at time 0:48:50.720703003 from 13 
+
+DEBUG (13): Message correctly delivered
 
 DEBUG (5): Mote 5 has received a data message with data 1262887857
 
 DEBUG (5): Packet sent from: 5, to: 1 , data: 1262887857, type: 2
  
-DEBUG (7): Packet sent at time 0:48:50.705368009 from 7 
-
-DEBUG (7): Message correctly delivered
-
-DEBUG (4): Mote 4 has received a data message with data 1492503831
-
-DEBUG (4): Packet sent from: 4, to: 1 , data: 1492503831, type: 2
- 
-DEBUG (12): Packet sent at time 0:48:50.706375084 from 12 
-
-DEBUG (12): Message correctly delivered
-
-DEBUG (2): Mote 2 has received a data message with data 1722119805
-
-DEBUG (2): Packet sent from: 2, to: 1 , data: 1722119805, type: 2
- 
-DEBUG (14): Packet sent at time 0:48:50.707153279 from 14 
-
-DEBUG (14): Message correctly delivered
-
-DEBUG (5): Mote 5 has received a data message with data 1148079870
-
-DEBUG (4): Mote 4 has received a data message with data 1607311818
-
-DEBUG (6): Packet sent at time 0:48:50.708145092 from 6 
+DEBUG (6): Packet sent at time 0:48:50.727966144 from 6 
 
 DEBUG (6): Message correctly delivered
 
-DEBUG (13): Packet sent at time 0:48:50.708190870 from 13 
+DEBUG (1): Sink node received data message from 10 with data 1262887857 at time 0:48:50.736221101
 
-DEBUG (13): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 10 with data 1262887857 at time 0:48:50.711776663
-
-DEBUG (5): Packet sent at time 0:48:50.711944509 from 5 
+DEBUG (5): Packet sent at time 0:48:50.736388946 from 5 
 
 DEBUG (5): Message correctly delivered
-
-DEBUG (4): Error in sending packet, send the request again
-
-DEBUG (2): Error in sending packet, send the request again
 
 DEBUG (2): Data timer fired at 0:52:6.000000011.
 
@@ -1909,67 +1917,63 @@ DEBUG (6): Packet sent from: 6, to: 5 , data: 1520206580, type: 2
  
 DEBUG (8): Mote 8 just read new data 61827 above the treshold 1097816499 at time 0:52:6.009765639
 
-DEBUG (8): Packet sent from: 8, to: 6 , data: 1647767939, type: 2
+DEBUG (8): Packet sent from: 8, to: 7 , data: 1647767939, type: 2
  
-DEBUG (10): Mote 10 just read new data 24594 above the treshold 1097816499 at time 0:52:6.009765640
+DEBUG (10): Mote 10 just read new data 24594 above the treshold 564950498 at time 0:52:6.009765640
 
-DEBUG (10): Packet sent from: 10, to: 7 , data: 1775329298, type: 2
+DEBUG (10): Packet sent from: 10, to: 13 , data: 1775329298, type: 2
  
-DEBUG (12): Mote 12 just read new data 52897 above the treshold 1097816499 at time 0:52:6.009765641
+DEBUG (12): Mote 12 just read new data 52897 above the treshold 564950498 at time 0:52:6.009765641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 1902890657, type: 2
+DEBUG (12): Packet sent from: 12, to: 13 , data: 1902890657, type: 2
  
-DEBUG (14): Mote 14 just read new data 15664 above the treshold 1097816499 at time 0:52:6.009765642
+DEBUG (14): Mote 14 just read new data 15664 above the treshold 564950498 at time 0:52:6.009765642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 2030452016, type: 2
+DEBUG (14): Packet sent from: 14, to: 13 , data: 2030452016, type: 2
  
+DEBUG (1): Sink node received data message from 2 with data 1265083862 at time 0:52:6.012817376
+
+DEBUG (2): Packet sent at time 0:52:6.012985221 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 4 with data 1392645221 at time 0:52:6.016403171
+
+DEBUG (4): Packet sent at time 0:52:6.016571017 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (13): Mote 13 has received a data message with data 2030452016
+
+DEBUG (13): Packet sent from: 13, to: 6 , data: 2030452016, type: 2
+ 
+DEBUG (14): Packet sent at time 0:52:6.017333957 from 14 
+
+DEBUG (14): Message correctly delivered
+
+DEBUG (13): Mote 13 has received a data message with data 1775329298
+
+DEBUG (10): Packet sent at time 0:52:6.019607501 from 10 
+
+DEBUG (10): Message correctly delivered
+
+DEBUG (8): Error in sending packet, send the request again
+
+DEBUG (13): Error in sending packet, send the request again
+
+DEBUG (12): Error in sending packet, send the request again
+
 DEBUG (5): Mote 5 has received a data message with data 1520206580
 
 DEBUG (5): Packet sent from: 5, to: 1 , data: 1520206580, type: 2
  
-DEBUG (6): Packet sent at time 0:52:6.015365580 from 6 
+DEBUG (6): Packet sent at time 0:52:6.024673387 from 6 
 
 DEBUG (6): Message correctly delivered
 
-DEBUG (7): Mote 7 has received a data message with data 1775329298
+DEBUG (1): Sink node received data message from 6 with data 1520206580 at time 0:52:6.028152371
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 1775329298, type: 2
- 
-DEBUG (10): Packet sent at time 0:52:6.015869120 from 10 
-
-DEBUG (10): Message correctly delivered
-
-DEBUG (2): Mote 2 has received a data message with data 2030452016
-
-DEBUG (14): Packet sent at time 0:52:6.016082743 from 14 
-
-DEBUG (14): Message correctly delivered
-
-DEBUG (4): Mote 4 has received a data message with data 1902890657
-
-DEBUG (12): Packet sent at time 0:52:6.016632056 from 12 
-
-DEBUG (12): Message correctly delivered
-
-DEBUG (6): Mote 6 has received a data message with data 1647767939
-
-DEBUG (6): Packet sent from: 6, to: 5 , data: 1647767939, type: 2
- 
-DEBUG (8): Packet sent at time 0:52:6.017822232 from 8 
-
-DEBUG (8): Message correctly delivered
-
-DEBUG (2): Error in sending packet, send the request again
-
-DEBUG (4): Error in sending packet, send the request again
-
-DEBUG (6): Error in sending packet, send the request again
-
-DEBUG (7): Error in sending packet, send the request again
-
-DEBUG (1): Sink node received data message from 6 with data 1520206580 at time 0:52:6.026824864
-
-DEBUG (5): Packet sent at time 0:52:6.026992710 from 5 
+DEBUG (5): Packet sent at time 0:52:6.028320217 from 5 
 
 DEBUG (5): Message correctly delivered
 
@@ -2009,59 +2013,75 @@ DEBUG (6): Packet sent from: 6, to: 5 , data: 1499041701, type: 2
  
 DEBUG (9): Mote 9 just read new data 15084 above the treshold 1097816499 at time 0:55:21.322265639
 
-DEBUG (9): Packet sent from: 9, to: 6 , data: 1527921388, type: 2
+DEBUG (9): Packet sent from: 9, to: 7 , data: 1527921388, type: 2
  
-DEBUG (12): Mote 12 just read new data 58931 above the treshold 1097816499 at time 0:55:21.322265641
+DEBUG (10): Mote 10 just read new data 29700 above the treshold 564950498 at time 0:55:21.322265640
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 1556801075, type: 2
+DEBUG (10): Packet sent from: 10, to: 13 , data: 821720068, type: 2
  
+DEBUG (12): Mote 12 just read new data 58931 above the treshold 564950498 at time 0:55:21.322265641
+
+DEBUG (12): Packet sent from: 12, to: 13 , data: 1556801075, type: 2
+ 
+DEBUG (1): Sink node received data message from 3 with data 1470162014 at time 0:55:21.325027461
+
+DEBUG (3): Packet sent at time 0:55:21.325195306 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (13): Mote 13 has received a data message with data 821720068
+
+DEBUG (13): Packet sent from: 13, to: 6 , data: 821720068, type: 2
+ 
+DEBUG (10): Packet sent at time 0:55:21.325866693 from 10 
+
+DEBUG (10): Message correctly delivered
+
+DEBUG (7): Mote 7 has received a data message with data 1527921388
+
+DEBUG (7): Packet sent from: 7, to: 2 , data: 1527921388, type: 2
+ 
+DEBUG (9): Packet sent at time 0:55:21.329544039 from 9 
+
+DEBUG (9): Message correctly delivered
+
 DEBUG (5): Mote 5 has received a data message with data 1499041701
 
 DEBUG (5): Packet sent from: 5, to: 1 , data: 1499041701, type: 2
  
-DEBUG (6): Packet sent at time 0:55:21.327758770 from 6 
+DEBUG (6): Packet sent at time 0:55:21.332534743 from 6 
 
 DEBUG (6): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 3 with data 1470162014 at time 0:55:21.328689549
+DEBUG (12): Error in sending packet, send the request again
 
-DEBUG (3): Packet sent at time 0:55:21.328857394 from 3 
+DEBUG (6): Mote 6 has received a data message with data 821720068
 
-DEBUG (3): Message correctly delivered
-
-DEBUG (4): Mote 4 has received a data message with data 1556801075
-
-DEBUG (4): Packet sent from: 4, to: 1 , data: 1556801075, type: 2
+DEBUG (6): Packet sent from: 6, to: 5 , data: 821720068, type: 2
  
-DEBUG (12): Packet sent at time 0:55:21.329696627 from 12 
+DEBUG (13): Packet sent at time 0:55:21.336303644 from 13 
 
-DEBUG (12): Message correctly delivered
+DEBUG (13): Message correctly delivered
 
-DEBUG (6): Mote 6 has received a data message with data 1527921388
+DEBUG (2): Mote 2 has received a data message with data 1527921388
 
-DEBUG (6): Packet sent from: 6, to: 5 , data: 1527921388, type: 2
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1527921388, type: 2
  
-DEBUG (9): Packet sent at time 0:55:21.329879730 from 9 
+DEBUG (7): Packet sent at time 0:55:21.340377716 from 7 
 
-DEBUG (9): Message correctly delivered
+DEBUG (7): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 6 with data 1499041701 at time 0:55:21.332687330
-
-DEBUG (5): Packet sent at time 0:55:21.332855175 from 5 
-
-DEBUG (5): Message correctly delivered
-
-DEBUG (5): Mote 5 has received a data message with data 1527921388
-
-DEBUG (5): Packet sent from: 5, to: 1 , data: 1527921388, type: 2
- 
-DEBUG (6): Packet sent at time 0:55:21.334548893 from 6 
-
-DEBUG (6): Message correctly delivered
-
-DEBUG (4): Error in sending packet, send the request again
+DEBUG (1): Sink node received data message from 6 with data 1499041701 at time 0:55:21.346099727
 
 DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 9 with data 1527921388 at time 0:55:21.348464827
+
+DEBUG (2): Packet sent at time 0:55:21.348632673 from 2 
+
+DEBUG (2): Message correctly delivered
 
 DEBUG (1): Treshold timer fired at 0:58:36.625000010.
 
@@ -2095,81 +2115,81 @@ DEBUG (1): Sink just read new treshold 6228 with id 4
 
 DEBUG (1): Packet sent from: 1, treshold: 1969887316, type: 1, treshold_id: 4
 
-DEBUG (5): Mote 5 has received a treshold message with treshold 6228 and id 4 from mote 1
-
-DEBUG (5): Packet sent from: 5, treshold: 1969887316, type: 1, treshold_id: 4
-
 DEBUG (4): Mote 4 has received a treshold message with treshold 6228 and id 4 from mote 1
 
 DEBUG (4): Packet sent from: 4, treshold: 1969887316, type: 1, treshold_id: 4
-
-DEBUG (3): Mote 3 has received a treshold message with treshold 6228 and id 4 from mote 1
-
-DEBUG (3): Packet sent from: 3, treshold: 1969887316, type: 1, treshold_id: 4
 
 DEBUG (2): Mote 2 has received a treshold message with treshold 6228 and id 4 from mote 1
 
 DEBUG (2): Packet sent from: 2, treshold: 1969887316, type: 1, treshold_id: 4
 
+DEBUG (3): Mote 3 has received a treshold message with treshold 6228 and id 4 from mote 1
+
+DEBUG (3): Packet sent from: 3, treshold: 1969887316, type: 1, treshold_id: 4
+
+DEBUG (5): Mote 5 has received a treshold message with treshold 6228 and id 4 from mote 1
+
+DEBUG (5): Packet sent from: 5, treshold: 1969887316, type: 1, treshold_id: 4
+
 DEBUG (1): Error in sending packet, send the request again
 
-DEBUG (13): Mote 13 has received a treshold message with treshold 6228 and id 4 from mote 4
+DEBUG (7): Mote 7 has received a treshold message with treshold 6228 and id 4 from mote 2
 
-DEBUG (13): Packet sent from: 13, treshold: 1969887316, type: 1, treshold_id: 4
+DEBUG (7): Packet sent from: 7, treshold: 1969887316, type: 1, treshold_id: 4
 
-DEBUG (12): Mote 12 has received a treshold message with treshold 6228 and id 4 from mote 4
-
-DEBUG (12): Packet sent from: 12, treshold: 1969887316, type: 1, treshold_id: 4
-
-DEBUG (4): Error in sending packet, send the request again
+DEBUG (2): Error in sending packet, send the request again
 
 DEBUG (6): Mote 6 has received a treshold message with treshold 6228 and id 4 from mote 5
 
 DEBUG (6): Packet sent from: 6, treshold: 1969887316, type: 1, treshold_id: 4
 
-DEBUG (7): Mote 7 has received a treshold message with treshold 6228 and id 4 from mote 5
-
-DEBUG (7): Packet sent from: 7, treshold: 1969887316, type: 1, treshold_id: 4
-
 DEBUG (5): Error in sending packet, send the request again
 
-DEBUG (13): Error in sending packet, send the request again
-
-DEBUG (8): Mote 8 has received a treshold message with treshold 6228 and id 4 from mote 6
-
-DEBUG (8): Packet sent from: 8, treshold: 1969887316, type: 1, treshold_id: 4
+DEBUG (4): Error in sending packet, send the request again
 
 DEBUG (9): Mote 9 has received a treshold message with treshold 6228 and id 4 from mote 6
 
 DEBUG (9): Packet sent from: 9, treshold: 1969887316, type: 1, treshold_id: 4
 
+DEBUG (8): Mote 8 has received a treshold message with treshold 6228 and id 4 from mote 6
+
+DEBUG (8): Packet sent from: 8, treshold: 1969887316, type: 1, treshold_id: 4
+
+DEBUG (13): Mote 13 has received a treshold message with treshold 6228 and id 4 from mote 6
+
+DEBUG (13): Packet sent from: 13, treshold: 1969887316, type: 1, treshold_id: 4
+
 DEBUG (6): Error in sending packet, send the request again
-
-DEBUG (14): Mote 14 has received a treshold message with treshold 6228 and id 4 from mote 2
-
-DEBUG (14): Packet sent from: 14, treshold: 1969887316, type: 1, treshold_id: 4
-
-DEBUG (2): Error in sending packet, send the request again
-
-DEBUG (12): Error in sending packet, send the request again
-
-DEBUG (14): Error in sending packet, send the request again
 
 DEBUG (3): Error in sending packet, send the request again
 
-DEBUG (11): Mote 11 has received a treshold message with treshold 6228 and id 4 from mote 7
-
-DEBUG (11): Packet sent from: 11, treshold: 1969887316, type: 1, treshold_id: 4
-
-DEBUG (10): Mote 10 has received a treshold message with treshold 6228 and id 4 from mote 7
-
-DEBUG (10): Packet sent from: 10, treshold: 1969887316, type: 1, treshold_id: 4
+DEBUG (8): Error in sending packet, send the request again
 
 DEBUG (7): Error in sending packet, send the request again
 
 DEBUG (9): Error in sending packet, send the request again
 
-DEBUG (8): Error in sending packet, send the request again
+DEBUG (12): Mote 12 has received a treshold message with treshold 6228 and id 4 from mote 13
+
+DEBUG (12): Packet sent from: 12, treshold: 1969887316, type: 1, treshold_id: 4
+
+DEBUG (10): Mote 10 has received a treshold message with treshold 6228 and id 4 from mote 13
+
+DEBUG (10): Packet sent from: 10, treshold: 1969887316, type: 1, treshold_id: 4
+
+DEBUG (14): Mote 14 has received a treshold message with treshold 6228 and id 4 from mote 13
+
+DEBUG (14): Packet sent from: 14, treshold: 1969887316, type: 1, treshold_id: 4
+
+DEBUG (13): Error in sending packet, send the request again
+
+DEBUG (11): Mote 11 has received a treshold message with treshold 6228 and id 4 from mote 12
+
+DEBUG (11): Packet sent from: 11, treshold: 1969887316, type: 1, treshold_id: 4
+
+DEBUG (12): Error in sending packet, send the request again
+
+DEBUG (14): Error in sending packet, send the request again
 
 DEBUG (10): Error in sending packet, send the request again
 
@@ -2203,21 +2223,37 @@ DEBUG (14): Data timer fired at 1:1:51.937500017.
 
 DEBUG (12): Mote 12 just read new data 61116 above the treshold 1969887316 at time 1:1:51.947265641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 2113990332, type: 2
+DEBUG (12): Packet sent from: 12, to: 13 , data: 2113990332, type: 2
  
-DEBUG (4): Mote 4 has received a data message with data 2113990332
+DEBUG (13): Mote 13 has received a data message with data 2113990332
 
-DEBUG (4): Packet sent from: 4, to: 1 , data: 2113990332, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 2113990332, type: 2
  
-DEBUG (12): Packet sent at time 1:1:51.949737550 from 12 
+DEBUG (12): Packet sent at time 1:1:51.956741293 from 12 
 
 DEBUG (12): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 12 with data 2113990332 at time 1:1:51.957260089
+DEBUG (6): Mote 6 has received a data message with data 2113990332
 
-DEBUG (4): Packet sent at time 1:1:51.957427935 from 4 
+DEBUG (6): Packet sent from: 6, to: 5 , data: 2113990332, type: 2
+ 
+DEBUG (13): Packet sent at time 1:1:51.963775554 from 13 
 
-DEBUG (4): Message correctly delivered
+DEBUG (13): Message correctly delivered
+
+DEBUG (5): Mote 5 has received a data message with data 2113990332
+
+DEBUG (5): Packet sent from: 5, to: 1 , data: 2113990332, type: 2
+ 
+DEBUG (6): Packet sent at time 1:1:51.969573860 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 12 with data 2113990332 at time 1:1:51.974029400
+
+DEBUG (5): Packet sent at time 1:1:51.974197246 from 5 
+
+DEBUG (5): Message correctly delivered
 
 DEBUG (2): Data timer fired at 1:5:7.250000011.
 
@@ -2247,21 +2283,29 @@ DEBUG (14): Data timer fired at 1:5:7.250000017.
 
 DEBUG (13): Mote 13 just read new data 664 above the treshold 1969887316 at time 1:5:7.259765641
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 2009596568, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 2009596568, type: 2
  
-DEBUG (4): Mote 4 has received a data message with data 2009596568
+DEBUG (6): Mote 6 has received a data message with data 2009596568
 
-DEBUG (4): Packet sent from: 4, to: 1 , data: 2009596568, type: 2
+DEBUG (6): Packet sent from: 6, to: 5 , data: 2009596568, type: 2
  
-DEBUG (13): Packet sent at time 1:5:7.262176516 from 13 
+DEBUG (13): Packet sent at time 1:5:7.263305659 from 13 
 
 DEBUG (13): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 13 with data 2009596568 at time 1:5:7.268371548
+DEBUG (5): Mote 5 has received a data message with data 2009596568
 
-DEBUG (4): Packet sent at time 1:5:7.268539394 from 4 
+DEBUG (5): Packet sent from: 5, to: 1 , data: 2009596568, type: 2
+ 
+DEBUG (6): Packet sent at time 1:5:7.271224925 from 6 
 
-DEBUG (4): Message correctly delivered
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 13 with data 2009596568 at time 1:5:7.276092450
+
+DEBUG (5): Packet sent at time 1:5:7.276260296 from 5 
+
+DEBUG (5): Message correctly delivered
 
 DEBUG (2): Data timer fired at 1:8:22.562500011.
 
@@ -2297,13 +2341,13 @@ DEBUG (5): Mote 5 has received a data message with data 1980842827
 
 DEBUG (5): Packet sent from: 5, to: 1 , data: 1980842827, type: 2
  
-DEBUG (6): Packet sent at time 1:8:22.578521705 from 6 
+DEBUG (6): Packet sent at time 1:8:22.575057980 from 6 
 
 DEBUG (6): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 6 with data 1980842827 at time 1:8:22.583724921
+DEBUG (1): Sink node received data message from 6 with data 1980842827 at time 1:8:22.578796361
 
-DEBUG (5): Packet sent at time 1:8:22.583892767 from 5 
+DEBUG (5): Packet sent at time 1:8:22.578964207 from 5 
 
 DEBUG (5): Message correctly delivered
 
@@ -2335,9 +2379,37 @@ DEBUG (14): Data timer fired at 1:11:37.875000017.
 
 DEBUG (12): Mote 12 just read new data 12261 above the treshold 1969887316 at time 1:11:37.884765641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 1992962021, type: 2
+DEBUG (12): Packet sent from: 12, to: 13 , data: 1992962021, type: 2
  
-DEBUG (12): Error in sending packet, send the request again
+DEBUG (13): Mote 13 has received a data message with data 1992962021
+
+DEBUG (13): Packet sent from: 13, to: 6 , data: 1992962021, type: 2
+ 
+DEBUG (12): Packet sent at time 1:11:37.887512207 from 12 
+
+DEBUG (12): Message correctly delivered
+
+DEBUG (6): Mote 6 has received a data message with data 1992962021
+
+DEBUG (6): Packet sent from: 6, to: 5 , data: 1992962021, type: 2
+ 
+DEBUG (13): Packet sent at time 1:11:37.890548688 from 13 
+
+DEBUG (13): Message correctly delivered
+
+DEBUG (5): Mote 5 has received a data message with data 1992962021
+
+DEBUG (5): Packet sent from: 5, to: 1 , data: 1992962021, type: 2
+ 
+DEBUG (6): Packet sent at time 1:11:37.895507765 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 12 with data 1992962021 at time 1:11:37.897491396
+
+DEBUG (5): Packet sent at time 1:11:37.897659242 from 5 
+
+DEBUG (5): Message correctly delivered
 
 DEBUG (1): Treshold timer fired at 1:13:15.531250010.
 
@@ -2353,77 +2425,77 @@ DEBUG (4): Mote 4 has received a treshold message with treshold 28421 and id 5 f
 
 DEBUG (4): Packet sent from: 4, treshold: 140734213, type: 1, treshold_id: 5
 
-DEBUG (2): Mote 2 has received a treshold message with treshold 28421 and id 5 from mote 1
-
-DEBUG (2): Packet sent from: 2, treshold: 140734213, type: 1, treshold_id: 5
-
 DEBUG (3): Mote 3 has received a treshold message with treshold 28421 and id 5 from mote 1
 
 DEBUG (3): Packet sent from: 3, treshold: 140734213, type: 1, treshold_id: 5
 
+DEBUG (2): Mote 2 has received a treshold message with treshold 28421 and id 5 from mote 1
+
+DEBUG (2): Packet sent from: 2, treshold: 140734213, type: 1, treshold_id: 5
+
 DEBUG (1): Error in sending packet, send the request again
 
-DEBUG (3): Error in sending packet, send the request again
+DEBUG (7): Mote 7 has received a treshold message with treshold 28421 and id 5 from mote 2
+
+DEBUG (7): Packet sent from: 7, treshold: 140734213, type: 1, treshold_id: 5
+
+DEBUG (2): Error in sending packet, send the request again
+
+DEBUG (4): Error in sending packet, send the request again
 
 DEBUG (6): Mote 6 has received a treshold message with treshold 28421 and id 5 from mote 5
 
 DEBUG (6): Packet sent from: 6, treshold: 140734213, type: 1, treshold_id: 5
 
-DEBUG (7): Mote 7 has received a treshold message with treshold 28421 and id 5 from mote 5
-
-DEBUG (7): Packet sent from: 7, treshold: 140734213, type: 1, treshold_id: 5
-
 DEBUG (5): Error in sending packet, send the request again
 
-DEBUG (14): Mote 14 has received a treshold message with treshold 28421 and id 5 from mote 2
-
-DEBUG (14): Packet sent from: 14, treshold: 140734213, type: 1, treshold_id: 5
-
-DEBUG (2): Error in sending packet, send the request again
-
-DEBUG (13): Mote 13 has received a treshold message with treshold 28421 and id 5 from mote 4
-
-DEBUG (13): Packet sent from: 13, treshold: 140734213, type: 1, treshold_id: 5
-
-DEBUG (12): Mote 12 has received a treshold message with treshold 28421 and id 5 from mote 4
-
-DEBUG (12): Packet sent from: 12, treshold: 140734213, type: 1, treshold_id: 5
-
-DEBUG (4): Error in sending packet, send the request again
-
-DEBUG (14): Error in sending packet, send the request again
-
-DEBUG (9): Mote 9 has received a treshold message with treshold 28421 and id 5 from mote 6
-
-DEBUG (9): Packet sent from: 9, treshold: 140734213, type: 1, treshold_id: 5
-
-DEBUG (8): Mote 8 has received a treshold message with treshold 28421 and id 5 from mote 6
+DEBUG (8): Mote 8 has received a treshold message with treshold 28421 and id 5 from mote 7
 
 DEBUG (8): Packet sent from: 8, treshold: 140734213, type: 1, treshold_id: 5
-
-DEBUG (6): Error in sending packet, send the request again
 
 DEBUG (11): Mote 11 has received a treshold message with treshold 28421 and id 5 from mote 7
 
 DEBUG (11): Packet sent from: 11, treshold: 140734213, type: 1, treshold_id: 5
 
-DEBUG (10): Mote 10 has received a treshold message with treshold 28421 and id 5 from mote 7
+DEBUG (9): Mote 9 has received a treshold message with treshold 28421 and id 5 from mote 7
 
-DEBUG (10): Packet sent from: 10, treshold: 140734213, type: 1, treshold_id: 5
+DEBUG (9): Packet sent from: 9, treshold: 140734213, type: 1, treshold_id: 5
 
 DEBUG (7): Error in sending packet, send the request again
 
-DEBUG (12): Error in sending packet, send the request again
-
-DEBUG (13): Error in sending packet, send the request again
-
-DEBUG (11): Error in sending packet, send the request again
-
-DEBUG (9): Error in sending packet, send the request again
+DEBUG (3): Error in sending packet, send the request again
 
 DEBUG (8): Error in sending packet, send the request again
 
+DEBUG (13): Mote 13 has received a treshold message with treshold 28421 and id 5 from mote 6
+
+DEBUG (13): Packet sent from: 13, treshold: 140734213, type: 1, treshold_id: 5
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (9): Error in sending packet, send the request again
+
+DEBUG (12): Mote 12 has received a treshold message with treshold 28421 and id 5 from mote 11
+
+DEBUG (12): Packet sent from: 12, treshold: 140734213, type: 1, treshold_id: 5
+
+DEBUG (14): Mote 14 has received a treshold message with treshold 28421 and id 5 from mote 11
+
+DEBUG (14): Packet sent from: 14, treshold: 140734213, type: 1, treshold_id: 5
+
+DEBUG (10): Mote 10 has received a treshold message with treshold 28421 and id 5 from mote 11
+
+DEBUG (10): Packet sent from: 10, treshold: 140734213, type: 1, treshold_id: 5
+
+DEBUG (11): Error in sending packet, send the request again
+
+DEBUG (13): Error in sending packet, send the request again
+
 DEBUG (10): Error in sending packet, send the request again
+
+DEBUG (12): Error in sending packet, send the request again
+
+DEBUG (14): Error in sending packet, send the request again
 
 DEBUG (2): Data timer fired at 1:14:53.187500011.
 
@@ -2473,19 +2545,19 @@ DEBUG (6): Packet sent from: 6, to: 5 , data: 263789375, type: 2
  
 DEBUG (7): Mote 7 just read new data 45420 above the treshold 140734213 at time 1:14:53.197265638
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 1528607084, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 1528607084, type: 2
  
 DEBUG (8): Mote 8 just read new data 18330 above the treshold 140734213 at time 1:14:53.197265639
 
-DEBUG (8): Packet sent from: 8, to: 6 , data: 645941146, type: 2
+DEBUG (8): Packet sent from: 8, to: 7 , data: 645941146, type: 2
  
 DEBUG (9): Mote 9 just read new data 56775 above the treshold 140734213 at time 1:14:53.197265639
 
-DEBUG (9): Packet sent from: 9, to: 6 , data: 1910758855, type: 2
+DEBUG (9): Packet sent from: 9, to: 7 , data: 1910758855, type: 2
  
 DEBUG (10): Mote 10 just read new data 29685 above the treshold 140734213 at time 1:14:53.197265640
 
-DEBUG (10): Packet sent from: 10, to: 7 , data: 1028092917, type: 2
+DEBUG (10): Packet sent from: 10, to: 11 , data: 1028092917, type: 2
  
 DEBUG (11): Mote 11 just read new data 2595 above the treshold 140734213 at time 1:14:53.197265640
 
@@ -2493,95 +2565,79 @@ DEBUG (11): Packet sent from: 11, to: 7 , data: 145426979, type: 2
  
 DEBUG (12): Mote 12 just read new data 41040 above the treshold 140734213 at time 1:14:53.197265641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 1410244688, type: 2
+DEBUG (12): Packet sent from: 12, to: 11 , data: 1410244688, type: 2
  
 DEBUG (13): Mote 13 just read new data 13950 above the treshold 140734213 at time 1:14:53.197265641
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 527578750, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 527578750, type: 2
  
 DEBUG (14): Mote 14 just read new data 52395 above the treshold 140734213 at time 1:14:53.197265642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 1792396459, type: 2
+DEBUG (14): Packet sent from: 14, to: 11 , data: 1792396459, type: 2
  
-DEBUG (6): Mote 6 has received a data message with data 1910758855
+DEBUG (7): Mote 7 has received a data message with data 1910758855
 
-DEBUG (9): Packet sent at time 1:14:53.199386598 from 9 
+DEBUG (9): Packet sent at time 1:14:53.199722290 from 9 
 
 DEBUG (9): Message correctly delivered
 
-DEBUG (2): Error in sending packet, send the request again
-
-DEBUG (5): Error in sending packet, send the request again
-
 DEBUG (13): Error in sending packet, send the request again
 
-DEBUG (12): Error in sending packet, send the request again
+DEBUG (1): Sink node received data message from 5 with data 1146455313 at time 1:14:53.201477038
 
-DEBUG (7): Mote 7 has received a data message with data 1028092917
+DEBUG (5): Packet sent at time 1:14:53.201644884 from 5 
 
-DEBUG (10): Packet sent at time 1:14:53.203170756 from 10 
+DEBUG (5): Message correctly delivered
 
-DEBUG (10): Message correctly delivered
+DEBUG (7): Mote 7 has received a data message with data 645941146
 
-DEBUG (5): Mote 5 has received a data message with data 263789375
-
-DEBUG (5): Packet sent from: 5, to: 1 , data: 263789375, type: 2
- 
-DEBUG (6): Packet sent at time 1:14:53.204040500 from 6 
-
-DEBUG (6): Message correctly delivered
-
-DEBUG (4): Error in sending packet, send the request again
-
-DEBUG (3): Error in sending packet, send the request again
-
-DEBUG (6): Mote 6 has received a data message with data 645941146
-
-DEBUG (6): Packet sent from: 6, to: 5 , data: 645941146, type: 2
- 
-DEBUG (8): Packet sent at time 1:14:53.205825769 from 8 
+DEBUG (8): Packet sent at time 1:14:53.202194199 from 8 
 
 DEBUG (8): Message correctly delivered
 
-DEBUG (5): Mote 5 has received a data message with data 1528607084
+DEBUG (14): Error in sending packet, send the request again
 
-DEBUG (7): Packet sent at time 1:14:53.206832843 from 7 
+DEBUG (3): Error in sending packet, send the request again
+
+DEBUG (4): Error in sending packet, send the request again
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (11): Mote 11 has received a data message with data 1410244688
+
+DEBUG (1): Sink node received data message from 2 with data 1646969480 at time 1:14:53.206191975
+
+DEBUG (12): Packet sent at time 1:14:53.206237756 from 12 
+
+DEBUG (12): Message correctly delivered
+
+DEBUG (2): Packet sent at time 1:14:53.206359821 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (7): Mote 7 has received a data message with data 145426979
+
+DEBUG (7): Packet sent from: 7, to: 2 , data: 145426979, type: 2
+ 
+DEBUG (11): Packet sent at time 1:14:53.208221387 from 11 
+
+DEBUG (11): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 145426979
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 145426979, type: 2
+ 
+DEBUG (7): Packet sent at time 1:14:53.210388122 from 7 
 
 DEBUG (7): Message correctly delivered
 
-DEBUG (2): Mote 2 has received a data message with data 1792396459
+DEBUG (10): Error in sending packet, send the request again
 
-DEBUG (2): Packet sent from: 2, to: 1 , data: 1792396459, type: 2
- 
-DEBUG (14): Packet sent at time 1:14:53.208145095 from 14 
+DEBUG (1): Sink node received data message from 11 with data 145426979 at time 1:14:53.219650153
 
-DEBUG (14): Message correctly delivered
-
-DEBUG (11): Error in sending packet, send the request again
-
-DEBUG (1): Sink node received data message from 6 with data 263789375 at time 1:14:53.210205015
-
-DEBUG (5): Packet sent at time 1:14:53.210372861 from 5 
-
-DEBUG (5): Message correctly delivered
-
-DEBUG (5): Mote 5 has received a data message with data 645941146
-
-DEBUG (5): Packet sent from: 5, to: 1 , data: 645941146, type: 2
- 
-DEBUG (6): Packet sent at time 1:14:53.212570115 from 6 
-
-DEBUG (6): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 8 with data 645941146 at time 1:14:53.214752109
-
-DEBUG (5): Packet sent at time 1:14:53.214919954 from 5 
-
-DEBUG (5): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 14 with data 1792396459 at time 1:14:53.217224021
-
-DEBUG (2): Packet sent at time 1:14:53.217391867 from 2 
+DEBUG (2): Packet sent at time 1:14:53.219817999 from 2 
 
 DEBUG (2): Message correctly delivered
 
@@ -2633,19 +2689,19 @@ DEBUG (6): Packet sent from: 6, to: 5 , data: 1101778217, type: 2
  
 DEBUG (7): Mote 7 just read new data 22575 above the treshold 140734213 at time 1:18:8.509765638
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 952391727, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 952391727, type: 2
  
 DEBUG (8): Mote 8 just read new data 58165 above the treshold 140734213 at time 1:18:8.509765639
 
-DEBUG (8): Packet sent from: 8, to: 6 , data: 803005237, type: 2
+DEBUG (8): Packet sent from: 8, to: 7 , data: 803005237, type: 2
  
 DEBUG (9): Mote 9 just read new data 28219 above the treshold 140734213 at time 1:18:8.509765639
 
-DEBUG (9): Packet sent from: 9, to: 6 , data: 653618747, type: 2
+DEBUG (9): Packet sent from: 9, to: 7 , data: 653618747, type: 2
  
 DEBUG (10): Mote 10 just read new data 63809 above the treshold 140734213 at time 1:18:8.509765640
 
-DEBUG (10): Packet sent from: 10, to: 7 , data: 504232257, type: 2
+DEBUG (10): Packet sent from: 10, to: 11 , data: 504232257, type: 2
  
 DEBUG (11): Mote 11 just read new data 33863 above the treshold 140734213 at time 1:18:8.509765640
 
@@ -2653,71 +2709,83 @@ DEBUG (11): Packet sent from: 11, to: 7 , data: 354845767, type: 2
  
 DEBUG (12): Mote 12 just read new data 3917 above the treshold 140734213 at time 1:18:8.509765641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 205459277, type: 2
+DEBUG (12): Packet sent from: 12, to: 11 , data: 205459277, type: 2
  
 DEBUG (14): Mote 14 just read new data 9560 above the treshold 140734213 at time 1:18:8.509765642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 2054169944, type: 2
+DEBUG (14): Packet sent from: 14, to: 11 , data: 2054169944, type: 2
  
-DEBUG (4): Mote 4 has received a data message with data 205459277
+DEBUG (11): Mote 11 has received a data message with data 504232257
 
-DEBUG (12): Packet sent at time 1:18:8.512573241 from 12 
-
-DEBUG (12): Message correctly delivered
-
-DEBUG (7): Mote 7 has received a data message with data 504232257
-
-DEBUG (10): Packet sent at time 1:18:8.513214106 from 10 
+DEBUG (10): Packet sent at time 1:18:8.512573240 from 10 
 
 DEBUG (10): Message correctly delivered
 
-DEBUG (5): Mote 5 has received a data message with data 1101778217
+DEBUG (6): Error in sending packet, send the request again
 
-DEBUG (6): Packet sent at time 1:18:8.515533426 from 6 
+DEBUG (1): Sink node received data message from 4 with data 1400551197 at time 1:18:8.513702381
 
-DEBUG (6): Message correctly delivered
+DEBUG (4): Packet sent at time 1:18:8.513870227 from 4 
 
-DEBUG (11): Error in sending packet, send the request again
-
-DEBUG (2): Error in sending packet, send the request again
-
-DEBUG (5): Error in sending packet, send the request again
-
-DEBUG (8): Error in sending packet, send the request again
-
-DEBUG (4): Error in sending packet, send the request again
-
-DEBUG (14): Error in sending packet, send the request again
+DEBUG (4): Message correctly delivered
 
 DEBUG (7): Error in sending packet, send the request again
 
-DEBUG (6): Mote 6 has received a data message with data 653618747
+DEBUG (14): Error in sending packet, send the request again
 
-DEBUG (6): Packet sent from: 6, to: 5 , data: 653618747, type: 2
- 
-DEBUG (9): Packet sent at time 1:18:8.520095779 from 9 
+DEBUG (1): Sink node received data message from 5 with data 1251164707 at time 1:18:8.516128515
 
-DEBUG (9): Message correctly delivered
+DEBUG (5): Packet sent at time 1:18:8.516296361 from 5 
 
-DEBUG (1): Sink node received data message from 3 with data 1549937687 at time 1:18:8.520812935
+DEBUG (5): Message correctly delivered
 
-DEBUG (3): Packet sent at time 1:18:8.520980781 from 3 
+DEBUG (11): Error in sending packet, send the request again
+
+DEBUG (9): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 3 with data 1549937687 at time 1:18:8.518905597
+
+DEBUG (3): Packet sent at time 1:18:8.519073443 from 3 
 
 DEBUG (3): Message correctly delivered
 
-DEBUG (5): Mote 5 has received a data message with data 653618747
+DEBUG (11): Mote 11 has received a data message with data 205459277
 
-DEBUG (5): Packet sent from: 5, to: 1 , data: 653618747, type: 2
+DEBUG (11): Packet sent from: 11, to: 7 , data: 205459277, type: 2
  
-DEBUG (6): Packet sent at time 1:18:8.525558394 from 6 
+DEBUG (12): Packet sent at time 1:18:8.520065263 from 12 
 
-DEBUG (6): Message correctly delivered
+DEBUG (12): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 9 with data 653618747 at time 1:18:8.529876606
+DEBUG (8): Error in sending packet, send the request again
 
-DEBUG (5): Packet sent at time 1:18:8.530044451 from 5 
+DEBUG (1): Sink node received data message from 2 with data 1699324177 at time 1:18:8.521850526
 
-DEBUG (5): Message correctly delivered
+DEBUG (2): Packet sent at time 1:18:8.522018372 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (7): Mote 7 has received a data message with data 205459277
+
+DEBUG (7): Packet sent from: 7, to: 2 , data: 205459277, type: 2
+ 
+DEBUG (11): Packet sent at time 1:18:8.530456438 from 11 
+
+DEBUG (11): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 205459277
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 205459277, type: 2
+ 
+DEBUG (7): Packet sent at time 1:18:8.537032937 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 12 with data 205459277 at time 1:18:8.543227970
+
+DEBUG (2): Packet sent at time 1:18:8.543395815 from 2 
+
+DEBUG (2): Message correctly delivered
 
 DEBUG (2): Data timer fired at 1:21:23.812500011.
 
@@ -2767,19 +2835,19 @@ DEBUG (6): Packet sent from: 6, to: 5 , data: 1982488685, type: 2
  
 DEBUG (7): Mote 7 just read new data 37574 above the treshold 140734213 at time 1:21:23.822265638
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 1652134598, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 1652134598, type: 2
  
 DEBUG (8): Mote 8 just read new data 50463 above the treshold 140734213 at time 1:21:23.822265639
 
-DEBUG (8): Packet sent from: 8, to: 6 , data: 1321780511, type: 2
+DEBUG (8): Packet sent from: 8, to: 7 , data: 1321780511, type: 2
  
 DEBUG (9): Mote 9 just read new data 63352 above the treshold 140734213 at time 1:21:23.822265639
 
-DEBUG (9): Packet sent from: 9, to: 6 , data: 991426424, type: 2
+DEBUG (9): Packet sent from: 9, to: 7 , data: 991426424, type: 2
  
 DEBUG (10): Mote 10 just read new data 10705 above the treshold 140734213 at time 1:21:23.822265640
 
-DEBUG (10): Packet sent from: 10, to: 7 , data: 661072337, type: 2
+DEBUG (10): Packet sent from: 10, to: 11 , data: 661072337, type: 2
  
 DEBUG (11): Mote 11 just read new data 23594 above the treshold 140734213 at time 1:21:23.822265640
 
@@ -2787,71 +2855,85 @@ DEBUG (11): Packet sent from: 11, to: 7 , data: 330718250, type: 2
  
 DEBUG (13): Mote 13 just read new data 49371 above the treshold 140734213 at time 1:21:23.822265641
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 1817493723, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 1817493723, type: 2
  
 DEBUG (14): Mote 14 just read new data 62260 above the treshold 140734213 at time 1:21:23.822265642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 1487139636, type: 2
+DEBUG (14): Packet sent from: 14, to: 11 , data: 1487139636, type: 2
  
-DEBUG (5): Mote 5 has received a data message with data 1982488685
-
-DEBUG (6): Packet sent at time 1:21:23.825790397 from 6 
-
-DEBUG (6): Message correctly delivered
-
-DEBUG (5): Error in sending packet, send the request again
-
-DEBUG (3): Error in sending packet, send the request again
-
-DEBUG (5): Mote 5 has received a data message with data 1652134598
-
-DEBUG (5): Packet sent from: 5, to: 1 , data: 1652134598, type: 2
- 
-DEBUG (7): Packet sent at time 1:21:23.829635590 from 7 
-
-DEBUG (7): Message correctly delivered
-
-DEBUG (4): Error in sending packet, send the request again
-
-DEBUG (2): Mote 2 has received a data message with data 1487139636
-
-DEBUG (14): Packet sent at time 1:21:23.830993618 from 14 
-
-DEBUG (14): Message correctly delivered
-
-DEBUG (8): Error in sending packet, send the request again
-
 DEBUG (11): Error in sending packet, send the request again
 
 DEBUG (10): Error in sending packet, send the request again
 
-DEBUG (4): Mote 4 has received a data message with data 1817493723
+DEBUG (8): Error in sending packet, send the request again
 
-DEBUG (4): Packet sent from: 4, to: 1 , data: 1817493723, type: 2
- 
-DEBUG (13): Packet sent at time 1:21:23.832748368 from 13 
+DEBUG (7): Mote 7 has received a data message with data 991426424
 
-DEBUG (13): Message correctly delivered
+DEBUG (5): Mote 5 has received a data message with data 1982488685
 
 DEBUG (9): Error in sending packet, send the request again
 
-DEBUG (1): Sink node received data message from 2 with data 1156421386 at time 1:21:23.833526556
+DEBUG (6): Packet sent at time 1:21:23.827011093 from 6 
 
-DEBUG (2): Packet sent at time 1:21:23.833694402 from 2 
+DEBUG (6): Message correctly delivered
 
-DEBUG (2): Message correctly delivered
+DEBUG (1): Sink node received data message from 5 with data 165359125 at time 1:21:23.828552221
 
-DEBUG (1): Sink node received data message from 7 with data 1652134598 at time 1:21:23.836624075
-
-DEBUG (5): Packet sent at time 1:21:23.836791920 from 5 
+DEBUG (5): Packet sent at time 1:21:23.828720067 from 5 
 
 DEBUG (5): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 13 with data 1817493723 at time 1:21:23.840133579
+DEBUG (7): Error in sending packet, send the request again
 
-DEBUG (4): Packet sent at time 1:21:23.840301424 from 4 
+DEBUG (13): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 4 with data 495713212 at time 1:21:23.830352748
+
+DEBUG (4): Packet sent at time 1:21:23.830520593 from 4 
 
 DEBUG (4): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 2 with data 1156421386 at time 1:21:23.832336378
+
+DEBUG (2): Packet sent at time 1:21:23.832504223 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (11): Mote 11 has received a data message with data 1487139636
+
+DEBUG (11): Packet sent from: 11, to: 7 , data: 1487139636, type: 2
+ 
+DEBUG (14): Packet sent at time 1:21:23.832824662 from 14 
+
+DEBUG (14): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 3 with data 826067299 at time 1:21:23.834777770
+
+DEBUG (3): Packet sent at time 1:21:23.834945616 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (7): Mote 7 has received a data message with data 1487139636
+
+DEBUG (7): Packet sent from: 7, to: 2 , data: 1487139636, type: 2
+ 
+DEBUG (11): Packet sent at time 1:21:23.837524342 from 11 
+
+DEBUG (11): Message correctly delivered
+
+DEBUG (2): Mote 2 has received a data message with data 1487139636
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1487139636, type: 2
+ 
+DEBUG (7): Packet sent at time 1:21:23.843246354 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 14 with data 1487139636 at time 1:21:23.849273541
+
+DEBUG (2): Packet sent at time 1:21:23.849441386 from 2 
+
+DEBUG (2): Message correctly delivered
 
 DEBUG (2): Data timer fired at 1:24:39.125000011.
 
@@ -2901,19 +2983,19 @@ DEBUG (6): Packet sent from: 6, to: 5 , data: 1478545590, type: 2
  
 DEBUG (7): Mote 7 just read new data 14252 above the treshold 140734213 at time 1:24:39.134765638
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 462632876, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 462632876, type: 2
  
 DEBUG (8): Mote 8 just read new data 40609 above the treshold 140734213 at time 1:24:39.134765639
 
-DEBUG (8): Packet sent from: 8, to: 6 , data: 1594203809, type: 2
+DEBUG (8): Packet sent from: 8, to: 7 , data: 1594203809, type: 2
  
 DEBUG (9): Mote 9 just read new data 1431 above the treshold 140734213 at time 1:24:39.134765639
 
-DEBUG (9): Packet sent from: 9, to: 6 , data: 578291095, type: 2
+DEBUG (9): Packet sent from: 9, to: 7 , data: 578291095, type: 2
  
 DEBUG (10): Mote 10 just read new data 27788 above the treshold 140734213 at time 1:24:39.134765640
 
-DEBUG (10): Packet sent from: 10, to: 7 , data: 1709862028, type: 2
+DEBUG (10): Packet sent from: 10, to: 11 , data: 1709862028, type: 2
  
 DEBUG (11): Mote 11 just read new data 54146 above the treshold 140734213 at time 1:24:39.134765640
 
@@ -2921,97 +3003,93 @@ DEBUG (11): Packet sent from: 11, to: 7 , data: 693949314, type: 2
  
 DEBUG (12): Mote 12 just read new data 14967 above the treshold 140734213 at time 1:24:39.134765641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 1825520247, type: 2
+DEBUG (12): Packet sent from: 12, to: 11 , data: 1825520247, type: 2
  
 DEBUG (13): Mote 13 just read new data 41325 above the treshold 140734213 at time 1:24:39.134765641
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 809607533, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 809607533, type: 2
  
 DEBUG (14): Mote 14 just read new data 2146 above the treshold 140734213 at time 1:24:39.134765642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 1941178466, type: 2
+DEBUG (14): Packet sent from: 14, to: 11 , data: 1941178466, type: 2
  
-DEBUG (4): Mote 4 has received a data message with data 809607533
+DEBUG (11): Error in sending packet, send the request again
 
-DEBUG (3): Error in sending packet, send the request again
+DEBUG (9): Error in sending packet, send the request again
 
-DEBUG (13): Packet sent at time 1:24:39.137130740 from 13 
+DEBUG (1): Sink node received data message from 2 with data 1247229152 at time 1:24:39.138748156
 
-DEBUG (13): Message correctly delivered
-
-DEBUG (8): Error in sending packet, send the request again
-
-DEBUG (5): Error in sending packet, send the request again
-
-DEBUG (14): Error in sending packet, send the request again
-
-DEBUG (4): Mote 4 has received a data message with data 1825520247
-
-DEBUG (12): Packet sent at time 1:24:39.138671868 from 12 
-
-DEBUG (12): Message correctly delivered
-
-DEBUG (10): Error in sending packet, send the request again
-
-DEBUG (1): Sink node received data message from 2 with data 1247229152 at time 1:24:39.139724713
-
-DEBUG (2): Packet sent at time 1:24:39.139892559 from 2 
+DEBUG (2): Packet sent at time 1:24:39.138916002 from 2 
 
 DEBUG (2): Message correctly delivered
 
+DEBUG (11): Mote 11 has received a data message with data 1825520247
+
+DEBUG (11): Packet sent from: 11, to: 7 , data: 1825520247, type: 2
+ 
+DEBUG (12): Packet sent at time 1:24:39.139327992 from 12 
+
+DEBUG (12): Message correctly delivered
+
 DEBUG (5): Mote 5 has received a data message with data 1478545590
 
-DEBUG (5): Packet sent from: 5, to: 1 , data: 1478545590, type: 2
- 
-DEBUG (6): Packet sent at time 1:24:39.140487650 from 6 
+DEBUG (13): Error in sending packet, send the request again
+
+DEBUG (6): Packet sent at time 1:24:39.141036963 from 6 
 
 DEBUG (6): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 4 with data 1362887371 at time 1:24:39.141799897
+DEBUG (1): Sink node received data message from 5 with data 346974657 at time 1:24:39.142517057
 
-DEBUG (4): Packet sent at time 1:24:39.141967743 from 4 
+DEBUG (5): Packet sent at time 1:24:39.142684902 from 5 
+
+DEBUG (5): Message correctly delivered
+
+DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (8): Error in sending packet, send the request again
+
+DEBUG (1): Sink node received data message from 3 with data 231316438 at time 1:24:39.144164995
+
+DEBUG (14): Error in sending packet, send the request again
+
+DEBUG (3): Packet sent at time 1:24:39.144332841 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (11): Mote 11 has received a data message with data 1709862028
+
+DEBUG (1): Sink node received data message from 4 with data 1362887371 at time 1:24:39.146667423
+
+DEBUG (10): Packet sent at time 1:24:39.146682684 from 10 
+
+DEBUG (10): Message correctly delivered
+
+DEBUG (4): Packet sent at time 1:24:39.146835268 from 4 
 
 DEBUG (4): Message correctly delivered
 
-DEBUG (6): Mote 6 has received a data message with data 578291095
+DEBUG (7): Mote 7 has received a data message with data 1825520247
 
-DEBUG (6): Packet sent from: 6, to: 5 , data: 578291095, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 1825520247, type: 2
  
-DEBUG (9): Packet sent at time 1:24:39.144287068 from 9 
-
-DEBUG (9): Message correctly delivered
-
-DEBUG (7): Mote 7 has received a data message with data 693949314
-
-DEBUG (11): Packet sent at time 1:24:39.144592243 from 11 
+DEBUG (11): Packet sent at time 1:24:39.149307182 from 11 
 
 DEBUG (11): Message correctly delivered
 
-DEBUG (5): Mote 5 has received a data message with data 462632876
+DEBUG (2): Mote 2 has received a data message with data 1825520247
 
-DEBUG (7): Packet sent at time 1:24:39.147354066 from 7 
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1825520247, type: 2
+ 
+DEBUG (7): Packet sent at time 1:24:39.153259185 from 7 
 
 DEBUG (7): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 6 with data 1478545590 at time 1:24:39.149185109
+DEBUG (1): Sink node received data message from 12 with data 1825520247 at time 1:24:39.161361555
 
-DEBUG (5): Packet sent at time 1:24:39.149352955 from 5 
+DEBUG (2): Packet sent at time 1:24:39.161529400 from 2 
 
-DEBUG (5): Message correctly delivered
-
-DEBUG (5): Mote 5 has received a data message with data 578291095
-
-DEBUG (5): Packet sent from: 5, to: 1 , data: 578291095, type: 2
- 
-DEBUG (6): Packet sent at time 1:24:39.153167631 from 6 
-
-DEBUG (6): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 9 with data 578291095 at time 1:24:39.157165411
-
-DEBUG (5): Packet sent at time 1:24:39.157333256 from 5 
-
-DEBUG (5): Message correctly delivered
+DEBUG (2): Message correctly delivered
 
 DEBUG (1): Treshold timer fired at 1:27:54.437500010.
 
@@ -3067,15 +3145,15 @@ DEBUG (6): Packet sent from: 6, to: 5 , data: 1382451693, type: 2
  
 DEBUG (7): Mote 7 just read new data 2904 above the treshold 140734213 at time 1:27:54.447265638
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 1579944792, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 1579944792, type: 2
  
 DEBUG (8): Mote 8 just read new data 36035 above the treshold 140734213 at time 1:27:54.447265639
 
-DEBUG (8): Packet sent from: 8, to: 6 , data: 1777437891, type: 2
+DEBUG (8): Packet sent from: 8, to: 7 , data: 1777437891, type: 2
  
 DEBUG (9): Mote 9 just read new data 3630 above the treshold 140734213 at time 1:27:54.447265639
 
-DEBUG (9): Packet sent from: 9, to: 6 , data: 1974930990, type: 2
+DEBUG (9): Packet sent from: 9, to: 7 , data: 1974930990, type: 2
  
 DEBUG (11): Mote 11 just read new data 4357 above the treshold 140734213 at time 1:27:54.447265640
 
@@ -3083,83 +3161,55 @@ DEBUG (11): Packet sent from: 11, to: 7 , data: 222433541, type: 2
  
 DEBUG (12): Mote 12 just read new data 37488 above the treshold 140734213 at time 1:27:54.447265641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 419926640, type: 2
+DEBUG (12): Packet sent from: 12, to: 11 , data: 419926640, type: 2
  
 DEBUG (13): Mote 13 just read new data 5083 above the treshold 140734213 at time 1:27:54.447265641
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 617419739, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 617419739, type: 2
  
 DEBUG (14): Mote 14 just read new data 38214 above the treshold 140734213 at time 1:27:54.447265642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 814912838, type: 2
+DEBUG (14): Packet sent from: 14, to: 11 , data: 814912838, type: 2
  
-DEBUG (7): Error in sending packet, send the request again
+DEBUG (1): Sink node received data message from 3 with data 789972396 at time 1:27:54.449951167
 
-DEBUG (4): Mote 4 has received a treshold message with treshold 46480 and id 6 from mote 1
+DEBUG (3): Packet sent at time 1:27:54.450119013 from 3 
 
-DEBUG (1): Error in sending packet, send the request again
+DEBUG (3): Message correctly delivered
 
-DEBUG (3): Error in sending packet, send the request again
+DEBUG (7): Mote 7 has received a data message with data 1777437891
 
-DEBUG (6): Mote 6 has received a data message with data 1777437891
-
-DEBUG (8): Packet sent at time 1:27:54.452392562 from 8 
+DEBUG (8): Packet sent at time 1:27:54.450881950 from 8 
 
 DEBUG (8): Message correctly delivered
 
-DEBUG (4): Mote 4 has received a data message with data 419926640
+DEBUG (11): Mote 11 has received a data message with data 814912838
 
-DEBUG (5): Mote 5 has received a data message with data 1382451693
-
-DEBUG (12): Packet sent at time 1:27:54.454238866 from 12 
-
-DEBUG (12): Message correctly delivered
-
-DEBUG (6): Packet sent at time 1:27:54.454299898 from 6 
-
-DEBUG (6): Message correctly delivered
-
-DEBUG (7): Mote 7 has received a data message with data 222433541
-
-DEBUG (7): Packet sent from: 7, to: 5 , data: 222433541, type: 2
- 
-DEBUG (11): Packet sent at time 1:27:54.456054651 from 11 
-
-DEBUG (11): Message correctly delivered
-
-DEBUG (9): Error in sending packet, send the request again
-
-DEBUG (2): Mote 2 has received a data message with data 814912838
-
-DEBUG (4): Error in sending packet, send the request again
-
-DEBUG (14): Packet sent at time 1:27:54.457611040 from 14 
+DEBUG (14): Packet sent at time 1:27:54.451431267 from 14 
 
 DEBUG (14): Message correctly delivered
 
-DEBUG (5): Error in sending packet, send the request again
+DEBUG (9): Error in sending packet, send the request again
 
-DEBUG (1): Sink node received data message from 2 with data 592479297 at time 1:27:54.459808287
+DEBUG (11): Error in sending packet, send the request again
 
-DEBUG (2): Packet sent at time 1:27:54.459976133 from 2 
+DEBUG (1): Sink node received data message from 2 with data 592479297 at time 1:27:54.453933687
 
-DEBUG (2): Message correctly delivered
+DEBUG (2): Error in sending packet, send the request again
 
-DEBUG (4): Mote 4 has received a data message with data 617419739
+DEBUG (6): Error in sending packet, send the request again
 
-DEBUG (4): Packet sent from: 4, to: 1 , data: 617419739, type: 2
- 
-DEBUG (13): Packet sent at time 1:27:54.460266053 from 13 
+DEBUG (13): Error in sending packet, send the request again
 
-DEBUG (13): Message correctly delivered
+DEBUG (4): Error in sending packet, send the request again
 
-DEBUG (1): Sink node received data message from 13 with data 617419739 at time 1:27:54.462539600
-
-DEBUG (4): Packet sent at time 1:27:54.462707445 from 4 
-
-DEBUG (4): Message correctly delivered
+DEBUG (1): Error in sending packet, send the request again
 
 DEBUG (7): Error in sending packet, send the request again
+
+DEBUG (12): Error in sending packet, send the request again
+
+DEBUG (5): Error in sending packet, send the request again
 
 DEBUG (2): Data timer fired at 1:31:9.750000011.
 
@@ -3195,6 +3245,10 @@ DEBUG (3): Mote 3 just read new data 30554 above the treshold 140734213 at time 
 
 DEBUG (3): Packet sent from: 3, to: 1 , data: 1322153818, type: 2
  
+DEBUG (4): Mote 4 just read new data 5425 above the treshold 140734213 at time 1:31:9.759765637
+
+DEBUG (4): Packet sent from: 4, to: 1 , data: 578950449, type: 2
+ 
 DEBUG (5): Mote 5 just read new data 45831 above the treshold 140734213 at time 1:31:9.759765637
 
 DEBUG (5): Packet sent from: 5, to: 1 , data: 1983230727, type: 2
@@ -3205,19 +3259,19 @@ DEBUG (6): Packet sent from: 6, to: 5 , data: 1240027358, type: 2
  
 DEBUG (7): Mote 7 just read new data 61109 above the treshold 140734213 at time 1:31:9.759765638
 
-DEBUG (7): Packet sent from: 7, to: 5 , data: 496823989, type: 2
+DEBUG (7): Packet sent from: 7, to: 2 , data: 496823989, type: 2
  
 DEBUG (8): Mote 8 just read new data 35979 above the treshold 140734213 at time 1:31:9.759765639
 
-DEBUG (8): Packet sent from: 8, to: 6 , data: 1901104267, type: 2
+DEBUG (8): Packet sent from: 8, to: 7 , data: 1901104267, type: 2
  
 DEBUG (9): Mote 9 just read new data 10850 above the treshold 140734213 at time 1:31:9.759765639
 
-DEBUG (9): Packet sent from: 9, to: 6 , data: 1157900898, type: 2
+DEBUG (9): Packet sent from: 9, to: 7 , data: 1157900898, type: 2
  
 DEBUG (10): Mote 10 just read new data 51257 above the treshold 140734213 at time 1:31:9.759765640
 
-DEBUG (10): Packet sent from: 10, to: 7 , data: 414697529, type: 2
+DEBUG (10): Packet sent from: 10, to: 11 , data: 414697529, type: 2
  
 DEBUG (11): Mote 11 just read new data 26127 above the treshold 140734213 at time 1:31:9.759765640
 
@@ -3225,69 +3279,117 @@ DEBUG (11): Packet sent from: 11, to: 7 , data: 1818977807, type: 2
  
 DEBUG (12): Mote 12 just read new data 998 above the treshold 140734213 at time 1:31:9.759765641
 
-DEBUG (12): Packet sent from: 12, to: 4 , data: 1075774438, type: 2
+DEBUG (12): Packet sent from: 12, to: 11 , data: 1075774438, type: 2
  
 DEBUG (13): Mote 13 just read new data 41405 above the treshold 140734213 at time 1:31:9.759765641
 
-DEBUG (13): Packet sent from: 13, to: 4 , data: 332571069, type: 2
+DEBUG (13): Packet sent from: 13, to: 6 , data: 332571069, type: 2
  
 DEBUG (14): Mote 14 just read new data 16275 above the treshold 140734213 at time 1:31:9.759765642
 
-DEBUG (14): Packet sent from: 14, to: 2 , data: 1736851347, type: 2
+DEBUG (14): Packet sent from: 14, to: 11 , data: 1736851347, type: 2
  
-DEBUG (9): Error in sending packet, send the request again
+DEBUG (11): Mote 11 has received a data message with data 1075774438
 
-DEBUG (14): Error in sending packet, send the request again
+DEBUG (1): Sink node received data message from 2 with data 2065357187 at time 1:31:9.762237545
 
-DEBUG (3): Error in sending packet, send the request again
+DEBUG (12): Packet sent at time 1:31:9.762374878 from 12 
 
-DEBUG (5): Error in sending packet, send the request again
+DEBUG (12): Message correctly delivered
 
-DEBUG (7): Mote 7 has received a data message with data 1818977807
-
-DEBUG (11): Packet sent at time 1:31:9.766113259 from 11 
-
-DEBUG (11): Message correctly delivered
-
-DEBUG (6): Mote 6 has received a data message with data 1901104267
-
-DEBUG (8): Packet sent at time 1:31:9.767272919 from 8 
-
-DEBUG (8): Message correctly delivered
-
-DEBUG (1): Sink node received data message from 2 with data 2065357187 at time 1:31:9.767669642
-
-DEBUG (2): Packet sent at time 1:31:9.767837488 from 2 
+DEBUG (2): Packet sent at time 1:31:9.762405391 from 2 
 
 DEBUG (2): Message correctly delivered
 
-DEBUG (7): Error in sending packet, send the request again
+DEBUG (9): Error in sending packet, send the request again
 
-DEBUG (6): Error in sending packet, send the request again
+DEBUG (2): Mote 2 has received a data message with data 496823989
 
-DEBUG (12): Error in sending packet, send the request again
-
-DEBUG (13): Error in sending packet, send the request again
-
-DEBUG (7): Mote 7 has received a data message with data 414697529
-
-DEBUG (7): Packet sent from: 7, to: 5 , data: 414697529, type: 2
+DEBUG (2): Packet sent from: 2, to: 1 , data: 496823989, type: 2
  
-DEBUG (10): Packet sent at time 1:31:9.769866899 from 10 
-
-DEBUG (10): Message correctly delivered
-
-DEBUG (5): Mote 5 has received a data message with data 414697529
-
-DEBUG (5): Packet sent from: 5, to: 1 , data: 414697529, type: 2
- 
-DEBUG (7): Packet sent at time 1:31:9.774581837 from 7 
+DEBUG (7): Packet sent at time 1:31:9.765701272 from 7 
 
 DEBUG (7): Message correctly delivered
 
-DEBUG (1): Sink node received data message from 10 with data 414697529 at time 1:31:9.777984527
+DEBUG (1): Sink node received data message from 3 with data 1322153818 at time 1:31:9.767150847
 
-DEBUG (5): Packet sent at time 1:31:9.778152373 from 5 
+DEBUG (3): Packet sent at time 1:31:9.767318693 from 3 
+
+DEBUG (3): Message correctly delivered
+
+DEBUG (11): Mote 11 has received a data message with data 414697529
+
+DEBUG (10): Packet sent at time 1:31:9.767486542 from 10 
+
+DEBUG (10): Message correctly delivered
+
+DEBUG (7): Mote 7 has received a data message with data 1901104267
+
+DEBUG (7): Packet sent from: 7, to: 2 , data: 1901104267, type: 2
+ 
+DEBUG (8): Packet sent at time 1:31:9.767700163 from 8 
+
+DEBUG (8): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 5 with data 1983230727 at time 1:31:9.769241290
+
+DEBUG (5): Error in sending packet, send the request again
+
+DEBUG (6): Error in sending packet, send the request again
+
+DEBUG (7): Mote 7 has received a data message with data 1818977807
+
+DEBUG (11): Packet sent at time 1:31:9.770065263 from 11 
+
+DEBUG (11): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 4 with data 578950449 at time 1:31:9.771499577
+
+DEBUG (4): Packet sent at time 1:31:9.771667423 from 4 
+
+DEBUG (4): Message correctly delivered
+
+DEBUG (6): Mote 6 has received a data message with data 332571069
+
+DEBUG (6): Packet sent from: 6, to: 5 , data: 332571069, type: 2
+ 
+DEBUG (13): Packet sent at time 1:31:9.773483212 from 13 
+
+DEBUG (13): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 7 with data 496823989 at time 1:31:9.774383473
+
+DEBUG (2): Packet sent at time 1:31:9.774551318 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (14): Error in sending packet, send the request again
+
+DEBUG (2): Mote 2 has received a data message with data 1901104267
+
+DEBUG (2): Packet sent from: 2, to: 1 , data: 1901104267, type: 2
+ 
+DEBUG (7): Packet sent at time 1:31:9.776473915 from 7 
+
+DEBUG (7): Message correctly delivered
+
+DEBUG (5): Mote 5 has received a data message with data 332571069
+
+DEBUG (5): Packet sent from: 5, to: 1 , data: 332571069, type: 2
+ 
+DEBUG (6): Packet sent at time 1:31:9.779861349 from 6 
+
+DEBUG (6): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 8 with data 1901104267 at time 1:31:9.783859126
+
+DEBUG (2): Packet sent at time 1:31:9.784026972 from 2 
+
+DEBUG (2): Message correctly delivered
+
+DEBUG (1): Sink node received data message from 13 with data 332571069 at time 1:31:9.786025864
+
+DEBUG (5): Packet sent at time 1:31:9.786193709 from 5 
 
 DEBUG (5): Message correctly delivered
 
