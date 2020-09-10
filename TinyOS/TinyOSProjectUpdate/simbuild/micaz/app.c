@@ -907,7 +907,7 @@ extern void *malloc(size_t __size) __attribute((__leaf__)) __attribute((__nothro
 #line 483
 extern void free(void *__ptr) __attribute((__leaf__)) __attribute((__nothrow__)) ;
 #line 741
-typedef int (*__compar_fn_t)(const void *arg_0xb7c1c458, const void *arg_0xb7c1c5f0);
+typedef int (*__compar_fn_t)(const void *arg_0xb7b7b458, const void *arg_0xb7b7b5f0);
 #line 779
 __extension__ 
 #line 796
@@ -926,7 +926,7 @@ extern double sqrt(double __x) __attribute((__leaf__)) __attribute((__nothrow__)
 #line 184
 extern double floor(double __x) __attribute((__leaf__)) __attribute((__nothrow__)) __attribute((const)) ;
 #line 260
-extern double erfc(double arg_0xb7bcf8c8) __attribute((__leaf__)) __attribute((__nothrow__)) ;
+extern double erfc(double arg_0xb7b2e8c8) __attribute((__leaf__)) __attribute((__nothrow__)) ;
 #line 336
 __extension__ 
 
@@ -1321,8 +1321,8 @@ typedef struct hashtable hashtable_t;
 #line 78
 struct hashtable *
 create_hashtable(unsigned int minsize, 
-unsigned int (*hashfunction)(void *arg_0xb7a79840), 
-int (*key_eq_fn)(void *arg_0xb7a79c88, void *arg_0xb7a79e00));
+unsigned int (*hashfunction)(void *arg_0xb79d8840), 
+int (*key_eq_fn)(void *arg_0xb79d8c88, void *arg_0xb79d8e00));
 #line 103
 #line 102
 int 
@@ -1358,7 +1358,7 @@ typedef struct sim_log_channel {
 } sim_log_channel_t;
 
 enum __nesc_unnamed4273 {
-  SIM_LOG_OUTPUT_COUNT = 223U
+  SIM_LOG_OUTPUT_COUNT = 257U
 };
 
 sim_log_output_t outputs[SIM_LOG_OUTPUT_COUNT];
@@ -1935,7 +1935,7 @@ struct tm;
 
 struct tm;
 # 46 "/opt/tinyos-main-2.1.2/tos/lib/tossim/randomlib.h"
-static inline void RandomInitialise(int arg_0xb79489b8, int arg_0xb7948b10);
+static inline void RandomInitialise(int arg_0xb78a79b8, int arg_0xb78a7b10);
 static double RandomUniform(void );
 # 51 "/opt/tinyos-main-2.1.2/tos/lib/tossim/sim_noise.c"
 int numCase1 = 0;
@@ -2291,11 +2291,11 @@ static inline error_t ecombine(error_t r1, error_t r2)  ;
 #line 7
 typedef nx_struct Msg {
   nx_uint16_t type;
-  nx_uint16_t treshold_id;
   nx_uint16_t sender;
   nx_uint16_t source;
   nx_uint32_t value;
   nx_uint32_t time;
+  nx_uint16_t treshold_id;
 } __attribute__((packed)) Msg_t;
 
 enum __nesc_unnamed4281 {
@@ -3719,6 +3719,7 @@ typedef union __nesc_unnamed4326 {
   } bits;
 } Atm128_ETIFR_t;
 typedef TMilli projectSinkC$DataTimer$precision_tag;
+typedef TMilli projectSinkC$LocalTime$precision_tag;
 typedef uint32_t projectSinkC$Read$val_t;
 typedef TMilli projectSinkC$TresholdTimer$precision_tag;
 typedef TMilli /*AlarmCounterMilliP.Atm128AlarmAsyncC*/Atm128AlarmAsyncC$0$precision;
@@ -3763,11 +3764,11 @@ static error_t MeasureClockC$Init$init(void );
 # 67 "/opt/tinyos-main-2.1.2/tos/interfaces/TaskBasic.nc"
 static error_t SimSchedulerBasicP$TaskBasic$postTask(
 # 49 "/opt/tinyos-main-2.1.2/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0xb78a4650);
+uint8_t arg_0xb7803650);
 # 75 "/opt/tinyos-main-2.1.2/tos/interfaces/TaskBasic.nc"
 static void SimSchedulerBasicP$TaskBasic$default$runTask(
 # 49 "/opt/tinyos-main-2.1.2/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0xb78a4650);
+uint8_t arg_0xb7803650);
 # 57 "/opt/tinyos-main-2.1.2/tos/interfaces/Scheduler.nc"
 static void SimSchedulerBasicP$Scheduler$init(void );
 
@@ -3797,7 +3798,7 @@ static long long int SimMoteP$SimMote$getStartTime(void );
 # 80 "/opt/tinyos-main-2.1.2/tos/interfaces/AMSend.nc"
 static error_t TossimActiveMessageC$AMSend$send(
 # 47 "/opt/tinyos-main-2.1.2/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0xb76eb108, 
+am_id_t arg_0xb764a108, 
 # 80 "/opt/tinyos-main-2.1.2/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 71
@@ -3820,7 +3821,7 @@ message_t *
 
 TossimActiveMessageC$Snoop$default$receive(
 # 49 "/opt/tinyos-main-2.1.2/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0xb76e9178, 
+am_id_t arg_0xb7648178, 
 # 71 "/opt/tinyos-main-2.1.2/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -3867,7 +3868,7 @@ message_t *
 
 TossimActiveMessageC$Receive$default$receive(
 # 48 "/opt/tinyos-main-2.1.2/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0xb76ebac8, 
+am_id_t arg_0xb764aac8, 
 # 71 "/opt/tinyos-main-2.1.2/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -4077,17 +4078,17 @@ static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$fire
 #line 83
 static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(
 # 48 "/opt/tinyos-main-2.1.2/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0xb74423a8);
+uint8_t arg_0xb736b3a8);
 # 114 "/opt/tinyos-main-2.1.2/tos/lib/timer/Timer.nc"
 static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startPeriodicAt(
 # 48 "/opt/tinyos-main-2.1.2/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0xb74423a8, 
+uint8_t arg_0xb736b3a8, 
 # 114 "/opt/tinyos-main-2.1.2/tos/lib/timer/Timer.nc"
 uint32_t t0, uint32_t dt);
 #line 73
 static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startOneShot(
 # 48 "/opt/tinyos-main-2.1.2/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0xb74423a8, 
+uint8_t arg_0xb736b3a8, 
 # 73 "/opt/tinyos-main-2.1.2/tos/lib/timer/Timer.nc"
 uint32_t dt);
 # 82 "/opt/tinyos-main-2.1.2/tos/lib/timer/Counter.nc"
@@ -4124,7 +4125,7 @@ error_t error);
 # 110 "/opt/tinyos-main-2.1.2/tos/interfaces/AMSend.nc"
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(
 # 48 "/opt/tinyos-main-2.1.2/tos/system/AMQueueImplP.nc"
-am_id_t arg_0xb73c52b0, 
+am_id_t arg_0xb72ee2b0, 
 # 103 "/opt/tinyos-main-2.1.2/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -4137,7 +4138,7 @@ error_t error);
 # 75 "/opt/tinyos-main-2.1.2/tos/interfaces/Send.nc"
 static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$send(
 # 46 "/opt/tinyos-main-2.1.2/tos/system/AMQueueImplP.nc"
-uint8_t arg_0xb73c78a8, 
+uint8_t arg_0xb72f08a8, 
 # 67 "/opt/tinyos-main-2.1.2/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -4151,7 +4152,7 @@ uint8_t len);
 #line 100
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(
 # 46 "/opt/tinyos-main-2.1.2/tos/system/AMQueueImplP.nc"
-uint8_t arg_0xb73c78a8, 
+uint8_t arg_0xb72f08a8, 
 # 96 "/opt/tinyos-main-2.1.2/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -4206,7 +4207,7 @@ int sim_main_start_mote(void )   ;
 # 75 "/opt/tinyos-main-2.1.2/tos/interfaces/TaskBasic.nc"
 static void SimSchedulerBasicP$TaskBasic$runTask(
 # 49 "/opt/tinyos-main-2.1.2/tos/lib/tossim/SimSchedulerBasicP.nc"
-uint8_t arg_0xb78a4650);
+uint8_t arg_0xb7803650);
 
 
 
@@ -4374,7 +4375,7 @@ static am_addr_t TossimActiveMessageC$amAddress(void );
 # 110 "/opt/tinyos-main-2.1.2/tos/interfaces/AMSend.nc"
 static void TossimActiveMessageC$AMSend$sendDone(
 # 47 "/opt/tinyos-main-2.1.2/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0xb76eb108, 
+am_id_t arg_0xb764a108, 
 # 103 "/opt/tinyos-main-2.1.2/tos/interfaces/AMSend.nc"
 message_t * msg, 
 
@@ -4393,7 +4394,7 @@ message_t *
 
 TossimActiveMessageC$Snoop$receive(
 # 49 "/opt/tinyos-main-2.1.2/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0xb76e9178, 
+am_id_t arg_0xb7648178, 
 # 71 "/opt/tinyos-main-2.1.2/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -4412,7 +4413,7 @@ message_t *
 
 TossimActiveMessageC$Receive$receive(
 # 48 "/opt/tinyos-main-2.1.2/tos/lib/tossim/TossimActiveMessageC.nc"
-am_id_t arg_0xb76ebac8, 
+am_id_t arg_0xb764aac8, 
 # 71 "/opt/tinyos-main-2.1.2/tos/interfaces/Receive.nc"
 message_t * msg, 
 void * payload, 
@@ -4808,8 +4809,6 @@ message_t * msg,
 
 
 uint8_t len);
-# 114 "/opt/tinyos-main-2.1.2/tos/lib/timer/Timer.nc"
-static void projectSinkC$DataTimer$startPeriodicAt(uint32_t t0, uint32_t dt);
 # 55 "/opt/tinyos-main-2.1.2/tos/interfaces/Read.nc"
 static error_t projectSinkC$Read$read(void );
 # 59 "/opt/tinyos-main-2.1.2/tos/interfaces/PacketAcknowledgements.nc"
@@ -4822,18 +4821,27 @@ static bool projectSinkC$Ack$wasAcked(
 message_t * msg);
 # 114 "/opt/tinyos-main-2.1.2/tos/lib/timer/Timer.nc"
 static void projectSinkC$TresholdTimer$startPeriodicAt(uint32_t t0, uint32_t dt);
-# 36 "projectSinkC.nc"
+# 37 "projectSinkC.nc"
 message_t projectSinkC$packet[1000];
 bool projectSinkC$locked[1000];
 uint32_t projectSinkC$treshold[1000];
 uint16_t projectSinkC$treshold_id[1000];
 uint8_t projectSinkC$parent[1000];
+uint8_t projectSinkC$children[1000][2];
+uint8_t projectSinkC$index[1000];
 uint16_t projectSinkC$counter[1000];
+bool projectSinkC$mess_to_send[1000];
+Msg_t *projectSinkC$saved_mess[1000];
+
 
 
 
 static void projectSinkC$sendData(uint32_t data, uint16_t source, uint32_t time);
-static void projectSinkC$sendTreshold(uint32_t time, uint16_t t_id);
+static void projectSinkC$sendTreshold(uint32_t time);
+static void projectSinkC$sendDiscovery(uint16_t id);
+static inline void projectSinkC$sendDiscoveryAck(uint8_t destination, uint16_t id);
+static inline void projectSinkC$sendSetup(uint8_t destination, uint16_t id);
+
 
 
 
@@ -4845,7 +4853,7 @@ static inline void projectSinkC$Boot$booted(void );
 
 
 static inline void projectSinkC$AMControl$startDone(error_t err);
-#line 83
+#line 101
 static inline void projectSinkC$AMControl$stopDone(error_t err);
 
 
@@ -4870,14 +4878,20 @@ static inline void projectSinkC$DataTimer$fired(void );
 
 
 static inline message_t *projectSinkC$Receive$receive(message_t *buf, void *payload, uint8_t len);
-#line 152
+#line 193
 static inline void projectSinkC$Read$readDone(error_t result, uint32_t dataRead);
-#line 174
+#line 221
 static void projectSinkC$AMSend$sendDone(message_t *buf, error_t err);
-#line 200
-static void projectSinkC$sendTreshold(uint32_t elapsed_time, uint16_t t_id);
-#line 226
+#line 265
+static void projectSinkC$sendTreshold(uint32_t elapsed_time);
+#line 295
 static void projectSinkC$sendData(uint32_t data, uint16_t source, uint32_t elapsed_time);
+#line 317
+static void projectSinkC$sendDiscovery(uint16_t id);
+#line 343
+static inline void projectSinkC$sendDiscoveryAck(uint8_t destination, uint16_t id);
+#line 368
+static inline void projectSinkC$sendSetup(uint8_t destination, uint16_t id);
 # 53 "/opt/tinyos-main-2.1.2/tos/chips/atm128/timer/HplAtm128TimerCtrl8.nc"
 static Atm128_TIFR_t /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$TimerCtrl$getInterruptFlag(void );
 #line 46
@@ -5200,7 +5214,7 @@ static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$TimerFrom$stop
 
 static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$fired(
 # 48 "/opt/tinyos-main-2.1.2/tos/lib/timer/VirtualizeTimerC.nc"
-uint8_t arg_0xb74423a8);
+uint8_t arg_0xb736b3a8);
 #line 71
 enum /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$__nesc_unnamed4335 {
 #line 71
@@ -5332,7 +5346,7 @@ static inline void /*projectSinkAppC.AMSenderC.SenderC.AMQueueEntryP*/AMQueueEnt
 # 80 "/opt/tinyos-main-2.1.2/tos/interfaces/AMSend.nc"
 static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(
 # 48 "/opt/tinyos-main-2.1.2/tos/system/AMQueueImplP.nc"
-am_id_t arg_0xb73c52b0, 
+am_id_t arg_0xb72ee2b0, 
 # 80 "/opt/tinyos-main-2.1.2/tos/interfaces/AMSend.nc"
 am_addr_t addr, 
 #line 71
@@ -5349,7 +5363,7 @@ uint8_t len);
 # 100 "/opt/tinyos-main-2.1.2/tos/interfaces/Send.nc"
 static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(
 # 46 "/opt/tinyos-main-2.1.2/tos/system/AMQueueImplP.nc"
-uint8_t arg_0xb73c78a8, 
+uint8_t arg_0xb72f08a8, 
 # 96 "/opt/tinyos-main-2.1.2/tos/interfaces/Send.nc"
 message_t * msg, 
 
@@ -5815,85 +5829,90 @@ static __inline  uint16_t __nesc_ntoh_uint16(const void * source)
   return ((uint16_t )base[0] << 8) | base[1];
 }
 
-# 106 "projectSinkC.nc"
-static inline message_t *projectSinkC$Receive$receive(message_t *buf, void *payload, uint8_t len)
+static __inline  uint16_t __nesc_hton_uint16(void * target, uint16_t value)
+#line 315
 {
-  Msg_t *mess = (Msg_t *)payload;
+  uint8_t *base = target;
 
-  if (__nesc_ntoh_uint16(mess->type.nxdata) == 1 && __nesc_ntoh_uint16(mess->treshold_id.nxdata) > projectSinkC$treshold_id[sim_node()]) {
-      projectSinkC$treshold[sim_node()] = __nesc_ntoh_uint32(mess->value.nxdata);
-      projectSinkC$treshold_id[sim_node()] = __nesc_ntoh_uint16(mess->treshold_id.nxdata);
-      projectSinkC$parent[sim_node()] = __nesc_ntoh_uint16(mess->sender.nxdata);
-      sim_log_debug_clear(155U, "radio", "\n");
-      sim_log_debug(156U, "radio", "Mote %hu has received a treshold message with treshold %lu from mote %hu\n", TOS_NODE_ID, projectSinkC$treshold[sim_node()], __nesc_ntoh_uint16(mess->sender.nxdata));
-      sim_log_debug_clear(157U, "analysis", "\n");
-      sim_log_debug(158U, "analysis", "Time for treshold %lu message with id %lu from sink to %hu is : %lu ms[not discarded]\n", projectSinkC$treshold[sim_node()], projectSinkC$treshold_id[sim_node()], TOS_NODE_ID, sim_time() - __nesc_ntoh_uint32(mess->time.nxdata));
-      sim_log_debug(159U, "analysis", "current simulation time: %s\n", sim_time_string());
-      projectSinkC$sendTreshold(__nesc_ntoh_uint32(mess->time.nxdata), __nesc_ntoh_uint16(mess->treshold_id.nxdata));
-    }
-  else {
-#line 121
-    if (__nesc_ntoh_uint16(mess->type.nxdata) == 1 && __nesc_ntoh_uint16(mess->treshold_id.nxdata) <= projectSinkC$treshold_id[sim_node()]) {
-        sim_log_debug_clear(160U, "analysis", "\n");
-        sim_log_debug(161U, "analysis", "Time for treshold %lu message with id %lu from sink to %hu is : %lu ms[DISCARDED]\n", projectSinkC$treshold[sim_node()], projectSinkC$treshold_id[sim_node()], TOS_NODE_ID, sim_time() - __nesc_ntoh_uint32(mess->time.nxdata));
-      }
-    }
-  if (__nesc_ntoh_uint16(mess->type.nxdata) == 2) {
-      if (TOS_NODE_ID == 1) {
-          sim_log_debug_clear(162U, "sink", "\n");
-          sim_log_debug(163U, "sink", "Sink node received data message from %hu with data %lu at time %s\n", __nesc_ntoh_uint16(mess->source.nxdata), __nesc_ntoh_uint32(mess->value.nxdata), sim_time_string());
-          projectSinkC$counter[sim_node()] += 1;
-          sim_log_debug_clear(164U, "analysis", "\n");
-          sim_log_debug(165U, "analysis", "Data Message counter: %hu\n", projectSinkC$counter[sim_node()]);
-          sim_log_debug_clear(166U, "analysis", "\n");
-          sim_log_debug(167U, "analysis", "Time for data message %lu from %hu to sink is : %lu ms\n", __nesc_ntoh_uint32(mess->value.nxdata), __nesc_ntoh_uint16(mess->source.nxdata), sim_time() - __nesc_ntoh_uint32(mess->time.nxdata));
-          sim_log_debug(168U, "analysis", "current simulation time: %s\n", sim_time_string());
-        }
-      else {
-          sim_log_debug_clear(169U, "data", "\n");
-          sim_log_debug(170U, "data", "Mote %hu has received a data message with data %lu\n", TOS_NODE_ID, __nesc_ntoh_uint32(mess->value.nxdata));
-          projectSinkC$sendData(__nesc_ntoh_uint32(mess->value.nxdata), __nesc_ntoh_uint16(mess->source.nxdata), __nesc_ntoh_uint32(mess->time.nxdata));
-        }
-    }
-  return buf;
+#line 317
+  base[1] = value;
+  base[0] = value >> 8;
+  return value;
 }
 
-# 212 "/opt/tinyos-main-2.1.2/tos/lib/tossim/TossimActiveMessageC.nc"
-static inline message_t *TossimActiveMessageC$Receive$default$receive(am_id_t id, message_t *msg, void *payload, uint8_t len)
-#line 212
+#line 347
+static __inline  uint32_t __nesc_hton_uint32(void * target, uint32_t value)
+#line 347
 {
-  return msg;
+  uint8_t *base = target;
+
+#line 349
+  base[3] = value;
+  base[2] = value >> 8;
+  base[1] = value >> 16;
+  base[0] = value >> 24;
+  return value;
 }
 
-# 78 "/opt/tinyos-main-2.1.2/tos/interfaces/Receive.nc"
-inline static message_t * TossimActiveMessageC$Receive$receive(am_id_t arg_0xb76ebac8, message_t * msg, void * payload, uint8_t len){
-#line 78
-  nx_struct message_t *__nesc_result;
-#line 78
+# 80 "/opt/tinyos-main-2.1.2/tos/interfaces/AMSend.nc"
+inline static error_t projectSinkC$AMSend$send(am_addr_t addr, message_t * msg, uint8_t len){
+#line 80
+  unsigned char __nesc_result;
+#line 80
 
-#line 78
-  switch (arg_0xb76ebac8) {
-#line 78
-    case 6:
-#line 78
-      __nesc_result = projectSinkC$Receive$receive(msg, payload, len);
-#line 78
-      break;
-#line 78
-    default:
-#line 78
-      __nesc_result = TossimActiveMessageC$Receive$default$receive(arg_0xb76ebac8, msg, payload, len);
-#line 78
-      break;
-#line 78
-    }
-#line 78
+#line 80
+  __nesc_result = /*projectSinkAppC.AMSenderC.SenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$send(addr, msg, len);
+#line 80
 
-#line 78
+#line 80
   return __nesc_result;
-#line 78
+#line 80
 }
-#line 78
+#line 80
+# 286 "/usr/lib/ncc/nesc_nx.h"
+static __inline  uint8_t __nesc_hton_uint8(void * target, uint8_t value)
+#line 286
+{
+  uint8_t *base = target;
+
+#line 288
+  base[0] = value;
+  return value;
+}
+
+# 82 "/opt/tinyos-main-2.1.2/tos/lib/tossim/TossimPacketModelC.nc"
+static inline tossim_metadata_t *TossimPacketModelC$getMetadata(message_t *msg)
+#line 82
+{
+  return (tossim_metadata_t *)& msg->metadata;
+}
+
+#line 128
+static inline error_t TossimPacketModelC$PacketAcknowledgements$requestAck(message_t *msg)
+#line 128
+{
+  tossim_metadata_t *meta = TossimPacketModelC$getMetadata(msg);
+
+#line 130
+  __nesc_hton_uint8(meta->ack.nxdata, TRUE);
+  return SUCCESS;
+}
+
+# 59 "/opt/tinyos-main-2.1.2/tos/interfaces/PacketAcknowledgements.nc"
+inline static error_t projectSinkC$Ack$requestAck(message_t * msg){
+#line 59
+  unsigned char __nesc_result;
+#line 59
+
+#line 59
+  __nesc_result = TossimPacketModelC$PacketAcknowledgements$requestAck(msg);
+#line 59
+
+#line 59
+  return __nesc_result;
+#line 59
+}
+#line 59
 # 189 "/opt/tinyos-main-2.1.2/tos/lib/tossim/TossimActiveMessageC.nc"
 static inline void *TossimActiveMessageC$Packet$getPayload(message_t *msg, uint8_t len)
 #line 189
@@ -5921,33 +5940,185 @@ inline static void * projectSinkC$Packet$getPayload(message_t * msg, uint8_t len
 #line 126
 }
 #line 126
-# 80 "/opt/tinyos-main-2.1.2/tos/interfaces/AMSend.nc"
-inline static error_t projectSinkC$AMSend$send(am_addr_t addr, message_t * msg, uint8_t len){
-#line 80
-  unsigned char __nesc_result;
-#line 80
-
-#line 80
-  __nesc_result = /*projectSinkAppC.AMSenderC.SenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$send(addr, msg, len);
-#line 80
-
-#line 80
-  return __nesc_result;
-#line 80
-}
-#line 80
-# 315 "/usr/lib/ncc/nesc_nx.h"
-static __inline  uint16_t __nesc_hton_uint16(void * target, uint16_t value)
-#line 315
+# 368 "projectSinkC.nc"
+static inline void projectSinkC$sendSetup(uint8_t destination, uint16_t id)
+#line 368
 {
-  uint8_t *base = target;
 
-#line 317
-  base[1] = value;
-  base[0] = value >> 8;
-  return value;
+  Msg_t *mess = (Msg_t *)projectSinkC$Packet$getPayload(&projectSinkC$packet[sim_node()], sizeof(Msg_t ));
+
+#line 371
+  if (mess == (void *)0) {
+#line 371
+    return;
+    }
+#line 372
+  __nesc_hton_uint16(mess->sender.nxdata, TOS_NODE_ID);
+  __nesc_hton_uint32(mess->value.nxdata, projectSinkC$treshold[sim_node()]);
+  __nesc_hton_uint16(mess->type.nxdata, 5);
+  __nesc_hton_uint16(mess->source.nxdata, TOS_NODE_ID);
+  __nesc_hton_uint16(mess->treshold_id.nxdata, id);
+  sim_log_debug(219U, "radio", "Setup packet sent from: %hu, data: %lu, th id: %hu to %hu\n", TOS_NODE_ID, __nesc_ntoh_uint32(mess->value.nxdata), __nesc_ntoh_uint16(mess->treshold_id.nxdata), destination);
+  if (!projectSinkC$locked[sim_node()]) {
+      projectSinkC$Ack$requestAck(&projectSinkC$packet[sim_node()]);
+      if (projectSinkC$AMSend$send(destination, &projectSinkC$packet[sim_node()], sizeof(Msg_t )) == SUCCESS) {
+          sim_log_debug_clear(220U, "radio", "\n");
+          sim_log_debug(221U, "radio", "Packet sent from: %hu, data: %lu, type: %hu\n", TOS_NODE_ID, __nesc_ntoh_uint32(mess->value.nxdata), __nesc_ntoh_uint16(mess->type.nxdata));
+          sim_log_debug(222U, "radio", "Message of setup sent");
+          projectSinkC$locked[sim_node()] = TRUE;
+        }
+      else {
+          sim_log_debug_clear(223U, "error", "\n");
+          sim_log_debug(224U, "error", "Error in sending packet\n ");
+        }
+    }
 }
 
+#line 343
+static inline void projectSinkC$sendDiscoveryAck(uint8_t destination, uint16_t id)
+#line 343
+{
+
+  Msg_t *mess = (Msg_t *)projectSinkC$Packet$getPayload(&projectSinkC$packet[sim_node()], sizeof(Msg_t ));
+
+#line 346
+  if (mess == (void *)0) {
+#line 346
+    return;
+    }
+#line 347
+  __nesc_hton_uint16(mess->sender.nxdata, TOS_NODE_ID);
+  __nesc_hton_uint32(mess->value.nxdata, 0);
+  __nesc_hton_uint16(mess->type.nxdata, 4);
+  __nesc_hton_uint16(mess->source.nxdata, TOS_NODE_ID);
+  __nesc_hton_uint16(mess->treshold_id.nxdata, id);
+
+  if (!projectSinkC$locked[sim_node()]) {
+      projectSinkC$Ack$requestAck(&projectSinkC$packet[sim_node()]);
+      if (projectSinkC$AMSend$send(destination, &projectSinkC$packet[sim_node()], sizeof(Msg_t )) == SUCCESS) {
+          sim_log_debug_clear(214U, "radio", "\n");
+          sim_log_debug(215U, "radio", "Packet sent from: %hu, data: %lu, type: %hu\n", TOS_NODE_ID, __nesc_ntoh_uint32(mess->value.nxdata), __nesc_ntoh_uint16(mess->type.nxdata));
+          sim_log_debug(216U, "radio", "Message of discovery ack sent");
+          projectSinkC$locked[sim_node()] = TRUE;
+        }
+      else {
+          sim_log_debug_clear(217U, "error", "\n");
+          sim_log_debug(218U, "error", "Error in sending packet\n ");
+        }
+    }
+}
+
+#line 124
+static inline message_t *projectSinkC$Receive$receive(message_t *buf, void *payload, uint8_t len)
+{
+  Msg_t *mess = (Msg_t *)payload;
+
+#line 127
+  if (__nesc_ntoh_uint16(mess->type.nxdata) == 3 && projectSinkC$treshold_id[sim_node()] < __nesc_ntoh_uint16(mess->treshold_id.nxdata)) {
+      sim_log_debug_clear(157U, "radio", "\n");
+      sim_log_debug(158U, "radio", "first discovery received from %d\n", __nesc_ntoh_uint16(mess->sender.nxdata));
+
+      projectSinkC$parent[sim_node()] = 0;
+      projectSinkC$children[sim_node()][0] = 0;
+      projectSinkC$children[sim_node()][1] = 0;
+      projectSinkC$index[sim_node()] = 0;
+      if (TOS_NODE_ID == 2) {
+#line 135
+        sim_log_debug(159U, "radio", "ho appena ricevuto un discovery message\n");
+        }
+#line 136
+      projectSinkC$sendDiscoveryAck(__nesc_ntoh_uint16(mess->sender.nxdata), __nesc_ntoh_uint16(mess->treshold_id.nxdata));
+    }
+  if (__nesc_ntoh_uint16(mess->type.nxdata) == 4) {
+      if (projectSinkC$index[sim_node()] < 2) {
+          projectSinkC$children[sim_node()][projectSinkC$index[sim_node()]] = __nesc_ntoh_uint16(mess->sender.nxdata);
+          sim_log_debug_clear(160U, "radio", "\n");
+          sim_log_debug(161U, "radio", "discovery ack riceived from %d, setting child %d to %d\n", __nesc_ntoh_uint16(mess->sender.nxdata), projectSinkC$index[sim_node()], projectSinkC$children[sim_node()][projectSinkC$index[sim_node()]]);
+          projectSinkC$index[sim_node()] += 1;
+          projectSinkC$sendSetup(__nesc_ntoh_uint16(mess->sender.nxdata), __nesc_ntoh_uint16(mess->treshold_id.nxdata));
+        }
+    }
+
+  if (__nesc_ntoh_uint16(mess->type.nxdata) == 5) {
+      if (TOS_NODE_ID == 2) {
+#line 149
+        sim_log_debug(162U, "radio", "ciao\n");
+        }
+#line 150
+      projectSinkC$parent[sim_node()] = __nesc_ntoh_uint16(mess->sender.nxdata);
+      projectSinkC$treshold[sim_node()] = __nesc_ntoh_uint32(mess->value.nxdata);
+      projectSinkC$treshold_id[sim_node()] = __nesc_ntoh_uint16(mess->treshold_id.nxdata);
+      sim_log_debug_clear(163U, "radio", "\n");
+      sim_log_debug(164U, "radio", "setup message received from %d, setting parent to %d treshold id: %hu\n", __nesc_ntoh_uint16(mess->sender.nxdata), projectSinkC$parent[sim_node()], projectSinkC$treshold_id[sim_node()]);
+      projectSinkC$sendDiscovery(__nesc_ntoh_uint16(mess->treshold_id.nxdata));
+    }
+
+  if (__nesc_ntoh_uint16(mess->type.nxdata) == 1) {
+      projectSinkC$treshold[sim_node()] = __nesc_ntoh_uint32(mess->value.nxdata);
+      sim_log_debug_clear(165U, "radio", "\n");
+      sim_log_debug(166U, "radio", "Mote %hu has received a treshold message with treshold %lu from mote %hu\n", TOS_NODE_ID, projectSinkC$treshold[sim_node()], __nesc_ntoh_uint16(mess->sender.nxdata));
+      sim_log_debug_clear(167U, "analysis", "\n");
+      sim_log_debug(168U, "analysis", "Time for treshold %lu message from sink to %hu is : %lu ms\n", projectSinkC$treshold[sim_node()], TOS_NODE_ID, sim_time() - __nesc_ntoh_uint32(mess->time.nxdata));
+      sim_log_debug(169U, "analysis", "current simulation time: %s\n", sim_time_string());
+      projectSinkC$sendTreshold(__nesc_ntoh_uint32(mess->time.nxdata));
+    }
+
+  if (__nesc_ntoh_uint16(mess->type.nxdata) == 2) {
+      if (TOS_NODE_ID == 1) {
+          sim_log_debug_clear(170U, "sink", "\n");
+          sim_log_debug(171U, "sink", "Sink node received data message from %hu with data %lu at time %s\n", __nesc_ntoh_uint16(mess->source.nxdata), __nesc_ntoh_uint32(mess->value.nxdata), sim_time_string());
+          projectSinkC$counter[sim_node()] += 1;
+          sim_log_debug_clear(172U, "analysis", "\n");
+          sim_log_debug(173U, "analysis", "Data Message counter: %hu\n", projectSinkC$counter[sim_node()]);
+          sim_log_debug_clear(174U, "analysis", "\n");
+          sim_log_debug(175U, "analysis", "Time for data message %lu from %hu to sink is : %lu ms\n", __nesc_ntoh_uint32(mess->value.nxdata), __nesc_ntoh_uint16(mess->source.nxdata), sim_time() - __nesc_ntoh_uint32(mess->time.nxdata));
+          sim_log_debug(176U, "analysis", "current simulation time: %s\n", sim_time_string());
+        }
+      else {
+          sim_log_debug_clear(177U, "data", "\n");
+          sim_log_debug(178U, "data", "Mote %hu has received a data message with data %lu\n", TOS_NODE_ID, __nesc_ntoh_uint32(mess->value.nxdata));
+          projectSinkC$sendData(__nesc_ntoh_uint32(mess->value.nxdata), __nesc_ntoh_uint16(mess->source.nxdata), __nesc_ntoh_uint32(mess->time.nxdata));
+        }
+    }
+  return buf;
+}
+
+# 212 "/opt/tinyos-main-2.1.2/tos/lib/tossim/TossimActiveMessageC.nc"
+static inline message_t *TossimActiveMessageC$Receive$default$receive(am_id_t id, message_t *msg, void *payload, uint8_t len)
+#line 212
+{
+  return msg;
+}
+
+# 78 "/opt/tinyos-main-2.1.2/tos/interfaces/Receive.nc"
+inline static message_t * TossimActiveMessageC$Receive$receive(am_id_t arg_0xb764aac8, message_t * msg, void * payload, uint8_t len){
+#line 78
+  nx_struct message_t *__nesc_result;
+#line 78
+
+#line 78
+  switch (arg_0xb764aac8) {
+#line 78
+    case 6:
+#line 78
+      __nesc_result = projectSinkC$Receive$receive(msg, payload, len);
+#line 78
+      break;
+#line 78
+    default:
+#line 78
+      __nesc_result = TossimActiveMessageC$Receive$default$receive(arg_0xb764aac8, msg, payload, len);
+#line 78
+      break;
+#line 78
+    }
+#line 78
+
+#line 78
+  return __nesc_result;
+#line 78
+}
+#line 78
 # 65 "/opt/tinyos-main-2.1.2/tos/lib/tossim/TossimActiveMessageC.nc"
 static inline tossim_header_t *TossimActiveMessageC$getHeader(message_t *amsg)
 #line 65
@@ -5972,17 +6143,6 @@ inline static void /*projectSinkAppC.AMSenderC.SenderC.AMQueueEntryP*/AMQueueEnt
 #line 103
 }
 #line 103
-# 286 "/usr/lib/ncc/nesc_nx.h"
-static __inline  uint8_t __nesc_hton_uint8(void * target, uint8_t value)
-#line 286
-{
-  uint8_t *base = target;
-
-#line 288
-  base[0] = value;
-  return value;
-}
-
 # 170 "/opt/tinyos-main-2.1.2/tos/lib/tossim/TossimActiveMessageC.nc"
 static inline void TossimActiveMessageC$AMPacket$setType(message_t *amsg, am_id_t t)
 #line 170
@@ -6001,13 +6161,13 @@ inline static void /*projectSinkAppC.AMSenderC.SenderC.AMQueueEntryP*/AMQueueEnt
 }
 #line 162
 # 80 "/opt/tinyos-main-2.1.2/tos/interfaces/AMSend.nc"
-inline static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(am_id_t arg_0xb73c52b0, am_addr_t addr, message_t * msg, uint8_t len){
+inline static error_t /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(am_id_t arg_0xb72ee2b0, am_addr_t addr, message_t * msg, uint8_t len){
 #line 80
   unsigned char __nesc_result;
 #line 80
 
 #line 80
-  __nesc_result = TossimActiveMessageC$AMSend$send(arg_0xb73c52b0, addr, msg, len);
+  __nesc_result = TossimActiveMessageC$AMSend$send(arg_0xb72ee2b0, addr, msg, len);
 #line 80
 
 #line 80
@@ -6070,7 +6230,7 @@ uint8_t len)
   if (/*AMQueueP.AMQueueImplP*/AMQueueImplP$0$queue[sim_node()][clientId].msg != (void *)0) {
       return EBUSY;
     }
-  sim_log_debug(218U, "AMQueue", "AMQueue: request to send from %hhu (%p): passed checks\n", clientId, msg);
+  sim_log_debug(252U, "AMQueue", "AMQueue: request to send from %hhu (%p): passed checks\n", clientId, msg);
 
   /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$queue[sim_node()][clientId].msg = msg;
   /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Packet$setPayloadLength(msg, len);
@@ -6080,12 +6240,12 @@ uint8_t len)
       am_id_t amId = /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$type(msg);
       am_addr_t dest = /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMPacket$destination(msg);
 
-      sim_log_debug(219U, "AMQueue", "%s: request to send from %hhu (%p): queue empty\n", __FUNCTION__, clientId, msg);
+      sim_log_debug(253U, "AMQueue", "%s: request to send from %hhu (%p): queue empty\n", __FUNCTION__, clientId, msg);
       /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$current[sim_node()] = clientId;
 
       err = /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$send(amId, dest, msg, len);
       if (err != SUCCESS) {
-          sim_log_debug(220U, "AMQueue", "%s: underlying send failed.\n", __FUNCTION__);
+          sim_log_debug(254U, "AMQueue", "%s: underlying send failed.\n", __FUNCTION__);
           /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$current[sim_node()] = 1;
           /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$queue[sim_node()][clientId].msg = (void *)0;
         }
@@ -6093,7 +6253,7 @@ uint8_t len)
       return err;
     }
   else {
-      sim_log_debug(221U, "AMQueue", "AMQueue: request to send from %hhu (%p): queue not empty\n", clientId, msg);
+      sim_log_debug(255U, "AMQueue", "AMQueue: request to send from %hhu (%p): queue not empty\n", clientId, msg);
     }
   return SUCCESS;
 }
@@ -6114,9 +6274,9 @@ inline static error_t /*projectSinkAppC.AMSenderC.SenderC.AMQueueEntryP*/AMQueue
 }
 #line 75
 # 110 "/opt/tinyos-main-2.1.2/tos/interfaces/AMSend.nc"
-inline static void TossimActiveMessageC$AMSend$sendDone(am_id_t arg_0xb76eb108, message_t * msg, error_t error){
+inline static void TossimActiveMessageC$AMSend$sendDone(am_id_t arg_0xb764a108, message_t * msg, error_t error){
 #line 110
-  /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(arg_0xb76eb108, msg, error);
+  /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(arg_0xb764a108, msg, error);
 #line 110
 }
 #line 110
@@ -6452,13 +6612,6 @@ static inline void TossimPacketModelC$send_transmit_done(sim_event_t *evt)
   TossimPacketModelC$transmitting[sim_node()] = FALSE;
   sim_log_debug(120U, "TossimPacketModelC", "PACKET: Signaling send done at %llu.\n", sim_time());
   TossimPacketModelC$Packet$sendDone(rval, TossimPacketModelC$running[sim_node()] ? SUCCESS : EOFF);
-}
-
-#line 82
-static inline tossim_metadata_t *TossimPacketModelC$getMetadata(message_t *msg)
-#line 82
-{
-  return (tossim_metadata_t *)& msg->metadata;
 }
 
 #line 253
@@ -6963,46 +7116,6 @@ static inline void CpmModelC$sim_gain_ack_handle(sim_event_t *evt)
   CpmModelC$free_receive_message((CpmModelC$receive_message_t *)evt->data);
 }
 
-# 347 "/usr/lib/ncc/nesc_nx.h"
-static __inline  uint32_t __nesc_hton_uint32(void * target, uint32_t value)
-#line 347
-{
-  uint8_t *base = target;
-
-#line 349
-  base[3] = value;
-  base[2] = value >> 8;
-  base[1] = value >> 16;
-  base[0] = value >> 24;
-  return value;
-}
-
-# 128 "/opt/tinyos-main-2.1.2/tos/lib/tossim/TossimPacketModelC.nc"
-static inline error_t TossimPacketModelC$PacketAcknowledgements$requestAck(message_t *msg)
-#line 128
-{
-  tossim_metadata_t *meta = TossimPacketModelC$getMetadata(msg);
-
-#line 130
-  __nesc_hton_uint8(meta->ack.nxdata, TRUE);
-  return SUCCESS;
-}
-
-# 59 "/opt/tinyos-main-2.1.2/tos/interfaces/PacketAcknowledgements.nc"
-inline static error_t projectSinkC$Ack$requestAck(message_t * msg){
-#line 59
-  unsigned char __nesc_result;
-#line 59
-
-#line 59
-  __nesc_result = TossimPacketModelC$PacketAcknowledgements$requestAck(msg);
-#line 59
-
-#line 59
-  return __nesc_result;
-#line 59
-}
-#line 59
 # 216 "/opt/tinyos-main-2.1.2/tos/lib/tossim/TossimActiveMessageC.nc"
 static inline message_t *TossimActiveMessageC$Snoop$default$receive(am_id_t id, message_t *msg, void *payload, uint8_t len)
 #line 216
@@ -7011,13 +7124,13 @@ static inline message_t *TossimActiveMessageC$Snoop$default$receive(am_id_t id, 
 }
 
 # 78 "/opt/tinyos-main-2.1.2/tos/interfaces/Receive.nc"
-inline static message_t * TossimActiveMessageC$Snoop$receive(am_id_t arg_0xb76e9178, message_t * msg, void * payload, uint8_t len){
+inline static message_t * TossimActiveMessageC$Snoop$receive(am_id_t arg_0xb7648178, message_t * msg, void * payload, uint8_t len){
 #line 78
   nx_struct message_t *__nesc_result;
 #line 78
 
 #line 78
-    __nesc_result = TossimActiveMessageC$Snoop$default$receive(arg_0xb76e9178, msg, payload, len);
+    __nesc_result = TossimActiveMessageC$Snoop$default$receive(arg_0xb7648178, msg, payload, len);
 #line 78
 
 #line 78
@@ -7154,40 +7267,42 @@ static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$s
 }
 
 # 114 "/opt/tinyos-main-2.1.2/tos/lib/timer/Timer.nc"
-inline static void projectSinkC$DataTimer$startPeriodicAt(uint32_t t0, uint32_t dt){
-#line 114
-  /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startPeriodicAt(1U, t0, dt);
-#line 114
-}
-#line 114
 inline static void projectSinkC$TresholdTimer$startPeriodicAt(uint32_t t0, uint32_t dt){
 #line 114
   /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$startPeriodicAt(0U, t0, dt);
 #line 114
 }
 #line 114
-# 57 "projectSinkC.nc"
+# 67 "projectSinkC.nc"
 static inline void projectSinkC$AMControl$startDone(error_t err)
 {
   if (err == SUCCESS) {
       sim_log_debug(148U, "boot", "Booting ... I'm node : %d, Radio started at time: %s \n", TOS_NODE_ID, sim_time_string());
       if (TOS_NODE_ID == 1) {
 
+          projectSinkC$treshold[sim_node()] = 4294967295;
           projectSinkC$treshold_id[sim_node()] = 0;
-          projectSinkC$TresholdTimer$startPeriodicAt(0, 10000);
+          projectSinkC$children[sim_node()][0] = 0;
+          projectSinkC$children[sim_node()][1] = 0;
+          projectSinkC$parent[sim_node()] = 1;
+          sim_log_debug(149U, "boot", "node %d: booted, child1 : %d , child2 : %d\n", TOS_NODE_ID, projectSinkC$children[sim_node()][0], projectSinkC$children[sim_node()][1]);
+          projectSinkC$TresholdTimer$startPeriodicAt(0, 150000);
         }
       else {
 
           projectSinkC$treshold[sim_node()] = 4294967295;
           projectSinkC$treshold_id[sim_node()] = 0;
+          projectSinkC$children[sim_node()][0] = 0;
+          projectSinkC$children[sim_node()][1] = 0;
           projectSinkC$parent[sim_node()] = 0;
-          projectSinkC$DataTimer$startPeriodicAt(0, 1000);
+          sim_log_debug(150U, "boot", "node %d: booted, child1 : %d , child2 : %d , parent: %d \n", TOS_NODE_ID, projectSinkC$children[sim_node()][0], projectSinkC$children[sim_node()][1], projectSinkC$parent[sim_node()]);
         }
     }
   else 
+
     {
-      sim_log_debug_clear(149U, "error", "\n");
-      sim_log_error(150U, "error", "Error in booting the radio\n");
+      sim_log_debug_clear(151U, "error", "\n");
+      sim_log_error(152U, "error", "Error in booting the radio\n");
       projectSinkC$AMControl$start();
     }
 }
@@ -7207,9 +7322,9 @@ static inline void TossimPacketModelC$startDoneTask$runTask(void )
   TossimPacketModelC$Control$startDone(SUCCESS);
 }
 
-# 83 "projectSinkC.nc"
+# 101 "projectSinkC.nc"
 static inline void projectSinkC$AMControl$stopDone(error_t err)
-#line 83
+#line 101
 {
 }
 
@@ -7480,9 +7595,9 @@ static inline void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone
 }
 
 # 100 "/opt/tinyos-main-2.1.2/tos/interfaces/Send.nc"
-inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(uint8_t arg_0xb73c78a8, message_t * msg, error_t error){
+inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(uint8_t arg_0xb72f08a8, message_t * msg, error_t error){
 #line 100
-  switch (arg_0xb73c78a8) {
+  switch (arg_0xb72f08a8) {
 #line 100
     case 0U:
 #line 100
@@ -7492,7 +7607,7 @@ inline static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$sendDone(uint8_t
 #line 100
     default:
 #line 100
-      /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(arg_0xb73c78a8, msg, error);
+      /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$Send$default$sendDone(arg_0xb72f08a8, msg, error);
 #line 100
       break;
 #line 100
@@ -7551,9 +7666,9 @@ static inline void SimSchedulerBasicP$TaskBasic$default$runTask(uint8_t id)
 }
 
 # 75 "/opt/tinyos-main-2.1.2/tos/interfaces/TaskBasic.nc"
-inline static void SimSchedulerBasicP$TaskBasic$runTask(uint8_t arg_0xb78a4650){
+inline static void SimSchedulerBasicP$TaskBasic$runTask(uint8_t arg_0xb7803650){
 #line 75
-  switch (arg_0xb78a4650) {
+  switch (arg_0xb7803650) {
 #line 75
     case TossimPacketModelC$startDoneTask:
 #line 75
@@ -7599,7 +7714,7 @@ inline static void SimSchedulerBasicP$TaskBasic$runTask(uint8_t arg_0xb78a4650){
 #line 75
     default:
 #line 75
-      SimSchedulerBasicP$TaskBasic$default$runTask(arg_0xb78a4650);
+      SimSchedulerBasicP$TaskBasic$default$runTask(arg_0xb7803650);
 #line 75
       break;
 #line 75
@@ -7675,18 +7790,18 @@ inline static error_t projectSinkC$Read$read(void ){
 #line 55
 }
 #line 55
-# 88 "projectSinkC.nc"
+# 106 "projectSinkC.nc"
 static inline void projectSinkC$TresholdTimer$fired(void )
 {
-  sim_log_debug_clear(151U, "timer", "\n");
-  sim_log_debug(152U, "timer", "Treshold timer fired at %s.\n", sim_time_string());
+  sim_log_debug_clear(153U, "timer", "\n");
+  sim_log_debug(154U, "timer", "Treshold timer fired at %s.\n", sim_time_string());
   projectSinkC$Read$read();
 }
 
 static inline void projectSinkC$DataTimer$fired(void )
 {
-  sim_log_debug_clear(153U, "timer", "\n");
-  sim_log_debug(154U, "timer", "Data timer fired at %s.\n", sim_time_string());
+  sim_log_debug_clear(155U, "timer", "\n");
+  sim_log_debug(156U, "timer", "Data timer fired at %s.\n", sim_time_string());
   projectSinkC$Read$read();
 }
 
@@ -7735,22 +7850,28 @@ inline static uint32_t /*projectSinkAppC.FakeSensorC.FakeSensorP*/FakeSensorP$0$
 #line 46
 }
 #line 46
-# 152 "projectSinkC.nc"
+# 193 "projectSinkC.nc"
 static inline void projectSinkC$Read$readDone(error_t result, uint32_t dataRead)
 {
   if (TOS_NODE_ID == 1) {
       projectSinkC$treshold[sim_node()] = dataRead;
-      projectSinkC$treshold_id[sim_node()] += 1;
-      sim_log_debug_clear(171U, "sink", "\n");
-      sim_log_debug(172U, "sink", "Sink just read new treshold %lu\n", dataRead);
-      sim_log_debug_clear(173U, "short", "\n");
-      sim_log_debug(174U, "short", "Sink just read new treshold %lu\n", projectSinkC$treshold_id[sim_node()]);
-      projectSinkC$sendTreshold(sim_time(), projectSinkC$treshold_id[sim_node()]);
+      projectSinkC$treshold_id[sim_node()] = projectSinkC$treshold_id[sim_node()] + 1;
+      sim_log_debug_clear(179U, "sink", "\n");
+      sim_log_debug(180U, "sink", "Sink just read new treshold %lu, with id %d\n", dataRead, projectSinkC$treshold_id[sim_node()]);
+      if (projectSinkC$treshold_id[sim_node()] == 1 || projectSinkC$treshold_id[sim_node()] % 10 == 0) {
+          projectSinkC$sendDiscovery(projectSinkC$treshold_id[sim_node()]);
+          sim_log_debug_clear(181U, "sink", "\n");
+          sim_log_debug(182U, "sink", "Sink is sending discovery");
+        }
+      else {
+          projectSinkC$sendTreshold(sim_time());
+        }
     }
-  else {
+  else 
+    {
       if (dataRead > projectSinkC$treshold[sim_node()]) {
-          sim_log_debug_clear(175U, "data", "\n");
-          sim_log_debug(176U, "data", "Mote %hu just read new data %lu above the treshold %lu at time %s\n", TOS_NODE_ID, dataRead, projectSinkC$treshold[sim_node()], sim_time_string());
+          sim_log_debug_clear(183U, "data", "\n");
+          sim_log_debug(184U, "data", "Mote %hu just read new data %lu above the treshold %lu at time %s\n", TOS_NODE_ID, dataRead, projectSinkC$treshold[sim_node()], sim_time_string());
           projectSinkC$sendData(dataRead, TOS_NODE_ID, sim_time());
         }
     }
@@ -7776,9 +7897,9 @@ static inline void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$d
 }
 
 # 83 "/opt/tinyos-main-2.1.2/tos/lib/timer/Timer.nc"
-inline static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$fired(uint8_t arg_0xb74423a8){
+inline static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$fired(uint8_t arg_0xb736b3a8){
 #line 83
-  switch (arg_0xb74423a8) {
+  switch (arg_0xb736b3a8) {
 #line 83
     case 0U:
 #line 83
@@ -7800,7 +7921,7 @@ inline static void /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$f
 #line 83
     default:
 #line 83
-      /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(arg_0xb74423a8);
+      /*HilTimerMilliC.VirtualizeTimerC*/VirtualizeTimerC$0$Timer$default$fired(arg_0xb736b3a8);
 #line 83
       break;
 #line 83
@@ -7889,7 +8010,7 @@ static inline void /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm
 static inline void HplAtm128Timer0AsyncP$cancel_compare(void )
 #line 577
 {
-  sim_log_debug(217U, "HplAtm128CompareC", "Cancelling compare at 0x%p\n", HplAtm128Timer0AsyncP$compare[sim_node()]);
+  sim_log_debug(251U, "HplAtm128CompareC", "Cancelling compare at 0x%p\n", HplAtm128Timer0AsyncP$compare[sim_node()]);
   if (HplAtm128Timer0AsyncP$compare[sim_node()] != (void *)0) {
       HplAtm128Timer0AsyncP$compare[sim_node()]->cancelled = 1;
       HplAtm128Timer0AsyncP$compare[sim_node()]->cleanup = sim_queue_cleanup_total;
@@ -7918,7 +8039,7 @@ static inline void HplAtm128Timer0AsyncP$cancel_overflow(void )
 {
   if (HplAtm128Timer0AsyncP$overflow[sim_node()] != (void *)0) {
       HplAtm128Timer0AsyncP$overflow[sim_node()]->cancelled = 1;
-      sim_log_debug(216U, "HplAtm128Timer0AsyncP", "Cancelling overflow %p.\n", HplAtm128Timer0AsyncP$overflow[sim_node()]);
+      sim_log_debug(250U, "HplAtm128Timer0AsyncP", "Cancelling overflow %p.\n", HplAtm128Timer0AsyncP$overflow[sim_node()]);
       HplAtm128Timer0AsyncP$overflow[sim_node()]->cleanup = sim_queue_cleanup_total;
     }
 }
@@ -7933,11 +8054,11 @@ static inline void HplAtm128Timer0AsyncP$timer0_overflow_handle(sim_event_t *evt
   else {
       if ((atm128RegFile[sim_node()][ATM128_TIMSK] & (1 << TOIE0)) != 0) {
           atm128RegFile[sim_node()][ATM128_TIFR] &= ~(1 << TOV0);
-          sim_log_debug(213U, "HplAtm128Timer0AsyncP", "Overflow interrupt at %s\n", sim_time_string());
+          sim_log_debug(247U, "HplAtm128Timer0AsyncP", "Overflow interrupt at %s\n", sim_time_string());
           INTERRUPT_16();
         }
       else {
-          sim_log_debug(214U, "HplAtm128Timer0AsyncP", "Setting overflow bit at %s\n", sim_time_string());
+          sim_log_debug(248U, "HplAtm128Timer0AsyncP", "Setting overflow bit at %s\n", sim_time_string());
           atm128RegFile[sim_node()][ATM128_TIFR] |= 1 << TOV0;
         }
       HplAtm128Timer0AsyncP$configure_overflow(evt);
@@ -7987,7 +8108,7 @@ static inline void HplAtm128Timer0AsyncP$Timer0$set(uint8_t newVal)
   uint8_t curVal = HplAtm128Timer0AsyncP$Timer0$get();
 
 #line 299
-  sim_log_debug(206U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Setting timer: %hhu\n", newVal);
+  sim_log_debug(240U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Setting timer: %hhu\n", newVal);
   if (newVal == curVal) {
       return;
     }
@@ -8014,7 +8135,7 @@ static inline void HplAtm128Timer0AsyncP$Timer0$set(uint8_t newVal)
 static inline void HplAtm128Timer0AsyncP$timer0_compare_handle(sim_event_t *evt)
 #line 187
 {
-  sim_log_debug(196U, "HplAtm128Timer0AsyncP", "Beginning compare 0x%p at %s\n", evt, sim_time_string());
+  sim_log_debug(230U, "HplAtm128Timer0AsyncP", "Beginning compare 0x%p at %s\n", evt, sim_time_string());
   if (evt->cancelled) {
       return;
     }
@@ -8023,21 +8144,21 @@ static inline void HplAtm128Timer0AsyncP$timer0_compare_handle(sim_event_t *evt)
 
 #line 194
       sim_print_now(timeStr, 128);
-      sim_log_debug(197U, "HplAtm128Timer0AsyncP", "Handling compare at 0x%p @ %s\n", evt, sim_time_string());
+      sim_log_debug(231U, "HplAtm128Timer0AsyncP", "Handling compare at 0x%p @ %s\n", evt, sim_time_string());
 
       if ((atm128RegFile[sim_node()][ATM128_TCCR0] & (1 << WGM01)) != 0 && !((atm128RegFile[sim_node()][ATM128_TCCR0] & (1 << WGM00)) != 0)) {
-          sim_log_debug(198U, "HplAtm128Timer0AsyncP", "%s: CTC is set, clear timer.\n", __FUNCTION__);
+          sim_log_debug(232U, "HplAtm128Timer0AsyncP", "%s: CTC is set, clear timer.\n", __FUNCTION__);
           HplAtm128Timer0AsyncP$Timer0$set(0);
         }
       else {
-          sim_log_debug(199U, "HplAtm128Timer0AsyncP", "%s: TCCR is 0x%hhx, %i, %i\n", __FUNCTION__, * (volatile uint8_t *)&atm128RegFile[sim_node()][0x33], (int )((atm128RegFile[sim_node()][ATM128_TCCR0] & (1 << WGM01)) != 0), (int )((atm128RegFile[sim_node()][ATM128_TCCR0] & (1 << WGM00)) != 0));
+          sim_log_debug(233U, "HplAtm128Timer0AsyncP", "%s: TCCR is 0x%hhx, %i, %i\n", __FUNCTION__, * (volatile uint8_t *)&atm128RegFile[sim_node()][0x33], (int )((atm128RegFile[sim_node()][ATM128_TCCR0] & (1 << WGM01)) != 0), (int )((atm128RegFile[sim_node()][ATM128_TCCR0] & (1 << WGM00)) != 0));
         }
 
       if ((atm128RegFile[sim_node()][ATM128_TIMSK] & (1 << OCIE0)) != 0) {
-          sim_log_debug(200U, "HplAtm128Timer0AsyncP", "TIFR is %hhx\n", * (volatile uint8_t *)&atm128RegFile[sim_node()][0x36]);
+          sim_log_debug(234U, "HplAtm128Timer0AsyncP", "TIFR is %hhx\n", * (volatile uint8_t *)&atm128RegFile[sim_node()][0x36]);
           atm128RegFile[sim_node()][ATM128_TIFR] &= ~(1 << OCF0);
-          sim_log_debug(201U, "HplAtm128Timer0AsyncP", "TIFR is %hhx\n", * (volatile uint8_t *)&atm128RegFile[sim_node()][0x36]);
-          sim_log_debug(202U, "HplAtm128Timer0AsyncP", "Compare interrupt @ %s\n", timeStr);
+          sim_log_debug(235U, "HplAtm128Timer0AsyncP", "TIFR is %hhx\n", * (volatile uint8_t *)&atm128RegFile[sim_node()][0x36]);
+          sim_log_debug(236U, "HplAtm128Timer0AsyncP", "Compare interrupt @ %s\n", timeStr);
           INTERRUPT_15();
         }
       else {
@@ -8057,7 +8178,7 @@ static inline sim_event_t *HplAtm128Timer0AsyncP$allocate_compare(void )
   sim_event_t *newEvent = sim_queue_allocate_event();
 
 #line 225
-  sim_log_debug(203U, "HplAtm128Timer0AsyncP", "Allocated compare at 0x%p\n", newEvent);
+  sim_log_debug(237U, "HplAtm128Timer0AsyncP", "Allocated compare at 0x%p\n", newEvent);
   newEvent->handle = HplAtm128Timer0AsyncP$timer0_compare_handle;
   newEvent->cleanup = sim_queue_cleanup_none;
   return newEvent;
@@ -8365,7 +8486,7 @@ inline static void /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm
 static inline void HplAtm128Timer0AsyncP$Timer0Ctrl$setControl(Atm128TimerControl_t x)
 #line 364
 {
-  sim_log_debug(208U, "HplAtm128Timer0AsyncP", "Setting control to be 0x%hhx\n", x.flat);
+  sim_log_debug(242U, "HplAtm128Timer0AsyncP", "Setting control to be 0x%hhx\n", x.flat);
   * (volatile uint8_t *)&atm128RegFile[sim_node()][0x33] = x.flat;
 }
 
@@ -8442,7 +8563,7 @@ inline static error_t SimMainP$SoftwareInit$init(void ){
 #line 62
 }
 #line 62
-# 51 "projectSinkC.nc"
+# 61 "projectSinkC.nc"
 static inline void projectSinkC$Boot$booted(void )
 {
   projectSinkC$AMControl$start();
@@ -9997,37 +10118,6 @@ static am_id_t TossimActiveMessageC$AMPacket$type(message_t *amsg)
   return __nesc_ntoh_uint8(header->type.nxdata);
 }
 
-# 200 "projectSinkC.nc"
-static void projectSinkC$sendTreshold(uint32_t elapsed_time, uint16_t t_id)
-#line 200
-{
-  if (!projectSinkC$locked[sim_node()]) {
-      Msg_t *mess = (Msg_t *)projectSinkC$Packet$getPayload(&projectSinkC$packet[sim_node()], sizeof(Msg_t ));
-
-      if (mess == (void *)0) {
-#line 204
-        return;
-        }
-#line 205
-      __nesc_hton_uint16(mess->sender.nxdata, TOS_NODE_ID);
-      __nesc_hton_uint32(mess->value.nxdata, projectSinkC$treshold[sim_node()]);
-      __nesc_hton_uint16(mess->type.nxdata, 1);
-      __nesc_hton_uint16(mess->source.nxdata, 1);
-      __nesc_hton_uint16(mess->treshold_id.nxdata, t_id);
-      __nesc_hton_uint32(mess->time.nxdata, elapsed_time);
-
-      if (projectSinkC$AMSend$send(AM_BROADCAST_ADDR, &projectSinkC$packet[sim_node()], sizeof(Msg_t )) == SUCCESS) {
-          sim_log_debug_clear(185U, "radio", "\n");
-          sim_log_debug(186U, "radio", "Packet sent from: %hu, data: %lu, type: %hu, treshold: %lu , treshold_id: %hu\n", TOS_NODE_ID, __nesc_ntoh_uint32(mess->value.nxdata), __nesc_ntoh_uint16(mess->type.nxdata), __nesc_ntoh_uint16(mess->treshold_id.nxdata), __nesc_ntoh_uint16(mess->treshold_id.nxdata));
-          projectSinkC$locked[sim_node()] = TRUE;
-        }
-      else {
-          sim_log_debug_clear(187U, "error", "\n");
-          sim_log_debug(188U, "error", "Error in sending packet\n ");
-        }
-    }
-}
-
 # 53 "/opt/tinyos-main-2.1.2/tos/system/AMQueueEntryP.nc"
 static error_t /*projectSinkAppC.AMSenderC.SenderC.AMQueueEntryP*/AMQueueEntryP$0$AMSend$send(am_addr_t dest, 
 message_t *msg, 
@@ -10115,7 +10205,7 @@ static void /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$AMSend$sendDone(am_id_t id, 
       /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$sendDone(/*AMQueueP.AMQueueImplP*/AMQueueImplP$0$current[sim_node()], msg, err);
     }
   else {
-      sim_log_debug(222U, "PointerBug", "%s received send done for %p, signaling for %p.\n", __FUNCTION__, msg, /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$queue[sim_node()][/*AMQueueP.AMQueueImplP*/AMQueueImplP$0$current[sim_node()]].msg);
+      sim_log_debug(256U, "PointerBug", "%s received send done for %p, signaling for %p.\n", __FUNCTION__, msg, /*AMQueueP.AMQueueImplP*/AMQueueImplP$0$queue[sim_node()][/*AMQueueP.AMQueueImplP*/AMQueueImplP$0$current[sim_node()]].msg);
     }
 }
 
@@ -10173,28 +10263,48 @@ static void SimSchedulerBasicP$sim_scheduler_submit_event(void )
     }
 }
 
-# 174 "projectSinkC.nc"
+# 221 "projectSinkC.nc"
 static void projectSinkC$AMSend$sendDone(message_t *buf, error_t err)
 {
   if (&projectSinkC$packet[sim_node()] == buf) {
       projectSinkC$locked[sim_node()] = FALSE;
       if (err == SUCCESS) {
           if (projectSinkC$Ack$wasAcked(buf)) {
-              sim_log_debug_clear(177U, "radio", "\n");
-              sim_log_debug(178U, "radio", "Packet sent at time %s from %hu \n", sim_time_string(), TOS_NODE_ID);
-              sim_log_debug_clear(179U, "radio", "\n");
-              sim_log_debug(180U, "radio", "Message correctly delivered\n");
+              sim_log_debug_clear(185U, "radio", "\n");
+              sim_log_debug(186U, "radio", "Packet sent at time %s from %hu \n", sim_time_string(), TOS_NODE_ID);
+              sim_log_debug_clear(187U, "radio", "\n");
+              sim_log_debug(188U, "radio", "Message correctly delivered\n");
+              sim_log_debug_clear(189U, "analysis", "\n");
+              if (projectSinkC$mess_to_send[sim_node()] && projectSinkC$children[sim_node()][1] != 0) {
+
+                  Msg_t *mess = (Msg_t *)projectSinkC$Packet$getPayload(&projectSinkC$packet[sim_node()], sizeof(Msg_t ));
+
+                  sim_log_debug(190U, "error", "Must send another packet\n ");
+                  mess = projectSinkC$saved_mess[sim_node()];
+                  projectSinkC$Ack$requestAck(&projectSinkC$packet[sim_node()]);
+                  if (projectSinkC$AMSend$send(projectSinkC$children[sim_node()][1], &projectSinkC$packet[sim_node()], sizeof(Msg_t )) == SUCCESS) {
+                      sim_log_debug_clear(191U, "radio", "\n");
+                      sim_log_debug(192U, "radio", "Packet sent from: %hu, data: %lu, type: %hu, treshold_id: %lu\n", TOS_NODE_ID, __nesc_ntoh_uint32(mess->value.nxdata), __nesc_ntoh_uint16(mess->type.nxdata), __nesc_ntoh_uint16(mess->treshold_id.nxdata));
+                      sim_log_debug(193U, "radio", "Message to the second child %d", projectSinkC$children[sim_node()][0]);
+                      projectSinkC$locked[sim_node()] = TRUE;
+                    }
+                  else {
+                      sim_log_debug_clear(194U, "error", "\n");
+                      sim_log_debug(195U, "error", "Error in sending packet\n ");
+                    }
+                }
+              projectSinkC$mess_to_send[sim_node()] = FALSE;
             }
-          else {
-              sim_log_debug_clear(181U, "error", "\n");
-              sim_log_debug(182U, "error", "Error in sending packet, send the request again\n");
+          else 
+            {
+              sim_log_debug_clear(196U, "error", "\n");
+              sim_log_debug(197U, "error", "Error in sending packet, send the request again NOT ACKED\n");
             }
         }
-    }
-  else 
-    {
-      sim_log_debug_clear(183U, "error", "\n");
-      sim_log_error(184U, "error", "Error in sending packet, send the request again\n");
+      else {
+          sim_log_debug_clear(198U, "error", "\n");
+          sim_log_error(199U, "error", "Error in sending packet, send the request again NOT SEND\n");
+        }
     }
 }
 
@@ -10248,34 +10358,101 @@ static void CpmModelC$sim_gain_schedule_ack(int source, sim_time_t t, CpmModelC$
   sim_queue_insert(ackEvent);
 }
 
-# 226 "projectSinkC.nc"
-static void projectSinkC$sendData(uint32_t data, uint16_t source, uint32_t elapsed_time)
-#line 226
+# 317 "projectSinkC.nc"
+static void projectSinkC$sendDiscovery(uint16_t id)
+#line 317
 {
-  if (!projectSinkC$locked[sim_node()]) {
-      Msg_t *mess = (Msg_t *)projectSinkC$Packet$getPayload(&projectSinkC$packet[sim_node()], sizeof(Msg_t ));
 
-      if (mess == (void *)0) {
-#line 230
-        return;
+  Msg_t *mess = (Msg_t *)projectSinkC$Packet$getPayload(&projectSinkC$packet[sim_node()], sizeof(Msg_t ));
+
+#line 320
+  if (mess == (void *)0) {
+#line 320
+    return;
+    }
+#line 321
+  __nesc_hton_uint16(mess->sender.nxdata, TOS_NODE_ID);
+  __nesc_hton_uint32(mess->value.nxdata, 0);
+  __nesc_hton_uint16(mess->type.nxdata, 3);
+  __nesc_hton_uint16(mess->source.nxdata, 1);
+  __nesc_hton_uint16(mess->treshold_id.nxdata, id);
+  sim_log_debug_clear(207U, "radio", "\n");
+  sim_log_debug(208U, "radio", "Packet sent from: %hu, data: %lu, type: %d, treshold_id %hu\n", TOS_NODE_ID, __nesc_ntoh_uint32(mess->value.nxdata), __nesc_ntoh_uint16(mess->type.nxdata), __nesc_ntoh_uint16(mess->treshold_id.nxdata));
+  if (!projectSinkC$locked[sim_node()]) {
+
+      if (projectSinkC$AMSend$send(AM_BROADCAST_ADDR, &projectSinkC$packet[sim_node()], sizeof(Msg_t )) == SUCCESS) {
+          sim_log_debug_clear(209U, "radio", "\n");
+          sim_log_debug(210U, "radio", "Packet sent from: %hu, data: %lu, type: %hu ID %hu\n", TOS_NODE_ID, __nesc_ntoh_uint32(mess->value.nxdata), __nesc_ntoh_uint16(mess->type.nxdata));
+          sim_log_debug(211U, "radio", "Message of discovery sent");
+          projectSinkC$locked[sim_node()] = TRUE;
         }
-#line 231
-      __nesc_hton_uint16(mess->sender.nxdata, TOS_NODE_ID);
-      __nesc_hton_uint32(mess->value.nxdata, data);
-      __nesc_hton_uint16(mess->type.nxdata, 2);
-      __nesc_hton_uint16(mess->source.nxdata, source);
-      __nesc_hton_uint32(mess->time.nxdata, elapsed_time);
-      if (projectSinkC$parent[sim_node()] == 0) {
-#line 236
-        return;
+      else {
+          sim_log_debug_clear(212U, "error", "\n");
+          sim_log_debug(213U, "error", "Error in sending packet\n ");
         }
-      else 
-#line 237
-        {
+    }
+}
+
+#line 265
+static void projectSinkC$sendTreshold(uint32_t elapsed_time)
+#line 265
+{
+  Msg_t *mess = (Msg_t *)projectSinkC$Packet$getPayload(&projectSinkC$packet[sim_node()], sizeof(Msg_t ));
+
+  if (mess == (void *)0) {
+#line 268
+    return;
+    }
+#line 269
+  __nesc_hton_uint16(mess->sender.nxdata, TOS_NODE_ID);
+  __nesc_hton_uint32(mess->value.nxdata, projectSinkC$treshold[sim_node()]);
+  __nesc_hton_uint16(mess->type.nxdata, 1);
+  __nesc_hton_uint16(mess->source.nxdata, 1);
+  __nesc_hton_uint32(mess->time.nxdata, elapsed_time);
+  __nesc_hton_uint16(mess->treshold_id.nxdata, projectSinkC$treshold_id[sim_node()]);
+
+  if (!projectSinkC$locked[sim_node()] && projectSinkC$children[sim_node()][0] != 0) {
+      projectSinkC$Ack$requestAck(&projectSinkC$packet[sim_node()]);
+      if (projectSinkC$AMSend$send(projectSinkC$children[sim_node()][0], &projectSinkC$packet[sim_node()], sizeof(Msg_t )) == SUCCESS) {
+          sim_log_debug_clear(200U, "radio", "\n");
+          sim_log_debug(201U, "radio", "Packet sent from: %hu, data: %lu, type: %hu, treshold_id: %lu\n", TOS_NODE_ID, __nesc_ntoh_uint32(mess->value.nxdata), __nesc_ntoh_uint16(mess->type.nxdata), __nesc_ntoh_uint16(mess->treshold_id.nxdata));
+          sim_log_debug(202U, "radio", "Message to the first child %d", projectSinkC$children[sim_node()][0]);
+          projectSinkC$locked[sim_node()] = TRUE;
+          projectSinkC$mess_to_send[sim_node()] = TRUE;
+          projectSinkC$saved_mess[sim_node()] = mess;
+        }
+      else {
+          sim_log_debug_clear(203U, "error", "\n");
+          sim_log_debug(204U, "error", "Error in sending packet\n ");
+        }
+    }
+}
+
+
+
+static void projectSinkC$sendData(uint32_t data, uint16_t source, uint32_t elapsed_time)
+#line 295
+{
+  Msg_t *mess = (Msg_t *)projectSinkC$Packet$getPayload(&projectSinkC$packet[sim_node()], sizeof(Msg_t ));
+
+#line 297
+  if (mess == (void *)0) {
+#line 297
+    return;
+    }
+#line 298
+  __nesc_hton_uint16(mess->sender.nxdata, TOS_NODE_ID);
+  __nesc_hton_uint32(mess->value.nxdata, data);
+  __nesc_hton_uint16(mess->type.nxdata, 2);
+  __nesc_hton_uint16(mess->source.nxdata, source);
+  __nesc_hton_uint32(mess->time.nxdata, elapsed_time);
+
+  if (!projectSinkC$locked[sim_node()]) {
+      if (projectSinkC$parent[sim_node()] != 0) {
           projectSinkC$Ack$requestAck(&projectSinkC$packet[sim_node()]);
           if (projectSinkC$AMSend$send(projectSinkC$parent[sim_node()], &projectSinkC$packet[sim_node()], sizeof(Msg_t )) == SUCCESS) {
-              sim_log_debug_clear(189U, "radio", "\n");
-              sim_log_debug(190U, "radio", "Packet sent from: %hu, to: %hu , data: %lu, type: %hu\n ", TOS_NODE_ID, projectSinkC$parent[sim_node()], __nesc_ntoh_uint32(mess->value.nxdata), __nesc_ntoh_uint16(mess->type.nxdata));
+              sim_log_debug_clear(205U, "radio", "\n");
+              sim_log_debug(206U, "radio", "Packet sent from: %hu, to: %hu , data: %lu, type: %hu\n ", TOS_NODE_ID, projectSinkC$parent[sim_node()], __nesc_ntoh_uint32(mess->value.nxdata), __nesc_ntoh_uint16(mess->type.nxdata));
               projectSinkC$locked[sim_node()] = TRUE;
             }
         }
@@ -10424,7 +10601,7 @@ static uint8_t HplAtm128Timer0AsyncP$Timer0$get(void )
   elapsed = HplAtm128Timer0AsyncP$sim_to_clock(elapsed);
   elapsed = elapsed >> HplAtm128Timer0AsyncP$shiftFromScale();
   rval = (uint8_t )(elapsed & 0xff);
-  sim_log_debug(205U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Getting timer: %hhu\n", rval);
+  sim_log_debug(239U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Getting timer: %hhu\n", rval);
   return rval;
 }
 
@@ -10503,7 +10680,7 @@ static Atm128_TIFR_t HplAtm128Timer0AsyncP$Timer0Ctrl$getInterruptFlag(void )
 static uint8_t HplAtm128Timer0AsyncP$Compare$get(void )
 #line 457
 {
-  sim_log_debug(211U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Getting compare: %hhu\n", * (volatile uint8_t *)&atm128RegFile[sim_node()][0x31]);
+  sim_log_debug(245U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Getting compare: %hhu\n", * (volatile uint8_t *)&atm128RegFile[sim_node()][0x31]);
   return * (volatile uint8_t *)&atm128RegFile[sim_node()][0x31];
 }
 
@@ -10587,13 +10764,13 @@ static void /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128Alar
       uint8_t tifr = (uint8_t )/*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$TimerCtrl$getInterruptFlag().flat;
 
 #line 101
-      sim_log_debug(191U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: TIFR is %hhx\n", tifr);
+      sim_log_debug(225U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: TIFR is %hhx\n", tifr);
       if ((interrupt_in != 0 && interrupt_in < /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$MINDT) || tifr & (1 << OCF0)) {
           if (interrupt_in < /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$MINDT) {
-              sim_log_debug(192U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: under min: %hhu.\n", interrupt_in);
+              sim_log_debug(226U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: under min: %hhu.\n", interrupt_in);
             }
           else {
-              sim_log_debug(193U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: OCF set.\n");
+              sim_log_debug(227U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: OCF set.\n");
             }
           {
 #line 109
@@ -10605,14 +10782,14 @@ static void /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128Alar
 
       if (!/*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$set[sim_node()]) {
           newOcr0 = /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$MAXT;
-          sim_log_debug(194U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: no alarm set, set at max.\n");
+          sim_log_debug(228U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: no alarm set, set at max.\n");
         }
       else 
         {
           uint32_t now = /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$Counter$get();
 
 #line 120
-          sim_log_debug(195U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: now-t0 = %llu, dt = %llu\n", now - /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$t0[sim_node()], /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$dt[sim_node()]);
+          sim_log_debug(229U, "Atm128AlarmAsyncP", "Atm128AlarmAsyncP: now-t0 = %llu, dt = %llu\n", now - /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$t0[sim_node()], /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$dt[sim_node()]);
 
           if ((uint32_t )(now - /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$t0[sim_node()]) >= /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$dt[sim_node()]) 
             {
@@ -10656,7 +10833,7 @@ static void /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128Alar
 static void HplAtm128Timer0AsyncP$Compare$set(uint8_t t)
 #line 463
 {
-  sim_log_debug(212U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Setting compare: %hhu\n", t);
+  sim_log_debug(246U, "HplAtm128Timer0AsyncP", "HplAtm128Timer0AsyncP: Setting compare: %hhu\n", t);
   /* atomic removed: atomic calls only */
 #line 465
   {
@@ -10737,7 +10914,7 @@ static void HplAtm128Timer0AsyncP$configure_overflow(sim_event_t *evt)
   overflowTime += sim_time();
   overflowTime -= (sim_time() - HplAtm128Timer0AsyncP$last_zero()) % (1 << HplAtm128Timer0AsyncP$shiftFromScale());
 
-  sim_log_debug(215U, "HplAtm128Timer0AsyncP", "Scheduling new overflow for %i at time %llu\n", sim_node(), overflowTime);
+  sim_log_debug(249U, "HplAtm128Timer0AsyncP", "Scheduling new overflow for %i at time %llu\n", sim_node(), overflowTime);
 
   evt->time = overflowTime;
 }
@@ -10784,7 +10961,7 @@ static void HplAtm128Timer0AsyncP$configure_compare(sim_event_t *evt)
   phaseOffset %= HplAtm128Timer0AsyncP$clock_to_sim(1 << HplAtm128Timer0AsyncP$shiftFromScale());
   compareTime -= phaseOffset;
 
-  sim_log_debug(204U, "HplAtm128Timer0AsyncP", "Configuring new compare of %i for %i at time %llu  (@ %llu)\n", (int )compareVal, sim_node(), compareTime, sim_time());
+  sim_log_debug(238U, "HplAtm128Timer0AsyncP", "Configuring new compare of %i for %i at time %llu  (@ %llu)\n", (int )compareVal, sim_node(), compareTime, sim_time());
 
   evt->time = compareTime;
 }
@@ -11310,10 +11487,34 @@ static int __nesc_nido_resolve(int __nesc_mote,
     *size = sizeof(projectSinkC$parent[__nesc_mote]);
     return 0;
   }
+  if (!strcmp(varname, "projectSinkC$children"))
+  {
+    *addr = (uintptr_t)&projectSinkC$children[__nesc_mote];
+    *size = sizeof(projectSinkC$children[__nesc_mote]);
+    return 0;
+  }
+  if (!strcmp(varname, "projectSinkC$index"))
+  {
+    *addr = (uintptr_t)&projectSinkC$index[__nesc_mote];
+    *size = sizeof(projectSinkC$index[__nesc_mote]);
+    return 0;
+  }
   if (!strcmp(varname, "projectSinkC$counter"))
   {
     *addr = (uintptr_t)&projectSinkC$counter[__nesc_mote];
     *size = sizeof(projectSinkC$counter[__nesc_mote]);
+    return 0;
+  }
+  if (!strcmp(varname, "projectSinkC$mess_to_send"))
+  {
+    *addr = (uintptr_t)&projectSinkC$mess_to_send[__nesc_mote];
+    *size = sizeof(projectSinkC$mess_to_send[__nesc_mote]);
+    return 0;
+  }
+  if (!strcmp(varname, "projectSinkC$saved_mess"))
+  {
+    *addr = (uintptr_t)&projectSinkC$saved_mess[__nesc_mote];
+    *size = sizeof(projectSinkC$saved_mess[__nesc_mote]);
     return 0;
   }
 
@@ -11615,7 +11816,11 @@ static void __nesc_nido_initialise(int __nesc_mote)
   memset((void *)&projectSinkC$treshold[__nesc_mote], 0, sizeof projectSinkC$treshold[__nesc_mote]);
   memset((void *)&projectSinkC$treshold_id[__nesc_mote], 0, sizeof projectSinkC$treshold_id[__nesc_mote]);
   memset((void *)&projectSinkC$parent[__nesc_mote], 0, sizeof projectSinkC$parent[__nesc_mote]);
+  memset((void *)&projectSinkC$children[__nesc_mote], 0, sizeof projectSinkC$children[__nesc_mote]);
+  projectSinkC$index[__nesc_mote] = 0;
   memset((void *)&projectSinkC$counter[__nesc_mote], 0, sizeof projectSinkC$counter[__nesc_mote]);
+  projectSinkC$mess_to_send[__nesc_mote] = FALSE;
+  memset((void *)&projectSinkC$saved_mess[__nesc_mote], 0, sizeof projectSinkC$saved_mess[__nesc_mote]);
 
   /* Module Atm128AlarmAsyncP$0 */
   memset((void *)&/*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$set[__nesc_mote], 0, sizeof /*AlarmCounterMilliP.Atm128AlarmAsyncC.Atm128AlarmAsyncP*/Atm128AlarmAsyncP$0$set[__nesc_mote]);

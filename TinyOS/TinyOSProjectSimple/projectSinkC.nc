@@ -23,8 +23,7 @@ module projectSinkC
 	
 		//other interfaces, if needed
     	interface PacketAcknowledgements as Ack;
-    	interface LocalTime<TMilli>;
-    		
+	
 		//read interface (fake sensor)
 		interface Read<uint32_t>;
   	}
@@ -37,24 +36,15 @@ implementation
   	message_t packet;
   	bool locked = FALSE;
   	uint32_t treshold;
-  	uint16_t treshold_id;  	
+  	uint16_t treshold_id;
   	uint8_t parent;
-  	uint8_t children[2];
-  	uint8_t index=0;
   	uint16_t counter;
-  	bool mess_to_send;
-  	Msg_t* saved_mess;
 
 
-  	 	
 
   	void sendData(uint32_t data, uint16_t source, uint32_t time);
-  	void sendTreshold(uint32_t time);
-  	void sendDiscovery(uint16_t id);  	
-  	void sendDiscoveryAck(uint8_t destination);
-  	void sendSetup(uint8_t destination, uint16_t id);
+  	void sendTreshold(uint32_t time, uint16_t t_id);
   	void readData();
-
 
 
 	//***************** Boot event ********************//
@@ -70,22 +60,15 @@ implementation
   			dbg ("boot", "Booting ... I'm node : %d, Radio started at time: %s \n", TOS_NODE_ID, sim_time_string());
   			if(TOS_NODE_ID ==1){
   				//I'm the sink
-  				treshold_id = 0;
-  				children[0]=0;
-  				children[1]=0;
-  				parent=1;
-  				dbg ("boot", "node %d: booted, child1 : %d , child2 : %d\n", TOS_NODE_ID, children[0], children[1]);
-				call TresholdTimer.startPeriodicAt(0, 80000);
+  				treshold_id=0;		
+				call TresholdTimer.startPeriodicAt(0, 10000);
 			}
 			else{
 				//Inizializing node values
 				treshold = 4294967295; // maximum value for a 32 bit integer
-  				children[0]=0;
-  				children[1]=0;
-  				parent=0;
-  				treshold_id=0;
-  				dbg ("boot", "node %d: booted, child1 : %d , child2 : %d , parent: %d \n", TOS_NODE_ID, children[0], children[1], parent);				
-				//call DataTimer.startPeriodicAt(0, 1000);
+				treshold_id= 0;
+  				parent=0;		 						
+				call DataTimer.startPeriodicAt(0, 1000);
 			}
 			
   		}
@@ -120,47 +103,26 @@ implementation
 
 
 	//***************************** Receive interface *****************//
-  	event message_t* Receive.receive(message_t* buf,void* payload, uint8_t len) //forse varrebbe la pena fare un terzo tipo
+  	event message_t* Receive.receive(message_t* buf,void* payload, uint8_t len) 
   	{
-      	Msg_t* mess = (Msg_t*)payload;
-      	//case 1 : DISCOVERY message
-      	if(mess->type ==3 && treshold_id<mess->treshold_id){ //discovery message	
+      	Msg_t* mess = (Msg_t*) payload;
+      	
+      	if(mess->type == 1 && mess->treshold_id > treshold_id){ //setup
+      	    treshold = mess->value;
+      	    treshold_id = mess->treshold_id;
+      	    parent = mess->sender;
       		dbg_clear("radio", "\n");
-      		dbg("radio", "first discovery riceived from %d\n", mess->sender);
-      		//reinizialing
-      		parent=0;
-      		children[0]=0;
-      		children[1]=0;
-      		sendDiscoveryAck(mess->sender); 
+      		dbg("radio", "Mote %hu has received a treshold message with treshold %lu from mote %hu\n",TOS_NODE_ID, treshold, mess->sender);
+			dbg_clear("analysis", "\n");      		
+      		dbg("analysis", "Time for treshold %lu message with id %lu from sink to %hu is : %lu ms[not discarded]\n", treshold, treshold_id, TOS_NODE_ID, (sim_time()-mess->time)); 
+      		dbg("analysis", "current simulation time: %s\n", sim_time_string());
+      		sendTreshold(mess->time, mess->treshold_id);     	
       	}
-      	if(mess->type==4){
-      		if(index<=2){
-      			children[index]=mess->sender;
-      			dbg_clear("radio", "\n");
-      			dbg("radio", "discovery ack riceived from %d, setting child %d to %d\n",mess->sender , index, children[index]);
-      			index+=1;
-      			sendSetup(mess->sender, mess->treshold_id);
-      		}	
+      	else if(mess->type == 1 && mess->treshold_id <= treshold_id){
+			dbg_clear("analysis", "\n");      		
+      		dbg("analysis", "Time for treshold %lu message with id %lu from sink to %hu is : %lu ms[DISCARDED]\n", treshold, treshold_id, TOS_NODE_ID, (sim_time()-mess->time));
       	}
-      	if(mess->type==5){
-      		parent= mess->sender;
-      		treshold= mess->value;
-      		treshold_id = mess->treshold_id;
-      		dbg_clear("radio", "\n");
-      		dbg("radio", "setup message riceived from %d, setting parent to %d\n",mess->sender , parent);
-      		sendDiscovery(treshold_id);
-      	}			
-      	//case 2 : new treshold 
-      	if(mess->type ==1){
-      			treshold = mess->value;
-      			dbg_clear("radio", "\n");
-      			dbg("radio", "Mote %hu has received a treshold message with treshold %lu from mote %hu\n",TOS_NODE_ID, treshold, mess->sender);
-				dbg_clear("analysis", "\n");      		
-      			dbg("analysis", "Time for treshold %lu message from sink to %hu is : %lu ms\n", treshold, TOS_NODE_ID, (sim_time()-mess->time)); 
-      			dbg("analysis", "current simulation time: %s\n", sim_time_string());
-      			sendTreshold(mess->time);
-      		}
-     	//type 2 -> DATA message
+      	//type 2 -> DATA message
 		if (mess->type == 2){
 			if( TOS_NODE_ID == 1){
 				dbg_clear("sink", "\n");
@@ -178,7 +140,8 @@ implementation
 				sendData(mess->value, mess->source, mess->time);
 			}
 		}
-    	return buf; 
+    	return buf;
+ 
    	}
 
 	
@@ -190,18 +153,12 @@ implementation
   	{
 		if(TOS_NODE_ID ==1){
 			treshold = dataRead;
-			treshold_id+=1;
+			treshold_id +=1;
 	 		dbg_clear("sink", "\n");
-			dbg("sink","Sink just read new treshold %lu, with id %d\n",dataRead, treshold_id);  	
-			if(treshold_id==1 || treshold_id%10==0){
-				sendDiscovery(treshold_id);
-	 			dbg_clear("sink", "\n");
-				dbg("sink","Sink is sending discovery");				
-			}
-			else{
-				sendTreshold(sim_time());
-			}
-			
+			dbg("sink","Sink just read new treshold %lu\n",dataRead);
+	 		dbg_clear("short", "\n");
+			dbg("short","Sink just read new treshold %lu\n",treshold_id );			
+			sendTreshold(sim_time(), treshold_id);			  
 		}
 		else{		
 			if(dataRead > treshold){
@@ -224,162 +181,71 @@ implementation
 					dbg("radio", "Packet sent at time %s from %hu \n", sim_time_string(), TOS_NODE_ID);
 					dbg_clear("radio", "\n");
 		  			dbg("radio", "Message correctly delivered\n");
-					dbg_clear("analysis", "\n");
-					if(mess_to_send && children[1]!=0){  	
-						Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));
-						
-						mess=saved_mess;  
-						call Ack.requestAck(&packet);
-						if(call AMSend.send(children[1], &packet,sizeof(Msg_t)) == SUCCESS){
-							dbg_clear("radio", "\n");
-		   					dbg("radio","Packet sent from: %hu, data: %lu, type: %hu, treshold_id: %lu\n", TOS_NODE_ID, mess->value, mess->type, mess->treshold_id);
-		   					dbg("radio", "Message to the second child %d", children[0]);
-		   					locked = TRUE;
-						}
-						else{
-							dbg_clear("error", "\n");
-							dbg("error","Error in sending packet\n ");
-						}						
-					}
-					mess_to_send=FALSE;											
+	  			}
+  				else{
+  				    dbg_clear("error", "\n");
+  					dbg("error", "Error in sending packet, send the request again\n");
+  			
+				}
 			}
+  		}
+		else{
+			dbg_clear("error", "\n");
+			dbgerror("error", "Error in sending packet, send the request again\n");
 
-  			else{
-  			    dbg_clear("error", "\n");
-  				dbg("error", "Error in sending packet, send the request again\n");		
-			}
-  		}
-			else{
-				dbg_clear("error", "\n");
-				dbgerror("error", "Error in sending packet, send the request again\n");
-			}  		
-  		}
+		}  		
   	}
   	
-  	void sendTreshold(uint32_t elapsed_time){
-	  	Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t))); 
-	  	 
-		if (mess == NULL) return;
-		mess->sender = TOS_NODE_ID;
-		mess->value = treshold;
-		mess->type = 1;
-		mess->source =1;
-		mess-> time = elapsed_time;
-			  	
-  		if (!locked && children[0]!=0){
-			call Ack.requestAck(&packet);
-			if(call AMSend.send(children[0], &packet,sizeof(Msg_t)) == SUCCESS){
+  	
+  	void sendTreshold(uint32_t elapsed_time, uint16_t t_id){
+  		if (!locked){
+		  	Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));  
+			
+			if (mess == NULL) return;
+			mess->sender = TOS_NODE_ID;
+			mess->value = treshold;
+			mess->type = 1;
+			mess->source =1;
+			mess->treshold_id = t_id;
+			mess-> time = elapsed_time;
+			
+			if(call AMSend.send(AM_BROADCAST_ADDR, &packet,sizeof(Msg_t)) == SUCCESS){
 				dbg_clear("radio", "\n");
-		   		dbg("radio","Packet sent from: %hu, data: %lu, type: %hu, treshold_id: %lu\n", TOS_NODE_ID, mess->value, mess->type, mess->treshold_id);
-		   		dbg("radio", "Message to the first child %d", children[0]);
+		   		dbg("radio","Packet sent from: %hu, data: %lu, type: %hu, treshold: %lu , treshold_id: %hu\n", TOS_NODE_ID, mess->value, mess->type, mess->treshold_id, mess->treshold_id);
 		   		locked = TRUE;
-				mess_to_send=TRUE;
-				saved_mess=mess;		   		
 			}
 			else{
 				dbg_clear("error", "\n");
 				dbg("error","Error in sending packet\n ");
-			}				
+			}
 		}
-	}
   	
+  	}
   	
   	
   	void sendData(uint32_t data, uint16_t source, uint32_t elapsed_time){
-  		Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));  
-		if (mess == NULL) return;
-		mess->sender = TOS_NODE_ID;
-		mess->value = data;
-		mess->type = 2;
-		mess->source = source;
-		mess-> time = elapsed_time;  	
-		
-  		if (!locked){			
-			if(parent!=0){
+  		if (!locked){
+	  		Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));  
+			
+			if (mess == NULL) return;
+			mess->sender = TOS_NODE_ID;
+			mess->value = data;
+			mess->type = 2;
+			mess->source = source;
+			mess-> time = elapsed_time;			
+			if(parent == 0)return;
+			else{
 				call Ack.requestAck(&packet);
 				if(call AMSend.send(parent, &packet,sizeof(Msg_t)) == SUCCESS){
 					dbg_clear("radio", "\n");
-	   				dbg("radio","Packet sent from: %hu, to: %hu , data: %lu, type: %hu\n ", TOS_NODE_ID, parent, mess->value, mess->type);
-	   				locked = TRUE;
-				}				
-			}
-		}
-	}	  	
-  	
-  	
-  	void sendDiscovery(uint16_t id){//manda in broadcast
-  
-  	  	Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));  
-		if (mess == NULL) return;
-		mess->sender = TOS_NODE_ID;
-		mess->value = 0;
-		mess->type = 3; //discovery
-		mess->source =1;
-		mess->treshold_id = id;
+		   			dbg("radio","Packet sent from: %hu, to: %hu , data: %lu, type: %hu\n ", TOS_NODE_ID, parent, mess->value, mess->type);
+		   			locked = TRUE;
+				}
+		  	}
+	  	}
   		
-  		if (!locked){			
-			call Ack.requestAck(&packet);
-			if(call AMSend.send(AM_BROADCAST_ADDR, &packet,sizeof(Msg_t)) == SUCCESS){
-				dbg_clear("radio", "\n"); 	
-		  		dbg("radio","Packet sent from: %hu, data: %lu, type: %hu\n", TOS_NODE_ID, mess->value, mess->type);
-		   		dbg("radio", "Message of discovery sent");
-		   		locked = TRUE;
-			}
-			else{
-				dbg_clear("error", "\n");
-				dbg("error","Error in sending packet\n ");
-			}
-		}					  	
   	}
   	
-  	void sendDiscoveryAck(uint8_t destination){
-  
-  	  	Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));  
-		if (mess == NULL) return;
-		mess->sender = TOS_NODE_ID;
-		mess->value = 0;
-		mess->type = 4;
-		mess->source = TOS_NODE_ID;
-  		
-  		if (!locked){
-			call Ack.requestAck(&packet);
-			if(call AMSend.send(destination, &packet,sizeof(Msg_t)) == SUCCESS){
-				dbg_clear("radio", "\n"); 	
-		  		dbg("radio","Packet sent from: %hu, data: %lu, type: %hu\n", TOS_NODE_ID, mess->value, mess->type);
-		   		dbg("radio", "Message of discovery ack sent");
-		   		locked = TRUE;
-			}
-			else{
-				dbg_clear("error", "\n");
-				dbg("error","Error in sending packet\n ");
-			}
-		}		 	 	
-  	}
-  	
-  	void sendSetup(uint8_t destination,uint16_t id){
-  
-  	  	Msg_t* mess = (Msg_t*)(call Packet.getPayload(&packet, sizeof(Msg_t)));  
-		if (mess == NULL) return;
-		mess->sender = TOS_NODE_ID;
-		mess->value = treshold;
-		mess->type = 5;
-		mess->source = TOS_NODE_ID;
-		mess->treshold_id = id;
-  		
-  		if (!locked){
-			call Ack.requestAck(&packet);
-			if(call AMSend.send(destination, &packet,sizeof(Msg_t)) == SUCCESS){
-				dbg_clear("radio", "\n"); 	
-		  		dbg("radio","Packet sent from: %hu, data: %lu, type: %hu\n", TOS_NODE_ID, mess->value, mess->type);
-		   		dbg("radio", "Message of discovery ack sent");
-		   		locked = TRUE;
-			}
-			else{
-				dbg_clear("error", "\n");
-				dbg("error","Error in sending packet\n ");
-			}
-		}		 	 	
-  	}  	
   	
 
 }

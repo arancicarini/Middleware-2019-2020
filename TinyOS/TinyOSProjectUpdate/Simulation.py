@@ -12,7 +12,7 @@ from TOSSIM import*;
 t = Tossim([]);
 
 
-topofile="topologymix.txt";
+topofile="topology7.txt";
 modelfile="meyer-heavy.txt";
 
 
@@ -38,10 +38,6 @@ performance_outfile = "performance.txt";
 print "Saving sensors performarce to:", performance_outfile;
 perf_out = open(performance_outfile, "w");
 
-performance_outfile_short = "performance_short.txt";
-print "Saving sensors performarce to:", performance_outfile_short;
-perf_out_short = open(performance_outfile_short, "w");
-
 ##Add debug channel
 debug_out.write("DEBUG FILE\n\nAdding debug channels:\n\n");
 debug_out.write("Activate debug message on channel init\n");
@@ -63,12 +59,11 @@ debug_out.write("Activate debug message on channel treshold\n");
 t.addChannel("treshold",debug_out);
 perf_out.write("Activate debug message on channel analysis\n\n");
 t.addChannel("analysis",perf_out);
-perf_out.write("Activate debug message on channel analysis short\n\n");
-t.addChannel("short",perf_out_short);
+
 
 ##Creating nodes
 debug_out.write("\nCreating nodes:\n\n");
-for i in range(1,15):
+for i in range(1,8):
 	debug_out.write("Creating node: "+str(i)+"\n");
 	node=t.getNode(i);
 	time=t.ticksPerSecond() + 5*i; #instant at which each node should be turned on
@@ -104,17 +99,17 @@ for line in lines:
             mid_compl = 0;
             sys.stdout.write ("#")
             sys.stdout.flush()
-        for i in range(1, 32):
+        for i in range(1, 8):
             t.getNode(i).addNoiseTraceReading(val)
 
 ##Creating noise model
-for i in range(1, 15):
+for i in range(1, 8):
     debug_out.write("Creating noise model for node:"+str(i)+"\n");
     t.getNode(i).createNoiseModel()
 
 debug_out.write("\nStart simulation with TOSSIM!\n\n");
 
-for i in range(0,32000):
+for i in range(0,60000):
 	t.runNextEvent()
 	
 

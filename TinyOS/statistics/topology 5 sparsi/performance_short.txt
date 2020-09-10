@@ -1,0 +1,16 @@
+
+DEBUG (1): Sink just read new treshold 1
+
+DEBUG (1): Sink just read new treshold 2
+
+DEBUG (1): Sink just read new treshold 3
+
+DEBUG (1): Sink just read new treshold 4
+
+DEBUG (1): Sink just read new treshold 5
+
+DEBUG (1): Sink just read new treshold 6
+
+DEBUG (1): Sink just read new treshold 7
+
+DEBUG (1): Sink just read new treshold 8

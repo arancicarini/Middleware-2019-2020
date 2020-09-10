@@ -1,0 +1,13 @@
+
+DEBUG (1): Sink just read new treshold 33614, with id 1
+
+DEBUG (1): Sink is sending discovery
+DEBUG (1): Sink just read new treshold 564950498, with id 2
+
+DEBUG (1): Sink just read new treshold 1097816499, with id 3
+
+DEBUG (1): Sink just read new treshold 1969887316, with id 4
+
+DEBUG (1): Sink just read new treshold 140734213, with id 5
+
+DEBUG (1): Sink just read new treshold 940422544, with id 6
