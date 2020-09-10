@@ -3,1638 +3,702 @@ Activate debug message on channel analysis
 Activate debug message on channel analysis short
 
 
-DEBUG (5): Time for treshold 33614 message with id 1 from sink to 5 is : 22582876 ms[not discarded]
-DEBUG (5): current simulation time: 0:0:10.777648923
+DEBUG (5): Time for treshold 33614 message with id 1 from sink to 5 is : 87127177 ms[not discarded]
+DEBUG (5): current simulation time: 0:4:53.987228353
 
-DEBUG (4): Time for treshold 33614 message with id 1 from sink to 4 is : 22582876 ms[not discarded]
-DEBUG (4): current simulation time: 0:0:10.777648923
+DEBUG (4): Time for treshold 33614 message with id 1 from sink to 4 is : 87127177 ms[not discarded]
+DEBUG (4): current simulation time: 0:4:53.987228353
 
-DEBUG (3): Time for treshold 33614 message with id 1 from sink to 3 is : 22582876 ms[not discarded]
-DEBUG (3): current simulation time: 0:0:10.777648923
+DEBUG (3): Time for treshold 33614 message with id 1 from sink to 3 is : 87127177 ms[not discarded]
+DEBUG (3): current simulation time: 0:4:53.987228353
 
-DEBUG (2): Time for treshold 33614 message with id 1 from sink to 2 is : 22582876 ms[not discarded]
-DEBUG (2): current simulation time: 0:0:10.777648923
+DEBUG (2): Time for treshold 33614 message with id 1 from sink to 2 is : 87127177 ms[not discarded]
+DEBUG (2): current simulation time: 0:4:53.987228353
 
-DEBUG (13): Time for treshold 33614 message with id 1 from sink to 13 is : 39062272 ms[not discarded]
-DEBUG (13): current simulation time: 0:0:10.779296862
+DEBUG (13): Time for treshold 33614 message with id 1 from sink to 13 is : 114745424 ms[not discarded]
+DEBUG (13): current simulation time: 0:4:53.989990177
 
-DEBUG (12): Time for treshold 33614 message with id 1 from sink to 12 is : 39062272 ms[not discarded]
-DEBUG (12): current simulation time: 0:0:10.779296862
+DEBUG (12): Time for treshold 33614 message with id 1 from sink to 12 is : 114745424 ms[not discarded]
+DEBUG (12): current simulation time: 0:4:53.989990177
 
-DEBUG (5): Time for treshold 33614 message with id 1 from sink to 5 is : 39062272 ms[DISCARDED]
+DEBUG (5): Time for treshold 33614 message with id 1 from sink to 5 is : 114745424 ms[DISCARDED]
 
-DEBUG (2): Time for treshold 33614 message with id 1 from sink to 2 is : 39062272 ms[DISCARDED]
+DEBUG (4): Time for treshold 33614 message with id 1 from sink to 4 is : 114745424 ms[DISCARDED]
 
-DEBUG (1): Time for treshold 33614 message with id 1 from sink to 1 is : 39062272 ms[DISCARDED]
+DEBUG (2): Time for treshold 33614 message with id 1 from sink to 2 is : 114745424 ms[DISCARDED]
 
-DEBUG (4): Time for treshold 33614 message with id 1 from sink to 4 is : 39062272 ms[DISCARDED]
+DEBUG (1): Time for treshold 33614 message with id 1 from sink to 1 is : 114745424 ms[DISCARDED]
 
-DEBUG (3): Time for treshold 33614 message with id 1 from sink to 3 is : 82396980 ms[DISCARDED]
+DEBUG (5): Time for treshold 33614 message with id 1 from sink to 5 is : 144957650 ms[DISCARDED]
 
-DEBUG (6): Time for treshold 33614 message with id 1 from sink to 6 is : 101165181 ms[not discarded]
-DEBUG (6): current simulation time: 0:0:10.785507153
+DEBUG (2): Time for treshold 33614 message with id 1 from sink to 2 is : 144957650 ms[DISCARDED]
 
-DEBUG (7): Time for treshold 33614 message with id 1 from sink to 7 is : 101165181 ms[not discarded]
-DEBUG (7): current simulation time: 0:0:10.785507153
+DEBUG (1): Time for treshold 33614 message with id 1 from sink to 1 is : 144957650 ms[DISCARDED]
 
-DEBUG (14): Time for treshold 33614 message with id 1 from sink to 14 is : 114898011 ms[not discarded]
-DEBUG (14): current simulation time: 0:0:10.786880436
+DEBUG (14): Time for treshold 33614 message with id 1 from sink to 14 is : 164336199 ms[not discarded]
+DEBUG (14): current simulation time: 0:4:53.994949255
 
-DEBUG (5): Time for treshold 33614 message with id 1 from sink to 5 is : 114898011 ms[DISCARDED]
+DEBUG (5): Time for treshold 33614 message with id 1 from sink to 5 is : 164336199 ms[DISCARDED]
 
-DEBUG (4): Time for treshold 33614 message with id 1 from sink to 4 is : 114898011 ms[DISCARDED]
+DEBUG (3): Time for treshold 33614 message with id 1 from sink to 3 is : 164336199 ms[DISCARDED]
 
-DEBUG (1): Time for treshold 33614 message with id 1 from sink to 1 is : 114898011 ms[DISCARDED]
+DEBUG (1): Time for treshold 33614 message with id 1 from sink to 1 is : 164336199 ms[DISCARDED]
 
-DEBUG (9): Time for treshold 33614 message with id 1 from sink to 9 is : 182799226 ms[not discarded]
-DEBUG (9): current simulation time: 0:0:10.793670558
+DEBUG (4): Time for treshold 33614 message with id 1 from sink to 4 is : 164336199 ms[DISCARDED]
 
-DEBUG (8): Time for treshold 33614 message with id 1 from sink to 8 is : 182799226 ms[not discarded]
-DEBUG (8): current simulation time: 0:0:10.793670558
+DEBUG (7): Time for treshold 33614 message with id 1 from sink to 7 is : 191801859 ms[not discarded]
+DEBUG (7): current simulation time: 0:4:53.997695821
 
-DEBUG (5): Time for treshold 33614 message with id 1 from sink to 5 is : 182799226 ms[DISCARDED]
+DEBUG (6): Time for treshold 33614 message with id 1 from sink to 6 is : 191801859 ms[not discarded]
+DEBUG (6): current simulation time: 0:4:53.997695821
 
-DEBUG (6): Time for treshold 33614 message with id 1 from sink to 6 is : 206755385 ms[DISCARDED]
+DEBUG (2): Time for treshold 33614 message with id 1 from sink to 2 is : 191801859 ms[DISCARDED]
 
-DEBUG (10): Time for treshold 33614 message with id 1 from sink to 10 is : 209807125 ms[not discarded]
-DEBUG (10): current simulation time: 0:0:10.796371348
+DEBUG (1): Time for treshold 33614 message with id 1 from sink to 1 is : 191801859 ms[DISCARDED]
 
-DEBUG (5): Time for treshold 33614 message with id 1 from sink to 5 is : 209807125 ms[DISCARDED]
+DEBUG (4): Time for treshold 33614 message with id 1 from sink to 4 is : 191801859 ms[DISCARDED]
 
-DEBUG (11): Time for treshold 33614 message with id 1 from sink to 11 is : 209807125 ms[not discarded]
-DEBUG (11): current simulation time: 0:0:10.796371348
+DEBUG (2): Time for treshold 33614 message with id 1 from sink to 2 is : 248564223 ms[DISCARDED]
 
-DEBUG (2): Time for treshold 33614 message with id 1 from sink to 2 is : 211638169 ms[DISCARDED]
+DEBUG (11): Time for treshold 33614 message with id 1 from sink to 11 is : 288847191 ms[not discarded]
+DEBUG (11): current simulation time: 0:4:54.007400354
 
-DEBUG (7): Time for treshold 33614 message with id 1 from sink to 7 is : 249784919 ms[DISCARDED]
+DEBUG (10): Time for treshold 33614 message with id 1 from sink to 10 is : 288847191 ms[not discarded]
+DEBUG (10): current simulation time: 0:4:54.007400354
 
-DEBUG (6): Time for treshold 33614 message with id 1 from sink to 6 is : 274809187 ms[DISCARDED]
+DEBUG (8): Time for treshold 33614 message with id 1 from sink to 8 is : 296781715 ms[not discarded]
+DEBUG (8): current simulation time: 0:4:54.008193807
 
-DEBUG (7): Time for treshold 33614 message with id 1 from sink to 7 is : 305631761 ms[DISCARDED]
+DEBUG (9): Time for treshold 33614 message with id 1 from sink to 9 is : 296781715 ms[not discarded]
+DEBUG (9): current simulation time: 0:4:54.008193807
+
+DEBUG (6): Time for treshold 33614 message with id 1 from sink to 6 is : 337369857 ms[DISCARDED]
+
+DEBUG (7): Time for treshold 33614 message with id 1 from sink to 7 is : 351865622 ms[DISCARDED]
+
+DEBUG (6): Time for treshold 33614 message with id 1 from sink to 6 is : 397946896 ms[DISCARDED]
 
 DEBUG (1): Data Message counter: 1
 
-DEBUG (1): Time for data message 1146774113 from 3 to sink is : 40130381 ms
-DEBUG (1): current simulation time: 0:0:11.755966174
+DEBUG (1): Time for data message 629750996 from 4 to sink is : 27007899 ms
+DEBUG (1): current simulation time: 0:6:31.637466426
 
 DEBUG (1): Data Message counter: 2
 
-DEBUG (1): Time for data message 323209673 from 2 to sink is : 76903848 ms
-DEBUG (1): current simulation time: 0:0:11.759643520
+DEBUG (1): Time for data message 1614694654 from 5 to sink is : 72936586 ms
+DEBUG (1): current simulation time: 0:6:31.642059296
 
 DEBUG (1): Data Message counter: 3
 
-DEBUG (1): Time for data message 1970338553 from 4 to sink is : 93688418 ms
-DEBUG (1): current simulation time: 0:0:11.761321978
+DEBUG (1): Time for data message 1792290985 from 3 to sink is : 97960854 ms
+DEBUG (1): current simulation time: 0:6:31.644561721
 
 DEBUG (1): Data Message counter: 4
 
-DEBUG (1): Time for data message 646419346 from 5 to sink is : 132140342 ms
-DEBUG (1): current simulation time: 0:0:11.765167171
+DEBUG (1): Time for data message 807347327 from 2 to sink is : 133361038 ms
+DEBUG (1): current simulation time: 0:6:31.648101739
 
 DEBUG (1): Data Message counter: 5
 
-DEBUG (1): Time for data message 1616048365 from 14 to sink is : 158080132 ms
-DEBUG (1): current simulation time: 0:0:11.767761155
+DEBUG (1): Time for data message 1259501992 from 9 to sink is : 202788123 ms
+DEBUG (1): current simulation time: 0:6:31.655044451
 
 DEBUG (1): Data Message counter: 6
 
-DEBUG (1): Time for data message 250178049 from 5 to sink is : 21209593 ms
-DEBUG (1): current simulation time: 0:0:12.730636596
+DEBUG (1): Time for data message 1425577356 from 4 to sink is : 43334708 ms
+DEBUG (1): current simulation time: 0:8:9.295349107
 
 DEBUG (1): Data Message counter: 7
 
-DEBUG (1): Time for data message 1198830848 from 2 to sink is : 66833106 ms
-DEBUG (1): current simulation time: 0:0:12.735198946
+DEBUG (1): Time for data message 1284843143 from 2 to sink is : 68664150 ms
+DEBUG (1): current simulation time: 0:8:9.297882051
 
 DEBUG (1): Data Message counter: 8
 
-DEBUG (1): Time for data message 1282223531 from 4 to sink is : 101165181 ms
-DEBUG (1): current simulation time: 0:0:12.738632155
+DEBUG (1): Time for data message 281468426 from 3 to sink is : 103606573 ms
+DEBUG (1): current simulation time: 0:8:9.301376293
 
 DEBUG (1): Data Message counter: 9
 
-DEBUG (1): Time for data message 333570732 from 7 to sink is : 124663579 ms
-DEBUG (1): current simulation time: 0:0:12.740981996
+DEBUG (1): Time for data message 422202639 from 5 to sink is : 128325667 ms
+DEBUG (1): current simulation time: 0:8:9.303848204
 
 DEBUG (1): Data Message counter: 10
 
-DEBUG (1): Time for data message 166785366 from 3 to sink is : 152281826 ms
-DEBUG (1): current simulation time: 0:0:12.743743819
+DEBUG (1): Time for data message 203572713 from 4 to sink is : 23956159 ms
+DEBUG (1): current simulation time: 0:9:46.949661252
+
+DEBUG (4): Time for treshold 30178 message with id 2 from sink to 4 is : 43945056 ms[not discarded]
+DEBUG (4): current simulation time: 0:9:46.951660141
+
+DEBUG (3): Time for treshold 30178 message with id 2 from sink to 3 is : 43945056 ms[not discarded]
+DEBUG (3): current simulation time: 0:9:46.951660141
 
 DEBUG (1): Data Message counter: 11
 
-DEBUG (1): Time for data message 1058486182 from 2 to sink is : 21819941 ms
-DEBUG (1): current simulation time: 0:0:13.707260130
+DEBUG (1): Time for data message 673783985 from 5 to sink is : 61950322 ms
+DEBUG (1): current simulation time: 0:9:46.953460669
 
 DEBUG (1): Data Message counter: 12
 
-DEBUG (1): Time for data message 695487027 from 3 to sink is : 76598674 ms
-DEBUG (1): current simulation time: 0:0:13.712738003
+DEBUG (1): Time for data message 1410633816 from 2 to sink is : 105590204 ms
+DEBUG (1): current simulation time: 0:9:46.957824656
 
 DEBUG (1): Data Message counter: 13
 
-DEBUG (1): Time for data message 332487872 from 4 to sink is : 93688418 ms
-DEBUG (1): current simulation time: 0:0:13.714446978
+DEBUG (1): Time for data message 1880845088 from 3 to sink is : 128630841 ms
+DEBUG (1): current simulation time: 0:9:46.960128720
+
+DEBUG (5): Time for treshold 30178 message with id 2 from sink to 5 is : 155028392 ms[not discarded]
+DEBUG (5): current simulation time: 0:9:46.962768474
+
+DEBUG (3): Time for treshold 30178 message with id 2 from sink to 3 is : 155028392 ms[DISCARDED]
+
+DEBUG (2): Time for treshold 30178 message with id 2 from sink to 2 is : 155028392 ms[not discarded]
+DEBUG (2): current simulation time: 0:9:46.962768474
+
+DEBUG (1): Time for treshold 30178 message with id 2 from sink to 1 is : 155028392 ms[DISCARDED]
+
+DEBUG (14): Time for treshold 30178 message with id 2 from sink to 14 is : 178679377 ms[not discarded]
+DEBUG (14): current simulation time: 0:9:46.965133573
+
+DEBUG (5): Time for treshold 30178 message with id 2 from sink to 5 is : 178679377 ms[DISCARDED]
+
+DEBUG (1): Time for treshold 30178 message with id 2 from sink to 1 is : 178679377 ms[DISCARDED]
+
+DEBUG (4): Time for treshold 30178 message with id 2 from sink to 4 is : 178679377 ms[DISCARDED]
+
+DEBUG (3): Time for treshold 30178 message with id 2 from sink to 3 is : 178679377 ms[DISCARDED]
+
+DEBUG (7): Time for treshold 30178 message with id 2 from sink to 7 is : 200346731 ms[not discarded]
+DEBUG (7): current simulation time: 0:9:46.967300308
+
+DEBUG (6): Time for treshold 30178 message with id 2 from sink to 6 is : 200346731 ms[not discarded]
+DEBUG (6): current simulation time: 0:9:46.967300308
+
+DEBUG (4): Time for treshold 30178 message with id 2 from sink to 4 is : 200346731 ms[DISCARDED]
+
+DEBUG (2): Time for treshold 30178 message with id 2 from sink to 2 is : 200346731 ms[DISCARDED]
+
+DEBUG (3): Time for treshold 30178 message with id 2 from sink to 3 is : 200346731 ms[DISCARDED]
+
+DEBUG (9): Time for treshold 30178 message with id 2 from sink to 9 is : 220793389 ms[not discarded]
+DEBUG (9): current simulation time: 0:9:46.969344974
+
+DEBUG (8): Time for treshold 30178 message with id 2 from sink to 8 is : 220793389 ms[not discarded]
+DEBUG (8): current simulation time: 0:9:46.969344974
+
+DEBUG (5): Time for treshold 30178 message with id 2 from sink to 5 is : 220793389 ms[DISCARDED]
+
+DEBUG (6): Time for treshold 30178 message with id 2 from sink to 6 is : 254209942 ms[DISCARDED]
+
+DEBUG (2): Time for treshold 30178 message with id 2 from sink to 2 is : 257261682 ms[DISCARDED]
+
+DEBUG (11): Time for treshold 30178 message with id 2 from sink to 11 is : 303953304 ms[not discarded]
+DEBUG (11): current simulation time: 0:9:46.977660965
+
+DEBUG (10): Time for treshold 30178 message with id 2 from sink to 10 is : 303953304 ms[not discarded]
+DEBUG (10): current simulation time: 0:9:46.977660965
+
+DEBUG (5): Time for treshold 30178 message with id 2 from sink to 5 is : 303953304 ms[DISCARDED]
+
+DEBUG (6): Time for treshold 30178 message with id 2 from sink to 6 is : 324705136 ms[DISCARDED]
+
+DEBUG (7): Time for treshold 30178 message with id 2 from sink to 7 is : 398404657 ms[DISCARDED]
 
 DEBUG (1): Data Message counter: 14
 
-DEBUG (1): Time for data message 2116972364 from 5 to sink is : 119170447 ms
-DEBUG (1): current simulation time: 0:0:13.716995182
+DEBUG (1): Time for data message 606165264 from 5 to sink is : 96740158 ms
+DEBUG (1): current simulation time: 0:11:24.613189653
 
 DEBUG (1): Data Message counter: 15
 
-DEBUG (1): Time for data message 664975744 from 9 to sink is : 190886337 ms
-DEBUG (1): current simulation time: 0:0:13.724166773
+DEBUG (1): Time for data message 1414385616 from 13 to sink is : 146788694 ms
+DEBUG (1): current simulation time: 0:11:24.618194510
 
 DEBUG (1): Data Message counter: 16
 
-DEBUG (1): Time for data message 296972168 from 3 to sink is : 45776100 ms
-DEBUG (1): current simulation time: 0:0:14.686218246
+DEBUG (1): Time for data message 846803449 from 4 to sink is : 22430289 ms
+DEBUG (1): current simulation time: 0:13:2.262008665
 
 DEBUG (1): Data Message counter: 17
 
-DEBUG (1): Time for data message 222729126 from 2 to sink is : 64544301 ms
-DEBUG (1): current simulation time: 0:0:14.688095066
+DEBUG (1): Time for data message 1536436218 from 3 to sink is : 95672049 ms
+DEBUG (1): current simulation time: 0:13:2.269332841
+
+DEBUG (2): Time for treshold 22963 message with id 3 from sink to 2 is : 70952955 ms[not discarded]
+DEBUG (2): current simulation time: 0:14:39.923110931
+
+DEBUG (4): Time for treshold 22963 message with id 3 from sink to 4 is : 70952955 ms[not discarded]
+DEBUG (4): current simulation time: 0:14:39.923110931
 
 DEBUG (1): Data Message counter: 18
 
-DEBUG (1): Time for data message 371215210 from 4 to sink is : 85143546 ms
-DEBUG (1): current simulation time: 0:0:14.690154991
+DEBUG (1): Time for data message 851438674 from 4 to sink is : 88042699 ms
+DEBUG (1): current simulation time: 0:14:39.924819906
 
 DEBUG (1): Data Message counter: 19
 
-DEBUG (1): Time for data message 445458252 from 5 to sink is : 110320401 ms
-DEBUG (1): current simulation time: 0:0:14.692672677
+DEBUG (1): Time for data message 1540144398 from 3 to sink is : 120696317 ms
+DEBUG (1): current simulation time: 0:14:39.928085268
+
+DEBUG (14): Time for treshold 22963 message with id 3 from sink to 14 is : 147856803 ms[not discarded]
+DEBUG (14): current simulation time: 0:14:39.930801315
+
+DEBUG (5): Time for treshold 22963 message with id 3 from sink to 5 is : 147856803 ms[not discarded]
+DEBUG (5): current simulation time: 0:14:39.930801315
+
+DEBUG (4): Time for treshold 22963 message with id 3 from sink to 4 is : 147856803 ms[DISCARDED]
+
+DEBUG (3): Time for treshold 22963 message with id 3 from sink to 3 is : 147856803 ms[not discarded]
+DEBUG (3): current simulation time: 0:14:39.930801315
+
+DEBUG (2): Time for treshold 22963 message with id 3 from sink to 2 is : 212095930 ms[DISCARDED]
+
+DEBUG (7): Time for treshold 22963 message with id 3 from sink to 7 is : 234221045 ms[not discarded]
+DEBUG (7): current simulation time: 0:14:39.939437740
+
+DEBUG (6): Time for treshold 22963 message with id 3 from sink to 6 is : 234221045 ms[not discarded]
+DEBUG (6): current simulation time: 0:14:39.939437740
+
+DEBUG (4): Time for treshold 22963 message with id 3 from sink to 4 is : 234221045 ms[DISCARDED]
+
+DEBUG (2): Time for treshold 22963 message with id 3 from sink to 2 is : 234221045 ms[DISCARDED]
+
+DEBUG (1): Time for treshold 22963 message with id 3 from sink to 1 is : 234221045 ms[DISCARDED]
+
+DEBUG (3): Time for treshold 22963 message with id 3 from sink to 3 is : 234221045 ms[DISCARDED]
+
+DEBUG (13): Time for treshold 22963 message with id 3 from sink to 13 is : 255583225 ms[not discarded]
+DEBUG (13): current simulation time: 0:14:39.941573958
+
+DEBUG (12): Time for treshold 22963 message with id 3 from sink to 12 is : 255583225 ms[not discarded]
+DEBUG (12): current simulation time: 0:14:39.941573958
+
+DEBUG (5): Time for treshold 22963 message with id 3 from sink to 5 is : 255583225 ms[DISCARDED]
+
+DEBUG (4): Time for treshold 22963 message with id 3 from sink to 4 is : 255583225 ms[DISCARDED]
+
+DEBUG (2): Time for treshold 22963 message with id 3 from sink to 2 is : 255583225 ms[DISCARDED]
+
+DEBUG (1): Time for treshold 22963 message with id 3 from sink to 1 is : 255583225 ms[DISCARDED]
+
+DEBUG (11): Time for treshold 22963 message with id 3 from sink to 11 is : 284574755 ms[not discarded]
+DEBUG (11): current simulation time: 0:14:39.944473111
+
+DEBUG (10): Time for treshold 22963 message with id 3 from sink to 10 is : 284574755 ms[not discarded]
+DEBUG (10): current simulation time: 0:14:39.944473111
+
+DEBUG (5): Time for treshold 22963 message with id 3 from sink to 5 is : 284574755 ms[DISCARDED]
+
+DEBUG (9): Time for treshold 22963 message with id 3 from sink to 9 is : 308225740 ms[not discarded]
+DEBUG (9): current simulation time: 0:14:39.946838209
+
+DEBUG (8): Time for treshold 22963 message with id 3 from sink to 8 is : 308225740 ms[not discarded]
+DEBUG (8): current simulation time: 0:14:39.946838209
+
+DEBUG (5): Time for treshold 22963 message with id 3 from sink to 5 is : 308225740 ms[DISCARDED]
 
 DEBUG (1): Data Message counter: 20
 
-DEBUG (1): Time for data message 519701294 from 6 to sink is : 206907972 ms
-DEBUG (1): current simulation time: 0:0:14.702331435
+DEBUG (1): Time for data message 1726745833 from 2 to sink is : 36620880 ms
+DEBUG (1): current simulation time: 0:16:17.575927724
 
 DEBUG (1): Data Message counter: 21
 
-DEBUG (1): Time for data message 344423961 from 2 to sink is : 22125115 ms
-DEBUG (1): current simulation time: 0:0:15.660415647
+DEBUG (1): Time for data message 1306008019 from 5 to sink is : 206907972 ms
+DEBUG (1): current simulation time: 0:16:17.592956434
 
 DEBUG (1): Data Message counter: 22
 
-DEBUG (1): Time for data message 574039935 from 4 to sink is : 53863211 ms
-DEBUG (1): current simulation time: 0:0:15.663589458
+DEBUG (1): Time for data message 1970338553 from 4 to sink is : 103759160 ms
+DEBUG (1): current simulation time: 0:17:55.238891553
 
 DEBUG (1): Data Message counter: 23
 
-DEBUG (1): Time for data message 688847922 from 5 to sink is : 83770263 ms
-DEBUG (1): current simulation time: 0:0:15.666580163
+DEBUG (1): Time for data message 1469983786 from 6 to sink is : 294645497 ms
+DEBUG (1): current simulation time: 0:17:55.257980187
+
+DEBUG (5): Time for treshold 6228 message with id 4 from sink to 5 is : 32501031 ms[not discarded]
+DEBUG (5): current simulation time: 0:19:32.888015738
+
+DEBUG (4): Time for treshold 6228 message with id 4 from sink to 4 is : 32501031 ms[not discarded]
+DEBUG (4): current simulation time: 0:19:32.888015738
 
 DEBUG (1): Data Message counter: 24
 
-DEBUG (1): Time for data message 459231948 from 3 to sink is : 112456619 ms
-DEBUG (1): current simulation time: 0:0:15.669448798
+DEBUG (1): Time for data message 1198830848 from 2 to sink is : 57830473 ms
+DEBUG (1): current simulation time: 0:19:32.890548683
 
 DEBUG (1): Data Message counter: 25
 
-DEBUG (1): Time for data message 1262887857 from 10 to sink is : 287321321 ms
-DEBUG (1): current simulation time: 0:0:15.686935272
+DEBUG (1): Time for data message 1282223531 from 4 to sink is : 90941852 ms
+DEBUG (1): current simulation time: 0:19:32.893859822
+
+DEBUG (7): Time for treshold 6228 message with id 4 from sink to 7 is : 138243822 ms[not discarded]
+DEBUG (7): current simulation time: 0:19:32.898590017
+
+DEBUG (6): Time for treshold 6228 message with id 4 from sink to 6 is : 138243822 ms[not discarded]
+DEBUG (6): current simulation time: 0:19:32.898590017
+
+DEBUG (4): Time for treshold 6228 message with id 4 from sink to 4 is : 138243822 ms[DISCARDED]
+
+DEBUG (1): Time for treshold 6228 message with id 4 from sink to 1 is : 138243822 ms[DISCARDED]
+
+DEBUG (3): Time for treshold 6228 message with id 4 from sink to 3 is : 138243822 ms[not discarded]
+DEBUG (3): current simulation time: 0:19:32.898590017
+
+DEBUG (2): Time for treshold 6228 message with id 4 from sink to 2 is : 138243822 ms[not discarded]
+DEBUG (2): current simulation time: 0:19:32.898590017
+
+DEBUG (9): Time for treshold 6228 message with id 4 from sink to 9 is : 167235352 ms[not discarded]
+DEBUG (9): current simulation time: 0:19:32.901489170
+
+DEBUG (8): Time for treshold 6228 message with id 4 from sink to 8 is : 167235352 ms[not discarded]
+DEBUG (8): current simulation time: 0:19:32.901489170
+
+DEBUG (5): Time for treshold 6228 message with id 4 from sink to 5 is : 167235352 ms[DISCARDED]
+
+DEBUG (6): Time for treshold 6228 message with id 4 from sink to 6 is : 193175142 ms[DISCARDED]
+
+DEBUG (11): Time for treshold 6228 message with id 4 from sink to 11 is : 228270152 ms[not discarded]
+DEBUG (11): current simulation time: 0:19:32.907592650
+
+DEBUG (10): Time for treshold 6228 message with id 4 from sink to 10 is : 228270152 ms[not discarded]
+DEBUG (10): current simulation time: 0:19:32.907592650
+
+DEBUG (4): Time for treshold 6228 message with id 4 from sink to 4 is : 238493481 ms[DISCARDED]
+
+DEBUG (1): Time for treshold 6228 message with id 4 from sink to 1 is : 238493481 ms[DISCARDED]
+
+DEBUG (2): Time for treshold 6228 message with id 4 from sink to 2 is : 238493481 ms[DISCARDED]
+
+DEBUG (13): Time for treshold 6228 message with id 4 from sink to 13 is : 238493481 ms[not discarded]
+DEBUG (13): current simulation time: 0:19:32.908614983
+
+DEBUG (12): Time for treshold 6228 message with id 4 from sink to 12 is : 238493481 ms[not discarded]
+DEBUG (12): current simulation time: 0:19:32.908614983
+
+DEBUG (7): Time for treshold 6228 message with id 4 from sink to 7 is : 249021984 ms[DISCARDED]
+
+DEBUG (14): Time for treshold 6228 message with id 4 from sink to 14 is : 256040986 ms[not discarded]
+DEBUG (14): current simulation time: 0:19:32.910369734
+
+DEBUG (5): Time for treshold 6228 message with id 4 from sink to 5 is : 256040986 ms[DISCARDED]
+
+DEBUG (3): Time for treshold 6228 message with id 4 from sink to 3 is : 256040986 ms[DISCARDED]
+
+DEBUG (1): Time for treshold 6228 message with id 4 from sink to 1 is : 256040986 ms[DISCARDED]
+
+DEBUG (4): Time for treshold 6228 message with id 4 from sink to 4 is : 256040986 ms[DISCARDED]
+
+DEBUG (6): Time for treshold 6228 message with id 4 from sink to 6 is : 277403166 ms[DISCARDED]
+
+DEBUG (3): Time for treshold 6228 message with id 4 from sink to 3 is : 279691971 ms[DISCARDED]
+
+DEBUG (2): Time for treshold 6228 message with id 4 from sink to 2 is : 306852457 ms[DISCARDED]
+
+DEBUG (3): Time for treshold 6228 message with id 4 from sink to 3 is : 340421597 ms[DISCARDED]
+
+DEBUG (7): Time for treshold 6228 message with id 4 from sink to 7 is : 341031945 ms[DISCARDED]
 
 DEBUG (1): Data Message counter: 26
 
-DEBUG (1): Time for data message 1392645221 from 4 to sink is : 27465660 ms
-DEBUG (1): current simulation time: 0:0:16.637512203
+DEBUG (1): Time for data message 2116972364 from 5 to sink is : 60271865 ms
+DEBUG (1): current simulation time: 0:21:10.547042824
 
 DEBUG (1): Data Message counter: 27
 
-DEBUG (1): Time for data message 382684077 from 5 to sink is : 62865844 ms
-DEBUG (1): current simulation time: 0:0:16.641052221
+DEBUG (1): Time for data message 2086461081 from 11 to sink is : 275266948 ms
+DEBUG (1): current simulation time: 0:21:10.568542335
+
+DEBUG (2): Time for treshold 28421 message with id 5 from sink to 2 is : 107421248 ms[not discarded]
+DEBUG (2): current simulation time: 0:24:25.864257760
+
+DEBUG (5): Time for treshold 28421 message with id 5 from sink to 5 is : 107421248 ms[not discarded]
+DEBUG (5): current simulation time: 0:24:25.864257760
+
+DEBUG (4): Time for treshold 28421 message with id 5 from sink to 4 is : 107421248 ms[not discarded]
+DEBUG (4): current simulation time: 0:24:25.864257760
+
+DEBUG (3): Time for treshold 28421 message with id 5 from sink to 3 is : 107421248 ms[not discarded]
+DEBUG (3): current simulation time: 0:24:25.864257760
+
+DEBUG (5): Time for treshold 28421 message with id 5 from sink to 5 is : 127867906 ms[DISCARDED]
+
+DEBUG (3): Time for treshold 28421 message with id 5 from sink to 3 is : 127867906 ms[DISCARDED]
+
+DEBUG (2): Time for treshold 28421 message with id 5 from sink to 2 is : 127867906 ms[DISCARDED]
+
+DEBUG (1): Time for treshold 28421 message with id 5 from sink to 1 is : 127867906 ms[DISCARDED]
+
+DEBUG (13): Time for treshold 28421 message with id 5 from sink to 13 is : 159453415 ms[not discarded]
+DEBUG (13): current simulation time: 0:24:25.869460977
+
+DEBUG (12): Time for treshold 28421 message with id 5 from sink to 12 is : 159453415 ms[not discarded]
+DEBUG (12): current simulation time: 0:24:25.869460977
+
+DEBUG (5): Time for treshold 28421 message with id 5 from sink to 5 is : 159453415 ms[DISCARDED]
+
+DEBUG (4): Time for treshold 28421 message with id 5 from sink to 4 is : 159453415 ms[DISCARDED]
+
+DEBUG (2): Time for treshold 28421 message with id 5 from sink to 2 is : 159453415 ms[DISCARDED]
+
+DEBUG (1): Time for treshold 28421 message with id 5 from sink to 1 is : 159453415 ms[DISCARDED]
+
+DEBUG (5): Time for treshold 28421 message with id 5 from sink to 5 is : 195311360 ms[DISCARDED]
+
+DEBUG (4): Time for treshold 28421 message with id 5 from sink to 4 is : 195311360 ms[DISCARDED]
+
+DEBUG (1): Time for treshold 28421 message with id 5 from sink to 1 is : 195311360 ms[DISCARDED]
+
+DEBUG (7): Time for treshold 28421 message with id 5 from sink to 7 is : 216368366 ms[not discarded]
+DEBUG (7): current simulation time: 0:24:25.875152472
+
+DEBUG (6): Time for treshold 28421 message with id 5 from sink to 6 is : 216368366 ms[not discarded]
+DEBUG (6): current simulation time: 0:24:25.875152472
+
+DEBUG (2): Time for treshold 28421 message with id 5 from sink to 2 is : 216368366 ms[DISCARDED]
+
+DEBUG (1): Time for treshold 28421 message with id 5 from sink to 1 is : 216368366 ms[DISCARDED]
+
+DEBUG (4): Time for treshold 28421 message with id 5 from sink to 4 is : 216368366 ms[DISCARDED]
+
+DEBUG (9): Time for treshold 28421 message with id 5 from sink to 9 is : 307310218 ms[not discarded]
+DEBUG (9): current simulation time: 0:24:25.884246657
+
+DEBUG (8): Time for treshold 28421 message with id 5 from sink to 8 is : 307310218 ms[not discarded]
+DEBUG (8): current simulation time: 0:24:25.884246657
+
+DEBUG (10): Time for treshold 28421 message with id 5 from sink to 10 is : 311582654 ms[not discarded]
+DEBUG (10): current simulation time: 0:24:25.884673900
+
+DEBUG (11): Time for treshold 28421 message with id 5 from sink to 11 is : 311582654 ms[not discarded]
+DEBUG (11): current simulation time: 0:24:25.884673900
+
+DEBUG (7): Time for treshold 28421 message with id 5 from sink to 7 is : 347593186 ms[DISCARDED]
+
+DEBUG (7): Time for treshold 28421 message with id 5 from sink to 7 is : 382077848 ms[DISCARDED]
 
 DEBUG (1): Data Message counter: 28
 
-DEBUG (1): Time for data message 255122718 from 3 to sink is : 123900644 ms
-DEBUG (1): current simulation time: 0:0:16.647155700
+DEBUG (1): Time for data message 382684077 from 5 to sink is : 53710624 ms
+DEBUG (1): current simulation time: 0:26:3.515136699
 
 DEBUG (1): Data Message counter: 29
 
-DEBUG (1): Time for data message 1470162014 from 3 to sink is : 61339974 ms
-DEBUG (1): current simulation time: 0:0:17.617462133
+DEBUG (1): Time for data message 1392645221 from 4 to sink is : 99486724 ms
+DEBUG (1): current simulation time: 0:26:3.519714309
 
 DEBUG (1): Data Message counter: 30
 
-DEBUG (1): Time for data message 144398435 from 14 to sink is : 93688418 ms
-DEBUG (1): current simulation time: 0:0:17.620696983
+DEBUG (1): Time for data message 1265083862 from 2 to sink is : 124053231 ms
+DEBUG (1): current simulation time: 0:26:3.522170959
 
 DEBUG (1): Data Message counter: 31
 
-DEBUG (1): Time for data message 57759374 from 5 to sink is : 118865273 ms
-DEBUG (1): current simulation time: 0:0:17.623214664
+DEBUG (1): Time for data message 255122718 from 3 to sink is : 147093868 ms
+DEBUG (1): current simulation time: 0:26:3.524475023
 
 DEBUG (1): Data Message counter: 32
 
-DEBUG (1): Time for data message 82658645 from 4 to sink is : 52947689 ms
-DEBUG (1): current simulation time: 0:0:18.593185405
+DEBUG (1): Time for data message 1499041701 from 6 to sink is : 113982489 ms
+DEBUG (1): current simulation time: 0:27:41.177413886
+
+DEBUG (3): Time for treshold 46480 message with id 6 from sink to 3 is : 58288234 ms[not discarded]
+DEBUG (3): current simulation time: 0:29:18.828094458
+
+DEBUG (2): Time for treshold 46480 message with id 6 from sink to 2 is : 58288234 ms[not discarded]
+DEBUG (2): current simulation time: 0:29:18.828094458
+
+DEBUG (5): Time for treshold 46480 message with id 6 from sink to 5 is : 58288234 ms[not discarded]
+DEBUG (5): current simulation time: 0:29:18.828094458
+
+DEBUG (4): Time for treshold 46480 message with id 6 from sink to 4 is : 58288234 ms[not discarded]
+DEBUG (4): current simulation time: 0:29:18.828094458
 
 DEBUG (1): Data Message counter: 33
 
-DEBUG (1): Time for data message 99190374 from 5 to sink is : 73241760 ms
-DEBUG (1): current simulation time: 0:0:18.595214813
+DEBUG (1): Time for data message 231444206 from 13 to sink is : 86669416 ms
+DEBUG (1): current simulation time: 0:29:18.830932583
+
+DEBUG (2): Time for treshold 46480 message with id 6 from sink to 2 is : 107268661 ms[DISCARDED]
+
+DEBUG (5): Time for treshold 46480 message with id 6 from sink to 5 is : 107268661 ms[DISCARDED]
+
+DEBUG (1): Time for treshold 46480 message with id 6 from sink to 1 is : 107268661 ms[DISCARDED]
+
+DEBUG (7): Time for treshold 46480 message with id 6 from sink to 7 is : 139617105 ms[not discarded]
+DEBUG (7): current simulation time: 0:29:18.836227346
+
+DEBUG (6): Time for treshold 46480 message with id 6 from sink to 6 is : 139617105 ms[not discarded]
+DEBUG (6): current simulation time: 0:29:18.836227346
+
+DEBUG (4): Time for treshold 46480 message with id 6 from sink to 4 is : 139617105 ms[DISCARDED]
+
+DEBUG (2): Time for treshold 46480 message with id 6 from sink to 2 is : 139617105 ms[DISCARDED]
+
+DEBUG (1): Time for treshold 46480 message with id 6 from sink to 1 is : 139617105 ms[DISCARDED]
+
+DEBUG (3): Time for treshold 46480 message with id 6 from sink to 3 is : 139617105 ms[DISCARDED]
+
+DEBUG (14): Time for treshold 46480 message with id 6 from sink to 14 is : 160826698 ms[not discarded]
+DEBUG (14): current simulation time: 0:29:18.838348305
+
+DEBUG (5): Time for treshold 46480 message with id 6 from sink to 5 is : 160826698 ms[DISCARDED]
+
+DEBUG (4): Time for treshold 46480 message with id 6 from sink to 4 is : 160826698 ms[DISCARDED]
+
+DEBUG (3): Time for treshold 46480 message with id 6 from sink to 3 is : 160826698 ms[DISCARDED]
+
+DEBUG (1): Time for treshold 46480 message with id 6 from sink to 1 is : 160826698 ms[DISCARDED]
+
+DEBUG (2): Time for treshold 46480 message with id 6 from sink to 2 is : 226896869 ms[DISCARDED]
+
+DEBUG (11): Time for treshold 46480 message with id 6 from sink to 11 is : 235441741 ms[not discarded]
+DEBUG (11): current simulation time: 0:29:18.845809809
+
+DEBUG (10): Time for treshold 46480 message with id 6 from sink to 10 is : 235441741 ms[not discarded]
+DEBUG (10): current simulation time: 0:29:18.845809809
+
+DEBUG (9): Time for treshold 46480 message with id 6 from sink to 9 is : 236509850 ms[not discarded]
+DEBUG (9): current simulation time: 0:29:18.845916620
+
+DEBUG (8): Time for treshold 46480 message with id 6 from sink to 8 is : 236509850 ms[not discarded]
+DEBUG (8): current simulation time: 0:29:18.845916620
+
+DEBUG (7): Time for treshold 46480 message with id 6 from sink to 7 is : 260618596 ms[DISCARDED]
+
+DEBUG (6): Time for treshold 46480 message with id 6 from sink to 6 is : 275114361 ms[DISCARDED]
+
+DEBUG (6): Time for treshold 46480 message with id 6 from sink to 6 is : 313413698 ms[DISCARDED]
+
+DEBUG (7): Time for treshold 46480 message with id 6 from sink to 7 is : 321348222 ms[DISCARDED]
 
 DEBUG (1): Data Message counter: 34
 
-DEBUG (1): Time for data message 66126916 from 3 to sink is : 97045332 ms
-DEBUG (1): current simulation time: 0:0:18.597595169
+DEBUG (1): Time for data message 1969410553 from 4 to sink is : 52795102 ms
+DEBUG (1): current simulation time: 0:30:56.483795147
 
 DEBUG (1): Data Message counter: 35
 
-DEBUG (1): Time for data message 49595187 from 2 to sink is : 124663579 ms
-DEBUG (1): current simulation time: 0:0:18.600356993
+DEBUG (1): Time for data message 1146031713 from 3 to sink is : 126647210 ms
+DEBUG (1): current simulation time: 0:30:56.491180357
 
 DEBUG (1): Data Message counter: 36
 
-DEBUG (1): Time for data message 165317290 from 9 to sink is : 230253783 ms
-DEBUG (1): current simulation time: 0:0:18.610916017
+DEBUG (1): Time for data message 1613264365 from 14 to sink is : 153197348 ms
+DEBUG (1): current simulation time: 0:30:56.493835376
 
 DEBUG (1): Data Message counter: 37
 
-DEBUG (1): Time for data message 1969410553 from 4 to sink is : 28228595 ms
-DEBUG (1): current simulation time: 0:0:19.567275996
+DEBUG (1): Time for data message 1468684586 from 6 to sink is : 174559528 ms
+DEBUG (1): current simulation time: 0:30:56.495971590
 
 DEBUG (1): Data Message counter: 38
 
-DEBUG (1): Time for data message 1146031713 from 3 to sink is : 53405450 ms
-DEBUG (1): current simulation time: 0:0:19.569793681
+DEBUG (1): Time for data message 2009596568 from 13 to sink is : 72936586 ms
+DEBUG (1): current simulation time: 0:32:34.142059300
 
 DEBUG (1): Data Message counter: 39
 
-DEBUG (1): Time for data message 645305746 from 5 to sink is : 93688418 ms
-DEBUG (1): current simulation time: 0:0:19.573821979
+DEBUG (1): Time for data message 1578968732 from 10 to sink is : 211790756 ms
+DEBUG (1): current simulation time: 0:32:34.155944715
 
 DEBUG (1): Data Message counter: 40
 
-DEBUG (1): Time for data message 322652873 from 2 to sink is : 119933382 ms
-DEBUG (1): current simulation time: 0:0:19.576446474
+DEBUG (1): Time for data message 1435426120 from 9 to sink is : 333097421 ms
+DEBUG (1): current simulation time: 0:32:34.168075381
+
+DEBUG (5): Time for treshold 7600 message with id 7 from sink to 5 is : 22277702 ms[not discarded]
+DEBUG (5): current simulation time: 0:34:11.793243405
+
+DEBUG (4): Time for treshold 7600 message with id 7 from sink to 4 is : 22277702 ms[not discarded]
+DEBUG (4): current simulation time: 0:34:11.793243405
+
+DEBUG (3): Time for treshold 7600 message with id 7 from sink to 3 is : 22277702 ms[not discarded]
+DEBUG (3): current simulation time: 0:34:11.793243405
+
+DEBUG (2): Time for treshold 7600 message with id 7 from sink to 2 is : 22277702 ms[not discarded]
+DEBUG (2): current simulation time: 0:34:11.793243405
 
 DEBUG (1): Data Message counter: 41
 
-DEBUG (1): Time for data message 789885525 from 13 to sink is : 177306094 ms
-DEBUG (1): current simulation time: 0:0:19.582183750
+DEBUG (1): Time for data message 1084298524 from 5 to sink is : 41503664 ms
+DEBUG (1): current simulation time: 0:34:11.795166003
+
+DEBUG (14): Time for treshold 7600 message with id 7 from sink to 14 is : 71868477 ms[not discarded]
+DEBUG (14): current simulation time: 0:34:11.798202483
+
+DEBUG (5): Time for treshold 7600 message with id 7 from sink to 5 is : 71868477 ms[DISCARDED]
+
+DEBUG (4): Time for treshold 7600 message with id 7 from sink to 4 is : 71868477 ms[DISCARDED]
+
+DEBUG (3): Time for treshold 7600 message with id 7 from sink to 3 is : 71868477 ms[DISCARDED]
+
+DEBUG (1): Time for treshold 7600 message with id 7 from sink to 1 is : 71868477 ms[DISCARDED]
 
 DEBUG (1): Data Message counter: 42
 
-DEBUG (1): Time for data message 467232652 from 10 to sink is : 203398471 ms
-DEBUG (1): current simulation time: 0:0:19.584792987
+DEBUG (1): Time for data message 1814202007 from 13 to sink is : 191801859 ms
+DEBUG (1): current simulation time: 0:34:11.810195827
 
 DEBUG (1): Data Message counter: 43
 
-DEBUG (1): Time for data message 861255672 from 5 to sink is : 90484091 ms
-DEBUG (1): current simulation time: 0:0:20.550064046
+DEBUG (1): Time for data message 259064426 from 5 to sink is : 30212226 ms
+DEBUG (1): current simulation time: 0:35:49.450286860
 
 DEBUG (1): Data Message counter: 44
 
-DEBUG (1): Time for data message 430627836 from 2 to sink is : 112151445 ms
-DEBUG (1): current simulation time: 0:0:20.552230780
+DEBUG (1): Time for data message 931714904 from 4 to sink is : 50964058 ms
+DEBUG (1): current simulation time: 0:35:49.452362042
 
 DEBUG (1): Data Message counter: 45
 
-DEBUG (1): Time for data message 574170448 from 3 to sink is : 132445516 ms
-DEBUG (1): current simulation time: 0:0:20.554260188
+DEBUG (1): Time for data message 1604365382 from 3 to sink is : 79803001 ms
+DEBUG (1): current simulation time: 0:35:49.455245936
 
 DEBUG (1): Data Message counter: 46
 
-DEBUG (1): Time for data message 1438693565 from 3 to sink is : 22582876 ms
-DEBUG (1): current simulation time: 0:0:21.519836424
+DEBUG (1): Time for data message 1320311543 from 13 to sink is : 145262824 ms
+DEBUG (1): current simulation time: 0:35:49.461791923
 
 DEBUG (1): Data Message counter: 47
 
-DEBUG (1): Time for data message 1084298524 from 5 to sink is : 54015798 ms
-DEBUG (1): current simulation time: 0:0:21.522979717
+DEBUG (1): Time for data message 1146455313 from 5 to sink is : 37231228 ms
+DEBUG (1): current simulation time: 0:37:27.107238760
 
 DEBUG (1): Data Message counter: 48
 
-DEBUG (1): Time for data message 1814202007 from 13 to sink is : 194395838 ms
-DEBUG (1): current simulation time: 0:0:21.537017725
+DEBUG (1): Time for data message 2029121251 from 4 to sink is : 100402246 ms
+DEBUG (1): current simulation time: 0:37:27.113555861
 
 DEBUG (1): Data Message counter: 49
 
-DEBUG (1): Time for data message 1980842827 from 6 to sink is : 226286521 ms
-DEBUG (1): current simulation time: 0:0:21.540206790
+DEBUG (1): Time for data message 1251164707 from 5 to sink is : 21819941 ms
+DEBUG (1): current simulation time: 0:39:4.761947631
 
 DEBUG (1): Data Message counter: 50
 
-DEBUG (1): Time for data message 931714904 from 4 to sink is : 25939790 ms
-DEBUG (1): current simulation time: 0:0:22.496734616
+DEBUG (1): Time for data message 1699324177 from 2 to sink is : 42114012 ms
+DEBUG (1): current simulation time: 0:39:4.763977037
 
 DEBUG (1): Data Message counter: 51
 
-DEBUG (1): Time for data message 1604365382 from 3 to sink is : 76140913 ms
-DEBUG (1): current simulation time: 0:0:22.501754727
+DEBUG (1): Time for data message 205459277 from 12 to sink is : 155180979 ms
+DEBUG (1): current simulation time: 0:39:4.775283738
 
 DEBUG (1): Data Message counter: 52
 
-DEBUG (1): Time for data message 129532213 from 2 to sink is : 109404879 ms
-DEBUG (1): current simulation time: 0:0:22.505081123
+DEBUG (1): Time for data message 2054169944 from 14 to sink is : 174406941 ms
+DEBUG (1): current simulation time: 0:39:4.777206336
 
 DEBUG (1): Data Message counter: 53
 
-DEBUG (1): Time for data message 259064426 from 5 to sink is : 128020493 ms
-DEBUG (1): current simulation time: 0:0:22.506942686
+DEBUG (1): Time for data message 495713212 from 4 to sink is : 39825207 ms
+DEBUG (1): current simulation time: 0:40:42.419998157
 
 DEBUG (1): Data Message counter: 54
 
-DEBUG (1): Time for data message 1992962021 from 12 to sink is : 155943914 ms
-DEBUG (1): current simulation time: 0:0:22.509735032
-
-DEBUG (1): Data Message counter: 55
-
-DEBUG (1): Time for data message 388596639 from 8 to sink is : 218809758 ms
-DEBUG (1): current simulation time: 0:0:22.516021614
-
-DEBUG (1): Data Message counter: 56
-
-DEBUG (1): Time for data message 1146455313 from 5 to sink is : 27007899 ms
-DEBUG (1): current simulation time: 0:0:23.473403927
-
-DEBUG (1): Data Message counter: 57
-
-DEBUG (1): Time for data message 2029121251 from 4 to sink is : 49285601 ms
-DEBUG (1): current simulation time: 0:0:23.475631697
-
-DEBUG (1): Data Message counter: 58
-
-DEBUG (1): Time for data message 764303542 from 3 to sink is : 95519462 ms
-DEBUG (1): current simulation time: 0:0:23.480255082
-
-DEBUG (1): Data Message counter: 59
-
-DEBUG (1): Time for data message 1646969480 from 2 to sink is : 125121340 ms
-DEBUG (1): current simulation time: 0:0:23.483215270
-
-DEBUG (1): Data Message counter: 60
-
-DEBUG (1): Time for data message 645941146 from 8 to sink is : 245970244 ms
-DEBUG (1): current simulation time: 0:0:23.495300163
-
-DEBUG (1): Data Message counter: 61
-
-DEBUG (1): Time for data message 1549937687 from 3 to sink is : 45165752 ms
-DEBUG (1): current simulation time: 0:0:24.451782211
-
-DEBUG (1): Data Message counter: 62
-
-DEBUG (1): Time for data message 1251164707 from 5 to sink is : 69884846 ms
-DEBUG (1): current simulation time: 0:0:24.454254122
-
-DEBUG (1): Data Message counter: 63
-
-DEBUG (1): Time for data message 1400551197 from 4 to sink is : 87584938 ms
-DEBUG (1): current simulation time: 0:0:24.456024130
-
-DEBUG (1): Data Message counter: 64
-
-DEBUG (1): Time for data message 1699324177 from 2 to sink is : 112914380 ms
-DEBUG (1): current simulation time: 0:0:24.458557074
-
-DEBUG (1): Data Message counter: 65
-
-DEBUG (1): Time for data message 165359125 from 5 to sink is : 29144117 ms
-DEBUG (1): current simulation time: 0:0:25.426742549
-
-DEBUG (1): Data Message counter: 66
-
-DEBUG (1): Time for data message 495713212 from 4 to sink is : 70190020 ms
-DEBUG (1): current simulation time: 0:0:25.430847139
-
-DEBUG (1): Data Message counter: 67
-
-DEBUG (1): Time for data message 826067299 from 3 to sink is : 100554833 ms
-DEBUG (1): current simulation time: 0:0:25.433883619
-
-DEBUG (1): Data Message counter: 68
-
-DEBUG (1): Time for data message 1156421386 from 2 to sink is : 125273927 ms
-DEBUG (1): current simulation time: 0:0:25.436355528
-
-DEBUG (1): Data Message counter: 69
-
-DEBUG (1): Time for data message 991426424 from 9 to sink is : 190123402 ms
-DEBUG (1): current simulation time: 0:0:25.442840479
-
-DEBUG (1): Data Message counter: 70
-
-DEBUG (1): Time for data message 1362887371 from 4 to sink is : 23040637 ms
-DEBUG (1): current simulation time: 0:0:26.402694700
-
-DEBUG (1): Data Message counter: 71
-
-DEBUG (1): Time for data message 231316438 from 3 to sink is : 47149383 ms
-DEBUG (1): current simulation time: 0:0:26.405105574
-
-DEBUG (1): Data Message counter: 72
-
-DEBUG (1): Time for data message 346974657 from 5 to sink is : 77209022 ms
-DEBUG (1): current simulation time: 0:0:26.408111539
-
-DEBUG (1): Data Message counter: 73
-
-DEBUG (1): Time for data message 1247229152 from 2 to sink is : 126799797 ms
-DEBUG (1): current simulation time: 0:0:26.413070615
-
-DEBUG (1): Data Message counter: 74
-
-DEBUG (1): Time for data message 462632876 from 7 to sink is : 178221616 ms
-DEBUG (1): current simulation time: 0:0:26.418212800
-
-DEBUG (1): Data Message counter: 75
-
-DEBUG (1): Time for data message 789972396 from 3 to sink is : 33874314 ms
-DEBUG (1): current simulation time: 0:0:27.380340567
-
-DEBUG (1): Data Message counter: 76
-
-DEBUG (1): Time for data message 1184958594 from 5 to sink is : 56609777 ms
-DEBUG (1): current simulation time: 0:0:27.382614115
-
-DEBUG (1): Data Message counter: 77
-
-DEBUG (1): Time for data message 987465495 from 4 to sink is : 84380611 ms
-DEBUG (1): current simulation time: 0:0:27.385391198
-
-DEBUG (1): Data Message counter: 78
-
-DEBUG (1): Time for data message 592479297 from 2 to sink is : 106963487 ms
-DEBUG (1): current simulation time: 0:0:27.387649484
-
-DEBUG (1): Data Message counter: 79
-
-DEBUG (1): Time for data message 222433541 from 11 to sink is : 185088031 ms
-DEBUG (1): current simulation time: 0:0:27.395461943
-
-DEBUG (1): Data Message counter: 80
-
-DEBUG (1): Time for data message 578950449 from 4 to sink is : 71105542 ms
-DEBUG (1): current simulation time: 0:0:28.360626191
-
-DEBUG (1): Data Message counter: 81
-
-DEBUG (1): Time for data message 1322153818 from 3 to sink is : 102538464 ms
-DEBUG (1): current simulation time: 0:0:28.363769482
-
-DEBUG (1): Data Message counter: 82
-
-DEBUG (1): Time for data message 1818977807 from 11 to sink is : 242002982 ms
-DEBUG (1): current simulation time: 0:0:28.377715938
-
-DEBUG (1): Data Message counter: 83
-
-DEBUG (1): Time for data message 171791786 from 4 to sink is : 34942423 ms
-DEBUG (1): current simulation time: 0:0:29.333572379
-
-DEBUG (1): Data Message counter: 84
-
-DEBUG (1): Time for data message 532571801 from 2 to sink is : 63476192 ms
-DEBUG (1): current simulation time: 0:0:29.336425755
-
-DEBUG (1): Data Message counter: 85
-
-DEBUG (1): Time for data message 1065143602 from 5 to sink is : 85296133 ms
-DEBUG (1): current simulation time: 0:0:29.338607750
-
-DEBUG (1): Data Message counter: 86
-
-DEBUG (1): Time for data message 1425923617 from 3 to sink is : 111693684 ms
-DEBUG (1): current simulation time: 0:0:29.341247504
-
-DEBUG (1): Data Message counter: 87
-
-DEBUG (1): Time for data message 1236935388 from 10 to sink is : 205534689 ms
-DEBUG (1): current simulation time: 0:0:29.350631608
-
-DEBUG (1): Data Message counter: 88
-
-DEBUG (1): Time for data message 1728214046 from 3 to sink is : 22430289 ms
-DEBUG (1): current simulation time: 0:0:30.308883665
-
-DEBUG (1): Data Message counter: 89
-
-DEBUG (1): Time for data message 222418711 from 2 to sink is : 89263395 ms
-DEBUG (1): current simulation time: 0:0:30.315566975
-
-DEBUG (1): Data Message counter: 90
-
-DEBUG (1): Time for data message 25567821 from 9 to sink is : 226896869 ms
-DEBUG (1): current simulation time: 0:0:30.329330326
-
-DEBUG (1): Data Message counter: 91
-
-DEBUG (1): Time for data message 1377145447 from 3 to sink is : 37994163 ms
-DEBUG (1): current simulation time: 0:0:31.287002552
-
-DEBUG (1): Data Message counter: 92
-
-DEBUG (1): Time for data message 1569729997 from 2 to sink is : 94451353 ms
-DEBUG (1): current simulation time: 0:0:31.292648271
-
-DEBUG (1): Data Message counter: 93
-
-DEBUG (1): Time for data message 1184560897 from 4 to sink is : 117339403 ms
-DEBUG (1): current simulation time: 0:0:31.294937077
-
-DEBUG (1): Data Message counter: 94
-
-DEBUG (1): Time for data message 991976347 from 5 to sink is : 137633474 ms
-DEBUG (1): current simulation time: 0:0:31.296966484
-
-DEBUG (1): Data Message counter: 95
-
-DEBUG (1): Time for data message 1598783594 from 13 to sink is : 172575897 ms
-DEBUG (1): current simulation time: 0:0:31.300460731
-
-DEBUG (1): Data Message counter: 96
-
-DEBUG (1): Time for data message 104780363 from 3 to sink is : 29296704 ms
-DEBUG (1): current simulation time: 0:0:32.262695306
-
-DEBUG (1): Data Message counter: 97
-
-DEBUG (1): Time for data message 1230912368 from 5 to sink is : 56762364 ms
-DEBUG (1): current simulation time: 0:0:32.265441873
-
-DEBUG (1): Data Message counter: 98
-
-DEBUG (1): Time for data message 615456184 from 2 to sink is : 79192653 ms
-DEBUG (1): current simulation time: 0:0:32.267684901
-
-DEBUG (1): Data Message counter: 99
-
-DEBUG (1): Time for data message 1741588189 from 4 to sink is : 99181550 ms
-DEBUG (1): current simulation time: 0:0:32.269683792
-
-DEBUG (1): Data Message counter: 100
-
-DEBUG (1): Time for data message 1335692731 from 9 to sink is : 205076928 ms
-DEBUG (1): current simulation time: 0:0:32.280273332
-
-DEBUG (1): Data Message counter: 101
-
-DEBUG (1): Time for data message 1690840536 from 2 to sink is : 27007899 ms
-DEBUG (1): current simulation time: 0:0:33.239028925
-
-DEBUG (1): Data Message counter: 102
-
-DEBUG (1): Time for data message 1234197425 from 5 to sink is : 50658884 ms
-DEBUG (1): current simulation time: 0:0:33.241394025
-
-DEBUG (1): Data Message counter: 103
-
-DEBUG (1): Time for data message 106970401 from 3 to sink is : 74309869 ms
-DEBUG (1): current simulation time: 0:0:33.243759123
-
-DEBUG (1): Data Message counter: 104
-
-DEBUG (1): Time for data message 670583913 from 4 to sink is : 109862640 ms
-DEBUG (1): current simulation time: 0:0:33.247314401
-
-DEBUG (1): Data Message counter: 105
-
-DEBUG (1): Time for data message 611575602 from 5 to sink is : 28533769 ms
-DEBUG (1): current simulation time: 0:0:34.215744014
-
-DEBUG (1): Data Message counter: 106
-
-DEBUG (1): Time for data message 407717068 from 3 to sink is : 69427085 ms
-DEBUG (1): current simulation time: 0:0:34.219833345
-
-DEBUG (1): Data Message counter: 107
-
-DEBUG (1): Time for data message 509646335 from 4 to sink is : 88805634 ms
-DEBUG (1): current simulation time: 0:0:34.221771200
-
-DEBUG (1): Data Message counter: 108
-
-DEBUG (1): Time for data message 305787801 from 2 to sink is : 107573835 ms
-DEBUG (1): current simulation time: 0:0:34.223648019
-
-DEBUG (1): Data Message counter: 109
-
-DEBUG (1): Time for data message 2027927946 from 3 to sink is : 105437617 ms
-DEBUG (1): current simulation time: 0:0:35.199996898
-
-DEBUG (1): Data Message counter: 110
-
-DEBUG (1): Time for data message 1461168109 from 4 to sink is : 123442883 ms
-DEBUG (1): current simulation time: 0:0:35.201797425
-
-DEBUG (1): Data Message counter: 111
-
-DEBUG (1): Time for data message 774852571 from 9 to sink is : 227812391 ms
-DEBUG (1): current simulation time: 0:0:35.212234378
-
-DEBUG (1): Data Message counter: 112
-
-DEBUG (1): Time for data message 2081782151 from 5 to sink is : 35095010 ms
-DEBUG (1): current simulation time: 0:0:36.169525138
-
-DEBUG (1): Data Message counter: 113
-
-DEBUG (1): Time for data message 1376904518 from 4 to sink is : 66070171 ms
-DEBUG (1): current simulation time: 0:0:36.172622654
-
-DEBUG (1): Data Message counter: 114
-
-DEBUG (1): Time for data message 2114632899 from 2 to sink is : 84838372 ms
-DEBUG (1): current simulation time: 0:0:36.174499473
-
-DEBUG (1): Data Message counter: 115
-
-DEBUG (1): Time for data message 672026885 from 3 to sink is : 109862640 ms
-DEBUG (1): current simulation time: 0:0:36.177001900
-
-DEBUG (1): Data Message counter: 116
-
-DEBUG (1): Time for data message 1709034933 from 5 to sink is : 23345811 ms
-DEBUG (1): current simulation time: 0:0:37.144912718
-
-DEBUG (1): Data Message counter: 117
-
-DEBUG (1): Time for data message 350453954 from 4 to sink is : 52795102 ms
-DEBUG (1): current simulation time: 0:0:37.147857647
-
-DEBUG (1): Data Message counter: 118
-
-DEBUG (1): Time for data message 1928259290 from 2 to sink is : 82091806 ms
-DEBUG (1): current simulation time: 0:0:37.150787316
-
-DEBUG (1): Data Message counter: 119
-
-DEBUG (1): Time for data message 1139356622 from 3 to sink is : 110472988 ms
-DEBUG (1): current simulation time: 0:0:37.153625435
-
-DEBUG (1): Data Message counter: 120
-
-DEBUG (1): Time for data message 1679444804 from 4 to sink is : 54015798 ms
-DEBUG (1): current simulation time: 0:0:38.124542216
-
-DEBUG (1): Data Message counter: 121
-
-DEBUG (1): Time for data message 55065655 from 3 to sink is : 93535831 ms
-DEBUG (1): current simulation time: 0:0:38.128494219
-
-DEBUG (1): Data Message counter: 122
-
-DEBUG (1): Time for data message 578170153 from 2 to sink is : 113066967 ms
-DEBUG (1): current simulation time: 0:0:38.130447332
-
-DEBUG (1): Data Message counter: 123
-
-DEBUG (1): Time for data message 1156340306 from 5 to sink is : 134886908 ms
-DEBUG (1): current simulation time: 0:0:38.132629328
-
-DEBUG (1): Data Message counter: 124
-
-DEBUG (1): Time for data message 1211405961 from 9 to sink is : 172270723 ms
-DEBUG (1): current simulation time: 0:0:38.136367711
-
-DEBUG (1): Data Message counter: 125
-
-DEBUG (1): Time for data message 2089742443 from 2 to sink is : 24413920 ms
-DEBUG (1): current simulation time: 0:0:39.098144528
-
-DEBUG (1): Data Message counter: 126
-
-DEBUG (1): Time for data message 2032001239 from 5 to sink is : 63781366 ms
-DEBUG (1): current simulation time: 0:0:39.102081274
-
-DEBUG (1): Data Message counter: 127
-
-DEBUG (1): Time for data message 2051248307 from 4 to sink is : 97350506 ms
-DEBUG (1): current simulation time: 0:0:39.105438187
-
-DEBUG (1): Data Message counter: 128
-
-DEBUG (1): Time for data message 2070495375 from 3 to sink is : 121001491 ms
-DEBUG (1): current simulation time: 0:0:39.107803285
-
-DEBUG (5): Time for treshold 1969887316 message with id 4 from sink to 5 is : 15106113 ms[not discarded]
-DEBUG (5): current simulation time: 0:0:40.073776246
-
-DEBUG (4): Time for treshold 1969887316 message with id 4 from sink to 4 is : 15106113 ms[not discarded]
-DEBUG (4): current simulation time: 0:0:40.073776246
-
-DEBUG (2): Time for treshold 1969887316 message with id 4 from sink to 2 is : 15106113 ms[not discarded]
-DEBUG (2): current simulation time: 0:0:40.073776246
-
-DEBUG (1): Data Message counter: 129
-
-DEBUG (1): Time for data message 412385632 from 5 to sink is : 35552771 ms
-DEBUG (1): current simulation time: 0:0:40.075820914
-
-DEBUG (1): Data Message counter: 130
-
-DEBUG (1): Time for data message 206192816 from 2 to sink is : 72021064 ms
-DEBUG (1): current simulation time: 0:0:40.079467742
-
-DEBUG (1): Data Message counter: 131
-
-DEBUG (1): Time for data message 1775310458 from 4 to sink is : 88653047 ms
-DEBUG (1): current simulation time: 0:0:40.081130941
-
-DEBUG (1): Data Message counter: 132
-
-DEBUG (1): Time for data message 990751637 from 3 to sink is : 112609206 ms
-DEBUG (1): current simulation time: 0:0:40.083526557
-
-DEBUG (1): Data Message counter: 133
-
-DEBUG (1): Time for data message 40212443 from 10 to sink is : 273588491 ms
-DEBUG (1): current simulation time: 0:0:40.099624489
-
-DEBUG (1): Data Message counter: 134
-
-DEBUG (1): Time for data message 1540664343 from 10 to sink is : 162352568 ms
-DEBUG (1): current simulation time: 0:0:41.065063396
-
-DEBUG (1): Data Message counter: 135
-
-DEBUG (1): Time for data message 1010152376 from 9 to sink is : 318143895 ms
-DEBUG (1): current simulation time: 0:0:41.080642529
-
-DEBUG (1): Data Message counter: 136
-
-DEBUG (1): Time for data message 1997591747 from 3 to sink is : 57220125 ms
-DEBUG (1): current simulation time: 0:0:42.031112649
-
-DEBUG (1): Data Message counter: 137
-
-DEBUG (1): Time for data message 1885172822 from 6 to sink is : 76140913 ms
-DEBUG (1): current simulation time: 0:0:42.033004729
-
-DEBUG (1): Data Message counter: 138
-
-DEBUG (1): Time for data message 2035064722 from 2 to sink is : 98266028 ms
-DEBUG (1): current simulation time: 0:0:42.035217238
-
-DEBUG (1): Data Message counter: 139
-
-DEBUG (1): Time for data message 1735280922 from 10 to sink is : 219267519 ms
-DEBUG (1): current simulation time: 0:0:42.047317391
-
-DEBUG (1): Data Message counter: 140
-
-DEBUG (1): Time for data message 1912638278 from 3 to sink is : 111541097 ms
-DEBUG (1): current simulation time: 0:0:43.013107246
-
-DEBUG (1): Data Message counter: 141
-
-DEBUG (1): Time for data message 1803684425 from 14 to sink is : 135955017 ms
-DEBUG (1): current simulation time: 0:0:43.015548643
-
-DEBUG (1): Data Message counter: 142
-
-DEBUG (1): Time for data message 28826403 from 3 to sink is : 47149383 ms
-DEBUG (1): current simulation time: 0:0:43.983230574
-
-DEBUG (1): Data Message counter: 143
-
-DEBUG (1): Time for data message 1704298545 from 12 to sink is : 139617105 ms
-DEBUG (1): current simulation time: 0:0:43.992477351
-
-DEBUG (1): Data Message counter: 144
-
-DEBUG (1): Time for data message 587317117 from 6 to sink is : 160979285 ms
-DEBUG (1): current simulation time: 0:0:43.994613566
-
-DEBUG (1): Data Message counter: 145
-
-DEBUG (1): Time for data message 1301534646 from 3 to sink is : 35857945 ms
-DEBUG (1): current simulation time: 0:0:44.958663931
-
-DEBUG (1): Data Message counter: 146
-
-DEBUG (1): Time for data message 1203943807 from 6 to sink is : 132140342 ms
-DEBUG (1): current simulation time: 0:0:44.968292172
-
-DEBUG (1): Data Message counter: 147
-
-DEBUG (1): Time for data message 624366980 from 3 to sink is : 111083336 ms
-DEBUG (1): current simulation time: 0:0:45.942748970
-
-DEBUG (1): Data Message counter: 148
-
-DEBUG (1): Time for data message 193892528 from 14 to sink is : 132292929 ms
-DEBUG (1): current simulation time: 0:0:45.944869934
-
-DEBUG (1): Data Message counter: 149
-
-DEBUG (1): Time for data message 1092642215 from 6 to sink is : 154570631 ms
-DEBUG (1): current simulation time: 0:0:45.947097701
-
-DEBUG (1): Data Message counter: 150
-
-DEBUG (1): Time for data message 1130733618 from 3 to sink is : 51421819 ms
-DEBUG (1): current simulation time: 0:0:46.913345318
-
-DEBUG (1): Data Message counter: 151
-
-DEBUG (1): Time for data message 453658788 from 12 to sink is : 157927545 ms
-DEBUG (1): current simulation time: 0:0:46.923995895
-
-DEBUG (1): Data Message counter: 152
-
-DEBUG (1): Time for data message 1019025597 from 14 to sink is : 176848333 ms
-DEBUG (1): current simulation time: 0:0:46.925887975
-
-DEBUG (1): Data Message counter: 153
-
-DEBUG (1): Time for data message 113983589 from 7 to sink is : 213926974 ms
-DEBUG (1): current simulation time: 0:0:46.929595835
-
-DEBUG (1): Data Message counter: 154
-
-DEBUG (1): Time for data message 1157125423 from 3 to sink is : 86974590 ms
-DEBUG (1): current simulation time: 0:0:47.893463095
-
-DEBUG (1): Data Message counter: 155
-
-DEBUG (1): Time for data message 581123954 from 14 to sink is : 138854170 ms
-DEBUG (1): current simulation time: 0:0:47.898651059
-
-DEBUG (1): Data Message counter: 156
-
-DEBUG (1): Time for data message 1951997711 from 6 to sink is : 49743362 ms
-DEBUG (1): current simulation time: 0:0:48.866302474
-
-DEBUG (1): Data Message counter: 157
-
-DEBUG (1): Time for data message 195077129 from 3 to sink is : 116271294 ms
-DEBUG (1): current simulation time: 0:0:48.872955265
-
-DEBUG (1): Data Message counter: 158
-
-DEBUG (1): Time for data message 390154258 from 7 to sink is : 144194715 ms
-DEBUG (1): current simulation time: 0:0:48.875747610
-
-DEBUG (1): Data Message counter: 159
-
-DEBUG (1): Time for data message 194668322 from 14 to sink is : 171660375 ms
-DEBUG (1): current simulation time: 0:0:48.878494179
-
-DEBUG (1): Data Message counter: 160
-
-DEBUG (1): Time for data message 1601261781 from 3 to sink is : 94298766 ms
-DEBUG (1): current simulation time: 0:0:49.847320513
-
-DEBUG (1): Data Message counter: 161
-
-DEBUG (1): Time for data message 1172893473 from 14 to sink is : 122985122 ms
-DEBUG (1): current simulation time: 0:0:49.850189154
-
-DEBUG (5): Time for treshold 140734213 message with id 5 from sink to 5 is : 137633474 ms[not discarded]
-DEBUG (5): current simulation time: 0:0:49.851653982
-
-DEBUG (4): Time for treshold 140734213 message with id 5 from sink to 4 is : 137633474 ms[not discarded]
-DEBUG (4): current simulation time: 0:0:49.851653982
-
-DEBUG (3): Time for treshold 140734213 message with id 5 from sink to 3 is : 137633474 ms[not discarded]
-DEBUG (3): current simulation time: 0:0:49.851653982
-
-DEBUG (2): Time for treshold 140734213 message with id 5 from sink to 2 is : 137633474 ms[not discarded]
-DEBUG (2): current simulation time: 0:0:49.851653982
-
-DEBUG (6): Time for treshold 140734213 message with id 5 from sink to 6 is : 186919075 ms[not discarded]
-DEBUG (6): current simulation time: 0:0:49.856582543
-
-DEBUG (4): Time for treshold 140734213 message with id 5 from sink to 4 is : 186919075 ms[DISCARDED]
-
-DEBUG (1): Time for treshold 140734213 message with id 5 from sink to 1 is : 186919075 ms[DISCARDED]
-
-DEBUG (13): Time for treshold 140734213 message with id 5 from sink to 13 is : 207976081 ms[not discarded]
-DEBUG (13): current simulation time: 0:0:49.858688243
-
-DEBUG (5): Time for treshold 140734213 message with id 5 from sink to 5 is : 207976081 ms[DISCARDED]
-
-DEBUG (4): Time for treshold 140734213 message with id 5 from sink to 4 is : 207976081 ms[DISCARDED]
-
-DEBUG (2): Time for treshold 140734213 message with id 5 from sink to 2 is : 207976081 ms[DISCARDED]
-
-DEBUG (1): Time for treshold 140734213 message with id 5 from sink to 1 is : 207976081 ms[DISCARDED]
-
-DEBUG (12): Time for treshold 140734213 message with id 5 from sink to 12 is : 207976081 ms[not discarded]
-DEBUG (12): current simulation time: 0:0:49.858688243
-
-DEBUG (14): Time for treshold 140734213 message with id 5 from sink to 14 is : 224608064 ms[not discarded]
-DEBUG (14): current simulation time: 0:0:49.860351441
-
-DEBUG (5): Time for treshold 140734213 message with id 5 from sink to 5 is : 224608064 ms[DISCARDED]
-
-DEBUG (4): Time for treshold 140734213 message with id 5 from sink to 4 is : 224608064 ms[DISCARDED]
-
-DEBUG (3): Time for treshold 140734213 message with id 5 from sink to 3 is : 224608064 ms[DISCARDED]
-
-DEBUG (1): Time for treshold 140734213 message with id 5 from sink to 1 is : 224608064 ms[DISCARDED]
-
-DEBUG (5): Time for treshold 140734213 message with id 5 from sink to 5 is : 252836659 ms[DISCARDED]
-
-DEBUG (3): Time for treshold 140734213 message with id 5 from sink to 3 is : 252836659 ms[DISCARDED]
-
-DEBUG (1): Time for treshold 140734213 message with id 5 from sink to 1 is : 252836659 ms[DISCARDED]
-
-DEBUG (9): Time for treshold 140734213 message with id 5 from sink to 9 is : 268858294 ms[not discarded]
-DEBUG (9): current simulation time: 0:0:49.864776464
-
-DEBUG (8): Time for treshold 140734213 message with id 5 from sink to 8 is : 268858294 ms[not discarded]
-DEBUG (8): current simulation time: 0:0:49.864776464
-
-DEBUG (5): Time for treshold 140734213 message with id 5 from sink to 5 is : 268858294 ms[DISCARDED]
-
-DEBUG (3): Time for treshold 140734213 message with id 5 from sink to 3 is : 272215208 ms[DISCARDED]
-
-DEBUG (3): Time for treshold 140734213 message with id 5 from sink to 3 is : 289304952 ms[DISCARDED]
-
-DEBUG (6): Time for treshold 140734213 message with id 5 from sink to 6 is : 321500809 ms[DISCARDED]
-
-DEBUG (2): Time for treshold 140734213 message with id 5 from sink to 2 is : 334318117 ms[DISCARDED]
-
-DEBUG (6): Time for treshold 140734213 message with id 5 from sink to 6 is : 368039844 ms[DISCARDED]
-
-DEBUG (1): Data Message counter: 162
-
-DEBUG (1): Time for data message 1286275418 from 5 to sink is : 27313073 ms
-DEBUG (1): current simulation time: 0:0:50.817184444
-
-DEBUG (1): Data Message counter: 163
-
-DEBUG (1): Time for data message 141689063 from 3 to sink is : 56152016 ms
-DEBUG (1): current simulation time: 0:0:50.820068338
-
-DEBUG (1): Data Message counter: 164
-
-DEBUG (1): Time for data message 643137709 from 2 to sink is : 91552200 ms
-DEBUG (1): current simulation time: 0:0:50.823608356
-
-DEBUG (1): Data Message counter: 165
-
-DEBUG (1): Time for data message 1787724064 from 4 to sink is : 110015227 ms
-DEBUG (1): current simulation time: 0:0:50.825454659
-
-DEBUG (1): Data Message counter: 166
-
-DEBUG (1): Time for data message 283378126 from 7 to sink is : 132750690 ms
-DEBUG (1): current simulation time: 0:0:50.827728207
-
-DEBUG (1): Data Message counter: 167
-
-DEBUG (1): Time for data message 425067189 from 11 to sink is : 267332424 ms
-DEBUG (1): current simulation time: 0:0:50.841186382
-
-DEBUG (1): Data Message counter: 168
-
-DEBUG (1): Time for data message 834638471 from 4 to sink is : 64086540 ms
-DEBUG (1): current simulation time: 0:0:51.797424291
-
-DEBUG (1): Data Message counter: 169
-
-DEBUG (1): Time for data message 1956200965 from 3 to sink is : 103606573 ms
-DEBUG (1): current simulation time: 0:0:51.801376293
-
-DEBUG (1): Data Message counter: 170
-
-DEBUG (1): Time for data message 547714448 from 10 to sink is : 290220474 ms
-DEBUG (1): current simulation time: 0:0:51.820037687
-
-DEBUG (1): Data Message counter: 171
-
-DEBUG (1): Time for data message 916216601 from 5 to sink is : 58440821 ms
-DEBUG (1): current simulation time: 0:0:52.773422219
-
-DEBUG (1): Data Message counter: 172
-
-DEBUG (1): Time for data message 2042466832 from 3 to sink is : 82549567 ms
-DEBUG (1): current simulation time: 0:0:52.775833093
-
-DEBUG (1): Data Message counter: 173
-
-DEBUG (1): Time for data message 213948129 from 3 to sink is : 23345811 ms
-DEBUG (1): current simulation time: 0:0:53.746475217
-
-DEBUG (1): Data Message counter: 174
-
-DEBUG (1): Time for data message 1394664017 from 5 to sink is : 62408083 ms
-DEBUG (1): current simulation time: 0:0:53.750381445
-
-DEBUG (1): Data Message counter: 175
-
-DEBUG (1): Time for data message 804306073 from 4 to sink is : 90026330 ms
-DEBUG (1): current simulation time: 0:0:53.753143270
-
-DEBUG (1): Data Message counter: 176
-
-DEBUG (1): Time for data message 1771073832 from 2 to sink is : 106810900 ms
-DEBUG (1): current simulation time: 0:0:53.754821726
-
-DEBUG (1): Data Message counter: 177
-
-DEBUG (1): Time for data message 641844387 from 11 to sink is : 329130159 ms
-DEBUG (1): current simulation time: 0:0:53.777053656
-
-DEBUG (1): Data Message counter: 178
-
-DEBUG (1): Time for data message 1710094693 from 4 to sink is : 38451924 ms
-DEBUG (1): current simulation time: 0:0:54.724548329
-
-DEBUG (1): Data Message counter: 179
-
-DEBUG (1): Time for data message 938579025 from 3 to sink is : 67290867 ms
-DEBUG (1): current simulation time: 0:0:54.727432223
-
-DEBUG (1): Data Message counter: 180
-
-DEBUG (1): Time for data message 167063357 from 2 to sink is : 94909114 ms
-DEBUG (1): current simulation time: 0:0:54.730194047
-
-DEBUG (1): Data Message counter: 181
-
-DEBUG (1): Time for data message 334126714 from 5 to sink is : 123442883 ms
-DEBUG (1): current simulation time: 0:0:54.733047425
-
-DEBUG (1): Data Message counter: 182
-
-DEBUG (1): Time for data message 1430285960 from 3 to sink is : 56152016 ms
-DEBUG (1): current simulation time: 0:0:55.702880838
-
-DEBUG (1): Data Message counter: 183
-
-DEBUG (1): Time for data message 1787857450 from 4 to sink is : 80108175 ms
-DEBUG (1): current simulation time: 0:0:55.705276454
-
-DEBUG (1): Data Message counter: 184
-
-DEBUG (1): Time for data message 1072714470 from 2 to sink is : 112456619 ms
-DEBUG (1): current simulation time: 0:0:55.708511297
-
-DEBUG (1): Data Message counter: 185
-
-DEBUG (1): Time for data message 2145428940 from 5 to sink is : 139311931 ms
-DEBUG (1): current simulation time: 0:0:55.711196830
-
-DEBUG (1): Data Message counter: 186
-
-DEBUG (1): Time for data message 1973761450 from 5 to sink is : 55846842 ms
-DEBUG (1): current simulation time: 0:0:56.679412821
-
-DEBUG (1): Data Message counter: 187
-
-DEBUG (1): Time for data message 928973326 from 4 to sink is : 127562732 ms
-DEBUG (1): current simulation time: 0:0:56.686584410
-
-DEBUG (1): Data Message counter: 188
-
-DEBUG (1): Time for data message 828794941 from 5 to sink is : 104522095 ms
-DEBUG (1): current simulation time: 0:0:57.660842847
-
-DEBUG (1): Data Message counter: 189
-
-DEBUG (1): Time for data message 1268357843 from 3 to sink is : 125273927 ms
-DEBUG (1): current simulation time: 0:0:57.662918029
-
-DEBUG (1): Data Message counter: 190
-
-DEBUG (1): Time for data message 998245529 from 14 to sink is : 152892174 ms
-DEBUG (1): current simulation time: 0:0:57.665679859
-
-DEBUG (1): Data Message counter: 191
-
-DEBUG (1): Time for data message 1562561296 from 2 to sink is : 21972528 ms
-DEBUG (1): current simulation time: 0:0:58.629150388
-
-DEBUG (1): Data Message counter: 192
-
-DEBUG (1): Time for data message 1172613062 from 4 to sink is : 56762364 ms
-DEBUG (1): current simulation time: 0:0:58.632629373
-
-DEBUG (1): Data Message counter: 193
-
-DEBUG (1): Time for data message 977638945 from 5 to sink is : 95061701 ms
-DEBUG (1): current simulation time: 0:0:58.636459307
-
-DEBUG (1): Data Message counter: 194
-
-DEBUG (1): Time for data message 1367587179 from 3 to sink is : 122069600 ms
-DEBUG (1): current simulation time: 0:0:58.639160096
-
-DEBUG (1): Data Message counter: 195
-
-DEBUG (1): Time for data message 197742477 from 9 to sink is : 162962916 ms
-DEBUG (1): current simulation time: 0:0:58.643249431
-
-DEBUG (1): Data Message counter: 196
-
-DEBUG (1): Time for data message 390182709 from 2 to sink is : 105437617 ms
-DEBUG (1): current simulation time: 0:0:59.614059397
-
-DEBUG (1): Data Message counter: 197
-
-DEBUG (1): Time for data message 780365418 from 5 to sink is : 133818799 ms
-DEBUG (1): current simulation time: 0:0:59.616897517
-
-DEBUG (1): Data Message counter: 198
-
-DEBUG (1): Time for data message 650304515 from 4 to sink is : 150603369 ms
-DEBUG (1): current simulation time: 0:0:59.618575973
-
-DEBUG (1): Data Message counter: 199
-
-DEBUG (1): Time for data message 1533215872 from 2 to sink is : 44707991 ms
-DEBUG (1): current simulation time: 0:1:0.584548935
-
-DEBUG (1): Data Message counter: 200
-
-DEBUG (1): Time for data message 1123704022 from 4 to sink is : 73852108 ms
-DEBUG (1): current simulation time: 0:1:0.587463347
-
-DEBUG (1): Data Message counter: 201
-
-DEBUG (1): Time for data message 509436247 from 7 to sink is : 145415411 ms
-DEBUG (1): current simulation time: 0:1:0.594619679
-
-DEBUG (1): Data Message counter: 202
-
-DEBUG (1): Time for data message 1102880351 from 2 to sink is : 38299337 ms
-DEBUG (1): current simulation time: 0:1:1.560470569
-
-DEBUG (1): Data Message counter: 203
-
-DEBUG (1): Time for data message 1122306036 from 4 to sink is : 89568569 ms
-DEBUG (1): current simulation time: 0:1:1.565597493
-
-DEBUG (1): Data Message counter: 204
-
-DEBUG (1): Time for data message 1219434461 from 14 to sink is : 150145608 ms
-DEBUG (1): current simulation time: 0:1:1.571655202
-
-DEBUG (1): Data Message counter: 205
-
-DEBUG (1): Time for data message 1180583091 from 10 to sink is : 188750119 ms
-DEBUG (1): current simulation time: 0:1:1.575515651
-
-DEBUG (1): Data Message counter: 206
-
-DEBUG (1): Time for data message 1248675451 from 4 to sink is : 25024268 ms
-DEBUG (1): current simulation time: 0:1:2.535705563
-
-DEBUG (1): Data Message counter: 207
-
-DEBUG (1): Time for data message 1178702000 from 2 to sink is : 52337341 ms
-DEBUG (1): current simulation time: 0:1:2.538436870
-
-DEBUG (1): Data Message counter: 208
-
-DEBUG (1): Time for data message 209920353 from 5 to sink is : 98723789 ms
-DEBUG (1): current simulation time: 0:1:2.543075516
-
-DEBUG (1): Data Message counter: 209
-
-DEBUG (1): Time for data message 1318648902 from 6 to sink is : 164336199 ms
-DEBUG (1): current simulation time: 0:1:2.549636757
-
-DEBUG (1): Data Message counter: 210
-
-DEBUG (1): Time for data message 1278106473 from 4 to sink is : 23498398 ms
-DEBUG (1): current simulation time: 0:1:3.512115476
-
-DEBUG (1): Data Message counter: 211
-
-DEBUG (1): Time for data message 2055354072 from 2 to sink is : 45013165 ms
-DEBUG (1): current simulation time: 0:1:3.514266952
-
-DEBUG (1): Data Message counter: 212
-
-DEBUG (1): Time for data message 1963224497 from 5 to sink is : 72478825 ms
-DEBUG (1): current simulation time: 0:1:3.517013520
-
-DEBUG (1): Data Message counter: 213
-
-DEBUG (1): Time for data message 592988449 from 3 to sink is : 107879009 ms
-DEBUG (1): current simulation time: 0:1:3.520553537
-
-DEBUG (1): Data Message counter: 214
-
-DEBUG (1): Time for data message 2032740263 from 3 to sink is : 20141484 ms
-DEBUG (1): current simulation time: 0:1:4.488342284
-
-DEBUG (1): Data Message counter: 215
-
-DEBUG (1): Time for data message 2004054417 from 4 to sink is : 43945056 ms
-DEBUG (1): current simulation time: 0:1:4.490722642
-
-DEBUG (1): Data Message counter: 216
-
-DEBUG (1): Time for data message 2061426109 from 2 to sink is : 91857374 ms
-DEBUG (1): current simulation time: 0:1:4.495513873
-
-DEBUG (1): Data Message counter: 217
-
-DEBUG (1): Time for data message 1717195957 from 14 to sink is : 226133934 ms
-DEBUG (1): current simulation time: 0:1:4.508941535
-
-DEBUG (1): Data Message counter: 218
-
-DEBUG (1): Time for data message 1946682725 from 6 to sink is : 251310789 ms
-DEBUG (1): current simulation time: 0:1:4.511459216
-
-DEBUG (1): Data Message counter: 219
-
-DEBUG (1): Time for data message 2095743765 from 3 to sink is : 37536402 ms
-DEBUG (1): current simulation time: 0:1:5.466644276
-
-DEBUG (1): Data Message counter: 220
-
-DEBUG (1): Time for data message 2069873824 from 5 to sink is : 56152016 ms
-DEBUG (1): current simulation time: 0:1:5.468505839
-
-DEBUG (1): Data Message counter: 221
-
-DEBUG (1): Time for data message 1034936912 from 2 to sink is : 92620309 ms
-DEBUG (1): current simulation time: 0:1:5.472152666
-
-DEBUG (1): Data Message counter: 222
-
-DEBUG (1): Time for data message 1009066971 from 4 to sink is : 109252292 ms
-DEBUG (1): current simulation time: 0:1:5.473815866
-
-DEBUG (1): Data Message counter: 223
-
-DEBUG (1): Time for data message 710221238 from 4 to sink is : 78124544 ms
-DEBUG (1): current simulation time: 0:1:6.447265591
-
-DEBUG (1): Data Message counter: 224
-
-DEBUG (1): Time for data message 1281762215 from 5 to sink is : 103606573 ms
-DEBUG (1): current simulation time: 0:1:6.449813794
-
-DEBUG (1): Data Message counter: 225
-
-DEBUG (1): Time for data message 987581760 from 12 to sink is : 121459252 ms
-DEBUG (1): current simulation time: 0:1:6.451599066
-
-DEBUG (1): Data Message counter: 226
-
-DEBUG (1): Time for data message 1714622931 from 2 to sink is : 151824065 ms
-DEBUG (1): current simulation time: 0:1:6.454635542
-
-DEBUG (1): Data Message counter: 227
-
-DEBUG (1): Time for data message 779389632 from 3 to sink is : 21819941 ms
-DEBUG (1): current simulation time: 0:1:7.418197630
-
-DEBUG (1): Data Message counter: 228
-
-DEBUG (1): Time for data message 1169084448 from 5 to sink is : 40435555 ms
-DEBUG (1): current simulation time: 0:1:7.420059193
-
-DEBUG (1): Data Message counter: 229
-
-DEBUG (1): Time for data message 584542224 from 2 to sink is : 82702154 ms
-DEBUG (1): current simulation time: 0:1:7.424285851
-
-DEBUG (1): Data Message counter: 230
-
-DEBUG (1): Time for data message 974237040 from 4 to sink is : 105590204 ms
-DEBUG (1): current simulation time: 0:1:7.426574657
-
-DEBUG (1): Data Message counter: 231
-
-DEBUG (1): Time for data message 1948474080 from 9 to sink is : 226591695 ms
-DEBUG (1): current simulation time: 0:1:7.438674809
-
-DEBUG (1): Data Message counter: 232
-
-DEBUG (1): Time for data message 1810957390 from 2 to sink is : 43182121 ms
-DEBUG (1): current simulation time: 0:1:8.396896348
-
-DEBUG (1): Data Message counter: 233
-
-DEBUG (1): Time for data message 1474431133 from 5 to sink is : 66375345 ms
-DEBUG (1): current simulation time: 0:1:8.399215672
-
-DEBUG (1): Data Message counter: 234
-
-DEBUG (1): Time for data message 1698781971 from 3 to sink is : 83770263 ms
-DEBUG (1): current simulation time: 0:1:8.400955162
-
-DEBUG (1): Data Message counter: 235
-
-DEBUG (1): Time for data message 1586606552 from 4 to sink is : 107573835 ms
-DEBUG (1): current simulation time: 0:1:8.403335520
-
-DEBUG (5): Time for treshold 202055088 message with id 7 from sink to 5 is : 75225391 ms[not discarded]
-DEBUG (5): current simulation time: 0:1:9.376663174
-
-DEBUG (4): Time for treshold 202055088 message with id 7 from sink to 4 is : 75225391 ms[not discarded]
-DEBUG (4): current simulation time: 0:1:9.376663174
-
-DEBUG (3): Time for treshold 202055088 message with id 7 from sink to 3 is : 75225391 ms[not discarded]
-DEBUG (3): current simulation time: 0:1:9.376663174
-
-DEBUG (4): Time for treshold 202055088 message with id 7 from sink to 4 is : 142516258 ms[DISCARDED]
-
-DEBUG (1): Time for treshold 202055088 message with id 7 from sink to 1 is : 142516258 ms[DISCARDED]
-
-DEBUG (2): Time for treshold 202055088 message with id 7 from sink to 2 is : 142516258 ms[not discarded]
-DEBUG (2): current simulation time: 0:1:9.383392261
-
-DEBUG (13): Time for treshold 202055088 message with id 7 from sink to 13 is : 142516258 ms[not discarded]
-DEBUG (13): current simulation time: 0:1:9.383392261
-
-DEBUG (12): Time for treshold 202055088 message with id 7 from sink to 12 is : 142516258 ms[not discarded]
-DEBUG (12): current simulation time: 0:1:9.383392261
-
-DEBUG (14): Time for treshold 202055088 message with id 7 from sink to 14 is : 174406941 ms[not discarded]
-DEBUG (14): current simulation time: 0:1:9.386581329
-
-DEBUG (4): Time for treshold 202055088 message with id 7 from sink to 4 is : 174406941 ms[DISCARDED]
-
-DEBUG (1): Time for treshold 202055088 message with id 7 from sink to 1 is : 174406941 ms[DISCARDED]
-
-DEBUG (5): Time for treshold 202055088 message with id 7 from sink to 5 is : 174406941 ms[DISCARDED]
-
-DEBUG (7): Time for treshold 202055088 message with id 7 from sink to 7 is : 190886337 ms[not discarded]
-DEBUG (7): current simulation time: 0:1:9.388229269
-
-DEBUG (6): Time for treshold 202055088 message with id 7 from sink to 6 is : 190886337 ms[not discarded]
-DEBUG (6): current simulation time: 0:1:9.388229269
-
-DEBUG (4): Time for treshold 202055088 message with id 7 from sink to 4 is : 190886337 ms[DISCARDED]
-
-DEBUG (3): Time for treshold 202055088 message with id 7 from sink to 3 is : 190886337 ms[DISCARDED]
-
-DEBUG (2): Time for treshold 202055088 message with id 7 from sink to 2 is : 190886337 ms[DISCARDED]
-
-DEBUG (1): Time for treshold 202055088 message with id 7 from sink to 1 is : 190886337 ms[DISCARDED]
-
-DEBUG (11): Time for treshold 202055088 message with id 7 from sink to 11 is : 221251150 ms[not discarded]
-DEBUG (11): current simulation time: 0:1:9.391265750
-
-DEBUG (10): Time for treshold 202055088 message with id 7 from sink to 10 is : 221251150 ms[not discarded]
-DEBUG (10): current simulation time: 0:1:9.391265750
-
-DEBUG (5): Time for treshold 202055088 message with id 7 from sink to 5 is : 221251150 ms[DISCARDED]
-
-DEBUG (3): Time for treshold 202055088 message with id 7 from sink to 3 is : 226591695 ms[DISCARDED]
-
-DEBUG (2): Time for treshold 202055088 message with id 7 from sink to 2 is : 267332424 ms[DISCARDED]
-
-DEBUG (9): Time for treshold 202055088 message with id 7 from sink to 9 is : 271757447 ms[not discarded]
-DEBUG (9): current simulation time: 0:1:9.396316380
-
-DEBUG (5): Time for treshold 202055088 message with id 7 from sink to 5 is : 271757447 ms[DISCARDED]
-
-DEBUG (8): Time for treshold 202055088 message with id 7 from sink to 8 is : 271757447 ms[not discarded]
-DEBUG (8): current simulation time: 0:1:9.396316380
-
-DEBUG (7): Time for treshold 202055088 message with id 7 from sink to 7 is : 280149732 ms[DISCARDED]
-
-DEBUG (6): Time for treshold 202055088 message with id 7 from sink to 6 is : 298154998 ms[DISCARDED]
-
-DEBUG (7): Time for treshold 202055088 message with id 7 from sink to 7 is : 300443803 ms[DISCARDED]
-
-DEBUG (6): Time for treshold 202055088 message with id 7 from sink to 6 is : 322721505 ms[DISCARDED]
-
-DEBUG (1): Data Message counter: 236
-
-DEBUG (1): Time for data message 1081334196 from 4 to sink is : 74004695 ms
-DEBUG (1): current simulation time: 0:1:10.353103606
-
-DEBUG (1): Data Message counter: 237
-
-DEBUG (1): Time for data message 1078297247 from 2 to sink is : 108336770 ms
-DEBUG (1): current simulation time: 0:1:10.356536813
-
-DEBUG (1): Data Message counter: 238
-
-DEBUG (1): Time for data message 1977211258 from 4 to sink is : 33874314 ms
-DEBUG (1): current simulation time: 0:1:11.325653068
-
-DEBUG (1): Data Message counter: 239
-
-DEBUG (1): Time for data message 1152272277 from 3 to sink is : 106047965 ms
-DEBUG (1): current simulation time: 0:1:11.332870433
-
-DEBUG (1): Data Message counter: 240
-
-DEBUG (1): Time for data message 1422688163 from 5 to sink is : 37841576 ms
-DEBUG (1): current simulation time: 0:1:12.302612295
-
-DEBUG (1): Data Message counter: 241
-
-DEBUG (1): Time for data message 232630893 from 3 to sink is : 61645148 ms
-DEBUG (1): current simulation time: 0:1:12.304992651
-
-DEBUG (1): Data Message counter: 242
-
-DEBUG (1): Time for data message 827659528 from 4 to sink is : 84838372 ms
-DEBUG (1): current simulation time: 0:1:12.307311974
-
-DEBUG (1): Data Message counter: 243
-
-DEBUG (1): Time for data message 1785085905 from 2 to sink is : 161284459 ms
-DEBUG (1): current simulation time: 0:1:12.314956581
-
-DEBUG (1): Data Message counter: 244
-
-DEBUG (1): Time for data message 1222105477 from 4 to sink is : 44555404 ms
-DEBUG (1): current simulation time: 0:1:13.279846177
-
-DEBUG (1): Data Message counter: 245
-
-DEBUG (1): Time for data message 1037029843 from 5 to sink is : 72936586 ms
-DEBUG (1): current simulation time: 0:1:13.282684296
-
-DEBUG (1): Data Message counter: 246
-
-DEBUG (1): Time for data message 1407181111 from 3 to sink is : 123137709 ms
-DEBUG (1): current simulation time: 0:1:13.287704407
-
-DEBUG (1): Data Message counter: 247
-
-DEBUG (1): Time for data message 2074059686 from 11 to sink is : 284879929 ms
-DEBUG (1): current simulation time: 0:1:13.303878633
-
-DEBUG (1): Data Message counter: 248
-
-DEBUG (1): Time for data message 255528166 from 3 to sink is : 24566507 ms
-DEBUG (1): current simulation time: 0:1:14.254409787
-
-DEBUG (1): Data Message counter: 249
-
-DEBUG (1): Time for data message 383292249 from 5 to sink is : 54778733 ms
-DEBUG (1): current simulation time: 0:1:14.257431010
-
-DEBUG (1): Data Message counter: 250
-
-DEBUG (1): Time for data message 1393152031 from 4 to sink is : 73241760 ms
-DEBUG (1): current simulation time: 0:1:14.259277313
-
-DEBUG (1): Data Message counter: 251
-
-DEBUG (1): Time for data message 1776444280 from 10 to sink is : 242918504 ms
-DEBUG (1): current simulation time: 0:1:14.276244990
-
-DEBUG (1): Data Message counter: 252
-
-DEBUG (1): Time for data message 691981776 from 4 to sink is : 70342607 ms
-DEBUG (1): current simulation time: 0:1:15.235549897
-
-DEBUG (1): Data Message counter: 253
-
-DEBUG (1): Time for data message 1689371590 from 5 to sink is : 111998858 ms
-DEBUG (1): current simulation time: 0:1:15.239715523
-
-DEBUG (1): Data Message counter: 254
-
-DEBUG (1): Time for data message 386573738 from 8 to sink is : 248716810 ms
-DEBUG (1): current simulation time: 0:1:15.253387320
-
-DEBUG (1): Data Message counter: 255
-
-DEBUG (1): Time for data message 1513760727 from 4 to sink is : 62102909 ms
-DEBUG (1): current simulation time: 0:1:16.211288427
-
-DEBUG (1): Data Message counter: 256
-
-DEBUG (1): Time for data message 1640505311 from 3 to sink is : 88042699 ms
-DEBUG (1): current simulation time: 0:1:16.213882406
-
-DEBUG (1): Data Message counter: 257
-
-DEBUG (1): Time for data message 1387016143 from 5 to sink is : 119170447 ms
-DEBUG (1): current simulation time: 0:1:16.216995182
-
-DEBUG (1): Data Message counter: 258
-
-DEBUG (1): Time for data message 645327216 from 5 to sink is : 25634616 ms
-DEBUG (1): current simulation time: 0:1:17.184204099
-
-DEBUG (1): Data Message counter: 259
-
-DEBUG (1): Time for data message 537772680 from 4 to sink is : 52795102 ms
-DEBUG (1): current simulation time: 0:1:17.186920147
-
-DEBUG (1): Data Message counter: 260
-
-DEBUG (1): Time for data message 430218144 from 3 to sink is : 91247026 ms
-DEBUG (1): current simulation time: 0:1:17.190765339
-
-DEBUG (1): Data Message counter: 261
-
-DEBUG (1): Time for data message 322663608 from 2 to sink is : 204466580 ms
-DEBUG (1): current simulation time: 0:1:17.202087294
-
-DEBUG (1): Data Message counter: 262
-
-DEBUG (1): Time for data message 1932059702 from 12 to sink is : 55999429 ms
-DEBUG (1): current simulation time: 0:1:18.163803083
-
-DEBUG (1): Data Message counter: 263
-
-DEBUG (1): Time for data message 1222101962 from 5 to sink is : 72936586 ms
-DEBUG (1): current simulation time: 0:1:18.165496796
-
-DEBUG (1): Data Message counter: 264
-
-DEBUG (1): Time for data message 1734246184 from 4 to sink is : 116881642 ms
-DEBUG (1): current simulation time: 0:1:18.169891301
-
-DEBUG (1): Data Message counter: 265
-
-DEBUG (1): Time for data message 1334075426 from 5 to sink is : 39825207 ms
-DEBUG (1): current simulation time: 0:1:19.138748158
-
-DEBUG (1): Data Message counter: 266
-
-DEBUG (1): Time for data message 1827557404 from 4 to sink is : 76903848 ms
-DEBUG (1): current simulation time: 0:1:19.142456021
-
-DEBUG (2): Time for treshold 768218109 message with id 8 from sink to 2 is : 92315135 ms[not discarded]
-DEBUG (2): current simulation time: 0:1:19.143997149
-
-DEBUG (4): Time for treshold 768218109 message with id 8 from sink to 4 is : 92315135 ms[not discarded]
-DEBUG (4): current simulation time: 0:1:19.143997149
-
-DEBUG (5): Time for treshold 768218109 message with id 8 from sink to 5 is : 139006757 ms[not discarded]
-DEBUG (5): current simulation time: 0:1:19.148666311
-
-DEBUG (3): Time for treshold 768218109 message with id 8 from sink to 3 is : 139006757 ms[not discarded]
-DEBUG (3): current simulation time: 0:1:19.148666311
-
-DEBUG (2): Time for treshold 768218109 message with id 8 from sink to 2 is : 139006757 ms[DISCARDED]
-
-DEBUG (1): Time for treshold 768218109 message with id 8 from sink to 1 is : 139006757 ms[DISCARDED]
-
-DEBUG (6): Time for treshold 768218109 message with id 8 from sink to 6 is : 192717381 ms[not discarded]
-DEBUG (6): current simulation time: 0:1:19.154037373
-
-DEBUG (7): Time for treshold 768218109 message with id 8 from sink to 7 is : 192717381 ms[not discarded]
-DEBUG (7): current simulation time: 0:1:19.154037373
-
-DEBUG (10): Time for treshold 768218109 message with id 8 from sink to 10 is : 228270152 ms[not discarded]
-DEBUG (10): current simulation time: 0:1:19.157592650
-
-DEBUG (11): Time for treshold 768218109 message with id 8 from sink to 11 is : 228270152 ms[not discarded]
-DEBUG (11): current simulation time: 0:1:19.157592650
-
-DEBUG (7): Time for treshold 768218109 message with id 8 from sink to 7 is : 264891032 ms[DISCARDED]
-
-DEBUG (7): Time for treshold 768218109 message with id 8 from sink to 7 is : 312345589 ms[DISCARDED]
-
-DEBUG (1): Data Message counter: 267
-
-DEBUG (1): Time for data message 1038205051 from 2 to sink is : 58593408 ms
-DEBUG (1): current simulation time: 0:1:20.117187476
-
-DEBUG (1): Data Message counter: 268
-
-DEBUG (1): Time for data message 2076410102 from 5 to sink is : 185393205 ms
-DEBUG (1): current simulation time: 0:1:20.129867458
-
-DEBUG (1): Data Message counter: 269
-
-DEBUG (1): Time for data message 1706650570 from 6 to sink is : 271604860 ms
-DEBUG (1): current simulation time: 0:1:20.138488624
-
-DEBUG (1): Data Message counter: 270
-
-DEBUG (1): Time for data message 807660282 from 2 to sink is : 35400184 ms
-DEBUG (1): current simulation time: 0:1:21.091430654
-
-DEBUG (1): Data Message counter: 271
-
-DEBUG (1): Time for data message 1346100470 from 4 to sink is : 55389081 ms
-DEBUG (1): current simulation time: 0:1:21.093429545
-
-DEBUG (1): Data Message counter: 272
-
-DEBUG (1): Time for data message 1076880376 from 3 to sink is : 213774387 ms
-DEBUG (1): current simulation time: 0:1:21.109268075
-
-DEBUG (1): Data Message counter: 273
-
-DEBUG (1): Time for data message 1083157481 from 11 to sink is : 336149161 ms
-DEBUG (1): current simulation time: 0:1:21.121505556
-
-DEBUG (1): Data Message counter: 274
-
-DEBUG (1): Time for data message 442983177 from 12 to sink is : 141142975 ms
-DEBUG (1): current simulation time: 0:1:22.078567438
-
-DEBUG (1): Data Message counter: 275
-
-DEBUG (1): Time for data message 511134435 from 14 to sink is : 183104400 ms
-DEBUG (1): current simulation time: 0:1:22.082763582
-
-DEBUG (1): Data Message counter: 276
-
-DEBUG (1): Time for data message 477058806 from 13 to sink is : 216368366 ms
-DEBUG (1): current simulation time: 0:1:22.086089978
-
-DEBUG (1): Data Message counter: 277
-
-DEBUG (1): Time for data message 701861045 from 14 to sink is : 86974590 ms
-DEBUG (1): current simulation time: 0:1:23.049713101
+DEBUG (1): Time for data message 1321780511 from 8 to sink is : 293729975 ms
+DEBUG (1): current simulation time: 0:40:42.445388636

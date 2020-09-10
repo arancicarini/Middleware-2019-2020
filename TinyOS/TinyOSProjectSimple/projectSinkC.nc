@@ -61,14 +61,14 @@ implementation
   			if(TOS_NODE_ID ==1){
   				//I'm the sink
   				treshold_id=0;		
-				call TresholdTimer.startPeriodicAt(0, 10000);
+				call TresholdTimer.startPeriodicAt(0, 300000);
 			}
 			else{
 				//Inizializing node values
 				treshold = 4294967295; // maximum value for a 32 bit integer
 				treshold_id= 0;
   				parent=0;		 						
-				call DataTimer.startPeriodicAt(0, 1000);
+				call DataTimer.startPeriodicAt(0, 100000);
 			}
 			
   		}
@@ -112,15 +112,15 @@ implementation
       	    treshold_id = mess->treshold_id;
       	    parent = mess->sender;
       		dbg_clear("radio", "\n");
-      		dbg("radio", "Mote %hu has received a treshold message with treshold %lu from mote %hu\n",TOS_NODE_ID, treshold, mess->sender);
+      		dbg("radio", "Mote %hu has received a treshold message with treshold %hu and id %lu from mote %hu\n",TOS_NODE_ID, treshold, treshold_id, mess->sender);
 			dbg_clear("analysis", "\n");      		
-      		dbg("analysis", "Time for treshold %lu message with id %lu from sink to %hu is : %lu ms[not discarded]\n", treshold, treshold_id, TOS_NODE_ID, (sim_time()-mess->time)); 
+      		dbg("analysis", "Time for treshold %hu message with id %lu from sink to %hu is : %lu ms[not discarded]\n", treshold, treshold_id, TOS_NODE_ID, (sim_time()-mess->time)); 
       		dbg("analysis", "current simulation time: %s\n", sim_time_string());
       		sendTreshold(mess->time, mess->treshold_id);     	
       	}
       	else if(mess->type == 1 && mess->treshold_id <= treshold_id){
 			dbg_clear("analysis", "\n");      		
-      		dbg("analysis", "Time for treshold %lu message with id %lu from sink to %hu is : %lu ms[DISCARDED]\n", treshold, treshold_id, TOS_NODE_ID, (sim_time()-mess->time));
+      		dbg("analysis", "Time for treshold %hu message with id %lu from sink to %hu is : %lu ms[DISCARDED]\n", treshold, treshold_id, TOS_NODE_ID, (sim_time()-mess->time)); 		
       	}
       	//type 2 -> DATA message
 		if (mess->type == 2){
@@ -155,15 +155,15 @@ implementation
 			treshold = dataRead;
 			treshold_id +=1;
 	 		dbg_clear("sink", "\n");
-			dbg("sink","Sink just read new treshold %lu\n",dataRead);
+			dbg("sink","Sink just read new treshold %hu with id %lu\n",dataRead, treshold_id);
 	 		dbg_clear("short", "\n");
-			dbg("short","Sink just read new treshold %lu\n",treshold_id );			
+			dbg("short","Sink just read new treshold %hu with id %lu\n",treshold, treshold_id );			
 			sendTreshold(sim_time(), treshold_id);			  
 		}
 		else{		
 			if(dataRead > treshold){
 				dbg_clear("data", "\n");
-				dbg("data","Mote %hu just read new data %lu above the treshold %lu at time %s\n",TOS_NODE_ID,dataRead, treshold, sim_time_string());  	
+				dbg("data","Mote %d just read new data %hu above the treshold %lu at time %s\n",TOS_NODE_ID,dataRead, treshold, sim_time_string());  	
 				sendData(dataRead, TOS_NODE_ID,sim_time());
 	  		}
 		}
@@ -178,7 +178,7 @@ implementation
   			if ( err == SUCCESS){
 				if(call Ack.wasAcked(buf)){
 					dbg_clear("radio", "\n");
-					dbg("radio", "Packet sent at time %s from %hu \n", sim_time_string(), TOS_NODE_ID);
+					dbg("radio", "Packet sent at time %s from %d \n", sim_time_string(), TOS_NODE_ID);
 					dbg_clear("radio", "\n");
 		  			dbg("radio", "Message correctly delivered\n");
 	  			}
@@ -209,9 +209,10 @@ implementation
 			mess->treshold_id = t_id;
 			mess-> time = elapsed_time;
 			
+			call Ack.requestAck(&packet);
 			if(call AMSend.send(AM_BROADCAST_ADDR, &packet,sizeof(Msg_t)) == SUCCESS){
 				dbg_clear("radio", "\n");
-		   		dbg("radio","Packet sent from: %hu, data: %lu, type: %hu, treshold: %lu , treshold_id: %hu\n", TOS_NODE_ID, mess->value, mess->type, mess->treshold_id, mess->treshold_id);
+		   		dbg("radio","Packet sent from: %hu, treshold: %lu, type: %hu, treshold_id: %hu\n", TOS_NODE_ID, mess->value, mess->type, mess->treshold_id);
 		   		locked = TRUE;
 			}
 			else{

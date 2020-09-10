@@ -12,7 +12,7 @@ from TOSSIM import*;
 t = Tossim([]);
 
 
-topofile="topology5sparsi.txt";
+topofile="topologyRandom.txt";
 modelfile="meyer-heavy.txt";
 
 
@@ -104,7 +104,7 @@ for line in lines:
             mid_compl = 0;
             sys.stdout.write ("#")
             sys.stdout.flush()
-        for i in range(1, 32):
+        for i in range(1, 15):
             t.getNode(i).addNoiseTraceReading(val)
 
 ##Creating noise model
@@ -114,7 +114,7 @@ for i in range(1, 15):
 
 debug_out.write("\nStart simulation with TOSSIM!\n\n");
 
-for i in range(0,32000):
+for i in range(0,320000):
 	t.runNextEvent()
 	
 
