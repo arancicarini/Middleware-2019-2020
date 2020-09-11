@@ -10,7 +10,6 @@ import akka.cluster.ClusterEvent;
 import akka.cluster.typed.Cluster;
 import akka.cluster.typed.Subscribe;
 
-//Da sistemare , ci serve davvero??
 
 public final class ClusterListener extends AbstractBehavior<ClusterListener.Event> {
 
