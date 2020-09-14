@@ -3,8 +3,8 @@
 This repository contains all the projects of the "Middleware technologies for distributed systems" course at Poytechnic University of Milan, academic year 19/20. A related project can be found at https://github.com/francescopont/Chord 
 
 ## Group members
-Surname | Name | Student ID 
------------- | ------------- | ------------- 
-Pontiggia | Francesco | 921085 
-Ricci | Arianna | 921275 
+Surname | Name 
+------------ | ------------- 
+Pontiggia | Francesco 
+Ricci | Arianna  
 
