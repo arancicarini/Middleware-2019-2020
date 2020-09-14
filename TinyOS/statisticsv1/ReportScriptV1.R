@@ -67,7 +67,7 @@ ggplot(df, aes(x  =  topology,
 
 
 topology=c("14 dense","14 sparse","random", "mix", "tree", "20 dense" )
-count=c(9,14,10,12,18,12)
+count=c(14,9,10,12,18,16)
 df = cbind(topology, count)
 df = as.data.frame(df)
 df$count = as.numeric(as.character(df$count))
