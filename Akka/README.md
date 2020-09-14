@@ -1,6 +1,6 @@
 ## Description
 This folder contains:
-- our project (whose rough specifications can be found in "Distributed Key Value store in Akka.txt")
+- our project 
 - some reference pdfs about the Akka framework.
 - some samples to get acquainted with Akka.
     - some downloaded from the Lightbend tutorials
