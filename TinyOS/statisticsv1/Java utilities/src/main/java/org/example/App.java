@@ -25,12 +25,12 @@ public class App {
     public static void main(String[] args) {
         BufferedReader reader;
         try {
-            File report = new File("C:/Users/ponti/Github/Middleware-2019-2020/TinyOS/statistics/reportSimple.txt");
+            File report = new File("C:/Users/ponti/Github/Middleware-2019-2020/TinyOS/statisticsv1/reportSimple.txt");
             report.createNewFile();
-            FileWriter writer = new FileWriter("C:/Users/ponti/Github/Middleware-2019-2020/TinyOS/statistics/reportSimple.txt");
+            FileWriter writer = new FileWriter("C:/Users/ponti/Github/Middleware-2019-2020/TinyOS/statisticsv1/reportv1.txt");
 
 
-            List<String> topologies = Arrays.asList("5 denso", "5 sparsi", "random", "mix","tree", "20 denso");
+            List<String> topologies = Arrays.asList("14 dense", "14 sparse", "random", "mix","tree", "20 dense");
             for (String topology: topologies){
                 Integer[] discardedCounter = new Integer[7];
                 Integer[] discardedTime = new Integer[7];
@@ -46,7 +46,7 @@ public class App {
                 List<Integer> tresholdTimes = new ArrayList<>();
                 writer.write("***** TOPOLOGY " + topology + " *****\n");
                 reader = new BufferedReader(new FileReader(
-                        "C:/Users/ponti/Github/Middleware-2019-2020/TinyOS/statistics/topology "+ topology +"/performance.txt"));
+                        "C:/Users/ponti/Github/Middleware-2019-2020/TinyOS/statisticsv1/topology "+ topology +"/performance.txt"));
                 String line = reader.readLine();
                 while (line != null) {
                     Pattern pattern = Pattern.compile(DATAMESSAGE);

@@ -1,4 +1,4 @@
-***** TOPOLOGY 5 denso *****
+***** TOPOLOGY 14 dense *****
 Last recorded simulation time: 1:37:40.412292330
 
 Amount of data messages delivered: 13
@@ -23,7 +23,7 @@ number of discarded messages for Th id 7: 0 -- Last recorded th message liveness
 ---Number of messages not sent due to a busy radio: 9 ---
 
 ****************************************
-***** TOPOLOGY 5 sparsi *****
+***** TOPOLOGY 14 sparse *****
 Last recorded simulation time: 1:37:40.403274438
 
 Amount of data messages delivered: 9
@@ -123,7 +123,7 @@ number of discarded messages for Th id 7: 0 -- Last recorded th message liveness
 ---Number of messages not sent due to a busy radio: 18 ---
 
 ****************************************
-***** TOPOLOGY 20 denso *****
+***** TOPOLOGY 20 dense *****
 Last recorded simulation time: 1:37:40.410796977
 
 Amount of data messages delivered: 20
