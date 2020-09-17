@@ -51,11 +51,13 @@ public class DataNode {
         public final String key;
         public final ActorRef<Command> replyTo;
         public final int requestId;
+        public final int successorID;
 
-        public Get(String key, ActorRef<Command> replyTo, int requestId){
+        public Get(String key, ActorRef<Command> replyTo, int requestId, int successorID){
             this.key=key;
             this.replyTo=replyTo;
             this.requestId = requestId;
+            this.successorID = successorID;
         }
     }
     //---------------------------------------------------------------------------------------------------
@@ -162,6 +164,7 @@ public class DataNode {
     private final ActorContext<Command> context;
     private final HashMap<String,Value> data = new HashMap<>();
     private final HashMap<String,Value> replicas = new HashMap<>();
+    private final Random loadBalancer = new Random();
 
     private final HashMap<Integer, Request> requests = new HashMap<>();
 
@@ -231,25 +234,31 @@ public class DataNode {
         int nodePosition = message.key.hashCode() % nodes.size();
         if(nodePosition < 0 ) nodePosition += nodes.size();
         nodes.sort(Comparator.comparing(NodeInfo::getHashKey));
-        if (nodePosition == this.nodeId){
-            //I'm the leader, I return the value I've stored, even if null, and I specify if it's present in the answer message
+        List<String> successors = getSuccessorNodes(nodePosition, nReplicas, nodes)
+                .stream()
+                .map(NodeInfo::getHashKey)
+                .collect(Collectors.toList());
+        if (nodePosition == this.nodeId || successors.contains(hashfunction(address, port))){
+            //I return the value I've stored, even if null, and I specify if it's present in the answer message
             Value value = this.data.get(message.key);
             boolean isPresent = value != null;
             message.replyTo
                     .tell(new GetAnswer(message.key,isPresent? value.value : null , isPresent,ticket));
-        }else if(this.replicas.containsKey(message.key)){
-            //I'm not the leader but I do have a replica of the value, so that's good
-            message.replyTo
-                    .tell(new GetAnswer(message.key, replicas.get(message.key).value, true,ticket));
         }
         else {
-            //I contact the leader and all the nodes which are supposed to keep a replica
-            ActorRef<Command> leader = nodes.get(nodePosition).getNode();
-            leader.tell(new Get(message.key, context.getSelf(), ticket));
-            getSuccessorNodes(nodePosition,this.nReplicas, this.nodes)
-                    .stream()
-                    .map(NodeInfo::getNode)
-                    .forEach(n -> n.tell(new Get(message.key, context.getSelf(), ticket)));
+            //I contact a random node which is supposed to keep a replica
+            int choice = loadBalancer.nextInt(nReplicas +1);
+            if (choice == nReplicas){
+                // I contact the leader
+                ActorRef<Command> leader = nodes.get(nodePosition).getNode();
+                leader.tell(new Get(message.key, context.getSelf(), ticket, choice));
+            }
+            else{
+                getSuccessorNodes(nodePosition,this.nReplicas, this.nodes)
+                        .get(choice)
+                        .getNode()
+                        .tell(new Get(message.key, context.getSelf(), ticket,choice));
+            }
             requests.put(ticket, new Request(1, message.replyTo));
 
         }
@@ -258,17 +267,31 @@ public class DataNode {
     }
 
     private Behavior<Command> onGet(Get message){
+        //check if the topology has changed in the meantime
         int nodePosition = message.key.hashCode() % nodes.size();
         if(nodePosition < 0 ) nodePosition += nodes.size();
-        if (nodePosition == this.nodeId){
-            //I'm the leader, I return the value I've stored, even if null, and I specify if it's present in the answer message
-            Value value = this.data.get(message.key);
-            boolean isPresent = value != null;
-            message.replyTo.tell(new GetAnswer(message.key, isPresent? value.value : null, isPresent,message.requestId));
-        }else if(this.replicas.containsKey(message.key)){
-            //I'm not the leader but I do have a replica of the value, so that's good, I can answer
-            message.replyTo.tell(new GetAnswer(message.key, replicas.get(message.key).value, true,message.requestId));
+        nodes.sort(Comparator.comparing(NodeInfo::getHashKey));
+        List<String> successors = getSuccessorNodes(nodePosition, nReplicas, nodes)
+                .stream()
+                .map(NodeInfo::getHashKey)
+                .collect(Collectors.toList());
+        if (message.successorID == nReplicas && nodePosition!= this.nodeId){
+            ActorRef<Command> leader = nodes.get(nodePosition).getNode();
+            leader.tell(new Get(message.key, message.replyTo, message.requestId, message.successorID));
+            return Behaviors.same();
         }
+        if( !(successors.get(message.successorID).equals(hashfunction(address,port)))) {
+            // I redirect the request to the real destination
+            getSuccessorNodes(nodePosition, this.nReplicas, this.nodes)
+                    .get(message.successorID)
+                    .getNode()
+                    .tell(new Get(message.key, message.replyTo, message.requestId, message.successorID));
+            return Behaviors.same();
+        }
+        //if no changes, reply
+        Value value = this.data.get(message.key);
+        boolean isPresent = value != null;
+        message.replyTo.tell(new GetAnswer(message.key, isPresent? value.value : null, isPresent,message.requestId));
         return Behaviors.same();
     }
 
@@ -303,14 +326,14 @@ public class DataNode {
                 message.value.version = version;
             }
             this.data.put(message.key,message.value);
-            System.out.println("just inserted a leader version of key-data "+ message.key + " " + message.value.value +  " ...");
+            context.getLog().info("just inserted a leader version of key-data "+ message.key + " " + message.value.value +  " ...");
             getSuccessorNodes(nodePosition,this.nReplicas,this.nodes).stream()
                     .map(NodeInfo::getNode)
                     .forEach(n -> n.tell(new Put(message.key,message.value, context.getSelf(), true, ticket)));
             Request request = new Request(nReplicas, message.replyTo);
             requests.put(ticket, request);
         }else{
-            //I send the data to the leader of that data
+            //I send the data to the leader of that data, and wait for a reply
             NodeInfo node = nodes.get(nodePosition);
             node.getNode().tell(new Put(message.key,message.value, context.getSelf(),false, ticket));
             Request request = new Request(1, message.replyTo);
@@ -342,7 +365,7 @@ public class DataNode {
                 .map(NodeInfo::getHashKey)
                 .collect(Collectors.toList());
         if ((message.isReplica && !successors.contains(hashfunction(address,port)))){
-            System.out.println("redirecting put to true replicas, current size " + this.nodes.size() + "...");
+            context.getLog().info("redirecting put to true replicas, current size " + this.nodes.size() + "...");
             getSuccessorNodes(nodePosition,this.nReplicas,this.nodes)
                     .stream()
                     .map(NodeInfo::getNode)
@@ -353,7 +376,7 @@ public class DataNode {
         }
         if (!message.isReplica && nodePosition != this.nodeId){
             NodeInfo node = nodes.get(nodePosition);
-            System.out.println("redirecting put to true leader, current size " + this.nodes.size() + "...");
+            context.getLog().info("redirecting put to true leader, current size " + this.nodes.size() + "...");
             node.getNode().tell(new Put(message.key,message.value, message.replyTo, false, message.requestId));
             return Behaviors.same();
         }
@@ -369,7 +392,7 @@ public class DataNode {
                 }
             }
             this.replicas.put(message.key, message.value);
-            System.out.println("just inserted a replica of key-data "+ message.key + " " + message.value.value +  " ...");
+            context.getLog().info("just inserted a replica of key-data "+ message.key + " " + message.value.value +  " ...");
             message.replyTo.tell(new PutAnswer(true, message.requestId));
         }
         else{
@@ -390,7 +413,7 @@ public class DataNode {
 
             //inserting the copy
             this.data.put(message.key,message.value);
-            System.out.println("just inserted a leader version of key-data "+ message.key + " " + message.value.value +  " ...");
+            context.getLog().info("just inserted a leader version of key-data "+ message.key + " " + message.value.value +  " ...");
             //inform the replicas
             getSuccessorNodes(nodePosition,this.nReplicas,this.nodes)
                     .stream()
@@ -445,12 +468,12 @@ public class DataNode {
                 nodes.sort(Comparator.comparing(NodeInfo::getHashKey));
                 List<NodeInfo> successors = getSuccessorNodes(nodePosition, nReplicas, nodes);
                 if (nodePosition == this.nodeId){
-                    System.out.println("just inserted a leader version of key-data "+ entry.getKey() + " " + entry.getValue().value +  " due to new topology...");
+                    context.getLog().info("just inserted a leader version of key-data "+ entry.getKey() + " " + entry.getValue().value +  " due to new topology...");
                     //I'm the leader, so I add the value to my data
                     this.data.put(entry.getKey(),entry.getValue());
                 }else{
                     //I send the data to the leader of that data
-                    System.out.println("sending an update to the leader of this data: I'm " + this.port + "..." );
+                    context.getLog().info("sending an update to the leader of this data: I'm " + this.port + "..." );
                     ActorRef<Command> node = nodes.get(nodePosition).getNode();
                     node.tell(new Put(entry.getKey(), entry.getValue(), context.getSelf(), false, ticket));
 
@@ -539,9 +562,9 @@ public class DataNode {
 
     private Behavior<Command> onGetAllLocalRequest(GetAllLocalRequest message){
         Collection<String> allData = new ArrayList<>(this.data.values().stream().map(n -> n.value).collect(Collectors.toList()));
-        System.out.println(allData.size() + " number of leader data");
+        context.getLog().info(allData.size() + " number of leader data");
         Collection<String> replicas = new ArrayList<>(this.replicas.values().stream().map(n -> n.value).collect(Collectors.toList()));
-        System.out.println(replicas.size() + " number of replica data");
+        context.getLog().info(replicas.size() + " number of replica data");
         allData.addAll(replicas);
         message.replyTo.tell(new GetAllLocalAnswer(allData));
         return Behaviors.same();

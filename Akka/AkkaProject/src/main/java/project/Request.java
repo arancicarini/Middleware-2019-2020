@@ -2,8 +2,6 @@ package project;
 
 import akka.actor.typed.ActorRef;
 
-import java.util.HashMap;
-
 public class Request {
     private int counter;
     public final ActorRef<DataNode.Command> requester;

@@ -7,8 +7,6 @@ import akka.actor.typed.javadsl.AskPattern;
 import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.http.javadsl.model.StatusCodes;
 import akka.http.javadsl.server.Route;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 
 import java.time.Duration;
 import java.util.concurrent.CompletionStage;
@@ -21,7 +19,6 @@ import static akka.http.javadsl.server.Directives.*;
 //#test-routes-class
 public class TestRoutes {
     //#user-routes-class
-    private final static Logger log = LoggerFactory.getLogger(UserRoutes.class);
     private final ActorRef<DataNode.Command> node;
     private final Duration askTimeout;
     private final Scheduler scheduler;

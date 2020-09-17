@@ -24,7 +24,6 @@ import static akka.http.javadsl.server.Directives.*;
 //#user-routes-class
 public class UserRoutes {
     //#user-routes-class
-    private final static Logger log = LoggerFactory.getLogger(UserRoutes.class);
     private final ActorRef<DataNode.Command> node;
     private final Duration askTimeout;
     private final Scheduler scheduler;
