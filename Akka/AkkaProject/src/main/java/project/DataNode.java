@@ -15,6 +15,7 @@ import java.util.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
+import java.util.stream.IntStream;
 
 public class DataNode {
 
@@ -90,13 +91,15 @@ public class DataNode {
         public final ActorRef<Command> replyTo;
         public final boolean isReplica;
         public final int requestId;
+        public final int successorId;
 
-        public Put(String key, Value value, ActorRef<Command> replyTo, boolean isReplica, Integer requestId) {
+        public Put(String key, Value value, ActorRef<Command> replyTo, boolean isReplica, Integer requestId, int successorId) {
             this.key = key;
             this.value = value;
             this.replyTo = replyTo;
             this.isReplica = isReplica;
             this.requestId = requestId;
+            this.successorId = successorId;
         }
     }
 
@@ -327,15 +330,17 @@ public class DataNode {
             }
             this.data.put(message.key,message.value);
             context.getLog().info("just inserted a leader version of key-data "+ message.key + " " + message.value.value +  " ...");
-            getSuccessorNodes(nodePosition,this.nReplicas,this.nodes).stream()
-                    .map(NodeInfo::getNode)
-                    .forEach(n -> n.tell(new Put(message.key,message.value, context.getSelf(), true, ticket)));
+            List<NodeInfo> successors = getSuccessorNodes(nodePosition,this.nReplicas,this.nodes);
+            IntStream.range(0, nReplicas)
+                    .forEach(i ->{
+                        successors.get(i).getNode().tell(new Put(message.key,message.value, context.getSelf(), true, ticket,i));
+                    });
             Request request = new Request(nReplicas, message.replyTo);
             requests.put(ticket, request);
         }else{
             //I send the data to the leader of that data, and wait for a reply
             NodeInfo node = nodes.get(nodePosition);
-            node.getNode().tell(new Put(message.key,message.value, context.getSelf(),false, ticket));
+            node.getNode().tell(new Put(message.key,message.value, context.getSelf(),false, ticket, nodes.size()));
             Request request = new Request(1, message.replyTo);
             requests.put(ticket, request);
         }
@@ -364,24 +369,21 @@ public class DataNode {
                 .stream()
                 .map(NodeInfo::getHashKey)
                 .collect(Collectors.toList());
-        if ((message.isReplica && !successors.contains(hashfunction(address,port)))){
-            context.getLog().info("redirecting put to true replicas, current size " + this.nodes.size() + "...");
+
+        if ((message.isReplica && !successors.get(message.successorId).equals(hashfunction(address,port)))){
+            context.getLog().info("redirecting put to true replica, current size " + this.nodes.size() + "...");
             getSuccessorNodes(nodePosition,this.nReplicas,this.nodes)
-                    .stream()
-                    .map(NodeInfo::getNode)
-                    .collect(Collectors.toList())
-                    .forEach(n ->
-                    n.tell(new Put(message.key,message.value, message.replyTo, true, message.requestId)));
+                    .get(message.successorId).getNode().tell(
+                    new Put(message.key,message.value, message.replyTo, true, message.requestId, message.successorId));
             return Behaviors.same();
         }
+
         if (!message.isReplica && nodePosition != this.nodeId){
             NodeInfo node = nodes.get(nodePosition);
             context.getLog().info("redirecting put to true leader, current size " + this.nodes.size() + "...");
-            node.getNode().tell(new Put(message.key,message.value, message.replyTo, false, message.requestId));
+            node.getNode().tell(new Put(message.key,message.value, message.replyTo, false, message.requestId, nReplicas));
             return Behaviors.same();
         }
-
-
 
         if ( message.isReplica){
             //checking the version number
@@ -415,10 +417,11 @@ public class DataNode {
             this.data.put(message.key,message.value);
             context.getLog().info("just inserted a leader version of key-data "+ message.key + " " + message.value.value +  " ...");
             //inform the replicas
-            getSuccessorNodes(nodePosition,this.nReplicas,this.nodes)
-                    .stream()
-                    .map(NodeInfo::getNode)
-                    .forEach(n -> n.tell(new Put(message.key,message.value, context.getSelf(), true, ticket)));
+            List<NodeInfo> successorNodes = getSuccessorNodes(nodePosition,this.nReplicas,this.nodes);
+            IntStream.range(0, nReplicas)
+                    .forEach(i ->{
+                        successorNodes.get(i).getNode().tell(new Put(message.key,message.value, context.getSelf(), true, ticket,i));
+                    });
             Request request = new Request(nReplicas, message.replyTo);
             requests.put(ticket, request);
             ticket++;
@@ -428,6 +431,7 @@ public class DataNode {
 
 
     private Behavior<Command> onNodesUpdate(NodesUpdate message) {
+        System.out.println("nodes updateee");
         this.nodes.clear();
         //update the table of all the nodes
         for (ActorRef<Command> node: message.currentNodes){
@@ -475,14 +479,16 @@ public class DataNode {
                     //I send the data to the leader of that data
                     context.getLog().info("sending an update to the leader of this data: I'm " + this.port + "..." );
                     ActorRef<Command> node = nodes.get(nodePosition).getNode();
-                    node.tell(new Put(entry.getKey(), entry.getValue(), context.getSelf(), false, ticket));
+                    node.tell(new Put(entry.getKey(), entry.getValue(), context.getSelf(), false, ticket, nReplicas));
 
                 }
                 //optimizations are possible here
                 boolean isReplica = successors.stream().map(NodeInfo::getHashKey).collect(Collectors.toList()).contains(hashfunction(address,port));
                 if (isReplica) this.replicas.put(entry.getKey(), entry.getValue());
-                successors.stream().map(NodeInfo::getNode).forEach(n -> n.tell(
-                        new Put(entry.getKey(),entry.getValue(), context.getSelf(), true, ticket)));
+                IntStream.range(0, nReplicas)
+                        .forEach(k ->{
+                            successors.get(k).getNode().tell(new Put(entry.getKey(), entry.getValue(), context.getSelf(), true, ticket,k));
+                        });
                 ticket++;
             });
         return Behaviors.same();
