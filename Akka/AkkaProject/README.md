@@ -30,6 +30,8 @@ https://doc.akka.io/japi/akka/current/index.html?akka/cluster/ddata/typed/javads
     - note: the couple <IP_Address, Port> is unique for each node, so you can't create two nodes with the same port on the same device  
 
 ## APIS 
+Each node of the cluster has exactly the same role among all its peers: they run the same actors with the same code. There is no single point of failure for the service. The only exception to this is the presence in Akka of seed nodes: seed nodes are declared in the config file, and at least one of the seed nodes must be up to guarantee the availability of the service. Therefore, each node exposes the same APIs.
+
 All APIs responses are of type application/json. The body of the requests must be of type Json. Both the POST and the GET methods return a JSON with field (among the others) requestId. This is just an internal identifier of the request. 
 
 | API                   | HTTP method | Request Body                                              | Description  | Response ( if successful) |
@@ -40,11 +42,11 @@ All APIs responses are of type application/json. The body of the requests must b
 | `/test/nodes` | GET | -                                                         | Return a representation of all nodes currently up in the cluster | `"nodes": [{ "hashKey":"hash1", "node": {"local": false,"terminated": false}}, { "hashKey": "hash2","node": {"local": false, "terminated": false }}, { "hashKey": "hash3",  "node": { "local": true, "terminated": false}}]` |
 
 ## Main features
+- full distribution
 - K fault tolerant: upon a failure of a node, its data are replicated to another node
-- Client centric consistency
-- Synchronous writes
+- Client centric consistency: synchronous writes
 - Support for dynamic insertion of nodes into the cluster
-- REST APIs to interact with the nodes: a client can interact with any node indifferently
+- REST APIs to interact with the cluster and get the services
 - Each data has a leader replica which solves W/W conflicts
 ## Common issues.
 - if the project does not build, try
