@@ -43,10 +43,10 @@ All APIs responses are of type application/json. The body of the requests must b
 
 ## Main features
 - full distribution
-- K fault tolerant: upon a failure of a node, its data are replicated to another node
+- K fault tolerance: upon a failure of a node, its data are replicated to another node
 - Client centric consistency: synchronous writes
 - Support for dynamic insertion of nodes into the cluster
-- REST APIs to interact with the cluster and get the services
+- REST APIs to interact with the cluster
 - Each data has a leader replica which solves W/W conflicts
 ## Common issues.
 - if the project does not build, try
