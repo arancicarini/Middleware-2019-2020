@@ -41,13 +41,14 @@ All APIs responses are of type application/json. The body of the requests must b
 | `/test/localData` | GET | -                                                         | Return all the values stored locally in the contacted node | `"values": [ "MyValue1", "MyValue2", ... ]` |
 | `/test/nodes` | GET | -                                                         | Return a representation of all nodes currently up in the cluster | `"nodes": [{ "hashKey":"hash1", "node": {"local": false,"terminated": false}}, { "hashKey": "hash2","node": {"local": false, "terminated": false }}, { "hashKey": "hash3",  "node": { "local": true, "terminated": false}}]` |
 
-## Main features
+## Main features 
 - full distribution
 - K fault tolerance: upon a failure of a node, its data are replicated to another node
 - Client centric consistency: synchronous writes
 - Support for dynamic insertion of nodes into the cluster
 - REST APIs to interact with the cluster
 - Each data has a leader replica which solves W/W conflicts
+- if there are less than k nodes in the cluster, all requests are refused, and the service is down, although data are not lost.
 ## Common issues.
 - if the project does not build, try
     - mvn clean package install
